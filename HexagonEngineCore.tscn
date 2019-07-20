@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UIspace.tscn" type="PackedScene" id=1]
+
+[node name="HexagonEngineCore" type="Node"]
+
+[node name="UIspace" parent="." instance=ExtResource( 1 )]

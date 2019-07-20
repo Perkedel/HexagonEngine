@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="HexagonEngine"
+run/main_scene="res://HexagonEngineCore.tscn"
+boot_splash/image="res://Sprites/HexagonEngineBootSplash.png"
+boot_splash/bg_color=Color( 0.0901961, 0.0941176, 0.184314, 1 )
+config/icon="res://Sprites/HexagonEngineSign.png"
+config/quit_on_go_back=false
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/use_hidpi=true
+
+[physics]
+
+common/physics_fps=500
+3d/physics_engine="Bullet"
+2d/thread_model=2
+
+[rendering]
+
+threads/thread_model=2
+environment/default_clear_color=Color( 0.0666667, 0.168627, 0.317647, 1 )
+environment/default_environment="res://default_env.tres"

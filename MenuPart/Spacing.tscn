@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Spacing" type="Control"]
+margin_top = 208.0
+margin_right = 1920.0
+margin_bottom = 725.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
