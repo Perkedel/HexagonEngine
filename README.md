@@ -14,6 +14,8 @@ And most importantly, You can design Cinema quantic animations just like you do 
 Godot is just the game engine. THe core! Core of the core!
 	
 We want people to mod this and make games whatever they like.
+
+People want easy and understandable just other that game you can mod and put it on workshop area! people focuses on making level and developers focuses the mechanics of the game for!
 	
 for us, we have Perkedel Timeline which is a cinematic universe tale! you know Marvel? Yes. Perkedel has their own cinematic universe!
 	
