@@ -15,4 +15,4 @@ Used Assets and Tools!
 
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	| Raw Credit	|
 |-------|-------|---------------|-------|:-----------------:|-----------|---------------|
-|Juan Linietsky|Godot Engine|https://godotengine.org |<100%|MIT|`` |
+|Juan Linietsky|Godot Engine|Open Source, Gratis, Full, Libre, free beer and freedom game engine, AAA capable!!!|https://godotengine.org |<100%|MIT|`` |
