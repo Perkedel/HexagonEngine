@@ -8,8 +8,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="IconArea" type="CenterContainer" parent="."]
+editor/display_folded = true
 margin_right = 150.0
 margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
 size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="IconArea"]
@@ -25,14 +27,20 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleBarArea" type="HBoxContainer" parent="."]
+editor/display_folded = true
+anchor_right = 1.0
 margin_left = 150.0
-margin_right = 1920.0
 margin_bottom = 150.0
+rect_min_size = Vector2( 1770, 150 )
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="TitleBarArea"]
-margin_top = 34.0
-margin_right = 673.0
-margin_bottom = 116.0
+margin_right = 1770.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
 custom_fonts/font = ExtResource( 2 )
-text = "Next Menu TitleBar"
+text = "Next Menu TitleBar!"
+valign = 1
+autowrap = true
+clip_text = true
