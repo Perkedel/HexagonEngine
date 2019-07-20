@@ -18,9 +18,18 @@ _global_script_class_icons={
 config/name="HexagonEngine"
 run/main_scene="res://HexagonEngineCore.tscn"
 boot_splash/image="res://Sprites/HexagonEngineBootSplash.png"
-boot_splash/bg_color=Color( 0.0901961, 0.0941176, 0.184314, 1 )
+boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
 config/icon="res://Sprites/HexagonEngineSign.png"
 config/quit_on_go_back=false
+
+[compression]
+
+formats/zlib/compression_level=9
+formats/gzip/compression_level=9
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
 
@@ -33,6 +42,10 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/use_hidpi=true
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false
 
 [physics]
 
