@@ -58,6 +58,7 @@ anchor_bottom = 0.5
 margin_top = -75.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 300, 200 )
+focus_mode = 2
 size_flags_horizontal = 3
 script = ExtResource( 1 )
 
@@ -67,6 +68,7 @@ margin_top = 25.0
 margin_right = 1085.0
 margin_bottom = 175.0
 rect_min_size = Vector2( 250, 150 )
+hint_tooltip = "Insert Tooltip!"
 flat = true
 
 [node name="BackgroundPanel" type="TextureRect" parent="Button"]
@@ -76,38 +78,31 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="HoverLights" type="TextureRect" parent="Button"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Button"]
-editor/display_folded = true
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Button"]
 margin_left = 9.0
 margin_top = 5.0
-margin_right = -8.0
-margin_bottom = -15.0
+margin_right = 242.0
+margin_bottom = 144.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Button/MarginContainer"]
+[node name="Icon" type="TextureRect" parent="Button/VBoxContainer"]
 margin_right = 233.0
-margin_bottom = 146.0
-
-[node name="Icon" type="TextureRect" parent="Button/MarginContainer/VBoxContainer"]
-margin_right = 233.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 3.23, 110 )
+margin_bottom = 103.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="Button/MarginContainer/VBoxContainer"]
-margin_top = 118.0
+[node name="Label" type="Label" parent="Button/VBoxContainer"]
+margin_top = 111.0
 margin_right = 233.0
-margin_bottom = 146.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 5 )
 text = "Label"
 align = 1
@@ -119,6 +114,9 @@ autoplay = "InitMoreButton"
 anims/BeingDehovered = SubResource( 1 )
 anims/BeingHovered = SubResource( 2 )
 anims/InitMoreButton = SubResource( 3 )
+[connection signal="focus_entered" from="." to="." method="_on_MoreButtonCollumnArea_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_MoreButtonCollumnArea_focus_exited"]
+[connection signal="gui_input" from="Button" to="." method="_on_Button_gui_input"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

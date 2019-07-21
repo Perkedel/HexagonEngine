@@ -32,6 +32,7 @@ margin_bottom = 139.0
 [node name="SamPlayArea" parent="FocusArea" instance=ExtResource( 3 )]
 margin_bottom = 139.0
 MenuAnimating = NodePath("../../MenuButtonAnimations")
+MoreMenuSelectFirst = NodePath("../../MoreMenu/HBoxContainer/SettingButton")
 
 [node name="SpaceLeft2" parent="FocusArea" instance=ExtResource( 2 )]
 margin_left = 1468.0
@@ -60,7 +61,8 @@ anchor_bottom = 0.0
 margin_top = 0.0
 margin_right = 300.0
 margin_bottom = 200.0
-script = null
+focus_neighbour_right = NodePath("../UnknownButton")
+focus_mode = 0
 
 [node name="UnknownButton" parent="MoreMenu/HBoxContainer" instance=ExtResource( 5 )]
 anchor_top = 0.0
@@ -70,7 +72,9 @@ margin_left = 308.0
 margin_top = 0.0
 margin_right = 608.0
 margin_bottom = 200.0
-script = null
+focus_neighbour_left = NodePath("../SettingButton")
+focus_neighbour_right = NodePath("../ExtrasButton")
+focus_mode = 0
 
 [node name="ExtrasButton" parent="MoreMenu/HBoxContainer" instance=ExtResource( 6 )]
 anchor_top = 0.0
@@ -80,7 +84,9 @@ margin_left = 616.0
 margin_top = 0.0
 margin_right = 916.0
 margin_bottom = 200.0
-script = null
+focus_neighbour_left = NodePath("../UnknownButton")
+focus_neighbour_right = NodePath("../ChangeDVDButton")
+focus_mode = 0
 
 [node name="ChangeDVDButton" parent="MoreMenu/HBoxContainer" instance=ExtResource( 7 )]
 anchor_top = 0.0
@@ -90,7 +96,9 @@ margin_left = 924.0
 margin_top = 0.0
 margin_right = 1224.0
 margin_bottom = 200.0
-script = null
+focus_neighbour_left = NodePath("../ExtrasButton")
+focus_neighbour_right = NodePath("../ExitButton")
+focus_mode = 0
 
 [node name="ExitButton" parent="MoreMenu/HBoxContainer" instance=ExtResource( 8 )]
 anchor_top = 0.0
@@ -100,7 +108,8 @@ margin_left = 1232.0
 margin_top = 0.0
 margin_right = 1532.0
 margin_bottom = 200.0
-script = null
+focus_neighbour_left = NodePath("../ChangeDVDButton")
+focus_mode = 0
 
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
 [connection signal="Hover_MoreMenu_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_MoreMenu_Button"]
