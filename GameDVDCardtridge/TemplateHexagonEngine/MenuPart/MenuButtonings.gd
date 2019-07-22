@@ -11,26 +11,8 @@ var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Sett
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	for buttonings in $MoreMenu/BoxMenuContainings.get_children():
-		buttonings.connect("Button_Pressingated", self, "_on_MoreButton_Pressed", [buttonings.callTheFunction])
-		pass
 	pass # Replace with function body.
 
-func _on_MoreButton_Pressed(callFunction):
-	if callFunction == "GoToNextMenuOf":
-		GoToNextMenuOf(PassMenuScene)
-		pass
-	pass
-
-func GoToNextMenuOf(NameOfScene):
-	#get_tree().change_scene(NameOfScene) #dont use change scene! it will replace entire node
-	var currMenu = get_node("../../")
-	remove_child(currMenu)
-	currMenu.call_deferred("free")
-	var NextMenu = load(PassMenuScene)
-	var GoNextMenu = NextMenu.instance()
-	get_node("../../").add_child(GoNextMenu)
-	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -103,23 +85,27 @@ func CloseMenuDrawer():
 func _on_SettingButton_focus_entered():
 	pass # Replace with function body.
 
-
+signal PressSettingButton()
 func _on_SettingButton_Button_Pressingated():
-	
+	emit_signal("PressSettingButton")
 	pass # Replace with function body.
 
-
+signal PressUnknownButton()
 func _on_UnknownButton_Button_Pressingated():
+	emit_signal("PressUnknownButton")
 	pass # Replace with function body.
 
-
+signal PressExtrasButton()
 func _on_ExtrasButton_Button_Pressingated():
+	emit_signal("PressExtrasButton")
 	pass # Replace with function body.
 
-
+signal PressChangeDVDButton()
 func _on_ChangeDVDButton_Button_Pressingated():
+	emit_signal("PressChangeDVDButton")
 	pass # Replace with function body.
 
-
+signal PressExitButton()
 func _on_ExitButton_Button_Pressingated():
+	emit_signal("PressExitButton")
 	pass # Replace with function body.

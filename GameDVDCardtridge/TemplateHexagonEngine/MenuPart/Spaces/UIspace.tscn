@@ -9,10 +9,20 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+MainMenuNode = NodePath("MainMenu")
+NextMenuNode = NodePath("NextMenu")
 
 [node name="MainMenu" parent="." instance=ExtResource( 2 )]
+NextMenuNode = NodePath("../NextMenu")
+
+[node name="MenuButtonings" parent="MainMenu/VBoxContainer" index="2"]
+editor/display_folded = false
+
+[node name="MoreMenu" parent="MainMenu/VBoxContainer/MenuButtonings" index="1"]
+editor/display_folded = true
 
 [node name="Mavrickle" type="TextureRect" parent="."]
+visible = false
 margin_top = 515.0
 margin_right = 1920.0
 margin_bottom = 725.0
@@ -20,3 +30,28 @@ texture = ExtResource( 3 )
 
 [node name="NextMenu" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[node name="GameplayUI" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+[connection signal="PressChangeDVDButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressChangeDVDButton"]
+[connection signal="PressExitButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExitButton"]
+[connection signal="PressExtrasButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExtrasButton"]
+[connection signal="PressSettingButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressSettingButton"]
+[connection signal="PressUnknownButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressUnknownButton"]
+[connection signal="pressed" from="NextMenu/VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed" binds= [ false ]]
+
+[editable path="MainMenu"]
+
+[editable path="MainMenu/VBoxContainer/TitleBox"]
+
+[editable path="MainMenu/VBoxContainer/MenuButtonings"]
+
+[editable path="MainMenu/VBoxContainer/MenuButtonings/FocusArea/SamPlayArea"]
+
+[editable path="MainMenu/VBoxContainer/MenuButtonings/MenuButtonAnimations"]
+
+[editable path="NextMenu"]
+
+[editable path="NextMenu/VBoxContainer/MenuSpaceArea/InheritableMenuArea"]

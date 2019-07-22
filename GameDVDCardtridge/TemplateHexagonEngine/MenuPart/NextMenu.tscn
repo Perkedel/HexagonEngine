@@ -67,6 +67,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="InheritableMenuArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 6 )]
+visible = false
+
+[node name="SettingArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 4 )]
+visible = false
 
 [node name="ButtonNavigateArea" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 930.0

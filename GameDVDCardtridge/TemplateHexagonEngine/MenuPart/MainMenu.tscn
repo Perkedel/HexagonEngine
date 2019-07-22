@@ -19,6 +19,7 @@ anchor_bottom = 1.0
 [node name="Spacing" parent="VBoxContainer" instance=ExtResource( 3 )]
 
 [node name="MenuButtonings" parent="VBoxContainer" instance=ExtResource( 4 )]
+editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -27,5 +28,10 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_vertical = 9
 alignment = 2
+[connection signal="PressChangeDVDButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressChangeDVDButton"]
+[connection signal="PressExitButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExitButton"]
+[connection signal="PressExtrasButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExtrasButton"]
+[connection signal="PressSettingButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressSettingButton"]
+[connection signal="PressUnknownButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressUnknownButton"]
 
 [editable path="VBoxContainer/MenuButtonings"]
