@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://DummyTest/Centering.tscn" type="PackedScene" id=1]
+
+[node name="Gexxle" instance=ExtResource( 1 )]
+editor/display_folded = false
+
+[node name="Button" parent="." index="0"]
+margin_left = 908.0
+margin_right = 1011.0
+text = "Gexxke"

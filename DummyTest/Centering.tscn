@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Centering" type="CenterContainer"]
+margin_right = 1920.0
+margin_bottom = 670.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="."]
+margin_left = 904.0
+margin_top = 285.0
+margin_right = 1016.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "ZollipoA"

@@ -69,15 +69,16 @@ margin_right = 1085.0
 margin_bottom = 175.0
 rect_min_size = Vector2( 250, 150 )
 hint_tooltip = "Insert Tooltip!"
-flat = true
 
 [node name="BackgroundPanel" type="TextureRect" parent="Button"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
 
 [node name="HoverLights" type="TextureRect" parent="Button"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )

@@ -25,7 +25,7 @@ func _process(delta):
 		
 		pass
 	if has_focus():
-		RedirectFocus()
+		#RedirectFocus()
 		pass
 	if Input.is_action_just_pressed("ui_left"):
 		
