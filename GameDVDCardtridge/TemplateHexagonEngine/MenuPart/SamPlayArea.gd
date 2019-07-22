@@ -12,10 +12,10 @@ export(NodePath) var MoreMenuSelectFirst
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$PlayButton/LightHighSelected.hide()
-	$PlayButton.grab_click_focus()
+	#$PlayButton/LightHighSelected.hide()
+	$PlayButton.grab_focus()
 	if Input.is_action_just_pressed("ui_down"):
-		get_parent().get_parent().get_node("MoreMenu/HBoxContainer" + MoreMenuSelectFirst).call("RedirectFocus")
+		#get_parent().get_parent().get_node("MoreMenu/HBoxContainer" + MoreMenuSelectFirst).call("RedirectFocus")
 		pass
 	pass # Replace with function body.
 
@@ -35,20 +35,20 @@ func _on_PlayButton_pressed():
 
 func _on_PlayButton_mouse_entered():
 	emit_signal("Hover_Play_Button")
-	$PlayButton/LightHighSelected.show()
+	#$PlayButton/LightHighSelected.show()
 	pass # Replace with function body.
 
 
 func _on_PlayButton_mouse_exited():
-	$PlayButton/LightHighSelected.hide()
+	#$PlayButton/LightHighSelected.hide()
 	pass # Replace with function body.
 
 
 func _on_PlayButton_focus_entered():
-	$PlayButton/LightHighSelected.show()
+	#$PlayButton/LightHighSelected.show()
 	pass # Replace with function body.
 
 
 func _on_PlayButton_focus_exited():
-	$PlayButton/LightHighSelected.hide()
+	#$PlayButton/LightHighSelected.hide()
 	pass # Replace with function body.

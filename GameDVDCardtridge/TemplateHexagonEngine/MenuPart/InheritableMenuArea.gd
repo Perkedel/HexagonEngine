@@ -11,15 +11,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_BackButton_pressed():
-	pass # Replace with function body.
-
-
-func _on_BackButton_mouse_entered():
-	pass # Replace with function body.
-
-
-func _on_BackButton_focus_entered():
-	pass # Replace with function body.

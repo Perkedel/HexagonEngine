@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://MenuPart/MoreButtonCollumnArea.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MoreButtonCollumnArea.gd" type="Script" id=1]
 [ext_resource path="res://Inkscape/SpecialButtoning.svg" type="Texture" id=2]
 [ext_resource path="res://Inkscape/HoverLightImage.svg" type="Texture" id=3]
 [ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=4]
@@ -58,9 +58,9 @@ anchor_bottom = 0.5
 margin_top = -75.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 300, 200 )
-focus_mode = 2
 size_flags_horizontal = 3
 script = ExtResource( 1 )
+callTheFunction = "GoToNextMenuOf"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 835.0
@@ -115,8 +115,6 @@ autoplay = "InitMoreButton"
 anims/BeingDehovered = SubResource( 1 )
 anims/BeingHovered = SubResource( 2 )
 anims/InitMoreButton = SubResource( 3 )
-[connection signal="focus_entered" from="." to="." method="_on_MoreButtonCollumnArea_focus_entered"]
-[connection signal="focus_exited" from="." to="." method="_on_MoreButtonCollumnArea_focus_exited"]
 [connection signal="gui_input" from="Button" to="." method="_on_Button_gui_input"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]

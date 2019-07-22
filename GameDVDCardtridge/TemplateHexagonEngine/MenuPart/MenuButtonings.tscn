@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MenuButtonings.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/DummySpacerFocusArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SamPlayArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/SettingButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ChangeDVDButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExitButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Animation/MenuButtonAnimations.tscn" type="PackedScene" id=9]
+
+[node name="MenuButtonings" type="VBoxContainer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -150.0
+margin_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource( 1 )
+
+[node name="FocusArea" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 139.0
+
+[node name="SpaceLeft" parent="FocusArea" instance=ExtResource( 2 )]
+margin_right = 452.0
+margin_bottom = 139.0
+
+[node name="SamPlayArea" parent="FocusArea" instance=ExtResource( 3 )]
+margin_bottom = 139.0
+MenuAnimating = NodePath("../../MenuButtonAnimations")
+MoreMenuSelectFirst = NodePath("../../MoreMenu/BoxMenuContainings/SettingButton")
+
+[node name="SpaceLeft2" parent="FocusArea" instance=ExtResource( 2 )]
+margin_left = 1468.0
+margin_right = 1920.0
+margin_bottom = 139.0
+
+[node name="MoreMenu" type="CenterContainer" parent="."]
+margin_top = 147.0
+margin_right = 1920.0
+margin_bottom = 347.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BoxMenuContainings" type="HBoxContainer" parent="MoreMenu"]
+margin_left = 194.0
+margin_right = 1726.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="SettingButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 4 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_right = 300.0
+margin_bottom = 200.0
+
+[node name="UnknownButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 5 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 308.0
+margin_top = 0.0
+margin_right = 608.0
+margin_bottom = 200.0
+
+[node name="ExtrasButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 6 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 616.0
+margin_top = 0.0
+margin_right = 916.0
+margin_bottom = 200.0
+
+[node name="ChangeDVDButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 7 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 924.0
+margin_top = 0.0
+margin_right = 1224.0
+margin_bottom = 200.0
+
+[node name="ExitButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 8 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1232.0
+margin_top = 0.0
+margin_right = 1532.0
+margin_bottom = 200.0
+
+[node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
+[connection signal="Hover_MoreMenu_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_MoreMenu_Button"]
+[connection signal="Hover_Play_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_Play_Button"]
+[connection signal="Press_Play_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Press_Play_Button"]
+[connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/SettingButton" to="." method="_on_SettingButton_Button_Pressingated"]
+[connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/UnknownButton" to="." method="_on_UnknownButton_Button_Pressingated"]
+[connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/UnknownButton" to="MoreMenu/BoxMenuContainings/UnknownButton" method="_on_MoreButtonCollumnArea_focus_exited"]
+[connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/ExtrasButton" to="." method="_on_ExtrasButton_Button_Pressingated"]
+[connection signal="focus_entered" from="MoreMenu/BoxMenuContainings/ExtrasButton" to="MoreMenu/BoxMenuContainings/ExtrasButton" method="_on_MoreButtonCollumnArea_focus_entered"]
+[connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/ExtrasButton" to="MoreMenu/BoxMenuContainings/ExtrasButton" method="_on_MoreButtonCollumnArea_focus_exited"]
+[connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/ChangeDVDButton" to="." method="_on_ChangeDVDButton_Button_Pressingated"]
+[connection signal="focus_entered" from="MoreMenu/BoxMenuContainings/ChangeDVDButton" to="MoreMenu/BoxMenuContainings/ChangeDVDButton" method="_on_MoreButtonCollumnArea_focus_entered"]
+[connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/ChangeDVDButton" to="MoreMenu/BoxMenuContainings/ChangeDVDButton" method="_on_MoreButtonCollumnArea_focus_exited"]
+[connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/ExitButton" to="." method="_on_ExitButton_Button_Pressingated"]
+[connection signal="focus_entered" from="MoreMenu/BoxMenuContainings/ExitButton" to="MoreMenu/BoxMenuContainings/ExitButton" method="_on_MoreButtonCollumnArea_focus_entered"]
+[connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/ExitButton" to="MoreMenu/BoxMenuContainings/ExitButton" method="_on_MoreButtonCollumnArea_focus_exited"]

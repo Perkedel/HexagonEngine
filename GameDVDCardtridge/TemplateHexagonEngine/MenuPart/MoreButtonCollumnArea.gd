@@ -3,6 +3,7 @@ extends CenterContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+export(String) var callTheFunction
 export(String) var GoToMenuSceneOf
 signal Button_Pressingated()
 signal Button_Hoverated()
@@ -19,24 +20,24 @@ func _ready():
 	
 	pass # Replace with function body.
 
+func GoToNextMenuOf():
+	get_node("../../../../../").get_tree().change_scene(GoToMenuSceneOf)
+	pass
+
+func QuitButton():
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if _on_MoreButtonCollumnArea_focus_entered():
-		
-		pass
-	if has_focus():
-		#RedirectFocus()
+
 		pass
 	if Input.is_action_just_pressed("ui_left"):
-		
+
 		pass
 	if Input.is_action_just_pressed("ui_right"):
-		
-		pass
-	pass
 
-func RedirectFocus():
-	$Button.grab_focus()
+		pass
 	pass
 
 func _on_Button_pressed():
@@ -69,14 +70,13 @@ func _on_Button_focus_exited():
 
 
 func _on_MoreButtonCollumnArea_focus_entered():
-	RedirectFocus()
 	pass # Replace with function body.
 
 
 func _on_MoreButtonCollumnArea_focus_exited():
 	pass # Replace with function body.
 
-# https://docs.godotengine.org/en/3.1/tutorials/gui/custom_gui_controls.html 
+# https://docs.godotengine.org/en/3.1/tutorials/gui/custom_gui_controls.html
 func _draw():
 	if has_focus():
 		#draw_selected()
@@ -87,9 +87,9 @@ func _draw():
 	pass
 
 func _on_Button_gui_input(event):
-	
+
 	if Input.is_action_just_pressed("ui_left"):
-		
+
 		pass
 	if Input.is_action_just_pressed("ui_right"):
 		pass
