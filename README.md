@@ -26,7 +26,7 @@ for us, we have Perkedel Timeline which is a cinematic universe tale! you know M
 ## cool but I don't get it.
 You'll get it later.
 	
-Our cinematic universe will be realized with this Godot Engine, because this engine's license and their spirit.
+Our cinematic universe will be realized using Godot Engine, because this engine's license and their spirit.
 	
 ## Why Godot? why not make own C++?
 We have been years searching homes for our universe to live on. 
