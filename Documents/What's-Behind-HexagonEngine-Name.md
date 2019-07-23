@@ -72,7 +72,7 @@ However, if your name are not there, do not shrink your heart yet. Joel might ha
 We'll prepare the monet accordingly and appropriately.
 
 ### Disclaimer
-Please keep in mind however, if your franchise appeared without your consent, and felt offended, do not angery first! We are only allowed to implement proprietary franchise for Linux render without permission asked. those non-permission asked content will only available for Open Source platform only like Linux and are not available for proprietary operating system. You will be asked for permission if we are planning to also render the content to Windows and Please consider appropriate amount of monet should be paid for.
+Please keep in mind however, if your franchise appeared without your consent, and felt offended, do not angery first! We are only allowed to implement proprietary franchise for open source platform render for content without permission asked. those non-permission asked content will only available for Open Source platform only like Linux and are not available for proprietary operating system. You will be asked for permission if we are planning to also render the content to Windows and Please consider appropriate amount of monet should be paid for.
 
 for Libre and no need ask permission content, they are available to not proprietary platform obviously.
 
