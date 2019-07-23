@@ -76,6 +76,19 @@ Please keep in mind however, if your franchise appeared without your consent, an
 
 for Libre and no need ask permission content, they are available to not proprietary platform obviously.
 
+## Commercial value Continued
+### Definitions
+- legally agreed. Content which contains proprietary items which permission from original author has been obtained.
+- Monetization. implementing elements that generates monet such as advertisements
+- Not Free as in beer. Content that is not $0. This only applies to not open source platform. for Open source platform, you should be able to obtain the binary render for $0 without any caveats.
+### Terms of Monetizations
+We only monetize legally agreed content. We make sure that you who we asked the permission for as following:
+- Generate revenue that will monet will be shared equally.
+- May set the content to be Not free as in beer for some reasons.
+- Basically use your franchise for our project and let anyone using it and also mod share and made project share video, fanart, or so. duh! but with Free as in beer and free as in freedom obviously. you basically wanted us to ask permission no matter what right? there you go!
+
+... to agree the permission above.
+
 ## Verdict
 Hexagon Engine has been planed for so long journey of cinematic universe that involves a lot of 3rd party franchises that intrest him. Not limited to 3rd party content but also original content that may or not interact with each other. It will become one of the only source of Free as in beer and Free as in freedom cinematic universe, everyone must see or play this without looking someone's gameplay on Tube first, unless they had already played it or computer spec is not enough.
 
