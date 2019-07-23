@@ -39,7 +39,7 @@ He planned to make levels about:
 - Restore this Mirror phobia girl from 2nd comic.
 - and more Six is hero stuffs. that's not a name so we call her Harumi.
 
-### Name
+### Name and design
 Then come to the name of this remake of.
 We had come with idea of
 
@@ -55,7 +55,7 @@ because Perkedel Cinematic universe was (will be) started from collaboration wit
 
 so according to the name we designed the logo using a hexagon geometry and put 6 dice dots on it like this https://www.instagram.com/p/BV5vrGZlOzU/ here. Basically, to revolve around number six in a good way and tried best to avoid such unwanted refference fanatic priest would complain so. We realise the Beast number is existed and **mentioned in the Bible** (Relevation 13:18) so we have to be careful defining what is good with Harumi's number 6.
 
-### Evolutions
+## Evolutions
 And there it is. But unfortunately, at that time, he wasn't able to play video games due to its online payment concern and price that are not a few (not $0 software is considered really expensive).
 
 Time passes. Joel discovered even more characters he is intrigued to get collab of and restore what has been lost if any. here are some of the following franchise Joel has been discovered and intrigued to contact the entity owning it:
@@ -71,11 +71,11 @@ However, if your name are not there, do not shrink your heart yet. Joel might ha
 
 We'll prepare the monet accordingly and appropriately.
 
-### Disclaimer
+## Disclaimer
 Please keep in mind however, if your franchise appeared without your consent, and felt offended, do not angery first! We are only allowed to implement proprietary franchise for open source platform render for content without permission asked. those non-permission asked content will only available for Open Source platform only like Linux and are not available for proprietary operating system. You will be asked for permission if we are planning to also render the content to Windows and Please consider appropriate amount of monet should be paid for.
 
 for Libre and no need ask permission content, they are available to not proprietary platform obviously.
 
-### Verdict
+## Verdict
 Hexagon Engine has been planed for so long journey of cinematic universe that involves a lot of 3rd party franchises that intrest him. Not limited to 3rd party content but also original content that may or not interact with each other. It will become one of the only source of Free as in beer and Free as in freedom cinematic universe, everyone must see or play this without looking someone's gameplay on Tube first, unless they had already played it or computer spec is not enough.
 
