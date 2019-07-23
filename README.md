@@ -9,6 +9,10 @@ A Godot template to make your games on.
 You can build levels with Level Cartridge. 2D and 3D. all at once! Design Mechanic! like you do in Godot.
 	
 And most importantly, You can design Cinema quantic animations just like you do in Godot!!! only this time, as same as you do so meticulously
+
+## Huh?
+The game runs inside this Hexagon Engine. i.e. your mods are your games!
+like Java! but it's Godot.
 	
 ## Why?
 Godot is just the game engine. THe core! Core of the core!
