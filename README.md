@@ -60,7 +60,7 @@ Godot, Godette-chan (c) Godot (<100%)(MIT): Base Home
 
 Blender 3D, Spring Ucukpakhti Ostendorp (c) Blender Foundation (<100%)(GNU GPL v3, CC-BY)
 
-More Credits available in Credit.md or some extension idk.
+More Credits are available in Documents/Credit.md .
 
 ## Origin
 by JOELwindows7
