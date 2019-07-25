@@ -28,3 +28,5 @@ Used Assets and Tools!
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	| Raw Credit	|
 |-------|-------|---------------|-------|:-----------------:|-----------|---------------|
 |Juan Linietsky and Core Contributors|Godot Engine|Open Source, Gratis, Full, Libre, free beer and freedom game engine, AAA capable!!!|https://godotengine.org |<100%|MIT|`-` |
+|Inkscape Community|Inkscape|Vector graphic drawing software| https://inkscape.org | <100% | GNU GPL v2+ | `Inkscape is Free and Open Source Software licensed under the GPL. `|
+|Ton Roosendaal, Blender Foundation| Blender | Full fledged 3D tool suite in one software | https://blender.org | GNU GPL v2+ | `-` |
