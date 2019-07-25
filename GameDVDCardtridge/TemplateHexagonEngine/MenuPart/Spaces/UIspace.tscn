@@ -15,9 +15,6 @@ NextMenuNode = NodePath("NextMenu")
 [node name="MainMenu" parent="." instance=ExtResource( 2 )]
 NextMenuNode = NodePath("../NextMenu")
 
-[node name="MenuButtonings" parent="MainMenu/VBoxContainer" index="2"]
-editor/display_folded = false
-
 [node name="MoreMenu" parent="MainMenu/VBoxContainer/MenuButtonings" index="1"]
 editor/display_folded = true
 
@@ -29,6 +26,7 @@ margin_bottom = 725.0
 texture = ExtResource( 3 )
 
 [node name="NextMenu" parent="." instance=ExtResource( 4 )]
+editor/display_folded = true
 visible = false
 
 [node name="GameplayUI" type="Control" parent="."]

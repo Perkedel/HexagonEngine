@@ -67,6 +67,12 @@ margin_bottom = 200.0
 margin_left = 25.0
 margin_right = 275.0
 
+[node name="Icon" parent="MoreMenu/BoxMenuContainings/SettingButton/Button/VBoxContainer" index="0"]
+margin_bottom = 76.0
+
+[node name="Label" parent="MoreMenu/BoxMenuContainings/SettingButton/Button/VBoxContainer" index="1"]
+margin_top = 84.0
+
 [node name="UnknownButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 5 )]
 editor/display_folded = true
 anchor_top = 0.0
@@ -80,6 +86,12 @@ margin_bottom = 200.0
 [node name="Button" parent="MoreMenu/BoxMenuContainings/UnknownButton" index="0"]
 margin_left = 25.0
 margin_right = 275.0
+
+[node name="Icon" parent="MoreMenu/BoxMenuContainings/UnknownButton/Button/VBoxContainer" index="0"]
+margin_bottom = 76.0
+
+[node name="Label" parent="MoreMenu/BoxMenuContainings/UnknownButton/Button/VBoxContainer" index="1"]
+margin_top = 84.0
 
 [node name="ExtrasButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 6 )]
 editor/display_folded = true
@@ -95,6 +107,12 @@ margin_bottom = 200.0
 margin_left = 25.0
 margin_right = 275.0
 
+[node name="Icon" parent="MoreMenu/BoxMenuContainings/ExtrasButton/Button/VBoxContainer" index="0"]
+margin_bottom = 76.0
+
+[node name="Label" parent="MoreMenu/BoxMenuContainings/ExtrasButton/Button/VBoxContainer" index="1"]
+margin_top = 84.0
+
 [node name="ChangeDVDButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 7 )]
 editor/display_folded = true
 anchor_top = 0.0
@@ -109,6 +127,12 @@ margin_bottom = 200.0
 margin_left = 25.0
 margin_right = 275.0
 
+[node name="Icon" parent="MoreMenu/BoxMenuContainings/ChangeDVDButton/Button/VBoxContainer" index="0"]
+margin_bottom = 15.0
+
+[node name="Label" parent="MoreMenu/BoxMenuContainings/ChangeDVDButton/Button/VBoxContainer" index="1"]
+margin_top = 23.0
+
 [node name="ExitButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 8 )]
 editor/display_folded = true
 anchor_top = 0.0
@@ -122,6 +146,12 @@ margin_bottom = 200.0
 [node name="Button" parent="MoreMenu/BoxMenuContainings/ExitButton" index="0"]
 margin_left = 25.0
 margin_right = 275.0
+
+[node name="Icon" parent="MoreMenu/BoxMenuContainings/ExitButton/Button/VBoxContainer" index="0"]
+margin_bottom = 76.0
+
+[node name="Label" parent="MoreMenu/BoxMenuContainings/ExitButton/Button/VBoxContainer" index="1"]
+margin_top = 84.0
 
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
 [connection signal="Hover_MoreMenu_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_MoreMenu_Button"]

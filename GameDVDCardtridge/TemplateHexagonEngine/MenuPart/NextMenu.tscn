@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/SettingArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownArea.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tscn" type="PackedScene" id=9]
 
 [node name="NextMenu" type="Control"]
 anchor_right = 1.0
@@ -70,7 +73,16 @@ size_flags_vertical = 3
 visible = false
 
 [node name="SettingArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 4 )]
+editor/display_folded = true
 visible = false
+
+[node name="UnknownArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 7 )]
+visible = false
+
+[node name="ExtrasArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 8 )]
+visible = false
+
+[node name="LevelSelectArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 9 )]
 
 [node name="ButtonNavigateArea" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 930.0
@@ -90,3 +102,11 @@ anchor_bottom = 1.0
 [connection signal="focus_entered" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_focus_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="VBoxContainer/MenuSpaceArea/SettingArea"]
+
+[editable path="VBoxContainer/MenuSpaceArea/UnknownArea"]
+
+[editable path="VBoxContainer/MenuSpaceArea/ExtrasArea"]
+
+[editable path="VBoxContainer/MenuSpaceArea/LevelSelectArea"]

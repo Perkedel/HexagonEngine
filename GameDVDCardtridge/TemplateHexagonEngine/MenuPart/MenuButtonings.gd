@@ -50,9 +50,7 @@ func _on_SamPlayArea_Hover_MoreMenu_Button():
 	pass # Replace with function body.
 
 
-func _on_SamPlayArea_Press_Play_Button():
-	#$AnimationPlayer.play("CloseMenu")
-	pass # Replace with function body.
+
 
 
 func _on_SamPlayArea_Hover_Play_Button():
@@ -83,6 +81,12 @@ func CloseMenuDrawer():
 
 
 func _on_SettingButton_focus_entered():
+	pass # Replace with function body.
+
+signal PressPlayButton()
+func _on_SamPlayArea_Press_Play_Button():
+	#$AnimationPlayer.play("CloseMenu")
+	emit_signal("PressPlayButton")
 	pass # Replace with function body.
 
 signal PressSettingButton()

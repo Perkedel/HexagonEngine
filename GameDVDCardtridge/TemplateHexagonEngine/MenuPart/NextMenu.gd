@@ -10,10 +10,10 @@ export(PackedScene) var GameplayArea
 export(PackedScene) var SettingArea
 export(PackedScene) var UnknownArea #area51
 export(PackedScene) var ExtrasArea
-export(NodePath) var PrevNode
+onready var PrevNode = $VBoxContainer/MenuSpaceArea/InheritableMenuArea
 export(NodePath) var NextNode
 
-enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3}
+enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
 export(SelectMenuList) var SelectYourMenu
 
 # Called when the node enters the scene tree for the first time.
@@ -59,28 +59,36 @@ func LetsChangeScene():
 	pass
 
 func SoftLetsChangeScene():
-	PrevNode = $VBoxContainer/MenuSpaceArea.get_child(0)
+	#PrevNode = $VBoxContainer/MenuSpaceArea.get_child(0)
 	if SelectYourMenu == SelectMenuList.Setting:
 		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/SettingArea)
-		
 		$VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.grab_focus()
+		PrevNode = $VBoxContainer/MenuSpaceArea/SettingArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Unkown:
+		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/UnknownArea)
+		$VBoxContainer/MenuSpaceArea/UnknownArea/EditMe.grab_focus()
+		PrevNode = $VBoxContainer/MenuSpaceArea/UnknownArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Extras:
+		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/ExtrasArea)
+		
+		PrevNode = $VBoxContainer/MenuSpaceArea/ExtrasArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Gameplay:
+		
 		pass
-	pass
-
-func EnterWhichMenu(WhichOne):
-	
+	elif SelectYourMenu == SelectMenuList.LevelSelect:
+		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/LevelSelectArea)
+		
+		PrevNode = $VBoxContainer/MenuSpaceArea/LevelSelectArea
+		pass
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_key_pressed(KEY_9):
-		LetsChangeScene()
+		#LetsChangeScene()
 		pass
 	$VBoxContainer/HeadingBar/TitleBarArea/Label.text = TitleBarName
 	$VBoxContainer/HeadingBar/IconArea/TextureRect.texture = TitleIcon

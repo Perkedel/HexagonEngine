@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
+[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
+
+[node name="LevelSelectArea" index="0" instance=ExtResource( 1 )]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer" index="0"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InheritableLevelCard" type="VBoxContainer" parent="ScrollContainer/HBoxContainer" index="0"]
+margin_right = 800.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 800, 0 )
+
+[node name="LevelIconImage" type="TextureRect" parent="ScrollContainer/HBoxContainer/InheritableLevelCard" index="0"]
+margin_right = 800.0
+margin_bottom = 437.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="ScrollContainer/HBoxContainer/InheritableLevelCard" index="1"]
+margin_top = 445.0
+margin_right = 800.0
+margin_bottom = 527.0
+custom_fonts/font = ExtResource( 3 )
+text = "Title of This Card"
+
+[node name="DescriptionScroll" type="ScrollContainer" parent="ScrollContainer/HBoxContainer/InheritableLevelCard" index="2"]
+margin_top = 535.0
+margin_right = 800.0
+margin_bottom = 972.0
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/HBoxContainer/InheritableLevelCard/DescriptionScroll" index="2"]
+margin_right = 800.0
+margin_bottom = 437.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_text = "[b]WOW[/b]"
+text = "Description of this Level Card!
+[b]WOW[/b]"
+scroll_following = true
+selection_enabled = true
+
+[node name="PlayTheLevelButton" type="Button" parent="ScrollContainer/HBoxContainer/InheritableLevelCard" index="3"]
+margin_top = 980.0
+margin_right = 800.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = ExtResource( 3 )
+text = "Load This Card!"

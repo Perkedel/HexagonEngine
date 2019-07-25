@@ -4,7 +4,7 @@ extends Control
 # var a = 2
 # var b = "text"
 var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingMenu.tscn"
-enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3}
+enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
 export(SelectMenuList) var NextMenuScene
 export(NodePath) var MainMenuNode
 export(NodePath) var NextMenuNode
@@ -26,6 +26,7 @@ func SetAndShowNextMenu(WhichMenu):
 	pass
 
 func BackToMainMenu():
+	$GameplayUI.hide()
 	$NextMenu.hide()
 	$MainMenu.show()
 	$MainMenu/VBoxContainer/TitleBox/TitleAnimating.play("InitTitle")

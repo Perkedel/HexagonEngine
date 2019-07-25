@@ -40,3 +40,7 @@ func _on_MenuButtonings_PressSettingButton():
 
 func _on_MenuButtonings_PressUnknownButton():
 	pass # Replace with function body.
+
+
+func _on_MenuButtonings_PressPlayButton():
+	pass # Replace with function body.
