@@ -69,5 +69,6 @@ by JOELwindows7
 Perkedel Technologies
 
 Softwares: GNU GPL v3
+
 Assets and Documents: CC4.0-BY-SA
 	
