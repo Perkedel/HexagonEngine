@@ -18,6 +18,7 @@ Table of Refferences!
 |Juan Linietsky & friends	|String Format| Format String for dynamic dialogue application|https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html | <100%| CC3.0-BY|`© Copyright 2014-2019, Juan Linietsky, Ariel Manzur and the Godot community (CC-BY 3.0)`|
 |Juan Linietsky & friends	|Pause Game| Using paused tree and its whitelist to nodes|https://docs.godotengine.org/en/latest/tutorials/misc/pausing_games.html | <100%| CC3.0-BY|`© Copyright 2014-2019, Juan Linietsky, Ariel Manzur and the Godot community (CC-BY 3.0)`|
 |GDquest|Pause game Tutorial|How to make pause game| https://www.youtube.com/watch?v=Jf7F3JhY9Fg | <100%|???| `-`|
+|lukas|Quit|GD script quit| https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript | <100% | ??? | `-`|
 
 
 
