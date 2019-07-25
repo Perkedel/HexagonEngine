@@ -15,6 +15,8 @@ Table of Refferences!
 |Zylann and friends|add child in specific position|add child node with its specific position| https://godotengine.org/qa/8025/how-to-add-a-child-in-a-specific-position | <100%|???| `-`|
 |D-ring and friends|Swipe Scroll|Scroll with swipe for both mouse and touch| https://godotforums.org/discussion/20206/swipe-function-with-scroll | <100%|???| `-`|
 |avencherus|Grab Focus|Grab the navigation focus| https://godotforums.org/discussion/20206/swipe-function-with-scroll | <100%|???| `-`|
+|Juan Linietsky & friends	|String Format| Format String for dynamic dialogue application|https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html | <100%| CC3.0-BY|`© Copyright 2014-2019, Juan Linietsky, Ariel Manzur and the Godot community (CC-BY 3.0)`|
+
 
 
 ## Assets and Tools
