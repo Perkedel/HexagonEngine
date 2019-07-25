@@ -29,4 +29,5 @@ Used Assets and Tools!
 |-------|-------|---------------|-------|:-----------------:|-----------|---------------|
 |Juan Linietsky and Core Contributors|Godot Engine|Open Source, Gratis, Full, Libre, free beer and freedom game engine, AAA capable!!!|https://godotengine.org |<100%|MIT|`-` |
 |Inkscape Community|Inkscape|Vector graphic drawing software| https://inkscape.org | <100% | GNU GPL v2+ | `Inkscape is Free and Open Source Software licensed under the GPL. `|
-|Ton Roosendaal, Blender Foundation| Blender | Full fledged 3D tool suite in one software | https://blender.org | GNU GPL v2+ | `-` |
+|Ton Roosendaal, Blender Foundation| Blender | Full fledged 3D tool suite in one software | https://blender.org | <100% | GNU GPL v2+ | `-` |
+|Audacity Team | Audacity | All in one Non-linear Audio editing software | https://www.audacityteam.org/ | <100% | GNU GPL v2 | `uhhh help rights reserved wronged to "ALL" instead of "SOME"`|
