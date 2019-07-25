@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-197.55013"
+     inkscape:cx="-386.55013"
      inkscape:cy="711.62805"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1524"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1051"
@@ -173,8 +173,9 @@
     <g
        transform="translate(-84.666665,-2.0345051e-6)"
        id="g939"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       inkscape:export-xdpi="800"
+       inkscape:export-ydpi="800"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Godot Projects\HexagonEngine\Sprites\HexagonEngineSymbolMedium.png">
       <path
          sodipodi:type="star"
          style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"

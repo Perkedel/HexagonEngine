@@ -6,6 +6,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Spaces/2Dspace.tscn" type="PackedScene" id=4]
 
 [node name="TemplateHexagonEngine" type="Node"]
+pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="UIspace" parent="." instance=ExtResource( 2 )]

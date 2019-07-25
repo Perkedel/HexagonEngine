@@ -11,6 +11,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,11 +19,12 @@ func _ready():
 #	pass
 
 func DoChangeDVDNow():
-	
+	print("Change DVD!")
 	pass
 
 func DoShutdownNow():
 	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
+	print("Quit Game!")
 	get_tree().quit()
 	pass
 
