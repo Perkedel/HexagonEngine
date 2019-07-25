@@ -20,6 +20,7 @@ Table of Refferences!
 |GDquest|Pause game Tutorial|How to make pause game| https://www.youtube.com/watch?v=Jf7F3JhY9Fg | <100%|???| `-`|
 |lukas|Quit|GD script quit| https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript | <100% | ??? | `-`|
 |Calinou| recedit | Set icon in Windows | https://godotengine.org/qa/31470/how-to-set-icon-in-app | <100% | ??? | `-` |
+|Juan Linietsky & friends	|Custom Cursor | Implement own game cursor|https://docs.godotengine.org/en/3.1/tutorials/inputs/custom_mouse_cursor.html | <100%| CC3.0-BY|`© Copyright 2014-2019, Juan Linietsky, Ariel Manzur and the Godot community (CC-BY 3.0)`|
 
 
 
