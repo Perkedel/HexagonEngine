@@ -13,14 +13,24 @@ export(PackedScene) var ExtrasArea
 onready var PrevNode = $VBoxContainer/MenuSpaceArea/InheritableMenuArea
 export(NodePath) var NextNode
 
+export(Image) var LoadSettingIcon
+export(Image) var LoadUnknownIcon
+export(Image) var LoadExtrasIcon
+export(Image) var LoadPlayGameIcon
+
 enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
 export(SelectMenuList) var SelectYourMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#LetsChangeScene
-	SoftLetsChangeScene()
+	##SoftLetsChangeScene()
 	pass # Replace with function body.
+
+func SetYourMenuList(whichOf):
+	SelectYourMenu = whichOf
+	SoftLetsChangeScene()
+	pass
 
 func ChangeMenuSpace(CurrentFrom, IntoNewSpace):
 	# https://godotengine.org/qa/24773/how-to-load-and-change-scenes
@@ -49,7 +59,7 @@ func LetsChangeScene():
 		ChangeMenuSpace(CurrentMenuSpace, SettingArea)
 		$VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.grab_focus()
 		pass
-	elif SelectYourMenu == SelectMenuList.Unkown:
+	elif SelectYourMenu == SelectMenuList.Unknown:
 		pass
 	elif SelectYourMenu == SelectMenuList.Extras:
 		pass
@@ -61,24 +71,32 @@ func LetsChangeScene():
 func SoftLetsChangeScene():
 	#PrevNode = $VBoxContainer/MenuSpaceArea.get_child(0)
 	if SelectYourMenu == SelectMenuList.Setting:
+		TitleBarName = "Setting"
+		TitleIcon = LoadSettingIcon
 		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/SettingArea)
-		$VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.grab_focus()
+		$VBoxContainer/MenuSpaceArea/SettingArea.FocusFirstCategoryButtonNow()
 		PrevNode = $VBoxContainer/MenuSpaceArea/SettingArea
 		pass
-	elif SelectYourMenu == SelectMenuList.Unkown:
+	elif SelectYourMenu == SelectMenuList.Unknown:
+		TitleBarName = "Unknown"
+		TitleIcon = LoadUnknownIcon
 		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/UnknownArea)
-		$VBoxContainer/MenuSpaceArea/UnknownArea/EditMe.grab_focus()
+		$VBoxContainer/MenuSpaceArea/UnknownArea.FocusWhatDoYouWantNow()
 		PrevNode = $VBoxContainer/MenuSpaceArea/UnknownArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Extras:
+		TitleBarName = "Extras"
+		TitleIcon = LoadExtrasIcon
 		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/ExtrasArea)
-		
+		$VBoxContainer/MenuSpaceArea/ExtrasArea.FocusThisItemSelectFieldNow()
 		PrevNode = $VBoxContainer/MenuSpaceArea/ExtrasArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Gameplay:
 		
 		pass
 	elif SelectYourMenu == SelectMenuList.LevelSelect:
+		TitleBarName = "Level Select"
+		TitleIcon = LoadPlayGameIcon
 		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/LevelSelectArea)
 		
 		PrevNode = $VBoxContainer/MenuSpaceArea/LevelSelectArea
@@ -94,19 +112,12 @@ func _process(delta):
 	$VBoxContainer/HeadingBar/IconArea/TextureRect.texture = TitleIcon
 	pass
 
-
+signal PressBackButton()
 func _on_BackButton_pressed():
-	ReturnToMainMenu()
+	emit_signal("PressBackButton")
 	pass # Replace with function body.
 
 
-func _on_BackButton_mouse_entered():
+func _on_UnknownArea_LeaveAndBackToMenu():
+	emit_signal("PressBackButton")
 	pass # Replace with function body.
-
-
-func _on_BackButton_focus_entered():
-	pass # Replace with function body.
-
-func ReturnToMainMenu():
-	
-	pass

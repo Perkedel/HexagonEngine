@@ -1,9 +1,25 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DVDCartridgeSlot.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
 
 [node name="HexagonEngineCore" type="Node"]
 script = ExtResource( 1 )
 
-[node name="TemplateHexagonEngine" parent="." instance=ExtResource( 2 )]
+[node name="DVDCartridgeSlot" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 3 )]
+
+[node name="MetaMenu" type="Node" parent="."]
+
+[node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]
+visible = false
+
+[node name="SystemGut" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SystemGut"]
+[connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
+[connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]

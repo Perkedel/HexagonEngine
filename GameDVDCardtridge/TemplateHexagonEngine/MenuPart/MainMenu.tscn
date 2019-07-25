@@ -15,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TitleBox" parent="VBoxContainer" instance=ExtResource( 2 )]
+editor/display_folded = true
 
 [node name="Spacing" parent="VBoxContainer" instance=ExtResource( 3 )]
 
@@ -34,5 +35,3 @@ alignment = 2
 [connection signal="PressPlayButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressPlayButton"]
 [connection signal="PressSettingButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressSettingButton"]
 [connection signal="PressUnknownButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressUnknownButton"]
-
-[editable path="VBoxContainer/MenuButtonings"]

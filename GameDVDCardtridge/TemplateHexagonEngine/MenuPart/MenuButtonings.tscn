@@ -55,7 +55,6 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="SettingButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 4 )]
-editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -64,17 +63,11 @@ margin_right = 300.0
 margin_bottom = 200.0
 
 [node name="Button" parent="MoreMenu/BoxMenuContainings/SettingButton" index="0"]
+editor/display_folded = true
 margin_left = 25.0
 margin_right = 275.0
 
-[node name="Icon" parent="MoreMenu/BoxMenuContainings/SettingButton/Button/VBoxContainer" index="0"]
-margin_bottom = 76.0
-
-[node name="Label" parent="MoreMenu/BoxMenuContainings/SettingButton/Button/VBoxContainer" index="1"]
-margin_top = 84.0
-
 [node name="UnknownButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 5 )]
-editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -83,18 +76,7 @@ margin_top = 0.0
 margin_right = 608.0
 margin_bottom = 200.0
 
-[node name="Button" parent="MoreMenu/BoxMenuContainings/UnknownButton" index="0"]
-margin_left = 25.0
-margin_right = 275.0
-
-[node name="Icon" parent="MoreMenu/BoxMenuContainings/UnknownButton/Button/VBoxContainer" index="0"]
-margin_bottom = 76.0
-
-[node name="Label" parent="MoreMenu/BoxMenuContainings/UnknownButton/Button/VBoxContainer" index="1"]
-margin_top = 84.0
-
 [node name="ExtrasButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 6 )]
-editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -103,18 +85,7 @@ margin_top = 0.0
 margin_right = 916.0
 margin_bottom = 200.0
 
-[node name="Button" parent="MoreMenu/BoxMenuContainings/ExtrasButton" index="0"]
-margin_left = 25.0
-margin_right = 275.0
-
-[node name="Icon" parent="MoreMenu/BoxMenuContainings/ExtrasButton/Button/VBoxContainer" index="0"]
-margin_bottom = 76.0
-
-[node name="Label" parent="MoreMenu/BoxMenuContainings/ExtrasButton/Button/VBoxContainer" index="1"]
-margin_top = 84.0
-
 [node name="ChangeDVDButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 7 )]
-editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -123,18 +94,7 @@ margin_top = 0.0
 margin_right = 1224.0
 margin_bottom = 200.0
 
-[node name="Button" parent="MoreMenu/BoxMenuContainings/ChangeDVDButton" index="0"]
-margin_left = 25.0
-margin_right = 275.0
-
-[node name="Icon" parent="MoreMenu/BoxMenuContainings/ChangeDVDButton/Button/VBoxContainer" index="0"]
-margin_bottom = 15.0
-
-[node name="Label" parent="MoreMenu/BoxMenuContainings/ChangeDVDButton/Button/VBoxContainer" index="1"]
-margin_top = 23.0
-
 [node name="ExitButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 8 )]
-editor/display_folded = true
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -142,16 +102,6 @@ margin_left = 1232.0
 margin_top = 0.0
 margin_right = 1532.0
 margin_bottom = 200.0
-
-[node name="Button" parent="MoreMenu/BoxMenuContainings/ExitButton" index="0"]
-margin_left = 25.0
-margin_right = 275.0
-
-[node name="Icon" parent="MoreMenu/BoxMenuContainings/ExitButton/Button/VBoxContainer" index="0"]
-margin_bottom = 76.0
-
-[node name="Label" parent="MoreMenu/BoxMenuContainings/ExitButton/Button/VBoxContainer" index="1"]
-margin_top = 84.0
 
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
 [connection signal="Hover_MoreMenu_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_MoreMenu_Button"]
@@ -171,11 +121,3 @@ margin_top = 84.0
 [connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/ExitButton" to="MoreMenu/BoxMenuContainings/ExitButton" method="_on_MoreButtonCollumnArea_focus_exited"]
 
 [editable path="MoreMenu/BoxMenuContainings/SettingButton"]
-
-[editable path="MoreMenu/BoxMenuContainings/UnknownButton"]
-
-[editable path="MoreMenu/BoxMenuContainings/ExtrasButton"]
-
-[editable path="MoreMenu/BoxMenuContainings/ChangeDVDButton"]
-
-[editable path="MoreMenu/BoxMenuContainings/ExitButton"]

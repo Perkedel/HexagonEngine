@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/UIspace.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MainMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
 
 [node name="UIspace" type="Control"]
 anchor_right = 1.0
@@ -13,10 +14,8 @@ MainMenuNode = NodePath("MainMenu")
 NextMenuNode = NodePath("NextMenu")
 
 [node name="MainMenu" parent="." instance=ExtResource( 2 )]
-NextMenuNode = NodePath("../NextMenu")
-
-[node name="MoreMenu" parent="MainMenu/VBoxContainer/MenuButtonings" index="1"]
 editor/display_folded = true
+NextMenuNode = NodePath("../NextMenu")
 
 [node name="Mavrickle" type="TextureRect" parent="."]
 visible = false
@@ -33,23 +32,15 @@ visible = false
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-[connection signal="PressChangeDVDButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressChangeDVDButton"]
-[connection signal="PressExitButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExitButton"]
-[connection signal="PressExtrasButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExtrasButton"]
-[connection signal="PressSettingButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressSettingButton"]
-[connection signal="PressUnknownButton" from="MainMenu/VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressUnknownButton"]
-[connection signal="pressed" from="NextMenu/VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed" binds= [ false ]]
 
-[editable path="MainMenu"]
-
-[editable path="MainMenu/VBoxContainer/TitleBox"]
-
-[editable path="MainMenu/VBoxContainer/MenuButtonings"]
-
-[editable path="MainMenu/VBoxContainer/MenuButtonings/FocusArea/SamPlayArea"]
-
-[editable path="MainMenu/VBoxContainer/MenuButtonings/MenuButtonAnimations"]
-
-[editable path="NextMenu"]
-
-[editable path="NextMenu/VBoxContainer/MenuSpaceArea/InheritableMenuArea"]
+[node name="AreYouSureDialog" parent="." instance=ExtResource( 5 )]
+visible = false
+[connection signal="PressChangeDVD" from="MainMenu" to="." method="_on_MainMenu_PressChangeDVD"]
+[connection signal="PressExit" from="MainMenu" to="." method="_on_MainMenu_PressExit"]
+[connection signal="PressExtras" from="MainMenu" to="." method="_on_MainMenu_PressExtras"]
+[connection signal="PressPlay" from="MainMenu" to="." method="_on_MainMenu_PressPlay"]
+[connection signal="PressSetting" from="MainMenu" to="." method="_on_MainMenu_PressSetting"]
+[connection signal="PressUnknown" from="MainMenu" to="." method="_on_MainMenu_PressUnknown"]
+[connection signal="PressBackButton" from="NextMenu" to="." method="_on_NextMenu_PressBackButton"]
+[connection signal="NoImNotSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_NoImNotSure"]
+[connection signal="YesImSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesImSure"]

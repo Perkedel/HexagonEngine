@@ -23,6 +23,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func FocusPlayButtonNow():
+	$PlayButton.grab_focus()
+	pass
+
 
 func _on_MoreButton_mouse_entered():
 	emit_signal("Hover_MoreMenu_Button")

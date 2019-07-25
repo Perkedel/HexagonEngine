@@ -4,7 +4,7 @@
 [ext_resource path="res://Inkscape/SpecialButtoning.svg" type="Texture" id=2]
 [ext_resource path="res://Inkscape/HoverLightImage.svg" type="Texture" id=3]
 [ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=4]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=5]
+[ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "BeingDehovered"
@@ -93,7 +93,7 @@ margin_bottom = 144.0
 
 [node name="Icon" type="TextureRect" parent="Button/VBoxContainer"]
 margin_right = 233.0
-margin_bottom = 103.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
@@ -101,7 +101,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="Button/VBoxContainer"]
-margin_top = 111.0
+margin_top = 106.0
 margin_right = 233.0
 margin_bottom = 139.0
 custom_fonts/font = ExtResource( 5 )

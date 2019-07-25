@@ -13,3 +13,5 @@ script = ExtResource( 1 )
 [node name="3Dspace" parent="." instance=ExtResource( 3 )]
 
 [node name="2Dspace" parent="." instance=ExtResource( 4 )]
+[connection signal="ChangeDVD_Exec" from="UIspace" to="." method="_on_UIspace_ChangeDVD_Exec"]
+[connection signal="Shutdown_Exec" from="UIspace" to="." method="_on_UIspace_Shutdown_Exec"]

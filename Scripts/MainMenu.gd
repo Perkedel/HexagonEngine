@@ -15,32 +15,49 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func ShowNextMenu(WhichMenu):
-	get_node(NextMenuNode)
-	get_node(NextMenuNode).show()
-	hide()
+func ArriveAtMainMenu():
+	ReplayMenuAnimation()
 	pass
 
+func ReplayMenuAnimation():
+	$VBoxContainer/TitleBox.ReplayTitleAnimation()
+	$VBoxContainer/MenuButtonings.ReplayButtoningAnimations()
+	pass
 
+func FocusPlayButtonNow():
+	$VBoxContainer/MenuButtonings.BecauseCloseMenuDrawer()
+	pass
+
+func FocusMoreMenuButtonNow():
+	$VBoxContainer/MenuButtonings.BecauseOpenMenuDrawer()
+	pass
+
+signal PressChangeDVD()
 func _on_MenuButtonings_PressChangeDVDButton():
+	emit_signal("PressChangeDVD")
 	pass # Replace with function body.
 
-
+signal PressExit()
 func _on_MenuButtonings_PressExitButton():
+	emit_signal("PressExit")
 	pass # Replace with function body.
 
-
+signal PressExtras()
 func _on_MenuButtonings_PressExtrasButton():
+	emit_signal("PressExtras")
 	pass # Replace with function body.
 
-
+signal PressSetting()
 func _on_MenuButtonings_PressSettingButton():
+	emit_signal("PressSetting")
 	pass # Replace with function body.
 
-
+signal PressUnknown()
 func _on_MenuButtonings_PressUnknownButton():
+	emit_signal("PressUnknown")
 	pass # Replace with function body.
 
-
+signal PressPlay()
 func _on_MenuButtonings_PressPlayButton():
+	emit_signal("PressPlay")
 	pass # Replace with function body.

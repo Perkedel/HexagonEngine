@@ -18,10 +18,10 @@ func _ready():
 func _process(delta):
 	if DebugKeyMode:
 		if Input.is_key_pressed(KEY_1):
-			OpenMenuDrawer()
+			#OpenMenuDrawer()
 			pass
 		if Input.is_key_pressed(KEY_2):
-			CloseMenuDrawer()
+			#CloseMenuDrawer()
 			pass
 		pass
 		
@@ -44,17 +44,31 @@ func _process(delta):
 		pass
 	pass
 
+func ReplayButtoningAnimations():
+	doMenuDrawerOpen = false;
+	CloseMenuDrawer()
+	$MenuButtonAnimations.play("InitMenu")
+	$FocusArea/SamPlayArea.FocusPlayButtonNow()
+	pass
+
+func FocusPlayButtonNow():
+	$FocusArea/SamPlayArea.FocusPlayButtonNow()
+	#letsCloseMenuDrawer()
+	pass
+
+func FocusFirstMoreMenuButton():
+	$MoreMenu/BoxMenuContainings/SettingButton/Button.grab_focus()
+	pass
+
 
 func _on_SamPlayArea_Hover_MoreMenu_Button():
-	letsOpenMenuDrawer()
+	#letsOpenMenuDrawer()
+	BecauseOpenMenuDrawer()
 	pass # Replace with function body.
 
-
-
-
-
 func _on_SamPlayArea_Hover_Play_Button():
-	letsCloseMenuDrawer()
+	#letsCloseMenuDrawer()
+	BecauseCloseMenuDrawer()
 	pass # Replace with function body.
 
 func letsOpenMenuDrawer():
@@ -63,6 +77,16 @@ func letsOpenMenuDrawer():
 
 func letsCloseMenuDrawer():
 	doMenuDrawerOpen = false
+	pass
+
+func BecauseOpenMenuDrawer():
+	letsOpenMenuDrawer()
+	FocusFirstMoreMenuButton()
+	pass
+
+func BecauseCloseMenuDrawer():
+	letsCloseMenuDrawer()
+	FocusPlayButtonNow()
 	pass
 
 

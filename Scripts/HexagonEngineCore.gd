@@ -16,3 +16,21 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func DoChangeDVDNow():
+	
+	pass
+
+func DoShutdownNow():
+	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
+	get_tree().quit()
+	pass
+
+func _on_DVDCartridgeSlot_ChangeDVD_Exec():
+	DoShutdownNow()
+	pass # Replace with function body.
+
+
+func _on_DVDCartridgeSlot_Shutdown_Exec():
+	DoShutdownNow()
+	pass # Replace with function body.
