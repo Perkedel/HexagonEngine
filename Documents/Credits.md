@@ -33,3 +33,4 @@ Used Assets and Tools!
 |Ton Roosendaal, Blender Foundation| Blender | Full fledged 3D tool suite in one software | https://blender.org | <100% | GNU GPL v2+ | `-` |
 |Audacity Team | Audacity | All in one Non-linear Audio editing software | https://www.audacityteam.org/ | <100% | GNU GPL v2 | `uhhh help rights reserved wronged to "ALL" instead of "SOME"`|
 |electron | rcedit | hack Windows exe resource | https://github.com/electron/rcedit/releases | <100% | MIT | `-` |
+|GIMP team | GIMP | Raster image editing software | https://www.gimp.org/ | <100% | GNU GPL v2+ | `-` |
