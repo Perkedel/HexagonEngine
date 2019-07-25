@@ -19,6 +19,7 @@ Table of Refferences!
 |Juan Linietsky & friends	|Pause Game| Using paused tree and its whitelist to nodes|https://docs.godotengine.org/en/latest/tutorials/misc/pausing_games.html | <100%| CC3.0-BY|`© Copyright 2014-2019, Juan Linietsky, Ariel Manzur and the Godot community (CC-BY 3.0)`|
 |GDquest|Pause game Tutorial|How to make pause game| https://www.youtube.com/watch?v=Jf7F3JhY9Fg | <100%|???| `-`|
 |lukas|Quit|GD script quit| https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript | <100% | ??? | `-`|
+|Calinou| recedit | Set icon in Windows | https://godotengine.org/qa/31470/how-to-set-icon-in-app | <100% | ??? | `-` |
 
 
 
@@ -31,3 +32,4 @@ Used Assets and Tools!
 |Inkscape Community|Inkscape|Vector graphic drawing software| https://inkscape.org | <100% | GNU GPL v2+ | `Inkscape is Free and Open Source Software licensed under the GPL. `|
 |Ton Roosendaal, Blender Foundation| Blender | Full fledged 3D tool suite in one software | https://blender.org | <100% | GNU GPL v2+ | `-` |
 |Audacity Team | Audacity | All in one Non-linear Audio editing software | https://www.audacityteam.org/ | <100% | GNU GPL v2 | `uhhh help rights reserved wronged to "ALL" instead of "SOME"`|
+|electron | rcedit | hack Windows exe resource | https://github.com/electron/rcedit/releases | <100% | MIT | `-` |
