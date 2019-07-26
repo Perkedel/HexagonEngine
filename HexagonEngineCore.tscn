@@ -21,7 +21,7 @@ visible = false
 
 [node name="SystemGut" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SystemGut"]
+[node name="Speaker" type="AudioStreamPlayer" parent="SystemGut"]
 mix_target = 1
 
 [node name="Timer" type="Timer" parent="SystemGut"]

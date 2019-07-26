@@ -10,9 +10,7 @@ var mouse_button_down = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if not $HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.has_focus():
-		$HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.grab_focus()
-		pass
+	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,7 +18,7 @@ func _ready():
 #	pass
 
 func FocusFirstCategoryButtonNow():
-	$HBoxContainer/CategoryScrolling/CategorySelection/AudioCategory.grab_focus()
+	$HBoxContainer/CategoryScrolling/CategorySelection/InheritableCategoryButton.grab_focus()
 	pass
 
 func _on_CategoryScrolling_gui_input(event):

@@ -20,6 +20,7 @@ run/main_scene="res://HexagonEngineCore.tscn"
 boot_splash/image="res://Sprites/HexagonEngineBootSplash.png"
 boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
 config/icon="res://Sprites/HexagonEngineSign.png"
+config/auto_accept_quit=false
 config/quit_on_go_back=false
 
 [compression]
@@ -44,10 +45,6 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/use_hidpi=true
-
-[input_devices]
-
-pointing/emulate_mouse_from_touch=false
 
 [physics]
 

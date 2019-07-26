@@ -35,7 +35,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="AreYouSureDialog" parent="." instance=ExtResource( 5 )]
-visible = false
 [connection signal="PressChangeDVD" from="MainMenu" to="." method="_on_MainMenu_PressChangeDVD"]
 [connection signal="PressExit" from="MainMenu" to="." method="_on_MainMenu_PressExit"]
 [connection signal="PressExtras" from="MainMenu" to="." method="_on_MainMenu_PressExtras"]
@@ -45,3 +44,4 @@ visible = false
 [connection signal="PressBackButton" from="NextMenu" to="." method="_on_NextMenu_PressBackButton"]
 [connection signal="NoImNotSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_NoImNotSure"]
 [connection signal="YesImSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesImSure"]
+[connection signal="popup_hide" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_popup_hide"]

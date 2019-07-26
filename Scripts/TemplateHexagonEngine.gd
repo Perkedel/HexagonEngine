@@ -22,6 +22,8 @@ func _process(delta):
 	
 	pass
 
+# Place UIspace under CanvasLayer! https://godotengine.org/qa/396/gui-not-following-camera
+
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 

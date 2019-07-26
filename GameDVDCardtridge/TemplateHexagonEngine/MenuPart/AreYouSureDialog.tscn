@@ -4,7 +4,7 @@
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
 
-[node name="AreYouSureDialog" type="Control"]
+[node name="AreYouSureDialog" type="Popup"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

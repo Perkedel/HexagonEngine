@@ -46,6 +46,18 @@ func _process(delta):
 	
 	pass
 
+func _notification(what):
+	# https://godotengine.org/qa/4768/android-ios-application-lifecycle
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		# quitting app or back-button on Android
+		print("Quit Request")
+		AttempTheQuitGame()
+		pass
+	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+		print("Hexagon Engine Defocused!")
+		pass
+	pass
+
 func FocusPlayButtonNow():
 	$MainMenu.FocusPlayButtonNow()
 	
@@ -65,6 +77,7 @@ func SetSpawnDialogContextFor(WhichContext):
 	pass
 
 func DoDialogYesButtonOf():
+	print("Dialog Yes Button")
 	FocusPlayButtonNow()
 	if DialogSelectAction == DialogConfirmsFor.Nothing:
 		
@@ -78,7 +91,21 @@ func DoDialogYesButtonOf():
 	pass
 
 func DoDialogNoButtonOf():
+	print("Dialog No Button")
 	FocusPlayButtonNow()
+	pass
+
+func DoDialogAwayHideOf():
+	print("Dialog Go Away")
+	pass
+
+func AttempTheQuitGame():
+	if $AreYouSureDialog.isSpawned:
+		$AreYouSureDialog.NoCancel()
+		pass
+	else:
+		SetSpawnDialogContextFor(DialogConfirmsFor.QuitGame)
+		pass
 	pass
 
 signal ChangeDVD_Exec
@@ -102,7 +129,7 @@ func _on_MainMenu_PressChangeDVD():
 
 
 func _on_MainMenu_PressExit():
-	SetSpawnDialogContextFor(DialogConfirmsFor.QuitGame)
+	AttempTheQuitGame()
 	pass # Replace with function body.
 
 
@@ -137,4 +164,9 @@ func _on_AreYouSureDialog_YesImSure():
 
 func _on_AreYouSureDialog_NoImNotSure():
 	DoDialogNoButtonOf()
+	pass # Replace with function body.
+
+
+func _on_AreYouSureDialog_popup_hide():
+	DoDialogAwayHideOf()
 	pass # Replace with function body.
