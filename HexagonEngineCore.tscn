@@ -14,7 +14,7 @@ script = ExtResource( 2 )
 
 [node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 3 )]
 
-[node name="MetaMenu" type="Node" parent="."]
+[node name="MetaMenu" type="CanvasLayer" parent="."]
 
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]
 visible = false

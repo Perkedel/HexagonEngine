@@ -14,7 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_mouse_button_pressed(2):
-		$PopupMenu.popup()
+	#if Input.is_mouse_button_pressed(2):
+	if Input.is_action_just_pressed("ui_mouse_right"):
+		$PopupMenu.popup(Rect2(get_local_mouse_position(), Vector2(100,200)))
 		pass
 	pass

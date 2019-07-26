@@ -1,0 +1,125 @@
+[gd_resource type="AnimatedTexture" load_steps=39 format=2]
+
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_00.png" type="Texture" id=1]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_01.png" type="Texture" id=2]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_10.png" type="Texture" id=3]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_11.png" type="Texture" id=4]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_12.png" type="Texture" id=5]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_13.png" type="Texture" id=6]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_14.png" type="Texture" id=7]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_15.png" type="Texture" id=8]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_16.png" type="Texture" id=9]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_17.png" type="Texture" id=10]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_19.png" type="Texture" id=11]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_02.png" type="Texture" id=12]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_20.png" type="Texture" id=13]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_21.png" type="Texture" id=14]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_22.png" type="Texture" id=15]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_23.png" type="Texture" id=16]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_24.png" type="Texture" id=17]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_25.png" type="Texture" id=18]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_26.png" type="Texture" id=19]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_27.png" type="Texture" id=20]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_28.png" type="Texture" id=21]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_29.png" type="Texture" id=22]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_03.png" type="Texture" id=23]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_30.png" type="Texture" id=24]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_31.png" type="Texture" id=25]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_32.png" type="Texture" id=26]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_33.png" type="Texture" id=27]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_34.png" type="Texture" id=28]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_35.png" type="Texture" id=29]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_36.png" type="Texture" id=30]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_37.png" type="Texture" id=31]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_38.png" type="Texture" id=32]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_39.png" type="Texture" id=33]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_04.png" type="Texture" id=34]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_05.png" type="Texture" id=35]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_06.png" type="Texture" id=36]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_07.png" type="Texture" id=37]
+[ext_resource path="res://Piskel/Gravity_HourGlass/GravityHourGlass_08.png" type="Texture" id=38]
+
+[resource]
+resource_name = "Gravity HourGlass"
+flags = 4
+frames = 40
+fps = 24.0
+frame_0/texture = ExtResource( 1 )
+frame_1/texture = ExtResource( 2 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 12 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 23 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 34 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 35 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 36 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 37 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 38 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 3 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 3 )
+frame_10/delay_sec = 0.0
+frame_11/texture = ExtResource( 4 )
+frame_11/delay_sec = 0.0
+frame_12/texture = ExtResource( 5 )
+frame_12/delay_sec = 0.0
+frame_13/texture = ExtResource( 6 )
+frame_13/delay_sec = 0.0
+frame_14/texture = ExtResource( 7 )
+frame_14/delay_sec = 0.0
+frame_15/texture = ExtResource( 8 )
+frame_15/delay_sec = 0.0
+frame_16/texture = ExtResource( 9 )
+frame_16/delay_sec = 0.0
+frame_17/texture = ExtResource( 10 )
+frame_17/delay_sec = 0.0
+frame_18/texture = ExtResource( 11 )
+frame_18/delay_sec = 0.0
+frame_19/texture = ExtResource( 11 )
+frame_19/delay_sec = 0.0
+frame_20/texture = ExtResource( 13 )
+frame_20/delay_sec = 0.0
+frame_21/texture = ExtResource( 14 )
+frame_21/delay_sec = 0.0
+frame_22/texture = ExtResource( 15 )
+frame_22/delay_sec = 0.0
+frame_23/texture = ExtResource( 16 )
+frame_23/delay_sec = 0.0
+frame_24/texture = ExtResource( 17 )
+frame_24/delay_sec = 0.0
+frame_25/texture = ExtResource( 18 )
+frame_25/delay_sec = 0.0
+frame_26/texture = ExtResource( 19 )
+frame_26/delay_sec = 0.0
+frame_27/texture = ExtResource( 20 )
+frame_27/delay_sec = 0.0
+frame_28/texture = ExtResource( 21 )
+frame_28/delay_sec = 0.0
+frame_29/texture = ExtResource( 22 )
+frame_29/delay_sec = 0.0
+frame_30/texture = ExtResource( 24 )
+frame_30/delay_sec = 0.0
+frame_31/texture = ExtResource( 25 )
+frame_31/delay_sec = 0.0
+frame_32/texture = ExtResource( 26 )
+frame_32/delay_sec = 0.0
+frame_33/texture = ExtResource( 27 )
+frame_33/delay_sec = 0.0
+frame_34/texture = ExtResource( 28 )
+frame_34/delay_sec = 0.0
+frame_35/texture = ExtResource( 29 )
+frame_35/delay_sec = 0.0
+frame_36/texture = ExtResource( 30 )
+frame_36/delay_sec = 0.0
+frame_37/texture = ExtResource( 31 )
+frame_37/delay_sec = 0.0
+frame_38/texture = ExtResource( 32 )
+frame_38/delay_sec = 0.0
+frame_39/texture = ExtResource( 33 )
+frame_39/delay_sec = 0.0
