@@ -61,13 +61,6 @@ func _on_Button_mouse_exited():
 	pass # Replace with function body.
 
 
-func _on_Button_focus_entered():
-	pass # Replace with function body.
-
-
-func _on_Button_focus_exited():
-	pass # Replace with function body.
-
 
 func _on_MoreButtonCollumnArea_focus_entered():
 	pass # Replace with function body.
@@ -93,4 +86,14 @@ func _on_Button_gui_input(event):
 		pass
 	if Input.is_action_just_pressed("ui_right"):
 		pass
+	pass # Replace with function body.
+
+
+func _on_Button_focus_entered():
+	#$MoreButtonAnimationing.play("BeingHovered")
+	pass # Replace with function body.
+
+
+func _on_Button_focus_exited():
+	#$MoreButtonAnimationing.play("BeingDehovered")
 	pass # Replace with function body.

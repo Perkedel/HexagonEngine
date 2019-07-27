@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-MI.ttf" type="DynamicFontData" id=1]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Ubuntu Italic 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0.113725, 0, 1 )
+font_data = ExtResource( 1 )

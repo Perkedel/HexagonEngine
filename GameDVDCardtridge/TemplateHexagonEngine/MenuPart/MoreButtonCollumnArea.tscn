@@ -70,20 +70,23 @@ margin_bottom = 175.0
 rect_min_size = Vector2( 250, 150 )
 hint_tooltip = "Insert Tooltip!"
 
-[node name="BackgroundPanel" type="TextureRect" parent="Button"]
+[node name="BackgroundPanel" type="NinePatchRect" parent="Button"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
-expand = true
+region_rect = Rect2( -0.076931, -0.225245, 128.252, 128.241 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 7
+patch_margin_bottom = 8
 
 [node name="HoverLights" type="TextureRect" parent="Button"]
-visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
 expand = true
-stretch_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Button"]
 margin_left = 9.0
@@ -115,6 +118,8 @@ autoplay = "InitMoreButton"
 anims/BeingDehovered = SubResource( 1 )
 anims/BeingHovered = SubResource( 2 )
 anims/InitMoreButton = SubResource( 3 )
+[connection signal="focus_entered" from="Button" to="." method="_on_Button_focus_entered"]
+[connection signal="focus_exited" from="Button" to="." method="_on_Button_focus_exited"]
 [connection signal="gui_input" from="Button" to="." method="_on_Button_gui_input"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]

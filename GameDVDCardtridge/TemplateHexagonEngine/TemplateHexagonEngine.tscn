@@ -19,4 +19,5 @@ script = ExtResource( 1 )
 MainMenuNode = NodePath("../CanvasLayer/UIspace/MainMenu")
 NextMenuNode = NodePath("../CanvasLayer/UIspace/NextMenu")
 [connection signal="ChangeDVD_Exec" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_ChangeDVD_Exec"]
+[connection signal="PleaseLoadThisLevelOf" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_PleaseLoadThisLevelOf"]
 [connection signal="Shutdown_Exec" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_Shutdown_Exec"]

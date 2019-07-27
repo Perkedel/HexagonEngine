@@ -26,10 +26,10 @@ func _process(delta):
 		pass
 		
 	if Input.is_action_just_pressed("ui_down"):
-		doMenuDrawerOpen = true
+		#doMenuDrawerOpen = true
 		pass
 	if Input.is_action_just_pressed("ui_up"):
-		doMenuDrawerOpen = false
+		#doMenuDrawerOpen = false
 		pass
 	
 	if doMenuDrawerOpen:

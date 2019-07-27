@@ -14,5 +14,3 @@ self_modulate = Color( 1, 0.835294, 0.396078, 1 )
 
 [node name="Label" parent="Button/VBoxContainer" index="1"]
 text = "Setting"
-[connection signal="focus_entered" from="Button" to="." method="_on_Button_focus_entered"]
-[connection signal="focus_exited" from="Button" to="." method="_on_Button_focus_exited"]

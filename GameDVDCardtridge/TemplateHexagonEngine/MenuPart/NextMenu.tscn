@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=2]
@@ -9,10 +9,55 @@
 [ext_resource path="res://Sprites/PlayIcon.png" type="Texture" id=7]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=9]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownArea.tscn" type="PackedScene" id=10]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=11]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tscn" type="PackedScene" id=12]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=13]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownArea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=13]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tscn" type="PackedScene" id=14]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="ButtonGroup" id=2]
+resource_name = "Category Select Group"
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+resource_name = "Ubuntu 72 Bold"
+size = 72
+outline_size = 3
+outline_color = Color( 0.0862745, 0.0392157, 0.317647, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+resource_name = "Ubuntu 72 Bold"
+size = 72
+outline_size = 3
+outline_color = Color( 0.0862745, 0.0392157, 0.317647, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 10 )
 
 [node name="NextMenu" type="Control"]
 anchor_right = 1.0
@@ -85,15 +130,34 @@ visible = false
 editor/display_folded = true
 visible = false
 
-[node name="UnknownArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 10 )]
+[node name="InheritableCategoryButton" parent="VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/CategoryScrolling/CategorySelection" index="0"]
+custom_fonts/font = SubResource( 1 )
+group = SubResource( 2 )
+
+[node name="DummyCategory" parent="VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/ScrollContainer" index="0"]
+margin_right = 1412.0
+
+[node name="LinkButton" parent="VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/ScrollContainer/DummyCategory" index="17"]
+custom_fonts/font = SubResource( 3 )
+
+[node name="HSlider" parent="VBoxContainer/MenuSpaceArea/SettingArea/HBoxContainer/ScrollContainer/DummyCategory" index="19"]
+ticks_on_borders = true
+
+[node name="UnknownArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 11 )]
 editor/display_folded = true
 visible = false
 
-[node name="ExtrasArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 11 )]
+[node name="EditMe" parent="VBoxContainer/MenuSpaceArea/UnknownArea" index="0"]
+custom_fonts/font = SubResource( 4 )
+
+[node name="ExtrasArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 13 )]
 editor/display_folded = true
 visible = false
 
-[node name="LevelSelectArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 12 )]
+[node name="ItemList" parent="VBoxContainer/MenuSpaceArea/ExtrasArea" index="0"]
+custom_fonts/font = SubResource( 5 )
+
+[node name="LevelSelectArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 14 )]
 editor/display_folded = true
 visible = false
 
@@ -106,7 +170,8 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 
-[node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 13 )]
+[node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 15 )]
+custom_fonts/font = SubResource( 6 )
 [connection signal="LeaveAndBackToMenu" from="VBoxContainer/MenuSpaceArea/UnknownArea" to="." method="_on_UnknownArea_LeaveAndBackToMenu"]
 [connection signal="pressed" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed"]
 

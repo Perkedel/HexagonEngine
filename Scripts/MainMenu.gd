@@ -28,6 +28,22 @@ func _input(event):
 	
 	pass
 
+func CloseTheDrawer():
+	$VBoxContainer/MenuButtonings.BecauseCloseMenuDrawer()
+	pass
+
+func OpenTheDrawer():
+	$VBoxContainer/MenuButtonings.BecauseOpenMenuDrawer()
+	pass
+
+func FocusPlayButtonNow(): #CLoseTheDrawer
+	$VBoxContainer/MenuButtonings.BecauseCloseMenuDrawer()
+	pass
+
+func FocusMoreMenuButtonNow(): #OpenTheDrawer
+	$VBoxContainer/MenuButtonings.BecauseOpenMenuDrawer()
+	pass
+
 func ArriveAtMainMenu():
 	ReplayMenuAnimation()
 	pass
@@ -35,14 +51,6 @@ func ArriveAtMainMenu():
 func ReplayMenuAnimation():
 	$VBoxContainer/TitleBox.ReplayTitleAnimation()
 	$VBoxContainer/MenuButtonings.ReplayButtoningAnimations()
-	pass
-
-func FocusPlayButtonNow():
-	$VBoxContainer/MenuButtonings.BecauseCloseMenuDrawer()
-	pass
-
-func FocusMoreMenuButtonNow():
-	$VBoxContainer/MenuButtonings.BecauseOpenMenuDrawer()
 	pass
 
 signal PressChangeDVD()

@@ -8,6 +8,7 @@ extends Node
 #export(MenuLists) var MenuIsRightNow = 0
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
+var ConThread
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -10,6 +10,21 @@ export(MenuLists) var MenuIsRightNow = 0
 export var isPlayingTheGameNow = false
 export var PauseTheGame = false
 
+# https://www.youtube.com/watch?v=9sHKaQBcgO8&t=14s
+# https://www.youtube.com/watch?v=-x0M17IwG0s
+onready var aThread = Thread.new()
+var a3DResource
+var a2DResource
+export(float) var loadValue
+export(PackedScene) var Your3DSpaceLevel
+var Prev3DSpaceLevel
+export(PackedScene) var Your2DSpaceLevel
+var Prev2DSpaceLevel
+export(Texture) var LevelBannerThumbnail
+export(String) var LevelTitleg
+# https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
+export(String, MULTILINE) var LevelDescription
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -19,6 +34,11 @@ func NextMenu():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if a3DResource == null:
+		pass
+	if a2DResource == null:
+		pass
 	
 	pass
 
@@ -40,4 +60,45 @@ func _on_UIspace_ChangeDVD_Exec():
 
 func _on_UIspace_Shutdown_Exec():
 	ExecuteShutdown()
+	pass # Replace with function body.
+
+func ManageLoadingBar():
+	pass
+
+func ExecuteLoadLevel():
+	aThread.start(self, "ThreadLoadLevel")
+	pass
+
+# https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
+func ThreadLoadLevel(aVariable): #Execute in Thread!
+	
+	pass
+
+func goto_scene(a3Dpath, a2Dpath):
+	a3DResource = ResourceInteractiveLoader.load_interactive(Your3DSpaceLevel)
+	a2DResource = ResourceInteractiveLoader.load_interactive(Your2DSpaceLevel)
+	if a3DResource == null:
+		# Error 3D
+		pass
+	if a2DResource == null:
+		# Error 2D
+		pass
+	
+	
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+	pass
+
+func ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	Your3DSpaceLevel = a3DScapePacked
+	Your2DSpaceLevel = a2DSpacePacked
+	LevelBannerThumbnail = LevelThumb
+	LevelTitleg = LevelTitle
+	LevelDescription = LevelDesc
+	#ExecuteThreadLoadLevel here
+	
+	pass
+
+# FInal chain! please save variable and do loading stuffs!
+func _on_UIspace_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 	pass # Replace with function body.

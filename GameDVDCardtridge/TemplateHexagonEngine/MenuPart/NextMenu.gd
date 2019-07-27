@@ -121,3 +121,9 @@ func _on_BackButton_pressed():
 func _on_UnknownArea_LeaveAndBackToMenu():
 	emit_signal("PressBackButton")
 	pass # Replace with function body.
+
+#Daisy Chained SIgnal!!!
+signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+func _on_LevelSelectArea_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	emit_signal("PleaseLoadThisLevelOf", a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+	pass # Replace with function body.

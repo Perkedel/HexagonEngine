@@ -15,7 +15,8 @@ export(NodePath) var GameplayUINode
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$MainMenu/VBoxContainer/MenuButtonings/FocusArea/SamPlayArea/PlayButton.grab_focus()
-	FocusPlayButtonNow()
+	#FocusPlayButtonNow()
+	CloseTheDrawer()
 	pass # Replace with function body.
 
 func ShowNextMenu():
@@ -46,6 +47,14 @@ func _process(delta):
 	
 	pass
 
+func CloseTheDrawer():
+	$MainMenu.CloseTheDrawer()
+	pass
+
+func OpenTheDrawer():
+	$MainMenu.OpenTheDrawer()
+	pass
+
 func _notification(what):
 	# https://godotengine.org/qa/4768/android-ios-application-lifecycle
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
@@ -58,9 +67,17 @@ func _notification(what):
 		pass
 	pass
 
+func _input(event):
+	if event.is_action_pressed("ui_up"):
+		CloseTheDrawer()
+		pass
+	if event.is_action_pressed("ui_down"):
+		OpenTheDrawer()
+		pass
+	pass
+
 func FocusPlayButtonNow():
 	$MainMenu.FocusPlayButtonNow()
-	
 	pass
 
 func SetSpawnDialogContextFor(WhichContext):
@@ -78,7 +95,8 @@ func SetSpawnDialogContextFor(WhichContext):
 
 func DoDialogYesButtonOf():
 	print("Dialog Yes Button")
-	FocusPlayButtonNow()
+	#FocusPlayButtonNow()
+	CloseTheDrawer()
 	if DialogSelectAction == DialogConfirmsFor.Nothing:
 		
 		pass
@@ -92,11 +110,13 @@ func DoDialogYesButtonOf():
 
 func DoDialogNoButtonOf():
 	print("Dialog No Button")
-	FocusPlayButtonNow()
+	#FocusPlayButtonNow()
+	CloseTheDrawer()
 	pass
 
 func DoDialogAwayHideOf():
 	print("Dialog Go Away")
+	CloseTheDrawer()
 	pass
 
 func AttempTheQuitGame():
@@ -105,6 +125,15 @@ func AttempTheQuitGame():
 		pass
 	else:
 		SetSpawnDialogContextFor(DialogConfirmsFor.QuitGame)
+		pass
+	pass
+
+func AttemptTheChangeDVD():
+	if $AreYouSureDialog.isSpawned:
+		$AreYouSureDialog.NoCancel()
+		pass
+	else:
+		SetSpawnDialogContextFor(DialogConfirmsFor.ChangeDVD)
 		pass
 	pass
 
@@ -124,7 +153,7 @@ func _on_BackButton_pressed(extra_arg_0):
 
 
 func _on_MainMenu_PressChangeDVD():
-	SetSpawnDialogContextFor(DialogConfirmsFor.ChangeDVD)
+	AttemptTheChangeDVD()
 	pass # Replace with function body.
 
 
@@ -169,4 +198,21 @@ func _on_AreYouSureDialog_NoImNotSure():
 
 func _on_AreYouSureDialog_popup_hide():
 	DoDialogAwayHideOf()
+	pass # Replace with function body.
+
+func SpawnLoadingBar():
+	$LoadingPopup.SpawnLoading()
+	pass
+
+func DespawnLoadingBar():
+	$LoadingPopup.DespawnLoading()
+	pass
+
+func ManageLoading(ProgressValuei, WordingHint, isComplete = false):
+	$LoadingPopup.ManageLoading(ProgressValuei, WordingHint, isComplete)
+	pass
+
+signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+func _on_NextMenu_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	emit_signal("PleaseLoadThisLevelOf", a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 	pass # Replace with function body.

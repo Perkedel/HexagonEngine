@@ -62,11 +62,6 @@ margin_top = 0.0
 margin_right = 300.0
 margin_bottom = 200.0
 
-[node name="Button" parent="MoreMenu/BoxMenuContainings/SettingButton" index="0"]
-editor/display_folded = true
-margin_left = 25.0
-margin_right = 275.0
-
 [node name="UnknownButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 5 )]
 anchor_top = 0.0
 anchor_right = 0.0
@@ -119,5 +114,3 @@ margin_bottom = 200.0
 [connection signal="Button_Pressingated" from="MoreMenu/BoxMenuContainings/ExitButton" to="." method="_on_ExitButton_Button_Pressingated"]
 [connection signal="focus_entered" from="MoreMenu/BoxMenuContainings/ExitButton" to="MoreMenu/BoxMenuContainings/ExitButton" method="_on_MoreButtonCollumnArea_focus_entered"]
 [connection signal="focus_exited" from="MoreMenu/BoxMenuContainings/ExitButton" to="MoreMenu/BoxMenuContainings/ExitButton" method="_on_MoreButtonCollumnArea_focus_exited"]
-
-[editable path="MoreMenu/BoxMenuContainings/SettingButton"]

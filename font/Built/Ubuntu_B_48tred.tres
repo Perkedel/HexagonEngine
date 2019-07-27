@@ -4,8 +4,8 @@
 
 [resource]
 resource_local_to_scene = true
-resource_name = "Ubuntu 72 Bold"
-size = 72
-outline_size = 3
-outline_color = Color( 0.0862745, 0.0392157, 0.317647, 1 )
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
 font_data = ExtResource( 1 )

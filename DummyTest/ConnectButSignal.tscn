@@ -17,5 +17,5 @@ script = ExtResource( 2 )
 margin_right = 1273.0
 margin_bottom = 339.0
 [connection signal="Emiro" from="CUstomSignaly" to="." method="_on_CUstomSignaly_Emiro"]
-[connection signal="pressed" from="CUstomSignaly/Button" to="." method="_on_Button_pressed" binds= [ "Hexo", "true" ]]
 [connection signal="pressed" from="CUstomSignaly/Button" to="CUstomSignaly" method="_on_Button_pressed" binds= [ false, "UUI" ]]
+[connection signal="pressed" from="CUstomSignaly/Button" to="." method="_on_Button_pressed" binds= [ "Hexo", "true" ]]

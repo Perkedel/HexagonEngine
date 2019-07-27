@@ -25,6 +25,12 @@ func DespawnLoading():
 	hide()
 	pass
 
+func ManageLoading(ProgressValuei, WordingHint, isComplete = false):
+	ProgressMeterValue = ProgressValuei
+	ProgressWording = WordingHint
+	LoadingCompleted = isComplete
+	pass
+
 func DeCompleteTheLoadingNow():
 	LoadingCompleted = false
 	#$LoadingAnimates.play("GravityHourGlassRotate")
@@ -53,7 +59,7 @@ func UpdateDots():
 func RotateHourglass():
 	HourglassRotateDegree += 2
 	if HourglassRotateDegree >= 360:
-		HourglassRotateDegree = 0
+		HourglassRotateDegree = HourglassRotateDegree - 360
 		pass    
 	
 	pass
@@ -79,7 +85,7 @@ func _process(delta):
 		$HBoxContainer/VBoxContainer/ProgressBar.self_modulate = IncompleteLoadingColor
 		pass
 	
-	$HBoxContainer/GravityHourGlass.set_rotation_degrees(HourglassRotateDegree)
+	$HBoxContainer/SpaceContain/GravityHourGlass.set_rotation_degrees(HourglassRotateDegree)
 	pass
 
 
