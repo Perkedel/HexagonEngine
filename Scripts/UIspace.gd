@@ -11,6 +11,8 @@ export(DialogConfirmsFor) var DialogSelectAction
 export(NodePath) var MainMenuNode
 export(NodePath) var NextMenuNode
 export(NodePath) var GameplayUINode
+export(bool) var ReadyToPlayGame = false
+export(bool) var isPlayingGameNow = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,14 +40,39 @@ func BackToMainMenu():
 	$MainMenu.ArriveAtMainMenu()
 	pass
 
+func SetReadyToPlay(isItReady):
+	ReadyToPlayGame = isItReady
+	pass
+
+func SetIsPlayingGameNow(isItPlaying):
+	isPlayingGameNow = isItPlaying
+	pass
+
+func ShowGameplayUI():
+	#print("Show gameplay HUD UI")
+	#SetAndShowNextMenu(SelectMenuList.Gameplay)
+	$GameplayUI.show()
+	$NextMenu.hide()
+	$MainMenu.hide()
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_key_pressed(KEY_0):
 		#NextMenu(PassMenuScene)
-		ShowNextMenu()
+		#ShowNextMenu()
 		pass
 	
-	pass
+	if isPlayingGameNow and ReadyToPlayGame:
+		
+		if not $GameplayUI.visible:
+			#print("Show UI Gameplay")
+			ShowGameplayUI()
+			pass
+		pass
+	elif isPlayingGameNow and not ReadyToPlayGame:
+		
+		pass
 
 func CloseTheDrawer():
 	$MainMenu.CloseTheDrawer()
@@ -208,7 +235,7 @@ func DespawnLoadingBar():
 	$LoadingPopup.DespawnLoading()
 	pass
 
-func ManageLoading(ProgressValuei, WordingHint, isComplete = false):
+func ManageLoading(ProgressValuei = 0, WordingHint = "Loadinger", isComplete = false):
 	$LoadingPopup.ManageLoading(ProgressValuei, WordingHint, isComplete)
 	pass
 

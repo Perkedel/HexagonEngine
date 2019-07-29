@@ -18,6 +18,12 @@ script = ExtResource( 1 )
 [node name="UIspace" parent="MustFollowPersonCamera2D" instance=ExtResource( 4 )]
 MainMenuNode = NodePath("../CanvasLayer/UIspace/MainMenu")
 NextMenuNode = NodePath("../CanvasLayer/UIspace/NextMenu")
+[connection signal="IncludeMeForYourLoading" from="3Dspace" to="." method="_on_3Dspace_IncludeMeForYourLoading"]
+[connection signal="a3D_Loading_ProgressBar" from="3Dspace" to="." method="_on_3Dspace_a3D_Loading_ProgressBar"]
+[connection signal="hasLoadingCompleted" from="3Dspace" to="." method="_on_3Dspace_hasLoadingCompleted"]
+[connection signal="IncludeMeForYourLoading" from="2Dspace" to="." method="_on_2Dspace_IncludeMeForYourLoading"]
+[connection signal="a2D_Loading_ProgressBar" from="2Dspace" to="." method="_on_2Dspace_a2D_Loading_ProgressBar"]
+[connection signal="hasLoadingCompleted" from="2Dspace" to="." method="_on_2Dspace_hasLoadingCompleted"]
 [connection signal="ChangeDVD_Exec" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_ChangeDVD_Exec"]
 [connection signal="PleaseLoadThisLevelOf" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_PleaseLoadThisLevelOf"]
 [connection signal="Shutdown_Exec" from="MustFollowPersonCamera2D/UIspace" to="." method="_on_UIspace_Shutdown_Exec"]

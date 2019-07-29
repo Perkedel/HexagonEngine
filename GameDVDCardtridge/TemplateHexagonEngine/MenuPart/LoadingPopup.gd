@@ -13,6 +13,7 @@ export(float,0,360) var HourglassRotateDegree
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ProgressMeterValue = 98
 	$DotFramePerSec.start(.5)
 	pass # Replace with function body.
 
@@ -25,10 +26,16 @@ func DespawnLoading():
 	hide()
 	pass
 
-func ManageLoading(ProgressValuei, WordingHint, isComplete = false):
+func ManageLoading(ProgressValuei = 0, WordingHint = "Loaden", isComplete = false):
 	ProgressMeterValue = ProgressValuei
-	ProgressWording = WordingHint
-	LoadingCompleted = isComplete
+	if not isComplete:
+		ProgressWording = WordingHint
+		pass
+	elif isComplete:
+		if not LoadingCompleted:
+			CompleteTheLoadingNow()
+			pass
+		pass
 	pass
 
 func DeCompleteTheLoadingNow():
@@ -37,7 +44,7 @@ func DeCompleteTheLoadingNow():
 	$Timerout.stop()
 	$DotFramePerSec.start()
 	$HourglassFramesPerSec.start()
-	ProgressWording = "Now Loading!"
+	#ProgressWording = "Now Loading!"
 	pass
 
 func CompleteTheLoadingNow():
@@ -66,7 +73,7 @@ func RotateHourglass():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$HBoxContainer/VBoxContainer/ProgressBar.value = ProgressMeterValue
+	$HBoxContainer/VBoxContainer/ProgressBar.set_value(ProgressMeterValue)
 	$HBoxContainer/VBoxContainer/LoadingHintWord.text = ProgressWording + Dots
 	
 	if Input.is_key_pressed(KEY_5):

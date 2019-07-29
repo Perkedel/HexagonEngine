@@ -28,6 +28,7 @@ script = ExtResource( 1 )
 Your3DSpaceLevel = ExtResource( 2 )
 Your2DSpaceLevel = ExtResource( 3 )
 LevelBannerThumbnail = ExtResource( 4 )
+LevelTitleg = "Template Titleg of Level"
 LevelDescription = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/UnkownIcon.png" type="Texture" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 100.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 90.0
+height = 160.0
+
+[node name="UnknownCapsule" type="RigidBody2D"]
+position = Vector2( 400, 200 )
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2.66667, 2.66667 )
+texture = ExtResource( 1 )

@@ -39,18 +39,28 @@ func _wait(caller):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ProgressValue = 0
 	mutex = Mutex.new()
 	semaphore = Semaphore.new()
 	exit_thread = false
 	ConThread3D = Thread.new()
 	
 	var root = $Level3DCartridgeSlot
-	Now3DSpaceLevel = root.get_child(get_child_count()-1)
+	Now3DSpaceLevel = root.get_child(0)
 	Prev3DSpaceLevel = Now3DSpaceLevel
 	pass # Replace with function body.
 
 func ThreadingSpawnScene(pathO):
-	ConThread3D.start(self, "_thread_function", pathO)
+	#ConThread3D.start(self, "_thread_function", pathO)
+	ConThread3D.start(self, "_thread_spawnAScene", pathO)
+	pass
+
+func _thread_spawnAScene(pathO):
+	semaphore.wait()
+	mutex.lock()
+	spawnAScene(pathO)
+	mutex.unlock()
+	semaphore.post()
 	pass
 
 #ADATA is brand. avoid unecessary brand mention!
@@ -98,8 +108,11 @@ func _exit_tree():
 	pass
 
 func spawnAScene(pathO):
+	mutex.lock()
+	$Dummy3DLoad.hide()
+	print("SpawnScene %s", pathO)
 	Prev3DSpaceLevel = Now3DSpaceLevel
-	a3DResource = ResourceInteractiveLoader.load_interactive(Your3DSpaceLevel)
+	a3DResource = ResourceLoader.load_interactive(pathO)
 	if a3DResource == null:
 		# Error 3D
 		show_error()
@@ -112,6 +125,7 @@ func spawnAScene(pathO):
 	emit_signal("IncludeMeForYourLoading", true)
 	
 	wait_frames = 1
+	mutex.unlock()
 	pass
 
 signal hasLoadingCompleted
@@ -127,7 +141,8 @@ func show_error():
 
 func update_progress():
 	var progress = float(a3DResource.get_stage()) / a3DResource.get_stage_count()
-	ProgressValue = progress
+	ProgressValue = progress * 100
+	print(progress)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -146,8 +161,11 @@ func _process(delta):
 	while OS.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
 	# poll your loader
 		var err = a3DResource.poll()
+		update_progress()
+		print("TimeTick3D ", t)
 		if err == ERR_FILE_EOF: # Finished loading.
 			var resource = a3DResource.get_resource()
+			update_progress()
 			a3DResource = null
 			InitiateThatScene(resource)
 			hasMeLoading = false
@@ -157,10 +175,11 @@ func _process(delta):
 			emit_signal("a3D_Loading_ProgressBar", ProgressValue)
 		else: # error during loading
 			show_error()
+			update_progress()
 			a3DResource = null
 			hasMeLoading = false
 			break
 		pass
 	
-	#emit_signal("a3D_Loading_ProgressBar", ProgressValue)
+	emit_signal("a3D_Loading_ProgressBar", ProgressValue)
 	pass

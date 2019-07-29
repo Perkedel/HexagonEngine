@@ -18,6 +18,16 @@ export(Image) var LoadUnknownIcon
 export(Image) var LoadExtrasIcon
 export(Image) var LoadPlayGameIcon
 
+export(PackedScene) var Your3DSpaceLevel
+export(PackedScene) var Your2DSpaceLevel
+export(Texture) var LevelBannerThumbnail
+export(Image) var LevelImageThumbnail
+export(String) var LevelTitleg
+# https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
+export(String, MULTILINE) var LevelDescription
+
+
+
 enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
 export(SelectMenuList) var SelectYourMenu
 
@@ -92,7 +102,12 @@ func SoftLetsChangeScene():
 		PrevNode = $VBoxContainer/MenuSpaceArea/ExtrasArea
 		pass
 	elif SelectYourMenu == SelectMenuList.Gameplay:
+		TitleBarName = LevelTitleg
+		#LevelImageThumbnail = Image.
+		TitleIcon = LoadPlayGameIcon
+		SoftChangeMenuSpace(PrevNode, $VBoxContainer/MenuSpaceArea/GameplayLevelLoadingInfoArea)
 		
+		PrevNode = $VBoxContainer/MenuSpaceArea/GameplayLevelLoadingInfoArea
 		pass
 	elif SelectYourMenu == SelectMenuList.LevelSelect:
 		TitleBarName = "Level Select"
@@ -125,5 +140,13 @@ func _on_UnknownArea_LeaveAndBackToMenu():
 #Daisy Chained SIgnal!!!
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 func _on_LevelSelectArea_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	print("Next Level had received ",a3DScapePacked, a2DSpacePacked, " and going to bridge those")
+	Your3DSpaceLevel = a3DScapePacked
+	Your2DSpaceLevel = a2DSpacePacked
+	LevelBannerThumbnail = LevelThumb
+	LevelTitleg = LevelTitle
+	LevelDescription = LevelDesc
+	
+	SetYourMenuList(SelectMenuList.Gameplay)
 	emit_signal("PleaseLoadThisLevelOf", a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 	pass # Replace with function body.

@@ -7,11 +7,10 @@
 script = ExtResource( 1 )
 
 [node name="PersonCamera2D" type="Camera2D" parent="."]
-position = Vector2( -403.232, -61.9043 )
+position = Vector2( 960, 540 )
 current = true
 
 [node name="Dummy2DLoad" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Mavrickle" type="Sprite" parent="Dummy2DLoad"]
 position = Vector2( 400, 380 )

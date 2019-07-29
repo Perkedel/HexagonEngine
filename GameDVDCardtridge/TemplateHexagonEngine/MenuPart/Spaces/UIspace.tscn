@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/UIspace.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MainMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=7]
 
 [node name="UIspace" type="Control"]
 pause_mode = 2
@@ -30,14 +31,12 @@ texture = ExtResource( 3 )
 editor/display_folded = true
 visible = false
 
-[node name="GameplayUI" type="Control" parent="."]
+[node name="GameplayUI" parent="." instance=ExtResource( 5 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
 
-[node name="AreYouSureDialog" parent="." instance=ExtResource( 5 )]
+[node name="AreYouSureDialog" parent="." instance=ExtResource( 6 )]
 
-[node name="LoadingPopup" parent="." instance=ExtResource( 6 )]
+[node name="LoadingPopup" parent="." instance=ExtResource( 7 )]
 [connection signal="PressChangeDVD" from="MainMenu" to="." method="_on_MainMenu_PressChangeDVD"]
 [connection signal="PressExit" from="MainMenu" to="." method="_on_MainMenu_PressExit"]
 [connection signal="PressExtras" from="MainMenu" to="." method="_on_MainMenu_PressExtras"]

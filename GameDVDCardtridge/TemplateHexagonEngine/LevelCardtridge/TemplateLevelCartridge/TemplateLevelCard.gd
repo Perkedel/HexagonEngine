@@ -27,10 +27,13 @@ func UpdateDetails():
 
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 func LoadThisLevelOfThat():
-	emit_signal("PleaseLoadThisLevelOf", Your3DSpaceLevel, Your2DSpaceLevel, LevelBannerThumbnail, LevelTitleg, LevelDescription)
+	
+	emit_signal("PleaseLoadThisLevelOf", Your3DSpaceLevel.get_path(), Your2DSpaceLevel.get_path(), LevelBannerThumbnail.get_path(), LevelTitleg, LevelDescription)
+	print("PleaseLoadThisLevelOf ", Your3DSpaceLevel.get_path()," | ", Your2DSpaceLevel.get_path()," | ", LevelBannerThumbnail.get_path(), " | ", LevelTitleg, " | ", LevelDescription)
 	pass
 
 
 func _on_PlayTheLevelButton_pressed():
+	print("Play The Level Button")
 	LoadThisLevelOfThat()
 	pass # Replace with function body.

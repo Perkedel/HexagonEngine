@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=2]
@@ -14,7 +14,8 @@
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=13]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tscn" type="PackedScene" id=14]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/GameplayLevelLoadingInfoArea.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -164,15 +165,19 @@ visible = false
 [node name="HBoxContainer" parent="VBoxContainer/MenuSpaceArea/LevelSelectArea/ScrollContainer" index="0"]
 margin_bottom = 814.0
 
+[node name="GameplayLevelLoadingInfoArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 15 )]
+visible = false
+
 [node name="ButtonNavigateArea" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 980.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 
-[node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 15 )]
+[node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 16 )]
 custom_fonts/font = SubResource( 6 )
 [connection signal="LeaveAndBackToMenu" from="VBoxContainer/MenuSpaceArea/UnknownArea" to="." method="_on_UnknownArea_LeaveAndBackToMenu"]
+[connection signal="PleaseLoadThisLevelOf" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_PleaseLoadThisLevelOf"]
 [connection signal="pressed" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed"]
 
 [editable path="VBoxContainer/MenuSpaceArea/SettingArea"]

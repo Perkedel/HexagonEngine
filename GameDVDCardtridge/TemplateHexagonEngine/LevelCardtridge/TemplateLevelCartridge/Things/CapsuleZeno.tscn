@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[node name="Capsule" type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+mesh = SubResource( 2 )
