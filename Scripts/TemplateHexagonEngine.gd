@@ -13,8 +13,8 @@ export var PauseTheGame = false
 # https://www.youtube.com/watch?v=9sHKaQBcgO8&t=14s
 # https://www.youtube.com/watch?v=-x0M17IwG0s
 onready var aThread = Thread.new()
-var a3DResource
-var a2DResource
+
+
 export(float) var loadValue
 export(PackedScene) var Your3DSpaceLevel
 var Prev3DSpaceLevel
@@ -35,10 +35,6 @@ func NextMenu():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	if a3DResource == null:
-		pass
-	if a2DResource == null:
-		pass
 	
 	pass
 
@@ -66,7 +62,7 @@ func ManageLoadingBar():
 	pass
 
 func ExecuteLoadLevel():
-	aThread.start(self, "ThreadLoadLevel")
+	
 	pass
 
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
@@ -74,16 +70,9 @@ func ThreadLoadLevel(aVariable): #Execute in Thread!
 	
 	pass
 
+# https://docs.godotengine.org/en/3.1/tutorials/threads/using_multiple_threads.html
 func goto_scene(a3Dpath, a2Dpath):
-	a3DResource = ResourceInteractiveLoader.load_interactive(Your3DSpaceLevel)
-	a2DResource = ResourceInteractiveLoader.load_interactive(Your2DSpaceLevel)
-	if a3DResource == null:
-		# Error 3D
-		pass
-	if a2DResource == null:
-		# Error 2D
-		pass
-	
+	aThread.
 	
 	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	pass

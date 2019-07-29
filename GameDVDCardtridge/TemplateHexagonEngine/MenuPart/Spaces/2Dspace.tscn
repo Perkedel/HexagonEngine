@@ -11,6 +11,7 @@ position = Vector2( -403.232, -61.9043 )
 current = true
 
 [node name="Dummy2DLoad" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Mavrickle" type="Sprite" parent="Dummy2DLoad"]
 position = Vector2( 400, 380 )
@@ -19,3 +20,5 @@ texture = ExtResource( 2 )
 [node name="Position2D" type="Position2D" parent="Dummy2DLoad"]
 
 [node name="Level2DCartridgeSlot" type="Node2D" parent="."]
+
+[node name="Empty" type="Node2D" parent="Level2DCartridgeSlot"]

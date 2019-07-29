@@ -23,3 +23,5 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="Level3DCartridgeSlot" type="Spatial" parent="."]
+
+[node name="Empty" type="Spatial" parent="Level3DCartridgeSlot"]

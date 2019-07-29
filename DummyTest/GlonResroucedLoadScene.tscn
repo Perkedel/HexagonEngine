@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://DummyTest/GlonResroucedLoadScene.gd" type="Script" id=1]
+
+[node name="GlonResroucedLoadScene" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Level" type="Spatial" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_top = 980.0
+margin_right = 1920.0
+margin_bottom = 1070.0
