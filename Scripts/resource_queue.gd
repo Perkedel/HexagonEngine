@@ -1,6 +1,4 @@
 #https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-extends Node
-
 var thread
 var mutex
 var sem

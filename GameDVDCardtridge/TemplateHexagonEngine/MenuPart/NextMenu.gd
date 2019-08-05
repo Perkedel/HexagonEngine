@@ -28,7 +28,7 @@ export(String, MULTILINE) var LevelDescription
 
 
 
-enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
+enum SelectMenuList {MainMenu=-1, Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
 export(SelectMenuList) var SelectYourMenu
 
 # Called when the node enters the scene tree for the first time.
@@ -41,6 +41,8 @@ func SetYourMenuList(whichOf):
 	SelectYourMenu = whichOf
 	SoftLetsChangeScene()
 	pass
+
+signal GetYourMenuList(whichOf)
 
 func ChangeMenuSpace(CurrentFrom, IntoNewSpace):
 	# https://godotengine.org/qa/24773/how-to-load-and-change-scenes
@@ -125,6 +127,8 @@ func _process(delta):
 		pass
 	$VBoxContainer/HeadingBar/TitleBarArea/Label.text = TitleBarName
 	$VBoxContainer/HeadingBar/IconArea/TextureRect.texture = TitleIcon
+	
+	emit_signal("GetYourMenuList",SelectYourMenu)
 	pass
 
 signal PressBackButton()

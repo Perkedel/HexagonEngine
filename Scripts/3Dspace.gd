@@ -3,6 +3,7 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var LevelLoadRoot
 var wait_frames = 0
 var hasMeLoading = false
 var SemaThreadCounter = 0
@@ -11,13 +12,18 @@ var mutex
 var semaphore
 var exit_thread = false
 var a3DResource
+# https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
+onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a3D_Loading_ProgressBar(valuet)
 var ProgressValue
 export(PackedScene) var Your3DSpaceLevel
+export(String) var Raw3DSpaceLevelPath
 var Now3DSpaceLevel
 var Prev3DSpaceLevel
 var time_max = 100 # msec
+var StartLoadSceneL = false
+var SceneHasLoaded = false
 
 # These are easiner from that Background Loading document https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
 func _lock(caller):
@@ -39,20 +45,34 @@ func _wait(caller):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	custom_Resource_Queue.start()
 	ProgressValue = 0
 	mutex = Mutex.new()
 	semaphore = Semaphore.new()
 	exit_thread = false
 	ConThread3D = Thread.new()
 	
-	var root = $Level3DCartridgeSlot
-	Now3DSpaceLevel = root.get_child(0)
+	LevelLoadRoot = $Level3DCartridgeSlot
+	Now3DSpaceLevel = LevelLoadRoot.get_child(0)
 	Prev3DSpaceLevel = Now3DSpaceLevel
 	pass # Replace with function body.
 
 func ThreadingSpawnScene(pathO):
 	#ConThread3D.start(self, "_thread_function", pathO)
-	ConThread3D.start(self, "_thread_spawnAScene", pathO)
+	#ConThread3D.start(self, "_thread_spawnAScene", pathO)
+	print("3D Threading Spawn Scene")
+	custom_Resource_Queue.queue_resource(pathO)
+	Your3DSpaceLevel = pathO
+	Raw3DSpaceLevelPath = pathO
+	StartLoadSceneL = true
+	print("Start Load Scene %s" % StartLoadSceneL)
+	wait_frames = 1
+	pass
+
+func ThreadingDespawnScene():
+	custom_Resource_Queue.cancel_resource(Raw3DSpaceLevelPath)
+	StartLoadSceneL = false
+	SceneHasLoaded = false
 	pass
 
 func _thread_spawnAScene(pathO):
@@ -109,6 +129,7 @@ func _exit_tree():
 
 func spawnAScene(pathO):
 	mutex.lock()
+	Raw3DSpaceLevelPath = pathO
 	$Dummy3DLoad.hide()
 	print("SpawnScene %s", pathO)
 	Prev3DSpaceLevel = Now3DSpaceLevel
@@ -119,13 +140,21 @@ func spawnAScene(pathO):
 		pass
 	set_process(true)
 	
-	
-	Now3DSpaceLevel.queue_free()
+	Now3DSpaceLevel = LevelLoadRoot.get_child(0)
+	if Now3DSpaceLevel:
+		Now3DSpaceLevel.queue_free()
+		pass
 	
 	emit_signal("IncludeMeForYourLoading", true)
 	
 	wait_frames = 1
 	mutex.unlock()
+	pass
+
+func despawnTheScene():
+	Now3DSpaceLevel = LevelLoadRoot.get_child(0)
+	Now3DSpaceLevel.queue_free()
+	$Dummy3DLoad.show()
 	pass
 
 signal hasLoadingCompleted
@@ -145,8 +174,15 @@ func update_progress():
 	print(progress)
 	pass
 
+func update_progress_threaded():
+	var progress = custom_Resource_Queue.get_progress(Raw3DSpaceLevelPath)
+	ProgressValue = progress * 100
+	print(progress)
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if a3DResource == null:
 		# no need to process anymore
 		set_process(false)
@@ -156,7 +192,7 @@ func _process(delta):
 		wait_frames -= 1
 		hasMeLoading = true
 		return
-	
+
 	var t = OS.get_ticks_msec()
 	while OS.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
 	# poll your loader
@@ -179,6 +215,36 @@ func _process(delta):
 			a3DResource = null
 			hasMeLoading = false
 			break
+
+		if StartLoadSceneL:
+			print("\nStartLoadScene3D\n")
+			update_progress_threaded()
+			if custom_Resource_Queue.is_ready(Raw3DSpaceLevelPath):
+				if not SceneHasLoaded:
+					print("3D Scene is ready")
+					InitiateThatScene(custom_Resource_Queue.get_resource(Raw3DSpaceLevelPath))
+					SceneHasLoaded = true
+					pass
+				pass
+			else:
+				update_progress_threaded()
+				pass
+			pass
+		pass
+	
+	if StartLoadSceneL:
+		print("\nStartLoadScene3D\n")
+		update_progress_threaded()
+		if custom_Resource_Queue.is_ready(Raw3DSpaceLevelPath):
+			if not SceneHasLoaded:
+				print("3D Scene is ready")
+				InitiateThatScene(custom_Resource_Queue.get_resource(Raw3DSpaceLevelPath))
+				SceneHasLoaded = true
+				pass
+			pass
+		else:
+			update_progress_threaded()
+			pass
 		pass
 	
 	emit_signal("a3D_Loading_ProgressBar", ProgressValue)

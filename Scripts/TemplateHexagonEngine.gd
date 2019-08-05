@@ -76,8 +76,13 @@ func ExecuteChangeDVD():
 	emit_signal("ChangeDVD_Exec")
 	pass
 func ExecuteShutdown():
+	print("aDVD sent Shutdown")
 	emit_signal("Shutdown_Exec")
 	pass
+
+func _on_UIspace_PleaseLeaveTheGame():
+	ReceiveUnloadClick()
+	pass # Replace with function body.
 
 func _on_UIspace_ChangeDVD_Exec():
 	ExecuteChangeDVD()
@@ -92,6 +97,10 @@ func ManageLoadingBar():
 
 func ExecuteLoadLevel():
 	goto_scene(Your3DSpaceLevel,Your2DSpaceLevel)
+	pass
+
+func ExecuteUnloadLevel():
+	leave_scene()
 	pass
 
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
@@ -110,8 +119,18 @@ func goto_scene(a3Dpath, a2Dpath):
 	$"3Dspace".spawnAScene(a3Dpath)
 	#$"3Dspace".ThreadingSpawnScene(a3Dpath)
 	$"2Dspace".spawnAScene(a2Dpath)
+	#$"2Dspace".ThreadingSpawnScene(a2Dpath)
 	
 	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+	isPlayingTheGameNow = true
+	#$MustFollowPersonCamera2D/UIspace.SetIsPlayingGameNow(true)
+	pass
+
+func leave_scene():
+	$"3Dspace".despawnTheScene()
+	$"2Dspace".despawnTheScene()
+	isPlayingTheGameNow = false
+	#$MustFollowPersonCamera2D/UIspace.SetIsPlayingGameNow(false)
 	pass
 
 func ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
@@ -126,12 +145,16 @@ func ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, Le
 	ExecuteLoadLevel()
 	pass
 
+func ReceiveUnloadClick():
+	ExecuteUnloadLevel()
+	pass
+
 # FInal chain! please save variable and do loading stuffs!
 func _on_UIspace_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
 	isPlayingTheGameNow = true
 	LoadingHasCompleted = false
 	ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
-	print("TemplateHexagonEngine Received SignalCLick %s %s", a3DScapePacked, a2DSpacePacked)
+	#print("TemplateHexagonEngine Received SignalCLick %s %s", a3DScapePacked, a2DSpacePacked)
 	pass # Replace with function body.
 
 func _on_3Dspace_IncludeMeForYourLoading(MayI):
@@ -164,3 +187,6 @@ func _on_2Dspace_a2D_Loading_ProgressBar(valuet):
 func _on_2Dspace_hasLoadingCompleted():
 	Sub2DLoadCompleted = true
 	pass # Replace with function body.
+
+
+

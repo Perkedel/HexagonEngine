@@ -30,7 +30,7 @@ func DoShutdownNow():
 	pass
 
 func _on_DVDCartridgeSlot_ChangeDVD_Exec():
-	DoShutdownNow()
+	DoChangeDVDNow()
 	pass # Replace with function body.
 
 

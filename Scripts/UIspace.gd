@@ -4,15 +4,20 @@ extends Control
 # var a = 2
 # var b = "text"
 var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingMenu.tscn"
-enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
-export(SelectMenuList) var NextMenuScene
-enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2}
+enum SelectMenuList {MainMenu=-1, Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
+export(SelectMenuList) var NextMenuScene = SelectMenuList.MainMenu
+var NextMenuSceneIsNow
+export(SelectMenuList) var WhereMenuIsNow = SelectMenuList.MainMenu
+enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3}
 export(DialogConfirmsFor) var DialogSelectAction
 export(NodePath) var MainMenuNode
 export(NodePath) var NextMenuNode
 export(NodePath) var GameplayUINode
 export(bool) var ReadyToPlayGame = false
 export(bool) var isPlayingGameNow = false
+export(bool) var isPausingGame = false
+export(bool) var isMainMenuing = true
+export(bool) var isNextMenuing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,6 +30,8 @@ func ShowNextMenu():
 	#$NextMenu.SelectYourMenu = NextMenuScene
 	$NextMenu.show()
 	$MainMenu.hide()
+	$GameplayUI.hide()
+	isNextMenuing = true
 	pass
 
 func SetAndShowNextMenu(WhichMenu):
@@ -33,11 +40,16 @@ func SetAndShowNextMenu(WhichMenu):
 	ShowNextMenu()
 	pass
 
+func ReturnToMenuNow():
+	WhereMenuIsNow = SelectMenuList.MainMenu
+	pass
+
 func BackToMainMenu():
 	$GameplayUI.hide()
 	$NextMenu.hide()
 	$MainMenu.show()
 	$MainMenu.ArriveAtMainMenu()
+	isMainMenuing = true
 	pass
 
 func SetReadyToPlay(isItReady):
@@ -63,16 +75,76 @@ func _process(delta):
 		#ShowNextMenu()
 		pass
 	
-	if isPlayingGameNow and ReadyToPlayGame:
-		
-		if not $GameplayUI.visible:
-			#print("Show UI Gameplay")
-			ShowGameplayUI()
+	
+	if WhereMenuIsNow == SelectMenuList.MainMenu:
+		if not isMainMenuing:
+			BackToMainMenu()
+			isMainMenuing = true
+			isNextMenuing = false
 			pass
 		pass
-	elif isPlayingGameNow and not ReadyToPlayGame:
-		
+	elif WhereMenuIsNow == SelectMenuList.Setting:
+		if not isNextMenuing:
+			SetAndShowNextMenu(SelectMenuList.Setting)
+			pass
 		pass
+	elif WhereMenuIsNow == SelectMenuList.Unknown:
+		if not isNextMenuing:
+			SetAndShowNextMenu(SelectMenuList.Unknown)
+			pass
+		pass
+	elif WhereMenuIsNow == SelectMenuList.Extras:
+		if not isNextMenuing:
+			SetAndShowNextMenu(SelectMenuList.Extras)
+			pass
+		pass
+	elif WhereMenuIsNow == SelectMenuList.LevelSelect:
+		if not isNextMenuing:
+			print("Grimp")
+			SetAndShowNextMenu(SelectMenuList.LevelSelect)
+			pass
+		pass
+	elif WhereMenuIsNow == SelectMenuList.Gameplay:
+		if ReadyToPlayGame:
+			#print("Readygame")
+			if not $GameplayUI.visible:
+				print("Show UI Gameplay")
+				ShowGameplayUI()
+				pass
+			pass
+		else:
+			if not isNextMenuing:
+				#ShowNextMenu()
+				SetAndShowNextMenu(SelectMenuList.Gameplay)
+				pass
+			pass
+		pass
+	pass
+	
+	if not WhereMenuIsNow == SelectMenuList.MainMenu:
+		isMainMenuing = false
+		pass
+
+func SpecialPlayButtonHeurestic():
+	print("The Play Button")
+	if isPlayingGameNow:
+		print("Unpause Game")
+		WhereMenuIsNow = SelectMenuList.Gameplay
+	else:
+		print("Select your Level")
+		WhereMenuIsNow = SelectMenuList.LevelSelect
+		pass
+	pass
+
+func SpecialExitButtonHeurestic():
+	print("The Exit Button")
+	if isPlayingGameNow:
+		AttemptTheLeaveGame()
+		pass
+	else:
+		AttempTheQuitGame()
+		pass
+	pass
 
 func CloseTheDrawer():
 	$MainMenu.CloseTheDrawer()
@@ -118,8 +190,12 @@ func SetSpawnDialogContextFor(WhichContext):
 	elif WhichContext == DialogConfirmsFor.QuitGame:
 		$AreYouSureDialog.SpawnDialogWithAppendSure("shutdown this Hexagon Engine")
 		pass
+	elif WhichContext == DialogConfirmsFor.LeaveLevel:
+		$AreYouSureDialog.SpawnDialogWithAppendSure("leave this level")
+		pass
 	pass
 
+signal PleaseLeaveTheGame()
 func DoDialogYesButtonOf():
 	print("Dialog Yes Button")
 	#FocusPlayButtonNow()
@@ -128,10 +204,14 @@ func DoDialogYesButtonOf():
 		
 		pass
 	elif DialogSelectAction == DialogConfirmsFor.ChangeDVD:
-		
+		ChangeTheDVDNow()
 		pass
 	elif DialogSelectAction == DialogConfirmsFor.QuitGame:
-		get_tree().quit()
+		#get_tree().quit()
+		ExecuteShutdown()
+		pass
+	elif DialogSelectAction == DialogConfirmsFor.LeaveLevel:
+		ExecuteLeaveLevel()
 		pass
 	pass
 
@@ -144,6 +224,17 @@ func DoDialogNoButtonOf():
 func DoDialogAwayHideOf():
 	print("Dialog Go Away")
 	CloseTheDrawer()
+	pass
+
+
+func AttemptTheLeaveGame():
+	#emit_signal("PleaseLeaveTheGame")
+	if $AreYouSureDialog.isSpawned:
+		$AreYouSureDialog.NoCancel()
+		pass
+	else:
+		SetSpawnDialogContextFor(DialogConfirmsFor.LeaveLevel)
+		pass
 	pass
 
 func AttempTheQuitGame():
@@ -174,6 +265,14 @@ func ExecuteShutdown():
 	emit_signal("Shutdown_Exec")
 	pass
 
+func ExecuteLeaveLevel():
+	emit_signal("PleaseLeaveTheGame")
+	isPlayingGameNow = false
+	ReadyToPlayGame = false
+	isMainMenuing = true
+	isNextMenuing = false
+	pass
+
 func _on_BackButton_pressed(extra_arg_0):
 	BackToMainMenu()
 	pass # Replace with function body.
@@ -185,31 +284,35 @@ func _on_MainMenu_PressChangeDVD():
 
 
 func _on_MainMenu_PressExit():
-	AttempTheQuitGame()
+	SpecialExitButtonHeurestic()
 	pass # Replace with function body.
 
 
 func _on_MainMenu_PressExtras():
-	SetAndShowNextMenu(SelectMenuList.Extras)
+	
+	WhereMenuIsNow = SelectMenuList.Extras
 	pass # Replace with function body.
 
 
 func _on_MainMenu_PressPlay():
-	SetAndShowNextMenu(SelectMenuList.LevelSelect)
+	SpecialPlayButtonHeurestic()
 	pass # Replace with function body.
 
 
 func _on_MainMenu_PressSetting():
-	SetAndShowNextMenu(SelectMenuList.Setting)
+	
+	WhereMenuIsNow = SelectMenuList.Setting
 	pass # Replace with function body.
 
 
 func _on_MainMenu_PressUnknown():
-	SetAndShowNextMenu(SelectMenuList.Unknown)
+	
+	WhereMenuIsNow = SelectMenuList.Unknown
 	pass # Replace with function body.
 
 func _on_NextMenu_PressBackButton():
-	BackToMainMenu()
+	#BackToMainMenu()
+	ReturnToMenuNow()
 	pass # Replace with function body.
 
 
@@ -241,5 +344,16 @@ func ManageLoading(ProgressValuei = 0, WordingHint = "Loadinger", isComplete = f
 
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 func _on_NextMenu_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	WhereMenuIsNow = SelectMenuList.Gameplay
 	emit_signal("PleaseLoadThisLevelOf", a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+	pass # Replace with function body.
+
+
+func _on_GameplayUI_PressPauseButton():
+	WhereMenuIsNow = SelectMenuList.MainMenu
+	pass # Replace with function body.
+
+
+func _on_NextMenu_GetYourMenuList(whichOf):
+	NextMenuSceneIsNow = whichOf
 	pass # Replace with function body.

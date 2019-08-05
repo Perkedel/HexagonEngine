@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DummyTest/whythepeckdidnotwork.gd" type="Script" id=1]
+[ext_resource path="res://DummyTest/ZoingLevel.tscn" type="PackedScene" id=2]
+
+[node name="whythepeckdidnotwork" type="Node"]
+script = ExtResource( 1 )
+ZoingLoad = ExtResource( 2 )
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+anchor_right = 1.0
+margin_bottom = 175.0
