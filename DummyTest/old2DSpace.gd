@@ -23,6 +23,7 @@ var exit_thread
 var time_max = 100 # msec
 var StartLoadScene = false
 var SceneHasLoaded = false
+var LoadSetInstance
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

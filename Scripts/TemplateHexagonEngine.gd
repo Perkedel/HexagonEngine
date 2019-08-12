@@ -96,6 +96,7 @@ func ManageLoadingBar():
 	pass
 
 func ExecuteLoadLevel():
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	goto_scene(Your3DSpaceLevel,Your2DSpaceLevel)
 	pass
 
@@ -110,6 +111,7 @@ func ThreadLoadLevel(aVariable): #Execute in Thread!
 
 # https://docs.godotengine.org/en/3.1/tutorials/threads/using_multiple_threads.html
 func goto_scene(a3Dpath, a2Dpath):
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	Sub2DLoadCompleted = false
 	Sub3DLoadCompleted = false
 	Sub2DLoadValue = 0
@@ -120,8 +122,6 @@ func goto_scene(a3Dpath, a2Dpath):
 	#$"3Dspace".ThreadingSpawnScene(a3Dpath)
 	$"2Dspace".spawnAScene(a2Dpath)
 	#$"2Dspace".ThreadingSpawnScene(a2Dpath)
-	
-	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	isPlayingTheGameNow = true
 	#$MustFollowPersonCamera2D/UIspace.SetIsPlayingGameNow(true)
 	pass
@@ -134,6 +134,7 @@ func leave_scene():
 	pass
 
 func ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	Your3DSpaceLevel = a3DScapePacked
 	Your2DSpaceLevel = a2DSpacePacked
 	LevelBannerThumbnail = LevelThumb
@@ -151,6 +152,7 @@ func ReceiveUnloadClick():
 
 # FInal chain! please save variable and do loading stuffs!
 func _on_UIspace_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	isPlayingTheGameNow = true
 	LoadingHasCompleted = false
 	ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)

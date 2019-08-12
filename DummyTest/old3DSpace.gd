@@ -24,6 +24,7 @@ var Prev3DSpaceLevel
 var time_max = 100 # msec
 var StartLoadSceneL = false
 var SceneHasLoaded = false
+var LoadSetInstance
 
 # These are easiner from that Background Loading document https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
 func _lock(caller):
