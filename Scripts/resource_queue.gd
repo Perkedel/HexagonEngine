@@ -27,7 +27,8 @@ func queue_resource(path, p_in_front = false):
 		_unlock("queue_resource")
 		return
 
-	elif ResourceLoader.has(path):
+	#elif ResourceLoader.has(path):
+	elif ResourceLoader.has_cached(path): # https://docs.godotengine.org/en/3.1/classes/class_resourceloader.html
 		var res = ResourceLoader.load(path)
 		pending[path] = res
 		_unlock("queue_resource")

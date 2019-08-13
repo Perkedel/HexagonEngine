@@ -57,7 +57,8 @@ func FocusPlayButtonNow():
 	pass
 
 func FocusFirstMoreMenuButton():
-	$MoreMenu/BoxMenuContainings/SettingButton/Button.grab_focus()
+	#$MoreMenu/BoxMenuContainings/SettingButton/Button.grab_focus()
+	$MoreMenu/BoxMenuContainings/SettingButton.FocusMeThisButton()
 	pass
 
 
@@ -89,7 +90,11 @@ func BecauseCloseMenuDrawer():
 	FocusPlayButtonNow()
 	pass
 
-
+func ResetMoreMenuButtonAnimatione():
+	for Morebuttoner in $MoreMenu/BoxMenuContainings.get_children():
+		Morebuttoner.ResetAnimatione()
+		pass
+	pass
 
 func OpenMenuDrawer():
 	if not isDrawerOpen:
@@ -100,6 +105,7 @@ func OpenMenuDrawer():
 func CloseMenuDrawer():
 	if isDrawerOpen:
 		$MenuButtonAnimations.play("CloseMenu")
+		ResetMoreMenuButtonAnimatione()
 		isDrawerOpen = false
 	pass
 
@@ -136,4 +142,29 @@ func _on_ChangeDVDButton_Button_Pressingated():
 signal PressExitButton()
 func _on_ExitButton_Button_Pressingated():
 	emit_signal("PressExitButton")
+	pass # Replace with function body.
+
+
+func _on_SettingButton_Button_Hoverated():
+	$MoreMenu/BoxMenuContainings/SettingButton.FocusMeThisButton()
+	pass # Replace with function body.
+
+
+func _on_UnknownButton_Button_Hoverated():
+	$MoreMenu/BoxMenuContainings/UnknownButton.FocusMeThisButton()
+	pass # Replace with function body.
+
+
+func _on_ExtrasButton_Button_Hoverated():
+	$MoreMenu/BoxMenuContainings/ExtrasButton.FocusMeThisButton()
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDButton_Button_Hoverated():
+	$MoreMenu/BoxMenuContainings/ChangeDVDButton.FocusMeThisButton()
+	pass # Replace with function body.
+
+
+func _on_ExitButton_Button_Hoverated():
+	$MoreMenu/BoxMenuContainings/ExitButton.FocusMeThisButton()
 	pass # Replace with function body.

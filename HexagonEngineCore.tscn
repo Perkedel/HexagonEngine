@@ -20,12 +20,15 @@ script = ExtResource( 2 )
 visible = false
 
 [node name="SystemGut" type="Node" parent="."]
+pause_mode = 2
 
 [node name="Speaker" type="AudioStreamPlayer" parent="SystemGut"]
+pause_mode = 2
 mix_target = 1
 
 [node name="Timer" type="Timer" parent="SystemGut"]
 
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
+use_threads = true
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]

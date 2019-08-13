@@ -17,7 +17,7 @@ func _ready():
 
 func UpdateDetails():
 	$LevelCardContainer/ImagePanel/LevelIconImage.texture = LevelBannerThumbnail
-	$LevelCardContainer/Title.text = LevelTitleg
+	$LevelCardContainer/TitleScroll/Title.text = LevelTitleg
 	$LevelCardContainer/DescriptionScroll/RichTextLabel.bbcode_text = LevelDescription
 	pass
 

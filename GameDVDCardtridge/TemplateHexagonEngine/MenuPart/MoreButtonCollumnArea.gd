@@ -60,7 +60,13 @@ func _on_Button_mouse_exited():
 	$MoreButtonAnimationing.play("BeingDehovered")
 	pass # Replace with function body.
 
+func FocusMeThisButton():
+	$Button.grab_focus()
+	pass
 
+func ResetAnimatione():
+	$MoreButtonAnimationing.play("InitMoreButton")
+	pass
 
 func _on_MoreButtonCollumnArea_focus_entered():
 	pass # Replace with function body.
@@ -91,6 +97,7 @@ func _on_Button_gui_input(event):
 
 func _on_Button_focus_entered():
 	#$MoreButtonAnimationing.play("BeingHovered")
+	#$Button.grab_focus()
 	pass # Replace with function body.
 
 

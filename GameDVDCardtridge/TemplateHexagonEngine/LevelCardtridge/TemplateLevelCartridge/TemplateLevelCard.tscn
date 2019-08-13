@@ -28,11 +28,16 @@ script = ExtResource( 1 )
 Your3DSpaceLevel = ExtResource( 2 )
 Your2DSpaceLevel = ExtResource( 3 )
 LevelBannerThumbnail = ExtResource( 4 )
-LevelTitleg = "Template Titleg of Level"
+LevelTitleg = "Template Titleg of Level HUEUEUEUEUE"
 LevelDescription = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]
-[code]if this then that[/code]"
+[code]if this then that[/code]
+FROMER
+[b][i]Henlo Hazard WOrld[/i][/b]
+https://linktr.ee/joelwindows7
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ahuihahuhahuhahuhahu"
 
 [node name="LevelCardContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -42,7 +47,7 @@ rect_min_size = Vector2( 800, 0 )
 [node name="ImagePanel" type="Panel" parent="LevelCardContainer"]
 self_modulate = Color( 0, 0.27451, 1, 0.65098 )
 margin_right = 800.0
-margin_bottom = 437.0
+margin_bottom = 425.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -55,22 +60,29 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="Title" type="Label" parent="LevelCardContainer"]
-margin_top = 445.0
+[node name="TitleScroll" type="ScrollContainer" parent="LevelCardContainer"]
+margin_top = 433.0
 margin_right = 800.0
-margin_bottom = 527.0
+margin_bottom = 539.0
+rect_min_size = Vector2( 0, 100 )
+scroll_vertical_enabled = false
+
+[node name="Title" type="Label" parent="LevelCardContainer/TitleScroll"]
+margin_right = 1039.0
+margin_bottom = 82.0
 custom_fonts/font = ExtResource( 5 )
-text = "Title of This Card"
+text = "Title of This Card HUEUEUEUE"
 
 [node name="DescriptionScroll" type="ScrollContainer" parent="LevelCardContainer"]
-margin_top = 535.0
+margin_top = 547.0
 margin_right = 800.0
 margin_bottom = 972.0
 size_flags_vertical = 3
+scroll_horizontal_enabled = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LevelCardContainer/DescriptionScroll"]
 margin_right = 800.0
-margin_bottom = 437.0
+margin_bottom = 425.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/mono_font = ExtResource( 6 )
@@ -83,13 +95,14 @@ bbcode_text = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]
 [code]if this then that[/code]
-[b][i]Hendlo Hazard World[/i][/b]"
+[b][i]Hendlo Hazard World[/i][/b]
+ddddddddddddddddddddddddddddddddddddddddddddd"
 text = "Descriptioner
 WEEEW
 OUOUOUOUOUOUO
 if this then that
-Hendlo Hazard World"
-scroll_following = true
+Hendlo Hazard World
+ddddddddddddddddddddddddddddddddddddddddddddd"
 
 [node name="PlayTheLevelButton" type="Button" parent="LevelCardContainer"]
 margin_top = 980.0

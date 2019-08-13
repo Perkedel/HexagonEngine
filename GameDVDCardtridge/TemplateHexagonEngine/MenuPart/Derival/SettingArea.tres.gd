@@ -23,17 +23,22 @@ func FocusFirstCategoryButtonNow():
 
 func _on_CategoryScrolling_gui_input(event):
 	# https://godotforums.org/discussion/20206/swipe-function-with-scroll
-	if (event is InputEventMouseButton):
-		if (event.button_index == BUTTON_LEFT):
-			mouse_button_down = event.pressed
-			pass
-		pass
-	# Scroll with the mouse
-	if (event is InputEventMouseMotion and mouse_button_down == true):
-		ScrollCategory.scroll_vertical += event.speed.y * ScrollSensitive
-	# Scroll with touch
-	if (event is InputEventScreenDrag):
-		ScrollCategory.scroll_vertical += event.relative.y
+	# Oops, it's no longer required becaue Internal Godot Touch Screen can scroll the ScrollCOntainer with Drag finger!
+#	if (event is InputEventMouseButton):
+#		if (event.button_index == BUTTON_LEFT):
+#			mouse_button_down = event.pressed
+#			pass
+#		pass
+#	# Scroll with the mouse
+#	if (event is InputEventMouseMotion and mouse_button_down == true):
+#		ScrollCategory.scroll_vertical += event.speed.y * ScrollSensitive
+#		pass
+#	# Scroll with touch
+#	if (event is InputEventScreenDrag):
+#		ScrollCategory.scroll_vertical += event.relative.y
+#		pass
+	
+	
 	pass # Replace with function body.
 
 

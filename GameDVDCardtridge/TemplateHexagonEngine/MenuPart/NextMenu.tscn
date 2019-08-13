@@ -16,7 +16,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=14]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=15]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -41,20 +41,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="HeadingBar" type="HBoxContainer" parent="VBoxContainer"]
-editor/display_folded = true
 margin_right = 1920.0
 margin_bottom = 150.0
-
-[node name="IconArea" type="CenterContainer" parent="VBoxContainer/HeadingBar"]
-margin_right = 152.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 150, 150 )
+rect_min_size = Vector2( 0, 150 )
 size_flags_horizontal = 3
 
+[node name="IconArea" type="CenterContainer" parent="VBoxContainer/HeadingBar"]
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+size_flags_vertical = 3
+
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HeadingBar/IconArea"]
-margin_left = 26.0
+margin_left = 25.0
 margin_top = 25.0
-margin_right = 126.0
+margin_right = 125.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
@@ -64,14 +65,15 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleBarArea" type="HBoxContainer" parent="VBoxContainer/HeadingBar"]
-margin_left = 160.0
+margin_left = 158.0
 margin_right = 1920.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 1760, 150 )
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/HeadingBar/TitleBarArea"]
-margin_right = 1760.0
+margin_right = 1762.0
 margin_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -115,9 +117,10 @@ margin_top = 980.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
 
 [node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 14 )]
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 [connection signal="LeaveAndBackToMenu" from="VBoxContainer/MenuSpaceArea/UnknownArea" to="." method="_on_UnknownArea_LeaveAndBackToMenu"]
 [connection signal="PleaseLoadThisLevelOf" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_PleaseLoadThisLevelOf"]
 [connection signal="pressed" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed"]

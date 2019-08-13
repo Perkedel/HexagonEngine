@@ -39,6 +39,7 @@ func ManageLoading(ProgressValuei = 0, WordingHint = "Loaden", isComplete = fals
 	pass
 
 func DeCompleteTheLoadingNow():
+	set_exclusive(true)
 	LoadingCompleted = false
 	#$LoadingAnimates.play("GravityHourGlassRotate")
 	$Timerout.stop()
@@ -48,6 +49,7 @@ func DeCompleteTheLoadingNow():
 	pass
 
 func CompleteTheLoadingNow():
+	set_exclusive(false)
 	LoadingCompleted = true
 	#$LoadingAnimates.play("GravityHourGlassStonp")
 	$Timerout.start()

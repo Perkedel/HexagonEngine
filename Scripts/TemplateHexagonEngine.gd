@@ -166,7 +166,7 @@ func _on_3Dspace_IncludeMeForYourLoading(MayI):
 
 func _on_3Dspace_a3D_Loading_ProgressBar(valuet):
 	Sub3DLoadValue = valuet
-	print("Load Value ", valuet)
+	#print("Load Value ", valuet)
 	#loadValue = valuet
 	pass # Replace with function body.
 
