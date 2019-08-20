@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="2048"
@@ -20,7 +21,41 @@
    inkscape:export-xdpi="96.000008"
    inkscape:export-ydpi="96.000008">
   <defs
-     id="defs2" />
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient893">
+      <stop
+         style="stop-color:#ff9955;stop-opacity:1;"
+         offset="0"
+         id="stop889" />
+      <stop
+         id="stop901"
+         offset="0.25"
+         style="stop-color:#eec9df;stop-opacity:1" />
+      <stop
+         id="stop897"
+         offset="0.5"
+         style="stop-color:#a8f3c0;stop-opacity:1" />
+      <stop
+         style="stop-color:#9cdeed;stop-opacity:1"
+         offset="0.75"
+         id="stop899" />
+      <stop
+         style="stop-color:#ff7455;stop-opacity:1"
+         offset="1"
+         id="stop891" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient893"
+       id="linearGradient895"
+       x1="1024"
+       y1="0"
+       x2="1024"
+       y2="2048"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -29,8 +64,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="540.6965"
-     inkscape:cy="844.12164"
+     inkscape:cx="933.09535"
+     inkscape:cy="845.77389"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="true"
@@ -83,7 +118,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
       </cc:Work>
@@ -108,10 +143,9 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="bekgron"
-     sodipodi:insensitive="true"
      style="display:inline">
     <rect
-       style="fill:#505050;fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       style="fill:url(#linearGradient895);fill-opacity:1;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
        id="rect1009"
        width="2048"
        height="2048"
