@@ -32,3 +32,4 @@ mix_target = 1
 use_threads = true
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
+[connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]

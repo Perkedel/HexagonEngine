@@ -9,6 +9,8 @@ extends Node
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
 var ConThread
+export var isRunningDVD = true
+export var preloadDVD = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,8 +21,14 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func DoLaunchTheDVD():
+	
+	pass
+
 func DoChangeDVDNow():
 	print("Change DVD!")
+	$DVDCartridgeSlot.get_child(0).queue_free()
+	$MetaMenu/ChangeDVDMenu.show()
 	pass
 
 func DoShutdownNow():
@@ -35,5 +43,10 @@ func _on_DVDCartridgeSlot_ChangeDVD_Exec():
 
 
 func _on_DVDCartridgeSlot_Shutdown_Exec():
+	DoShutdownNow()
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 	DoShutdownNow()
 	pass # Replace with function body.
