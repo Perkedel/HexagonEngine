@@ -19,7 +19,38 @@ func _on_JustWorkingAreYouSure_confirmed():
 	emit_signal("ShutdownHexagonEngineNow")
 	pass # Replace with function body.
 
+func ShowMeSelf():
+	show()
+	$JustWorkingMenu.InitMeSelf()
+	pass
 
 func _on_JustWorkingMenu_PressShutDown():
 	$JustWorkingAreYouSure.popup()
 	pass # Replace with function body.
+
+signal ItemClickEnter(Index)
+func _on_JustWorkingMenu_ItemClickEnter(Index):
+	emit_signal("ItemClickEnter",Index)
+	pass # Replace with function body.
+
+func _input(event):
+	if visible:
+		if event.is_action_pressed("ui_cancel"):
+			print("Quito Introduce")
+			$JustWorkingAreYouSure.popup()
+			pass
+		pass
+	pass
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		if $JustWorkingAreYouSure.visible:
+			$JustWorkingAreYouSure.hide()
+			pass
+		else:
+			$JustWorkingAreYouSure.popup()
+			pass
+		pass
+	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+		pass
+	pass

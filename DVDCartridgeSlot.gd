@@ -29,6 +29,13 @@ func ExecuteShutdown():
 	emit_signal("Shutdown_Exec")
 	pass
 
+signal DVDTryLoad
+func PlayDVD(LoadDVD):
+	emit_signal("DVDTryLoad")
+	var InstanceDVD = LoadDVD.instance()
+	add_child(InstanceDVD)
+	ConnectCartridge()
+	pass
 
 func _on_ChangeDVD_Exec():
 	ExecuteChangeDVD()

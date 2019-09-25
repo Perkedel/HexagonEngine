@@ -11,6 +11,7 @@ extends Node
 var ConThread
 export var isRunningDVD = true
 export var preloadDVD = 0
+export(PackedScene) var LoadDVD 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +29,8 @@ func DoLaunchTheDVD():
 func DoChangeDVDNow():
 	print("Change DVD!")
 	$DVDCartridgeSlot.get_child(0).queue_free()
-	$MetaMenu/ChangeDVDMenu.show()
+	#$MetaMenu/ChangeDVDMenu.show()
+	$MetaMenu/ChangeDVDMenu.ShowMeSelf()
 	pass
 
 func DoShutdownNow():
@@ -49,4 +51,15 @@ func _on_DVDCartridgeSlot_Shutdown_Exec():
 
 func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 	DoShutdownNow()
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDMenu_ItemClickEnter(Index):
+	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	pass # Replace with function body.
+
+
+func _on_DVDCartridgeSlot_DVDTryLoad():
+	print("DVD has tried to load!")
+	$MetaMenu/ChangeDVDMenu.hide()
 	pass # Replace with function body.

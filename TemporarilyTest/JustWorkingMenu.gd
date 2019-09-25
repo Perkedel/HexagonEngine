@@ -12,11 +12,26 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func InitMeSelf():
+	print("Init Just WOrking")
+	
+	$ItemList.grab_focus() #Help! doesn't work to focus the lista
+	#$ItemList.grab_click_focus()
+	#$HBoxContainer/PowerOffButton.grab_focus()
+	pass
+
 signal PressShutDown
 func _on_PowerOffButton_pressed():
 	emit_signal("PressShutDown")
 	pass # Replace with function body.
 
-
+export var WhichItemSelected = 0
 func _on_ItemList_item_selected(index):
+	WhichItemSelected = index
+	pass # Replace with function body.
+
+export var WhichItemClickEnter = 0
+signal ItemClickEnter(Index)
+func _on_ItemList_item_activated(index):
+	emit_signal("ItemClickEnter",index)
 	pass # Replace with function body.

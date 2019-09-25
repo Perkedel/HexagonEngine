@@ -1,18 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
-[ext_resource path="res://DVDCartridgeSlot.gd" type="Script" id=2]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DVDCartridgeSlot.gd" type="Script" id=3]
 [ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
 script = ExtResource( 1 )
+LoadDVD = ExtResource( 2 )
 
 [node name="DVDCartridgeSlot" type="Node" parent="."]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 3 )]
+[node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 2 )]
 
 [node name="MetaMenu" type="CanvasLayer" parent="."]
 
@@ -31,5 +32,7 @@ mix_target = 1
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
 use_threads = true
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
+[connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
+[connection signal="ItemClickEnter" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnter"]
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]
