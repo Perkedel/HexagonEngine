@@ -46,7 +46,10 @@ We do need to find house that is ready but is free as in both beer and freedom.
 	
 Sounds fantasy, right? but
 	
-then finally, we've met a girl named Godette. She brought us to her house. We experienced the house and it's really comfortable. it has features we need and covered in an intuitive way.
+then finally, we've met a girl named **Godette**. She brought us to her house. We experienced the house and it's really comfortable. it has features we need and covered in an intuitive way.
+
+[![Godot Engine](https://img.shields.io/badge/Godot%20Engine-%240%20%26%20Open%20Source-blue)](https://godotengine.org)
+[![Godette](https://img.shields.io/badge/Godette%20Chan-Kawaii%20Awesome!!!-blue)](https://github.com/godotengine/godot-design/tree/master/godette)
 	
 After we followed the tutorial, we finally declared that Godot Engine will be our forever home to its improbable demise.
 	
