@@ -43,3 +43,5 @@ Used Assets and Tools!
 |Audacity Team | Audacity | All in one Non-linear Audio editing software | https://www.audacityteam.org/ | <100% | GNU GPL v2 | `uhhh help rights reserved wronged to "ALL" instead of "SOME"`|
 |electron | rcedit | hack Windows exe resource | https://github.com/electron/rcedit/releases | <100% | MIT | `-` |
 |GIMP team | GIMP | Raster image editing software | https://www.gimp.org/ | <100% | GNU GPL v2+ | `-` |
+|badges | Badge on GitHub Custom | Make Own Badge for GitHub | https://www.shields.io/ | 0% | CC0-1.0 | `-` |
+|dwyl | Hits | Track Hit view count of your GitHub Git | https://hits.dwyl.com/ | <100% | ??? | `-` |
