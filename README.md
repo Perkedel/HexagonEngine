@@ -1,4 +1,6 @@
  ![Hexagon Engine](https://github.com/Perkedel/HexagonEngine/raw/master/Sprites/HexagonEngineLogo.png)
+ 
+ [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg)](http://hits.dwyl.io/Perkedel/HexagonEngine)
 # HexagonEngine
  Cinema Enters Game Console Game Engine. A Higher Level Application and Game Framework. Powered by Godot Engine.
  
