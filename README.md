@@ -3,6 +3,7 @@
  [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg)](http://hits.dwyl.io/Perkedel/HexagonEngine)
  [![Joel's Linktree](https://img.shields.io/badge/Linktree-Visit-green)](https://www.linktr.ee/joelwindows7)
  [![GitHub](https://img.shields.io/github/license/Perkedel/HexagonEngine?logo=HexagonEngine%20is%20Open%20Source)](https://github.com/Perkedel/HexagonEngine/blob/master/LICENSE)
+ [!![Discord](https://img.shields.io/discord/376751612967911424?logo=Discord)](https://discord.gg/dHWDTPF)
 # HexagonEngine
  Cinema Enters Game Console Game Engine. A Higher Level Application and Game Framework. Powered by Godot Engine.
  
