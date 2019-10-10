@@ -43,14 +43,16 @@ func _input(event):
 	pass
 
 func _notification(what): #add heurestic of changeDVD menu! check visible of change dvd menu
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		if $JustWorkingAreYouSure.visible:
-			$JustWorkingAreYouSure.hide()
+	if visible:
+		if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+			if $JustWorkingAreYouSure.visible:
+				$JustWorkingAreYouSure.hide()
+				pass
+			else:
+				$JustWorkingAreYouSure.popup()
+				pass
 			pass
-		else:
-			$JustWorkingAreYouSure.popup()
+		if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
 			pass
-		pass
-	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
 		pass
 	pass
