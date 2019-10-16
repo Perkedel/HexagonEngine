@@ -1,0 +1,44 @@
+This is a text file.
+
+to quit Vim
+Exit from Edit by press ESC, then
+Shift + ;
+
+Choose following!
+Just Quit already
+Type ! then q
+
+try quit
+q
+
+Save
+w
+
+Save Quit
+wq
+
+Therefore if you want to Save Quit
+:wq
+
+Search DuckDuckGo for how to quit Vim.
+Take a look at https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor#_=_
+
+Z
+Z
+ Z
+  Z
+   Z
+    z
+     z
+      z
+       z
+        z
+	Head-Torso-Leg
+	Pillow-Space
+	Bed_Cover-Bed_Cover
+	Bed_Base-Bed_Base
+	Bed_LEG-Bed_LEG
+
+by JOELwindows7
+Perkedel Technologies
+CC4.0-BY-SA

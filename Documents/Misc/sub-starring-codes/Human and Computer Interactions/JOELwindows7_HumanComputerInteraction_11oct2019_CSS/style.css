@@ -1,0 +1,65 @@
+div{
+    /*width: 50px;
+    height: 50px; 
+    background-color: blue; */
+    /* padding: 20px; */
+    /* margin: 20px;
+    margin: 10px 20px;*/ /* top-bottom: 10px, left-right: 20px*/
+    /* margin: 20px 40px 60px 80px;*/ /* clock wise top right bottom left*/
+    /*border: 1px solid black;*/
+    /* 
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+    */
+}
+
+body{
+    height: 200vh;
+    /* vh = view-port height */
+    /* vw = view-port width */
+    /* % = percentage of parent */
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    background-color: rebeccapurple;
+    /* position: relative; without this, position is static, cannot lock its child */
+    /* position: fixed; */
+    /* sticky */
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    /* top left right bottom */
+    top: 0;
+    left: 0;
+}
+
+.text-style{
+    /* font text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*untuk ubah jenis font, search findable or next to*/
+    font-size: 10px; /*untuk ubah size font*/
+    font-weight: 400; /*Untuk ubah ketebalan font*/
+    text-align: center;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+/* pseudo-class */
+a:hover{
+    color: red;
+}
