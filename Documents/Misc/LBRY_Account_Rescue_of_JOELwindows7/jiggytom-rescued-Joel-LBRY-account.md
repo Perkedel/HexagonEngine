@@ -202,7 +202,7 @@ Tom now reviewed the LBRY desktop.
 
 Summoned a Notepad app to communicate in the session and...
 
-He summoned the **developer console (Ctrl + Shift + I)** of that LBRY and reviewed the flow of the data in the LBRY.
+He summoned the **developer console (Ctrl + Shift + I)** of that LBRY Desktop app and reviewed the flow of the data in the LBRY.
 
 hmm yess. localhost data flow look's like this, and get, and that hashes, etc. etc. etc.
 
@@ -254,7 +254,14 @@ In addition, Tom goes to Joel's wallet page and grab the public address.
 
 Tom sent **2000 LBC** to that address.
 
+https://explorer.lbry.com/tx/e397fa01256510424317682f4254a2a48871c2de2bdf0323260c819e859488cf
+
+## WHAT THE PEEEEEEEEEEEECKK??!?!?! 2000 LBC!!! NO WAY!!!! OH MAI GOD!!!! THE BLESSING METEOR STRUCK ME!!!!!
+actually, it's roughly 0.08 ETH or about US$1.5 or so. but still. **BETTER THAN NOTHING!!! IT'S HUGE ANYWAY!!! I GOT ACCOUNT EMAIL BACK!!!**
+
 **that puts Excitement drunkness in Joel's face. Cool and good. Awesome div by zero!!! thancc!!!**
+
+not to mention how *Arigatou Gonzaimasu* would be said so.
 # Epilogue
 Tom glad to help people, solving big issues around LBRY. he encourage Joel and friends to share things intresting to LBRY.
 
@@ -291,3 +298,50 @@ thancc!!! awesome div by zero! alright. let's clear data on android. for good. a
 https://photos.app.goo.gl/xXEH2duaN3ozrgs66
 # Email PDF file
 https://open.lbry.tv/Gmail_-_LBRY_Bug_Report_-_Impossible_Password
+
+# Hey, I am inspired! I have the same problem!
+**Never be shy!** Never hesitate!
+
+go ahead to `chat.lbry.com`
+
+**https://chat.lbry.com **
+
+to go to **Discord Server of LBRY**.
+
+then go to **\#Help** Channel and shout
+
+```
+Help! I got password prompt and I tried every password but all invalid! IMPOSSIBLE PASSWORD PROMPT!!!
+```
+
+there, the crew will be in pleasure, **to help you!**
+
+- Recover account
+- Remove impossible passwording
+- reset password
+- unlock account email
+- etc. etc.!
+
+go ahead, while you still alive!!!
+
+and as always
+
+# STAY in LBRY!!!
+We are apologise for some error and missings may be found.
+
+Credit:
+- jiggytom Tom, Crew of LBRY. Recovered Joel's account
+- Jeremy Kauffman, Founder and CEO of LBRY. provided a platform which only user control the content, no corporate hand over whatsoever. Decentralized, Censor resistant!
+- Other Crews, made LBRY possible!
+- You guys! view this Markdown file! just that is enough!
+- Tip support!!!
+- Who shared this!
+- Crab Rave. Monstercat. \[100%\] PASSWORD HAS BEEN GONE
+- GTA San Andreas. \[100%\] Oh peck. here we go again.
+- etc. etc.
+
+by JOELwindows7
+
+Perkedel Technologies
+
+CC4.0-BY-SA
