@@ -183,6 +183,8 @@ Oh and also, sorry for the confusion. Joel also had tried to turn on Android syn
 
 Tom then discovered indeed Joel is connected to that YouTube Gmail. and offered TeamViewer session.
 # TeamViewer
+https://teamviewer.com
+
 Joel has been using TeamViewer long times ago since he was a child. 
 
 Joel's father and mother used TeamViewer to remotely control other PC, to work on some jobs, retrieve files, send files, and more. Sometimes for special meeting session.
@@ -257,12 +259,14 @@ Tom sent **2000 LBC** to that address.
 https://explorer.lbry.com/tx/e397fa01256510424317682f4254a2a48871c2de2bdf0323260c819e859488cf
 
 ## WHAT THE PEEEEEEEEEEEECKK??!?!?! 2000 LBC!!! NO WAY!!!! OH MAI GOD!!!! THE BLESSING METEOR STRUCK ME!!!!!
+
 actually, it's roughly 0.08 ETH or about US$1.5 or so. but still. **BETTER THAN NOTHING!!! IT'S HUGE ANYWAY!!! I GOT ACCOUNT EMAIL BACK!!!**
 
 **that puts Excitement drunkness in Joel's face. Cool and good. Awesome div by zero!!! thancc!!!**
 
 not to mention how *Arigatou Gonzaimasu* would be said so.
-# Epilogue
+# Faith of Humanity has been restored!!!
+
 Tom glad to help people, solving big issues around LBRY. he encourage Joel and friends to share things intresting to LBRY.
 
 Idk anymore, but that's all for today. Happy Ending. wait, **Perkedel Ending**. yeah!!!
@@ -296,15 +300,17 @@ thancc!!! awesome div by zero! alright. let's clear data on android. for good. a
 ```
 # Photo of DM chat between Joel and jiggytom Tom
 https://photos.app.goo.gl/xXEH2duaN3ozrgs66
-# Email PDF file
-https://open.lbry.tv/Gmail_-_LBRY_Bug_Report_-_Impossible_Password
+# Source codes of this story
+https://github.com/Perkedel/HexagonEngine/tree/master/Documents/Misc/LBRY_Account_Rescue_of_JOELwindows7
+# Including the Thumbnail
+https://github.com/Perkedel/HexagonEngine/blob/master/Inkscape/PostingImage/JiggyTom-rescued-Joel-LBRY-Account-thumb.svg
 
 # Hey, I am inspired! I have the same problem!
 **Never be shy!** Never hesitate!
 
 go ahead to `chat.lbry.com`
 
-**https://chat.lbry.com **
+https://chat.lbry.com
 
 to go to **Discord Server of LBRY**.
 
@@ -314,7 +320,7 @@ then go to **\#Help** Channel and shout
 Help! I got password prompt and I tried every password but all invalid! IMPOSSIBLE PASSWORD PROMPT!!!
 ```
 
-there, the crew will be in pleasure, **to help you!**
+there, the crew will be in pleasure, **to help you:**
 
 - Recover account
 - Remove impossible passwording
@@ -338,6 +344,7 @@ Credit:
 - Who shared this!
 - Crab Rave. Monstercat. \[100%\] PASSWORD HAS BEEN GONE
 - GTA San Andreas. \[100%\] Oh peck. here we go again.
+- TeamViewer.com Remote control the PC!!! Control Computers from remote device!
 - etc. etc.
 
 by JOELwindows7
