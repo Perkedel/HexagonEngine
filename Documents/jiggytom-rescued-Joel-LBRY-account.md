@@ -1,0 +1,208 @@
+# Jiggy Tom of LBRY rescues Joel's LBRY account!
+**Breaking news!**, Tom rescued Joel's LBRY account which it used to stuck on impossible password for sync email.
+
+take a look!
+
+# The Heisenberg
+It was a day when LBRY Heisenberg for Desktop and Cartwheel on Android came out.
+
+In this update, LBRY finally manages something which was impossible before: Unification
+
+https://lbry.com/news/unification 
+
+People are excited as they'll have their account, wallet, sync, in one place.
+
+Joel was also in the hype wheel.
+# Updated
+The patience has been served a worth. People quickly installed and relaunched the LBRY app.
+
+So far so good. there are all the features mentioned in the update.
+
+and of course, people looked for **Sync**, which is what the update hyped about.
+# Problem Encountering
+Joel then decided to go to setting. then he encountered
+
+**Enter Password**
+
+https://open.lbry.com/@JOELwindows7:a/Help-I-Did_not-Encrypted-LBRY:0
+
+## Am I encrypted this wallet?
+Joel asked. However, He did not. atleast on the desktop. He only did password encrypt Android Wallet though.
+
+Therefore, could this be?
+## Attempts
+Joel then attempted the password dialog. he entered his password, there password, that password, whatever. invalid.
+## Panic
+Joel then took screenshot and uploaded it to LBRY. He exclaimed the grounds did this prompt appeared.
+
+Even it ended up on LBRY sub-reddit
+
+https://www.reddit.com/r/lbry/comments/djmz0m/bug_uh_password_i_didnt_set_any_not_on_the/?utm_source=share&utm_medium=web2x
+
+not just that. He even posted bug report on Cogwheel, Help, Report BUg help us out.
+
+# Response
+An employee of LBRY stepped in the post.
+
+https://www.reddit.com/r/lbry/comments/djmz0m/bug_uh_password_i_didnt_set_any_not_on_the/f4654n5?utm_source=share&utm_medium=web2x
+
+Tom also looked the bug report and confirmed the link of the crying using reply of hello@lbry.com .
+
+He also offered to insert simply the blank password.
+
+# Blank Password try
+Joel followed suggestion.
+
+**But it didn't work.**
+
+and he still trying every single of scope of password.
+
+Not long after, Tom confirmed, that there was a bug. the patch should help
+
+https://www.reddit.com/r/lbry/comments/djmz0m/bug_uh_password_i_didnt_set_any_not_on_the/f478e97?utm_source=share&utm_medium=web2x
+
+Tom also suggested to start Android first then Desktop
+
+# Wallet emptying
+Joel immediately emptied all wallet back to Desktop wallet.
+
+He first tipped the WalkFass Cockroach claim for 20 LBC which is his own claim on Original Perkedel LBRY channel.
+
+https://explorer.lbry.com/tx/e15b5f03498b26db36ad3cf49f830a0ce28345dcd2a31314ff8a08fe1b57814b
+
+https://open.lbry.com/@JOELwindows7:a/WalkFass-Dancing-Cockroach:7
+
+Then, he directly sent the rest of the LBC on the Android back to Desktop wallet.
+
+https://explorer.lbry.com/tx/9462510db3892eef03e27a9f955c075d459cdfe2928dc5a32b9a32b6b47a2751
+
+backed up the Android Wallet, and move on. now Android wallet is 0 LBC.
+
+# Patch
+As Tom confirmed the bug, he then informed all of his teammate to patch the bug.
+
+Joel then scronched all of the LBRY daemon instances. Desktop, Android, and logged out beta.lbry.tv as well. Puasa LBRY.
+
+## The wait
+Joel asked occasionally whether the LBRY app has been updated.
+
+Tom and The Team of LBRY finally patched the bug about password where if blank password, it rejects.
+
+the Desktop patch there said has been completed. but not released immediately.
+
+Left the Android which is what it is required for.
+
+# Still Nothing
+on 21 Oct 2019, the patch on Android came. Joel immediately updated the app.
+
+As Joel now is on his home to access Laptop, Internet and have all things ready, he then tried LBRY again.
+
+Joel make sure the Android has been updated and there it is
+
+then reinstalled the Desktop which didn't he realise it's not that patch yet. was 0.37.1
+
+And it's still nothing. just the same problem.
+
+now Joel sent the bug report again.
+
+He asked following questions to himself:
+- Have you seen the Android password prompt before the 1st time LBRY? Because you discovered LBRY about 2 months ago. I feel I haven't seen that prompt before.
+- I believe I put password only which I can call back as possible.
+- uh
+- Oh God.
+- help!
+
+Joel has been... Hopeless.
+# Hopeless
+Tom the responded again.
+
+He then offered Recovery using old backup, Remote session, and LBRY Discord channel, chat.lbry.tv .
+# Discord
+Joel has been using Discord about 1 or 2 years ago. and obviously he has been on LBRY Discord channel as well, sacrificing some unused right now servers since Discord can only hold 100 server joins per account.
+
+pathetic!
+
+any way, Joel then went to Help channel on that discord and spoke
+
+## Hey, I'm here!
+Joel said.
+## @jiggytom Hello!
+He called.
+
+Tom came in and start discussion eyes to eyes. Direct Message!
+# Direct Message
+Now Joel and Tom is in the DM of discord personally.
+
+As mentioned before the update of Desktop did not came. so Tom told Joel to update LBRY desktop to latest version.
+
+Now Joel is waiting for prompt. But the prompt did not appeared at all. So he took action to find ways to update LBRY.
+
+He randomly, went to see Cogwheel, Help screen, to see version number.
+
+Joel found Update to the Latest version button, and immediately clicked it.
+
+and so the patched version 0.37.1 is downloaded, and he installed it immediately.
+
+Meanwhile, Tom was handling another issues. Joel believe it was that same impossible password problem.
+
+it's tonight in Indonesia GMT+7. Joel sleep.
+
+## A few, moments lateur.
+Joel awake! it's Wednesday!
+
+Tom came back to Joel and offered TeamViewer. He also found that it was something buggy because of YouTube sync the Gmail linking.'
+
+and Joel remembered, that he synced Gmail to LBRY to transfer YouTube to it, as the first time using LBRY.
+
+(There may be another separate story about how JOELwindows7 discovered LBRY which contains YOuTube infuriation, people's comment, Shawn Wood has been bullied by Vimeo, etc. etc.)
+
+Joel was on college the morning. while it's morning on Joel's side, it's night on Tom's side. yeah, International talk.
+
+So Tom then will sleep. Additionally, he will send extra LBC to Joel as a reward (and probably compensation) for helping others in the problem.
+
+Joel then continued College. ARGH! COMPILATION TECHNIQUE! IT'S HARD! THAT'S EXACTA?! PARSE STRING!!!
+
+and then Entrepreneur part 2, there was special company talk.
+
+# 23 Oct, the Wednesday Night
+Joel now went home the night at 7 PM.
+
+He tried LBRY once again. yep, the same problem.
+
+but wait! the Email is disconnected.
+
+the password disappears.
+
+Tom told Joel to reconnect again.
+
+Joel then reconnect, and immediately the LBRY remembered the email again and impossible password prompt appeared again.
+
+**UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUGHHHHHHHH!!**
+
+Oh and also, sorry for the confusion. Joel also had tried to turn on Android sync email after it was desynced. and yes, it's similar problem. Impossible password!
+
+Tom then discovered indeed Joel is connected to that YouTube Gmail. and offered TeamViewer session.
+# TeamViewer
+Joel has been using TeamViewer long times ago since he was a child. 
+
+Joel's father and mother used TeamViewer to remotely control other PC, to work on some jobs, retrieve files, send files, and more. Sometimes for special meeting session.
+
+And Yes, Joel has been messing around what TeamViewer can do, like that remotely controling PCs, tranfering files back and forth. Tried so many platform, even Linux, and Android remote assistance.
+
+And Today, it's going on again but this time, Tom is going to control it, just like "My computer hang! help! Here, take a look" and the SysAdmin solve the problem but's it's international. (Yes, Joel let a foreigner (Indonesian calls them "bule") control Joel's computer to solve the issue!)
+
+at first glance, this brings fear to Joel. that means letting someone to take control of his Computer.
+
+but, in the name of Lord Jesus, to protect Joel's computer from any harm. Joel decided to trust the control. and so gave the ID and passkey to Tom.
+
+and so, Tom set promise and gave the LBC rewards.
+
+# It's going!
+Tom now reviewed the LBRY desktop.
+
+Summoned a Notepad app to communicate in the session and...
+
+He summoned the **developer console (Ctrl + Shift + I)** of that LBRY and reviewed the flow of the data in the LBRY.
+
+hmm yess. localhost data flow look's like this, and get, and that hashes, etc. etc. etc.
+
