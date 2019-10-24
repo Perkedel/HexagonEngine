@@ -206,3 +206,38 @@ He summoned the **developer console (Ctrl + Shift + I)** of that LBRY and review
 
 hmm yess. localhost data flow look's like this, and get, and that hashes, etc. etc. etc.
 
+Hah! the Email disconnect again. must be the Password did not entered correctly (the Impossible password), so the Email disconnect automaticly. Joel did not do this. Tom click add email.
+
+simply, reconnect the email again. It did not auto-connect. so Joel reentered the email and enter. Confirmed the email, and it's in.
+
+and
+## Oh peck! here we go again
+Impossible LBRY Password again. How do we gonna do this?!
+
+(**peck is a swear word for A Hat in Time, from character Conductor the Filmmaker and train conductor**. Joel likes AHiT and wishes to remake the game and extend its story line by forking it to prevent conflict and rejections)
+
+*unmentioned: Jefrey the Conductor, Gears for Breakfast did not name the character, only simply callings*
+
+again. Joel did Password but just on Android and that's it. no Desktop password wallet encrypt.
+
+but wait. Joel only use password he could call back so. that's should be the one. why didn't work, he cried.
+
+Joel used Android app just that Wednesday morning.
+
+And as mentioned above, Joel had already emptied all LBC on Android immediately after facing the issue, back to Desktop Wallet. Tipped that WalkFass Cockroach for 20 LBC, and sent the rest of them back off to Desktop.
+
+and now, Tom is going to do his and fellow's magic.
+# RESET PASSWORD
+And that's it. the password is reset.
+
+Joel may need to sign in again.
+
+Later, LBRY will add Change Password feature.
+
+Tom also advised to clear data on Android, so Joel did delete entire LBRY data using Setting, App, LBRY Beta, Storage, Clear Data.
+
+Back here signed in Android again. also on Desktop!
+
+Password is gone! the Sync checkbox is marked!
+
+and now to start Android again. it's from scratch. setup all things, and Decided to not Password at all because Trauma.
