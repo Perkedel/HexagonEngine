@@ -241,3 +241,53 @@ Back here signed in Android again. also on Desktop!
 Password is gone! the Sync checkbox is marked!
 
 and now to start Android again. it's from scratch. setup all things, and Decided to not Password at all because Trauma.
+
+```
+======================
+PASSWORD HAS BEEN GONE
+======================
+WOW THANCC JIGGYTOM!!!
+======================
+```
+# Compensation grant
+In addition, Tom goes to Joel's wallet page and grab the public address.
+
+Tom sent **2000 LBC** to that address.
+
+**that puts Excitement drunkness in Joel's face. Cool and good. Awesome div by zero!!! thancc!!!**
+# Epilogue
+Tom glad to help people, solving big issues around LBRY. he encourage Joel and friends to share things intresting to LBRY.
+
+Idk anymore, but that's all for today. Happy Ending. wait, **Perkedel Ending**. yeah!!!
+
+# Raw Texts
+TeamViewer Communications
+```
+did the email get signed out or you did that? Can you sign back in pleasE? 
+
+enter your email and then verify it
+
+hmm - are you sure you didn't have a password setup on Android? 
+
+I previously did password setup. the one I could recall back.
+
+ When was the last time you used the Android app? A while ago? Was there any LBC there? 
+OR can I reset that and then get your synced up here without a password for now. Later on we'll allow password change.
+
+- I used Android app just today at the morning
+- I have already emptied all LBCs to Desktop wallet.
+
+okay great....
+
+you m ay need to re-sign in on the Android app after I cleare things  up, but then everything should be synced up. 
+
+okay you should be all set now. On android, you'll probably want to clear data / re-sign in . 
+
+Sent 2K LBC over, Enjoy! 
+
+thancc!!! awesome div by zero! alright. let's clear data on android. for good. and re-sign in.
+```
+# Photo of DM chat between Joel and jiggytom Tom
+https://photos.app.goo.gl/xXEH2duaN3ozrgs66
+# Email PDF file
+https://open.lbry.tv/Gmail_-_LBRY_Bug_Report_-_Impossible_Password
