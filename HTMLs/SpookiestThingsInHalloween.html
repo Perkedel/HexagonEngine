@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basically</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            display: flex;
+            background: rgb(32, 0, 0);
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: stretch;
+            align-content: stretch;
+            height: 100%;
+            text-decoration: none;
+        }
+        
+        header {
+            width: auto;
+            background-color: rgb(0, 12, 124);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            /* flex-direction: column; */
+            /* do not nyontek, no telat, on quizoo */
+        }
+        
+        header>.Perkedel-logo {
+            width: 200px;
+            height: 50px;
+            margin-right: auto;
+            align-items: center;
+        }
+        
+        .Centrings {
+            display: flex;
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .Centrings>p {
+            margin: 0;
+        }
+        
+        .Centrings>.Intext {
+            height: min-content;
+            width: fit-content;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .Heading-Bar {
+            display: flex;
+            list-style: none;
+        }
+        
+        .Logo-button {
+            border: 1px solid black;
+            list-style: none;
+            border-radius: 10%;
+            /*rounded box border*/
+            margin-left: 10px;
+            background-color: darkgray;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .Perkedel-logo {
+            display: flex;
+            background-image: url('https://raw.githubusercontent.com/Perkedel/HexagonEngine/master/Inkscape/Logo%20Setup/Perkedel%20Logo%20Typeborder.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            width: auto;
+            height: auto;
+        }
+        
+        .Tombol {
+            margin: 0;
+            border: 1px solid black;
+            list-style: none;
+            border-radius: 10%;
+            /*rounded box border*/
+            margin-left: 10px;
+            background-color: rgb(219, 101, 101);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .Tombol>a {
+            text-decoration: none;
+            color: black;
+            font-size: 35px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .Tombol:hover {
+            /* if we hover this then do to the class of*/
+            background-color: rgb(238, 255, 0);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .Warnieng {
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="Perkedel-logo"></div>
+        <nav>
+            <ul class="Heading-Bar">
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="Centrings">
+        <div class="Intext">
+            <p>Late to post Halloween related stuffs to celebrate Halloween</p>
+            <p class="Tombol"><a href="https://beta.lbry.com/Spookiest-Things-in-Halloween">Spookie</a></p>
+            <p class="Warnieng">Click above to open beta.lbry.tv in LBRY app</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+    List of websites possible:
+    https://www.w3schools.com/cssref/pr_background-image.asp
+    https://duckduckgo.com/?q=css+stretch+to+the+end+screen&t=brave&ia=web
+    https://stackoverflow.com/questions/147528/how-do-i-force-a-div-block-to-extend-to-the-bottom-of-a-page-even-if-it-has-no-c
+    https://www.freecodecamp.org/news/how-to-center-things-with-style-in-css-dc87b7542689/
+    https://stackoverflow.com/questions/4687923/how-to-center-a-div-from-top-to-bottom
+    https://www.w3schools.com/cssref/pr_text_text-align.asp
+    https://www.w3schools.com/cssref/playit.asp?filename=playcss_text-align&preval=center
+    https://stackoverflow.com/questions/2703601/how-to-line-break-from-css-without-using-br
+    http://flexbox.help/
+    https://perkedeltechnologies.wordpress.com/2019/10/25/huff-quiz-semi-gagal/
+    https://github.com/Perkedel/HexagonEngine/blob/master/Inkscape/Logo%20Setup/Perkedel%20Logo%20Typeborder.png
+ -->
