@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2048"
+   height="2048"
+   viewBox="0 0 2048 2048"
+   version="1.1"
+   id="svg4769"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="HatsuneMikuSilentNightAlbum.svg">
+  <defs
+     id="defs4763">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9256">
+      <stop
+         style="stop-color:#00a0ff;stop-opacity:1"
+         offset="0"
+         id="stop9252" />
+      <stop
+         id="stop9264"
+         offset="0.25"
+         style="stop-color:#0086f6;stop-opacity:1" />
+      <stop
+         id="stop9260"
+         offset="0.5"
+         style="stop-color:#0076ee;stop-opacity:1" />
+      <stop
+         style="stop-color:#000aff;stop-opacity:1"
+         offset="0.75"
+         id="stop9262" />
+      <stop
+         style="stop-color:#001c80;stop-opacity:1"
+         offset="1"
+         id="stop9254" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9256"
+       id="linearGradient9258"
+       x1="1056"
+       y1="-244.86668"
+       x2="1056"
+       y2="1803.1333"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1310.6417"
+     inkscape:cy="1167.1438"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid9246"
+       empspacing="4" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid9248"
+       color="#ff3fff"
+       opacity="0.1254902"
+       empcolor="#ff3fff"
+       empopacity="0.25098039"
+       empspacing="64" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4766">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,244.86668)">
+    <rect
+       style="opacity:1;fill:url(#linearGradient9258);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="rect9250"
+       width="2048"
+       height="2048"
+       x="0"
+       y="-244.86668"
+       ry="1.8530299e-07" />
+    <path
+       style="opacity:1;fill:#00ffff;fill-opacity:0.27450982;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       d="M 0 0 L 0 1297.0684 A 1440 1440 0 0 0 1056 1760 A 1440 1440 0 0 0 2048 1362.8828 L 2048 0 L 0 0 z "
+       transform="translate(0,-244.86668)"
+       id="path9268" />
+    <path
+       style="fill:#459fff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 128,1163.1333 c 0,0 256,-196.83239 896,-196.83239 640,0 960,196.83239 960,196.83239 0,0 -320,352 -960,352 -576,0 -896,-352 -896,-352 z"
+       id="path9282"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc" />
+    <path
+       style="fill:#6c5353;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.33729216"
+       d="m 0,1803.1333 256,-576 h 1536 l 256,576 z"
+       id="path9270"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g9302">
+      <path
+         inkscape:connector-curvature="0"
+         id="path9294"
+         d="M 1344,1035.1333 V 907.13333 h -32 l 128,-128 128,128 h -32 v 127.99997 z"
+         style="fill:#6c5d53;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9298"
+         d="m 1440,779.13332 h 288 l 128,128 h -32 V 1035.1333 H 1536 V 907.13332 h 32 z"
+         style="fill:#917c6f;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
