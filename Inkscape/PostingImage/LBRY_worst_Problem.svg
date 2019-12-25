@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="LBRY_worst_Problem.svg"
+   inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Godot Projects\HexagonEngine\Inkscape\PostingImage\LBRY_worst_Problem.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4755">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="0"
+         id="stop4751" />
+      <stop
+         id="stop4761"
+         offset="0.79166669"
+         style="stop-color:#ee0000;stop-opacity:1" />
+      <stop
+         id="stop4759"
+         offset="0.8125"
+         style="stop-color:#00f7ff;stop-opacity:1" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1"
+         offset="0.85416669"
+         id="stop4771" />
+      <stop
+         style="stop-color:#feff00;stop-opacity:1"
+         offset="0.875"
+         id="stop4763" />
+      <stop
+         id="stop4765"
+         offset="0.91666669"
+         style="stop-color:#ff5bff;stop-opacity:1" />
+      <stop
+         style="stop-color:#8404ff;stop-opacity:1"
+         offset="0.9375"
+         id="stop4767" />
+      <stop
+         id="stop4769"
+         offset="0.97247022"
+         style="stop-color:#07ff00;stop-opacity:1" />
+      <stop
+         style="stop-color:#002332;stop-opacity:1"
+         offset="1"
+         id="stop4753" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4755"
+       id="radialGradient4757"
+       cx="960"
+       cy="2758.8896"
+       fx="960"
+       fy="2758.8896"
+       r="960"
+       gradientTransform="matrix(1,0,0,0.5625,0,1207.0142)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="869.32366"
+     inkscape:cy="594.79173"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:pagecheckerboard="false"
+     borderlayer="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4747" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-2218.8896)">
+    <rect
+       style="opacity:1;fill:url(#radialGradient4757);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="rect4749"
+       width="1920"
+       height="1080"
+       x="0"
+       y="2218.8896"
+       ry="1.8530299e-07" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 210,2118.8896 5,5 -5,5 5,-5 5,5 -5,-5 5,-5 -5,5 z"
+       id="path4775"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 200,2143.8896 30,-5 z"
+       id="path4777"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4795">
+      <rect
+         ry="14.999951"
+         y="2133.8896"
+         x="240"
+         height="45"
+         width="80"
+         id="rect4773"
+         style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:#ff5bff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+      <g
+         id="g4788">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4779"
+           d="m 260,2143.8896 5,5 -5,5 5,-5 5,5 -5,-5 5,-5 -5,5 z"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4781"
+           d="m 265,2166.3896 30,-5 z"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 290,2143.8896 5,5 -5,5 5,-5 5,5 -5,-5 5,-5 -5,5 z"
+           id="path4783"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g4807"
+       transform="matrix(5.0571468,0,0,5.0571468,-456.0011,-8526.2894)">
+      <rect
+         style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:#ff5bff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="rect4797"
+         width="80"
+         height="45"
+         x="240"
+         y="2133.8896"
+         ry="14.999951" />
+      <g
+         id="g4805">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 260,2143.8896 5,5 -5,5 5,-5 5,5 -5,-5 5,-5 -5,5 z"
+           id="path4799"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 265,2166.3896 30,-5 z"
+           id="path4801"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path4803"
+           d="m 290,2143.8896 5,5 -5,5 5,-5 5,5 -5,-5 5,-5 -5,5 z"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#007862;stroke-width:1.862;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 390,2148.8896 40,25 55,-45 -53.42601,-29.3192 L 380,2143.8896 v 10 l 50,30 55,-45 h -5 5 v 5"
+       id="path4809"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc" />
+    <g
+       id="g4842"
+       transform="translate(-90,-119.33327)">
+      <rect
+         ry="7.5384645"
+         y="2607.5562"
+         x="1510"
+         height="261.33344"
+         width="360"
+         id="rect4813"
+         style="opacity:1;fill:#c7e7ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.02247131;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.98574823" />
+      <path
+         style="fill:none;stroke:#007862;stroke-width:4.72079039;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1578.5867,2755.5063 101.4133,63.3833 139.4433,-114.09 -135.4527,-74.3339 -130.7572,112.3639 v 25.3533 l 126.7666,76.06 139.4433,-114.09 h -12.6766 12.6766 v 12.6767"
+         id="path4811"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="120"
+       y="3458.8896"
+       id="text4817"><tspan
+         sodipodi:role="line"
+         id="tspan4815"
+         x="120"
+         y="3458.8896">Brendon Brewer custom wallet server is 199.192.31.122:50001</tspan><tspan
+         sodipodi:role="line"
+         x="120"
+         y="3518.8896"
+         id="tspan4819">https://open.lbry.com/@BrendonBrewer:3/wallet-server:1</tspan></text>
+    <g
+       id="g4830">
+      <circle
+         r="40"
+         cy="2148.8896"
+         cx="590"
+         id="path4821"
+         style="opacity:1;fill:#c7e7ff;fill-opacity:1;fill-rule:nonzero;stroke:#007862;stroke-width:1.86199999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+      <text
+         id="text4825"
+         y="2159.4529"
+         x="561.94598"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.44205284px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#007862;fill-opacity:1;stroke:none;stroke-width:0.63420945"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.63420945"
+           y="2159.4529"
+           x="561.94598"
+           id="tspan4823"
+           sodipodi:role="line">LBC</tspan></text>
+    </g>
+    <g
+       id="g4868"
+       transform="translate(-30,-4.84375e-5)">
+      <g
+         id="g4861">
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:1.86199999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+           id="rect4855"
+           width="125"
+           height="30"
+           x="725"
+           y="2133.8896"
+           ry="7.5384598" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.78930855px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.47477725"
+           x="730.40338"
+           y="2155.1289"
+           id="text4851"><tspan
+             sodipodi:role="line"
+             id="tspan4849"
+             x="730.40338"
+             y="2155.1289"
+             style="stroke-width:0.47477725">TRENDING</tspan></text>
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 725,2133.8896 125,30"
+           id="path4853"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       transform="matrix(3.2453805,0,0,3.2453805,-1995.7371,-3935.075)"
+       id="g4880">
+      <g
+         id="g4878">
+        <rect
+           ry="7.5384598"
+           y="2133.8896"
+           x="725"
+           height="30"
+           width="125"
+           id="rect4870"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:1.86199999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+        <text
+           id="text4874"
+           y="2155.1289"
+           x="730.40338"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.78930855px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.47477725"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.47477725"
+             y="2155.1289"
+             x="730.40338"
+             id="tspan4872"
+             sodipodi:role="line">TRENDING</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="path4876"
+           d="m 725,2133.8896 125,30"
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#ff7600;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 865,2153.8896 h -10 c 0,0 -5,0 -5,-5 0,-5 5,-5 5,-5 h 10 l -3,-3 3,3 -3,3 3,-3 h -10 c 0,0 -5,0 -5,5 0,5 5,5 5,5 z"
+       id="path4884"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4892"
+       transform="translate(16.75785,36.4183)">
+      <rect
+         ry="5.6300197"
+         y="2489.3953"
+         x="80.695305"
+         height="238.98865"
+         width="328.60938"
+         id="rect4888"
+         style="opacity:1;fill:#59374e;fill-opacity:0.5748218;fill-rule:nonzero;stroke:#ff7600;stroke-width:1.39061511;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#ff7600;stroke-width:14.40271759px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="M 343.24215,2702.4713 H 199.21493 c 0,0 -72.01357,0 -72.01357,-72.0132 0,-72.0138 72.01357,-72.0138 72.01357,-72.0138 h 144.02722 l -43.20819,-43.2078 43.20819,43.2078 -43.20819,43.2084 43.20819,-43.2084 H 199.21493 c 0,0 -72.01357,0 -72.01357,72.0138 0,72.0132 72.01357,72.0132 72.01357,72.0132 z"
+         id="path4886"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       style="fill:none;stroke:#0071ff;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 885,2153.8896 c 0,0 5,-10 10,0 h -2 l 2,-2 v 2"
+       id="path4894"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4896"
+       d="m 1269.2235,2322.9179 c 0,0 234.5368,-165.8833 226.5213,121.276 l -45.3043,-24.2552 69.5595,-21.0491 -24.2552,45.3043"
+       style="fill:none;stroke:#00601b;stroke-width:25.69431496px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#00601b;stroke-width:25.69431496px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 1695.4279,2783.6516 c 0,0 125.8795,258.223 -156.2265,203.9927 l 31.2453,-40.7986 9.5533,72.0439 -40.7986,-31.2453"
+       id="path4898"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4900"
+       d="m 1129.2552,3096.7265 c 0,0 -137.47311,252.2417 -256.78244,-9.0819 l 51.35655,1.8164 -53.17288,49.5402 1.81633,-51.3566"
+       style="fill:none;stroke:#00601b;stroke-width:25.69431496px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#00601b;stroke-width:25.69431496px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 330.91987,3048.5758 c 0,0 -286.368243,22.7588 -132.75417,-219.991 l 26.55085,43.9983 -70.54911,-17.4473 43.99826,-26.551"
+       id="path4902"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4904"
+       d="m 439.4543,2423.9895 c 0,0 68.96623,-278.8698 250.68225,-56.3748 L 640,2378.8896 l 38.86144,-61.4115 11.27511,50.1366"
+       style="fill:none;stroke:#00601b;stroke-width:25.69431496px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#b70000;fill-opacity:1;stroke:#ffd9c7;stroke-opacity:1;"
+       x="960"
+       y="2558.8896"
+       id="text4908"><tspan
+         sodipodi:role="line"
+         id="tspan4906"
+         x="960"
+         y="2558.8896">Get Strike Ban</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00ffff;fill-opacity:1;stroke:#ffff08;stroke-opacity:1;"
+       x="1600"
+       y="2818.8896"
+       id="text4912"><tspan
+         sodipodi:role="line"
+         id="tspan4910"
+         x="1600"
+         y="2818.8896">Move to LBRY</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:#cdd408;stroke-opacity:1;"
+       x="1340"
+       y="3198.8896"
+       id="text4916"><tspan
+         sodipodi:role="line"
+         id="tspan4914"
+         x="1340"
+         y="3198.8896">Upload &amp; Big Deposit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:#00ff32;stroke-opacity:1;"
+       x="560"
+       y="3158.8896"
+       id="text4920"><tspan
+         sodipodi:role="line"
+         id="tspan4918"
+         x="560"
+         y="3158.8896">Still not trending!</tspan><tspan
+         sodipodi:role="line"
+         x="560"
+         y="3218.8896"
+         id="tspan4922">perhaps they got bigger</tspan><tspan
+         sodipodi:role="line"
+         x="560"
+         y="3278.8896"
+         id="tspan4924">deposit than you?!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff5d00;fill-opacity:1;stroke:#23fdff;stroke-opacity:1;"
+       x="260"
+       y="2818.8896"
+       id="text4928"><tspan
+         sodipodi:role="line"
+         id="tspan4926"
+         x="260"
+         y="2818.8896">Disapointed!</tspan><tspan
+         sodipodi:role="line"
+         x="260"
+         y="2878.8896"
+         id="tspan4930">let's go back to</tspan><tspan
+         sodipodi:role="line"
+         x="260"
+         y="2938.8896"
+         id="tspan4932">Centralized!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.18882179px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.56643379"
+       x="959.92139"
+       y="2605.9448"
+       id="text4936"><tspan
+         sodipodi:role="line"
+         id="tspan4934"
+         x="959.92139"
+         y="2605.9448"
+         style="stroke-width:0.56643379">I wish this is a joke.</tspan><tspan
+         sodipodi:role="line"
+         x="959.92139"
+         y="2639.9309"
+         id="tspan4938"
+         style="stroke-width:0.56643379">don't make LBRY a fallacy!</tspan><tspan
+         sodipodi:role="line"
+         x="959.92139"
+         y="2673.917"
+         id="tspan4940"
+         style="stroke-width:0.56643379">pls add YouTube-like Algorithm of Deposit Neutral Recommendation</tspan><tspan
+         sodipodi:role="line"
+         x="959.92139"
+         y="2707.9028"
+         id="tspan4942"
+         style="stroke-width:0.56643379">Minus the manipulatives, strikes, ban, and all other badness.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="960"
+       y="2846.1377"
+       id="text4946"><tspan
+         sodipodi:role="line"
+         id="tspan4944"
+         x="960"
+         y="2846.1377">by JOELwindows7</tspan><tspan
+         sodipodi:role="line"
+         x="960"
+         y="2906.1377"
+         id="tspan4948">Perkedel Technologies</tspan><tspan
+         sodipodi:role="line"
+         x="960"
+         y="2966.1377"
+         id="tspan4950">CC4.0-BY-SA</tspan></text>
+    <g
+       id="g1492-8-9"
+       transform="matrix(0.25,0,0,0.25,886.08333,2849.1813)"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         id="g9582"
+         transform="matrix(1.9166667,0,0,1.9166667,-264,-1078.9583)">
+        <path
+           inkscape:connector-curvature="0"
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
+           transform="translate(0,106.5)"
+           id="path1451-5-4" />
+        <path
+           transform="translate(0,106.5)"
+           inkscape:connector-curvature="0"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-3-1" />
+      </g>
+    </g>
+    <g
+       id="g9603">
+      <circle
+         style="opacity:1;fill:#c7e7ff;fill-opacity:1;fill-rule:nonzero;stroke:#007862;stroke-width:5.93503094;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="circle4832"
+         cx="1340"
+         cy="3018.8896"
+         r="127.49799" />
+      <g
+         id="g9596">
+        <text
+           id="text4836"
+           y="3115.7244"
+           x="1295.2903"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.51548767px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#007862;fill-opacity:1;stroke:none;stroke-width:1.01073933"
+           xml:space="preserve"><tspan
+             style="stroke-width:1.01073933"
+             y="3115.7244"
+             x="1295.2903"
+             id="tspan4834"
+             sodipodi:role="line">LBC</tspan></text>
+        <path
+           sodipodi:nodetypes="ccccccccccc"
+           inkscape:connector-curvature="0"
+           id="path9591"
+           d="m 1271.1259,3003.9683 63.8741,39.9213 87.8269,-71.8584 -85.3135,-46.8185 -82.3561,70.7713 v 15.9686 l 79.8427,47.9056 87.8269,-71.8584 h -7.9842 7.9842 v 7.9842"
+           style="fill:none;stroke:#007862;stroke-width:2.97334123;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.92325783px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff4e00;fill-opacity:1;stroke:#0bd499;stroke-width:0.51923454;stroke-opacity:1"
+       x="962.25812"
+       y="2991.2544"
+       id="text9607"><tspan
+         sodipodi:role="line"
+         id="tspan9605"
+         x="962.25812"
+         y="2991.2544"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold Italic';fill:#ff4e00;fill-opacity:1;stroke:#0bd499;stroke-width:0.51923454;stroke-opacity:1">The Popularity Depression Cycle</tspan></text>
+    <text
+       id="text9613"
+       y="3013.0703"
+       x="964.90765"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.83090973px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.24647728"
+       xml:space="preserve"><tspan
+         y="3013.0703"
+         x="964.90765"
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.24647728"
+         id="tspan9617">LBRY's official Trending algorithm problematic?</tspan><tspan
+         y="3027.8589"
+         x="966.271"
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.24647728"
+         id="tspan9623">Unsportmanship, Claim never got trending despite much LBC deposit? </tspan><tspan
+         y="3042.6477"
+         x="964.90765"
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.24647728"
+         id="tspan9619">try this Custom Wallet Server!</tspan><tspan
+         y="3057.4363"
+         x="964.90765"
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.24647728"
+         id="tspan9615">Brendon Brewer custom wallet server is 199.192.31.122:50001</tspan><tspan
+         id="tspan9611"
+         y="3072.2249"
+         x="964.90765"
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.24647728">https://open.lbry.com/@BrendonBrewer:3/wallet-server:1</tspan></text>
+  </g>
+</svg>
