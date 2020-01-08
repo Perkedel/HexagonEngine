@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Blender/ExportBlender/ZoblatosImprovement.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Blender/ExportBlender/ZoblatosImprovement.gd" type="Script" id=2]
+[ext_resource path="res://Blender/ExportBlender/ZoblatosImprovement.glb" type="PackedScene" id=3]
+
+[node name="Brandom" type="Spatial"]
+
+[node name="ZoblatSmooth" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ZoblatHard" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.530884, 1.7022 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.924586, -0.150738, 0.349884, 0, 0.918394, 0.395666, -0.380974, -0.365827, 0.849135, 3.97287, 4.18396, 7.13762 )
+fov = 70.3125
