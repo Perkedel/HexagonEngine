@@ -37,6 +37,7 @@ func spawnAScene(pathO):
 	hasMeLoading = true
 	Your2DSpaceLevel = pathO
 	Raw2DSpaceLevelPath = pathO
+	print("Queueing Scene " + Raw2DSpaceLevelPath)
 	custom_Resource_Queue.queue_resource(Raw2DSpaceLevelPath)
 	pass
 
@@ -64,7 +65,7 @@ func InitiateThatScene(scene_resource):
 	# https://docs.godotengine.org/en/3.1/tutorials/threads/thread_safe_apis.html#doc-thread-safe-apis
 	LevelLoadRoot.call_deferred("add_child", a2DResource)
 	Now2DSpaceLevel = LevelLoadRoot.get_child(0)
-	emit_signal("hasLoadingCompleted")
+	# emit_signal("hasLoadingCompleted")
 	pass
 
 func show_error():
@@ -84,7 +85,7 @@ func fake_progress_100():
 func _process(delta):
 	if custom_Resource_Queue.is_ready(Raw2DSpaceLevelPath):
 		SceneHasLoaded = true
-		
+		print("Queue is ready " + Raw2DSpaceLevelPath)
 		pass
 	else:
 		
@@ -99,7 +100,9 @@ func _process(delta):
 		pass
 	
 	if SceneHasLoaded:
+		emit_signal("hasLoadingCompleted")
 		if not StartLoadScene:
+			
 			InitiateThatScene(custom_Resource_Queue.get_resource(Raw2DSpaceLevelPath))
 			StartLoadScene = true
 			hasMeLoading = false

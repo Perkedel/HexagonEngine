@@ -8,18 +8,24 @@ margin_bottom = 55.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="."]
-margin_right = 173.0
+margin_right = 958.0
 margin_bottom = 55.0
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )
 text = "Volume"
-align = 1
 valign = 1
 
-[node name="HSlider" type="HSlider" parent="."]
-margin_left = 181.0
-margin_top = 11.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 966.0
 margin_right = 1924.0
-margin_bottom = 43.0
+margin_bottom = 55.0
 size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_vertical = 3
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+margin_right = 958.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
 value = 100.0
+ticks_on_borders = false

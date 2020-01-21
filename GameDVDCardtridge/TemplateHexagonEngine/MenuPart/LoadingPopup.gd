@@ -18,7 +18,8 @@ func _ready():
 	pass # Replace with function body.
 
 func SpawnLoading():
-	popup()
+	#popup()
+	show()
 	DeCompleteTheLoadingNow()
 	pass
 
@@ -39,7 +40,7 @@ func ManageLoading(ProgressValuei = 0, WordingHint = "Loaden", isComplete = fals
 	pass
 
 func DeCompleteTheLoadingNow():
-	set_exclusive(true)
+	set_exclusive(false)
 	LoadingCompleted = false
 	#$LoadingAnimates.play("GravityHourGlassRotate")
 	$Timerout.stop()

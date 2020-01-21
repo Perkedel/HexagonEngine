@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=2]
+
+[node name="InheritableSettingOptionButton" type="HBoxContainer"]
+margin_top = 126.0
+margin_right = 1924.0
+margin_bottom = 181.0
+
+[node name="Label" type="Label" parent="."]
+margin_right = 958.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_fonts/font = ExtResource( 1 )
+text = "Option Button"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 966.0
+margin_right = 1924.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+margin_right = 958.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Item 0"
+items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null ]
+selected = 0

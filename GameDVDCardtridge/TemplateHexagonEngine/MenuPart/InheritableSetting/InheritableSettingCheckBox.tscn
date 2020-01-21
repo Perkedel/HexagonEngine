@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+
+[node name="InheritableSettingCheckBox" type="HBoxContainer"]
+margin_top = 189.0
+margin_right = 1924.0
+margin_bottom = 260.0
+
+[node name="Label" type="Label" parent="."]
+margin_top = 8.0
+margin_right = 958.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "CheckBox"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 966.0
+margin_right = 1924.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer"]
+margin_right = 958.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Status"

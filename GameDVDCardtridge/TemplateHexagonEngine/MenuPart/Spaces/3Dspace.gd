@@ -39,6 +39,7 @@ func spawnAScene(pathO):
 	hasMeLoading = true
 	Your3DSpaceLevel = pathO
 	Raw3DSpaceLevelPath = pathO
+	print("Queueing Scene " + Raw3DSpaceLevelPath)
 	custom_Resource_Queue.queue_resource(Raw3DSpaceLevelPath)
 	pass
 
@@ -66,7 +67,7 @@ func InitiateThatScene(scene_resource):
 	# https://docs.godotengine.org/en/3.1/tutorials/threads/thread_safe_apis.html#doc-thread-safe-apis
 	LevelLoadRoot.call_deferred("add_child", a3DResource)
 	Now3DSpaceLevel = LevelLoadRoot.get_child(0)
-	emit_signal("hasLoadingCompleted")
+	# emit_signal("hasLoadingCompleted")
 	pass
 
 func show_error():
@@ -86,7 +87,7 @@ func fake_progress_100():
 func _process(delta):
 	if custom_Resource_Queue.is_ready(Raw3DSpaceLevelPath):
 		SceneHasLoaded = true
-		
+		print("Queue is ready " + Raw3DSpaceLevelPath)
 		pass
 	else:
 		
@@ -101,6 +102,7 @@ func _process(delta):
 		pass
 	
 	if SceneHasLoaded:
+		emit_signal("hasLoadingCompleted")
 		if not StartLoadSceneL:
 			InitiateThatScene(custom_Resource_Queue.get_resource(Raw3DSpaceLevelPath))
 			StartLoadSceneL = true

@@ -23,6 +23,10 @@ config/icon="res://Sprites/HexagonEngineSign.png"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
 
+[autoload]
+
+Singletoner="*res://Scripts/Singletoner.gd"
+
 [compression]
 
 formats/zlib/compression_level=9
@@ -30,7 +34,7 @@ formats/gzip/compression_level=9
 
 [debug]
 
-settings/crash_handler/message="Please include this when reporting the bug on https://github.com/Perkedel/HexagonEngine/issues"
+settings/crash_handler/message="OH PECK!!! WHY?! OH.. we're sorry this happened. Not what we expect. Please include this when reporting the bug on https://github.com/Perkedel/HexagonEngine/issues"
 settings/stdout/verbose_stdout=true
 gdscript/completion/autocomplete_setters_and_getters=true
 

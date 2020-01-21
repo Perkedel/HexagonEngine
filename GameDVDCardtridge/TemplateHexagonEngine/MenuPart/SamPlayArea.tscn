@@ -36,7 +36,7 @@ stretch_mode = 6
 [node name="MoreButton" type="Button" parent="."]
 margin_top = 102.0
 margin_right = 1000.0
-margin_bottom = 139.0
+margin_bottom = 133.0
 hint_tooltip = "Hover to open more menu drawer"
 focus_mode = 0
 enabled_focus_mode = 0
