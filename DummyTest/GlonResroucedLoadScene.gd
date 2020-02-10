@@ -23,13 +23,13 @@ func _ready():
 	
 	# when you need a new scene:
 	queue.queue_resource("res://level_1.tscn", true) # Use "true" as the second argument to put it at the front
-	                                                 # of the queue, pausing the load of any other resource.
+													 # of the queue, pausing the load of any other resource.
 	
 	# to check progress
 	if queue.is_ready("res://level_1.tscn"):
-	    show_new_level(queue.get_resource("res://level_1.tscn"))
+		show_new_level(queue.get_resource("res://level_1.tscn"))
 	else:
-	    update_progress(queue.get_process("res://level_1.tscn"))
+		update_progress(queue.get_process("res://level_1.tscn"))
 	
 	# when the user walks away from the trigger zone in your Metroidvania game:
 	queue.cancel_resource("res://zone_2.tscn")

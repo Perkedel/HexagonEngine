@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.gd" type="Script" id=2]
 
 [node name="InheritableSettingVolume" type="HBoxContainer"]
 margin_right = 1924.0
 margin_bottom = 55.0
 size_flags_horizontal = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_right = 958.0
@@ -28,4 +33,5 @@ margin_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 value = 100.0
-ticks_on_borders = false
+[connection signal="changed" from="HBoxContainer/HSlider" to="." method="_on_HSlider_changed"]
+[connection signal="value_changed" from="HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed" binds= [ 0.0 ]]

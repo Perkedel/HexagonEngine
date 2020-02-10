@@ -13,12 +13,10 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 4 )
 
-[node name="AudioCategoryArea" index="0" instance=ExtResource( 1 )]
+[node name="AudioCategoryArea" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="MasterVolume" parent="." index="0" instance=ExtResource( 3 )]
-editor/display_folded = true
-visible = false
 
 [node name="Label" parent="MasterVolume" index="0"]
 custom_fonts/font = SubResource( 1 )
