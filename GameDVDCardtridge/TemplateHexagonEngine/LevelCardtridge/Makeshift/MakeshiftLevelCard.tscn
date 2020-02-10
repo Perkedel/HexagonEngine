@@ -1,0 +1,80 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/TemplateLevelCard.tscn" type="PackedScene" id=1]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://font/ubuntu-font-family-0.83/UbuntuMono-R.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-MI.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Makeshift/Makeshift2DScene.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Makeshift/Makeshift3DScene.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Inkscape/Logo Setup/perkedelbannerrender2048x1152.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu 72 Bold"
+size = 72
+outline_size = 3
+outline_color = Color( 0.0862745, 0.0392157, 0.317647, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+resource_name = "Ubuntu Monospace 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.215686, 0.219608, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold Italic 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.219608, 0, 0.12549, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+resource_name = "Ubuntu Italic 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0.113725, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 5 )
+
+[node name="MakesiftLevelCard" instance=ExtResource( 1 )]
+Your3DSpaceLevel = ExtResource( 8 )
+Your2DSpaceLevel = ExtResource( 7 )
+LevelBannerThumbnail = ExtResource( 9 )
+LevelTitleg = "Makeshift"
+LevelDescription = "Makeshift Platforming Standard"
+
+[node name="Title" parent="LevelCardContainer/TitleScroll" index="0"]
+custom_fonts/font = SubResource( 1 )
+
+[node name="RichTextLabel" parent="LevelCardContainer/DescriptionScroll" index="0"]
+custom_fonts/mono_font = SubResource( 2 )
+custom_fonts/bold_italics_font = SubResource( 3 )
+custom_fonts/italics_font = SubResource( 4 )
+custom_fonts/bold_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="PlayTheLevelButton" parent="LevelCardContainer" index="3"]
+custom_fonts/font = SubResource( 1 )
+text = "Play Makeshift"

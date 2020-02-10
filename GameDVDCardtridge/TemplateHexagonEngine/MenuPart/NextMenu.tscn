@@ -94,19 +94,15 @@ size_flags_vertical = 3
 visible = false
 
 [node name="SettingArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 4 )]
-editor/display_folded = true
 visible = false
 
 [node name="UnknownArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 10 )]
-editor/display_folded = true
 visible = false
 
 [node name="ExtrasArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 11 )]
-editor/display_folded = true
 visible = false
 
 [node name="LevelSelectArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 12 )]
-editor/display_folded = true
 visible = false
 
 [node name="GameplayLevelLoadingInfoArea" parent="VBoxContainer/MenuSpaceArea" instance=ExtResource( 13 )]

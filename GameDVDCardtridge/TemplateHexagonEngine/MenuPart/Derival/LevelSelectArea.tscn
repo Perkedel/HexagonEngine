@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tres.gd" type="Script" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/TemplateLevelCard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Makeshift/MakeshiftLevelCard.tscn" type="PackedScene" id=4]
 
 [node name="LevelSelectArea" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -19,3 +20,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TemplateLevelCard" parent="ScrollContainer/HBoxContainer" index="0" instance=ExtResource( 3 )]
+
+[node name="MakesiftLevelCard" parent="ScrollContainer/HBoxContainer" index="1" instance=ExtResource( 4 )]
+margin_left = 808.0
+margin_right = 1608.0

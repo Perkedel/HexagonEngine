@@ -80,11 +80,11 @@ func _process(delta):
 	$HBoxContainer/VBoxContainer/LoadingHintWord.text = ProgressWording + Dots
 	
 	if Input.is_key_pressed(KEY_5):
-		SpawnLoading()
+		#SpawnLoading()
 		pass
 	
 	if Input.is_key_pressed(KEY_4):
-		CompleteTheLoadingNow()
+		#CompleteTheLoadingNow()
 		pass
 	
 	if LoadingCompleted:
