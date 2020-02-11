@@ -11,6 +11,9 @@ export(bool) var isPlayingTheGameNow = false
 export(bool) var LoadingHasCompleted
 export(bool) var PauseTheGame = false
 
+export(String) var ExitGameName = "Exit"
+export(String) var LeaveLevelName = "Leave Level"
+
 # https://www.youtube.com/watch?v=9sHKaQBcgO8&t=14s
 # https://www.youtube.com/watch?v=-x0M17IwG0s
 onready var aThread = Thread.new()
@@ -36,6 +39,10 @@ var Sub2DLoadCompleted = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+
+func SetExitButtonLabel(name:String):
+	$MustFollowPersonCamera2D/UIspace.SetExitButtonLabel(name)
+	pass
 
 func NextMenu():
 	pass
@@ -65,6 +72,13 @@ func _process(delta):
 		pass
 	
 	$MustFollowPersonCamera2D/UIspace.ManageLoading(loadValue, LevelTitleg, LoadingHasCompleted)
+	
+	if isPlayingTheGameNow:
+		SetExitButtonLabel(LeaveLevelName)
+		pass
+	else:
+		SetExitButtonLabel(ExitGameName)
+		pass
 	pass
 
 # Place UIspace under CanvasLayer! https://godotengine.org/qa/396/gui-not-following-camera

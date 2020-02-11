@@ -37,6 +37,10 @@ func _ready():
 	##SoftLetsChangeScene()
 	pass # Replace with function body.
 
+func StopTesting():
+	$VBoxContainer/MenuSpaceArea/SettingArea.StopTesting()
+	pass
+
 func SetYourMenuList(whichOf):
 	SelectYourMenu = whichOf
 	SoftLetsChangeScene()
@@ -133,6 +137,7 @@ func _process(delta):
 
 signal PressBackButton()
 func _on_BackButton_pressed():
+	StopTesting()
 	emit_signal("PressBackButton")
 	pass # Replace with function body.
 

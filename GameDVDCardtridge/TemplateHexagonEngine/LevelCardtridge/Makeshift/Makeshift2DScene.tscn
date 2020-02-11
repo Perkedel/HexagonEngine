@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Makeshift/MakeShiftRun2D.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Makeshift/Joysticc.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 132.42
+
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=3]
+width = 64
+height = 64
+noise = SubResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 32 )
 
 [node name="MakeshiftNode2D" type="Node2D"]
 
@@ -25,3 +36,14 @@ mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall"]
 polygon = PoolVector2Array( -91.9148, -123.914, 1926.42, -108.459, 2053.15, -3.36963, 3.90216, 8.99384, 0.811279, 1081.53, 1920.24, 1078.43, 1932.6, -3.36963, 2065.51, -0.278809, 2031.51, 1180.43, 3.90216, 1208.25, -70.2787, 1069.16 )
+
+[node name="Joysticc" type="RigidBody2D" parent="."]
+position = Vector2( 961.26, 550.175 )
+mode = 1
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Joysticc"]
+texture = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Joysticc"]
+shape = SubResource( 4 )

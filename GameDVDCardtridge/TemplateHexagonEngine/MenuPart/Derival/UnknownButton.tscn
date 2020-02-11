@@ -4,6 +4,7 @@
 [ext_resource path="res://Sprites/UnkownIcon.png" type="Texture" id=2]
 
 [node name="UnknownButton" instance=ExtResource( 1 )]
+ButtonLabelName = "Unknown"
 
 [node name="Button" parent="." index="0"]
 hint_tooltip = "Unknown purpose button"

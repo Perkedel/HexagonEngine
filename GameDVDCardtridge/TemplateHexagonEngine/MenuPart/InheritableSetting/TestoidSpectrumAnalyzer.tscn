@@ -1,0 +1,272 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/MetererBekgron.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/MetererOver.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MetererProgress.png" type="Texture" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidSpectrumAnalyzer.gd" type="Script" id=5]
+
+[node name="TestoidSpectrumAnalyzer" type="HBoxContainer"]
+margin_top = 586.0
+margin_right = 1920.0
+margin_bottom = 836.0
+rect_min_size = Vector2( 0, 250 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 97.0
+margin_right = 956.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 1 )
+text = "Spectrum Analyzer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 964.0
+margin_right = 1920.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VU1" type="TextureProgress" parent="HBoxContainer"]
+margin_right = 52.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU2" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 60.0
+margin_right = 112.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU3" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 120.0
+margin_right = 172.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU4" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 180.0
+margin_right = 232.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU5" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 240.0
+margin_right = 292.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU6" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 300.0
+margin_right = 352.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU7" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 360.0
+margin_right = 412.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU8" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 420.0
+margin_right = 472.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU9" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 480.0
+margin_right = 532.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU10" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 540.0
+margin_right = 592.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU11" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 600.0
+margin_right = 652.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU12" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 660.0
+margin_right = 712.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU13" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 720.0
+margin_right = 772.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU14" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 780.0
+margin_right = 832.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU15" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 840.0
+margin_right = 892.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="VU16" type="TextureProgress" parent="HBoxContainer"]
+margin_left = 900.0
+margin_right = 952.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.001
+value = 0.5
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+nine_patch_stretch = true

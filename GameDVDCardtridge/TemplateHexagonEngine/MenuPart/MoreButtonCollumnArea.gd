@@ -5,6 +5,7 @@ extends CenterContainer
 # var b = "text"
 export(String) var callTheFunction
 export(String) var GoToMenuSceneOf
+export(String) var ButtonLabelName = "Label"
 signal Button_Pressingated()
 signal Button_Hoverated()
 signal Button_Dehoverated()
@@ -29,6 +30,8 @@ func QuitButton():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#$Button.text = ButtonLabelName
+	$Button/VBoxContainer/Label.text = ButtonLabelName
 	if _on_MoreButtonCollumnArea_focus_entered():
 
 		pass

@@ -1,11 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/CustomButtonGroup1.tres" type="ButtonGroup" id=4]
 
 [node name="InheritableSettingCheckBox" type="HBoxContainer"]
 margin_top = 189.0
 margin_right = 1924.0
 margin_bottom = 260.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ButtonGrouper = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 margin_top = 8.0
@@ -28,3 +35,4 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
 text = "Status"
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_CheckBox_toggled"]

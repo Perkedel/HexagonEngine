@@ -13,6 +13,9 @@ func _ready():
 	
 	pass # Replace with function body.
 
+func SetExitLabel(name:String):
+	$MoreMenu/BoxMenuContainings/ExitButton.ButtonLabelName = name
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

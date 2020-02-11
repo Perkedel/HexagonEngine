@@ -4,6 +4,7 @@
 
 [node name="SettingButton" instance=ExtResource( 1 )]
 GoToMenuSceneOf = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingMenu.tscn"
+ButtonLabelName = "Setting"
 
 [node name="Button" parent="." index="0"]
 hint_tooltip = "Adjust your experience configurations"

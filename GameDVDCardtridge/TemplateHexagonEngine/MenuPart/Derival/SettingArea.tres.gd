@@ -17,8 +17,14 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func StopTesting():
+	$HBoxContainer/ScrollContainer/SeriouslyContainer/AudioCategoryArea.StopTesting()
+	$HBoxContainer/ScrollContainer/SeriouslyContainer/InheritableCategoryArea/TestoidMusicPlayer.DeToggle()
+	pass
+
 func FocusFirstCategoryButtonNow():
-	$HBoxContainer/CategoryScrolling/CategorySelection/InheritableCategoryButton.grab_focus()
+	#$HBoxContainer/CategoryScrolling/CategorySelection/InheritableCategoryButton.grab_focus()
+	$HBoxContainer/CategoryScrolling/CategorySelection/AudioSection.grab_focus()
 	pass
 
 func _on_CategoryScrolling_gui_input(event):
@@ -41,7 +47,46 @@ func _on_CategoryScrolling_gui_input(event):
 	
 	pass # Replace with function body.
 
+func HideAllSettingContent():
+	var SeriouslyCount = $HBoxContainer/ScrollContainer/SeriouslyContainer.get_child_count()
+	for i in range(1, SeriouslyCount+1):
+		var TargetSectionButton = $HBoxContainer/ScrollContainer/SeriouslyContainer.get_child(i).get_tree()
+		TargetSectionButton.hide()
+		TargetSectionButton.UnPressSectionButton()
+		pass
+	pass
 
 func _on_ScrollContainer_gui_input(event):
+	# Wrong Signal
 	pass # Replace with function body.
 
+func _on_InheritableCategoryButton_LoadThisCategoryPlease(CategoryScenePath):
+	#HideAllSettingContent()
+	#$HBoxContainer/ScrollContainer/SeriouslyContainer/InheritableCategoryArea.show()
+	pass # Replace with function body.
+
+
+func _on_AudioSection_LoadThisCategoryPlease(CategoryScenePath):
+	#HideAllSettingContent()
+	#$HBoxContainer/ScrollContainer/SeriouslyContainer/AudioCategoryArea.show()
+	pass # Replace with function body.
+
+
+func _on_InheritableCategoryButton_StatusPressed(value):
+	if value:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/InheritableCategoryArea.show()
+		pass
+	else:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/InheritableCategoryArea.hide()
+		pass
+	pass # Replace with function body.
+
+
+func _on_AudioSection_StatusPressed(value):
+	if value:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/AudioCategoryArea.show()
+		pass
+	else:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/AudioCategoryArea.hide()
+		pass
+	pass # Replace with function body.

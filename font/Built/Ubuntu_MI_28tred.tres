@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 resource_name = "Ubuntu Italic 48"
-size = 48
+size = 28
 outline_size = 1
 outline_color = Color( 0, 0.113725, 0, 1 )
 font_data = ExtResource( 1 )

@@ -26,6 +26,10 @@ func _ready():
 	CloseTheDrawer()
 	pass # Replace with function body.
 
+func SetExitButtonLabel(name:String):
+	$MainMenu.SetExitButtonLabel(name)
+	pass
+
 func ShowNextMenu():
 	#$NextMenu.SelectYourMenu = NextMenuScene
 	$NextMenu.show()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.gd" type="Script" id=2]
+[ext_resource path="res://Audio/425728__moogy73__click01.wav" type="AudioStream" id=3]
 
 [node name="InheritableSettingVolume" type="HBoxContainer"]
 margin_right = 1924.0
@@ -11,6 +12,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+InitiativelyControlVolumeBus = true
+PlayTestoidFile = true
+TestoidAudio = ExtResource( 3 )
 
 [node name="LabelContainer" type="HBoxContainer" parent="."]
 margin_right = 958.0
@@ -54,6 +58,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 7
 min_value = -80.0
 max_value = 24.0
+
+[node name="Testoider" type="AudioStreamPlayer" parent="."]
+bus = "Dummy"
 [connection signal="changed" from="HBoxContainer/HSlider" to="." method="_on_HSlider_changed"]
 [connection signal="gui_input" from="HBoxContainer/HSlider" to="." method="_on_HSlider_gui_input"]
 [connection signal="value_changed" from="HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed" binds= [ 0.0 ]]

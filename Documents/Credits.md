@@ -45,3 +45,17 @@ Used Assets and Tools!
 |GIMP team | GIMP | Raster image editing software | https://www.gimp.org/ | <100% | GNU GPL v2+ | `-` |
 |badges | Badge on GitHub Custom | Make Own Badge for GitHub | https://www.shields.io/ | 0% | CC0-1.0 | `-` |
 |dwyl | Hits | Track Hit view count of your GitHub Git | https://hits.dwyl.com/ | <100% | ??? | `-` |
+
+## Unimplemented Credit, QUick And RAW reference
+- https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
+- https://www.youtube.com/watch?v=o77wFWau9Wc
+- https://www.youtube.com/watch?v=AkfTW2Tq3MM
+- https://www.youtube.com/watch?v=q4MdQ5c-NIY
+- https://freesound.org/people/qubodup/sounds/60007/
+- https://freesound.org/people/moogy73/sounds/425728/
+- https://www.youtube.com/audiolibrary
+- Search "Floaters" artist is "Jimmy Fontanez"
+- https://godotengine.org/qa/24773/how-to-load-and-change-scenes
+- https://godotengine.org/qa/8025/how-to-add-a-child-in-a-specific-position 
+- https://godotengine.org/qa/24773/how-to-load-and-change-scenes
+- 

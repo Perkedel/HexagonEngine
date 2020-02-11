@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckButton2.gd" type="Script" id=4]
 
-[node name="InheritableSettingCheckButton" index="0" instance=ExtResource( 1 )]
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 3 )
+
+[node name="InheritableSettingCheckButton" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Label" parent="." index="0"]
+custom_fonts/font = SubResource( 1 )
 
 [node name="CheckButton" parent="HBoxContainer" index="0"]
 margin_right = 475.0
+custom_fonts/font = SubResource( 1 )
 
 [node name="CheckButton2" type="CheckButton" parent="HBoxContainer" index="1"]
 margin_left = 483.0
@@ -16,3 +31,4 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Button"
+[connection signal="toggled" from="HBoxContainer/CheckButton2" to="." method="_on_CheckButton2_toggled"]

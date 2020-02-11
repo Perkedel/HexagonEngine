@@ -1,6 +1,8 @@
 extends RigidBody
 export (float) var x_move
 export (float) var y_move
+export (float) var x_InputMap
+export (float) var y_InputMap
 export (float) var deadzone_circle = .5
 onready var x_deadzone = 0
 onready var y_deadzone = 0
@@ -23,10 +25,13 @@ func _ready():
 
 onready var Direction = Vector3()
 onready var DirectionRaw = Vector3()
+onready var DirectionInputMap = Vector3()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	x_move = Input.get_joy_axis(0, JOY_ANALOG_LX)
 	y_move = Input.get_joy_axis(0, JOY_ANALOG_LY)
+	x_InputMap = Input.get_action_strength("AnalogKiri_x") - Input.get_action_strength("AnalogKiri_x-")
+	y_InputMap = Input.get_action_strength("AnalogKiri_y-") - Input.get_action_strength("AnalogKiri_y")
 	x_deadzone = 0
 	y_deadzone = 0
 	
@@ -46,8 +51,10 @@ func _process(delta):
 	
 	Direction = Vector3(x_deadzone, 0, y_deadzone)
 	DirectionRaw = Vector3(x_move, 0, y_move)
-	DirectionRaw = DirectionRaw.normalized()
-	Direction = Direction.normalized()
+	DirectionInputMap = Vector3(x_InputMap,0, y_InputMap)
+	#DirectionRaw = DirectionRaw.normalized()
+	#Direction = Direction.normalized()
+	#DirectionInputMap = DirectionInputMap.normalized()
 	
-	translate(Direction * delta)
+	translate(DirectionInputMap * delta)
 	pass

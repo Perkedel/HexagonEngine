@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2048"
+   height="2048"
+   viewBox="0 0 2048 2048"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="FarmerGirl.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.64"
+     inkscape:cx="1335.7699"
+     inkscape:cy="1117.5021"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3713"
+       empspacing="4" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid3715"
+       color="#ff3fff"
+       opacity="0.1254902"
+       empcolor="#ff3fff"
+       empopacity="0.25098039"
+       empspacing="64" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Prosotipe"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,244.86668)"
+     style="display:inline">
+    <path
+       style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       d="m 768,1363.1333 v 184 64 h 128 l -32,-64 h -32 v -184 z"
+       id="rect4554"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       d="m 1023.8455,1362.6333 v 184 64 h 128 l -32,-64 h -32 v -184 z"
+       id="path4557"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4614"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightCalf.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4594">
+        <rect
+           y="1227.6913"
+           x="448.05798"
+           height="319.38406"
+           width="63.884056"
+           id="rect4528"
+           style="fill:#00dedb;fill-opacity:1;stroke:#000000;stroke-width:1.11594522;stroke-opacity:1" />
+        <circle
+           r="32"
+           cy="1227.1333"
+           cx="480"
+           id="circle4584"
+           style="fill:#00dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+      <g
+         id="g4602">
+        <rect
+           style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-width:0.97747058;stroke-opacity:1"
+           id="rect4565"
+           width="64.02253"
+           height="191.02251"
+           x="447.98874"
+           y="1355.6221" />
+        <circle
+           style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="path4569"
+           cx="480"
+           cy="1547.1333"
+           r="32" />
+      </g>
+    </g>
+    <g
+       id="g4622"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftCalf.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4598">
+        <rect
+           style="fill:#00de58;fill-opacity:1;stroke:#000000;stroke-width:1.11594522;stroke-opacity:1"
+           id="rect4532"
+           width="63.884056"
+           height="319.38406"
+           x="575.55798"
+           y="1227.6913" />
+        <circle
+           style="fill:#00de58;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="circle4588"
+           cx="608"
+           cy="1226.8833"
+           r="32" />
+      </g>
+      <g
+         id="g4606">
+        <rect
+           y="1355.6221"
+           x="575.98871"
+           height="191.02251"
+           width="64.02253"
+           id="rect4567"
+           style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-width:0.97747058;stroke-opacity:1" />
+        <circle
+           r="32"
+           cy="1547.1333"
+           cx="608"
+           id="circle4571"
+           style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="g4774"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\torso.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4750">
+        <path
+           style="fill:#e3a6db;fill-opacity:1;stroke:none;stroke-opacity:1"
+           d="M 256 960 L 256 1087.4512 A 64.026443 64.381798 0 0 0 255.97266 1088 A 64.026443 64.381798 0 0 0 320 1152.3809 A 64.026443 64.381798 0 0 0 384.02734 1088 A 64.026443 64.381798 0 0 0 384 1087.2324 L 384 960 L 256 960 z "
+           transform="translate(0,-244.86668)"
+           id="path4545" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 288,811.13332 32,32 -32,32 32,-32 32,32 -32,-32 32,-32 -32,32 z"
+           id="path4552"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g4762">
+        <g
+           id="g4746">
+          <path
+             id="path4536"
+             transform="translate(0,-244.86668)"
+             d="M 320 512 A 32 32 0 0 0 288 544 L 288 620 L 352 620 L 352 544 A 32 32 0 0 0 320 512 z "
+             style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4550"
+             d="m 304,283.13332 16,16 -16,16 16,-16 16,16 -16,-16 16,-16 -16,16 z"
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+        <g
+           id="g4754">
+          <rect
+             y="331.1069"
+             x="255.97356"
+             height="447.64462"
+             width="128.05287"
+             id="rect4522"
+             style="fill:#255cff;fill-opacity:1;stroke:#000000;stroke-width:0.76361734;stroke-opacity:1" />
+          <circle
+             r="40"
+             cy="395.13333"
+             cx="320"
+             id="path4640"
+             style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g4718"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightLowerArm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4698">
+        <rect
+           style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:0.89442724;stroke-opacity:1"
+           id="rect4656"
+           width="48"
+           height="256.00003"
+           x="848"
+           y="651.1333" />
+        <circle
+           r="24"
+           cy="651.1333"
+           cx="872"
+           id="circle4664"
+           style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+      <g
+         id="g4706">
+        <rect
+           style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           id="rect4660"
+           width="48"
+           height="128"
+           x="848"
+           y="779.1333" />
+        <circle
+           r="24"
+           cy="907.1333"
+           cx="872"
+           id="circle4668"
+           style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="g4734"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftHand.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 976,1035.1333 v 48 l 24,16 24,-16 v -36 l 8,20 8,-4 -16,-28 z"
+         id="path4674"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccc" />
+      <circle
+         style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="circle4678"
+         cx="1000"
+         cy="1035.1333"
+         r="24" />
+    </g>
+    <g
+       id="g4694"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftThigh.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4630">
+        <path
+           style="fill:#00de58;fill-opacity:1;stroke:#000000;stroke-width:1.11594522;stroke-opacity:1"
+           d="M 624,779.13332 H 736 L 703.94204,1099.0753 H 640.05798 Z"
+           id="rect4530"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <circle
+           r="32"
+           cy="1098.8833"
+           cx="672"
+           id="circle4586"
+           style="fill:#00de58;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+      <circle
+         style="fill:#00de58;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="circle4682"
+         cx="672"
+         cy="779.1333"
+         r="64" />
+    </g>
+    <g
+       id="g4742"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\head.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4543">
+        <circle
+           style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:1.06224072;stroke-opacity:1"
+           id="path4524"
+           cx="576"
+           cy="75.133324"
+           r="127.46888" />
+        <path
+           style="fill:#fbde58;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+           d="m 576,-116.86668 -256,192 h 512 z"
+           id="path4534"
+           inkscape:connector-curvature="0" />
+      </g>
+      <circle
+         r="32"
+         cy="203.13332"
+         cx="576"
+         id="path4736"
+         style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4794"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightUpperArm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4786">
+        <g
+           id="g4780">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect4642"
+             d="m 448,395.13332 64,10e-6 v 256 h -48 z"
+             style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:1.22474492;stroke-opacity:1" />
+          <circle
+             style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1"
+             id="circle4644"
+             cx="480"
+             cy="395.13333"
+             r="40" />
+        </g>
+        <circle
+           style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="path4652"
+           cx="488"
+           cy="651.1333"
+           r="24" />
+      </g>
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\Mino-chan_tatooName.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4776"
+         d="m 472,459.13332 24,16 -24,8 24,8 -24,16"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4828"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightHand.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4730">
+        <path
+           style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 848,1035.1333 v 48 l 24,16 24,-16 v -36 l 8,20 8,-4 -16,-28 z"
+           id="path4672"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccc" />
+        <circle
+           style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="circle4676"
+           cx="872"
+           cy="1035.1333"
+           r="24" />
+      </g>
+      <g
+         id="g4818">
+        <circle
+           style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.50000483;stroke-opacity:1"
+           id="path4806"
+           cx="856"
+           cy="1063.1333"
+           r="2.0000193" />
+        <circle
+           r="2.0000193"
+           cy="1063.1333"
+           cx="868"
+           id="circle4808"
+           style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.50000483;stroke-opacity:1" />
+        <circle
+           style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.50000483;stroke-opacity:1"
+           id="circle4810"
+           cx="880"
+           cy="1063.1333"
+           r="2.0000193" />
+        <circle
+           r="2.0000193"
+           cy="1063.1333"
+           cx="892"
+           id="circle4812"
+           style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.50000483;stroke-opacity:1" />
+      </g>
+    </g>
+    <path
+       style="fill:#ffff00;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 848,779.13332 h 48 l -24,32 z"
+       id="path4830"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4854"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftUpperArm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftUpperArm.png"
+         id="g4804">
+        <g
+           id="g4798">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect4646"
+             d="m 704,395.13332 64,0.61238 v 256 h -48 z"
+             style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:1.22474492;stroke-opacity:1" />
+          <circle
+             r="40"
+             cy="395.13333"
+             cx="736"
+             id="circle4648"
+             style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+        <circle
+           r="24"
+           cy="651.1333"
+           cx="744"
+           id="circle4654"
+           style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      </g>
+      <g
+         id="g4844">
+        <path
+           style="fill:#2038db;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+           d="m 756,651.13332 c 0,0 0,-28 12,-28 v 28 z"
+           id="path4836"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#2038db;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+           d="m 768,651.13332 c 0,0 0,16 -12,20 v -20 z"
+           id="path4840"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g4872"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftLowerArm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4726">
+        <g
+           id="g4702">
+          <rect
+             style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:0.89442724;stroke-opacity:1"
+             id="rect4658"
+             width="48"
+             height="256.00003"
+             x="976"
+             y="651.1333" />
+          <circle
+             r="24"
+             cy="651.1333"
+             cx="1000"
+             id="circle4666"
+             style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+        <g
+           id="g4710">
+          <rect
+             style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             id="rect4662"
+             width="48"
+             height="128"
+             x="976"
+             y="779.1333" />
+          <circle
+             r="24"
+             cy="907.1333"
+             cx="1000"
+             id="circle4670"
+             style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+      </g>
+      <g
+         id="g4860">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4838"
+           d="m 1012,651.13332 c 0,0 0,28 12,28 v -28 z"
+           style="fill:#2038db;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:#2038db;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+           d="m 1024,651.13332 c 0,0 0,-16 -12,-20 v 20 z"
+           id="path4856"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g936"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightThigh.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4688">
+        <g
+           id="g4626">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect4526"
+             d="M 432,779.13332 H 544 L 511.94204,1099.0753 H 448.05798 Z"
+             style="fill:#00dedb;fill-opacity:1;stroke:#000000;stroke-width:1.11594522;stroke-opacity:1" />
+          <circle
+             r="32"
+             cy="1099.3833"
+             cx="480"
+             id="path4582"
+             style="fill:#00dedb;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+        <circle
+           style="fill:#00dedb;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="path4680"
+           cx="480"
+           cy="779.1333"
+           r="64" />
+      </g>
+      <g
+         inkscape:export-ydpi="747.08173"
+         inkscape:export-xdpi="747.08173"
+         id="g877"
+         transform="matrix(0,0.1245136,-0.1245136,0,459.3463,837.1878)">
+        <circle
+           style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-opacity:1"
+           id="path871"
+           cx="160"
+           cy="-69.5"
+           r="128" />
+        <g
+           id="g1492-8-9-4"
+           transform="translate(-128,-448)"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
+          <path
+             id="path1451-5-4-4"
+             transform="translate(0,106.5)"
+             d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
+             style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+             inkscape:connector-curvature="0" />
+          <path
+             id="rect1461-3-1-6"
+             transform="translate(0,106.5)"
+             d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+             style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g958"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\RightFoot.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4888">
+        <g
+           id="g4634">
+          <path
+             sodipodi:nodetypes="ccccc"
+             inkscape:connector-curvature="0"
+             id="rect4573"
+             d="m 448,1675.1333 h 96 l 32,64 H 448 Z"
+             style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <circle
+             style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1"
+             id="circle4578"
+             cx="480"
+             cy="1675.1333"
+             r="32" />
+        </g>
+        <path
+           style="fill:#800080;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 448,1739.1333 v -8 h 124 l 4,8 z"
+           id="path4874"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path940"
+         d="m 544,1675.1333 c 0,0 -32,0 -32,56 l 60,0 z"
+         style="fill:#ffff00;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+    </g>
+    <g
+       id="g966"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\LeftFoot.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g4882">
+        <g
+           id="g4638">
+          <path
+             style="fill:#005e3e;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             d="m 640,1675.1333 h 96 l 32,64 H 640 Z"
+             id="path4576"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccc" />
+          <circle
+             r="32"
+             cy="1675.1333"
+             cx="672"
+             id="circle4580"
+             style="fill:#005e3e;fill-opacity:1;stroke:none;stroke-opacity:1" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           id="path4876"
+           d="m 640,1739.1333 v -8 h 124 l 4,8 z"
+           style="fill:#800080;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path942"
+         d="m 736,1675.1333 v 32 l 28,24 z"
+         style="fill:#ffff00;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+    </g>
+    <g
+       id="g939"
+       inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\Qmoveph_for2DAnimation\Assets\Sprites\FarmerGirlProsotipe\Rake.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         inkscape:connector-curvature="0"
+         id="path933"
+         d="m 1280,331.13332 v 64 h 320 v -64 h -64 v 32 h -64 v -32 h -64 v 32 h -64 v -32 z"
+         style="fill:#588d00;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+      <rect
+         y="395.13333"
+         x="1424"
+         height="1088"
+         width="32"
+         id="rect935"
+         style="fill:#917c6f;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidMusicPlayer.gd" type="Script" id=1]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Audio/Floaters.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sprites/PlayIcon.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/StopIcon.png" type="Texture" id=5]
+
+[node name="TestoidMusicPlayer" type="HBoxContainer"]
+margin_top = 844.0
+margin_right = 1920.0
+margin_bottom = 1067.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+SongFile = ExtResource( 3 )
+PlayIcon = ExtResource( 4 )
+StopIcon = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 84.0
+margin_right = 956.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "Music Test"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Music"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 964.0
+margin_right = 1920.0
+margin_bottom = 223.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayIcon" type="TextureRect" parent="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 100, 0 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="PlayButton" type="Button" parent="HBoxContainer"]
+margin_left = 108.0
+margin_right = 956.0
+margin_bottom = 223.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+toggle_mode = true
+text = "PRESS TO PLAY"
+[connection signal="finished" from="MusicPlayer" to="." method="_on_MusicPlayer_finished"]
+[connection signal="toggled" from="HBoxContainer/PlayButton" to="." method="_on_Button_toggled"]

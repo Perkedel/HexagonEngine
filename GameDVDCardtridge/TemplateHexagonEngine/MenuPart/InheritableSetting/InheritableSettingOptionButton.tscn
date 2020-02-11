@@ -1,12 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingOptionButton.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+width = 32
+height = 32
+noise = SubResource( 1 )
 
 [node name="InheritableSettingOptionButton" type="HBoxContainer"]
 margin_top = 126.0
 margin_right = 1924.0
 margin_bottom = 181.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_right = 958.0
@@ -29,5 +43,8 @@ margin_bottom = 55.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Item 0"
-items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null ]
+icon = SubResource( 2 )
+items = [ "Item 0", SubResource( 2 ), false, 0, null, "Item 1", ExtResource( 5 ), false, 1, null, "Item 2", ExtResource( 4 ), false, 2, null ]
 selected = 0
+[connection signal="item_focused" from="HBoxContainer/OptionButton" to="." method="_on_OptionButton_item_focused"]
+[connection signal="item_selected" from="HBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]

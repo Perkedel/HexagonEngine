@@ -17,6 +17,7 @@ resource_name = "Category Select Group"
 [node name="AudioSection" instance=ExtResource( 1 )]
 custom_fonts/font = SubResource( 1 )
 group = SubResource( 2 )
+CategoryAreaYouWishToLoad = "AudioCategoryArea"
 
 [node name="Label" parent="HBoxContainer" index="1"]
 custom_fonts/font = SubResource( 1 )

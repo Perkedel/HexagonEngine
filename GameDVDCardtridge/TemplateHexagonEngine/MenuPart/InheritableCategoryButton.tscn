@@ -15,6 +15,10 @@ toggle_mode = true
 group = ExtResource( 2 )
 align = 0
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+CategoryAreaYouWishToLoad = "InheritableCategoryArea"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -39,3 +43,4 @@ custom_fonts/font = ExtResource( 1 )
 text = "CategoryButton"
 align = 1
 valign = 1
+[connection signal="toggled" from="." to="." method="_on_InheritableCategoryButton_toggled"]

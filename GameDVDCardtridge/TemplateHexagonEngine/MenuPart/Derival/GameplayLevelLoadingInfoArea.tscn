@@ -6,6 +6,7 @@
 
 [node name="GameplayLevelLoadingInfoArea" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+ThumbnailImage = ExtResource( 3 )
 
 [node name="LevelPreviewNail" type="TextureRect" parent="." index="0"]
 anchor_right = 1.0

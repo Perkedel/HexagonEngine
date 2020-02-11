@@ -4,19 +4,36 @@ extends HBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+export (float, -80, 24) var VolumeLevel = 0
+export (String) var UnitName = "dB"
+export (float) var VolumeMin = -80
+export (float) var VolumeMax = 24
 export (String) var VariableName = "Volume"
+export (bool) var InitiativelyControlVolumeBus = false
+export (bool) var EmitVolumeSignal = true
+export (bool) var EmitSliderReleased = true
+export (bool) var PlayTestoidFile = false
+export (String) var VolumeBus = "Dummy"
+export (AudioStream) var TestoidAudio
+export (float, 0.01, 32) var TestoidPitch = 1
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$HBoxContainer/HSlider.min_value = VolumeMin
+	$HBoxContainer/HSlider.max_value = VolumeMax
+	$Testoider.stream = TestoidAudio
+	$Testoider.bus = VolumeBus
+	$Testoider.pitch_scale = TestoidPitch
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # warning-ignore:unused_argument
 func _process(delta):
+	
 	$LabelContainer/Label.text = VariableName
-	$LabelContainer/LabelValue.text = String($HBoxContainer/HSlider.value) + " dB"
+	$LabelContainer/LabelValue.text = String($HBoxContainer/HSlider.value) + " " + String(UnitName)
 	pass
 
 func SetVolume(value : float) -> void:
@@ -29,8 +46,15 @@ func SetVolume(value : float) -> void:
 # signal ValueOfIt(value: float)
 signal ValueOfIt(value)
 func _on_HSlider_value_changed(value, valou):
-	emit_signal("ValueOfIt", value)
-	print("Slider: " + String(value))
+	VolumeLevel = value
+	if EmitVolumeSignal:
+		emit_signal("ValueOfIt", value)
+		pass
+	
+	if InitiativelyControlVolumeBus:
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(VolumeBus), value)
+		pass
+	print("Slider: " + String(value) + ", Valou: " + String(valou))
 	pass # Replace with function body.
 
 signal HasChanged
@@ -41,6 +65,12 @@ func _on_HSlider_changed():
 signal SliderReleased
 func _on_HSlider_gui_input(event : InputEvent):
 	if event.is_action_released("ui_mouse_left"):
-		emit_signal("SliderReleased")
+		if EmitSliderReleased:
+			emit_signal("SliderReleased")
+			pass
+		
+		if PlayTestoidFile:
+			$Testoider.play()
+			pass
 		pass
 	pass # Replace with function body.

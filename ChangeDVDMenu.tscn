@@ -19,6 +19,9 @@ margin_bottom = 780.0
 popup_exclusive = true
 window_title = "Shutdown Hexagon Engine?"
 dialog_text = "Are you sure to shutdown?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="ItemClickEnter" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_ItemClickEnter"]
 [connection signal="PressShutDown" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_PressShutDown"]
 [connection signal="confirmed" from="JustWorkingAreYouSure" to="." method="_on_JustWorkingAreYouSure_confirmed"]

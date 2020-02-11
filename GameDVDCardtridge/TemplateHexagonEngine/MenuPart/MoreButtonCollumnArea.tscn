@@ -60,6 +60,9 @@ margin_bottom = 75.0
 rect_min_size = Vector2( 300, 200 )
 size_flags_horizontal = 3
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 callTheFunction = "GoToNextMenuOf"
 
 [node name="Button" type="Button" parent="."]

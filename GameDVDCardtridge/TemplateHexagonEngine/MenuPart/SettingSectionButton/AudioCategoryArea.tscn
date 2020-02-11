@@ -1,25 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableCategoryArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/AudioCategoryArea.gd" type="Script" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Audio/425728__moogy73__click01.wav" type="AudioStream" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidProgressBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidMusicPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidSpectrumAnalyzer.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ButtonGroup" id=1]
 
 [node name="AudioCategoryArea" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="MasterVolume" parent="." index="0" instance=ExtResource( 3 )]
+margin_right = 1920.0
 VariableName = "Master"
+VolumeBus = "Master"
 
 [node name="Music" parent="." index="1" instance=ExtResource( 3 )]
 margin_top = 63.0
+margin_right = 1920.0
 margin_bottom = 118.0
 VariableName = "Music"
+VolumeBus = "Music"
+TestoidPitch = 0.5
 
 [node name="SoundEffect" parent="." index="2" instance=ExtResource( 3 )]
 margin_top = 126.0
+margin_right = 1920.0
 margin_bottom = 181.0
 VariableName = "Sound Effect"
+VolumeBus = "SoundEffect"
+TestoidPitch = 1.5
 
 [node name="InheritableSettingVolume" parent="." index="3"]
 visible = false
@@ -38,11 +51,13 @@ margin_bottom = 118.0
 visible = false
 margin_top = 126.0
 margin_bottom = 197.0
+ButtonGrouper = SubResource( 1 )
 
 [node name="InheritableSettingCheckBox2" parent="." index="7"]
 visible = false
 margin_top = 205.0
 margin_bottom = 276.0
+script = null
 
 [node name="InheritableSettingCheckButton" parent="." index="8"]
 visible = false
@@ -53,16 +68,49 @@ margin_bottom = 364.0
 visible = false
 margin_top = 372.0
 margin_bottom = 452.0
+script = null
 
-[node name="Testoid" type="AudioStreamPlayer" parent="." index="10"]
+[node name="TestoidProgressBar" parent="." index="10"]
+visible = false
+margin_top = 189.0
+margin_bottom = 244.0
+
+[node name="TestoidSpectrumAnalyzer" parent="." index="11"]
+visible = false
+margin_top = 189.0
+margin_bottom = 439.0
+
+[node name="TestoidMusicPlayer" parent="." index="12"]
+visible = false
+margin_top = 510.0
+margin_bottom = 577.0
+
+[node name="AudioTestMeter" parent="." index="13" instance=ExtResource( 5 )]
+margin_top = 189.0
+margin_right = 1920.0
+margin_bottom = 244.0
+VariableName = "VU meter"
+maximum = 1.0
+stepp = 0.001
+
+[node name="AudioSpectrum" parent="." index="14" instance=ExtResource( 7 )]
+margin_top = 252.0
+margin_bottom = 502.0
+
+[node name="AudioTestPlayer" parent="." index="15" instance=ExtResource( 6 )]
+margin_top = 510.0
+margin_bottom = 577.0
+VariableName = "J. Fontanez - Floaters"
+
+[node name="Testoid" type="AudioStreamPlayer" parent="." index="16"]
 stream = ExtResource( 4 )
 
-[node name="TestoidMusic" type="AudioStreamPlayer" parent="." index="11"]
+[node name="TestoidMusic" type="AudioStreamPlayer" parent="." index="17"]
 stream = ExtResource( 4 )
 pitch_scale = 0.5
 bus = "Music"
 
-[node name="TestoidSFX" type="AudioStreamPlayer" parent="." index="12"]
+[node name="TestoidSFX" type="AudioStreamPlayer" parent="." index="18"]
 stream = ExtResource( 4 )
 pitch_scale = 1.5
 bus = "SoundEffect"
