@@ -1,5 +1,7 @@
 extends Node
 
+export (bool) var isPlayingGameNow
+export (bool) var isGamePaused
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

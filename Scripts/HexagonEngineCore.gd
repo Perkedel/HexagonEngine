@@ -63,3 +63,7 @@ func _on_DVDCartridgeSlot_DVDTryLoad():
 	print("DVD has tried to load!")
 	$MetaMenu/ChangeDVDMenu.hide()
 	pass # Replace with function body.
+
+# https://github.com/electron/rcedit/releases
+# To edit .exe resources. insert it in the godot editor setting!
+# Editor, Setting, Export, Windows, rcedit, refer that rcedit exe file

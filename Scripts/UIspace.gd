@@ -26,6 +26,17 @@ func _ready():
 	CloseTheDrawer()
 	pass # Replace with function body.
 
+signal IPressedEscapeOnPlayingGame()
+func PressEscapeButton():
+	if isPlayingGameNow:
+		emit_signal("IPressedEscapeOnPlayingGame")
+		
+		pass
+	else:
+		SpecialExitButtonHeurestic()
+		pass
+	pass
+
 func SetExitButtonLabel(name:String):
 	$MainMenu.SetExitButtonLabel(name)
 	pass
@@ -54,6 +65,7 @@ func BackToMainMenu():
 	$MainMenu.show()
 	$MainMenu.ArriveAtMainMenu()
 	isMainMenuing = true
+	emit_signal("PlayButtonLayerSpec",10)
 	pass
 
 func SetReadyToPlay(isItReady):
@@ -70,6 +82,7 @@ func ShowGameplayUI():
 	$GameplayUI.show()
 	$NextMenu.hide()
 	$MainMenu.hide()
+	emit_signal("PlayButtonLayerSpec", 1)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -129,7 +142,10 @@ func _process(delta):
 		isMainMenuing = false
 		pass
 
+signal PlayButtonLayerSpec(selecte)
+signal LitteralPlayButton
 func SpecialPlayButtonHeurestic():
+	emit_signal("LitteralPlayButton")
 	print("The Play Button")
 	if isPlayingGameNow:
 		print("Unpause Game")
@@ -138,6 +154,14 @@ func SpecialPlayButtonHeurestic():
 		print("Select your Level")
 		WhereMenuIsNow = SelectMenuList.LevelSelect
 		pass
+	pass
+
+func PauseMenu():
+	WhereMenuIsNow = SelectMenuList.MainMenu
+	pass
+
+func ResumeMenu():
+	WhereMenuIsNow = SelectMenuList.Gameplay
 	pass
 
 func SpecialExitButtonHeurestic():
@@ -176,6 +200,10 @@ func _input(event):
 		pass
 	if event.is_action_pressed("ui_down"):
 		OpenTheDrawer()
+		pass
+	
+	if event.is_action_pressed("DaftarPauso"):
+		#emit_signal("PressPauseButton")
 		pass
 	pass
 
@@ -281,7 +309,6 @@ func _on_BackButton_pressed(extra_arg_0):
 	BackToMainMenu()
 	pass # Replace with function body.
 
-
 func _on_MainMenu_PressChangeDVD():
 	AttemptTheChangeDVD()
 	pass # Replace with function body.
@@ -289,6 +316,7 @@ func _on_MainMenu_PressChangeDVD():
 
 func _on_MainMenu_PressExit():
 	SpecialExitButtonHeurestic()
+	print("Main menu Press Exit")
 	pass # Replace with function body.
 
 
@@ -353,8 +381,11 @@ func _on_NextMenu_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThu
 	pass # Replace with function body.
 
 
+signal PressPauseButton
 func _on_GameplayUI_PressPauseButton():
-	WhereMenuIsNow = SelectMenuList.MainMenu
+	#PauseMenu()
+	emit_signal("PressPauseButton")
+	print("Press Pause Now")
 	pass # Replace with function body.
 
 

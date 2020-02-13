@@ -17,9 +17,9 @@ func SetExitButtonLabel(name:String):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if visible:
+	if visible: 
 		if Input.is_key_pressed(KEY_BACK) or Input.is_action_just_pressed("ui_cancel"):
-			emit_signal("PressExit")
+			#emit_signal("PressExit") # Exit Pressing
 			pass
 		pass
 	pass

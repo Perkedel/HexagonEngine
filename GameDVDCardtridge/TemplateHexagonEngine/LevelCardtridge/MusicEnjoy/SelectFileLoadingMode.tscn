@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.gd" type="Script" id=3]
+
+[node name="SelectFileLoadingMode" type="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -520.5
+margin_top = -306.0
+margin_right = 520.5
+margin_bottom = 306.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0, 0.776471, 1, 0.356863 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+margin_right = 1041.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 0, 300 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 2 )
+text = "Please Select File Loading Access Mode"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ButtonsConfirm" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 462.0
+margin_right = 1041.0
+margin_bottom = 612.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Resourcer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
+self_modulate = Color( 0.0784314, 1, 0, 1 )
+margin_right = 254.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Resource (res://)"
+clip_text = true
+
+[node name="Userer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
+self_modulate = Color( 0, 0.984314, 1, 1 )
+margin_left = 262.0
+margin_right = 516.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "User (user://)"
+clip_text = true
+
+[node name="FileSystemer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
+self_modulate = Color( 1, 0.713726, 0, 1 )
+margin_left = 524.0
+margin_right = 778.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "File System (/)"
+clip_text = true
+
+[node name="Canceler" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
+self_modulate = Color( 0.992157, 0.121569, 0.121569, 1 )
+margin_left = 786.0
+margin_right = 1041.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
+text = "Cancel (X)"
+clip_text = true
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonsConfirm/Resourcer" to="." method="_on_Resourcer_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonsConfirm/Userer" to="." method="_on_Userer_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonsConfirm/FileSystemer" to="." method="_on_FileSystemer_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonsConfirm/Canceler" to="." method="_on_Canceler_pressed"]

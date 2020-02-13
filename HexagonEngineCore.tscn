@@ -16,6 +16,7 @@ script = ExtResource( 3 )
 [node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 2 )]
 
 [node name="MetaMenu" type="CanvasLayer" parent="."]
+layer = 11
 
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]
 visible = false
@@ -30,6 +31,7 @@ mix_target = 1
 [node name="Timer" type="Timer" parent="SystemGut"]
 
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
+pause_mode = 2
 use_threads = true
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]

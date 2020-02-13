@@ -4,6 +4,7 @@
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
 
 [node name="2Dspace" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="PersonCamera2D" type="Camera2D" parent="."]
@@ -19,5 +20,6 @@ texture = ExtResource( 2 )
 [node name="Position2D" type="Position2D" parent="Dummy2DLoad"]
 
 [node name="Level2DCartridgeSlot" type="Node2D" parent="."]
+pause_mode = 1
 
 [node name="Empty" type="Node2D" parent="Level2DCartridgeSlot"]

@@ -14,7 +14,8 @@ func _ready():
 #	pass
 
 func ConnectCartridge():
-	print("Connect Cartride")
+	# Connect important signals of basically every DVD Cartridge
+	print("Connect Cartridge") #cartride connecc say
 	get_child(0).connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
 	get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
 	pass

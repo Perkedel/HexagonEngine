@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TheFatRat-Fly+AwayOriginal-float.wav-c8ba0cba7db0a09149f6fa52d699ed12.sample"
+
+[deps]
+
+source_file="res://Audio/TheFatRat-Fly+AwayOriginal-float.wav"
+dest_files=[ "res://.import/TheFatRat-Fly+AwayOriginal-float.wav-c8ba0cba7db0a09149f6fa52d699ed12.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

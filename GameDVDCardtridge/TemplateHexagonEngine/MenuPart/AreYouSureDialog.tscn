@@ -14,6 +14,9 @@ margin_top = -281.0
 margin_right = 567.0
 margin_bottom = 280.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.364706 )
@@ -48,6 +51,9 @@ margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.494118, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.0901961, 0, 0, 1 )
 text = "YES"
 
 [node name="No" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
@@ -57,6 +63,9 @@ margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 1, 1 )
 text = "NO"
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/Yes" to="." method="_on_Yes_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/No" to="." method="_on_No_pressed"]

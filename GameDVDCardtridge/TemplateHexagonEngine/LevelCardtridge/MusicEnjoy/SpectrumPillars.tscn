@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/VU Pillar1.tscn" type="PackedScene" id=3]
+
+[node name="SpectrumPillars" type="Node2D"]
+position = Vector2( 1.26274, 1415.98 )
+
+[node name="VU Pillar1" parent="." instance=ExtResource( 3 )]
+
+[node name="VU Pillar2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 188.151, 0 )
+
+[node name="VU Pillar3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 302.102, 0 )
+
+[node name="VU Pillar4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 418.703, 0 )
+
+[node name="VU Pillar5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 532.654, 0 )
+
+[node name="VU Pillar6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 646.605, 0 )
+
+[node name="VU Pillar7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 752.606, 0 )
+
+[node name="VU Pillar8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 863.907, 0 )
+
+[node name="VU Pillar9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 969.907, 0 )
+
+[node name="VU Pillar10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1081.21, 0 )
+
+[node name="VU Pillar11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1219.01, 0 )
+
+[node name="VU Pillar12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1330.31, 0 )
+
+[node name="VU Pillar13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1438.96, 0 )
+
+[node name="VU Pillar14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1560.86, 0 )
+
+[node name="VU Pillar15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1685.41, 0 )
+
+[node name="VU Pillar16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1833.81, 0 )

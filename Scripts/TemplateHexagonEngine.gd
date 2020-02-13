@@ -1,15 +1,19 @@
 extends Node
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 # Hexagon Engine is like Java but it's Godot. interpreted software! actualy no. it's sub-games inside this
 # fantasy console
+enum CanvasLayerMode {Usual = 1, Priority = 10}
+
 enum MenuLists {Main_menu = 0, Setting_Menu = 1, Extras_Menu = 2, Unknown_Menu = 3, ChangeDVD_Menu = 3, GameplayUI_Menu = 4}
 export(MenuLists) var MenuIsRightNow = 0
 export(bool) var isPlayingTheGameNow = false
 export(bool) var LoadingHasCompleted
 export(bool) var PauseTheGame = false
+#export (bool) var isGamePaused = false
 
 export(String) var ExitGameName = "Exit"
 export(String) var LeaveLevelName = "Leave Level"
@@ -40,6 +44,55 @@ var Sub2DLoadCompleted = false
 func _ready():
 	pass # Replace with function body.
 
+func _input(event):
+	if isPlayingTheGameNow:
+		pass
+	else:
+		
+		pass
+	pass
+
+func SetPauseYes():
+	$MustFollowPersonCamera2D/UIspace.PauseMenu()
+	PauseTheGameNow()
+	pass
+func SetPauseNo():
+	$MustFollowPersonCamera2D/UIspace.ResumeMenu()
+	ResumeTheGameNow()
+	pass
+
+func PressPauseButton():
+	if isPlayingTheGameNow:
+		if !PauseTheGame:
+			SetPauseYes()
+			pass
+		else:
+			SetPauseNo()
+			pass
+		pass
+	#PauseTheGame = !PauseTheGame
+	pass
+
+func TheLitteralPlayButton():
+	if isPlayingTheGameNow:
+		ResumeTheGameNow()
+		pass
+	else:
+		pass
+	pass
+
+func PauseTheGameNow():
+	PauseTheGame = true
+	print("Pause the game")
+	get_tree().paused = true
+	pass
+
+func ResumeTheGameNow():
+	PauseTheGame = false
+	print("Resume The Game")
+	get_tree().paused = false
+	pass
+
 func SetExitButtonLabel(name:String):
 	$MustFollowPersonCamera2D/UIspace.SetExitButtonLabel(name)
 	pass
@@ -49,6 +102,7 @@ func NextMenu():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if Sub3DLoadInclude and Sub2DLoadInclude:
 		loadValue = (Sub3DLoadValue + Sub2DLoadValue)/2
 		pass
@@ -65,6 +119,8 @@ func _process(delta):
 		LoadingHasCompleted = true
 		pass
 	
+	Singletoner.isPlayingGameNow = isPlayingTheGameNow
+	Singletoner.isGamePaused = PauseTheGame
 	$MustFollowPersonCamera2D/UIspace.SetReadyToPlay(LoadingHasCompleted)
 	$MustFollowPersonCamera2D/UIspace.SetIsPlayingGameNow(isPlayingTheGameNow)
 	if LoadingHasCompleted:
@@ -78,6 +134,14 @@ func _process(delta):
 		pass
 	else:
 		SetExitButtonLabel(ExitGameName)
+		
+		pass
+	
+	if Input.is_key_pressed(KEY_BACK) or Input.is_action_just_pressed("EscapeButton"):
+		#emit_signal("PressExit") # Exit Pressing
+		$MustFollowPersonCamera2D/UIspace.PressEscapeButton()
+		
+		
 		pass
 	pass
 
@@ -87,9 +151,11 @@ signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 
 func ExecuteChangeDVD():
+	ResumeTheGameNow()
 	emit_signal("ChangeDVD_Exec")
 	pass
 func ExecuteShutdown():
+	ResumeTheGameNow()
 	print("aDVD sent Shutdown")
 	emit_signal("Shutdown_Exec")
 	pass
@@ -161,6 +227,7 @@ func ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, Le
 	pass
 
 func ReceiveUnloadClick():
+	ResumeTheGameNow()
 	ExecuteUnloadLevel()
 	pass
 
@@ -204,5 +271,24 @@ func _on_2Dspace_hasLoadingCompleted():
 	Sub2DLoadCompleted = true
 	pass # Replace with function body.
 
+func _on_UIspace_PlayButtonLayerSpec(selecte):
+	#$MustFollowPersonCamera2D.layer = selecte
+	#print("Set Main UI Layer = " + String(selecte))
+	pass # Replace with function body.
 
 
+func _on_UIspace_PressPauseButton():
+	#PressPauseButton()
+	SetPauseYes()
+	pass # Replace with function body.
+
+
+func _on_UIspace_LitteralPlayButton():
+	TheLitteralPlayButton()
+	pass # Replace with function body.
+
+
+func _on_UIspace_IPressedEscapeOnPlayingGame():
+	PressPauseButton()
+	print("\n + Press Pause UI Space + \n")
+	pass # Replace with function body.

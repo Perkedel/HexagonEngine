@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/HexagonEngineSymbol.png-c9aa9f6b5b2e5069bef69484dfc63db4.stex"

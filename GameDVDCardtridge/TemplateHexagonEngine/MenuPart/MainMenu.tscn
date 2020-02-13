@@ -21,13 +21,13 @@ alignment = 1
 [node name="TitleBox" parent="VBoxContainer" instance=ExtResource( 2 )]
 
 [node name="Spacing" parent="VBoxContainer" instance=ExtResource( 3 )]
-margin_bottom = 731.0
+margin_bottom = 729.0
 
 [node name="MenuButtonings" parent="VBoxContainer" instance=ExtResource( 4 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 739.0
+margin_top = 737.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_vertical = 9
