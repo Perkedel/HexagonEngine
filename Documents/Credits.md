@@ -58,4 +58,14 @@ Used Assets and Tools!
 - https://godotengine.org/qa/24773/how-to-load-and-change-scenes
 - https://godotengine.org/qa/8025/how-to-add-a-child-in-a-specific-position 
 - https://godotengine.org/qa/24773/how-to-load-and-change-scenes
-- 
+- https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
+- https://github.com/Shin-NiL/Godot-Android-Admob-Plugin/releases
+- https://github.com/kloder-games/godot-admob
+- https://adoptopenjdk.net/
+- https://www.oracle.com/java/technologies/javase-downloads.html
+- https://stackoverflow.com/questions/5730815/unable-to-locate-tools-jar
+- https://docs.godotengine.org/en/latest/getting_started/workflow/export/android_custom_build.html
+- https://developers.google.com/admob/android/test-ads
+- https://github.com/electron/rcedit/releases
+- https://casual-effects.com/data/
+- Models downloaded from Morgan McGuire's [Computer Graphics Archive](https://casual-effects.com/data)

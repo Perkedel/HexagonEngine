@@ -12,6 +12,7 @@ var ConThread
 export var isRunningDVD = true
 export var preloadDVD = 0
 export(PackedScene) var LoadDVD 
+enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +36,7 @@ func DoChangeDVDNow():
 
 func DoShutdownNow():
 	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
+	Kixlonzing.SaveKixlonz()
 	print("Quit Game!")
 	get_tree().quit()
 	pass
@@ -55,6 +57,12 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
+	if Index == 0:
+		LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn")
+		pass
+	if Index == 1:
+		LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
+		pass
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
 

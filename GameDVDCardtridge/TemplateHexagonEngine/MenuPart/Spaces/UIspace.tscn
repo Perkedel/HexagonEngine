@@ -44,6 +44,7 @@ visible = false
 [connection signal="PressPlay" from="MainMenu" to="." method="_on_MainMenu_PressPlay"]
 [connection signal="PressSetting" from="MainMenu" to="." method="_on_MainMenu_PressSetting"]
 [connection signal="PressUnknown" from="MainMenu" to="." method="_on_MainMenu_PressUnknown"]
+[connection signal="AlsoPlsConnectThisReportStatus" from="NextMenu" to="." method="_on_NextMenu_AlsoPlsConnectThisReportStatus"]
 [connection signal="GetYourMenuList" from="NextMenu" to="." method="_on_NextMenu_GetYourMenuList"]
 [connection signal="PleaseLoadThisLevelOf" from="NextMenu" to="." method="_on_NextMenu_PleaseLoadThisLevelOf"]
 [connection signal="PressBackButton" from="NextMenu" to="." method="_on_NextMenu_PressBackButton"]

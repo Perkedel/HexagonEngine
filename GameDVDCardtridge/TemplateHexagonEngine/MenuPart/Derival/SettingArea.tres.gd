@@ -90,3 +90,17 @@ func _on_AudioSection_StatusPressed(value):
 		$HBoxContainer/ScrollContainer/SeriouslyContainer/AudioCategoryArea.hide()
 		pass
 	pass # Replace with function body.
+
+
+func _on_DisplayCategoryButton_LoadThisCategoryPlease(CategoryScenePath):
+	pass # Replace with function body.
+
+
+func _on_DisplayCategoryButton_StatusPressed(value):
+	if value:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/DisplayCategoryArea.show()
+		pass
+	else:
+		$HBoxContainer/ScrollContainer/SeriouslyContainer/DisplayCategoryArea.hide()
+		pass
+	pass # Replace with function body.

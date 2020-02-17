@@ -1,14 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=5]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HPbar.gd" type="Script" id=6]
-[ext_resource path="res://Sprites/AnotherMetererBekgron.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/AnotherMetererOver.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/AnotherMetererProgress.png" type="Texture" id=9]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -22,6 +19,9 @@ font_data = ExtResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TotalVBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -76,30 +76,7 @@ rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="CoineCounter" type="HBoxContainer" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
-margin_right = 400.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 400, 0 )
-size_flags_vertical = 3
-
-[node name="CoineIcon" type="TextureRect" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus/CoineCounter"]
-margin_right = 50.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 50, 50 )
-size_flags_vertical = 3
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-
-[node name="CoineCountLabel" type="Label" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus/CoineCounter"]
-margin_left = 58.0
-margin_right = 400.0
-margin_bottom = 55.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-custom_fonts/font = ExtResource( 5 )
-text = "2000"
-valign = 1
+[node name="CoineCounter" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 5 )]
 
 [node name="MeserckSpacer" type="Control" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
 margin_left = 408.0
@@ -108,64 +85,7 @@ margin_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="WeponContaine" type="HBoxContainer" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
-margin_left = 1520.0
-margin_right = 1920.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 400, 0 )
-size_flags_vertical = 3
+[node name="WeponContaine" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 6 )]
 
-[node name="HPbar" type="HBoxContainer" parent="TotalVBoxContainer/BottomVBoxContainer"]
-editor/display_folded = true
-margin_top = 306.0
-margin_right = 1920.0
-margin_bottom = 356.0
-rect_min_size = Vector2( 0, 50 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 6 )
-
-[node name="TextureProgressLeft" type="TextureProgress" parent="TotalVBoxContainer/BottomVBoxContainer/HPbar"]
-margin_right = 852.0
-margin_bottom = 50.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-value = 68.0
-texture_under = ExtResource( 7 )
-texture_over = ExtResource( 8 )
-texture_progress = ExtResource( 9 )
-fill_mode = 1
-nine_patch_stretch = true
-
-[node name="LabelPanel" type="Panel" parent="TotalVBoxContainer/BottomVBoxContainer/HPbar"]
-self_modulate = Color( 0.231373, 0, 1, 1 )
-margin_left = 860.0
-margin_right = 1060.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 200, 0 )
-size_flags_vertical = 3
-
-[node name="HPLabel" type="Label" parent="TotalVBoxContainer/BottomVBoxContainer/HPbar/LabelPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = 5.0
-size_flags_vertical = 7
-custom_fonts/font = ExtResource( 5 )
-text = "100%"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-
-[node name="TextureProgressRight" type="TextureProgress" parent="TotalVBoxContainer/BottomVBoxContainer/HPbar"]
-margin_left = 1068.0
-margin_right = 1920.0
-margin_bottom = 50.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-value = 68.0
-texture_under = ExtResource( 7 )
-texture_over = ExtResource( 8 )
-texture_progress = ExtResource( 9 )
-nine_patch_stretch = true
+[node name="HPbar" parent="TotalVBoxContainer/BottomVBoxContainer" instance=ExtResource( 4 )]
 [connection signal="pressed" from="TotalVBoxContainer/TopVBoxContainer/TopButtonings/PauseButton" to="." method="_on_PauseButton_pressed"]

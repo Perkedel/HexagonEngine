@@ -11,6 +11,8 @@ onready var y_deadzone = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal reportHP(level)
+signal reportScore(number)
 
 # https://www.youtube.com/watch?v=LfbOOA3dmFo&t=209s
 # https://www.youtube.com/watch?v=Etpq-d5af6M&t=183s
@@ -58,3 +60,5 @@ func _process(delta):
 	
 	translate(DirectionInputMap * delta)
 	pass
+
+

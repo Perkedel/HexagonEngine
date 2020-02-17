@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="WeponContaine" type="HBoxContainer"]
+margin_left = 1520.0
+margin_right = 1920.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_vertical = 3

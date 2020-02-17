@@ -33,6 +33,21 @@ export(String) var LevelTitleg
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
 export(String, MULTILINE) var LevelDescription
 
+#Stop here. Pls manage Status HUD Bar now!
+export(bool) var a2DSpaceReportHP = false
+export(bool) var a3DSpaceReportHP = false
+export(bool) var a2DSpaceReportScore = false
+export(bool) var a3DSpaceReportScore = false
+
+export (float) var See3DHP
+export (float) var See2DHP
+export (float) var See3DScore
+export (float) var See2DScore
+
+export (float) var emitHP = 100
+export (float) var emitScore = 2000
+export (Texture) var emitScoreIcon
+
 var Sub3DLoadValue
 var Sub3DLoadInclude = false
 var Sub3DLoadCompleted = false
@@ -42,6 +57,7 @@ var Sub2DLoadCompleted = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	PrepareHUD()
 	pass # Replace with function body.
 
 func _input(event):
@@ -93,6 +109,84 @@ func ResumeTheGameNow():
 	get_tree().paused = false
 	pass
 
+# HUD manage
+func PrepareHUD():
+	# 2x2 Statement Grid = 2 Spaces (2D & 3D) x 2 Options (YES & NO)
+#	if a2DSpaceReportHP and a3DSpaceReportHP:
+#
+#		pass
+#	elif not a2DSpaceReportHP and a3DSpaceReportHP:
+#
+#		pass
+#	elif a2DSpaceReportHP and not a3DSpaceReportHP:
+#
+#		pass
+#	elif not a2DSpaceReportHP and not a3DSpaceReportHP:
+#		pass
+#
+#
+#	if a2DSpaceReportScore and a3DSpaceReportScore:
+#
+#		pass
+#	elif not a2DSpaceReportScore and a3DSpaceReportScore:
+#
+#		pass
+#	elif a2DSpaceReportScore and not a3DSpaceReportScore:
+#
+#		pass
+#	elif not a2DSpaceReportScore and not a3DSpaceReportScore:
+#
+#		pass
+	
+	if a2DSpaceReportHP:
+		
+		pass
+	if a3DSpaceReportHP:
+		
+		pass
+	
+	if a2DSpaceReportScore:
+		
+		pass
+	if a3DSpaceReportScore:
+		
+		pass
+	pass
+func ManageHUD():
+	# 2x2 Statement Grid = 2 Spaces (2D & 3D) x 2 Options (YES & NO)
+	if a2DSpaceReportHP and a3DSpaceReportHP:
+		emitHP = clamp((See2DHP+See3DHP)/2, 0, 100)
+		pass
+	elif not a2DSpaceReportHP and a3DSpaceReportHP:
+		emitHP = clamp((See3DHP)/2, 0, 100)
+		pass
+	elif a2DSpaceReportHP and not a3DSpaceReportHP:
+		emitHP = clamp((See2DHP), 0, 100)
+		pass
+	elif not a2DSpaceReportHP and not a3DSpaceReportHP:
+		emitHP = 100
+		pass
+	
+	
+	if a2DSpaceReportScore and a3DSpaceReportScore:
+		emitScore = See2DScore + See3DScore
+		pass
+	elif not a2DSpaceReportScore and a3DSpaceReportScore:
+		emitScore = See3DScore
+		pass
+	elif a2DSpaceReportScore and not a3DSpaceReportScore:
+		emitScore = See2DScore
+		pass
+	elif not a2DSpaceReportScore and not a3DSpaceReportScore:
+		emitScore = 10000
+		pass
+		
+	$MustFollowPersonCamera2D/UIspace.HPlevel = emitHP
+	$MustFollowPersonCamera2D/UIspace.ScoreIcon = emitScoreIcon
+	$MustFollowPersonCamera2D/UIspace.ScoreNumber = emitScore
+	pass
+# End Manage HUD
+
 func SetExitButtonLabel(name:String):
 	$MustFollowPersonCamera2D/UIspace.SetExitButtonLabel(name)
 	pass
@@ -102,7 +196,7 @@ func NextMenu():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	ManageHUD()
 	if Sub3DLoadInclude and Sub2DLoadInclude:
 		loadValue = (Sub3DLoadValue + Sub2DLoadValue)/2
 		pass
@@ -207,6 +301,8 @@ func goto_scene(a3Dpath, a2Dpath):
 	pass
 
 func leave_scene():
+	$"3Dspace".DisconnecStatusSignal()
+	$"2Dspace".DisconnecStatusSignal()
 	$"3Dspace".despawnTheScene()
 	$"2Dspace".despawnTheScene()
 	isPlayingTheGameNow = false
@@ -254,11 +350,13 @@ func _on_3Dspace_a3D_Loading_ProgressBar(valuet):
 
 func _on_3Dspace_hasLoadingCompleted():
 	Sub3DLoadCompleted = true
+	#$"3Dspace".ConnecStatusSignal()
 	pass # Replace with function body.
 
 
 func _on_2Dspace_IncludeMeForYourLoading(MayI):
 	Sub2DLoadInclude = MayI
+	
 	pass # Replace with function body.
 
 
@@ -269,6 +367,7 @@ func _on_2Dspace_a2D_Loading_ProgressBar(valuet):
 
 func _on_2Dspace_hasLoadingCompleted():
 	Sub2DLoadCompleted = true
+	#$"2Dspace".ConnecStatusSignal()
 	pass # Replace with function body.
 
 func _on_UIspace_PlayButtonLayerSpec(selecte):
@@ -291,4 +390,44 @@ func _on_UIspace_LitteralPlayButton():
 func _on_UIspace_IPressedEscapeOnPlayingGame():
 	PressPauseButton()
 	print("\n + Press Pause UI Space + \n")
+	pass # Replace with function body.
+
+#signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+func _on_UIspace_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore):
+	a2DSpaceReportHP = a2DSpaceHP
+	a3DSpaceReportHP = a3DSpaceHP
+	a2DSpaceReportScore = a2DSpaceScore
+	a3DSpaceReportScore = a3DSpaceScore
+	
+	print("Set Statuso Flag")
+	pass # Replace with function body.
+
+
+func _on_3Dspace_TellHP(Level):
+	See3DHP = Level
+	pass # Replace with function body.
+
+
+func _on_2Dspace_TellHP(Level):
+	See2DHP = Level
+	pass # Replace with function body.
+
+
+func _on_3Dspace_TellScore(value):
+	See3DScore = value
+	pass # Replace with function body.
+
+
+func _on_2Dspace_TellScore(value):
+	See2DScore = value
+	pass # Replace with function body.
+
+
+func _on_3Dspace_readyToPlayNow():
+	$"3Dspace".ConnecStatusSignal()
+	pass # Replace with function body.
+
+
+func _on_2Dspace_readyToPlayNow():
+	$"2Dspace".ConnecStatusSignal()
 	pass # Replace with function body.

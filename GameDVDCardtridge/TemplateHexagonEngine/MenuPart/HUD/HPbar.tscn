@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/AnotherMetererBekgron.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/AnotherMetererOver.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/AnotherMetererProgress.png" type="Texture" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.gd" type="Script" id=5]
+
+[node name="HPbar" type="HBoxContainer"]
+margin_top = 306.0
+margin_right = 1920.0
+margin_bottom = 356.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 5 )
+
+[node name="TextureProgressLeft" type="TextureProgress" parent="."]
+margin_right = 852.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 68.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+fill_mode = 1
+nine_patch_stretch = true
+
+[node name="LabelPanel" type="Panel" parent="."]
+self_modulate = Color( 0.231373, 0, 1, 1 )
+margin_left = 860.0
+margin_right = 1060.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 3
+
+[node name="HPLabel" type="Label" parent="LabelPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 5.0
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 1 )
+text = "100%"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="TextureProgressRight" type="TextureProgress" parent="."]
+margin_left = 1068.0
+margin_right = 1920.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 68.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+nine_patch_stretch = true

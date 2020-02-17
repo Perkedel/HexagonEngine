@@ -1,5 +1,7 @@
 extends Node2D
 
+export (int) var CrackleCounter
+export (bool) var AllCracklesAreGone = false
 export (float) var Y_initPos
 export (float) var Y_AddPos
 export (int) var VU_counts = 16
@@ -19,6 +21,10 @@ export (int) var SelectedFileAccess
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal reportHP(level)
+signal reportScore(number)
+signal reportScoreIcon(Texturer)
+#todo: reportTexture for score icon
 
 func TestoidDummyFileMake():
 	var TestoidFile = File.new()
@@ -68,6 +74,26 @@ func Spectrader(): # UpsideDown Spectruder Spectrum Pillar
 		pass
 	pass
 
+func VUmanner():
+	var Magnitude:float = spectrum.get_magnitude_for_frequency_range(0,FrequencyMax).length()
+	var energy = clamp((min_dB + linear2db(Magnitude)) / min_dB, 0, 1)
+	#emit_signal("reportHP",clamp(energy*100,0,100))
+	EmitNowHP(clamp(energy*100,0,100))
+	pass
+
+func CountCrackleCounts():
+	#emit_signal("reportScore", $Crackles.get_child_count())
+	CrackleCounter = $Crackles.get_child_count()
+	EmitNowScore(CrackleCounter)
+	
+	if !AllCracklesAreGone and CrackleCounter <= 0:
+		print("\n\n(OH NO) YOU HAVE LOST ALL THE CRACKLES!!! OH NO!!! NOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!(OH NO)\n\n")
+		AllCracklesAreGone = true
+		pass
+	else:
+		pass
+	pass
+
 func DeTogglePlay():
 	$MusicController/MusicUI/MainContains/ControllingMusic/Play.pressed = false
 	#$MusicUI/MainContains/ControllingMusic/Play.pressed = false
@@ -92,6 +118,8 @@ func StopSong():
 func _process(delta):
 	Spectruder()
 	Spectrader()
+	VUmanner()
+	CountCrackleCounts()
 	$MusicController/MusicUI/MainContains/ScrollContainer/Label/Title.text = FilePath
 	#$MusicUI/MainContains/Label/Title.text = FilePath
 	if Singletoner.isGamePaused:
@@ -265,4 +293,25 @@ func _on_SelectFileLoadingMode_FileAccessModeSelected(Which):
 	
 	#$MusicUI/FileDialog.access = Which
 	#$MusicUI/FileDialog.show()
+	pass # Replace with function body.
+
+
+
+func EmitNowHP(valueo):
+	emit_signal("reportHP",valueo)
+	pass
+
+func EmitNowScore(valueo):
+	emit_signal("reportScore", valueo)
+	pass
+
+
+func _on_Scroncher_body_entered(body):
+	CrackleCounter = $Crackles.get_child_count()
+	if CrackleCounter >=14:
+		print("\n\n(NOTICE)PLEASE DON'T LOSE THE CRACKLES!!! LEFT "+ String(CrackleCounter) +" PCS!!! (NOTICE)\n\n")
+		pass
+	if CrackleCounter <=5:
+		print("\n\n(ATTENTION!!!) YOU ARE GOING TO LOSE ALL CRACKLES! LEFT "+ String(CrackleCounter) +" PCS!!! (ATTENTION!!!)\n\n")
+		pass
 	pass # Replace with function body.

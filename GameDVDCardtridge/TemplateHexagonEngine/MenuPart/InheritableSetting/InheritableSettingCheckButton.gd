@@ -12,6 +12,9 @@ func _ready():
 	$Label.text = VariableName
 	pass # Replace with function body.
 
+func ForceValue(value: bool):
+	$HBoxContainer/CheckButton.pressed = value
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

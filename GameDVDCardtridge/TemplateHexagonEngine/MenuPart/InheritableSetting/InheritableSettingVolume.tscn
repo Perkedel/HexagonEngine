@@ -2,7 +2,8 @@
 
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.gd" type="Script" id=2]
-[ext_resource path="res://Audio/425728__moogy73__click01.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/EfekSuara/425728__moogy73__click01.wav" type="AudioStream" id=3]
+
 
 [node name="InheritableSettingVolume" type="HBoxContainer"]
 margin_right = 1924.0

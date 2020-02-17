@@ -6,3 +6,6 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+
+# Admob-specific ignores, it is dangerous to reveal the real AdMob id as it could be abused!
+*.admob

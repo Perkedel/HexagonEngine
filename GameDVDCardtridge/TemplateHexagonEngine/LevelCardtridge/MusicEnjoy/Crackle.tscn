@@ -1,16 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Inkscape/Logo Setup/Perkedel Profile 2048x2048.png" type="Texture" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle_PhysicMaterial.tres" type="PhysicsMaterial" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 44.28
 
 [node name="Crackle" type="RigidBody2D"]
 physics_material_override = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.043, 0.043 )
 texture = ExtResource( 1 )

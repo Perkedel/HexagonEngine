@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
@@ -6,14 +6,25 @@
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Audio/Floaters.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1270.32, 95.3083 )
+
+[sub_resource type="OpenSimplexNoise" id=3]
+
+[sub_resource type="NoiseTexture" id=4]
+width = 64
+height = 64
+noise = SubResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 48.4447, 47 )
 
 [node name="MusicRoom2D" type="Node2D"]
 pause_mode = 2
@@ -39,11 +50,17 @@ position = Vector2( 0, 562.104 )
 shape = SubResource( 1 )
 
 [node name="Roof" type="RigidBody2D" parent="Walls"]
+visible = false
 position = Vector2( 969.907, -273.672 )
 mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Roof"]
 shape = SubResource( 2 )
+
+[node name="ScronchCracklesNowadays" type="Node2D" parent="."]
+
+[node name="Scroncher" parent="ScronchCracklesNowadays" instance=ExtResource( 9 )]
+position = Vector2( 903.532, 687.5 )
 
 [node name="SpectrumPillars" parent="." instance=ExtResource( 1 )]
 pause_mode = 1
@@ -157,8 +174,8 @@ mode = 0
 access = 2
 filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
 show_hidden_files = true
-current_dir = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "/media/joelwindows7/OS/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "/media/joelwindows7/OS/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -212,6 +229,23 @@ position = Vector2( 305, 0 )
 
 [node name="Crackle15" parent="Crackles" instance=ExtResource( 5 )]
 position = Vector2( 410, 0 )
+
+[node name="TestoidBody" type="Node2D" parent="."]
+
+[node name="TestoidDrop" type="RigidBody2D" parent="TestoidBody"]
+position = Vector2( -698.445, 0 )
+
+[node name="Sprite" type="Sprite" parent="TestoidBody/TestoidDrop"]
+texture = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestoidBody/TestoidDrop"]
+shape = SubResource( 5 )
+
+[node name="TestoidKamera" type="Camera2D" parent="."]
+visible = false
+position = Vector2( -636.883, 1705.71 )
+zoom = Vector2( 2.559, 5.016 )
+[connection signal="body_entered" from="ScronchCracklesNowadays/Scroncher" to="." method="_on_Scroncher_body_entered"]
 [connection signal="finished" from="MusicController/MusicUI/MusicPlaySpeaker" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="pressed" from="MusicController/MusicUI/MainContains/ControllingMusic/Play" to="." method="_on_Play_pressed"]
 [connection signal="toggled" from="MusicController/MusicUI/MainContains/ControllingMusic/Play" to="." method="_on_Play_toggled"]

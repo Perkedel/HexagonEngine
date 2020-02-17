@@ -19,6 +19,15 @@ export(bool) var isPausingGame = false
 export(bool) var isMainMenuing = true
 export(bool) var isNextMenuing = false
 
+export(bool) var a2DSpaceReportHP = false
+export(bool) var a3DSpaceReportHP = false
+export(bool) var a2DSpaceReportScore = false
+export(bool) var a3DSpaceReportScore = false
+
+export (float, 0, 100) var HPlevel = 100
+export (Texture) var ScoreIcon
+export (float) var ScoreNumber = 2000
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$MainMenu/VBoxContainer/MenuButtonings/FocusArea/SamPlayArea/PlayButton.grab_focus()
@@ -85,8 +94,15 @@ func ShowGameplayUI():
 	emit_signal("PlayButtonLayerSpec", 1)
 	pass
 
+func ManageHUD():
+	$GameplayUI.HPlevel = HPlevel
+	$GameplayUI.ScoreIcon = ScoreIcon
+	$GameplayUI.ScoreNumber = ScoreNumber
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	ManageHUD()
 	if Input.is_key_pressed(KEY_0):
 		#NextMenu(PassMenuScene)
 		#ShowNextMenu()
@@ -375,6 +391,7 @@ func ManageLoading(ProgressValuei = 0, WordingHint = "Loadinger", isComplete = f
 	pass
 
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+
 func _on_NextMenu_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
 	WhereMenuIsNow = SelectMenuList.Gameplay
 	emit_signal("PleaseLoadThisLevelOf", a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
@@ -391,4 +408,13 @@ func _on_GameplayUI_PressPauseButton():
 
 func _on_NextMenu_GetYourMenuList(whichOf):
 	NextMenuSceneIsNow = whichOf
+	pass # Replace with function body.
+
+signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+func _on_NextMenu_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore):
+	a2DSpaceReportHP = a2DSpaceHP
+	a3DSpaceReportHP = a3DSpaceHP
+	a2DSpaceReportScore = a2DSpaceScore
+	a3DSpaceReportScore = a3DSpaceScore
+	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
 	pass # Replace with function body.

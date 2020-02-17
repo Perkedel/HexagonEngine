@@ -28,6 +28,9 @@ font_data = ExtResource( 15 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 TitleIcon = ExtResource( 2 )
 MainMenuBack = ExtResource( 3 )
 SettingArea = ExtResource( 4 )
@@ -118,5 +121,6 @@ size_flags_horizontal = 3
 [node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 14 )]
 custom_fonts/font = SubResource( 1 )
 [connection signal="LeaveAndBackToMenu" from="VBoxContainer/MenuSpaceArea/UnknownArea" to="." method="_on_UnknownArea_LeaveAndBackToMenu"]
+[connection signal="AlsoPlsConnectThisReportStatus" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_AlsoPlsConnectThisReportStatus"]
 [connection signal="PleaseLoadThisLevelOf" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_PleaseLoadThisLevelOf"]
 [connection signal="pressed" from="VBoxContainer/ButtonNavigateArea/BackButton" to="." method="_on_BackButton_pressed"]

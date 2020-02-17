@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Empty/Empty2D.gd" type="Script" id=1]
+
+[node name="Empty2D" type="Node2D"]
+script = ExtResource( 1 )

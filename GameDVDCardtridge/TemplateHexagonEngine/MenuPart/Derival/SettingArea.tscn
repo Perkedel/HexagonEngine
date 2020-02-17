@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/SettingArea.tres.gd" type="Script" id=2]
@@ -10,8 +10,18 @@
 [ext_resource path="res://Sprites/SpecialButtoning.png" type="Texture" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/AudioCategoryArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/ButtonGroup/CategoryButtonGroup2.tres" type="ButtonGroup" id=10]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/DisplayCategoryArea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/DisplayCategoryButton.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -53,8 +63,14 @@ group = ExtResource( 10 )
 [node name="AudioSection" parent="HBoxContainer/CategoryScrolling/CategorySelection" index="1" instance=ExtResource( 5 )]
 margin_top = 108.0
 margin_bottom = 208.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 pressed = true
+group = ExtResource( 10 )
+
+[node name="DisplayCategoryButton" parent="HBoxContainer/CategoryScrolling/CategorySelection" index="2" instance=ExtResource( 12 )]
+margin_top = 216.0
+margin_bottom = 316.0
+custom_fonts/font = SubResource( 3 )
 group = ExtResource( 10 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer" index="1"]
@@ -212,9 +228,16 @@ margin_bottom = 1137.0
 
 [node name="AudioCategoryArea" parent="HBoxContainer/ScrollContainer/SeriouslyContainer" index="2" instance=ExtResource( 9 )]
 margin_right = 1412.0
+
+[node name="DisplayCategoryArea" parent="HBoxContainer/ScrollContainer/SeriouslyContainer" index="3" instance=ExtResource( 11 )]
+visible = false
+margin_top = 585.0
+margin_right = 1412.0
 [connection signal="gui_input" from="HBoxContainer/CategoryScrolling" to="." method="_on_CategoryScrolling_gui_input"]
 [connection signal="LoadThisCategoryPlease" from="HBoxContainer/CategoryScrolling/CategorySelection/InheritableCategoryButton" to="." method="_on_InheritableCategoryButton_LoadThisCategoryPlease"]
 [connection signal="StatusPressed" from="HBoxContainer/CategoryScrolling/CategorySelection/InheritableCategoryButton" to="." method="_on_InheritableCategoryButton_StatusPressed"]
 [connection signal="LoadThisCategoryPlease" from="HBoxContainer/CategoryScrolling/CategorySelection/AudioSection" to="." method="_on_AudioSection_LoadThisCategoryPlease"]
 [connection signal="StatusPressed" from="HBoxContainer/CategoryScrolling/CategorySelection/AudioSection" to="." method="_on_AudioSection_StatusPressed"]
+[connection signal="LoadThisCategoryPlease" from="HBoxContainer/CategoryScrolling/CategorySelection/DisplayCategoryButton" to="." method="_on_DisplayCategoryButton_LoadThisCategoryPlease"]
+[connection signal="StatusPressed" from="HBoxContainer/CategoryScrolling/CategorySelection/DisplayCategoryButton" to="." method="_on_DisplayCategoryButton_StatusPressed"]
 [connection signal="gui_input" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_gui_input"]

@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameDVDCardtridge/AdmobberTestio/QuitDialoguer.gd" type="Script" id=2]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://font/Built/Ubuntu_MI_28tred.tres" type="DynamicFont" id=5]
+[ext_resource path="res://font/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=6]
+
+[node name="QuitDialoguer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage1-BUttonQuit" type="PanelContainer" parent="."]
+self_modulate = Color( 1, 1, 1, 0.345098 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Stage1-BUttonQuit"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 1906.0
+margin_bottom = 1066.0
+alignment = 1
+
+[node name="TextL" type="Label" parent="Stage1-BUttonQuit/VBoxContainer"]
+visible = false
+margin_right = 1892.0
+margin_bottom = 975.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 1 )
+text = "Finish Experiment?
+- Change DVD?
+- Shutdown Hexagon Engine?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="DebugLabelText" type="RichTextLabel" parent="Stage1-BUttonQuit/VBoxContainer"]
+margin_right = 1892.0
+margin_bottom = 983.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 1 )
+custom_fonts/bold_italics_font = ExtResource( 6 )
+custom_fonts/italics_font = ExtResource( 5 )
+custom_fonts/bold_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[code]Debug Message[/code]
+"
+text = "Debug Message
+"
+scroll_following = true
+
+[node name="ConfirmButton" type="HBoxContainer" parent="Stage1-BUttonQuit/VBoxContainer"]
+margin_top = 991.0
+margin_right = 1892.0
+margin_bottom = 1052.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Stage1-BUttonQuit/VBoxContainer/ConfirmButton"]
+margin_left = 886.0
+margin_right = 1006.0
+margin_bottom = 61.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+
+[node name="Stage2-SelectQuit" type="PanelContainer" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.345098 )
+margin_right = 696.0
+margin_bottom = 453.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Stage2-SelectQuit"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 682.0
+margin_bottom = 439.0
+alignment = 1
+
+[node name="TextL" type="Label" parent="Stage2-SelectQuit/VBoxContainer"]
+margin_right = 668.0
+margin_bottom = 356.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 1 )
+text = "Select Your Quit options!
+- Change DVD = Back to Hub
+- Quit H = Shutdown Hexagon
+- Cancel = Cancel quit"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ConfirmButton" type="HBoxContainer" parent="Stage2-SelectQuit/VBoxContainer"]
+margin_top = 364.0
+margin_right = 668.0
+margin_bottom = 425.0
+alignment = 1
+
+[node name="ButtonCHange" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
+margin_left = 26.0
+margin_right = 290.0
+margin_bottom = 61.0
+custom_fonts/font = ExtResource( 1 )
+text = "Change DVD"
+
+[node name="ButtonShutdown" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
+margin_left = 298.0
+margin_right = 466.0
+margin_bottom = 61.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit H"
+
+[node name="ButtonNo" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
+margin_left = 474.0
+margin_right = 642.0
+margin_bottom = 61.0
+custom_fonts/font = ExtResource( 1 )
+text = "Cancel"
+
+[node name="TimerOutNoQuit" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+[connection signal="pressed" from="Stage1-BUttonQuit/VBoxContainer/ConfirmButton/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Stage2-SelectQuit/VBoxContainer/ConfirmButton/ButtonCHange" to="." method="_on_ButtonCHange_pressed"]
+[connection signal="pressed" from="Stage2-SelectQuit/VBoxContainer/ConfirmButton/ButtonShutdown" to="." method="_on_ButtonShutdown_pressed"]
+[connection signal="pressed" from="Stage2-SelectQuit/VBoxContainer/ConfirmButton/ButtonNo" to="." method="_on_ButtonNo_pressed"]
+[connection signal="timeout" from="TimerOutNoQuit" to="." method="_on_TimerOutNoQuit_timeout"]

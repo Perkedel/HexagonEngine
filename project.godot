@@ -8,17 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Admob",
+"language": "GDScript",
+"path": "res://admob-lib/admob.gd"
+} ]
 _global_script_class_icons={
-
+"Admob": "res://admob-lib/icon.png"
 }
+
+[android]
+
+modules="org/godotengine/godot/GodotAdMob"
 
 [application]
 
 config/name="HexagonEngine"
 config/description="Cinema enters game console"
 run/main_scene="res://HexagonEngineCore.tscn"
-boot_splash/image="res://Sprites/HexagonEngineBootSplash.tres"
+boot_splash/image="res://Sprites/HexagonEngineBootSplash.png"
 boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
 config/icon="res://Sprites/HexagonEngineSign.png"
 config/windows_native_icon="res://Sprites/HexagonEngineSign.ico"
@@ -28,6 +37,7 @@ config/quit_on_go_back=false
 [autoload]
 
 Singletoner="*res://Scripts/Singletoner.gd"
+Kixlonzing="*res://Scripts/Kixlonzing.gd"
 
 [compression]
 

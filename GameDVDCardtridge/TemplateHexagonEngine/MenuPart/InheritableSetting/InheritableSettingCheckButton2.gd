@@ -10,6 +10,9 @@ extends "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetti
 func _ready():
 	pass # Replace with function body.
 
+func ForceValue2(value:bool):
+	$HBoxContainer/CheckButton2.pressed = value
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

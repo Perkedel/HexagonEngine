@@ -10,6 +10,8 @@ onready var y_deadzone = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal reportHP(level)
+signal reportScore(number)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -69,3 +71,5 @@ func _process(delta):
 #func _input(event):
 #	x_move = Input.get_joy_axis()
 #	pass
+
+

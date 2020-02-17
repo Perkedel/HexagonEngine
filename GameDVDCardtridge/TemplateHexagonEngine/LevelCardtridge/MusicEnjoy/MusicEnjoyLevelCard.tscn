@@ -63,6 +63,8 @@ Your3DSpaceLevel = ExtResource( 4 )
 Your2DSpaceLevel = ExtResource( 3 )
 LevelBannerThumbnail = ExtResource( 2 )
 LevelTitleg = "MusicEnjoy"
+a2DSpaceReportHP = true
+a2DSpaceReportScore = true
 LevelDescription = "Music Room
 [b]Enjoy Now[/b]
 [i]AwYeah[/i]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Blender/ExportBlender/ZoblatosImprovement.gltf" type="PackedScene" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Empty/Empty3D.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SphereShape" id=3]
+
+[node name="Empty" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Boxoid" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Boxoid"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Boxoid"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Boxoid2" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Boxoid2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Boxoid2"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Zoblatos" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="Zoblatos_GLtf" parent="Zoblatos" instance=ExtResource( 1 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="Zoblatos"]
+shape = SubResource( 3 )

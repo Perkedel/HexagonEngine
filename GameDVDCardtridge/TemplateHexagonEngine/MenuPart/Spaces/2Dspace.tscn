@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Spaces/2Dspace.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/Empty/Empty2D.tscn" type="PackedScene" id=3]
 
 [node name="2Dspace" type="Node2D"]
 pause_mode = 2
@@ -22,4 +23,4 @@ texture = ExtResource( 2 )
 [node name="Level2DCartridgeSlot" type="Node2D" parent="."]
 pause_mode = 1
 
-[node name="Empty" type="Node2D" parent="Level2DCartridgeSlot"]
+[node name="Empty" parent="Level2DCartridgeSlot" instance=ExtResource( 3 )]

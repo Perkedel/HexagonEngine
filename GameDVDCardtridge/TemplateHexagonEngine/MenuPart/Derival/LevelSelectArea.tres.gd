@@ -7,6 +7,11 @@ export(PackedScene) var Your3DSpaceLevel
 export(PackedScene) var Your2DSpaceLevel
 export(Texture) var LevelBannerThumbnail
 export(String) var LevelTitleg
+
+export(bool) var a2DSpaceReportHP = false
+export(bool) var a3DSpaceReportHP = false
+export(bool) var a2DSpaceReportScore = false
+export(bool) var a3DSpaceReportScore = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
 export(String, MULTILINE) var LevelDescription
 
@@ -22,6 +27,7 @@ func PreConnectCards():
 		#LevelCardings.connect("PleaseLoadThisLevelOf", self, "_ReceivesSignalClick", LevelCardings.Your3DSpaceLevel, LevelCardings.Your2DSpaceLevel, LevelCardings.LevelBannerThumbnail, LevelCardings.LevelTitleg, LevelCardings.LevelDescription)
 		LevelCardings.connect("PleaseLoadThisLevelOf",self, "_ReceivesSignalClick")
 		print("Level Cards", LevelCardings)
+		LevelCardings.connect("AlsoPlsConnectThisReportStatus", self, "_ReceiveSignalStatus")
 		pass
 	pass
 
@@ -33,6 +39,7 @@ signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTi
 func LoadThisLevelOfThat():
 	print("Load This Level of that")
 	emit_signal("PleaseLoadThisLevelOf", Your3DSpaceLevel, Your2DSpaceLevel, LevelBannerThumbnail, LevelTitleg, LevelDescription)
+	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
 	pass
 
 func _ReceivesSignalClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
@@ -43,4 +50,13 @@ func _ReceivesSignalClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle
 	LevelTitleg = LevelTitle
 	LevelDescription = LevelDesc
 	LoadThisLevelOfThat()
+	pass
+
+signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+func _ReceiveSignalStatus(a3DReportsHP, a2DReportsHP,a3DReportsScore,a2DReportsScore):
+	a2DSpaceReportHP = a2DReportsHP
+	a3DSpaceReportHP = a3DReportsHP
+	a2DSpaceReportScore = a2DReportsScore
+	a3DSpaceReportScore = a3DReportsScore
+	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
 	pass

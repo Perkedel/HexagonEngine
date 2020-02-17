@@ -1,0 +1,4 @@
+#Sun Feb 16 00:46:07 ICT 2020
+base.0=C\:\\Users\\ASUS\\Documents\\starring codes\\Godot Projects\\HexagonEngine\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex
