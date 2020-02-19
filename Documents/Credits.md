@@ -69,3 +69,4 @@ Used Assets and Tools!
 - https://github.com/electron/rcedit/releases
 - https://casual-effects.com/data/
 - Models downloaded from Morgan McGuire's [Computer Graphics Archive](https://casual-effects.com/data)
+- https://www.fontsquirrel.com/fonts/oswald

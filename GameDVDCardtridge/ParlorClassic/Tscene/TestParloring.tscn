@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnering.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/TestParloring.gd" type="Script" id=3]
+
+[node name="TestParloring" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Balon" parent="." instance=ExtResource( 1 )]
+position = Vector2( 963.111, 549.091 )
+linear_velocity = Vector2( 0, -1 )
+
+[node name="Spawnering" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2146.45, 599.37 )

@@ -10,8 +10,15 @@ export (float) var KixlonzCurrency = 0
 
 func LoadKixlonz():
 	KixlonzFile = File.new()
-	KixlonzFile.open(KixlonzWalletPath, File.READ)
-	var formater = KixlonzFile.get_as_text()
+	var formater
+	if KixlonzFile.open(KixlonzWalletPath, File.READ) == OK:
+		formater = KixlonzFile.get_as_text()
+		pass
+	else:
+		formater = "10"
+		KixlonzFile.open(KixlonzWalletPath, File.WRITE)
+		KixlonzFile.store_string(formater)
+		pass
 	KixlonzCurrency = float(formater)
 	KixlonzFile.close()
 	pass

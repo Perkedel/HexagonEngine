@@ -1,0 +1,94 @@
+Parlor. The family friendly circus carnival shooting galery game.
+Joel Robert Justiawan (2101629672) = Lead, Programmer
+Septesen (2101689311) = Artist
+Billy Husada (2101638531) = UI & Game Design
+Vincent Thamrin (2101693246) = Artist
+Mangku Widodo (1801383682) = Audio, Programmer
+Denni Joandi (2101650543) = Game Design, Artist (Yah! kok jebol absen sih?! Sayang, donk! SADD)
+Yudhistira Rizqi Hersanda (2101653324) = Audio
+
+Using assets:
+Vincent Thamrin original drawn wepons
+Septesen running objects images of Balon, Tong Barrel, Menu themes and box
+Billy Husada UI design out of Wireframe concept
+Joel Robert Justiawan previous semester background of StarLight, from 2D Animation subject, Qmoveph. HUFF!!! so hard to find great seamless graphic!
+https://freesound.org/people/qubodup/sounds/222373/
+https://freesound.org/people/Gniffelbaf/sounds/82109/
+https://freesound.org/people/kevinkace/sounds/66770/
+https://freesound.org/people/kyles/sounds/452596/
+https://freesound.org/people/Nanashi/sounds/104412/
+https://freesound.org/people/kyles/sounds/450854/
+https://freesound.org/people/Bird_man/sounds/275151/
+https://freesound.org/people/cabled_mess/sounds/350927/
+https://freesound.org/people/sharesynth/sounds/341243/
+https://freesound.org/people/nioczkus/sounds/396331/
+https://freesound.org/people/Leszek_Szary/sounds/133283/
+https://freesound.org/people/wilhellboy/sounds/351369/
+https://www.freepik.com/free-vector/seamless-background-with-flowers-garden_1250798.htm
+https://www.freepik.com/free-vector/isolated-nature-decor_3875002.htm#page=1&query=garden%20pattern
+https://www.freepik.com/free-vector/seamless-scene-with-trees-park_4866970.htm#page=1&query=garden%20seamless
+https://www.freepik.com/free-vector/seamless-scene-with-trees-park_4866970.htm
+(Assets that lose credit may be removed even to the source code. If you finally found credit, please immediately send to @JOELwindows7 , to prevent them from being thrown away)
+
+Reference:
+https://support.unity3d.com/hc/en-us/articles/115000341143-How-do-I-read-and-write-data-from-a-text-file-
+https://www.youtube.com/watch?v=epRPKFsOPck bekgron scrollin
+https://www.youtube.com/watch?v=DWmD1RRORfc
+https://www.youtube.com/watch?v=YOaYQrN1oYQ
+https://www.youtube.com/watch?v=Nz5qD1EowL4
+https://www.youtube.com/watch?v=ZbQWtd1VkJw
+https://docs.unity3d.com/ Oh no! I forgot to credit some Unity documents!!!
+https://docs.unity3d.com/Manual/UnityAds.html
+https://docs.unity3d.com/Manual/StreamingAssets.html
+https://docs.unity3d.com/ScriptReference/EditorWindow.html
+https://unityads.unity3d.com/help/unity/integration-guide-unity
+https://developers.google.com/admob/android/test-ads
+https://developers.google.com/admob/unity/banner
+https://developers.google.com/admob/unity/start
+https://developers.google.com/admob/unity/test-ads
+https://developers.google.com/admob/android/interstitial?hl=id
+https://support.google.com/admob/answer/6128543?hl=id
+https://developers.google.com/admob/android/quick-start
+https://forum.unity.com/threads/open-external-files.25561/
+https://stackoverflow.com/questions/8714197/c-sharp-streamreader-save-to-array-with-separator
+https://stackoverflow.com/questions/24402836/how-to-integrate-admob-interstitial-in-unity
+https://en.wikipedia.org/wiki/Unity_(game_engine)
+
+https://freesound.org/people/JOELwindows7/downloaded_sounds/
+
+(If some references weren't here, they are in each related script.)
+
+Source code:
+https://github.com/JOELwindows7/The_Game_Of_Ransax
+GNU GPL v3
+WARNING: use your own Advertisement ID!!!
+
+Oh Tydac! We are bored!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

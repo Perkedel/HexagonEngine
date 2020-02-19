@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Parlor.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnering.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/GamePlay.gd" type="Script" id=4]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Bekgronding.tscn" type="PackedScene" id=9]
+
+[node name="ParlorClassic" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="GameField" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="GameField"]
+anchor_mode = 0
+current = true
+
+[node name="GamePlay" type="Node2D" parent="GameField"]
+script = ExtResource( 4 )
+
+[node name="Balon" parent="GameField/GamePlay" instance=ExtResource( 6 )]
+position = Vector2( 1464, 585 )
+
+[node name="Spawnering" parent="GameField/GamePlay" instance=ExtResource( 3 )]
+position = Vector2( 2072, 583 )
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="Bekgronding" parent="." instance=ExtResource( 9 )]
+scroll_base_offset = Vector2( 0, 0 )
+[connection signal="AboutCreditNow" from="UI" to="." method="_on_UI_AboutCreditNow"]
+[connection signal="ChangeDVDNow" from="UI" to="." method="_on_UI_ChangeDVDNow"]
+[connection signal="ExitNow" from="UI" to="." method="_on_UI_ExitNow"]
+[connection signal="InstructionNow" from="UI" to="." method="_on_UI_InstructionNow"]
+[connection signal="PlayNow" from="UI" to="." method="_on_UI_PlayNow"]
+[connection signal="SettingNow" from="UI" to="." method="_on_UI_SettingNow"]

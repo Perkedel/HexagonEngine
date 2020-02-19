@@ -20,6 +20,7 @@ layer = 11
 
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]
 visible = false
+mouse_filter = 1
 
 [node name="SystemGut" type="Node" parent="."]
 pause_mode = 2

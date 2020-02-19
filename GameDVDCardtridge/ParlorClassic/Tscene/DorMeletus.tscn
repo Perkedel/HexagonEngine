@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tres/BalonDuar.tres" type="Material" id=1]
+[ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=2]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Audio/82109__gniffelbaf__balloon-burst-01.wav" type="AudioStream" id=3]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/DorMeletus.gd" type="Script" id=4]
+
+[node name="DorMeletus" type="Particles2D"]
+emitting = false
+amount = 100
+lifetime = 10.0
+one_shot = true
+speed_scale = 3.78
+explosiveness = 1.0
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Suara" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Timerouter" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+[connection signal="timeout" from="Timerouter" to="." method="_on_Timerouter_timeout"]

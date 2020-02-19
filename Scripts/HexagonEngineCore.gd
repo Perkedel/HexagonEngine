@@ -63,6 +63,11 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 	if Index == 1:
 		LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
 		pass
+	if Index == 2:
+		LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
+		pass
+	else:
+		pass
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
 

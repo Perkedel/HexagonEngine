@@ -1,0 +1,163 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlayUI.gd" type="Script" id=1]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/MetererBekgron.png" type="Texture" id=4]
+[ext_resource path="res://font/Built/Oswald_B_72.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Sprites/MetererProgress.png" type="Texture" id=6]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Vincent Thamrin/HandGun.png" type="Texture" id=7]
+[ext_resource path="res://font/Built/Oswald_B_48.tres" type="DynamicFont" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 2 )
+
+[node name="GamePlayUI" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContainsHUD" type="VBoxContainer" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopHUD" type="HBoxContainer" parent="ContainsHUD"]
+margin_right = 1920.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 75 )
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="PauseButton" parent="ContainsHUD/TopHUD" instance=ExtResource( 3 )]
+pause_mode = 2
+margin_left = 835.0
+margin_right = 1085.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="Space" type="CenterContainer" parent="ContainsHUD"]
+margin_top = 83.0
+margin_right = 1920.0
+margin_bottom = 972.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BottomHUD" type="HBoxContainer" parent="ContainsHUD"]
+margin_top = 980.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 0, 100 )
+alignment = 1
+
+[node name="AmmoBar" type="HBoxContainer" parent="ContainsHUD/BottomHUD"]
+margin_right = 852.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ReloadButton" type="Button" parent="ContainsHUD/BottomHUD/AmmoBar"]
+margin_right = 852.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContainsHUD/BottomHUD/AmmoBar/ReloadButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmmoCounterPercent" type="TextureProgress" parent="ContainsHUD/BottomHUD/AmmoBar/ReloadButton/HBoxContainer"]
+margin_right = 768.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 6 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmmoNumber" type="Label" parent="ContainsHUD/BottomHUD/AmmoBar/ReloadButton/HBoxContainer"]
+margin_left = 776.0
+margin_right = 852.0
+margin_bottom = 99.0
+custom_fonts/font = ExtResource( 5 )
+text = "12"
+
+[node name="AmmoBar2" type="HBoxContainer" parent="ContainsHUD/BottomHUD"]
+margin_left = 860.0
+margin_right = 1060.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 3
+
+[node name="WeponSelect" type="HBoxContainer" parent="ContainsHUD/BottomHUD"]
+margin_left = 1068.0
+margin_right = 1920.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PrevWepon" type="Button" parent="ContainsHUD/BottomHUD/WeponSelect"]
+margin_right = 150.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "PREV"
+
+[node name="WeponIcon" type="HBoxContainer" parent="ContainsHUD/BottomHUD/WeponSelect"]
+margin_left = 158.0
+margin_right = 694.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="WeponImage" type="TextureRect" parent="ContainsHUD/BottomHUD/WeponSelect/WeponIcon"]
+margin_right = 129.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="WeponLabel" type="Label" parent="ContainsHUD/BottomHUD/WeponSelect/WeponIcon"]
+margin_left = 137.0
+margin_right = 536.0
+margin_bottom = 99.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 5 )
+text = "Tangan Pistol"
+
+[node name="NextWepon" type="Button" parent="ContainsHUD/BottomHUD/WeponSelect"]
+margin_left = 702.0
+margin_right = 852.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "NEXT"
+[connection signal="pressed" from="ContainsHUD/TopHUD/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="ContainsHUD/BottomHUD/AmmoBar/ReloadButton" to="." method="_on_ReloadButton_pressed"]
+[connection signal="pressed" from="ContainsHUD/BottomHUD/WeponSelect/PrevWepon" to="." method="_on_PrevWepon_pressed"]

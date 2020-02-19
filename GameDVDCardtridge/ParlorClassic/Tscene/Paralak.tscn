@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/DefaultImageTexture.tres" type="Texture" id=1]
+
+[node name="Paralak" type="ParallaxLayer"]
+
+[node name="Bekgron" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 30720, 1080 )
+__meta__ = {
+"_editor_description_": ""
+}

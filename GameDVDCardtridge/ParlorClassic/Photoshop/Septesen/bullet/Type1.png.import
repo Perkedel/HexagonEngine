@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Type1.png-ca16ac8cd5ba0a6b5f43476f1909c4db.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/bullet/Type1.png"
+dest_files=[ "res://.import/Type1.png-ca16ac8cd5ba0a6b5f43476f1909c4db.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

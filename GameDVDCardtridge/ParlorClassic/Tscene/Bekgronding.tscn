@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Paralak.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Bekgronding.gd" type="Script" id=2]
+
+[node name="Bekgronding" type="ParallaxBackground"]
+scroll_base_offset = Vector2( 0, -540 )
+script = ExtResource( 2 )
+
+[node name="Paralak" parent="." instance=ExtResource( 1 )]
