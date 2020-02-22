@@ -9,3 +9,6 @@ export_presets.cfg
 
 # Admob-specific ignores, it is dangerous to reveal the real AdMob id as it could be abused!
 *.admob
+
+# Unity meta files
+*.meta
