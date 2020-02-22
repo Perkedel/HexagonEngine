@@ -28,6 +28,8 @@ export (float, 0, 100) var HPlevel = 100
 export (Texture) var ScoreIcon
 export (float) var ScoreNumber = 2000
 
+export(bool) var KeepPlayingEvenOutOfFocus = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$MainMenu/VBoxContainer/MenuButtonings/FocusArea/SamPlayArea/PlayButton.grab_focus()
@@ -206,6 +208,15 @@ func _notification(what):
 		AttempTheQuitGame()
 		pass
 	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+		if isPlayingGameNow and not KeepPlayingEvenOutOfFocus:
+			#  https://docs.godotengine.org/en/3.2/tutorials/inputs/inputevent.html
+			# https://docs.godotengine.org/en/3.2/classes/class_inputeventkey.html#class-inputeventkey
+			# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
+			# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
+			if not Input.is_key_pressed(KEY_PRINT) or not Input.is_key_pressed(KEY_SYSREQ):
+				emit_signal("PressPauseButton")
+				pass
+			pass
 		print("Hexagon Engine Defocused!")
 		pass
 	pass
@@ -417,4 +428,9 @@ func _on_NextMenu_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpac
 	a2DSpaceReportScore = a2DSpaceScore
 	a3DSpaceReportScore = a3DSpaceScore
 	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
+	pass # Replace with function body.
+
+
+func _on_NextMenu_canThisLevelPlayEvenOutOfFocus(mayI):
+	KeepPlayingEvenOutOfFocus = mayI
 	pass # Replace with function body.

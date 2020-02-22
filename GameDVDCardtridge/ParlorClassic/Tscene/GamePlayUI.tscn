@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlayUI.gd" type="Script" id=1]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Sprites/MetererProgress.png" type="Texture" id=6]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Vincent Thamrin/HandGun.png" type="Texture" id=7]
 [ext_resource path="res://font/Built/Oswald_B_48.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Sprites/AnotherMetererBekgron.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/AnotherMetererOver.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/AnotherMetererProgress.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -40,8 +43,23 @@ __meta__ = {
 margin_right = 1920.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 0, 75 )
+mouse_filter = 0
 size_flags_horizontal = 3
 alignment = 1
+
+[node name="Score" type="HBoxContainer" parent="ContainsHUD/TopHUD"]
+margin_right = 827.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ContainsHUD/TopHUD/Score"]
+margin_right = 827.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 8 )
+text = "Score: 12345678901234567890"
 
 [node name="PauseButton" parent="ContainsHUD/TopHUD" instance=ExtResource( 3 )]
 pause_mode = 2
@@ -49,6 +67,25 @@ margin_left = 835.0
 margin_right = 1085.0
 margin_bottom = 75.0
 custom_fonts/font = SubResource( 1 )
+UseTheme = true
+
+[node name="HealthPoint" type="HBoxContainer" parent="ContainsHUD/TopHUD"]
+margin_left = 1093.0
+margin_right = 1920.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureProgress" type="TextureProgress" parent="ContainsHUD/TopHUD/HealthPoint"]
+margin_right = 827.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+texture_under = ExtResource( 9 )
+texture_over = ExtResource( 10 )
+texture_progress = ExtResource( 11 )
+nine_patch_stretch = true
 
 [node name="Space" type="CenterContainer" parent="ContainsHUD"]
 margin_top = 83.0
@@ -63,6 +100,7 @@ margin_top = 980.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
+mouse_filter = 0
 alignment = 1
 
 [node name="AmmoBar" type="HBoxContainer" parent="ContainsHUD/BottomHUD"]
@@ -161,3 +199,4 @@ text = "NEXT"
 [connection signal="pressed" from="ContainsHUD/TopHUD/PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="ContainsHUD/BottomHUD/AmmoBar/ReloadButton" to="." method="_on_ReloadButton_pressed"]
 [connection signal="pressed" from="ContainsHUD/BottomHUD/WeponSelect/PrevWepon" to="." method="_on_PrevWepon_pressed"]
+[connection signal="pressed" from="ContainsHUD/BottomHUD/WeponSelect/NextWepon" to="." method="_on_NextWepon_pressed"]

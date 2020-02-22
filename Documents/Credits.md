@@ -29,6 +29,26 @@ Table of Refferences!
 |Brackeys| Unity Loading Bar| using Coroutine of an IEnumerator progress watching and spawn of Scene| https://www.youtube.com/watch?v=YMj2qPq9CP8 | <100% | ??? | `-`|
 |Perkedel Technologies| Demo of Brackeys Loading Bar but it's Godot instead of Unity | How did Joel make his own version of Loading Resource Scene with Loading Bar for Godot Engine| https://github.com/Perkedel/Where_Is_LoadingBar_Functionality/blob/master/GenLoad.gd | <100% | GNU GPL v3 | `by JOELwindows7; Perkedel Technologies; GNU GPL v3; Some Rights Reserved`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
+
 
 
 
@@ -45,6 +65,38 @@ Used Assets and Tools!
 |GIMP team | GIMP | Raster image editing software | https://www.gimp.org/ | <100% | GNU GPL v2+ | `-` |
 |badges | Badge on GitHub Custom | Make Own Badge for GitHub | https://www.shields.io/ | 0% | CC0-1.0 | `-` |
 |dwyl | Hits | Track Hit view count of your GitHub Git | https://hits.dwyl.com/ | <100% | ??? | `-` |
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+|<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
+
+
 
 ## Unimplemented Credit, QUick And RAW reference
 - https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
@@ -70,3 +122,32 @@ Used Assets and Tools!
 - https://casual-effects.com/data/
 - Models downloaded from Morgan McGuire's [Computer Graphics Archive](https://casual-effects.com/data)
 - https://www.fontsquirrel.com/fonts/oswald
+- https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+- http://archive.zbrushcentral.com/showthread.php?169189
+- https://blenderartists.org/t/free-full-anatomy-model/543683
+- https://www.deviantart.com/krypt77/art/Blender-s-candies-655626371
+- https://www.3dcadbrowser.com/3dmodels.aspx?download=organs
+- https://www.blender.org/forum/viewtopic.php?t=18604
+- http://godotengine.org/qa/11538/get-mouse-position-in-world
+- https://m.box.com/shared_item/https%3A%2F%2Fapp.box.com%2Fs%2Fz14r2tofxp
+- https://www.blender.org/forum/viewtopic.php?t=24068
+- http://godotengine.org/qa/130/how-can-detect-collision-from-collisionpollygon2d-object
+- http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d-property-contacts-reported
+- http://godotengine.org/qa/130/how-can-detect-collision-from-collisionpollygon2d-object
+- http://docs.godotengine.org/en/latest/tutorials/physics/physics_introduction.html
+- https://twitter.com/Maddnsk/status/1229817927521767427?s=09
+- https://docs.godotengine.org/en/3.1/tutorials/2d/particle_systems_2d.html 
+- http://godotengine.org/qa/6615/dragging-object-in-godot-rigidbody2d-dragging
+- https://www.reddit.com/r/okbuddyretard/comments/erhnfb/funky/
+- http://godotengine.org/qa/15528/how-do-i-delete-my-node-once-im-done-with-it
+- http://kidscancode.org/blog/2017/04/godot_101_12/
+- http://godotengine.org/qa/27280/button-over-monitored-area-mouse-filter
+- http://godotengine.org/qa/14699/how-do-i-spawn-objects-in-the-world-at-specific-places
+- http://godotengine.org/qa/33634/connect-a-click-event-not-in-canvaslayer
+- https://docs.godotengine.org/en/3.1/getting_started/workflow/assets/import_process.html
+- http://godotengine.org/qa/27280/button-over-monitored-area-mouse-filter
+- http://godotengine.org/qa/40998/how-to-make-an-infinite-scrolling-background
+- https://docs.godotengine.org/en/3.1/tutorials/2d/particle_systems_2d.html
+- http://godotengine.org/qa/13845/canvas-layer-and-input-events
+- https://www.deviantart.com/nitwitsworld/art/Breezie-model-by-mrokidoki97-773367507
+- http://godotengine.org/qa/15528/how-do-i-delete-my-node-once-im-done-with-it

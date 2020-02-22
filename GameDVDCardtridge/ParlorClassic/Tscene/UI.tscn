@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/UI.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Oswald_B_72.tres" type="DynamicFont" id=2]
 [ext_resource path="res://font/Built/Oswald_B_36.tres" type="DynamicFont" id=3]
 [ext_resource path="res://font/Built/Oswald_B_48.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlayUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" type="Texture" id=9]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustTitleParlor.png" type="Texture" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=12]
@@ -276,9 +277,19 @@ visible = false
 
 [node name="NextMenu" parent="MasterMindUI" instance=ExtResource( 12 )]
 visible = false
+
+[node name="AreYouSureDialog" parent="MasterMindUI" instance=ExtResource( 6 )]
+visible = true
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/SettingNow" to="." method="_on_SettingNow_pressed"]
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/AboutCreditNow" to="." method="_on_AboutCreditNow_pressed"]
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/ChangeDVDnow" to="." method="_on_ChangeDVDnow_pressed"]
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/PlayNow" to="." method="_on_PlayNow_pressed"]
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/InstructionNow" to="." method="_on_InstructionNow_pressed"]
+[connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/ExitNow" to="." method="_on_ExitNow_pressed"]
 [connection signal="pressed" from="MasterMindUI/MainMenu/SpakBox/SpecialButton/ShopButton" to="." method="_on_ShopButton_pressed"]
+[connection signal="NextWeponNow" from="MasterMindUI/GamePlayUI" to="." method="_on_GamePlayUI_NextWeponNow"]
+[connection signal="PauseNow" from="MasterMindUI/GamePlayUI" to="." method="_on_GamePlayUI_PauseNow"]
+[connection signal="PrevWeponNow" from="MasterMindUI/GamePlayUI" to="." method="_on_GamePlayUI_PrevWeponNow"]
+[connection signal="ReloadNow" from="MasterMindUI/GamePlayUI" to="." method="_on_GamePlayUI_ReloadNow"]
+[connection signal="NoImNotSure" from="MasterMindUI/AreYouSureDialog" to="." method="_on_AreYouSureDialog_NoImNotSure"]
+[connection signal="YesImSure" from="MasterMindUI/AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesImSure"]

@@ -1,6 +1,6 @@
 extends ParallaxBackground
 
-export (float) var speedWay = -2
+export (float) var speedWay = -500
 export (float) var currentXoffset = 0
 export (bool) var EnableSpeed = true
 # Declare member variables here. Examples:
@@ -17,7 +17,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if EnableSpeed:
-		currentXoffset += speedWay
+		currentXoffset += speedWay * delta
 		pass
 	if currentXoffset <= float(-1920):
 		currentXoffset = 0

@@ -28,6 +28,7 @@ func PreConnectCards():
 		LevelCardings.connect("PleaseLoadThisLevelOf",self, "_ReceivesSignalClick")
 		print("Level Cards", LevelCardings)
 		LevelCardings.connect("AlsoPlsConnectThisReportStatus", self, "_ReceiveSignalStatus")
+		LevelCardings.connect("canThisLevelPlayEvenOutOfFocus", self, "_SecondPartSignalStatus")
 		pass
 	pass
 
@@ -53,10 +54,15 @@ func _ReceivesSignalClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle
 	pass
 
 signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+signal canThisLevelPlayEvenOutOfFocus(mayI)
 func _ReceiveSignalStatus(a3DReportsHP, a2DReportsHP,a3DReportsScore,a2DReportsScore):
 	a2DSpaceReportHP = a2DReportsHP
 	a3DSpaceReportHP = a3DReportsHP
 	a2DSpaceReportScore = a2DReportsScore
 	a3DSpaceReportScore = a3DReportsScore
 	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
+	pass
+
+func _SecondPartSignalStatus(MayIDisregardFocus):
+	emit_signal("canThisLevelPlayEvenOutOfFocus",MayIDisregardFocus)
 	pass

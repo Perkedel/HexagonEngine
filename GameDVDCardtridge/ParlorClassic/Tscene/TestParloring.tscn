@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnering.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/TestParloring.gd" type="Script" id=3]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnerung.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/BalonAtas.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/KokGakMeletus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/capekdeh.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/DontShoot.tscn" type="PackedScene" id=8]
 
 [node name="TestParloring" type="Node2D"]
 script = ExtResource( 3 )
@@ -13,3 +18,25 @@ linear_velocity = Vector2( 0, -1 )
 
 [node name="Spawnering" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2146.45, 599.37 )
+Randomizing = false
+
+[node name="Spawnerung" parent="." instance=ExtResource( 4 )]
+position = Vector2( 887.681, 1204.25 )
+SetSpawnIn = 1.0
+
+[node name="BalonAtas" parent="." instance=ExtResource( 5 )]
+position = Vector2( 963.111, 830.977 )
+contacts_reported = 0
+contact_monitor = false
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 502.11, 393.377 )
+
+[node name="KokGakMeletus" parent="." instance=ExtResource( 6 )]
+position = Vector2( 610.753, 549.091 )
+
+[node name="capekdeh" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1259.68, 364.103 )
+
+[node name="DontShoot" parent="." instance=ExtResource( 8 )]
+[connection signal="PlayerHitMe" from="DontShoot" to="." method="_on_DontShoot_PlayerHitMe"]

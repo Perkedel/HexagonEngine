@@ -25,3 +25,8 @@ signal LeaveAndBackToMenu
 func LeaveTheEditorNow():
 	emit_signal("LeaveAndBackToMenu")
 	pass
+
+
+func _on_SaveKey_pressed():
+	#Todo: save this file
+	pass # Replace with function body.

@@ -65,6 +65,7 @@ LevelBannerThumbnail = ExtResource( 2 )
 LevelTitleg = "MusicEnjoy"
 a2DSpaceReportHP = true
 a2DSpaceReportScore = true
+KeepPlayingEvenOutOfFocus = true
 LevelDescription = "Music Room
 [b]Enjoy Now[/b]
 [i]AwYeah[/i]

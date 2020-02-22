@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://admob-lib/icon.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=6]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=7]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/GooglePlayIcon.png" type="Texture" id=8]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -32,7 +33,8 @@ margin_bottom = 972.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", null, false ]
+items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false ]
+fixed_icon_size = Vector2( 256, 256 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_top = 980.0

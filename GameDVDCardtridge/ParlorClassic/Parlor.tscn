@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Parlor.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnering.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/GamePlay.gd" type="Script" id=4]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlay.gd" type="Script" id=4]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnerung.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Bekgronding.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1318.12, 91.0764 )
 
 [node name="ParlorClassic" type="Node"]
 pause_mode = 2
@@ -15,25 +19,92 @@ script = ExtResource( 1 )
 pause_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="GameField"]
-anchor_mode = 0
+position = Vector2( 960, 540 )
 current = true
 
 [node name="GamePlay" type="Node2D" parent="GameField"]
 script = ExtResource( 4 )
 
-[node name="Balon" parent="GameField/GamePlay" instance=ExtResource( 6 )]
+[node name="Targets" type="Node2D" parent="GameField/GamePlay"]
+
+[node name="Balon" parent="GameField/GamePlay/Targets" instance=ExtResource( 6 )]
 position = Vector2( 1464, 585 )
 
-[node name="Spawnering" parent="GameField/GamePlay" instance=ExtResource( 3 )]
+[node name="Bullets" type="Node2D" parent="GameField/GamePlay"]
+
+[node name="Bekgron" type="Node2D" parent="GameField/GamePlay"]
+z_index = -1
+
+[node name="CompensatorTop" type="RigidBody2D" parent="GameField/GamePlay/Bekgron"]
+position = Vector2( 960, 0 )
+input_pickable = true
+collision_layer = 32
+collision_mask = 16
+mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameField/GamePlay/Bekgron/CompensatorTop"]
+shape = SubResource( 1 )
+
+[node name="CompensatorBottom" type="RigidBody2D" parent="GameField/GamePlay/Bekgron"]
+position = Vector2( 960, 1080 )
+input_pickable = true
+collision_layer = 32
+collision_mask = 16
+mode = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameField/GamePlay/Bekgron/CompensatorBottom"]
+polygon = PoolVector2Array( -1320.52, -104.283, -1314.8, 90.197, 1573.8, 113.077, 1562.36, -110.003, 966.029, -119.888, 30.7737, -111.53, 31.9471, 6.17297, -32.399, 3.72949, -32.8273, -114.18, -961.542, -115.944 )
+
+[node name="Spawnerers" type="Node2D" parent="GameField/GamePlay"]
+
+[node name="Spawnering" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 3 )]
 position = Vector2( 2072, 583 )
+SetSpawnIn = 1.0
+
+[node name="Spawnering2" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 3 )]
+position = Vector2( 2072, 774 )
+SetSpawnIn = 2.0
+
+[node name="Spawnering3" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 3 )]
+position = Vector2( 2072, 402 )
+SetSpawnIn = 3.0
+
+[node name="Spawnerung" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 5 )]
+position = Vector2( 393, 1225 )
+SetSpawnIn = 4.0
+
+[node name="Spawnerung2" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 5 )]
+position = Vector2( 964, 1225 )
+
+[node name="Spawnerung3" parent="GameField/GamePlay/Spawnerers" instance=ExtResource( 5 )]
+position = Vector2( 1524, 1225 )
+SetSpawnIn = 6.0
+
+[node name="Scroncher" type="Node2D" parent="GameField/GamePlay"]
+
+[node name="ScronchKey" type="Area2D" parent="GameField/GamePlay/Scroncher"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameField/GamePlay/Scroncher/ScronchKey"]
+polygon = PoolVector2Array( -0.771851, -355.28, -385.836, -359.706, -390.262, -5.6239, -394.688, 1348.74, -9.6239, 1556.76, 2243.22, 1565.61, 2590.71, 1215.26, 2536.05, -315.26, 65.6185, -346.428, -22.902, -687.232, 3101.87, -665.102, 3075.32, 1835.6, -762.048, 1809.05, -731.066, -758.048, 92.1747, -753.622 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
+follow_viewport_enable = false
 
 [node name="Bekgronding" parent="." instance=ExtResource( 9 )]
 scroll_base_offset = Vector2( 0, 0 )
+
+[node name="Speakering" type="AudioStreamPlayer" parent="."]
+[connection signal="body_entered" from="GameField/GamePlay/Scroncher/ScronchKey" to="." method="_on_ScronchKey_body_entered"]
 [connection signal="AboutCreditNow" from="UI" to="." method="_on_UI_AboutCreditNow"]
 [connection signal="ChangeDVDNow" from="UI" to="." method="_on_UI_ChangeDVDNow"]
 [connection signal="ExitNow" from="UI" to="." method="_on_UI_ExitNow"]
 [connection signal="InstructionNow" from="UI" to="." method="_on_UI_InstructionNow"]
+[connection signal="NextWeponPlease" from="UI" to="." method="_on_UI_NextWeponPlease"]
+[connection signal="NoPlease" from="UI" to="." method="_on_UI_NoPlease"]
+[connection signal="PausePlease" from="UI" to="." method="_on_UI_PausePlease"]
 [connection signal="PlayNow" from="UI" to="." method="_on_UI_PlayNow"]
+[connection signal="PrevWeponPlease" from="UI" to="." method="_on_UI_PrevWeponPlease"]
+[connection signal="ReloadPlease" from="UI" to="." method="_on_UI_ReloadPlease"]
 [connection signal="SettingNow" from="UI" to="." method="_on_UI_SettingNow"]
+[connection signal="ShopButton" from="UI" to="." method="_on_UI_ShopButton"]
+[connection signal="YesPlease" from="UI" to="." method="_on_UI_YesPlease"]

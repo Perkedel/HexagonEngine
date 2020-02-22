@@ -18,6 +18,7 @@ font_data = ExtResource( 3 )
 [node name="GameplayUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,11 +27,13 @@ __meta__ = {
 [node name="TotalVBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="TopVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
 margin_right = 1920.0
 margin_bottom = 354.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -38,6 +41,7 @@ size_flags_vertical = 3
 margin_right = 1920.0
 margin_bottom = 67.0
 rect_min_size = Vector2( 0, 50 )
+mouse_filter = 2
 size_flags_horizontal = 3
 alignment = 1
 
@@ -45,12 +49,14 @@ alignment = 1
 margin_left = 835.0
 margin_right = 1085.0
 margin_bottom = 67.0
+mouse_filter = 1
 custom_fonts/font = SubResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="TotalVBoxContainer"]
 margin_top = 362.0
 margin_right = 1920.0
 margin_bottom = 716.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -59,11 +65,13 @@ margin_left = 960.0
 margin_top = 177.0
 margin_right = 960.0
 margin_bottom = 177.0
+mouse_filter = 2
 
 [node name="BottomVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
 margin_top = 724.0
 margin_right = 1920.0
 margin_bottom = 1080.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
@@ -73,19 +81,24 @@ margin_top = 243.0
 margin_right = 1920.0
 margin_bottom = 298.0
 rect_min_size = Vector2( 0, 50 )
+mouse_filter = 2
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="CoineCounter" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 5 )]
+mouse_filter = 2
 
 [node name="MeserckSpacer" type="Control" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
 margin_left = 408.0
 margin_right = 1512.0
 margin_bottom = 55.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="WeponContaine" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 6 )]
+mouse_filter = 2
 
 [node name="HPbar" parent="TotalVBoxContainer/BottomVBoxContainer" instance=ExtResource( 4 )]
+mouse_filter = 2
 [connection signal="pressed" from="TotalVBoxContainer/TopVBoxContainer/TopButtonings/PauseButton" to="." method="_on_PauseButton_pressed"]

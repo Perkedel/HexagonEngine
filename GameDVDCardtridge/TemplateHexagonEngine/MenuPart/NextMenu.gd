@@ -173,6 +173,7 @@ func _on_LevelSelectArea_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, L
 #	pass
 
 signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+signal canThisLevelPlayEvenOutOfFocus(mayI)
 func _on_LevelSelectArea_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore):
 	a2DSpaceReportHP = a2DSpaceHP
 	a3DSpaceReportHP = a3DSpaceHP
@@ -180,4 +181,9 @@ func _on_LevelSelectArea_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, 
 	a3DSpaceReportScore = a3DSpaceScore
 	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
 	
+	pass # Replace with function body.
+
+
+func _on_LevelSelectArea_canThisLevelPlayEvenOutOfFocus(mayI):
+	emit_signal("canThisLevelPlayEvenOutOfFocus",mayI)
 	pass # Replace with function body.

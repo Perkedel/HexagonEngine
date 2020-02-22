@@ -6,6 +6,7 @@ extends Node
 # var b = "text"
 # Hexagon Engine is like Java but it's Godot. interpreted software! actualy no. it's sub-games inside this
 # fantasy console
+# TODO v3: Emmerge 2D and 3D into just one loading slot!
 enum CanvasLayerMode {Usual = 1, Priority = 10}
 
 enum MenuLists {Main_menu = 0, Setting_Menu = 1, Extras_Menu = 2, Unknown_Menu = 3, ChangeDVD_Menu = 3, GameplayUI_Menu = 4}

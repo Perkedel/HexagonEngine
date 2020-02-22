@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 export (float) var BalonHP = 1
-export (Vector2) var ArahJalan = Vector2(-1,0)
+export (Vector2) var ArahJalan = Vector2(-250,0)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,6 +9,8 @@ signal BalonMeletus
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#todo credit question
+	
 	pass # Replace with function body.
 
 # todo AddGameScore through SingletonerVirtual
@@ -19,7 +21,7 @@ func BalonMeletus():
 		var LoadParticle = load("res://GameDVDCardtridge/ParlorClassic/Tscene/DorMeletus.tscn")
 		var Particled = LoadParticle.instance()
 		var positioner = position
-		Particled.position = positioner + Vector2(0,.5)
+		Particled.position = positioner + Vector2(0,1)
 		$"..".add_child(Particled)
 		$".".queue_free()
 		pass
@@ -29,7 +31,7 @@ func BalonMeletus():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	translate(ArahJalan)
+	translate(ArahJalan * delta)
 	pass
 
 func _input(event):
@@ -51,10 +53,19 @@ func _on_Balon_input_event(viewport, event, shape_idx):
 #		self.queue_free()
 #		pass
 	if event is InputEventMouseButton:
-		BalonMeletus()
+		if event.pressed:
+			#BalonMeletus()
+			pass
+		
 		pass
 	pass # Replace with function body.
 
 
 func _on_Balon_body_entered(body):
+	BalonMeletus()
+	pass # Replace with function body.
+
+
+func _on_Balon_body_shape_entered(body_id, body, body_shape, local_shape):
+	BalonMeletus()
 	pass # Replace with function body.

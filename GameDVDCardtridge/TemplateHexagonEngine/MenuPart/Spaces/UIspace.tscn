@@ -12,6 +12,7 @@
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -48,6 +49,7 @@ visible = false
 [connection signal="GetYourMenuList" from="NextMenu" to="." method="_on_NextMenu_GetYourMenuList"]
 [connection signal="PleaseLoadThisLevelOf" from="NextMenu" to="." method="_on_NextMenu_PleaseLoadThisLevelOf"]
 [connection signal="PressBackButton" from="NextMenu" to="." method="_on_NextMenu_PressBackButton"]
+[connection signal="canThisLevelPlayEvenOutOfFocus" from="NextMenu" to="." method="_on_NextMenu_canThisLevelPlayEvenOutOfFocus"]
 [connection signal="PressPauseButton" from="GameplayUI" to="." method="_on_GameplayUI_PressPauseButton"]
 [connection signal="NoImNotSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_NoImNotSure"]
 [connection signal="YesImSure" from="AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesImSure"]

@@ -5,10 +5,11 @@
 [node name="Paralak" type="ParallaxLayer"]
 
 [node name="Bekgron" type="Sprite" parent="."]
+position = Vector2( -7680, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 30720, 1080 )
+region_rect = Rect2( -7680, 0, 30720, 1080 )
 __meta__ = {
 "_editor_description_": ""
 }

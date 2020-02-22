@@ -11,6 +11,7 @@ export(bool) var a2DSpaceReportHP = false
 export(bool) var a3DSpaceReportHP = false
 export(bool) var a2DSpaceReportScore = false
 export(bool) var a3DSpaceReportScore = false
+export(bool) var KeepPlayingEvenOutOfFocus = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
 export(String, MULTILINE) var LevelDescription
 
@@ -31,11 +32,13 @@ func UpdateDetails():
 
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
+signal canThisLevelPlayEvenOutOfFocus(mayI)
 func LoadThisLevelOfThat():
 	
 	emit_signal("PleaseLoadThisLevelOf", Your3DSpaceLevel.get_path(), Your2DSpaceLevel.get_path(), LevelBannerThumbnail.get_path(), LevelTitleg, LevelDescription)
 	#print("PleaseLoadThisLevelOf ", Your3DSpaceLevel.get_path()," | ", Your2DSpaceLevel.get_path()," | ", LevelBannerThumbnail.get_path(), " | ", LevelTitleg, " | ", LevelDescription)
 	emit_signal("AlsoPlsConnectThisReportStatus",a3DSpaceReportHP,a2DSpaceReportHP,a3DSpaceReportScore,a2DSpaceReportScore)
+	emit_signal("canThisLevelPlayEvenOutOfFocus",KeepPlayingEvenOutOfFocus)
 	pass
 
 

@@ -85,6 +85,7 @@ margin_left = -761.0
 margin_top = -208.0
 margin_right = 762.0
 margin_bottom = 207.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

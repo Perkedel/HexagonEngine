@@ -83,7 +83,7 @@ android {
             java.srcDirs = [
                     'src'
 //DIR_SRC_BEGIN
-,'C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/android/admob-plugin/src'
+,'/media/joelwindows7/OS/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/android/admob-plugin/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [
@@ -123,6 +123,8 @@ android {
 
 //CHUNK_GLOBAL_BEGIN
 //CHUNK_GLOBAL_END
+
+
 
 
 

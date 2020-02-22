@@ -21,7 +21,11 @@ tracks/0/keys = {
 [node name="TitleBox" type="CenterContainer"]
 margin_right = 1920.0
 margin_bottom = 200.0
+mouse_filter = 2
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LogoImage" type="TextureRect" parent="."]
 margin_right = 1920.0
