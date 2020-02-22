@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: 46835900c7aa06c4193a50407bff3006
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _MapPrfab/Level02
+    100002: _MapPrfab/Level02/Ground
+    100004: _MapPrfab/Level02/Item
+    100006: _MapPrfab/Level02/Water
+    400000: _MapPrfab/Level02/Transform
+    400002: _MapPrfab/Level02/Ground/Transform
+    400004: _MapPrfab/Level02/Item/Transform
+    400006: _MapPrfab/Level02/Water/Transform
+    11400000: _MapPrfab/Level02/MonoBehaviour-SuperTiled2Unity.SuperMap
+    11400002: _MapPrfab/Level02/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400004: _MapPrfab/Level02/Ground/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400006: _MapPrfab/Level02/Ground/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400008: _MapPrfab/Level02/Item/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400010: _MapPrfab/Level02/Item/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400012: _MapPrfab/Level02/Water/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400014: _MapPrfab/Level02/Water/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400016: _superAsset
+    100100000: _MapPrfab
+    2569400265252428796: _MapPrfab/Level02/Grid
+    3664157343022684176: _MapPrfab/Level02/Ground/TilemapRenderer
+    3664157343022684178: _MapPrfab/Level02/Item/TilemapRenderer
+    3664157343022684180: _MapPrfab/Level02/Water/TilemapRenderer
+    8195094279510102542: _MapPrfab/Level02/Ground/Tilemap
+    8195094279510102544: _MapPrfab/Level02/Item/Tilemap
+    8195094279510102546: _MapPrfab/Level02/Water/Tilemap
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  errors: []
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  tilesAsObjects: 0
+  importSorting: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets: []

@@ -1,0 +1,171 @@
+by JOELwindows7
+Perkedel Technologies
+Software: GNU GPL v3
+Stuffs: CC4.0-BY-SA
+
+Application Using/Reffering:
+Unity3D (c) Unity [100% $$$+]. This game was built with Unity3D.
+________ (c) ___________,__________[100% 3rdP-DRM]. Joel knows it was him. that guy lectures him. [Hint: dash after number is 0, check publisher and creator!]
+Audacity [<100%]. Edit audio!
+Inkscape [<100%]. Vector graphic!!!
+https://ezgif.com [100%]. Easy Gif making tool online!
+https://image.online-convert.com/convert-to-ico [100%]. Convert to ICO!!!
+Tiled https://thorbjorn.itch.io/tiled . create maps of sprites! for making 2D platformer!!!
+youtube-dl https://rg3.github.io/youtube-dl/ . Gratis and Open Source tool to download YouTube videos. supports some other sites as well! Comprehensive!!! (Warning! not GUI tool!)
+Iso Creator https://sourceforge.net/projects/iso-creator-cs/ . Open Source ISO creator!
+
+Refferences: (Big Shoutout and Thx)
+Digital-Phantom https://answers.unity.com/questions/930656/how-to-prevent-camera-rotation.html . The Follow camera without rotation.
+Unity UI tutorial Main menu https://unity3d.com/learn/tutorials/topics/user-interface-ui/creating-main-menu . Main menu Tutorial. Too long video! just copy code and left it.
+Unity Translate the transform https://docs.unity3d.com/ScriptReference/Transform.Translate.html . Camera move and other translate things.
+Unity Color https://docs.unity3d.com/ScriptReference/Color-ctor.html. Color components of all color thing.
+Unity OnDrag Scrollbar https://docs.unity3d.com/ScriptReference/UI.ScrollRect.OnDrag.html . detect if scrollbar being dragged!
+Unity Vibrate Android device https://docs.unity3d.com/ScriptReference/Handheld.Vibrate.html . this is unfun method and too cliche! Perkedel requires ASMR standard!!!
+Unity Audio Play https://docs.unity3d.com/ScriptReference/AudioSource.Play.html . Play an audio of that AudioSource component.
+Unity Random Range https://docs.unity3d.com/ScriptReference/Random.Range.html . random with boundary.
+Unity Random value https://docs.unity3d.com/ScriptReference/Random-value.html . random without boundary.
+Unity Stylish text guide https://docs.unity3d.com/Manual/StyledText.html . something stylish text.
+Unity can Debug Log stylishly! https://docs.unity3d.com/ScriptReference/Debug.Log.html . Debug log with formatings!
+Unity Platform definition https://docs.unity3d.com/Manual/PlatformDependentCompilation.html . Platform definition!
+Unity Instantiate a Prefab in runtime https://docs.unity3d.com/Manual/InstantiatingPrefabs.html . Spawn thing of this reffered prefab.
+Unity Object Instantiate https://docs.unity3d.com/ScriptReference/Object.Instantiate.html . the method of instantiate.
+Unity Particle System how to use thing https://docs.unity3d.com/Manual/PartSysUsage.html . That's how to use PartSys.
+Unity Button OnClick https://docs.unity3d.com/ScriptReference/UI.Button-onClick.html . how to add listener
+Unity Hinge Joint 2D https://docs.unity3d.com/Manual/class-HingeJoint2D.html https://www.youtube.com/watch?v=l6awvCT29yU . Joint 2d of hinge with angle limit and motorer trap door
+Unity Text mesh pro scriptss https://forum.unity.com/threads/changing-textmeshpro-text-from-ui-via-script.462250/ . Use TMPro namespace.
+Unity Timeline https://www.youtube.com/playlist?list=PLX2vGYjWbI0ToUaFCtOEuB_2QKv_OikMO . Timeline seems a mother of cutscene and is superior to animation.
+Unity Tilemap Collider2D https://unity3d.com/learn/tutorials/topics/2d-game-creation/tilemap-collider-2d-and-composite-collider-2d . Tilemap that has collider!
+Unity Community XBOX controller mapping http://wiki.unity3d.com/index.php?title=Xbox360Controller . Refference for Xinput based mapping.
+Brackeys' Menu tutorial https://www.youtube.com/watch?v=zc8ac_qUXQY . Nah that's better. WOW!!! BRACKEY!! THAT'S YOU!!! THX!!! Check out SampleMenuScene to see what I did follow.
+Brackeys' Option Menu https://www.youtube.com/watch?v=YOaYQrN1oYQ . Improvements!!! thx!!!
+Brackeys' Pause Menu https://www.youtube.com/watch?v=JivuXdrIHK0&t=29s . Thx again!!! Paused.
+Brackeys' Loading Screen https://www.youtube.com/watch?v=YMj2qPq9CP8 . Loading....
+Brackeys' Mobile Touch Control https://www.youtube.com/watch?v=bp2PiFC9sSs&t=771s . Use Touchscreen joystick to control in Mobile!!!
+Brackeys' Particle System Mega tutorial https://www.youtube.com/watch?v=FEA1wTMJAR0 . Explanation of this particle system.
+Brackeys' Sprite Shape tutorial get started https://www.youtube.com/watch?v=GSo_fU1JdfM . How to get started and use Sprite Shape.
+Brackeys' New Input system thing https://www.youtube.com/watch?v=Pzd8NhcRzVo . New Unity Input system experimental.
+Brackeys' Tilemap in Unity https://www.youtube.com/watch?v=ryISV_nH8qw . Unity now has tilemap! create perfectly aligned tile maps for pixel RPG game e.g.!
+Blackthornprod UI tutorial https://www.youtube.com/watch?v=_RIsfVOqTaE . Total fix something that Brackeys forgot such as UI scalings with Shift+Alt.
+Dilon Richie https://www.youtube.com/watch?v=dkduVooA9tE & https://youtu.be/FRbRQFpVFxg . UI navigation!
+Alexander Zotov https://www.youtube.com/watch?v=DNLAuV-d4sA . Jump Button! Standard Assets Cross Platform Input is now used for it!
+As Told By Waldo Pan Zoom https://www.youtube.com/watch?v=0G4vcH9N0gc . Pan and Zoom touch.
+As Told By Waldo Touch Button https://www.youtube.com/watch?v=VmGmMRhR-Ts . Cross Platform input is incompatible on WIndows!
+Learn Everything Fast https://www.youtube.com/watch?v=JoyjDac-oJY . This is not Jump button
+Devin Curry https://www.youtube.com/watch?v=gKjKFZ30684 . Sigh I'll figure out jump button myself.
+SHoonBee's cryptic message about soul composing. Joel knows what it means. If you correct, a VAPOUR of refference will rise against your head. But sorry, it's not the gift one. I don't have intention to gift lol. Think about it!
+Tony Morelli's jumping tutorial https://www.youtube.com/watch?v=cl201U1oUYs . Make this thing jump only if grounded!
+ChrisWoo found the RangeAtributes! https://answers.unity.com/questions/25074/whats-attribute-to-limit-range-of-serialized-varia.html . make the Inspector Script has that slider serialized score thingy!
+Fuzzy Logic Rotate camera https://gamedev.stackexchange.com/questions/104693/how-to-use-input-getaxismouse-x-y-to-rotate-the-camera . Camera is moved!
+AnaRhisT ZoomIN ZoomOUT https://answers.unity.com/questions/20228/mouse-wheel-zoom.html . Scroll wheel to ZOOM!
+Brian Kehrer https://answers.unity.com/questions/10006/mouse-camera-camera-mouse.html . Valid Tranform move camera.
+bbrode https://answers.unity.com/questions/208447/set-rotation-of-a-transform.html. reset rotation after respawn.
+Molix https://answers.unity.com/questions/14637/get-the-currently-open-scene-name-or-file-name.html. get currently active scene name.
+Mike 3 https://answers.unity.com/questions/16675/running-an-external-exe-file-from-unity.html . run EXE file from Unity
+sparkzbarca https://answers.unity.com/questions/331545/double-click-mouse-detection-.html . Double Click!
+Glued Brain https://answers.unity.com/questions/821148/modifying-wheel-joint-2d-motor-speed.html . Motor Speed Control
+CodeMasterMike https://answers.unity.com/questions/386592/using-delta-to-find-mouse-movement.html . Delta Mouse position sesungguhnya! (edited for this case)
+tebandesade https://answers.unity.com/questions/961372/ui-radio-button.html UI radio button. Put toggles inside a gameobject with ToggleGroup inspector!
+Various https://forum.unity.com/threads/how-to-skip-handheld-vibrate-when-building-for-mac-pc.166910/ . Platform Specific vibrate methods Handhel Vibrate!
+Fabryka Twórców Gier https://www.youtube.com/watch?v=H-jYAWtVnQA . Set this Unity Remote 5 up.
+Kuldeep Singh https://www.youtube.com/watch?v=eM3Vw0PGX4Y . Vibration class for Android introduction.
+Pro Android Dev https://proandroiddev.com/using-vibrate-in-android-b0e3ef5d5e07 . vibration refferences for new Android O and up.
+Eric5h5 https://answers.unity.com/questions/12301/how-can-i-get-a-parent-gameobject-of-gameobject-us.html . get Parent game object because SHanpe has children gameobject and that's what collide with items!!!
+Alex Stuart Mahan (YandereDev, EvaXephon) https://www.youtube.com/watch?v=8vT-97qiaNQ . Better naming for Proof Concept for Investors.
+xortrox https://answers.unity.com/questions/488583/how-to-stop-textures-from-getting-blurry.html . 2D shader.zip
+Sloan Kelly https://www.youtube.com/watch?v=5XJBBWI2F0I . scrollable text bar
+Fast Solution https://www.youtube.com/watch?v=PZ-s1lTpmTM . scroll view tutorial
+Karl Jones (Unity Technologies) https://forum.unity.com/threads/package-manager-missing-in-ui.535088/ . Reset package to default due to missing package manager in UI of editor.
+Nicholas Repiquet https://stackoverflow.com/questions/4561374/percentage-calculation . Calculation of percentage progress bar! (current / maximum) * 100 .
+Digital Native Studios (Unity) https://digitalnativestudios.com/forum/index.php?topic=890.0 . FAQ no. 9 .
+Matthew Poush (reply) https://www.youtube.com/watch?v=6SL6zs2bDks . The song name he found! it was at LimeGreenTeknii comment where Matthew Poush replied!
+Lemon Disappointment car https://en.wikipedia.org/wiki/Lemon_%28automobile%29 . Car that is bad! real bad! already bad!
+Lemon Car meme! e.g. https://knowyourmeme.com/memes/lemon-car . It's a lemon with wheels!
+Earl of Lemongrab (Lemongrab v1) http://adventuretime.wikia.com/wiki/Earl_of_Lemongrab . UNACCEPTABLE!!!!!!!
+Lapigames Traffic Sign Asset pack for Unity https://lapigames.itch.io/unity-city-traffic-signs . Bonus! great useful for all things sign!
+lonelydodo found error when he nulled the connected rigidbody https://forum.unity.com/threads/disabling-joints.87811/ . So I don't mess it but make the break force and break torque lowest possible!
+Aaron Nieze http://goinkscape.com/how-to-create-3d-perspective-grids-in-inkscape/ Create perspective inkscape. make perspective!
+Aaron Nieze http://goinkscape.com/using-perspective-for-3d-in-inkscape/ using perspective . branded perspective.
+Solitz and Leo https://superuser.com/questions/955129/built-in-disc-burning-software-in-windows-10 . Reappear the Windows Disc burner!
+Joel and Fillip W https://stackoverflow.com/questions/19132/expression-versus-statement . Expression vs Statement in c#. the variable ? 1 : 3 thingy
+Mosey Mimes https://www.youtube.com/watch?v=Y6xtGAqcIvg . Windows Sounds Collection pack download so many files!
+AgentWhatever https://www.youtube.com/watch?v=URsVQduqpRw . Windows Sounds Collection pack download!
+Windows Sounds https://winsounds.com/ . what did Mosey Mimes collect and make it easy to download all sound schemes!
+These people https://stackoverflow.com/questions/1352721/express-mathematical-infinity-in-c-sharp/ . Infinity number not in C#
+King Foo http://www.king-foo.com/2011/11/creating-debianubuntu-deb-packages/ . make dot deb packages the installation file for Debian based OS.
+LittleMissBurton http://www.furaffinity.net/view/30486874/ . The Ko-fi cup inspires me to make the game object of Ko-fi cup that is basically coffee mug with heart and https://ko-fi.com/joelwindows7 .
+Lirik Lagu Anak http://liriklaguanak.com/pok-ame-ame-lirik/ Pok Ame Ame . Emoji Pok Ame Ame adaptation easter egg poster.
+Programmer https://stackoverflow.com/questions/41393285/do-i-have-to-add-vibrate-permission-if-im-using-handheld-vibrate https://stackoverflow.com/questions/39651021/vibrate-with-duration-and-pattern/39668630#39668630 Vibrate Permission. If your app missing this permission it will not vibrate and for this unity game, the game is broken entirely, as if the method is invoked and fail that vibrate, the method won't run!!!
+
+
+
+Assets involved:
+Unity https://assetstore.unity.com/packages/tools/version-control/github-for-unity-118069 Github for Unity. to do Git with this Unity project
+Unity + Digital Native Studios https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126 Text Mesh Pro. Acquired by Unity. All in one Stylish Text solution!!! Must have or none of the coolness!!!
+Unity https://assetstore.unity.com/packages/essentials/tutorial-projects/2d-game-kit-107098 2D Game Kit. [Decommissioned] Ruining the Game Collider! Try Partial and watch what things change first!
+Unity https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351 2D Standard Asset Unity. Essential Unity's package containing Standard Assets for 2D things
+MOVINARC https://assetstore.unity.com/packages/tools/utilities/package-uninstaller-35439 Package Uninstaller. Sometimes, some package were no longer be needed. can be a hassle to remove just be like that.
+Fenerax Studio https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631 Virtual Joystick pack. There is now premade Touch joystick!!!. thx Brackeys for telling me this. It is inefficient to create from scratch!
+Seanba https://seanba.itch.io/supertiled2unity Super Tiled 2 Unity. Easy import Tiled! instant prefabs per TMX and Tiled sheets!!! drag and drop the TMX file to the scene!!! WOAHOW SIMPLEZ!!! MANTAB JIWA!!!
+ENSOU https://assetstore.unity.com/packages/tools/audio/ens-music-player-108759 Music Player. [Decommissioned] Missing Assembly refference mysteriously. ruins everything!
+Hajiyev Elnur https://assetstore.unity.com/packages/audio/music/professional-music-player-90589 Music Player. Professional Music Player!
+speps https://github.com/speps/XInputDotNet XinputDotNet. full Xbox controller support!
+Digital Ruby (Jeff Johnson) https://assetstore.unity.com/packages/tools/physics/advanced-polygon-collider-52265 Advanced Polygon 2Dcollider. make better collider of polygon with animation cache support, simplifications, and more time savings!
+Nick Judy https://www.youtube.com/watch?v=aKa0CLeTh4o Cartoon FX Sound pack. 
+
+Packages involved (Beside preinstalled and built-in, user installed!):
+2D Sprite Shape. Create bendable string of sprites! great for various shaped platform, and other weird stuff! Unity's experimental!!!
+Vector Graphics. SVG in Unity!!! Scalable Sprite Assets!!! no more broken image! Oh turns out still not in relevant worthness. unable to acceleration path points!
+
+DownloadExtra:
+Scripts:
+aVolpe https://gist.github.com/aVolpe/707c8cf46b1bb8dfb363 . Vibration class for Android.
+Pack:
+Kenney Vleugels https://kenney.nl https://kenney.itch.io https://opengameart.org/comment/58559 . Platformer Complete Pack 0.
+
+(FLAC is not supported by Unity default! maybe try use some asset package?)
+(Audacity edited if necessary)
+Audio:
+<link> Sound description. [rights reserved by]. (edited render name.extension, info)
+Freesounds.org:
+https://freesound.org/people/qubodup/sounds/332056/ Collision sound. [0%] CC0. (Collision.wav)
+https://freesound.org/people/qubodup/sounds/54850 Wood collision collection. [0%] CC0.. (WoodCollideN.wav, N is number of sound out of multisounds. We spliced each sound parts into individual tracks and render each tracks. One track One file. The options is available!)
+https://freesound.org/people/waveplay_old/sounds/399934/#comments percussion snap for Selection in Menu. [0%] CC0.
+https://freesound.org/people/sharesynth/sounds/344500 Jump 8 bit. [0%] CC0.
+https://freesound.org/people/Claire.H/sounds/182345 marble rolling on a stone table. [<100%] CC-BY.
+https://freesound.org/people/kyles/sounds/452596/ Door kick open . [0%] CC0.
+https://freesound.org/people/cdrk/sounds/264594/ Reception bell . [<100%] CC-BY. (ReceptionBell.wav, we shorten the sound and export it to wav. the orignal file is FLAC!)
+... Sounds Downloaded by JOELwindows7 https://freesound.org/people/JOELwindows7/downloaded_sounds/
+
+YouTube.com:
+Video Downloaded:
+https://www.youtube.com/watch?v=Gm73TwtUyGY https://photos.app.goo.gl/DNr8Awj1tUcU4z4U9 Lost infamous funny explosion mkv. [???]. (Explodos.wav, we took the google photo backup version, trim the delay start, add fade out to fill its emptiness end, and convert export it to audio file.)
+https://www.youtube.com/watch?v=skMloYSZiRw GradeAUnderA Tada uploaded by Michael Ferrel. [???]. Big shoutout for he upload post such rare sound!
+https://www.youtube.com/watch?v=YXBhR1EKe7w Explosion bin. [100%]. bin canon in Poland. (Explosion bin cropped.wav).
+https://www.youtube.com/watch?v=aKa0CLeTh4o Cartoon FX Sound pack Nick Judy. [100%]. Nick Judy collection http://www.mediafire.com/file/3b0d5wvu7rf8w8j/Cartoon+Sound+FX+Pack.zip , munch.wav.
+Audio Library https://www.youtube.com/audiolibrary :
+Music:
+Jimmy Fontanez - Floaters. infamously smooth jazz used by h3h3, Technology Connection, Raveja and Raveji, Silhouette Shadows inc., and much more. [0%??]. (Floaters.wav, there is hiccup on Mobile version!)
+SFX:
+
+Hajiyev Professional Music Player:
+See SourceCode://Assets/MusicPlayer/resources/musics !
+
+The Arcadium:
+TheFatRat - Unity https://lnk.to/tfrunity . Infamous cool song, because it's pun intended for this case! [<100%]. (Unity.wav, Remember, MP3 causes hiccup! convert to wav is the key! Also Includes the thumbnail image as well from its song page!)
+
+Fonts:
+https://fonts.google.com/specimen/Roboto Roboto by Christian Robertson. [<100%] Apache License. An infamous and cliche Google's general purpose font.
+https://www.wfonts.com/font/impact Impact. [???]. Memeful generations.
+https://www.dafontfree.net/freefonts-helvetica-f128587.htm Helvetica Regular. [???]. Helvetica standard.
+
+People: Perkedel Technologies
+Name (NIM). Role. Job Tier.
+- Joel Robert Justiawan (2101629672). Lead project. Founder.
+- Septesen (2101689311). Artist, Level Designer. Volunteer.
+-
+-
+Extra Contributors (Submit your ideas, designs, etc. related to this project to joel.robert99@yahoo.co.id with subject GEOGON-VSLICE-EXTRA-CONTRIB . Put your attachments there!!!):
+- SHoonBee. Grandpa of SHanpe.
+-
+-
+-

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Peluru.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Audio/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav" type="AudioStream" id=2]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/WeponNembakNoise.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Peluru" type="RigidBody2D"]
+input_pickable = true
+collision_layer = 16
+collision_mask = 36
+mode = 3
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 1 )
+WeponTembakSound = ExtResource( 2 )
+EmitThisSoundSpeaker = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="MissTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="PistolTembak" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Peluru_body_entered"]
+[connection signal="timeout" from="MissTimer" to="." method="_on_MissTimer_timeout"]

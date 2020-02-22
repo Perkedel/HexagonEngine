@@ -1,0 +1,1187 @@
+fileFormatVersion: 2
+guid: 513860ee1ffab5044875e6b4b1f99a77
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Trust Bar_0
+    21300002: Trust Bar_1
+    21300004: Trust Bar_2
+    21300006: Trust Bar_3
+    21300008: Trust Bar_4
+    21300010: Trust Bar_5
+    21300012: Trust Bar_6
+    21300014: Trust Bar_7
+    21300016: Trust Bar_8
+    21300018: Trust Bar_9
+    21300020: Trust Bar_10
+    21300022: Trust Bar_11
+    21300024: Trust Bar_12
+    21300026: Trust Bar_13
+    21300028: Trust Bar_14
+    21300030: Trust Bar_15
+    21300032: Trust Bar_16
+    21300034: Trust Bar_17
+    21300036: Trust Bar_18
+    21300038: Trust Bar_19
+    21300040: Trust Bar_20
+    21300042: Trust Bar_21
+    21300044: Trust Bar_22
+    21300046: Trust Bar_23
+    21300048: Trust Bar_24
+    21300050: Trust Bar_25
+    21300052: Trust Bar_26
+    21300054: Trust Bar_27
+    21300056: Trust Bar_28
+    21300058: Trust Bar_29
+    21300060: Trust Bar_30
+    21300062: Trust Bar_31
+    21300064: Trust Bar_32
+    21300066: Trust Bar_33
+    21300068: Trust Bar_34
+    21300070: Trust Bar_35
+    21300072: Trust Bar_36
+    21300074: Trust Bar_37
+    21300076: Trust Bar_38
+    21300078: Trust Bar_39
+    21300080: Trust Bar_40
+    21300082: Trust Bar_41
+    21300084: Trust Bar_42
+    21300086: Trust Bar_43
+    21300088: Trust Bar_44
+    21300090: Trust Bar_45
+    21300092: Trust Bar_46
+    21300094: Trust Bar_47
+    21300096: Trust Bar_48
+    21300098: Trust Bar_49
+    21300100: Trust Bar_50
+    21300102: Trust Bar_51
+    21300104: Trust Bar_52
+    21300106: Trust Bar_53
+    21300108: Trust Bar_54
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Trust Bar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1824.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483ec331b6dea3141ad1538ac4b4691d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1824.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ef1b287dd4e9b48a317a225457c124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1824.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed9551bcdd74ac4c8dd36986f55f563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1824.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2320035e9a18ca409e1eb8aca6b6636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1824.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98893212422546d409bffcb125649c9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1624.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0ad29ee3c8da848a2efd27ccd8956f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_6
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1624.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6e68fb2a50ae54e9747d0dcabd5cc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_7
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1624.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ff11580879c540a5478d40f85961b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_8
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1624.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a2f99232f60d64da1f24895344ac07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_9
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1624.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e625b19625180a4da44a09bb78ccbc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1424.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fee99607aaab0498392a31be383fd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1424.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7816d49c36089bb478e2806e3fb7d7fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_12
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1424.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c7e0ee901e5564398c1b111fa2807e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_13
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1424.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7a27dcee6e1014c80c39c2dd1fd453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_14
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1424.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7295d63057711f0459eb56c3afc70b6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1224.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c7f68abe7cd774f805bc9a056f918d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1224.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb12c898416dc924880042cff04bf66a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1224.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404fb4cca9c070a4e85205c634bd821e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_18
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1224.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05207feaa08b4e48ae98eef3a26fa26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1224.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0285685f9484dd4781b490d1befb23a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e7b2c53521c9c45ac8369571c5b753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1024.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5025debd718d94187a21872b9f3c9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1024.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795298eef942bc14eac889fdd0f39960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1024.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13b182ab9db1f49b459cdebdc319b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_24
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1024.5454
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9117f44c994a8994cbb0c5e014d4da1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf66e44d1b1d9c04594a7396007e2653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_26
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 824.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f8e890a372d8e4b9dc9bd5a32e56fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_27
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 824.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60da5dbdc3f0b0c43a182ed7890482f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_28
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 824.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0910eaa695d39748a550c6be420eb00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_29
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 824.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2dbc0a9b2d646498f557e1d7ef3111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0ba5971c7024e4fa842231f4bf729f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_31
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 624.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ecc3cc97ff5fd45880ec4743d503d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_32
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 624.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89705d7de19fdd4f817e5de86a77c08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_33
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 624.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98a5156f75720d4eb5adf6baa65ddd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_34
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 624.5455
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9677865ec0b57ee48bde5ee239d68fcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424.54547
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8075f5028013149b9ef03b43e9f735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_36
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 424.54547
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa45db282ee60864abc008a3392b1ed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_37
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 424.54547
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ddb186787c1984381b923588c7fad3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_38
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 424.54547
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea5a74a764f03045a93f60e4f705b5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_39
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 424.54547
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91da25f14909b7c4b98ad0f07f8c7e35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224.54546
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ccb930179dbe341a8e972572843307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_41
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 224.54546
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e716db1bf8a16a94baef9e1ecd1ba464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_42
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 224.54546
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cfed1a551a9d746a1967e2d316dc41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_43
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 224.54546
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451bc7f0e1f38c44f9ac63aaf30ed7fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_44
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 224.54546
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4dd8fe55c4a684c92f19ac4829e0e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24.545456
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55294add2064fe347a783a5c447efd6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 24.545456
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4725fbba3282ccd4fa3852416c3b0929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_47
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 24.545456
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dec80ea7d0efc34a958e9ca3877b329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_48
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 24.545456
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f609a48361d61eb468fca493f242eda7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trust Bar_49
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 24.545456
+        width: 1000
+        height: 130.45454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c4ca4f38218484795ac8cb7c041ff4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 02a360c1f9c25b7489c1cfc9be5262ff
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1440"
+   height="3040"
+   viewBox="0 0 1440 3040"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Sakyodik.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1118">
+      <stop
+         style="stop-color:#624e82;stop-opacity:0"
+         offset="0"
+         id="stop1114" />
+      <stop
+         style="stop-color:#ee4e82;stop-opacity:0.12138728"
+         offset="1"
+         id="stop1116" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient912">
+      <stop
+         style="stop-color:#82ff96;stop-opacity:1"
+         offset="0"
+         id="stop908" />
+      <stop
+         id="stop921"
+         offset="0.4868421"
+         style="stop-color:#82b8ff;stop-opacity:1" />
+      <stop
+         style="stop-color:#ffe155;stop-opacity:1"
+         offset="1"
+         id="stop910" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient841">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0.08381503"
+         offset="0"
+         id="stop837" />
+      <stop
+         style="stop-color:#fdffdd;stop-opacity:0.53333336"
+         offset="1"
+         id="stop839" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient841"
+       id="radialGradient887"
+       gradientUnits="userSpaceOnUse"
+       cx="720"
+       cy="-1047.3334"
+       fx="720"
+       fy="-1047.3334"
+       r="1180" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient912"
+       id="linearGradient914"
+       x1="720"
+       y1="-507.33334"
+       x2="720"
+       y2="2532.6667"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1118"
+       id="radialGradient1120"
+       cx="700"
+       cy="1532.6666"
+       fx="700"
+       fy="1532.6666"
+       r="685"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.58823533,0,0,0.58823533,308.2353,631.09805)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="114.86499"
+     inkscape:cy="1160.142"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-paths="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       enabled="true" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid817"
+       color="#ff3fff"
+       opacity="0.1254902"
+       empcolor="#ff3fff"
+       empopacity="0.25098039"
+       empspacing="100"
+       enabled="true" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid825"
+       empspacing="4"
+       enabled="false" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid827"
+       empspacing="64"
+       color="#ff3fff"
+       opacity="0.1254902"
+       empcolor="#ff3fff"
+       empopacity="0.25098039"
+       enabled="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,507.33335)">
+    <rect
+       style="fill:url(#linearGradient914);fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="rect819"
+       width="1440"
+       height="3040"
+       x="0"
+       y="-507.33334" />
+    <circle
+       style="fill:url(#radialGradient1120);fill-opacity:1;stroke:none;stroke-width:5.88235283;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="path1112"
+       r="400.00003"
+       cy="1532.6666"
+       cx="720" />
+    <circle
+       style="fill:url(#radialGradient887);fill-opacity:1;stroke:none;stroke-width:118;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="path823"
+       cx="720"
+       cy="-1047.3334"
+       r="1180" />
+    <g
+       id="g937">
+      <g
+         id="g925">
+        <circle
+           style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+           id="path831"
+           cx="720"
+           cy="-522.33337"
+           r="10" />
+        <circle
+           style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+           id="path829"
+           cx="720"
+           cy="-522.33337"
+           r="5" />
+      </g>
+      <g
+         id="g929">
+        <circle
+           style="fill:#ff6a00;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+           id="path833"
+           cx="720"
+           cy="-707.33337"
+           r="140" />
+        <rect
+           style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+           id="rect835"
+           width="40"
+           height="300"
+           x="700"
+           y="-867.33337" />
+      </g>
+    </g>
+    <circle
+       style="fill:#fd82dd;fill-opacity:0.53333315;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="path889"
+       cx="650"
+       cy="-417.33334"
+       r="50" />
+    <circle
+       style="fill:#fd82dd;fill-opacity:0.53333315;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="path891"
+       cx="790"
+       cy="-417.33334"
+       r="50" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.533333;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="rect895"
+       width="100"
+       height="100"
+       x="670"
+       y="-467.33334" />
+    <circle
+       style="fill:#3c82dd;fill-opacity:0.53333318;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       id="path893"
+       cx="720"
+       cy="-417.33334"
+       r="80" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:97.60056305px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffff82;fill-opacity:1;stroke:#006647;stroke-width:2.44001412;stroke-opacity:1"
+       id="text899"><textPath
+         xlink:href="#path901"
+         id="textPath906">I miss you...</textPath></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.09620991"
+       d="M -2.3634831,-7.9979771 C -2.3634831,-7.9979771 140,152.66665 680,192.66665"
+       id="path901"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g976"
+       transform="translate(0,3075)">
+      <circle
+         style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="circle972"
+         cx="720"
+         cy="-522.33337"
+         r="10" />
+      <circle
+         style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="circle974"
+         cx="720"
+         cy="-522.33337"
+         r="5" />
+    </g>
+    <g
+       id="g982"
+       transform="translate(0,3462.5)">
+      <circle
+         style="fill:#ff6a00;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="circle978"
+         cx="720"
+         cy="-689.83337"
+         r="140" />
+      <rect
+         style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+         id="rect980"
+         width="40"
+         height="300"
+         x="700"
+         y="-889.83337" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="2541.2695"
+         y="-918.09509"
+         id="text994"><tspan
+           sodipodi:role="line"
+           id="tspan992"
+           x="2541.2695"
+           y="-918.09509">https://www.gsmarena.com/samsung_galaxy_note10+-9732.php</tspan></text>
+      <g
+         id="g1008"
+         style="fill:#ffe19a;fill-opacity:1"
+         transform="translate(-100,659.9999)">
+        <rect
+           y="-1329.8333"
+           x="-400"
+           height="200"
+           width="50"
+           id="rect996"
+           style="fill:#ffe19a;fill-opacity:1;stroke:none;stroke-width:5.59016991;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m -385,-1319.8333 c 2.03943,-6.9801 4.82456,-13.6745 7.54939,-20.3857 2.74949,-6.2732 5.86776,-12.4198 9.64473,-18.0976 5.15864,-7.7311 11.824,-9.7403 20.27944,-14.6555 3.26098,-0.9241 6.70872,-0.6814 10.05655,-0.6821 4.42854,0.029 8.84545,-0.2176 13.22508,0.5532 4.09901,1.4378 7.89973,3.5202 12.0662,4.7759 4.36923,1.0305 8.87682,1.0711 13.33502,1.147 0.91516,-0.042 1.83562,-0.016 2.74549,-0.1257 0.94135,-0.114 5.90442,-1.1446 6.70904,-1.3081 3.53109,-0.7174 6.96682,-1.5948 10.43514,-2.5878 1.09804,-0.3558 2.20373,-0.6871 3.29411,-1.0674 2.72524,-0.9507 3.93445,-1.4231 6.50715,-2.7909 1.12396,-0.5976 4.41308,-2.5509 3.31079,-1.9113 -10.62354,6.1637 -12.05886,7.402 -5.44411,2.6001 10.06541,-7.814 18.39851,-17.5725 26.2476,-27.6776 10.17073,-13.2068 18.26941,-27.8618 25.56726,-42.9228 3.58274,-7.4077 6.71511,-15.0267 9.84075,-22.6484 0,0 13.28432,-6.314 13.28432,-6.314 v 0 c -3.42007,7.6836 -6.7021,15.4328 -10.38927,22.9865 -7.31492,15.0744 -15.23402,29.8444 -25.33324,43.144 -7.66877,10.1272 -15.82219,19.8982 -25.646,27.8665 -8.29946,6.3236 -3.66382,2.9856 -19.59351,12.5449 -4.17442,2.5051 -8.70476,4.2247 -13.35053,5.5147 -6.6263,1.8135 -13.41433,3.5515 -20.28389,3.785 -4.57763,-0.097 -9.2112,-0.1683 -13.65589,-1.4485 -4.04238,-1.3787 -7.79931,-3.5021 -11.92858,-4.5838 -4.33082,-0.5635 -8.69723,-0.3662 -13.05394,-0.3832 -3.29114,0.057 -6.7262,-0.077 -9.81163,1.2939 3.91597,-2.3754 7.84726,-4.7237 11.7479,-7.126 0.42706,-0.263 -0.89863,0.4426 -1.32503,0.7067 -2.07067,1.2829 -3.72464,3.1101 -5.09817,5.1476 -4.07184,5.4968 -7.19492,11.7151 -10.11698,17.9271 -2.64435,6.527 -5.356,13.0456 -7.10692,19.908 0,0 -13.70827,6.8153 -13.70827,6.8153 z"
+           id="path1004"
+           style="fill:#ffe19a;fill-opacity:1;stroke:none;stroke-width:5.1679368;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:199.03697205px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:4.97592402"
+         x="781.60388"
+         y="-1251.9008"
+         id="text1014"><tspan
+           sodipodi:role="line"
+           id="tspan1012"
+           x="781.60388"
+           y="-1251.9008"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffb0;fill-opacity:1;stroke-width:4.97592402">!</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-959.31641"
+         y="-1418.7689"
+         id="text1018"><tspan
+           sodipodi:role="line"
+           id="tspan1016"
+           x="-959.31641"
+           y="-1418.7689">Condom packaging</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-670.18555"
+         y="-1358.7689"
+         id="text1022"><tspan
+           sodipodi:role="line"
+           id="tspan1020"
+           x="-670.18555"
+           y="-1358.7689"
+           style="text-align:start;text-anchor:start">Warning use condom</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-598.87695"
+         y="-1098.0951"
+         id="text1026"><tspan
+           sodipodi:role="line"
+           id="tspan1024"
+           x="-598.87695"
+           y="-1098.0951">Use Titit adapter to get headphone jack!</tspan></text>
+      <g
+         id="g1040">
+        <rect
+           y="-1029.8333"
+           x="-700"
+           height="100"
+           width="400"
+           id="rect1028"
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+        <rect
+           y="-999.83331"
+           x="-1140"
+           height="40"
+           width="440"
+           id="rect1030"
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+        <rect
+           y="-1009.8333"
+           x="-1300"
+           height="60"
+           width="160"
+           id="rect1032"
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+        <rect
+           y="-1004.8333"
+           x="-1345"
+           height="50"
+           width="45"
+           id="rect1034"
+           style="fill:#ffd2b0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+      </g>
+      <g
+         id="g1068">
+        <rect
+           transform="rotate(-19.895997)"
+           y="-1133.6677"
+           x="903.73743"
+           height="212.40833"
+           width="212.40833"
+           id="rect1010"
+           style="fill:#ffcc9a;fill-opacity:1;stroke:none;stroke-width:10.62041664;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099" />
+        <circle
+           r="75.789459"
+           cy="-1309.8334"
+           cx="605"
+           id="path1064"
+           style="fill:none;fill-opacity:1;stroke:#ffbd99;stroke-width:8.42105103;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1" />
+      </g>
+      <g
+         id="g1050"
+         transform="matrix(0,-0.39473681,0.39473681,0,1106.7763,-1488.2544)">
+        <rect
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099"
+           id="rect1042"
+           width="400"
+           height="100"
+           x="-700"
+           y="-1029.8333" />
+        <rect
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099"
+           id="rect1044"
+           width="440"
+           height="40"
+           x="-1140"
+           y="-999.83331" />
+        <rect
+           style="fill:#ffffb0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099"
+           id="rect1046"
+           width="160"
+           height="60"
+           x="-1300"
+           y="-1009.8333" />
+        <rect
+           style="fill:#ffd2b0;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:0.0962099"
+           id="rect1048"
+           width="45"
+           height="50"
+           x="-1345"
+           y="-1004.8333" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-960"
+         y="-829.83331"
+         id="text1054"><tspan
+           sodipodi:role="line"
+           id="tspan1052"
+           x="-960"
+           y="-829.83331">Biscuit not Titit!</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:25.2223587px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffbac6;fill-opacity:1;stroke:none;stroke-width:0.63055897"
+         x="-1368.363"
+         y="-704.55835"
+         id="text1058"
+         transform="rotate(90)"><tspan
+           sodipodi:role="line"
+           id="tspan1056"
+           x="-1368.363"
+           y="-704.55835"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;text-anchor:start;fill:#ffbac6;fill-opacity:1;stroke-width:0.63055897">CookiesTT</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1160"
+         y="-769.83331"
+         id="text1062"><tspan
+           sodipodi:role="line"
+           id="tspan1060"
+           x="-1160"
+           y="-769.83331">Cookies Titit</tspan><tspan
+           sodipodi:role="line"
+           x="-1160"
+           y="-719.83331"
+           id="tspan1086">CookiesTT</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1310.2441"
+         y="-1669.8333"
+         id="text1072"><tspan
+           sodipodi:role="line"
+           id="tspan1070"
+           x="-1310.2441"
+           y="-1669.8333">Samsung actually removes headphone jack!</tspan><tspan
+           sodipodi:role="line"
+           x="-1310.2441"
+           y="-1619.8333"
+           id="tspan1074">betrayed us! let's call Samsung wants to also succ a dikk</tspan><tspan
+           sodipodi:role="line"
+           x="-1310.2441"
+           y="-1569.8333"
+           id="tspan1076">because the dongle is just like dangling dikk! like Apple!!</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-900"
+         y="-3729.8333"
+         id="text1080"><tspan
+           sodipodi:role="line"
+           id="tspan1078"
+           x="-900"
+           y="-3729.8333">Galaxy Note 10+</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1200"
+         y="-3429.8333"
+         id="text1084"><tspan
+           sodipodi:role="line"
+           id="tspan1082"
+           x="-1200"
+           y="-3429.8333">Sakyodik = Suck your dick</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1280"
+         y="-619.83331"
+         id="text1090"><tspan
+           sodipodi:role="line"
+           id="tspan1088"
+           x="-1280"
+           y="-619.83331">T_T = TT with mouth, Sadd</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1340"
+         y="-509.83331"
+         id="text1094"><tspan
+           sodipodi:role="line"
+           id="tspan1092"
+           x="-1340"
+           y="-509.83331">Sadd. why did you remove headphone jack</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-1200"
+         y="-3669.8333"
+         id="text1098"><tspan
+           sodipodi:role="line"
+           id="tspan1096"
+           x="-1200"
+           y="-3669.8333">Home wallpaper</tspan><tspan
+           sodipodi:role="line"
+           x="-1200"
+           y="-3619.8333"
+           id="tspan1100">can also be lockscreen wallpaper if you wish</tspan></text>
+    </g>
+    <text
+       id="text1108"
+       style="font-style:normal;font-weight:normal;font-size:40.51058197px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#624e82;fill-opacity:1;stroke:#ffdf00;stroke-width:1.01276457;stroke-opacity:1"
+       xml:space="preserve"
+       x="1435.2893"
+       y="1883.9712"><tspan
+         style="text-align:end;text-anchor:end;-inkscape-font-specification:Ubuntu;font-family:Ubuntu;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         id="tspan1110">Thank you for being with us for time being!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="-918.87695"
+       y="1484.4049"
+       id="text1124"><tspan
+         sodipodi:role="line"
+         id="tspan1122"
+         x="-918.87695"
+         y="1484.4049">Underscreen fingerprint sensor!!!</tspan></text>
+  </g>
+</svg>

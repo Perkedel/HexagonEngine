@@ -1,0 +1,123 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_L_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/RandomLoncatingBarrel/SparePart/BarrelSetupController.gd" type="Script" id=3]
+[ext_resource path="res://font/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=4]
+
+[node name="BarrelSetupController" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 150 )
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sdrup" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="Sdrup"]
+margin_right = 457.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "Reset & Apply Setup"
+
+[node name="HowManyTheseShouldBe" type="HBoxContainer" parent="Sdrup"]
+margin_left = 465.0
+margin_right = 1920.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="Sdrup/HowManyTheseShouldBe"]
+margin_left = 171.0
+margin_right = 969.0
+margin_bottom = 67.0
+size_flags_vertical = 5
+custom_fonts/font = ExtResource( 2 )
+text = "How many buttons here should be?"
+align = 1
+valign = 1
+
+[node name="Counter" type="Label" parent="Sdrup/HowManyTheseShouldBe"]
+margin_left = 977.0
+margin_right = 1127.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 150, 0 )
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 4 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="Sdrup/HowManyTheseShouldBe"]
+margin_left = 1135.0
+margin_right = 1283.0
+margin_bottom = 67.0
+min_value = 1.0
+max_value = 25.0
+value = 5.0
+align = 1
+
+[node name="AreYouSureToReset" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 75.0
+margin_right = 1920.0
+margin_bottom = 142.0
+alignment = 1
+
+[node name="CountLabel" type="Label" parent="AreYouSureToReset"]
+margin_right = 150.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 150, 0 )
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 4 )
+text = "5"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="AreYouSureToReset"]
+margin_left = 158.0
+margin_right = 1408.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 1250, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 2 )
+text = "Buttons. Are you sure to Apply & Reset? No Undo!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="YES" type="Button" parent="AreYouSureToReset"]
+margin_left = 1416.0
+margin_right = 1519.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "YES"
+
+[node name="NO" type="Button" parent="AreYouSureToReset"]
+margin_left = 1527.0
+margin_right = 1920.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "NO"
+
+[node name="AreYouSureTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+[connection signal="pressed" from="Sdrup/ResetButton" to="." method="_on_ResetButton_pressed"]
+[connection signal="value_changed" from="Sdrup/HowManyTheseShouldBe/SpinBox" to="." method="_on_SpinBox_value_changed"]
+[connection signal="pressed" from="AreYouSureToReset/YES" to="." method="_on_YES_pressed"]
+[connection signal="pressed" from="AreYouSureToReset/NO" to="." method="_on_NO_pressed"]
+[connection signal="timeout" from="AreYouSureTimer" to="." method="_on_AreYouSureTimer_timeout"]

@@ -1,0 +1,7 @@
+Rekan2 silakan dipelajari materi ttg DFD, dan ERD. 
+1. Pengertian DFD: a technique that diagrams the business processes and the data that pass among them 
+2. Tahapan/Tingkatan DFD: Context Diagram, Level 0, Level 1, Level 2, dst 
+3. Pengertian ERD: a picture which shows the information that is created, stored, and used by a business system 
+4. Ada 3 komponen utama ERD: Entity, Atribut, Relationship 
+5. Gunakan tool yang tersedia di internet untuk membuat DFD dan ERD. Tool paling umum adalah Microsoft Visio 
+6. Download materi DFD dan ERD terlampir

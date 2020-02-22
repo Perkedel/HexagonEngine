@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="World" id=1]
+
+[sub_resource type="Environment" id=2]
+ambient_light_color = Color( 0.0196078, 0.0313726, 0.45098, 1 )
+ambient_light_energy = 6.65
+
+[node name="ViewportTestoid" type="Viewport"]
+arvr = true
+own_world = true
+world = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hei" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Hei"]
+margin_right = 24.0
+margin_bottom = 33.0
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Spatial"]
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )

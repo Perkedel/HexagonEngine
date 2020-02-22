@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.1" tiledversion="2018.09.12" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="70" tileheight="70" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="tiles_spritesheet.tsx"/>
+ <layer id="1" name="Ground" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0TENADAQxLDCOv7IujwID7EUBNmLYlcM/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPSz8s/bD0w9IPy4rrAxVYK1E=
+  </data>
+ </layer>
+ <layer id="2" name="Water" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAeDBOIAAB
+  </data>
+ </layer>
+ <layer id="3" name="Item" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAeDBOIAAB
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="NoteIcon.svg"
+   inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\JOELwindows7_GeoGon-ProofConcept_2DgameProg_Unity\Assets\Sprites\Iconics\DummyMusicProfileImage.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="86.125722"
+     inkscape:cy="42.1188"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-270.54166)">
+    <g
+       id="g854">
+      <rect
+         y="270.54166"
+         x="0"
+         height="26.458332"
+         width="26.458332"
+         id="rect847"
+         style="opacity:1;fill:#4385ff;fill-opacity:0.43641621;stroke:none;stroke-width:0.01322917;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="translate(1.3229166,1.3229168)"
+         id="g845">
+        <path
+           style="fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 6.6145834,271.86457 v 1.32292 l 15.8749996,3.96875 v -1.32292 z"
+           id="path819"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           style="fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 6.6145834,273.18749 v 13.22917 c 0,0 -1.3229166,-1.32292 -2.6458333,-1.32292 -1.3229167,0 -2.6469872,0 -2.6458333,2.64583 0.00115,2.64592 1.3229167,2.64583 2.6458333,2.64584 0,0 4.0202644,-1.22843 4.015997,-2.55135 l -0.047247,-14.64657 z"
+           id="path821"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccsscscc" />
+        <path
+           sodipodi:nodetypes="ccsscscc"
+           inkscape:connector-curvature="0"
+           id="path840"
+           d="m 21.166667,275.83333 v 13.22917 c 0,0 -1.322916,-1.32292 -2.645833,-1.32292 -1.322917,0 -2.646987,0 -2.645833,2.64583 0.0012,2.64592 1.322917,2.64583 2.645833,2.64584 0,0 4.020265,-1.22843 4.015997,-2.55135 l -0.04725,-14.64657 z"
+           style="fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

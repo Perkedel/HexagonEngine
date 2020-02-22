@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=1]
+
+[node name="BalonAtas" instance=ExtResource( 1 )]
+ArahJalan = Vector2( 0, -1 )

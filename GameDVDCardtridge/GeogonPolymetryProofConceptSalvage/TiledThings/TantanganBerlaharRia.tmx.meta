@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 3207d22c499dfed46b526f44c2fd409c
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _MapPrfab/TantanganBerlaharRia
+    100004: _MapPrfab/TantanganBerlaharRia/Ground
+    100006: _MapPrfab/TantanganBerlaharRia/Atapp
+    100008: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default
+    100010: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon
+    100012: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon (1)
+    100016: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (14)
+    100018: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default
+    100020: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon
+    100022: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (1)
+    100024: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (2)
+    100026: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (3)
+    100028: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (4)
+    100030: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (5)
+    100032: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (6)
+    100034: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (7)
+    100036: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (8)
+    100038: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (9)
+    100040: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (10)
+    100042: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (11)
+    100044: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (12)
+    100046: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (3)
+    100048: _MapPrfab/TantanganBerlaharRia/Laharr
+    100050: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (13)
+    100054: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default
+    100056: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon
+    102470: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (1)
+    102472: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (2)
+    400000: _MapPrfab/TantanganBerlaharRia/Transform
+    400004: _MapPrfab/TantanganBerlaharRia/Ground/Transform
+    400006: _MapPrfab/TantanganBerlaharRia/Atapp/Transform
+    400008: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Transform
+    400010: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon/Transform
+    400012: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon (1)/Transform
+    400016: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (14)/Transform
+    400018: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Transform
+    400020: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon/Transform
+    400022: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (1)/Transform
+    400024: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (2)/Transform
+    400026: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (3)/Transform
+    400028: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (4)/Transform
+    400030: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (5)/Transform
+    400032: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (6)/Transform
+    400034: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (7)/Transform
+    400036: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (8)/Transform
+    400038: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (9)/Transform
+    400040: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (10)/Transform
+    400042: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (11)/Transform
+    400044: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (12)/Transform
+    400046: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (3)/Transform
+    400048: _MapPrfab/TantanganBerlaharRia/Laharr/Transform
+    400050: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (13)/Transform
+    400054: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Transform
+    400056: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon/Transform
+    402470: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (1)/Transform
+    402472: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (2)/Transform
+    5000000: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Rigidbody2D
+    5000002: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Rigidbody2D
+    5000004: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Rigidbody2D
+    6000000: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon/PolygonCollider2D
+    6000002: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon (1)/PolygonCollider2D
+    6000006: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (14)/PolygonCollider2D
+    6000008: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon/PolygonCollider2D
+    6000010: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (1)/PolygonCollider2D
+    6000012: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (2)/PolygonCollider2D
+    6000014: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (3)/PolygonCollider2D
+    6000016: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (4)/PolygonCollider2D
+    6000018: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (5)/PolygonCollider2D
+    6000020: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (6)/PolygonCollider2D
+    6000022: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (7)/PolygonCollider2D
+    6000024: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (8)/PolygonCollider2D
+    6000026: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (9)/PolygonCollider2D
+    6000028: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (10)/PolygonCollider2D
+    6000030: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (11)/PolygonCollider2D
+    6000032: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (12)/PolygonCollider2D
+    6000034: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (3)/PolygonCollider2D
+    6000036: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (13)/PolygonCollider2D
+    6000040: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon/PolygonCollider2D
+    6000056: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (1)/PolygonCollider2D
+    6000058: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (2)/PolygonCollider2D
+    6600000: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/CompositeCollider2D
+    6600002: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/CompositeCollider2D
+    6600004: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/CompositeCollider2D
+    11400000: _MapPrfab/TantanganBerlaharRia/MonoBehaviour-SuperTiled2Unity.SuperMap
+    11400002: _MapPrfab/TantanganBerlaharRia/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400008: _superAsset
+    11400010: _MapPrfab/TantanganBerlaharRia/Ground/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400012: _MapPrfab/TantanganBerlaharRia/Ground/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400014: _MapPrfab/TantanganBerlaharRia/Atapp/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400016: _MapPrfab/TantanganBerlaharRia/Atapp/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400018: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400020: _MapPrfab/TantanganBerlaharRia/Atapp/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400024: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (14)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400026: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400028: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400030: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (2)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400032: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (3)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400034: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (4)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400036: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (5)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400038: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (6)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400040: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (7)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400042: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (8)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400044: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (9)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400046: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (10)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400048: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (11)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400050: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (12)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400052: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (3)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400054: _MapPrfab/TantanganBerlaharRia/Laharr/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400056: _MapPrfab/TantanganBerlaharRia/Laharr/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400058: _MapPrfab/TantanganBerlaharRia/Ground/Collision_Default/Polygon (13)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400062: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11402476: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11402478: _MapPrfab/TantanganBerlaharRia/Laharr/Collision_Default/Polygon (2)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    100100000: _MapPrfab
+    2569400265252428796: _MapPrfab/TantanganBerlaharRia/Grid
+    3664157343022684176: _MapPrfab/TantanganBerlaharRia/Atapp/TilemapRenderer
+    3664157343022684178: _MapPrfab/TantanganBerlaharRia/Ground/TilemapRenderer
+    3664157343022684180: _MapPrfab/TantanganBerlaharRia/Laharr/TilemapRenderer
+    8195094279510102542: _MapPrfab/TantanganBerlaharRia/Atapp/Tilemap
+    8195094279510102544: _MapPrfab/TantanganBerlaharRia/Ground/Tilemap
+    8195094279510102546: _MapPrfab/TantanganBerlaharRia/Laharr/Tilemap
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  errors: []
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  tilesAsObjects: 0
+  importSorting: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets: []
