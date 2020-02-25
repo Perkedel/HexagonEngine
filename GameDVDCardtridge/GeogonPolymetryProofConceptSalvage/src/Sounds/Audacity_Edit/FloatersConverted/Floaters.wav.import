@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Floaters.wav-b723371c86bc82e29053c4f15e2bb96a.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/src/Sounds/Audacity_Edit/FloatersConverted/Floaters.wav"
+dest_files=[ "res://.import/Floaters.wav-b723371c86bc82e29053c4f15e2bb96a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

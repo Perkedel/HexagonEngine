@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-ebe27958266b3f6f04b49cfa57cc9131.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/src/Sounds/Freesound.org/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav"
+dest_files=[ "res://.import/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-ebe27958266b3f6f04b49cfa57cc9131.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

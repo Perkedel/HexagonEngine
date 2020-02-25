@@ -15,7 +15,7 @@
    viewBox="0 0 6614.5833 423.33334"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)"
    sodipodi:docname="BannerLogo.svg"
    inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Unity Projects\JOELwindows7_GeoGon-ProofConcept_2DgameProg_Unity\Assets\Sprites\BannerLogoTHingy.png"
    inkscape:export-xdpi="50"
@@ -51,17 +51,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.11313708"
-     inkscape:cx="22648.956"
-     inkscape:cy="1672.2928"
+     inkscape:zoom="0.05656854"
+     inkscape:cx="13282.859"
+     inkscape:cy="-766.54732"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
@@ -664,5 +664,19 @@
            id="tspan2291"
            sodipodi:role="line">The Proof Concept</tspan></text>
     </g>
+    <rect
+       style="fill:#008000;stroke:#000000;stroke-width:2.64583325;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect921"
+       width="406.39999"
+       height="203.2"
+       x="2641.5999"
+       y="-389.46667" />
+    <rect
+       style="fill:#008000;stroke:#000000;stroke-width:2.64583325;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect923"
+       width="474.13333"
+       height="270.93332"
+       x="3657.5999"
+       y="626.53333" />
   </g>
 </svg>

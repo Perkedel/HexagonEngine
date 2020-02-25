@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spikesBottomAlt2.png-ccc9845a40c10a1755a72404dd7ae4c9.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/DownloadExtraPack/platformer-art-complete-pack-0/Ice expansion/Tiles/spikesBottomAlt2.png"
+dest_files=[ "res://.import/spikesBottomAlt2.png-ccc9845a40c10a1755a72404dd7ae4c9.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

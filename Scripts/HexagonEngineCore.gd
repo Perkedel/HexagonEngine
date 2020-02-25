@@ -57,17 +57,20 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
-	if Index == 0:
-		LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn")
-		pass
-	if Index == 1:
-		LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
-		pass
-	if Index == 2:
-		LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
-		pass
-	else:
-		pass
+	print("Receive DVD Click Index No. " + String(Index))
+	match Index:
+		0:
+			LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn")
+			pass
+		1:
+			LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
+			pass
+		2:
+			LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
+			pass
+		_:
+			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
+			pass
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
 

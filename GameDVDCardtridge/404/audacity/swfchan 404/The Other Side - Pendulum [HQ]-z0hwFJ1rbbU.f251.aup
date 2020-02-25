@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="22.3904577622" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="edit" value="Remade by JOELwindows7"/>
+		<tag name="COMMENTS" value="swfchan 404"/>
+		<tag name="TITLE" value="The Other Side"/>
+		<tag name="ARTIST" value="Pendulum"/>
+	</tags>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="1.02722917" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1327530">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f902.au" len="174331" min="-1.108836" max="1.165737" rms="0.403644"/>
+				</waveblock>
+				<waveblock start="174331">
+					<simpleblockfile filename="eff1f568.au" len="262144" min="-1.140481" max="1.103371" rms="0.397121"/>
+				</waveblock>
+				<waveblock start="436475">
+					<simpleblockfile filename="eff1f7fb.au" len="262144" min="-1.129912" max="1.122055" rms="0.401614"/>
+				</waveblock>
+				<waveblock start="698619">
+					<simpleblockfile filename="eff1fb8c.au" len="262144" min="-1.139706" max="1.140041" rms="0.403227"/>
+				</waveblock>
+				<waveblock start="960763">
+					<simpleblockfile filename="eff1fd1e.au" len="183383" min="-1.100175" max="1.152954" rms="0.401967"/>
+				</waveblock>
+				<waveblock start="1144146">
+					<simpleblockfile filename="eff1f857.au" len="183384" min="-1.123023" max="1.152278" rms="0.399893"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="1.02722917" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1327530">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f0bf.au" len="174331" min="-1.116603" max="1.088935" rms="0.392768"/>
+				</waveblock>
+				<waveblock start="174331">
+					<simpleblockfile filename="eff1f904.au" len="262144" min="-1.092986" max="1.082887" rms="0.38616"/>
+				</waveblock>
+				<waveblock start="436475">
+					<simpleblockfile filename="eff1fd2b.au" len="262144" min="-1.095917" max="1.132538" rms="0.389587"/>
+				</waveblock>
+				<waveblock start="698619">
+					<simpleblockfile filename="eff1f67b.au" len="262144" min="-1.104296" max="1.101838" rms="0.391281"/>
+				</waveblock>
+				<waveblock start="960763">
+					<simpleblockfile filename="eff1fce3.au" len="183383" min="-1.08374" max="1.18438" rms="0.390692"/>
+				</waveblock>
+				<waveblock start="1144146">
+					<simpleblockfile filename="eff1f60e.au" len="183384" min="-1.083425" max="1.091466" rms="0.386864"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="0" height="75" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49307">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f82b.au" len="49307" min="-1.071048" max="1.094649" rms="0.410561"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="0" height="75" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49307">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f6a5.au" len="49307" min="-1.075332" max="1.073446" rms="0.395604"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="0" height="60" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="28.68410417" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1966494">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fdad.au" len="157740" min="-1.107929" max="1.164726" rms="0.4088"/>
+				</waveblock>
+				<waveblock start="157740">
+					<simpleblockfile filename="eff1fb3f.au" len="262144" min="-1.091139" max="1.147177" rms="0.394785"/>
+				</waveblock>
+				<waveblock start="419884">
+					<simpleblockfile filename="eff1f034.au" len="262144" min="-1.132601" max="1.160263" rms="0.399561"/>
+				</waveblock>
+				<waveblock start="682028">
+					<simpleblockfile filename="eff1f4b4.au" len="262144" min="-1.11087" max="1.212623" rms="0.388842"/>
+				</waveblock>
+				<waveblock start="944172">
+					<simpleblockfile filename="eff1f894.au" len="262144" min="-1.124377" max="1.107164" rms="0.401035"/>
+				</waveblock>
+				<waveblock start="1206316">
+					<simpleblockfile filename="eff1f408.au" len="262144" min="-1.161727" max="1.136951" rms="0.410891"/>
+				</waveblock>
+				<waveblock start="1468460">
+					<simpleblockfile filename="eff1fad1.au" len="262144" min="-1.111696" max="1.113028" rms="0.407133"/>
+				</waveblock>
+				<waveblock start="1730604">
+					<simpleblockfile filename="eff1f847.au" len="235890" min="-1.089342" max="1.111241" rms="0.399555"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="The Other Side - Pendulum [HQ]-z0hwFJ1rbbU.f251" isSelected="0" height="60" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="28.68410417" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1966494">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fe9e.au" len="157740" min="-1.130005" max="1.161855" rms="0.396592"/>
+				</waveblock>
+				<waveblock start="157740">
+					<simpleblockfile filename="eff1fb20.au" len="262144" min="-1.141279" max="1.099901" rms="0.384795"/>
+				</waveblock>
+				<waveblock start="419884">
+					<simpleblockfile filename="eff1f1c0.au" len="262144" min="-1.10787" max="1.154694" rms="0.384105"/>
+				</waveblock>
+				<waveblock start="682028">
+					<simpleblockfile filename="eff1fc59.au" len="262144" min="-1.088077" max="1.135441" rms="0.374874"/>
+				</waveblock>
+				<waveblock start="944172">
+					<simpleblockfile filename="eff1f38d.au" len="262144" min="-1.13455" max="1.09708" rms="0.388449"/>
+				</waveblock>
+				<waveblock start="1206316">
+					<simpleblockfile filename="eff1fa2e.au" len="262144" min="-1.132455" max="1.084401" rms="0.394203"/>
+				</waveblock>
+				<waveblock start="1468460">
+					<simpleblockfile filename="eff1fcd9.au" len="262144" min="-1.109442" max="1.093888" rms="0.390497"/>
+				</waveblock>
+				<waveblock start="1730604">
+					<simpleblockfile filename="eff1f6fb.au" len="235890" min="-1.097254" max="1.138921" rms="0.384057"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

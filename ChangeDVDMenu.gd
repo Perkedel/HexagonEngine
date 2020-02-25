@@ -31,6 +31,7 @@ func _on_JustWorkingMenu_PressShutDown():
 signal ItemClickEnter(Index)
 func _on_JustWorkingMenu_ItemClickEnter(Index):
 	emit_signal("ItemClickEnter",Index)
+	print("Item Click Enter No. " + String(Index))
 	pass # Replace with function body.
 
 func _input(event):
