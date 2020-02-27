@@ -7,7 +7,7 @@ onready var LevelLoadRoot = $Level3DCartridgeSlot
 var hasMeLoading = false
 var a3DResource
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
+onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a3D_Loading_ProgressBar(valuet)
 var ProgressValue

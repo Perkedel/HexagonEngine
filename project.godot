@@ -34,6 +34,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/midi/Bank.gd"
 }, {
+"base": "Resource",
+"class": "BaseGameObject",
+"language": "GDScript",
+"path": "res://addons/gcs/baseGameObject.gd"
+}, {
+"base": "Resource",
+"class": "BaseGameSystem",
+"language": "GDScript",
+"path": "res://addons/gcs/baseGameSystem.gd"
+}, {
+"base": "Resource",
+"class": "BaseGameWorld",
+"language": "GDScript",
+"path": "res://addons/gcs/baseGameWorld.gd"
+}, {
 "base": "IOMethod2D",
 "class": "BaseSlot2D",
 "language": "GDScript",
@@ -68,6 +83,11 @@ _global_script_classes=[ {
 "class": "Colorblindness",
 "language": "GDScript",
 "path": "res://addons/paulloz.colorblindness/colorblindness.gd"
+}, {
+"base": "Resource",
+"class": "Component",
+"language": "GDScript",
+"path": "res://addons/gcs/component.gd"
 }, {
 "base": "TabContainer",
 "class": "Cycle",
@@ -108,6 +128,26 @@ _global_script_classes=[ {
 "class": "FileSystemLink",
 "language": "GDScript",
 "path": "res://addons/godot-next/global/file_system_link.gd"
+}, {
+"base": "Reference",
+"class": "FpsLabel",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/FPSLabel.gd"
+}, {
+"base": "BaseGameObject",
+"class": "GameObject",
+"language": "GDScript",
+"path": "res://addons/gcs/gameObject.gd"
+}, {
+"base": "BaseGameSystem",
+"class": "GameSystem",
+"language": "GDScript",
+"path": "res://addons/gcs/gameSystem.gd"
+}, {
+"base": "BaseGameWorld",
+"class": "GameWorld",
+"language": "GDScript",
+"path": "res://addons/gcs/gameWorld.gd"
 }, {
 "base": "CollisionShape2D",
 "class": "Geometry2D",
@@ -289,10 +329,30 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/global/singletons.gd"
 }, {
+"base": "RigidBody2D",
+"class": "Sliceable2D",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Sliceable2D.gd"
+}, {
+"base": "Node2D",
+"class": "Slicer2D",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Slicer2D.gd"
+}, {
 "base": "Node",
 "class": "SoundManager_Pluggits",
 "language": "GDScript",
 "path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
+}, {
+"base": "Reference",
+"class": "SpriteText",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/SpriteTextScript/SpriteText.gd"
+}, {
+"base": "Node",
+"class": "Tello",
+"language": "GDScript",
+"path": "res://addons/TelloDroneNode/TelloDroneNode.gd"
 }, {
 "base": "Spatial",
 "class": "TextureLayeredMesh",
@@ -324,6 +384,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/global/variant.gd"
 }, {
+"base": "Resource",
+"class": "VectorResource",
+"language": "GDScript",
+"path": "res://addons/vector_resource/vector_resource.gd"
+}, {
 "base": "Reference",
 "class": "WAT",
 "language": "GDScript",
@@ -340,6 +405,9 @@ _global_script_class_icons={
 "ArrayUtils": "",
 "AudioStreamPlayerADSR": "",
 "Bank": "",
+"BaseGameObject": "",
+"BaseGameSystem": "",
+"BaseGameWorld": "",
 "BaseSlot2D": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.png",
 "Behavior": "",
 "BitFlag": "",
@@ -347,6 +415,7 @@ _global_script_class_icons={
 "CallbackDelegator": "",
 "ClassType": "",
 "Colorblindness": "",
+"Component": "",
 "Cycle": "res://addons/godot-next/icons/icon_cycle.svg",
 "DebugLabel": "",
 "DiscreteGradientTexture": "",
@@ -355,6 +424,10 @@ _global_script_class_icons={
 "FastTextInit": "",
 "FileSearch": "",
 "FileSystemLink": "",
+"FpsLabel": "",
+"GameObject": "",
+"GameSystem": "",
+"GameWorld": "",
 "Geometry2D": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
@@ -391,13 +464,18 @@ _global_script_class_icons={
 "ResourceCollection": "",
 "ResourceSet": "",
 "Singletons": "",
+"Sliceable2D": "",
+"Slicer2D": "",
 "SoundManager_Pluggits": "",
+"SpriteText": "",
+"Tello": "res://addons/TelloDroneNode/drone_icon.png",
 "TextureLayeredMesh": "res://addons/texture-layered-mesh/icons/texture_layered_mesh.svg",
 "Trail2D": "res://addons/godot-next/icons/icon_trail_2d.svg",
 "Trail3D": "res://addons/godot-next/icons/icon_trail_3d.svg",
 "TweenSequence": "",
 "VBoxItemList": "res://addons/godot-next/icons/icon_v_box_item_list.svg",
 "Variant": "",
+"VectorResource": "",
 "WAT": "",
 "WATTest": ""
 }
@@ -431,6 +509,8 @@ LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+SceneLoader="*res://Scripts/ExtraImportAsset/SceneLoader.gd"
+AES="*res://Scripts/ExtraImportAsset/AES.gd"
 
 [compression]
 

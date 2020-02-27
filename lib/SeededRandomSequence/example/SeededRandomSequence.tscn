@@ -1,0 +1,481 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node
+
+var _seeded_random_sequence = ResourceLoader.load(\"../SeededRandomSequence.gd\")
+var _rng
+
+func _ready():
+	
+	#Grab a random seed
+	var _seed = str(OS.get_unix_time())
+	$BaseContainer/SetupContainer/SeedText.text = _seed
+	
+	#Update the list column sizing
+	var size = get_viewport().size.x - 50
+	var column_width = size/3
+	$BaseContainer/CurrentSequenceContainer/SequenceList.fixed_column_width = column_width
+
+
+func _on_SeedText_text_changed():
+	
+	#Reset the sequence and re-initialize
+	var new_seed = str($BaseContainer/SetupContainer/SeedText.text)
+	_rng = _seeded_random_sequence.new(new_seed)
+	
+	#Update the current state
+	$BaseContainer/SetupContainer/StateValue.text = str(_rng._current_state)
+	
+	#Clear out the previous sequence
+	$BaseContainer/CurrentSequenceContainer/SequenceList.clear()
+
+func _on_NextValueButton_pressed():
+	
+	#Generate a new value
+	var previous_state = str(_rng._current_state)
+	var value = str(_rng.next())
+	var state = str(_rng._current_state)
+	$BaseContainer/SetupContainer/StateValue.text = state
+	
+	#Update the list
+	$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(value)
+	$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(previous_state)
+	$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(state)
+	
+
+func _on_SaveButton_pressed():
+	
+	#Convert to JSON
+	var json_string = _rng.save_state()
+	$BaseContainer/SetupContainer/SaveText.text = json_string
+	
+	#Add to the clipboard
+	OS.clipboard = json_string
+	print(\"String saved to clipboard!\")
+	
+
+
+func _on_SaveText_text_changed():
+	
+	#The text changed, allow the user to load the JSON
+	$BaseContainer/SetupContainer/LoadButton.disabled = false
+	
+
+func _on_LoadButton_pressed():
+	
+	#The load button was pressed
+	var state_json = $BaseContainer/SetupContainer/SaveText.text
+	
+	var vvv = JSON.parse(state_json)
+	var revvv = vvv.result
+	
+	#Make a new RNG, this is where the magic happens!
+	var new_rng = _seeded_random_sequence.new()
+	new_rng.load_state(state_json)
+	
+	#Update the seed label
+	$BaseContainer/SetupContainer/SeedText.text = str(new_rng._initial_seed)
+	yield($BaseContainer/SetupContainer/SeedText, \"text_changed\")
+	
+	#Clear the sequence list
+	$BaseContainer/CurrentSequenceContainer/SequenceList.clear()
+	
+	#Add new values according to the RNG so we can prove we got the same order of values
+	for value_index in range(new_rng._result_sequence.size()):
+		
+		#Get the value
+		var value = new_rng._result_sequence[value_index]
+		
+		#Add the value and a blank state because we didn't track it and I'm too lazy to fix
+		$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(str(value))
+		
+		#Is this the first index?
+		$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(\"PREV???????\")
+		
+		#Is this the last index?
+		if value_index == new_rng._result_sequence.size() - 1:
+			#We are the last one, show the state
+			$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(str(new_rng._current_state))
+		else:
+			$BaseContainer/CurrentSequenceContainer/SequenceList.add_item(\"CURRENT????\")
+		
+	#Start using this RNG now
+	_rng = new_rng
+	
+"
+
+[node name="SeededRandomSequence" type="Node" index="0"]
+
+script = SubResource( 1 )
+
+[node name="BaseContainer" type="VBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="SetupContainer" type="GridContainer" parent="BaseContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+
+[node name="SeedLabel" type="Label" parent="BaseContainer/SetupContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 2.0
+margin_right = 49.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "SEED"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SeedText" type="TextEdit" parent="BaseContainer/SetupContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 53.0
+margin_right = 1024.0
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "123123DEAD"
+readonly = false
+highlight_current_line = false
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+override_selected_font_color = false
+context_menu_enabled = true
+smooth_scrolling = false
+v_scroll_speed = 80.0
+hiding_enabled = 0
+wrap_lines = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+caret_moving_by_right_click = true
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="StateLabel" type="Label" parent="BaseContainer/SetupContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 22.0
+margin_right = 49.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "STATE"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="StateValue" type="Label" parent="BaseContainer/SetupContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 53.0
+margin_top = 22.0
+margin_right = 1024.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SaveButton" type="Button" parent="BaseContainer/SetupContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 49.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SAVE"
+flat = false
+align = 1
+
+[node name="SaveText" type="TextEdit" parent="BaseContainer/SetupContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 53.0
+margin_top = 40.0
+margin_right = 1024.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "Hit save to see JSON, or paste your own"
+readonly = false
+highlight_current_line = false
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+override_selected_font_color = false
+context_menu_enabled = true
+smooth_scrolling = false
+v_scroll_speed = 80.0
+hiding_enabled = 0
+wrap_lines = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+caret_moving_by_right_click = true
+
+[node name="LoadButton" type="Button" parent="BaseContainer/SetupContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 49.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "LOAD"
+flat = false
+align = 1
+
+[node name="CurrentSequenceContainer" type="VBoxContainer" parent="BaseContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NextValueButton" type="Button" parent="BaseContainer/CurrentSequenceContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "NEXT VALUE"
+flat = false
+align = 1
+
+[node name="HeaderContainer" type="HBoxContainer" parent="BaseContainer/CurrentSequenceContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 1024.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="ValueLabel" type="Label" parent="BaseContainer/CurrentSequenceContainer/HeaderContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 338.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "VALUE FROM NEXT()"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="PreviousStateLabel" type="Label" parent="BaseContainer/CurrentSequenceContainer/HeaderContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 342.0
+margin_right = 680.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "PREVIOUS STATE (SEED)"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="NextSeedLabel" type="Label" parent="BaseContainer/CurrentSequenceContainer/HeaderContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 684.0
+margin_right = 1024.0
+margin_bottom = 14.0
+grow_horizontal = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "NEXT STATE (SEED)"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Size Flags" ]
+
+[node name="SequenceList" type="ItemList" parent="BaseContainer/CurrentSequenceContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 1024.0
+margin_bottom = 516.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+items = [  ]
+select_mode = 0
+allow_reselect = false
+auto_height = true
+max_columns = 3
+icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
+_sections_unfolded = [ "Columns", "Size Flags" ]
+
+[connection signal="text_changed" from="BaseContainer/SetupContainer/SeedText" to="." method="_on_SeedText_text_changed"]
+
+[connection signal="pressed" from="BaseContainer/SetupContainer/SaveButton" to="." method="_on_SaveButton_pressed"]
+
+[connection signal="text_changed" from="BaseContainer/SetupContainer/SaveText" to="." method="_on_SaveText_text_changed"]
+
+[connection signal="pressed" from="BaseContainer/SetupContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
+
+[connection signal="pressed" from="BaseContainer/CurrentSequenceContainer/NextValueButton" to="." method="_on_NextValueButton_pressed"]
+
+
