@@ -1,0 +1,42 @@
+[gd_scene format=2]
+
+[node name="CreatePluginDialog" type="ConfirmationDialog"]
+visible = true
+margin_right = 230.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 230, 70 )
+window_title = "Create Plugin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PluginNameEdit" type="LineEdit" parent="HBoxContainer2"]
+margin_right = 214.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 200, 0 )
+placeholder_text = "Plugin Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PluginDescriptionEdit" type="LineEdit" parent="HBoxContainer2"]
+margin_top = 28.0
+margin_right = 214.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 200, 0 )
+placeholder_text = "Plugin description."
+__meta__ = {
+"_edit_use_anchors_": false
+}

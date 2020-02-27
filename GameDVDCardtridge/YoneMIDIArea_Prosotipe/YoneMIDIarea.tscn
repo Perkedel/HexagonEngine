@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="YoneMIDIarea" type="Node"]
+script = ExtResource( 2 )
+
+[node name="MidiPlayer" type="Node" parent="."]
+script = ExtResource( 1 )
+max_polyphony = 12
+file = "res://Blender/MostyMidiTest/test.mid"
+load_all_voices_from_soundfont = true
+no_reload_soundfont = true
+soundfont = "res://DummyTest/dataArlez80/Aspirin-Stereo.sf2"
+bus = "Music"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu404" parent="CanvasLayer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 0.0
+margin_bottom = 100.0
+
+[node name="ChangeDVDButton" parent="CanvasLayer/VBoxContainer/Menu404" index="0"]
+custom_fonts/font = SubResource( 1 )
+
+[node name="ExitGameButton" parent="CanvasLayer/VBoxContainer/Menu404" index="1"]
+custom_fonts/font = SubResource( 1 )
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
+
+[editable path="CanvasLayer/VBoxContainer/Menu404"]

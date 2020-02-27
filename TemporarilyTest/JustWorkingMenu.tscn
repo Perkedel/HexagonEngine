@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=6]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=7]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/GooglePlayIcon.png" type="Texture" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=9]
+[ext_resource path="res://addons/midi/icon.png" type="Texture" id=10]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -30,10 +32,11 @@ text = "Hexagon DVD Select"
 margin_top = 90.0
 margin_right = 1920.0
 margin_bottom = 972.0
+hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "invalid_item", null, false ]
+items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 9 ), false ]
 fixed_icon_size = Vector2( 256, 256 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -46,6 +49,7 @@ rect_min_size = Vector2( 0, 100 )
 margin_right = 400.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 400, 0 )
+hint_tooltip = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PowerOffButton"]
 anchor_right = 1.0

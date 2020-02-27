@@ -49,6 +49,7 @@ func ApplyResetGame():
 	
 	ConReNectPrussi()
 	DisplayStatement(hasItPopped)
+	$"UI-Standpoint/UI Game/Contains/ButtonSetsAccountable".get_child(0).grab_focus()
 	pass
 
 func freshStart():

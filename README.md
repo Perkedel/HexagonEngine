@@ -9,11 +9,17 @@
  ![GitHub repo size](https://img.shields.io/github/repo-size/Perkedel/HexagonEngine?logo=Github)
  ![Liberapay patrons](https://img.shields.io/liberapay/patrons/JOELwindows7?logo=liberapay)
 # HexagonEngine
- Cinema Enters Game Console Game Engine. A Higher Level Application and Game Framework. Powered by Godot Engine.
+ Cinema Enters Game Console Game Engine. 
+
+A Higher Level Application and Game Framework. 
+
+Powered by Godot Engine.
  
 # Synopsis
 ## What is this?
 A Godot template to make your games on.
+
+Framework for make things AAA atleast so.
 	
 ## What do you mean?
 You can build levels with Level Cartridge. 2D and 3D. all at once! Design Mechanic! like you do in Godot.
@@ -86,3 +92,4 @@ Softwares: GNU GPL v3
 
 Assets and Documents: CC4.0-BY-SA
 	
+

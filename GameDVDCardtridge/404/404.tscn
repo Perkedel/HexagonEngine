@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/404/404.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
 [ext_resource path="res://GameDVDCardtridge/404/videos/Sonne_Zeitraffer_-_Sun_Time_Lapse_3840x2160p_24FPS_CC_(Royalty_Free)_(Kostenlos)_10bit.webm" type="VideoStream" id=8]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=9]
+[ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=10]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 11 )
 
 [node name="404" type="Node"]
 script = ExtResource( 1 )
@@ -48,7 +58,7 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="404ui/Control404/404Contains/Panel404/LEDscrolling"]
 margin_right = 1920.0
-margin_bottom = 100.0
+margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -91,7 +101,7 @@ scroll_active = false
 
 [node name="Label" type="Label" parent="404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 100.0
+margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 7 )
@@ -109,28 +119,13 @@ mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Menu404" type="HBoxContainer" parent="404ui/Control404/404Contains"]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
-alignment = 1
+[node name="Menu404" parent="404ui/Control404/404Contains" instance=ExtResource( 10 )]
 
-[node name="ChangeDVDButton" type="Button" parent="404ui/Control404/404Contains/Menu404"]
-margin_left = 617.0
-margin_right = 929.0
-margin_bottom = 100.0
-custom_fonts/font = ExtResource( 2 )
-text = "Change DVD"
+[node name="ChangeDVDButton" parent="404ui/Control404/404Contains/Menu404" index="0"]
+custom_fonts/font = SubResource( 1 )
 
-[node name="ExitGameButton" type="Button" parent="404ui/Control404/404Contains/Menu404"]
-margin_left = 937.0
-margin_right = 1303.0
-margin_bottom = 100.0
-custom_fonts/font = ExtResource( 2 )
-text = "Shutdown Quit"
-
-[node name="DownTween" type="Tween" parent="404ui/Control404/404Contains/Menu404"]
+[node name="ExitGameButton" parent="404ui/Control404/404Contains/Menu404" index="1"]
+custom_fonts/font = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
@@ -150,3 +145,5 @@ __meta__ = {
 [connection signal="pressed" from="404ui/Control404/404Contains/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="finished" from="VideoCanvas/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+
+[editable path="404ui/Control404/404Contains/Menu404"]

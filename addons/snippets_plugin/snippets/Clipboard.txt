@@ -1,0 +1,2 @@
+func _on_btnClipboard_pressed():
+	copy_to_clipboard()

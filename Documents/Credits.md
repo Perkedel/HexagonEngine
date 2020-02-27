@@ -151,3 +151,8 @@ Used Assets and Tools!
 - http://godotengine.org/qa/13845/canvas-layer-and-input-events
 - https://www.deviantart.com/nitwitsworld/art/Breezie-model-by-mrokidoki97-773367507
 - http://godotengine.org/qa/15528/how-do-i-delete-my-node-once-im-done-with-it
+- https://github.com/fenix-hub/godot-engine.text-editor
+- https://github.com/godot-extended-libraries
+- Guys! Please, put your credit file in the each of your addon folder!
+- https://github.com/fenix-hub/godot-engine.github-integration/wiki/Installation-&-Usage
+- https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line

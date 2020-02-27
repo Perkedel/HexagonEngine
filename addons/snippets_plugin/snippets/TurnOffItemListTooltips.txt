@@ -1,0 +1,3 @@
+func list_tooltips_off(list):
+	for i in range(0,list.get_item_count()):
+		list.set_item_tooltip_enabled(i,false)

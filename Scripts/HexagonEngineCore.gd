@@ -29,9 +29,11 @@ func DoLaunchTheDVD():
 
 func DoChangeDVDNow():
 	print("Change DVD!")
-	$DVDCartridgeSlot.get_child(0).queue_free()
+	$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
+	# Ah peck! free() error, attempted to free locked object
 	#$MetaMenu/ChangeDVDMenu.show()
 	$MetaMenu/ChangeDVDMenu.ShowMeSelf()
+	#$DVDCartridgeSlot.get_child(0).free()
 	pass
 
 func DoShutdownNow():
@@ -68,6 +70,12 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		2:
 			LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
 			pass
+		3:
+			LoadDVD = load("res://GameDVDCardtridge/IsengHedBoll/IsengModeHeddBoll.tscn")
+			pass
+		4:
+			LoadDVD = load("res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn")
+			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass
@@ -83,3 +91,5 @@ func _on_DVDCartridgeSlot_DVDTryLoad():
 # https://github.com/electron/rcedit/releases
 # To edit .exe resources. insert it in the godot editor setting!
 # Editor, Setting, Export, Windows, rcedit, refer that rcedit exe file
+
+# Fenix Github Integration asset lib

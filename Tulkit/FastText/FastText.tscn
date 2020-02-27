@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tulkit/FastText/FastText.gd" type="Script" id=1]
+
+
+[node name="FastText" type="Label"]
+margin_left = 158.0
+margin_top = 143.0
+margin_right = 184.0
+margin_bottom = 173.0
+script = ExtResource( 1 )
+InputBoxStyleInherited = false
+InputBoxFontInherited = false

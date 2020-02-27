@@ -12,3 +12,6 @@ export_presets.cfg
 
 # Unity meta files
 *.meta
+
+# Blender Backup file must be ignored
+*.blend1

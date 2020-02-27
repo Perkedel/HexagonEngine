@@ -1,0 +1,14 @@
+# Save Text Content to file
+func savefile(content, path):
+    var file = File.new()
+    file.open(path, file.WRITE)
+    file.store_string(content)
+    file.close()
+
+# Load Text Content from File
+func loadfile(path):
+    var file = File.new()
+    file.open(path, file.READ)
+    var content = file.get_as_text()
+    file.close()
+    return content
