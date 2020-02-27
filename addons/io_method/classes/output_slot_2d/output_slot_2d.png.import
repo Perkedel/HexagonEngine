@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/output_slot_2d.png-3cbb286b4d8531d749d8f9465ee13315.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://addons/io_method/classes/output_slot_2d/output_slot_2d.png"
+dest_files=[ "res://.import/output_slot_2d.png-3cbb286b4d8531d749d8f9465ee13315.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

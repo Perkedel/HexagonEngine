@@ -1,4 +1,4 @@
-class_name SoundManager
+class_name SoundManager_Pluggits
 extends Node
 
 ####################################################################

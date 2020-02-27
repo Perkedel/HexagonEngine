@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/midi/Bank.gd"
 }, {
+"base": "IOMethod2D",
+"class": "BaseSlot2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.gd"
+}, {
 "base": "Resource",
 "class": "Behavior",
 "language": "GDScript",
@@ -119,6 +124,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
 }, {
+"base": "IOMethod2D",
+"class": "IOGadgets2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/io_gadgets_2d/io_gadgets_2d.gd"
+}, {
+"base": "IOMethod2D",
+"class": "IOHub2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/io_hub_2d/io_hub_2d.gd"
+}, {
+"base": "Node2D",
+"class": "IOMethod2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/io_method_2d/io_method_2d.gd"
+}, {
 "base": "Reference",
 "class": "Icons",
 "language": "GDScript",
@@ -159,6 +179,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
 }, {
+"base": "BaseSlot2D",
+"class": "InputSlot2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/input_slot_2d/input_slot_2d.gd"
+}, {
 "base": "Reference",
 "class": "InspectorControls",
 "language": "GDScript",
@@ -198,6 +223,11 @@ _global_script_classes=[ {
 "class": "Modifiers",
 "language": "GDScript",
 "path": "res://addons/modifiers/modifiers.gd"
+}, {
+"base": "BaseSlot2D",
+"class": "OutputSlot2D",
+"language": "GDScript",
+"path": "res://addons/io_method/classes/output_slot_2d/output_slot_2d.gd"
 }, {
 "base": "Resource",
 "class": "PhysicsLayers",
@@ -260,7 +290,7 @@ _global_script_classes=[ {
 "path": "res://addons/godot-next/global/singletons.gd"
 }, {
 "base": "Node",
-"class": "SoundManager",
+"class": "SoundManager_Pluggits",
 "language": "GDScript",
 "path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
 }, {
@@ -310,6 +340,7 @@ _global_script_class_icons={
 "ArrayUtils": "",
 "AudioStreamPlayerADSR": "",
 "Bank": "",
+"BaseSlot2D": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.png",
 "Behavior": "",
 "BitFlag": "",
 "CSVFile": "",
@@ -327,6 +358,9 @@ _global_script_class_icons={
 "Geometry2D": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
+"IOGadgets2D": "res://addons/io_method/classes/io_gadgets_2d/io_gadgets_2d.png",
+"IOHub2D": "res://addons/io_method/classes/io_hub_2d/io_hub_2d.png",
+"IOMethod2D": "",
 "Icons": "",
 "Inflector": "",
 "InputEventMultiScreenDrag": "",
@@ -335,6 +369,7 @@ _global_script_class_icons={
 "InputEventSingleScreenDrag": "",
 "InputEventSingleScreenTap": "",
 "InputEventSingleScreenTouch": "",
+"InputSlot2D": "res://addons/io_method/classes/input_slot_2d/input_slot_2d.png",
 "InspectorControls": "",
 "Joystick": "",
 "MessageDispatcher": "",
@@ -343,6 +378,7 @@ _global_script_class_icons={
 "MixMode": "res://addons/modifiers/icon_modifiers.svg",
 "MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
 "Modifiers": "res://addons/modifiers/icon_modifiers.svg",
+"OutputSlot2D": "res://addons/io_method/classes/output_slot_2d/output_slot_2d.png",
 "PhysicsLayers": "",
 "Player": "",
 "ProjectTools": "",
@@ -355,7 +391,7 @@ _global_script_class_icons={
 "ResourceCollection": "",
 "ResourceSet": "",
 "Singletons": "",
-"SoundManager": "",
+"SoundManager_Pluggits": "",
 "TextureLayeredMesh": "res://addons/texture-layered-mesh/icons/texture_layered_mesh.svg",
 "Trail2D": "res://addons/godot-next/icons/icon_trail_2d.svg",
 "Trail3D": "res://addons/godot-next/icons/icon_trail_3d.svg",
@@ -421,7 +457,11 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( ".", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "WAT", "alanscodelog.gimbalcontrol", "editor_icon_previewer", "file-editor", "github-integration", "godot-next", "godot-plugin-refresher", "goutte.camera.trackball", "midi", "modifiers", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "voxel_factory", "zylann.editor_light", "zylann.hterrain" )
+enabled=PoolStringArray( ".", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "bone_gizmo", "decals", "editor_icon_previewer", "file-editor", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot_sheets", "goutte.camera.trackball", "midi", "modifiers", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "voxel_factory", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+
+[gdnative]
+
+singletons=[ "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
 
 [gui]
 

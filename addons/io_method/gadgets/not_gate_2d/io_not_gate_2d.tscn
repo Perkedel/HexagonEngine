@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/io_method/gadgets/not_gate_2d/io_not_gate_2d.gd" type="Script" id=1]
+[ext_resource path="res://addons/io_method/classes/io_hub_2d/io_hub_2d.gd" type="Script" id=2]
+[ext_resource path="res://addons/io_method/classes/input_slot_2d/input_slot_2d.gd" type="Script" id=3]
+[ext_resource path="res://addons/io_method/classes/output_slot_2d/output_slot_2d.gd" type="Script" id=4]
+[ext_resource path="res://addons/io_method/textures/gadgets/not_gate.png" type="Texture" id=5]
+
+[node name="IONotGate2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="IOHub2D" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Inputs" type="Node2D" parent="IOHub2D"]
+
+[node name="Input" type="Node2D" parent="IOHub2D/Inputs"]
+position = Vector2( -40, -20 )
+script = ExtResource( 3 )
+activation_method = "_on_signal_input_changed"
+
+[node name="Outputs" type="Node2D" parent="IOHub2D"]
+
+[node name="Output" type="Node2D" parent="IOHub2D/Outputs"]
+position = Vector2( 40, -20 )
+z_index = 1
+script = ExtResource( 4 )
+activation_signal = "power_changed"
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+offset = Vector2( 0, -16 )

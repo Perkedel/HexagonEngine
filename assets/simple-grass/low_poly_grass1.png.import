@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/low_poly_grass1.png-199056d3ce89f29ba1aea3726bad4178.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/simple-grass/low_poly_grass1.png"
+dest_files=[ "res://.import/low_poly_grass1.png-199056d3ce89f29ba1aea3726bad4178.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=1
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=true
+flags/srgb=0
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

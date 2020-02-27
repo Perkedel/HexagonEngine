@@ -1,4 +1,4 @@
-extends SoundManager
+extends SoundManager_Pluggits
 
 ####################################################################
 #	SOUND MANAGER MODULE FOR GODOT 3.1

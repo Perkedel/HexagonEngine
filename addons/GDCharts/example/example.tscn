@@ -1,0 +1,207 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/GDCharts/example/example.gd" type="Script" id=1]
+[ext_resource path="res://addons/GDCharts/script.gd" type="Script" id=2]
+[ext_resource path="res://addons/GDCharts/icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/chart-gd/THSarabunNew.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/chart-gd/graph-plot-white.png" type="Texture" id=5]
+[ext_resource path="res://addons/GDCharts/example/decorationGroup.tres" type="ButtonGroup" id=6]
+[ext_resource path="res://addons/GDCharts/example/chartType.tres" type="ButtonGroup" id=7]
+
+
+
+[node name="main" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="chart" type="ReferenceRect" parent="."]
+margin_left = 166.0
+margin_top = 120.0
+margin_right = 938.0
+margin_bottom = 327.0
+rect_min_size = Vector2( 256, 128 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 3 )
+}
+label_font = ExtResource( 4 )
+MAX_VALUES = 12
+dot_texture = ExtResource( 5 )
+default_chart_color = Color( 1, 1, 1, 0.8 )
+grid_color = Color( 0.0666667, 0.0901961, 0.109804, 0.694118 )
+chart_type = 0
+line_width = 2.0
+hovered_radius_ratio = 1.1
+chart_background_opacity = 0.15
+
+[node name="group" type="Control" parent="."]
+margin_left = 27.1008
+margin_top = 117.857
+margin_right = 27.1008
+margin_bottom = 117.857
+
+[node name="noLabel" type="CheckBox" parent="group"]
+margin_right = 132.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+pressed = true
+action_mode = 0
+group = ExtResource( 6 )
+text = "No label"
+
+[node name="ordinate" type="CheckBox" parent="group"]
+margin_top = 23.0
+margin_right = 132.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+action_mode = 0
+group = ExtResource( 6 )
+text = "Ordinates labels"
+
+[node name="absciss" type="CheckBox" parent="group"]
+margin_top = 46.0
+margin_right = 132.0
+margin_bottom = 69.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+action_mode = 0
+group = ExtResource( 6 )
+text = "Abscisses labels"
+
+[node name="legend" type="CheckBox" parent="group"]
+margin_top = 69.0
+margin_right = 132.0
+margin_bottom = 92.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+action_mode = 0
+group = ExtResource( 6 )
+text = "Legend labels"
+
+[node name="all" type="CheckBox" parent="group"]
+margin_top = 92.0
+margin_right = 132.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+action_mode = 0
+group = ExtResource( 6 )
+text = "All labels"
+
+[node name="split" type="ColorRect" parent="."]
+margin_left = 28.0
+margin_top = 243.0
+margin_right = 160.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 132, 1 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="groupType" type="Control" parent="."]
+margin_left = 27.1008
+margin_top = 252.731
+margin_right = 27.1008
+margin_bottom = 252.731
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="line" type="CheckBox" parent="groupType"]
+margin_right = 132.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+pressed = true
+action_mode = 0
+group = ExtResource( 7 )
+text = "Line chart"
+
+[node name="pie" type="CheckBox" parent="groupType"]
+margin_top = 23.0
+margin_right = 132.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_hover = Color( 0.172549, 0.192157, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0.172549, 0.192157, 0.215686, 1 )
+action_mode = 0
+group = ExtResource( 7 )
+text = "Pie chart"
+
+[node name="container" type="VBoxContainer" parent="."]
+margin_left = 360.0
+margin_top = 20.0
+margin_right = 680.0
+margin_bottom = 96.0
+mouse_filter = 0
+
+[node name="controls" type="HBoxContainer" parent="container"]
+margin_right = 320.0
+margin_bottom = 48.0
+mouse_filter = 0
+custom_constants/separation = 64
+
+[node name="clear" type="Button" parent="container/controls"]
+margin_right = 128.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 128, 48 )
+text = "Clear"
+
+[node name="add_data" type="Button" parent="container/controls"]
+margin_left = 192.0
+margin_right = 320.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 128, 48 )
+text = "Add data"
+
+[node name="maxValues" type="SpinBox" parent="container"]
+margin_top = 52.0
+margin_right = 320.0
+margin_bottom = 76.0
+min_value = 3.0
+max_value = 99999.0
+value = 12.0
+rounded = true
+
+[node name="benchmark" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 0
+
+[node name="fps" type="Label" parent="benchmark"]
+margin_right = 128.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 128, 32 )
+mouse_filter = 1
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="points" type="Label" parent="benchmark"]
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 128, 32 )
+mouse_filter = 1
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+[connection signal="pressed" from="group/noLabel" to="chart" method="set_labels" binds= [ 0 ]]
+[connection signal="pressed" from="group/ordinate" to="chart" method="set_labels" binds= [ 1 ]]
+[connection signal="pressed" from="group/absciss" to="chart" method="set_labels" binds= [ 2 ]]
+[connection signal="pressed" from="group/legend" to="chart" method="set_labels" binds= [ 4 ]]
+[connection signal="pressed" from="group/all" to="chart" method="set_labels" binds= [ 7 ]]
+[connection signal="pressed" from="groupType/line" to="." method="reset" flags=3]
+[connection signal="pressed" from="groupType/line" to="chart" method="set_chart_type" binds= [ 0 ]]
+[connection signal="pressed" from="groupType/pie" to="." method="reset" flags=3]
+[connection signal="pressed" from="groupType/pie" to="chart" method="set_chart_type" binds= [ 1 ]]
+[connection signal="pressed" from="container/controls/clear" to="chart" method="clear_chart"]
+[connection signal="pressed" from="container/controls/add_data" to="." method="reset"]
+[connection signal="value_changed" from="container/maxValues" to="chart" method="set_max_values"]
