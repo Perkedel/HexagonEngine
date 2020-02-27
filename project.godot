@@ -54,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.gd"
 }, {
+"base": "AudioStreamPlayer",
+"class": "BeatPlayer",
+"language": "GDScript",
+"path": "res://addons/beatplayer/beatplayer.gd"
+}, {
 "base": "Resource",
 "class": "Behavior",
 "language": "GDScript",
@@ -109,6 +114,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/global/editor_tools.gd"
 }, {
+"base": "",
+"class": "FLMusicLib",
+"language": "NativeScript",
+"path": "res://FLMusicLib/FLMusic.gdns"
+}, {
 "base": "FastTextInit",
 "class": "FastText",
 "language": "GDScript",
@@ -133,6 +143,116 @@ _global_script_classes=[ {
 "class": "FpsLabel",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/FPSLabel.gd"
+}, {
+"base": "GDDlg_AttributeBase",
+"class": "GDDlg_AttributeArray",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeArray.gd"
+}, {
+"base": "Object",
+"class": "GDDlg_AttributeBase",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/GDDlg_AttributeBase.gd"
+}, {
+"base": "GDDlg_AttributeBase",
+"class": "GDDlg_AttributeBool",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeBool.gd"
+}, {
+"base": "GDDlg_AttributeBase",
+"class": "GDDlg_AttributeInteger",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeInteger.gd"
+}, {
+"base": "GDDlg_AttributeBase",
+"class": "GDDlg_AttributeMap",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeMap.gd"
+}, {
+"base": "GDDlg_AttributeBase",
+"class": "GDDlg_AttributeString",
+"language": "GDScript",
+"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeString.gd"
+}, {
+"base": "GDDlg_ConditionOr",
+"class": "GDDlg_ConditionAnd",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionAnd.gd"
+}, {
+"base": "Object",
+"class": "GDDlg_ConditionBase",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/GDDlg_ConditionBase.gd"
+}, {
+"base": "GDDlg_ConditionBase",
+"class": "GDDlg_ConditionFalse",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionFalse.gd"
+}, {
+"base": "GDDlg_ConditionOr",
+"class": "GDDlg_ConditionNor",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionNor.gd"
+}, {
+"base": "GDDlg_ConditionBase",
+"class": "GDDlg_ConditionNot",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionNot.gd"
+}, {
+"base": "GDDlg_ConditionBase",
+"class": "GDDlg_ConditionOr",
+"language": "GDScript",
+"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionOr.gd"
+}, {
+"base": "Object",
+"class": "GDDlg_DialogDefinition",
+"language": "GDScript",
+"path": "res://addons/gddlg/GDDlg_DialogDefinition.gd"
+}, {
+"base": "Node",
+"class": "GDDlg_DialogPlayer",
+"language": "GDScript",
+"path": "res://addons/gddlg/GDDlg_DialogPlayer.gd"
+}, {
+"base": "Object",
+"class": "GDInv_Inventory",
+"language": "GDScript",
+"path": "res://addons/gdinv/GDInv_Inventory.gd"
+}, {
+"base": "Object",
+"class": "GDInv_ItemDefinition",
+"language": "GDScript",
+"path": "res://addons/gdinv/GDInv_ItemDefinition.gd"
+}, {
+"base": "Object",
+"class": "GDInv_ItemStack",
+"language": "GDScript",
+"path": "res://addons/gdinv/GDInv_ItemStack.gd"
+}, {
+"base": "Reference",
+"class": "GDSQLITE",
+"language": "GDScript",
+"path": "res://addons/gd-sqlite/constants.gd"
+}, {
+"base": "",
+"class": "GDSQLite",
+"language": "NativeScript",
+"path": "res://addons/gd-sqlite/gdsqlite.gdns"
+}, {
+"base": "Control",
+"class": "GDSQLiteBinaryDownloader",
+"language": "GDScript",
+"path": "res://addons/gd-sqlite/scenes/binary_downloader.gd"
+}, {
+"base": "",
+"class": "GDSQLiteDatabase",
+"language": "NativeScript",
+"path": "res://addons/gd-sqlite/database.gdns"
+}, {
+"base": "",
+"class": "GDSQLiteStatement",
+"language": "NativeScript",
+"path": "res://addons/gd-sqlite/statement.gdns"
 }, {
 "base": "BaseGameObject",
 "class": "GameObject",
@@ -325,6 +445,11 @@ _global_script_classes=[ {
 "path": "res://addons/godot-next/resources/resource_collections/resource_set.gd"
 }, {
 "base": "Reference",
+"class": "SaverLoader",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Procedural Saver Loader/saver_loader.gd"
+}, {
+"base": "Reference",
 "class": "Singletons",
 "language": "GDScript",
 "path": "res://addons/godot-next/global/singletons.gd"
@@ -409,6 +534,7 @@ _global_script_class_icons={
 "BaseGameSystem": "",
 "BaseGameWorld": "",
 "BaseSlot2D": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.png",
+"BeatPlayer": "",
 "Behavior": "",
 "BitFlag": "",
 "CSVFile": "",
@@ -420,11 +546,34 @@ _global_script_class_icons={
 "DebugLabel": "",
 "DiscreteGradientTexture": "",
 "EditorTools": "",
+"FLMusicLib": "",
 "FastText": "",
 "FastTextInit": "",
 "FileSearch": "",
 "FileSystemLink": "",
 "FpsLabel": "",
+"GDDlg_AttributeArray": "",
+"GDDlg_AttributeBase": "",
+"GDDlg_AttributeBool": "",
+"GDDlg_AttributeInteger": "",
+"GDDlg_AttributeMap": "",
+"GDDlg_AttributeString": "",
+"GDDlg_ConditionAnd": "",
+"GDDlg_ConditionBase": "",
+"GDDlg_ConditionFalse": "",
+"GDDlg_ConditionNor": "",
+"GDDlg_ConditionNot": "",
+"GDDlg_ConditionOr": "",
+"GDDlg_DialogDefinition": "",
+"GDDlg_DialogPlayer": "",
+"GDInv_Inventory": "",
+"GDInv_ItemDefinition": "",
+"GDInv_ItemStack": "",
+"GDSQLITE": "",
+"GDSQLite": "",
+"GDSQLiteBinaryDownloader": "",
+"GDSQLiteDatabase": "",
+"GDSQLiteStatement": "",
 "GameObject": "",
 "GameSystem": "",
 "GameWorld": "",
@@ -463,6 +612,7 @@ _global_script_class_icons={
 "ResourceArray": "",
 "ResourceCollection": "",
 "ResourceSet": "",
+"SaverLoader": "",
 "Singletons": "",
 "Sliceable2D": "",
 "Slicer2D": "",
@@ -480,9 +630,18 @@ _global_script_class_icons={
 "WATTest": ""
 }
 
+[PluginSettings]
+
+gddlg/DialogJsonPaths=PoolStringArray( "res://Datas/Totaling/GDInventory/" )
+gddlg/LoadOnReady=true
+gddlg/StrictDialogAttributes=false
+gddlg/StrictOptionAttributes=false
+gdinv/ItemJsonPaths=PoolStringArray( "res://Datas/Totaling/GDInventory/" )
+gdinv/LoadOnReady=true
+
 [WAT]
 
-Test_Directory="res://tests"
+Test_Directory="res://Datas/Totaling/WAT-Tests"
 
 [android]
 
@@ -511,6 +670,8 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 SceneLoader="*res://Scripts/ExtraImportAsset/SceneLoader.gd"
 AES="*res://Scripts/ExtraImportAsset/AES.gd"
+GDBehavior="*res://addons/GDBehavior/GDBehavior.gd"
+GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 
 [compression]
 
@@ -537,11 +698,11 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( ".", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "bone_gizmo", "decals", "editor_icon_previewer", "file-editor", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot_sheets", "goutte.camera.trackball", "midi", "modifiers", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "voxel_factory", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "Audio Loader", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "editor_icon_previewer", "file-editor", "gcode", "gd-sqlite", "gddlg", "gddlg-master", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "midi", "mixing-desk", "modifiers", "notes_tab", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "vector_resource", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
-singletons=[ "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
 
 [gui]
 

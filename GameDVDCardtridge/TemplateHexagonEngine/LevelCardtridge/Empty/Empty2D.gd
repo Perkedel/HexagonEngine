@@ -9,6 +9,7 @@ signal reportScore(number)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Windows Linux
 	pass # Replace with function body.
 
 

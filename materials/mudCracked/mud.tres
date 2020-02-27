@@ -1,0 +1,38 @@
+[gd_resource type="SpatialMaterial" load_steps=6 format=2]
+
+[ext_resource path="res://materials/mudCracked/Cracked_Mud_001_COLOR.jpg" type="Texture" id=1]
+[ext_resource path="res://materials/mudCracked/Cracked_Mud_001_OCC.jpg" type="Texture" id=2]
+[ext_resource path="res://materials/mudCracked/Cracked_Mud_001_DISP.png" type="Texture" id=3]
+[ext_resource path="res://materials/mudCracked/Cracked_Mud_001_NORM.jpg" type="Texture" id=4]
+[ext_resource path="res://materials/mudCracked/Cracked_Mud_001_ROUGH.jpg" type="Texture" id=5]
+
+
+[resource]
+resource_name = "mud"
+albedo_texture = ExtResource( 1 )
+metallic = 0.14
+metallic_specular = 0.0
+roughness = 0.89
+roughness_texture = ExtResource( 5 )
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+rim_enabled = true
+rim = 0.02
+rim_tint = 0.1
+ao_enabled = true
+ao_light_affect = 0.2
+ao_texture = ExtResource( 2 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = -0.01
+depth_deep_parallax = true
+depth_min_layers = 8
+depth_max_layers = 32
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 3 )
+uv1_scale = Vector3( 0.66, 0.66, 0.66 )
+

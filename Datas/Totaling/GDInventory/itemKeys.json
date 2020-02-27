@@ -1,0 +1,9 @@
+{
+    "id": "knife",
+    "attributes": {
+        "maxStackSize": 1,
+        "type": "weapon",
+        "minDamage": 1,
+        "maxDamage": 2
+    }
+}

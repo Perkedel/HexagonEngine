@@ -20,6 +20,7 @@ signal Shutdown_Exec()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Admob.load_banner()
 	pass # Replace with function body.
 
 
@@ -46,4 +47,9 @@ func _on_ChangeDVD_pressed():
 
 func _on_ShutdownHexagon_pressed():
 	emit_signal("Shutdown_Exec")
+	pass # Replace with function body.
+
+
+func _on_Admob_banner_loaded():
+	Kixlonzing.AdRewardUserNow(5)
 	pass # Replace with function body.

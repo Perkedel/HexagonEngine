@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/IsengModeHeddBoll.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/Nembok.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/Hoop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/Bola.tscn" type="PackedScene" id=6]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=8]
 
 [node name="IsengModeHeddBoll" type="Node"]
 script = ExtResource( 1 )
@@ -58,10 +59,15 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 980.0
 margin_right = 1920.0
-margin_bottom = 100.0
+margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 alignment = 1
 
@@ -78,7 +84,12 @@ margin_right = 1459.0
 margin_bottom = 100.0
 custom_fonts/font = ExtResource( 7 )
 text = "Shutdown Quit"
+
+[node name="Admob" type="Node" parent="."]
+script = ExtResource( 8 )
+banner_id = "ca-app-pub-3940256099942544/6300978111"
 [connection signal="BasketMasuk" from="Spatial/Goal/Hoop" to="." method="_on_Hoop_BasketMasuk"]
 [connection signal="BasketMasuk" from="Spatial/Goal/Hoop2" to="." method="_on_Hoop2_BasketMasuk"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/ChangeDVD" to="." method="_on_ChangeDVD_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/ShutdownHexagon" to="." method="_on_ShutdownHexagon_pressed"]
+[connection signal="banner_loaded" from="Admob" to="." method="_on_Admob_banner_loaded"]
