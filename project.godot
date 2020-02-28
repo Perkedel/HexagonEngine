@@ -124,7 +124,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Tulkit/FastText/FastText.gd"
 }, {
-"base": "Reference",
+"base": "Label",
 "class": "FastTextInit",
 "language": "GDScript",
 "path": "res://Tulkit/FastText/FastText_init.gd"
@@ -139,7 +139,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/global/file_system_link.gd"
 }, {
-"base": "Reference",
+"base": "CanvasLayer",
 "class": "FpsLabel",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/FPSLabel.gd"
@@ -479,7 +479,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
 }, {
-"base": "Reference",
+"base": "ReferenceRect",
 "class": "SpriteText",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/SpriteTextScript/SpriteText.gd"
@@ -684,6 +684,7 @@ SceneLoader="*res://Scripts/ExtraImportAsset/SceneLoader.gd"
 AES="*res://Scripts/ExtraImportAsset/AES.gd"
 GDBehavior="*res://addons/GDBehavior/GDBehavior.gd"
 GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
+GDDlg_DialogDB="*res://addons/gddlg/GDDlg_DialogDB.gd"
 
 [compression]
 
@@ -710,7 +711,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Audio Loader", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "editor_icon_previewer", "file-editor", "gcode", "gd-sqlite", "gddlg", "gddlg-master", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "midi", "mixing-desk", "modifiers", "notes_tab", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "vector_resource", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "editor_icon_previewer", "file-editor", "gcode", "gd-sqlite", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "midi", "mixing-desk", "modifiers", "notes_tab", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "vector_resource", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
