@@ -80,6 +80,10 @@ We accept mods. mods that improves! any improving mods, WELCOME!
 	
 you can even add Main Menu remix that inherits from original main menu, or make your own Node of main menu from scratch and do make sure you have assigned every connection to the Core Node of Hexagon Engine.
 	
+## Wait wait wait. one more: "Like Java".. does it contains Java?
+Only 1 or some few sets of Java, which will only be used to render for platforms such as Android and platform that based of Java.
+
+and we do not made Java things ourselves. we downloaded some plugins. our scripts are mostly GDscript.
 # Author
 ## Credit
 Godot, Godette-chan (c) Godot (<100%)(MIT): Base Home
