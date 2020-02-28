@@ -70,6 +70,8 @@ then finally, we've met a girl named **Godette**. She brought us to her house. W
 After we followed the tutorial, we finally declared that Godot Engine will be our forever home to its improbable demise.
 	
 Right now we are under migration to move things to our new home, as long as our college do not set restriction to previous home we taught in.
+
+yep. it's confirmed. no restriction. we can move in now! takes time, we know, but will eventually done so.
 	
 ## Cool and Good!
 Thank your attention. You can help us improve this Git by fork, edit, push, Pull request. we'll review whether it is appopriate mod that should be in this real Git.
