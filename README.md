@@ -31,7 +31,12 @@ The game runs inside this Hexagon Engine. i.e. your mods are your games!
 like Java! but it's Godot.
 	
 ## Why?
-Godot is just the game engine. THe core! Core of the core!
+
+Godot is legit a game engine, and more than just that as well. it's THe core! Core of the core!
+
+it's big! full of potential! do anything you'd like! doesn't even have to be game! editors, enterprise softwares, anything!
+
+It also supports AAA game making, with Vulkan! (Since Godot 4.0)
 	
 We want people to mod this and make games whatever they like.
 
