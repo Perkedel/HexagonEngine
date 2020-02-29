@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/Animations/MenuButtoningsAnimate.tres" type="Animation" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/Animations/OpenMenu.tres" type="Animation" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/Animations/CloseMenu.tres" type="Animation" id=3]
+
+[node name="MenuButtonAnimations" type="AnimationPlayer"]
+autoplay = "InitMenu"
+anims/CloseMenu = ExtResource( 3 )
+anims/InitMenu = ExtResource( 1 )
+anims/OpenMenu = ExtResource( 2 )

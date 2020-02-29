@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://addons/sprite-baker/resources/theme/theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/sprite-baker/scripts/frames_container.gd" type="Script" id=2]
+[ext_resource path="res://addons/sprite-baker/resources/theme/dragger_line_hover.tres" type="StyleBox" id=3]
+[ext_resource path="res://addons/sprite-baker/scripts/dragger.gd" type="Script" id=4]
+[ext_resource path="res://addons/sprite-baker/resources/theme/dragger_line.tres" type="StyleBox" id=5]
+[ext_resource path="res://addons/sprite-baker/scenes/ModelsFrame.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/sprite-baker/scenes/MaterialsFrame.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/sprite-baker/scenes/PreviewFrame.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/sprite-baker/scenes/AnimationsFrame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/sprite-baker/scenes/Scene3D.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/sprite-baker/scripts/baker.gd" type="Script" id=11]
+[ext_resource path="res://addons/sprite-baker/resources/theme/info_boxstyle.tres" type="StyleBox" id=12]
+[ext_resource path="res://addons/sprite-baker/resources/environment.tres" type="Environment" id=13]
+
+[sub_resource type="World" id=1]
+environment = ExtResource( 13 )
+
+[sub_resource type="World" id=2]
+
+[node name="MainUI" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1014.0
+margin_bottom = 590.0
+mouse_filter = 0
+
+[node name="Frames" type="HBoxContainer" parent="Box"]
+margin_right = 1004.0
+margin_bottom = 560.0
+size_flags_vertical = 3
+script = ExtResource( 2 )
+minimized_size = 25
+min_maximized_size = 70
+
+[node name="ModelsFrame" parent="Box/Frames" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 193.0
+margin_bottom = 560.0
+size_flags_stretch_ratio = 0.2
+
+[node name="Dragger1" type="VSeparator" parent="Box/Frames"]
+margin_left = 197.0
+margin_right = 201.0
+margin_bottom = 560.0
+mouse_default_cursor_shape = 10
+custom_styles/separator = ExtResource( 5 )
+script = ExtResource( 4 )
+dragger_stylebox = ExtResource( 5 )
+dragger_hover_stylebox = ExtResource( 3 )
+
+[node name="MaterialsFrame" parent="Box/Frames" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 205.0
+margin_right = 476.0
+margin_bottom = 560.0
+size_flags_stretch_ratio = 0.28
+
+[node name="Dragger2" type="VSeparator" parent="Box/Frames"]
+margin_left = 480.0
+margin_right = 484.0
+margin_bottom = 560.0
+mouse_default_cursor_shape = 10
+custom_styles/separator = ExtResource( 5 )
+script = ExtResource( 4 )
+dragger_stylebox = ExtResource( 5 )
+dragger_hover_stylebox = ExtResource( 3 )
+
+[node name="AnimationsFrame" parent="Box/Frames" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 488.0
+margin_right = 681.0
+margin_bottom = 560.0
+size_flags_stretch_ratio = 0.2
+
+[node name="Dragger3" type="VSeparator" parent="Box/Frames"]
+margin_left = 685.0
+margin_right = 689.0
+margin_bottom = 560.0
+mouse_default_cursor_shape = 10
+custom_styles/separator = ExtResource( 5 )
+script = ExtResource( 4 )
+dragger_stylebox = ExtResource( 5 )
+dragger_hover_stylebox = ExtResource( 3 )
+
+[node name="PreviewFrame" parent="Box/Frames" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 693.0
+margin_right = 1004.0
+margin_bottom = 560.0
+size_flags_stretch_ratio = 0.32
+
+[node name="InfoBox" type="HBoxContainer" parent="Box"]
+margin_top = 564.0
+margin_right = 1004.0
+margin_bottom = 580.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Box/InfoBox" groups=[
+"SpriteBaker.ProgressBar",
+]]
+margin_right = 120.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 120, 15 )
+max_value = 1.0
+percent_visible = false
+
+[node name="ModelInfo" type="Label" parent="Box/InfoBox" groups=[
+"SpriteBaker.Info",
+]]
+margin_left = 124.0
+margin_right = 562.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = ExtResource( 12 )
+text = "Tris: 0 | Materials: 0"
+
+[node name="BakeInfo" type="Label" parent="Box/InfoBox" groups=[
+"SpriteBaker.Info",
+]]
+margin_left = 566.0
+margin_right = 1004.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = ExtResource( 12 )
+text = "Sprite Size: 0x0 | Animations: 0"
+
+[node name="FileDialog" type="FileDialog" parent="." groups=[
+"SpriteBaker.FileDialog",
+]]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1014.0
+margin_bottom = 590.0
+window_title = "Open a File"
+mode = 0
+current_dir = "res://addons/sprite-baker"
+current_path = "res://addons/sprite-baker/"
+
+[node name="Baker" type="Node" parent="." groups=[
+"SpriteBaker.Model",
+"SpriteBaker.Bake",
+]]
+script = ExtResource( 11 )
+scene3d_path = NodePath("Viewport3D/Scene3D")
+
+[node name="Viewport3D" type="Viewport" parent="Baker"]
+world = SubResource( 1 )
+transparent_bg = true
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="Scene3D" parent="Baker/Viewport3D" groups=[
+"SpriteBaker.PostProcess",
+] instance=ExtResource( 10 )]
+
+[node name="SpriteSheet" type="Viewport" parent="Baker"]
+own_world = true
+world = SubResource( 2 )
+transparent_bg = true
+disable_3d = true
+usage = 0
+render_target_v_flip = true
+render_target_update_mode = 3
+[connection signal="gui_input" from="Box/Frames/Dragger1" to="Box/Frames" method="_on_dragger_gui_input" binds= [ "Dragger1" ]]
+[connection signal="mouse_entered" from="Box/Frames/Dragger1" to="Box/Frames/Dragger1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Box/Frames/Dragger1" to="Box/Frames/Dragger1" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Box/Frames/Dragger2" to="Box/Frames" method="_on_dragger_gui_input" binds= [ "Dragger2" ]]
+[connection signal="mouse_entered" from="Box/Frames/Dragger2" to="Box/Frames/Dragger2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Box/Frames/Dragger2" to="Box/Frames/Dragger2" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Box/Frames/Dragger3" to="Box/Frames" method="_on_dragger_gui_input" binds= [ "Dragger3" ]]
+[connection signal="mouse_entered" from="Box/Frames/Dragger3" to="Box/Frames/Dragger3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Box/Frames/Dragger3" to="Box/Frames/Dragger3" method="_on_mouse_exited"]

@@ -8,7 +8,8 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ChangeDVDButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExitButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Animation/MenuButtonAnimations.tscn" type="PackedScene" id=9]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/Animations/MenuButtonAnimations.tscn" type="PackedScene" id=9]
+
 
 [node name="MenuButtonings" type="VBoxContainer"]
 anchor_top = 1.0

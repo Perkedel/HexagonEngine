@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://addons/sprite-baker/resources/materials/pixel_outline.shader" type="Shader" id=1]
+
+[resource]
+render_priority = -1
+shader = ExtResource( 1 )
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+shader_param/depth_cutoff = 0.15
+shader_param/use_depth = false
+shader_param/blend = false
+shader_param/px_x = 0.0312
+shader_param/px_y = 0.0312

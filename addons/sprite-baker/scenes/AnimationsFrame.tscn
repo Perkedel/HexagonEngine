@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scenes/Frame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/sprite-baker/scenes/Animations.tscn" type="PackedScene" id=2]
+
+[node name="AnimationsFrame" instance=ExtResource( 1 )]
+title = "Animations"
+
+[node name="Title" parent="MaxBox/TitleBar/TitleBox" index="1"]
+text = "Animations"
+
+[node name="Animations" parent="MaxBox/ContentPanel/Content" index="0" instance=ExtResource( 2 )]
+
+[node name="Title" parent="MinBar/Box" index="4"]
+text = "Animations"

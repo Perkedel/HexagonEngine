@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxLine" format=2]
+
+[resource]
+color = Color( 0.584314, 0.584314, 0.584314, 1 )
+grow_begin = -4.0
+vertical = true

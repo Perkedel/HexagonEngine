@@ -42,11 +42,13 @@ func _on_Hoop2_BasketMasuk(apaNode):
 
 func _on_ChangeDVD_pressed():
 	emit_signal("ChangeDVD_Exec")
+	$Admob.hide_banner()
 	pass # Replace with function body.
 
 
 func _on_ShutdownHexagon_pressed():
 	emit_signal("Shutdown_Exec")
+	$Admob.hide_banner()
 	pass # Replace with function body.
 
 

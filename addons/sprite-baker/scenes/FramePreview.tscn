@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scripts/frame_preview.gd" type="Script" id=1]
+[ext_resource path="res://addons/sprite-baker/resources/theme/content_panel.tres" type="StyleBox" id=2]
+[ext_resource path="res://addons/sprite-baker/resources/theme/title_bar.tres" type="StyleBox" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 10.0
+draw_center = false
+
+[node name="Frame" type="MarginContainer"]
+margin_right = 150.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 100 )
+focus_mode = 2
+custom_constants/margin_right = 2
+custom_constants/margin_top = 2
+custom_constants/margin_left = 2
+custom_constants/margin_bottom = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box" type="VBoxContainer" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 148.0
+margin_bottom = 98.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="TitleBar" type="Panel" parent="Box"]
+margin_right = 146.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+rect_clip_content = true
+mouse_filter = 2
+custom_styles/panel = ExtResource( 3 )
+
+[node name="TitleBox" type="HBoxContainer" parent="Box/TitleBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Box/TitleBar/TitleBox"]
+margin_top = 8.0
+margin_right = 146.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 1 )
+text = "(Frame title)"
+
+[node name="Panel" type="PanelContainer" parent="Box"]
+margin_top = 30.0
+margin_right = 146.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 0, 30 )
+rect_clip_content = true
+mouse_filter = 2
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 2 )

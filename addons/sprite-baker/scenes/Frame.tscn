@@ -1,0 +1,262 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scripts/frame.gd" type="Script" id=1]
+[ext_resource path="res://addons/sprite-baker/resources/theme/content_panel.tres" type="StyleBox" id=2]
+[ext_resource path="res://addons/sprite-baker/resources/theme/title_bar.tres" type="StyleBox" id=3]
+[ext_resource path="res://addons/sprite-baker/resources/theme/empty_stylebox.tres" type="StyleBox" id=4]
+[ext_resource path="res://addons/sprite-baker/resources/icons/arrow_left.svg" type="Texture" id=5]
+[ext_resource path="res://addons/sprite-baker/resources/icons/arrow_right.svg" type="Texture" id=6]
+[ext_resource path="res://addons/sprite-baker/resources/icons/minus.svg" type="Texture" id=7]
+[ext_resource path="res://addons/sprite-baker/resources/theme/minimized_bar.tres" type="StyleBox" id=8]
+[ext_resource path="res://addons/sprite-baker/resources/icons/plus.svg" type="Texture" id=9]
+[ext_resource path="res://addons/sprite-baker/scripts/vertical_label.gd" type="Script" id=10]
+[ext_resource path="res://addons/sprite-baker/scenes/FramePreview.tscn" type="PackedScene" id=11]
+
+[node name="Frame" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 2
+custom_constants/margin_top = 2
+custom_constants/margin_left = 2
+custom_constants/margin_bottom = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+move_left_path = NodePath("MaxBox/TitleBar/TitleBox/MoveLeft")
+move_right_path = NodePath("MaxBox/TitleBar/TitleBox/MoveRight")
+move_left_min_path = NodePath("MinBar/Box/MoveLeft")
+move_right_min_path = NodePath("MinBar/Box/MoveRight")
+minimize_path = NodePath("MaxBox/TitleBar/TitleBox/Minimize")
+title_box_path = NodePath("MaxBox/TitleBar/TitleBox")
+title_path = NodePath("MaxBox/TitleBar/TitleBox/Title")
+title_min_path = NodePath("MinBar/Box/Title")
+preview_scn = ExtResource( 11 )
+
+[node name="MaxBox" type="VBoxContainer" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1022.0
+margin_bottom = 598.0
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="TitleBar" type="Panel" parent="MaxBox"]
+margin_right = 1020.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+rect_clip_content = true
+mouse_filter = 1
+custom_styles/panel = ExtResource( 3 )
+
+[node name="TitleBox" type="HBoxContainer" parent="MaxBox/TitleBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginLeft" type="VSeparator" parent="MaxBox/TitleBar/TitleBox"]
+margin_right = 10.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 4 )
+custom_constants/separation = 10
+
+[node name="Title" type="Label" parent="MaxBox/TitleBar/TitleBox"]
+margin_left = 14.0
+margin_top = 8.0
+margin_right = 951.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+text = "(Frame title)"
+
+[node name="MoveLeft" type="Button" parent="MaxBox/TitleBar/TitleBox"]
+margin_left = 955.0
+margin_right = 971.0
+margin_bottom = 30.0
+mouse_filter = 1
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+disabled = true
+icon = ExtResource( 5 )
+flat = true
+
+[node name="MoveRight" type="Button" parent="MaxBox/TitleBar/TitleBox"]
+margin_left = 975.0
+margin_right = 991.0
+margin_bottom = 30.0
+mouse_filter = 1
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+custom_constants/hseparation = 0
+disabled = true
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Minimize" type="Button" parent="MaxBox/TitleBar/TitleBox"]
+margin_left = 995.0
+margin_right = 1011.0
+margin_bottom = 30.0
+mouse_filter = 1
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+custom_constants/hseparation = 0
+icon = ExtResource( 7 )
+flat = true
+
+[node name="MarginRight" type="VSeparator" parent="MaxBox/TitleBar/TitleBox"]
+margin_left = 1015.0
+margin_right = 1020.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 4 )
+custom_constants/separation = 5
+
+[node name="ContentPanel" type="PanelContainer" parent="MaxBox"]
+margin_top = 30.0
+margin_right = 1020.0
+margin_bottom = 596.0
+mouse_filter = 2
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 2 )
+
+[node name="Content" type="ScrollContainer" parent="MaxBox/ContentPanel"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 1015.0
+margin_bottom = 561.0
+mouse_filter = 1
+
+[node name="MinBar" type="Panel" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1022.0
+margin_bottom = 598.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 8 )
+
+[node name="Box" type="VBoxContainer" parent="MinBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginTop" type="HSeparator" parent="MinBar/Box"]
+margin_right = 1020.0
+margin_bottom = 5.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 4 )
+custom_constants/separation = 5
+
+[node name="Maximize" type="Button" parent="MinBar/Box"]
+margin_left = 502.0
+margin_top = 9.0
+margin_right = 518.0
+margin_bottom = 25.0
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+custom_constants/hseparation = 0
+icon = ExtResource( 9 )
+flat = true
+
+[node name="MoveRight" type="Button" parent="MinBar/Box"]
+margin_left = 502.0
+margin_top = 29.0
+margin_right = 518.0
+margin_bottom = 45.0
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+custom_constants/hseparation = 0
+disabled = true
+icon = ExtResource( 6 )
+flat = true
+
+[node name="MoveLeft" type="Button" parent="MinBar/Box"]
+margin_left = 502.0
+margin_top = 49.0
+margin_right = 518.0
+margin_bottom = 65.0
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+disabled = true
+icon = ExtResource( 5 )
+flat = true
+
+[node name="Title" type="Control" parent="MinBar/Box"]
+margin_left = 503.0
+margin_top = 69.0
+margin_right = 517.0
+margin_bottom = 596.0
+rect_min_size = Vector2( 14, 0 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+script = ExtResource( 10 )
+text = "(Frame title)"
+
+[node name="HighlightBox" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1022.0
+margin_bottom = 598.0
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="Separator1" type="VSeparator" parent="HighlightBox"]
+margin_right = 340.0
+margin_bottom = 596.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_styles/separator = ExtResource( 4 )
+
+[node name="Highlight" type="ColorRect" parent="HighlightBox"]
+margin_left = 340.0
+margin_right = 680.0
+margin_bottom = 596.0
+mouse_filter = 2
+size_flags_horizontal = 3
+color = Color( 0.211765, 0.529412, 0.623529, 0.0588235 )
+
+[node name="Separator2" type="VSeparator" parent="HighlightBox"]
+margin_left = 680.0
+margin_right = 1020.0
+margin_bottom = 596.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_styles/separator = ExtResource( 4 )
+[connection signal="gui_input" from="MaxBox/TitleBar" to="." method="_on_TitleBar_gui_input"]
+[connection signal="pressed" from="MaxBox/TitleBar/TitleBox/MoveLeft" to="." method="_on_MoveLeft_pressed"]
+[connection signal="pressed" from="MaxBox/TitleBar/TitleBox/MoveRight" to="." method="_on_MoveRight_pressed"]
+[connection signal="pressed" from="MaxBox/TitleBar/TitleBox/Minimize" to="." method="_on_Minimize_pressed"]
+[connection signal="pressed" from="MinBar/Box/Maximize" to="." method="_on_Maximize_pressed"]
+[connection signal="pressed" from="MinBar/Box/MoveRight" to="." method="_on_MoveRight_pressed"]
+[connection signal="pressed" from="MinBar/Box/MoveLeft" to="." method="_on_MoveLeft_pressed"]

@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://addons/midi/ADSR.gd"
 }, {
 "base": "Reference",
+"class": "AutotileScript",
+"language": "GDScript",
+"path": "res://addons/fabianlc_gpu_tilemap/autotile scripts/autotile_script.gd"
+}, {
+"base": "Reference",
 "class": "Bank",
 "language": "GDScript",
 "path": "res://addons/midi/Bank.gd"
@@ -254,6 +259,11 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/gd-sqlite/statement.gdns"
 }, {
+"base": "ColorRect",
+"class": "GPUTileMap",
+"language": "GDScript",
+"path": "res://addons/fabianlc_gpu_tilemap/gpu_tilemap.gd"
+}, {
 "base": "BaseGameObject",
 "class": "GameObject",
 "language": "GDScript",
@@ -268,6 +278,11 @@ _global_script_classes=[ {
 "class": "GameWorld",
 "language": "GDScript",
 "path": "res://addons/gcs/gameWorld.gd"
+}, {
+"base": "Reference",
+"class": "GaussianRandom",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/GaussianRandom.gd"
 }, {
 "base": "CollisionShape2D",
 "class": "Geometry2D",
@@ -539,6 +554,7 @@ _global_script_class_icons={
 "Array2D": "",
 "ArrayUtils": "",
 "AudioStreamPlayerADSR": "",
+"AutotileScript": "",
 "Bank": "",
 "BaseGameObject": "",
 "BaseGameSystem": "",
@@ -584,9 +600,11 @@ _global_script_class_icons={
 "GDSQLiteBinaryDownloader": "",
 "GDSQLiteDatabase": "",
 "GDSQLiteStatement": "",
+"GPUTileMap": "",
 "GameObject": "",
 "GameSystem": "",
 "GameWorld": "",
+"GaussianRandom": "",
 "Geometry2D": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
@@ -606,7 +624,7 @@ _global_script_class_icons={
 "Joystick": "",
 "MessageDispatcher": "",
 "MessageDispatcherWrapper": "",
-"MidiPlayer": "",
+"MidiPlayer": "res://addons/midi/icon.png",
 "MixMode": "res://addons/modifiers/icon_modifiers.svg",
 "MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
 "Modifiers": "res://addons/modifiers/icon_modifiers.svg",
@@ -711,15 +729,17 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "editor_icon_previewer", "file-editor", "gcode", "gd-sqlite", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "midi", "mixing-desk", "modifiers", "notes_tab", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "vector_resource", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "editor_icon_previewer", "file-editor", "gcode", "gd-sqlite", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "midi", "mixing-desk", "modifiers", "notes_tab", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "tile_spawner", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
 singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
 
 [gui]
 
 theme/use_hidpi=true
+theme/custom="res://Theme/Perkedel_Tema.tres"
 theme/custom_font="res://font/Built/Ubuntu_L_18_bare.tres"
 
 [input]
@@ -849,3 +869,7 @@ quality/subsurface_scattering/quality=2
 environment/default_clear_color=Color( 0.0666667, 0.168627, 0.317647, 1 )
 quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"
+
+[tiled_importer]
+
+enable_json_format=true

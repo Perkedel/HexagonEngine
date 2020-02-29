@@ -20,15 +20,15 @@ var pig_color_select_script = load("res://addons/pigmint_controls/buttons/ColorS
 #------------------------------------------------------------------------
 # Initialization of the plugin goes here
 func _enter_tree():
-    # Add the new type with a name, a parent type, a script and an icon
-    add_custom_type("PigletColorSelect", "TextureButton",
-                    preload("res://addons/pigmint_controls/buttons/ColorSelect/piglet_color_select.gd"), 
-                    preload("res://addons/pigmint_controls/buttons/ColorSelect/piglet_color_select_icon.png"))
+	# Add the new type with a name, a parent type, a script and an icon
+	add_custom_type("PigletColorSelect", "TextureButton",
+					preload("res://addons/pigmint_controls/buttons/ColorSelect/piglet_color_select.gd"), 
+					preload("res://addons/pigmint_controls/buttons/ColorSelect/piglet_color_select_icon.png"))
 					
 	# 'PigColorSelect' is a subclass of 'PigletColorSelect'		
-    add_custom_type("PigColorSelect", "TextureButton",
-                    pig_color_select_script, 
-                    preload("res://addons/pigmint_controls/buttons/ColorSelect/pig_color_select_icon.png"))
+	add_custom_type("PigColorSelect", "TextureButton",
+					pig_color_select_script, 
+					preload("res://addons/pigmint_controls/buttons/ColorSelect/pig_color_select_icon.png"))
 #---------- _enter_tree()
 
 
@@ -37,7 +37,7 @@ func _enter_tree():
 #------------------------------------------------------------------------
 # Clean-up of the plugin goes here
 func _exit_tree():
-    # Always remember to remove it from the engine when deactivated
-    remove_custom_type("PigColorSelect")
-    remove_custom_type("PigletColorSelect")
+	# Always remember to remove it from the engine when deactivated
+	remove_custom_type("PigColorSelect")
+	remove_custom_type("PigletColorSelect")
 #---------- _exit_tree()

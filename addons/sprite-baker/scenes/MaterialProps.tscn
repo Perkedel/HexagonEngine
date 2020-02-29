@@ -1,0 +1,970 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scripts/material_props.gd" type="Script" id=1]
+[ext_resource path="res://addons/sprite-baker/resources/icons/visible.svg" type="Texture" id=2]
+[ext_resource path="res://addons/sprite-baker/resources/icons/shaded.svg" type="Texture" id=3]
+[ext_resource path="res://addons/sprite-baker/resources/icons/arrow_down.svg" type="Texture" id=4]
+[ext_resource path="res://addons/sprite-baker/resources/theme/material_props_box.tres" type="StyleBox" id=5]
+[ext_resource path="res://addons/sprite-baker/resources/materials/hidden.tres" type="Material" id=6]
+[ext_resource path="res://addons/sprite-baker/resources/materials/hidden_xray.tres" type="Material" id=7]
+[ext_resource path="res://addons/sprite-baker/resources/icons/clear.svg" type="Texture" id=8]
+[ext_resource path="res://addons/sprite-baker/resources/materials/plain.tres" type="Material" id=9]
+[ext_resource path="res://addons/sprite-baker/resources/theme/empty_stylebox.tres" type="StyleBox" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="MaterialParams" type="PanelContainer"]
+margin_right = 561.0
+margin_bottom = 106.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+hidden_material = ExtResource( 6 )
+hidden_xray_material = ExtResource( 7 )
+plain_color_material = ExtResource( 9 )
+surface_name_path = NodePath("SpatialBox/ReducedBox/Name/SurfaceName")
+material_name_path = NodePath("SpatialBox/ReducedBox/Name/MaterialName")
+hide_path = NodePath("SpatialBox/ReducedBox/Options/Hide")
+unshaded_path = NodePath("SpatialBox/ReducedBox/Options/Unshaded")
+color_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Color")
+albedo_texture_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/AlbedoTexture/ATx")
+roughness_texture_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RTx")
+roughness_color_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RColor")
+metallic_texture_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MTx")
+metallic_color_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MColor")
+normal_texture_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NTx")
+roughness_options_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions")
+roughness_spin_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessSpin")
+roughness_slider_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessSlider")
+roughness_texture_opt_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessTexture/Tx")
+roughness_channel_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessChOpt")
+metallic_options_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions")
+metallic_check_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicCheck")
+metallic_texture_opt_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicTexture/Tx")
+metallic_channel_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicChOpt")
+specular_spin_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/SpecularSpin")
+specular_slider_path = NodePath("SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/SpecularSlider")
+normal_options_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions")
+normal_spin_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalSpin")
+normal_slider_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalSlider")
+normal_texture_opt_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalTexture/Tx")
+ao_enabled_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOEnabled")
+ao_box_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox")
+ao_spin_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOSpin")
+ao_slider_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOSlider")
+ao_texture_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOTx")
+ao_texture_opt_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOTexture/Tx")
+ao_options_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions")
+ao_channel_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOChOpt")
+ao_uv2_path = NodePath("AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOUv2")
+more_options_path = NodePath("SpatialBox/ReducedBox/Options/MoreOptions")
+advanced_dialog_path = NodePath("AdvancedDialog")
+
+[node name="SpatialBox" type="VBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 556.0
+margin_bottom = 101.0
+mouse_filter = 2
+
+[node name="ReducedBox" type="HBoxContainer" parent="SpatialBox"]
+margin_right = 551.0
+margin_bottom = 72.0
+mouse_filter = 2
+custom_constants/separation = 2
+
+[node name="Name" type="VBoxContainer" parent="SpatialBox/ReducedBox"]
+margin_right = 233.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SurfaceName" type="Label" parent="SpatialBox/ReducedBox/Name"]
+margin_top = 10.0
+margin_right = 233.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+clip_text = true
+
+[node name="MaterialName" type="Button" parent="SpatialBox/ReducedBox/Name" groups=[
+"SpriteBaker.MaterialProps.Hide",
+"SpriteBaker.MaterialProps.PlainColor",
+]]
+margin_top = 45.0
+margin_right = 233.0
+margin_bottom = 65.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 6
+clip_text = true
+align = 0
+
+[node name="Options" type="VBoxContainer" parent="SpatialBox/ReducedBox"]
+margin_left = 235.0
+margin_right = 263.0
+margin_bottom = 72.0
+alignment = 1
+
+[node name="Hide" type="Button" parent="SpatialBox/ReducedBox/Options"]
+margin_right = 28.0
+margin_bottom = 22.0
+hint_tooltip = "Toggle visibility: visible"
+mouse_filter = 1
+icon = ExtResource( 2 )
+
+[node name="Unshaded" type="Button" parent="SpatialBox/ReducedBox/Options"]
+margin_top = 26.0
+margin_right = 28.0
+margin_bottom = 48.0
+hint_tooltip = "Toggle shading: shaded"
+mouse_filter = 1
+icon = ExtResource( 3 )
+
+[node name="MoreOptions" type="MenuButton" parent="SpatialBox/ReducedBox/Options"]
+margin_top = 52.0
+margin_right = 28.0
+margin_bottom = 72.0
+mouse_filter = 1
+icon = ExtResource( 4 )
+flat = false
+items = [ "Advanced Options", null, 0, false, false, 0, 0, null, "", false, "", null, 0, false, false, 1, 0, null, "", true, "Load...", null, 0, false, false, 2, 0, null, "", false, "Save", null, 0, false, false, 3, 0, null, "", false, "Save as...", null, 0, false, false, 4, 0, null, "", false, "", null, 0, false, false, 5, 0, null, "", true, "Restore original material", null, 0, false, false, 6, 0, null, "", false, "Restore active material", null, 0, false, true, 7, 0, null, "", false, "", null, 0, false, false, 8, 0, null, "", true, "Copy", null, 0, false, false, 9, 0, null, "", false, "Paste", null, 0, false, true, 10, 0, null, "", false, "Paste unique", null, 0, false, true, 11, 0, null, "", false ]
+
+[node name="ParametersBox" type="VBoxContainer" parent="SpatialBox/ReducedBox"]
+margin_left = 265.0
+margin_right = 551.0
+margin_bottom = 72.0
+
+[node name="Parameters" type="HBoxContainer" parent="SpatialBox/ReducedBox/ParametersBox"]
+margin_right = 286.0
+margin_bottom = 50.0
+
+[node name="Separator1" type="VSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters"]
+margin_right = 15.0
+margin_bottom = 50.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 10 )
+custom_constants/separation = 15
+
+[node name="Color" type="ColorPickerButton" parent="SpatialBox/ReducedBox/ParametersBox/Parameters" groups=[
+"SpriteBaker.MaterialProps.Hide",
+]]
+margin_left = 19.0
+margin_top = 7.0
+margin_right = 59.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 40, 35 )
+hint_tooltip = "Albedo color"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color( 1, 1, 1, 1 )
+
+[node name="AlbedoTexture" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters" groups=[
+"SpriteBaker.MaterialProps.Hide",
+"SpriteBaker.MaterialProps.PlainColor",
+]]
+margin_left = 63.0
+margin_right = 118.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 55, 50 )
+hint_tooltip = "Albedo texture"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ATx" type="TextureRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/AlbedoTexture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Clear" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/AlbedoTexture/ATx"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -16.0
+margin_bottom = 16.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+custom_constants/hseparation = 0
+icon = ExtResource( 8 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separator2" type="VSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters"]
+margin_left = 122.0
+margin_right = 137.0
+margin_bottom = 50.0
+mouse_filter = 1
+custom_styles/separator = ExtResource( 10 )
+custom_constants/separation = 15
+
+[node name="Roughness" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters" groups=[
+"SpriteBaker.MaterialProps.Hide",
+"SpriteBaker.MaterialProps.PlainColor",
+]]
+margin_left = 141.0
+margin_right = 196.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 55, 50 )
+hint_tooltip = "Roughness parameters"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RTx" type="TextureRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Clear" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RTx"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -16.0
+margin_bottom = 16.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+custom_constants/hseparation = 0
+icon = ExtResource( 8 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RColor" type="ColorRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness"]
+anchor_left = 0.5
+anchor_top = 0.48
+anchor_right = 0.5
+anchor_bottom = 0.48
+margin_left = -22.5
+margin_top = -19.0
+margin_right = 22.5
+margin_bottom = 21.0
+rect_min_size = Vector2( 45, 40 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="RoughnessOptions" type="PopupPanel" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_right = 104.0
+margin_bottom = 153.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions"]
+anchor_top = -0.0841584
+anchor_bottom = -0.0841584
+margin_left = 4.0
+margin_top = 21.0
+margin_right = 100.0
+margin_bottom = 215.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Box" type="VBoxContainer" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 186.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoughnessSlider" type="HSlider" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_right = 80.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.01
+
+[node name="RoughnessSpin" type="SpinBox" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_top = 20.0
+margin_right = 80.0
+margin_bottom = 44.0
+max_value = 1.0
+step = 0.01
+
+[node name="RoughnessTexture" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Tx" type="TextureRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessTexture"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -35.0
+margin_top = -35.0
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 70, 70 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessTexture/Tx"]
+anchor_left = 1.0
+anchor_top = -0.00769231
+anchor_right = 1.0
+anchor_bottom = -0.00769231
+margin_left = -16.0
+margin_bottom = 16.0
+disabled = true
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Separator" type="HSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_top = 132.0
+margin_right = 80.0
+margin_bottom = 136.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="ChannelLabel" type="Label" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_top = 140.0
+margin_right = 80.0
+margin_bottom = 154.0
+text = "Channel"
+
+[node name="RoughnessChOpt" type="OptionButton" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box"]
+margin_top = 158.0
+margin_right = 80.0
+margin_bottom = 178.0
+text = "Green"
+items = [ "Red", null, false, 0, null, "Green", null, false, 1, null, "Blue", null, false, 2, null, "Alpha", null, false, 3, null, "Gray", null, false, 4, null ]
+selected = 1
+
+[node name="Separator3" type="VSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters"]
+margin_left = 200.0
+margin_right = 215.0
+margin_bottom = 50.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 10 )
+custom_constants/separation = 15
+
+[node name="Metallic" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters" groups=[
+"SpriteBaker.MaterialProps.Hide",
+"SpriteBaker.MaterialProps.PlainColor",
+]]
+margin_left = 219.0
+margin_right = 274.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 55, 50 )
+hint_tooltip = "Metallic parameters"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MTx" type="TextureRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Clear" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MTx"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -16.0
+margin_bottom = 16.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+custom_constants/hseparation = 0
+icon = ExtResource( 8 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MColor" type="ColorRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic"]
+anchor_left = 0.5
+anchor_top = 0.48
+anchor_right = 0.5
+anchor_bottom = 0.48
+margin_left = -22.5
+margin_top = -19.0
+margin_right = 22.5
+margin_bottom = 21.0
+rect_min_size = Vector2( 45, 40 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="MetallicOptions" type="PopupPanel" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic"]
+margin_right = 104.0
+margin_bottom = 256.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions"]
+anchor_top = -0.0841584
+anchor_bottom = -0.0841584
+margin_left = 4.0
+margin_top = 25.5445
+margin_right = 100.0
+margin_bottom = 273.545
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Box" type="VBoxContainer" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MetallicCheck" type="CheckBox" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_right = 80.0
+margin_bottom = 24.0
+text = "Metallic"
+
+[node name="MetallicTexture" type="Button" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 28.0
+margin_right = 80.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Tx" type="TextureRect" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicTexture"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -35.0
+margin_top = -35.0
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 70, 70 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicTexture/Tx"]
+anchor_left = 1.0
+anchor_top = -0.00769231
+anchor_right = 1.0
+anchor_bottom = -0.00769231
+margin_left = -16.0
+margin_bottom = 16.0
+disabled = true
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Separator1" type="HSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 112.0
+margin_right = 80.0
+margin_bottom = 116.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="ChannelLabel" type="Label" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 120.0
+margin_right = 80.0
+margin_bottom = 134.0
+text = "Channel"
+
+[node name="MetallicChOpt" type="OptionButton" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 138.0
+margin_right = 80.0
+margin_bottom = 158.0
+text = "Blue"
+items = [ "Red", null, false, 0, null, "Green", null, false, 1, null, "Blue", null, false, 2, null, "Alpha", null, false, 3, null, "Gray", null, false, 4, null ]
+selected = 2
+
+[node name="Separator2" type="HSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 162.0
+margin_right = 80.0
+margin_bottom = 166.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="SpecularLabel" type="Label" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 170.0
+margin_right = 80.0
+margin_bottom = 184.0
+text = "Specular"
+
+[node name="SpecularSlider" type="HSlider" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 188.0
+margin_right = 80.0
+margin_bottom = 204.0
+max_value = 1.0
+step = 0.01
+
+[node name="SpecularSpin" type="SpinBox" parent="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box"]
+margin_top = 208.0
+margin_right = 80.0
+margin_bottom = 232.0
+max_value = 1.0
+step = 0.01
+
+[node name="Separator4" type="VSeparator" parent="SpatialBox/ReducedBox/ParametersBox/Parameters"]
+margin_left = 278.0
+margin_right = 286.0
+margin_bottom = 50.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 10 )
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdvancedDialog" type="PopupPanel" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 556.0
+margin_bottom = 101.0
+
+[node name="MarginContainer" type="MarginContainer" parent="AdvancedDialog"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 547.0
+margin_bottom = 92.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdvancedBox" type="HBoxContainer" parent="AdvancedDialog/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 535.0
+margin_bottom = 80.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalBox" type="VBoxContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox"]
+margin_right = 55.0
+margin_bottom = 85.0
+
+[node name="NormalLabel" type="Label" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox"]
+margin_right = 55.0
+margin_bottom = 14.0
+hint_tooltip = "Normal map"
+mouse_filter = 1
+text = "Normal"
+clip_text = true
+
+[node name="Normal" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox"]
+margin_top = 18.0
+margin_right = 55.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 55, 50 )
+hint_tooltip = "Normal map"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NTx" type="TextureRect" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Clear" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NTx"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -16.0
+margin_bottom = 16.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+custom_constants/hseparation = 0
+icon = ExtResource( 8 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalOptions" type="PopupPanel" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal"]
+margin_right = 104.0
+margin_bottom = 202.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions"]
+anchor_top = -0.0841584
+anchor_bottom = -0.0841584
+margin_left = 4.0
+margin_top = 21.0
+margin_right = 100.0
+margin_bottom = 215.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Box" type="VBoxContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 186.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalSlider" type="HSlider" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box"]
+margin_right = 80.0
+margin_bottom = 16.0
+min_value = -16.0
+max_value = 16.0
+step = 0.01
+
+[node name="NormalSpin" type="SpinBox" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box"]
+margin_top = 20.0
+margin_right = 80.0
+margin_bottom = 44.0
+min_value = -16.0
+max_value = 16.0
+step = 0.01
+
+[node name="NormalTexture" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box"]
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Tx" type="TextureRect" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalTexture"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -35.0
+margin_top = -35.0
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 70, 70 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalTexture/Tx"]
+anchor_left = 1.0
+anchor_top = -0.00769231
+anchor_right = 1.0
+anchor_bottom = -0.00769231
+margin_left = -16.0
+margin_bottom = 16.0
+disabled = true
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Separator1" type="VSeparator" parent="AdvancedDialog/MarginContainer/AdvancedBox"]
+margin_left = 59.0
+margin_right = 74.0
+margin_bottom = 85.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 10 )
+custom_constants/separation = 15
+
+[node name="AOBox" type="VBoxContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox"]
+margin_left = 78.0
+margin_right = 133.0
+margin_bottom = 85.0
+
+[node name="AOLabel" type="Label" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox"]
+margin_right = 55.0
+margin_bottom = 14.0
+hint_tooltip = "Ambient Occlusion"
+mouse_filter = 1
+text = "AO"
+clip_text = true
+
+[node name="AO" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox"]
+margin_top = 18.0
+margin_right = 55.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 55, 50 )
+hint_tooltip = "Ambient Occlusion"
+mouse_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AOTx" type="TextureRect" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Clear" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOTx"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -16.0
+margin_bottom = 16.0
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 10 )
+custom_constants/hseparation = 0
+icon = ExtResource( 8 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AOOptions" type="PopupPanel" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO"]
+margin_right = 104.0
+margin_bottom = 202.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions"]
+anchor_top = -0.0841584
+anchor_bottom = -0.0841584
+margin_left = 4.0
+margin_top = 25.0396
+margin_right = 100.0
+margin_bottom = 267.04
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AOOptBox" type="VBoxContainer" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 234.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AOEnabled" type="CheckBox" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_right = 80.0
+margin_bottom = 24.0
+hint_tooltip = "Enable Ambient Occlusion"
+text = "Enable"
+
+[node name="AOSlider" type="HSlider" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 28.0
+margin_right = 80.0
+margin_bottom = 44.0
+hint_tooltip = "Light affect value"
+max_value = 1.0
+step = 0.01
+
+[node name="AOSpin" type="SpinBox" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 72.0
+hint_tooltip = "Light affect value"
+max_value = 1.0
+step = 0.01
+
+[node name="AOTexture" type="Button" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 76.0
+margin_right = 80.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Tx" type="TextureRect" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOTexture"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -35.0
+margin_top = -35.0
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 70, 70 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOTexture/Tx"]
+anchor_left = 1.0
+anchor_top = -0.00769231
+anchor_right = 1.0
+anchor_bottom = -0.00769231
+margin_left = -16.0
+margin_bottom = 16.0
+disabled = true
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ChannelLabel" type="Label" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 160.0
+margin_right = 80.0
+margin_bottom = 174.0
+text = "Channel"
+
+[node name="AOChOpt" type="OptionButton" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 178.0
+margin_right = 80.0
+margin_bottom = 198.0
+text = "Red"
+items = [ "Red", null, false, 0, null, "Green", null, false, 1, null, "Blue", null, false, 2, null, "Alpha", null, false, 3, null, "Gray", null, false, 4, null ]
+selected = 0
+
+[node name="AOUv2" type="CheckBox" parent="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox"]
+margin_top = 202.0
+margin_right = 80.0
+margin_bottom = 226.0
+hint_tooltip = "Enable Ambient Occlusion"
+text = "On UV2"
+[connection signal="pressed" from="SpatialBox/ReducedBox/Name/MaterialName" to="." method="_on_MaterialName_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/Options/Hide" to="." method="_on_Hide_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/Options/Unshaded" to="." method="_on_Unshaded_pressed"]
+[connection signal="color_changed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Color" to="." method="_on_Color_color_changed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/AlbedoTexture" to="." method="_on_AlbedoTexture_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/AlbedoTexture/ATx/Clear" to="." method="_on_Clear_albedo_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness" to="." method="_on_Roughness_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RTx/Clear" to="." method="_on_Clear_roughness_pressed"]
+[connection signal="value_changed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessSlider" to="." method="_on_RoughnessSlider_value_changed"]
+[connection signal="value_changed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessSpin" to="." method="_on_RoughnessSpin_value_changed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessTexture" to="." method="_on_RoughnessTexture_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessTexture/Tx/Clear" to="." method="_on_Clear_roughness_pressed"]
+[connection signal="item_selected" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Roughness/RoughnessOptions/Margin/Box/RoughnessChOpt" to="." method="_on_RoughnessChOpt_item_selected"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic" to="." method="_on_Metallic_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MTx/Clear" to="." method="_on_Clear_metallic_pressed"]
+[connection signal="toggled" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicCheck" to="." method="_on_MetallicCheck_toggled"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicTexture" to="." method="_on_MetallicTexture_pressed"]
+[connection signal="pressed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicTexture/Tx/Clear" to="." method="_on_Clear_metallic_pressed"]
+[connection signal="item_selected" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/MetallicChOpt" to="." method="_on_MetallicChOpt_item_selected"]
+[connection signal="value_changed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/SpecularSlider" to="." method="_on_SpecularSlider_value_changed"]
+[connection signal="value_changed" from="SpatialBox/ReducedBox/ParametersBox/Parameters/Metallic/MetallicOptions/Margin/Box/SpecularSpin" to="." method="_on_SpecularSpin_value_changed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal" to="." method="_on_Normal_pressed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NTx/Clear" to="." method="_on_Clear_normal_pressed"]
+[connection signal="value_changed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalSlider" to="." method="_on_NormalSlider_value_changed"]
+[connection signal="value_changed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalSpin" to="." method="_on_NormalSpin_value_changed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalTexture" to="." method="_on_NormalTexture_pressed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/NormalBox/Normal/NormalOptions/Margin/Box/NormalTexture/Tx/Clear" to="." method="_on_Clear_normal_pressed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO" to="." method="_on_AO_pressed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOTx/Clear" to="." method="_on_Clear_ao_pressed"]
+[connection signal="toggled" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOEnabled" to="." method="_on_AOEnabled_toggled"]
+[connection signal="value_changed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOSlider" to="." method="_on_AOSlider_value_changed"]
+[connection signal="value_changed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOSpin" to="." method="_on_AOSpin_value_changed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOTexture" to="." method="_on_AOTexture_pressed"]
+[connection signal="pressed" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOTexture/Tx/Clear" to="." method="_on_Clear_ao_pressed"]
+[connection signal="item_selected" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOChOpt" to="." method="_on_AOChOpt_item_selected"]
+[connection signal="toggled" from="AdvancedDialog/MarginContainer/AdvancedBox/AOBox/AO/AOOptions/Margin/AOOptBox/AOUv2" to="." method="_on_AOUv2_toggled"]

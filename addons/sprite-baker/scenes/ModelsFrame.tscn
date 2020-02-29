@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scenes/Frame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/sprite-baker/scenes/Models.tscn" type="PackedScene" id=2]
+
+[node name="ModelsFrame" index="0" instance=ExtResource( 1 )]
+title = "Models"
+
+[node name="Title" parent="MaxBox/TitleBar/TitleBox" index="1"]
+text = "Models"
+
+[node name="Models" parent="MaxBox/ContentPanel/Content" index="0" instance=ExtResource( 2 )]
+margin_right = 1010.0
+margin_bottom = 556.0
+
+[node name="Title" parent="MinBar/Box" index="4"]
+text = "Models"

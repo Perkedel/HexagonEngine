@@ -114,6 +114,11 @@ func _on_Admob_interstitial_loaded():
 func _on_Admob_rewarded(currency, ammount):
 	printWorke(RewVid + " Rewarded Video, Currency = " + String(currency) + ", Ammount = " + String(ammount))
 	AdRewardUserNow(20 + ammount)
+	# The only way to know if the video is finished is over here,
+	# The rewarded ad.
+	# if you wish to video ad, for now, always use this.
+	# This is the only way today to know if user had finished watching the video
+	# then when it did, you can finally reward them.
 	pass # Replace with function body.
 
 
@@ -131,20 +136,24 @@ func _on_Admob_rewarded_video_failed_to_load(error_code):
 
 func _on_Admob_rewarded_video_left_application():
 	printWorke(RewVid + " Rewarded Video, User Left Application")
-	AdRewardUserNow(5)
+	AdRewardUserNow(5) # Can be used as the only reward for if ad is clicked for, No Finished ad signal in AdMob ever sighted unfortunately
 	pass # Replace with function body.
 
 
 func _on_Admob_rewarded_video_loaded():
 	SetLED(RewVid, 0)
 	printWorke(RewVid + " Rewarded Video Loaded")
-	AdRewardUserNow(10)
+	#AdRewardUserNow(10)
 	pass # Replace with function body.
 
 
 func _on_Admob_rewarded_video_opened():
 	printWorke(RewVid + " Rewarded Video Opened")
-	AdRewardUserNow(10)
+	AdRewardUserNow(10) # Can be 0 if ad planter decided to..
+	# Problem is user can skip the ad.
+	# If you wish user to watch to finish, punish user for skipping by not rewarding this area.
+	# Expect over the method of Rewarded currency and amount.
+	# That's how to know video is finished
 	pass # Replace with function body.
 
 

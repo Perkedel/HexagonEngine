@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/sprite-baker/resources/theme/empty_stylebox.tres" type="StyleBox" id=1]
+[ext_resource path="res://addons/sprite-baker/scripts/animations.gd" type="Script" id=2]
+[ext_resource path="res://addons/sprite-baker/scripts/animations_tree.gd" type="Script" id=3]
+
+[node name="Animations" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+orientation_path = NodePath("OptionsBox/Orientation")
+bake_path = NodePath("OptionsBox/Bake")
+fps_path = NodePath("OptionsBox/FPS")
+anim_tree_path = NodePath("AnimationsTree")
+
+[node name="OptionsBox" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 24.0
+mouse_filter = 2
+
+[node name="Bake" type="Button" parent="OptionsBox"]
+margin_right = 102.0
+margin_bottom = 24.0
+hint_tooltip = "Bake all animations into sprite sheets"
+disabled = true
+text = "Bake Selected"
+
+[node name="Separator1" type="VSeparator" parent="OptionsBox"]
+margin_left = 106.0
+margin_right = 110.0
+margin_bottom = 24.0
+custom_styles/separator = ExtResource( 1 )
+
+[node name="FPSLabel" type="Label" parent="OptionsBox"]
+margin_left = 114.0
+margin_top = 5.0
+margin_right = 136.0
+margin_bottom = 19.0
+hint_tooltip = "Default frames per second value"
+mouse_filter = 1
+text = "Fps"
+
+[node name="FPS" type="SpinBox" parent="OptionsBox"]
+margin_left = 140.0
+margin_right = 214.0
+margin_bottom = 24.0
+hint_tooltip = "Default frames per second value"
+mouse_filter = 1
+min_value = 1.0
+max_value = 60.0
+value = 15.0
+editable = false
+
+[node name="Separator2" type="VSeparator" parent="OptionsBox"]
+margin_left = 218.0
+margin_right = 222.0
+margin_bottom = 24.0
+custom_styles/separator = ExtResource( 1 )
+
+[node name="Orientation" type="MenuButton" parent="OptionsBox"]
+margin_left = 226.0
+margin_right = 311.0
+margin_bottom = 24.0
+hint_tooltip = "Default camera view used when baking"
+mouse_filter = 1
+text = "Orientation"
+flat = false
+items = [ "Front view", null, 1, true, false, 0, 0, null, "", false, "Rear view", null, 1, false, false, 1, 0, null, "", false, "Left view", null, 1, false, false, 2, 0, null, "", false, "Right view", null, 1, false, false, 3, 0, null, "", false, "Top view", null, 1, false, false, 4, 0, null, "", false ]
+
+[node name="AnimationsTree" type="Tree" parent="." groups=[
+"SpriteBaker.Model",
+"SpriteBaker.Animation",
+]]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 1
+size_flags_vertical = 3
+columns = 9
+hide_root = true
+select_mode = 1
+script = ExtResource( 3 )
+[connection signal="pressed" from="OptionsBox/Bake" to="." method="_on_Bake_pressed"]
+[connection signal="value_changed" from="OptionsBox/FPS" to="AnimationsTree" method="_on_FPS_value_changed"]
+[connection signal="button_pressed" from="AnimationsTree" to="AnimationsTree" method="_on_button_pressed"]
+[connection signal="item_edited" from="AnimationsTree" to="AnimationsTree" method="_on_item_edited"]
+[connection signal="selected_animations" from="AnimationsTree" to="." method="_on_AnimationsTree_selected_animations"]

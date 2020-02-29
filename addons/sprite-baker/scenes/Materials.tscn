@@ -1,0 +1,195 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scenes/MaterialProps.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/sprite-baker/resources/theme/empty_stylebox.tres" type="StyleBox" id=2]
+[ext_resource path="res://addons/sprite-baker/scripts/materials.gd" type="Script" id=3]
+[ext_resource path="res://addons/sprite-baker/resources/icons/outline_no.svg" type="Texture" id=4]
+[ext_resource path="res://addons/sprite-baker/resources/theme/header_stylebox.tres" type="StyleBox" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Materials" type="VBoxContainer" groups=[
+"SpriteBaker.Model",
+"SpriteBaker.Materials",
+]]
+margin_right = 695.0
+margin_bottom = 132.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+material_param_scn = ExtResource( 1 )
+materials_list_path = NodePath("../Materials/Scroll/MaterialsList")
+outline_path = NodePath("BoxOptions/Outline")
+outline_color_path = NodePath("BoxOptions/OutlineColor")
+pixel_box_path = NodePath("BoxOptions/PixelBox")
+
+[node name="BoxOptions" type="HBoxContainer" parent="."]
+margin_right = 695.0
+margin_bottom = 22.0
+
+[node name="Outline" type="Button" parent="BoxOptions"]
+margin_right = 28.0
+margin_bottom = 22.0
+hint_tooltip = "Toggle outline: no outline"
+icon = ExtResource( 4 )
+
+[node name="Separator" type="VSeparator" parent="BoxOptions"]
+margin_left = 32.0
+margin_right = 36.0
+margin_bottom = 22.0
+custom_styles/separator = ExtResource( 2 )
+
+[node name="OutlineColor" type="ColorPickerButton" parent="BoxOptions"]
+margin_left = 40.0
+margin_right = 70.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 30, 0 )
+hint_tooltip = "Outline Color"
+disabled = true
+
+[node name="PixelBox" type="HBoxContainer" parent="BoxOptions"]
+visible = false
+margin_left = 74.0
+margin_right = 210.0
+margin_bottom = 24.0
+
+[node name="Blend" type="CheckBox" parent="BoxOptions/PixelBox"]
+margin_right = 65.0
+margin_bottom = 24.0
+text = "Blend"
+
+[node name="Depth" type="CheckBox" parent="BoxOptions/PixelBox"]
+margin_left = 69.0
+margin_right = 136.0
+margin_bottom = 24.0
+text = "Depth"
+
+[node name="DepthValue" type="SpinBox" parent="BoxOptions/PixelBox"]
+margin_right = 74.0
+margin_bottom = 24.0
+max_value = 2.0
+step = 0.01
+value = 0.15
+
+[node name="Separator1" type="HSeparator" parent="."]
+margin_top = 22.0
+margin_right = 695.0
+margin_bottom = 30.0
+custom_styles/separator = ExtResource( 2 )
+custom_constants/separation = 8
+
+[node name="Panel" type="PanelContainer" parent="."]
+margin_top = 30.0
+margin_right = 695.0
+margin_bottom = 54.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 5 )
+
+[node name="Header" type="HBoxContainer" parent="Panel"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 690.0
+margin_bottom = 19.0
+mouse_filter = 2
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameTitle" type="Label" parent="Panel/Header"]
+margin_right = 426.0
+margin_bottom = 14.0
+hint_tooltip = "Surface and material names"
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Name"
+
+[node name="AlbedoTitle" type="Label" parent="Panel/Header"]
+margin_left = 428.0
+margin_right = 527.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 99, 0 )
+hint_tooltip = "Albedo color and texture"
+mouse_filter = 1
+size_flags_vertical = 1
+text = "Albedo"
+clip_text = true
+
+[node name="Separator2" type="VSeparator" parent="Panel/Header"]
+margin_left = 529.0
+margin_right = 544.0
+margin_bottom = 14.0
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 15
+
+[node name="RoughnessTitle" type="Label" parent="Panel/Header"]
+margin_left = 546.0
+margin_right = 601.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 55, 0 )
+rect_clip_content = true
+hint_tooltip = "Roughness options"
+mouse_filter = 1
+size_flags_vertical = 1
+text = "Roughness"
+clip_text = true
+
+[node name="Separator3" type="VSeparator" parent="Panel/Header"]
+margin_left = 603.0
+margin_right = 618.0
+margin_bottom = 14.0
+mouse_filter = 2
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 15
+
+[node name="MetallicTitle" type="Label" parent="Panel/Header"]
+margin_left = 620.0
+margin_right = 675.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 55, 0 )
+hint_tooltip = "Metallic options"
+mouse_filter = 1
+size_flags_vertical = 1
+text = "Metallic"
+clip_text = true
+
+[node name="Separator4" type="VSeparator" parent="Panel/Header"]
+margin_left = 677.0
+margin_right = 685.0
+margin_bottom = 14.0
+mouse_filter = 2
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 8
+
+[node name="Separator2" type="HSeparator" parent="."]
+margin_top = 54.0
+margin_right = 695.0
+margin_bottom = 58.0
+mouse_filter = 2
+custom_styles/separator = ExtResource( 2 )
+custom_constants/separation = 4
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+margin_top = 58.0
+margin_right = 695.0
+margin_bottom = 132.0
+mouse_filter = 1
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="MaterialsList" type="VBoxContainer" parent="Scroll"]
+margin_right = 695.0
+margin_bottom = 74.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+[connection signal="pressed" from="BoxOptions/Outline" to="." method="_on_Outline_pressed"]
+[connection signal="toggled" from="BoxOptions/PixelBox/Blend" to="." method="_on_Blend_toggled"]
+[connection signal="toggled" from="BoxOptions/PixelBox/Depth" to="." method="_on_Depth_toggled"]
+[connection signal="value_changed" from="BoxOptions/PixelBox/DepthValue" to="." method="_on_DepthValue_value_changed"]

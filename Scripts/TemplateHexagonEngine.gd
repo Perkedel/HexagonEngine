@@ -1,6 +1,6 @@
 extends Node
 
-
+#class_name TemplateHexagonEngine, "res://Sprites/HexagonEngineSymbol.png"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

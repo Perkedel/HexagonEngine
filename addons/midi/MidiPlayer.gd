@@ -3,8 +3,8 @@ extends Node
 """
 	pure GDScript MIDI Player [Godot MIDI Player] by Yui Kinomoto @arlez80
 """
-
-class_name MidiPlayer
+# JOELwindows7 edit, readd icones
+class_name MidiPlayer, "res://addons/midi/icon.png"
 
 # -----------------------------------------------------------------------------
 # Import

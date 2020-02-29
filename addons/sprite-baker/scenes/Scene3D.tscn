@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/sprite-baker/scripts/scene_3d.gd" type="Script" id=1]
+[ext_resource path="res://addons/sprite-baker/resources/materials/pixel_outline.tres" type="Material" id=2]
+[ext_resource path="res://addons/sprite-baker/resources/environment.tres" type="Environment" id=3]
+[ext_resource path="res://addons/sprite-baker/resources/triangle.obj" type="ArrayMesh" id=4]
+
+[node name="Scene3D" type="Spatial"]
+script = ExtResource( 1 )
+post_process_material = ExtResource( 2 )
+
+[node name="Base" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Base"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+environment = ExtResource( 3 )
+projection = 1
+size = 2.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Base/Camera"]
+
+[node name="PostProcess" type="MeshInstance" parent="Base/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+visible = false
+cast_shadow = 0
+extra_cull_margin = 100.0
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 2 )
+
+[node name="Bone" type="BoneAttachment" parent="."]
+
+[node name="RemoteTransform" type="RemoteTransform" parent="."]
+remote_path = NodePath("../Base")
+update_rotation = false
+update_scale = false

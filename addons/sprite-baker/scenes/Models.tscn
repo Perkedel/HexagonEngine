@@ -1,0 +1,185 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/sprite-baker/resources/icons/icon_folder.svg" type="Texture" id=1]
+[ext_resource path="res://addons/sprite-baker/scripts/loader.gd" type="Script" id=2]
+[ext_resource path="res://addons/sprite-baker/scripts/file_tree.gd" type="Script" id=3]
+[ext_resource path="res://addons/sprite-baker/scripts/folder_path.gd" type="Script" id=4]
+[ext_resource path="res://addons/sprite-baker/scripts/models.gd" type="Script" id=5]
+[ext_resource path="res://addons/sprite-baker/resources/icons/load_all.svg" type="Texture" id=6]
+[ext_resource path="res://addons/sprite-baker/resources/icons/clear_files.svg" type="Texture" id=7]
+[ext_resource path="res://addons/sprite-baker/resources/icons/load.svg" type="Texture" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Models" type="VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 478.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+folder_node_path = NodePath("PathBox/FolderPath")
+file_tree_path = NodePath("FoundModels/FileTree")
+file_list_path = NodePath("LoadedModels/List")
+load_all_path = NodePath("LoadBox/LoadAll")
+load_path = NodePath("LoadBox/Load")
+clear_path = NodePath("LoadBox/Clear")
+
+[node name="PathBox" type="HBoxContainer" parent="."]
+margin_right = 296.0
+margin_bottom = 24.0
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="FolderPath" type="LineEdit" parent="PathBox"]
+margin_right = 268.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 80, 0 )
+mouse_filter = 1
+size_flags_horizontal = 3
+clear_button_enabled = true
+placeholder_text = "(Workspace folder path)"
+script = ExtResource( 4 )
+
+[node name="SearchFolder" type="Button" parent="PathBox"]
+margin_left = 268.0
+margin_right = 296.0
+margin_bottom = 24.0
+hint_tooltip = "Select workspace folder. Models will be searched within this folder and direct sub-folders (1 level deep only)."
+mouse_filter = 1
+icon = ExtResource( 1 )
+
+[node name="LoadBox" type="HBoxContainer" parent="."]
+margin_top = 28.0
+margin_right = 296.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Separator1" type="VSeparator" parent="LoadBox"]
+margin_right = 10.0
+margin_bottom = 26.0
+mouse_filter = 2
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 10
+
+[node name="Load" type="Button" parent="LoadBox"]
+margin_left = 10.0
+margin_right = 42.0
+margin_bottom = 26.0
+hint_tooltip = "Load selected models."
+mouse_filter = 1
+size_flags_horizontal = 4
+disabled = true
+icon = ExtResource( 8 )
+
+[node name="Separator2" type="VSeparator" parent="LoadBox"]
+margin_left = 42.0
+margin_right = 47.0
+margin_bottom = 26.0
+mouse_filter = 2
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 5
+
+[node name="LoadAll" type="Button" parent="LoadBox"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 26.0
+hint_tooltip = "Load all found models."
+mouse_filter = 1
+size_flags_horizontal = 4
+disabled = true
+icon = ExtResource( 6 )
+
+[node name="Separator3" type="VSeparator" parent="LoadBox"]
+margin_left = 79.0
+margin_right = 84.0
+margin_bottom = 26.0
+mouse_filter = 2
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 5
+
+[node name="Clear" type="Button" parent="LoadBox"]
+margin_left = 84.0
+margin_right = 116.0
+margin_bottom = 26.0
+hint_tooltip = "Unload already loaded models."
+mouse_filter = 1
+size_flags_horizontal = 4
+disabled = true
+icon = ExtResource( 7 )
+
+[node name="Separator1" type="HSeparator" parent="."]
+margin_top = 58.0
+margin_right = 296.0
+margin_bottom = 62.0
+mouse_filter = 2
+
+[node name="LoadedModelsLabel" type="Label" parent="."]
+margin_top = 66.0
+margin_right = 296.0
+margin_bottom = 80.0
+text = "Loaded Models"
+
+[node name="LoadedModels" type="ScrollContainer" parent="."]
+margin_top = 84.0
+margin_right = 296.0
+margin_bottom = 266.0
+mouse_filter = 1
+size_flags_vertical = 3
+
+[node name="List" type="ItemList" parent="LoadedModels"]
+margin_right = 296.0
+margin_bottom = 182.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Separator2" type="HSeparator" parent="."]
+margin_top = 270.0
+margin_right = 296.0
+margin_bottom = 274.0
+mouse_filter = 2
+
+[node name="ModelsLabel" type="Label" parent="."]
+margin_top = 278.0
+margin_right = 296.0
+margin_bottom = 292.0
+text = "Models in Workspace"
+
+[node name="FoundModels" type="ScrollContainer" parent="."]
+margin_top = 296.0
+margin_right = 296.0
+margin_bottom = 478.0
+mouse_filter = 1
+size_flags_vertical = 3
+
+[node name="FileTree" type="Tree" parent="FoundModels"]
+margin_right = 296.0
+margin_bottom = 182.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg_focus = SubResource( 2 )
+columns = 5
+hide_root = true
+select_mode = 1
+script = ExtResource( 3 )
+
+[node name="Loader" type="Node" parent="."]
+script = ExtResource( 2 )
+[connection signal="files_updated" from="PathBox/FolderPath" to="." method="_on_FolderPath_files_updated"]
+[connection signal="files_updated" from="PathBox/FolderPath" to="FoundModels/FileTree" method="_on_FolderPath_files_updated"]
+[connection signal="pressed" from="PathBox/SearchFolder" to="." method="_on_SearchFolder_pressed"]
+[connection signal="pressed" from="LoadBox/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="LoadBox/LoadAll" to="." method="_on_LoadAll_pressed"]
+[connection signal="pressed" from="LoadBox/Clear" to="." method="_on_Clear_pressed"]
+[connection signal="item_selected" from="LoadedModels/List" to="." method="_on_List_item_selected"]
+[connection signal="item_edited" from="FoundModels/FileTree" to="FoundModels/FileTree" method="_on_item_edited"]
+[connection signal="item_selected" from="FoundModels/FileTree" to="FoundModels/FileTree" method="_on_item_selected"]
+[connection signal="selected_files" from="FoundModels/FileTree" to="." method="_on_FileTree_selected_files"]
+[connection signal="loading_finished" from="Loader" to="." method="_on_Loader_loading_finished"]
