@@ -412,7 +412,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Test/Player.gd"
+"path": "res://examples/MarcoFazio-VirtualJoysticker/Test/Player.gd"
 }, {
 "base": "Reference",
 "class": "ProjectTools",
@@ -621,7 +621,7 @@ _global_script_class_icons={
 "InputEventSingleScreenTouch": "",
 "InputSlot2D": "res://addons/io_method/classes/input_slot_2d/input_slot_2d.png",
 "InspectorControls": "",
-"Joystick": "",
+"Joystick": "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png",
 "MessageDispatcher": "",
 "MessageDispatcherWrapper": "",
 "MidiPlayer": "res://addons/midi/icon.png",
@@ -740,7 +740,7 @@ singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://ad
 
 theme/use_hidpi=true
 theme/custom="res://Theme/Perkedel_Tema.tres"
-theme/custom_font="res://font/Built/Ubuntu_L_18_bare.tres"
+theme/custom_font="res://font/Built/Ubuntu_R_16tred.tres"
 
 [input]
 

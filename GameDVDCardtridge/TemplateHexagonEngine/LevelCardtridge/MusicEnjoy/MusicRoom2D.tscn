@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )
@@ -106,29 +107,29 @@ __meta__ = {
 
 [node name="OptionButton" type="OptionButton" parent="MusicController/MusicUI/MainContains"]
 margin_right = 1523.0
-margin_bottom = 94.0
+margin_bottom = 90.0
 custom_fonts/font = ExtResource( 3 )
 text = "Item 0"
 items = [ "Item 0", null, false, 0, null ]
 selected = 0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MusicController/MusicUI/MainContains"]
-margin_top = 102.0
+margin_top = 94.0
 margin_right = 1523.0
-margin_bottom = 340.0
+margin_bottom = 348.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="HBoxContainer" parent="MusicController/MusicUI/MainContains/ScrollContainer"]
 margin_right = 1523.0
-margin_bottom = 238.0
+margin_bottom = 254.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Title" type="Label" parent="MusicController/MusicUI/MainContains/ScrollContainer/Label"]
-margin_top = 78.0
+margin_top = 82.0
 margin_right = 1523.0
-margin_bottom = 160.0
+margin_bottom = 172.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 3 )
@@ -138,14 +139,14 @@ valign = 1
 autowrap = true
 
 [node name="ControllingMusic" type="HBoxContainer" parent="MusicController/MusicUI/MainContains"]
-margin_top = 348.0
+margin_top = 352.0
 margin_right = 1523.0
 margin_bottom = 415.0
 size_flags_horizontal = 3
 
 [node name="Play" type="Button" parent="MusicController/MusicUI/MainContains/ControllingMusic"]
-margin_right = 757.0
-margin_bottom = 67.0
+margin_right = 759.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 4 )
@@ -153,9 +154,9 @@ toggle_mode = true
 text = "Play"
 
 [node name="LoadSong" type="Button" parent="MusicController/MusicUI/MainContains/ControllingMusic"]
-margin_left = 765.0
+margin_left = 763.0
 margin_right = 1523.0
-margin_bottom = 67.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 6 )
@@ -170,13 +171,14 @@ margin_left = -520.0
 margin_top = -304.5
 margin_right = 519.0
 margin_bottom = 303.5
+theme = ExtResource( 10 )
 window_title = "Buka sebuah File"
 mode = 0
 access = 2
 filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
 show_hidden_files = true
-current_dir = "/media/joelwindows7/OS/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "/media/joelwindows7/OS/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }

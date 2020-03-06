@@ -10,7 +10,6 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExitButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/Animations/MenuButtonAnimations.tscn" type="PackedScene" id=9]
 
-
 [node name="MenuButtonings" type="VBoxContainer"]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -28,25 +27,25 @@ __meta__ = {
 
 [node name="FocusArea" type="HBoxContainer" parent="."]
 margin_right = 1920.0
-margin_bottom = 135.0
+margin_bottom = 121.0
 alignment = 1
 
 [node name="SpaceLeft" parent="FocusArea" instance=ExtResource( 2 )]
-margin_right = 452.0
-margin_bottom = 135.0
+margin_right = 456.0
+margin_bottom = 121.0
 
 [node name="SamPlayArea" parent="FocusArea" instance=ExtResource( 3 )]
-margin_bottom = 135.0
+margin_bottom = 121.0
 MenuAnimating = NodePath("../../MenuButtonAnimations")
 MoreMenuSelectFirst = NodePath("../../MoreMenu/BoxMenuContainings/SettingButton")
 
 [node name="SpaceLeft2" parent="FocusArea" instance=ExtResource( 2 )]
-margin_left = 1468.0
+margin_left = 1464.0
 margin_right = 1920.0
-margin_bottom = 135.0
+margin_bottom = 121.0
 
 [node name="MoreMenu" type="CenterContainer" parent="."]
-margin_top = 143.0
+margin_top = 125.0
 margin_right = 1920.0
 margin_bottom = 347.0
 mouse_filter = 2
@@ -54,10 +53,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BoxMenuContainings" type="HBoxContainer" parent="MoreMenu"]
-margin_left = 194.0
-margin_top = 2.0
-margin_right = 1726.0
-margin_bottom = 202.0
+margin_left = 202.0
+margin_top = 11.0
+margin_right = 1718.0
+margin_bottom = 211.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -74,36 +73,36 @@ margin_bottom = 200.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 308.0
+margin_left = 304.0
 margin_top = 0.0
-margin_right = 608.0
+margin_right = 604.0
 margin_bottom = 200.0
 
 [node name="ExtrasButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 6 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 616.0
+margin_left = 608.0
 margin_top = 0.0
-margin_right = 916.0
+margin_right = 908.0
 margin_bottom = 200.0
 
 [node name="ChangeDVDButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 7 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 924.0
+margin_left = 912.0
 margin_top = 0.0
-margin_right = 1224.0
+margin_right = 1212.0
 margin_bottom = 200.0
 
 [node name="ExitButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 8 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1232.0
+margin_left = 1216.0
 margin_top = 0.0
-margin_right = 1532.0
+margin_right = 1516.0
 margin_bottom = 200.0
 
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]

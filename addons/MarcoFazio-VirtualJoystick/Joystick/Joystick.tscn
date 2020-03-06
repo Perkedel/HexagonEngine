@@ -4,13 +4,15 @@
 [ext_resource path="res://addons/MarcoFazio-VirtualJoystick/Joystick/joystick_background_cross.png" type="Texture" id=2]
 [ext_resource path="res://addons/MarcoFazio-VirtualJoystick/Joystick/joystick_circle.png" type="Texture" id=3]
 
-
 [node name="Joystick" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -524.0
 margin_bottom = -100.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.784314 )

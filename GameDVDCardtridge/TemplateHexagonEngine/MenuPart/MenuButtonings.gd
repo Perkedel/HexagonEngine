@@ -7,6 +7,9 @@ var isDrawerOpen = false
 var DebugKeyMode = false
 var doMenuDrawerOpen = false
 var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingMenu.tscn"
+enum PositionsMenu {Init,Close,Open = 0}
+var PrevPosition
+var NowPosition
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -102,6 +105,9 @@ func ResetMoreMenuButtonAnimatione():
 func OpenMenuDrawer():
 	if not isDrawerOpen:
 		$MenuButtonAnimations.play("OpenMenu")
+		
+		
+		
 		isDrawerOpen = true
 	pass
 

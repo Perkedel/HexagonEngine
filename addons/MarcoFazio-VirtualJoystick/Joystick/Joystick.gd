@@ -1,6 +1,6 @@
 extends Control
 
-class_name Joystick
+class_name Joystick, "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png"
 
 # If the joystick is receiving inputs.
 var is_working := false
