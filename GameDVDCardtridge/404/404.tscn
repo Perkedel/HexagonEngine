@@ -58,7 +58,7 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="404ui/Control404/404Contains/Panel404/LEDscrolling"]
 margin_right = 1920.0
-margin_bottom = 106.0
+margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -101,7 +101,7 @@ scroll_active = false
 
 [node name="Label" type="Label" parent="404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 106.0
+margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 7 )
@@ -112,9 +112,9 @@ valign = 1
 [node name="UpTween" type="Tween" parent="404ui/Control404/404Contains/Panel404"]
 
 [node name="404Space" type="CenterContainer" parent="404ui/Control404/404Contains"]
-margin_top = 108.0
+margin_top = 104.0
 margin_right = 1920.0
-margin_bottom = 972.0
+margin_bottom = 976.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -122,9 +122,13 @@ size_flags_vertical = 3
 [node name="Menu404" parent="404ui/Control404/404Contains" instance=ExtResource( 10 )]
 
 [node name="ChangeDVDButton" parent="404ui/Control404/404Contains/Menu404" index="0"]
+margin_left = 631.0
+margin_right = 931.0
 custom_fonts/font = SubResource( 1 )
 
 [node name="ExitGameButton" parent="404ui/Control404/404Contains/Menu404" index="1"]
+margin_left = 935.0
+margin_right = 1289.0
 custom_fonts/font = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

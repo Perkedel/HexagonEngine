@@ -76,6 +76,12 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		4:
 			LoadDVD = load("res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn")
 			pass
+		5: 
+			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
+			pass
+		6:
+			LoadDVD = load("res://GameDVDCardtridge/BolaAccelerometer/BolaAccelerometer.tscn")
+			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass

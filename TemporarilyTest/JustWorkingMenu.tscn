@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -10,33 +10,37 @@
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/GooglePlayIcon.png" type="Texture" id=8]
 [ext_resource path="res://icon.png" type="Texture" id=9]
 [ext_resource path="res://addons/midi/icon.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=11]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TitleBar" type="HBoxContainer" parent="."]
 margin_right = 1920.0
-margin_bottom = 82.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="TitleBar"]
 margin_right = 1920.0
-margin_bottom = 82.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Hexagon DVD Select"
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_top = 90.0
+margin_top = 94.0
 margin_right = 1920.0
-margin_bottom = 972.0
+margin_bottom = 976.0
 hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 9 ), false ]
+items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 9 ), false, "Akselerometer Semangat", ExtResource( 11 ), false ]
 fixed_icon_size = Vector2( 256, 256 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -58,7 +62,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-margin_right = 167.0
+margin_right = 163.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -67,7 +71,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-margin_left = 175.0
+margin_left = 167.0
 margin_right = 400.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
