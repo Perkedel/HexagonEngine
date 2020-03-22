@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <version>190219</version>
-    <url>C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/WalkFass.ove</url>
+    <url>C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/WalkFass (recovered 2).ove</url>
     <folders>
         <folder name="WalkFass-Default" id="1" parent="0"/>
         <folder name="Dancing-Cockroach" id="2" parent="0"/>
@@ -13353,8 +13353,8 @@
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
-                        <field id="posx" value="1655"/>
-                        <field id="posy" value="3763"/>
+                        <field id="posx" value="1004"/>
+                        <field id="posy" value="2093"/>
                     </row>
                     <row>
                         <field id="scalex" value="50"/>
@@ -13382,8 +13382,8 @@
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
-                        <field id="posx" value="922"/>
-                        <field id="posy" value="3982"/>
+                        <field id="posx" value="275"/>
+                        <field id="posy" value="2382"/>
                     </row>
                     <row>
                         <field id="scalex" value="100"/>
@@ -13407,107 +13407,15 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="6" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="-3" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
-                <linked>
-                    <link id="7"/>
-                </linked>
-                <effect name="Distort/Transform" enabled="1">
-                    <row>
-                        <field id="posx" value="2048"/>
-                        <field id="posy" value="2048"/>
-                    </row>
-                    <row>
-                        <field id="scalex" value="100"/>
-                        <field id="scaley" value="100"/>
-                    </row>
-                    <row>
-                        <field id="uniformscale" value="1"/>
-                    </row>
-                    <row>
-                        <field id="rotation" value="0"/>
-                    </row>
-                    <row>
-                        <field id="anchorx" value="0"/>
-                        <field id="anchory" value="0"/>
-                    </row>
-                    <row>
-                        <field id="opacity" value="100"/>
-                    </row>
-                    <row>
-                        <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="7" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="2" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
-                <linked>
-                    <link id="6"/>
-                </linked>
-                <effect name="/Volume" enabled="1">
-                    <row>
-                        <field id="volume" value="1"/>
-                    </row>
-                </effect>
-                <effect name="/Pan" enabled="1">
-                    <row>
-                        <field id="pan" value="0"/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="8" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="-1" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
-                <linked>
-                    <link id="9"/>
-                </linked>
-                <effect name="Distort/Transform" enabled="1">
-                    <row>
-                        <field id="posx" value="2048"/>
-                        <field id="posy" value="2048"/>
-                    </row>
-                    <row>
-                        <field id="scalex" value="100"/>
-                        <field id="scaley" value="100"/>
-                    </row>
-                    <row>
-                        <field id="uniformscale" value="1"/>
-                    </row>
-                    <row>
-                        <field id="rotation" value="0"/>
-                    </row>
-                    <row>
-                        <field id="anchorx" value="0"/>
-                        <field id="anchory" value="0"/>
-                    </row>
-                    <row>
-                        <field id="opacity" value="100"/>
-                    </row>
-                    <row>
-                        <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="9" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="0" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
-                <linked>
-                    <link id="8"/>
-                </linked>
-                <effect name="/Volume" enabled="1">
-                    <row>
-                        <field id="volume" value="1"/>
-                    </row>
-                </effect>
-                <effect name="/Pan" enabled="1">
-                    <row>
-                        <field id="pan" value="0"/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="10" enabled="1" name="Judul" clipin="0" in="0" out="73" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+            <clip id="2" enabled="1" name="Judul" clipin="1354" in="1354" out="1468" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
-                        <field id="posx" value="2048"/>
-                        <field id="posy" value="2048"/>
+                        <field id="posx" value="1101"/>
+                        <field id="posy" value="753"/>
                     </row>
                     <row>
-                        <field id="scalex" value="100"/>
+                        <field id="scalex" value="58"/>
                         <field id="scaley" value="100"/>
                     </row>
                     <row>
@@ -13529,7 +13437,7 @@
                 </effect>
                 <effect name="Render/Rich Text" enabled="1">
                     <row>
-                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Dancing Triforce:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;License Issues:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Creative Commons: https://creativecommons.org ; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://creativecommons.org/licenses/by-sa/4.0/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Fair use copypasta essential: https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Yamaha MIDI:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Triforce (c) Nintendo [&amp;gt;100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Die Young (c) Ke$ha, Warner Music [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Yamaha Musicsoft MIDI (p) Yamaha Musicsoft Europe [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Fair Use Disclaimer:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for &amp;quot;fair use&amp;quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;bug in Olive: Underline for normal text stuck forever if placed with link next to it&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Perkedel Technologies&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;CC4.0-BY-SA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:24pt; color:#000000;&quot;&gt;MIDI Cover of this Die Young (P) Yamaha Musicsoft Europe [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:24pt; color:#000000;&quot;&gt;Die Young (c) Kesha, Music Studios, Warner, Chappel, uh... [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:24pt; color:#000000;&quot;&gt;Please Insert Fair Use Disclaimer here!&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:24pt; color:#000000;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
                     </row>
                     <row>
                         <field id="padding" value="0"/>
@@ -13564,12 +13472,241 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="11" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="1349" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+            <clip id="3" enabled="1" name="Judul" clipin="960" in="0" out="73" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
-                        <field id="posx" value="1655"/>
-                        <field id="posy" value="3763"/>
+                        <field id="posx" value="4145"/>
+                        <field id="posy" value="1874"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="50"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+                <effect name="Render/Rich Text" enabled="1">
+                    <row>
+                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:24pt; color:#000000;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                    </row>
+                    <row>
+                        <field id="padding" value="0"/>
+                    </row>
+                    <row>
+                        <field id="posx" value="0"/>
+                        <field id="posy" value="0"/>
+                    </row>
+                    <row>
+                        <field id="valign" value="132"/>
+                    </row>
+                    <row>
+                        <field id="autoscroll" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadow" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadowcolor" value="#000000"/>
+                    </row>
+                    <row>
+                        <field id="shadowangle" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadowdistance" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadowsoftness" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadowopacity" value="0"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="4" enabled="1" name="Crediteo" clipin="0" in="1468" out="1668" track="-1" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="1">
+                <linked>
+                    <link id="5"/>
+                </linked>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="960"/>
+                        <field id="posy" value="540"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="5" enabled="1" name="Crediteo" clipin="0" in="1468" out="1668" track="0" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="1">
+                <linked>
+                    <link id="4"/>
+                </linked>
+                <effect name="/Volume" enabled="1">
+                    <row>
+                        <field id="volume" value="1"/>
+                    </row>
+                </effect>
+                <effect name="/Pan" enabled="1">
+                    <row>
+                        <field id="pan" value="0"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="6" enabled="1" name="TextFiles" clipin="0" in="1468" out="1668" track="-2" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="6">
+                <linked>
+                    <link id="7"/>
+                </linked>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="960"/>
+                        <field id="posy" value="540"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="7" enabled="1" name="TextFiles" clipin="0" in="1468" out="1668" track="1" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="6">
+                <linked>
+                    <link id="6"/>
+                </linked>
+                <effect name="/Volume" enabled="1">
+                    <row>
+                        <field id="volume" value="1"/>
+                    </row>
+                </effect>
+                <effect name="/Pan" enabled="1">
+                    <row>
+                        <field id="pan" value="0"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="8" enabled="1" name="Warna" clipin="0" in="0" out="1468" track="-2" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="2048"/>
+                        <field id="posy" value="2048"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+                <effect name="Render/Solid" enabled="1">
+                    <row>
+                        <field id="type" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="color" value="#55ff7f"/>
+                    </row>
+                    <row>
+                        <field id="checker_size" value="10"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="9" enabled="1" name="by-sa.png" clipin="0" in="1354" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="275"/>
+                        <field id="posy" value="2382"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="10" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="1354" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="1004"/>
+                        <field id="posy" value="2093"/>
                     </row>
                     <row>
                         <field id="scalex" value="50"/>
@@ -13586,44 +13723,17 @@
                         <field id="anchory" value="0"/>
                     </row>
                     <row>
-                        <field id="opacity" value="50"/>
+                        <field id="opacity" value="100"/>
                     </row>
                     <row>
                         <field id="blendmode" value=""/>
                     </row>
                 </effect>
             </clip>
-            <clip id="12" enabled="1" name="by-sa.png" clipin="0" in="1349" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
-                <linked/>
-                <effect name="Distort/Transform" enabled="1">
-                    <row>
-                        <field id="posx" value="922"/>
-                        <field id="posy" value="3982"/>
-                    </row>
-                    <row>
-                        <field id="scalex" value="100"/>
-                        <field id="scaley" value="100"/>
-                    </row>
-                    <row>
-                        <field id="uniformscale" value="1"/>
-                    </row>
-                    <row>
-                        <field id="rotation" value="0"/>
-                    </row>
-                    <row>
-                        <field id="anchorx" value="0"/>
-                        <field id="anchory" value="0"/>
-                    </row>
-                    <row>
-                        <field id="opacity" value="50"/>
-                    </row>
-                    <row>
-                        <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="13" enabled="1" name="Judul" clipin="0" in="1349" out="1468" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
-                <linked/>
+            <clip id="11" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="-3" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
+                <linked>
+                    <link id="12"/>
+                </linked>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
                         <field id="posx" value="2048"/>
@@ -13650,40 +13760,19 @@
                         <field id="blendmode" value=""/>
                     </row>
                 </effect>
-                <effect name="Render/Rich Text" enabled="1">
+            </clip>
+            <clip id="12" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="2" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
+                <linked>
+                    <link id="11"/>
+                </linked>
+                <effect name="/Volume" enabled="1">
                     <row>
-                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Dancing Triforce:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;License Issues:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Creative Commons: https://creativecommons.org ; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://creativecommons.org/licenses/by-sa/4.0/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Fair use copypasta essential: https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;Yamaha MIDI:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#ffffff;&quot;&gt;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Triforce (c) Nintendo [&amp;gt;100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Die Young (c) Ke$ha, Warner Music [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Yamaha Musicsoft MIDI (p) Yamaha Musicsoft Europe [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Fair Use Disclaimer:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for &amp;quot;fair use&amp;quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;bug in Olive: Underline for normal text stuck forever if placed with link next to it&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Perkedel Technologies&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;CC4.0-BY-SA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                        <field id="volume" value="1"/>
                     </row>
+                </effect>
+                <effect name="/Pan" enabled="1">
                     <row>
-                        <field id="padding" value="0"/>
-                    </row>
-                    <row>
-                        <field id="posx" value="0"/>
-                        <field id="posy" value="0"/>
-                    </row>
-                    <row>
-                        <field id="valign" value="132"/>
-                    </row>
-                    <row>
-                        <field id="autoscroll" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadow" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowcolor" value="#000000"/>
-                    </row>
-                    <row>
-                        <field id="shadowangle" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowdistance" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowsoftness" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowopacity" value="0"/>
+                        <field id="pan" value="0"/>
                     </row>
                 </effect>
             </clip>
@@ -13760,102 +13849,6 @@
                     </row>
                     <row>
                         <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-            </clip>
-        </sequence>
-        <sequence id="13" folder="3" name="Crediteo (DancingTriforce)" width="4096" height="4096" framerate="60.0000000000" afreq="48000" alayout="3" workarea="0" workareaIn="0" workareaOut="0">
-            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="187" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
-                <linked/>
-                <effect name="Distort/Transform" enabled="1">
-                    <row>
-                        <field id="posx" value="2048"/>
-                        <field id="posy" value="3009"/>
-                    </row>
-                    <row>
-                        <field id="scalex" value="100"/>
-                        <field id="scaley" value="100"/>
-                    </row>
-                    <row>
-                        <field id="uniformscale" value="1"/>
-                    </row>
-                    <row>
-                        <field id="rotation" value="0"/>
-                    </row>
-                    <row>
-                        <field id="anchorx" value="0"/>
-                        <field id="anchory" value="0"/>
-                    </row>
-                    <row>
-                        <field id="opacity" value="100"/>
-                    </row>
-                    <row>
-                        <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-            </clip>
-            <clip id="1" enabled="1" name="Judul" clipin="0" in="0" out="187" track="-2" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
-                <linked/>
-                <effect name="Distort/Transform" enabled="1">
-                    <row>
-                        <field id="posx" value="2048"/>
-                        <field id="posy" value="2048"/>
-                    </row>
-                    <row>
-                        <field id="scalex" value="100"/>
-                        <field id="scaley" value="100"/>
-                    </row>
-                    <row>
-                        <field id="uniformscale" value="1"/>
-                    </row>
-                    <row>
-                        <field id="rotation" value="0"/>
-                    </row>
-                    <row>
-                        <field id="anchorx" value="0"/>
-                        <field id="anchory" value="0"/>
-                    </row>
-                    <row>
-                        <field id="opacity" value="100"/>
-                    </row>
-                    <row>
-                        <field id="blendmode" value=""/>
-                    </row>
-                </effect>
-                <effect name="Render/Rich Text" enabled="1">
-                    <row>
-                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:80pt; color:#ffffff;&quot;&gt;Dancing Triforce:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://youtu.be/YGYhRYwYhlM?t=88&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://www.youtube.com/watch?v=8BPq3akHaGI&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://www.youtube.com/watch?v=LewMW42ivvQ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://knowyourmeme.com/memes/triangulo-bailando-dancing-triangle&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#ffffff;&quot;&gt;License Issues:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#ffffff;&quot;&gt;Creative Commons: &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://creativecommons.org&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#ffffff;&quot;&gt; ;&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.synfig.org/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#2a82da;&quot;&gt; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://creativecommons.org/licenses/by-sa/4.0/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#ffffff;&quot;&gt;Fair use copypasta essential: &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:36pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://www.reddit.com/r/copypasta/comments/5mr2g5/copyright_disclaimer_under_section_107_of_the/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; text-decoration: underline; color:#ffffff;&quot;&gt;Yamaha MIDI:&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; text-decoration: underline; color:#2a82da;&quot;&gt;https://www.yamahamusicsoft.com/midi/die-young-5/kesha&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:80pt; color:#ffffff;&quot;&gt;Triforce (c) Nintendo [&amp;gt;100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:80pt; color:#ffffff;&quot;&gt;Die Young (c) Ke$ha, Warner Music [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:80pt; color:#ffffff;&quot;&gt;Yamaha Musicsoft MIDI (p) Yamaha Musicsoft Europe [100%]&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:80pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt; color:#ffffff;&quot;&gt;Fair Use Disclaimer:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for &amp;quot;fair use&amp;quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;bug in Olive: Underline for normal text stuck forever if placed with link next to it&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;Perkedel Technologies&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:48pt;&quot;&gt;CC4.0-BY-SA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-                    </row>
-                    <row>
-                        <field id="padding" value="0"/>
-                    </row>
-                    <row>
-                        <field id="posx" value="0"/>
-                        <field id="posy" value="0"/>
-                    </row>
-                    <row>
-                        <field id="valign" value="132"/>
-                    </row>
-                    <row>
-                        <field id="autoscroll" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadow" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowcolor" value="#000000"/>
-                    </row>
-                    <row>
-                        <field id="shadowangle" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowdistance" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowsoftness" value="0"/>
-                    </row>
-                    <row>
-                        <field id="shadowopacity" value="0"/>
                     </row>
                 </effect>
             </clip>

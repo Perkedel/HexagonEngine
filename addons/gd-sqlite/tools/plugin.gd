@@ -21,7 +21,7 @@ func _exit_tree():
 func get_plugin_name() -> String:
 	return 'gd-sqlite'
 
-func get_plugin_icon() -> Object:
+func get_plugin_icon(): #-> Object:
 	var icon := Image.new()
 	icon.load("res://icon.svg")
 	
