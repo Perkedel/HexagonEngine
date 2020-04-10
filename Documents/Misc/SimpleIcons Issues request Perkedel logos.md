@@ -18,6 +18,7 @@
 **Color:**
 - Capsule = `#ffc800`
 - Inside = `#fffe00`
+- Monochrome = `#ffffff`
 
 **Typical Rendering samples:**
 ![Perkedel Profile 2048x2048](https://github.com/Perkedel/HexagonEngine/raw/master/Inkscape/Logo%20Setup/Perkedel%20Profile%202048x2048.png )
@@ -34,7 +35,7 @@
 
 **Post Scripts:** 
 - We let SimpleIcons add our brand icons (if they wanted to) despite our brand logos are licensed CC4.0-BY-SA, due to a fact many brand logos that are licensed other than CC0 but other Creative Commons Licenses or GNU GPL, and *ones whose aren't even open source* exist in SimpleIcons repository, all usable under CC0. Oh well. Why not us too? We `Share and Serve for Gratis, Open Source, and FULL VERSION!!!`, and those companies whatever they are, are glad for their logos in there. yeah. go ahead. Our name has to be preserved in more places.
-- We would like if you'd like to add at least both version where there are
+- We have No Circle and Circled Icon. the Circle was meant for Profile picture boundary as modern profile picture standard shape is circle.
 - A Pull Request may be made if necessary.
 - Sorry for longpost. I also have analyzed other Request issues as well to learn and inspire how do they request here.
 
