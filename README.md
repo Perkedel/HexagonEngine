@@ -1,7 +1,7 @@
  
- ![Hexagon Engine Logo](https://github.com/Perkedel/HexagonEngine/raw/master/Sprites/HexagonEngineLogo.png)
+ [![Hexagon Engine Logo](https://github.com/Perkedel/HexagonEngine/raw/master/Sprites/HexagonEngineLogo.png )](https://github.com/Perkedel/HexagonEngine )
  
- [![Visit Hexagon Engine](https://img.shields.io/badge/Hexagon%20Engine-Visit%20GitHub%20Repo-yellow )] (https://github.com/Perkedel/HexagonEngine )
+ [![Visit Hexagon Engine](https://img.shields.io/badge/Hexagon%20Engine-Visit%20GitHub%20Repo-yellow?style=for-the-badge )](https://github.com/Perkedel/HexagonEngine )
  
  [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg )](http://hits.dwyl.io/Perkedel/HexagonEngine )
  [![Joel's Linktree](https://img.shields.io/badge/Linktree-Visit-green )](https://www.linktr.ee/joelwindows7 )
