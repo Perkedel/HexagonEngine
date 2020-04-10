@@ -68,8 +68,8 @@ Sounds fantasy, right? but
 	
 then finally, we've met a girl named **Godette**. She brought us to her house. We experienced the house and it's really comfortable. it has features we need and covered in an intuitive way.
 
-[![Godot Engine](https://img.shields.io/badge/Godot%20Engine-%240%20%26%20Open%20Source-blue)](https://godotengine.org)
-[![Godette](https://img.shields.io/badge/Godette%20Chan-Kawaii%20Awesome!!!-blue)](https://github.com/godotengine/godot-design/tree/master/godette)
+[![Godot Engine](https://img.shields.io/badge/Godot%20Engine-%240%20%26%20Open%20Source-blue?logo=godot-engine&style=for-the-badge )](https://godotengine.org )
+[![Godette](https://img.shields.io/badge/Godette%20Chan-Kawaii%20Awesome!!!-blue?logo=godot-engine&style=for-the-badge )](https://github.com/godotengine/godot-design/tree/master/godette )
 	
 After we followed the tutorial, we finally declared that Godot Engine will be our forever home to its improbable demise.
 	
@@ -96,7 +96,9 @@ Blender 3D, Spring Ucukpakhti Ostendorp (c) Blender Foundation (<100%)(GNU GPL v
 
 Badges powered by https://shields.io , https://hits.dwyl.com/, etc. 
 
-More Credits are available in Documents/Credit.md .
+More Credits are available in [**Documents/Credit.md** ](https://github.com/Perkedel/HexagonEngine/blob/master/Documents/Credits.md ) .
+
+[![Visit Credit Page now!](https://img.shields.io/badge/Credit.md-Big%20Shoutout-yellowgreen?style=for-the-badge ) ](https://github.com/Perkedel/HexagonEngine/blob/master/Documents/Credits.md )
 
 ## Origin
 by JOELwindows7
