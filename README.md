@@ -1,13 +1,14 @@
- ![Hexagon Engine](https://github.com/Perkedel/HexagonEngine/raw/master/Sprites/HexagonEngineLogo.png)
+ [![Hexagon Engine Logo](https://github.com/Perkedel/HexagonEngine/raw/master/Sprites/HexagonEngineLogo.png )] (https://github.com/Perkedel/HexagonEngine )
  
- [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg)](http://hits.dwyl.io/Perkedel/HexagonEngine)
- [![Joel's Linktree](https://img.shields.io/badge/Linktree-Visit-green)](https://www.linktr.ee/joelwindows7)
- [![Hexagon Engine is Open Source!](https://img.shields.io/github/license/Perkedel/HexagonEngine?logo=gnu)](https://github.com/Perkedel/HexagonEngine/blob/master/LICENSE)
- [![Discord](https://img.shields.io/discord/376751612967911424?logo=Discord)](https://discord.gg/dHWDTPF)
- [![GitHub All Releases](https://img.shields.io/github/downloads/Perkedel/HexagonEngine/total?logo=github)](https://github.com/Perkedel/HexagonEngine/releases)
- ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Perkedel/HexagonEngine?logo=Github)
- ![GitHub repo size](https://img.shields.io/github/repo-size/Perkedel/HexagonEngine?logo=Github)
- ![Liberapay patrons](https://img.shields.io/liberapay/patrons/JOELwindows7?logo=liberapay)
+ [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg )](http://hits.dwyl.io/Perkedel/HexagonEngine )
+ [![Joel's Linktree](https://img.shields.io/badge/Linktree-Visit-green )](https://www.linktr.ee/joelwindows7 )
+ [![Hexagon Engine is Open Source!](https://img.shields.io/github/license/Perkedel/HexagonEngine?logo=gnu )](https://github.com/Perkedel/HexagonEngine/blob/master/LICENSE )
+ [![Discord](https://img.shields.io/discord/376751612967911424?logo=Discord )](https://discord.gg/dHWDTPF )
+ [![GitHub All Releases](https://img.shields.io/github/downloads/Perkedel/HexagonEngine/total?logo=github )](https://github.com/Perkedel/HexagonEngine/releases )
+ ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Perkedel/HexagonEngine?logo=Github )
+ ![GitHub repo size](https://img.shields.io/github/repo-size/Perkedel/HexagonEngine?logo=Github )
+ ![Liberapay patrons](https://img.shields.io/liberapay/patrons/JOELwindows7?logo=liberapay ) 
+ [![time tracker](https://wakatime.com/badge/github/Perkedel/HexagonEngine.svg )](https://wakatime.com/badge/github/Perkedel/HexagonEngine )
 # HexagonEngine
  Cinema Enters Game Console Game Engine. 
 
