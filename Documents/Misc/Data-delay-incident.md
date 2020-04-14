@@ -26,3 +26,8 @@ Maybe has lost tolerance? after all abuse he got previously? idk.
 rule is rule, I know.
 
 But is humanity should be like this: Tolerance meter per hired or life?
+
+# Peck this.
+We hope we still have points for eligibility that's all.
+
+we've learned the lesson. we must share right now.
