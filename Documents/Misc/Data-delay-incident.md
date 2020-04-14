@@ -16,3 +16,13 @@ We are afraid to be ineligible for final presentation.
 No drop out that does not give shame. 
 
 Autobot Pro seems like scam because of lack of information required like official Website.
+
+# We should've been redundant.
+We should not have rely solely on a member. Not all time is reliable.
+
+# I thought we're friends.
+Maybe has lost tolerance? after all abuse he got previously? idk.
+
+rule is rule, I know.
+
+But is humanity should be like this: Tolerance meter per hired or life?
