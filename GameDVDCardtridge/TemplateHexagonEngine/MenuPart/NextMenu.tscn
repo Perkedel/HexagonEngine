@@ -73,7 +73,7 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleBarArea" type="HBoxContainer" parent="VBoxContainer/HeadingBar"]
-margin_left = 158.0
+margin_left = 154.0
 margin_right = 1920.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 1760, 150 )
@@ -82,7 +82,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/HeadingBar/TitleBarArea"]
-margin_right = 1762.0
+margin_right = 1766.0
 margin_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -93,9 +93,9 @@ autowrap = true
 clip_text = true
 
 [node name="MenuSpaceArea" type="Control" parent="VBoxContainer"]
-margin_top = 158.0
+margin_top = 154.0
 margin_right = 1920.0
-margin_bottom = 972.0
+margin_bottom = 976.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

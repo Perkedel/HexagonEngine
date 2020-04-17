@@ -1,3 +1,4 @@
+tool
 extends Panel
 
 # Declare member variables here. Examples:
@@ -17,7 +18,7 @@ export(String, MULTILINE) var LevelDescription
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	UpdateDetails()
+	
 	pass # Replace with function body.
 
 func UpdateDetails():
@@ -27,8 +28,9 @@ func UpdateDetails():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	UpdateDetails()
+	pass
 
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)

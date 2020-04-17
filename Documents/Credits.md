@@ -182,3 +182,7 @@ Used Assets and Tools!
 - https://kenney.nl/
 - https://armory3d.org/demo/twin_stick/
 - https://github.com/Wavesonics/LANServerBroadcast
+- https://github.com/marketplace/actions/godot-export
+- https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow
+- https://docs.godotengine.org/en/latest/getting_started/workflow/export/exporting_for_uwp.html
+- https://github.com/Malinskiy/action-android

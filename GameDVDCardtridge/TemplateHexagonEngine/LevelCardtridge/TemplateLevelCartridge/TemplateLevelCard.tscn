@@ -50,7 +50,7 @@ rect_min_size = Vector2( 800, 0 )
 [node name="ImagePanel" type="Panel" parent="LevelCardContainer"]
 self_modulate = Color( 0, 0.27451, 1, 0.65098 )
 margin_right = 800.0
-margin_bottom = 425.0
+margin_bottom = 433.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -64,28 +64,28 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleScroll" type="ScrollContainer" parent="LevelCardContainer"]
-margin_top = 433.0
+margin_top = 437.0
 margin_right = 800.0
 margin_bottom = 539.0
 rect_min_size = Vector2( 0, 100 )
 scroll_vertical_enabled = false
 
 [node name="Title" type="Label" parent="LevelCardContainer/TitleScroll"]
-margin_right = 1039.0
-margin_bottom = 82.0
+margin_right = 1047.0
+margin_bottom = 90.0
 custom_fonts/font = ExtResource( 5 )
 text = "Title of This Card HUEUEUEUE"
 
 [node name="DescriptionScroll" type="ScrollContainer" parent="LevelCardContainer"]
-margin_top = 547.0
+margin_top = 543.0
 margin_right = 800.0
-margin_bottom = 972.0
+margin_bottom = 976.0
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LevelCardContainer/DescriptionScroll"]
 margin_right = 800.0
-margin_bottom = 425.0
+margin_bottom = 433.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/mono_font = ExtResource( 6 )

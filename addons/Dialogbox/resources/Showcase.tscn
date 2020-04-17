@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/Dialogbox/Dialogbox.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialogbox/resources/SuperLegendBoy-4w8Y.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/Dialogbox/resources/click.wav" type="AudioStream" id=3]
+[ext_resource path="res://addons/Dialogbox/resources/Dialogbox.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialogbox/resources/Showcase.gd" type="Script" id=5]
+[ext_resource path="res://addons/Dialogbox/resources/face_expression2.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/face_expression1.png-02aa95ba4c1bf78e0d5f248d457939f0.stex"
+
+[node name="Showcase" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Dialogbox" type="NinePatchRect" parent="."]
+margin_right = 520.0
+margin_bottom = 128.0
+texture = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+character_speed = 0.5
+input_trigger = "ui_select"
+input_speedup = "ui_select"
+speedup_speed = 0.5
+textbox_size = Vector2( 474, 64 )
+sound = ExtResource( 3 )
+font = SubResource( 1 )
+use_character_frame = true
+frame_textures = [ SubResource( 2 ), ExtResource( 6 ) ]

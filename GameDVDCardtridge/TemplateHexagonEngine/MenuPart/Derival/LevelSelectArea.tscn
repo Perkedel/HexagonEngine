@@ -16,25 +16,25 @@ anchor_bottom = 1.0
 scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer" index="0"]
-margin_right = 3224.0
-margin_bottom = 1056.0
+margin_right = 3212.0
+margin_bottom = 1068.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TemplateLevelCard" parent="ScrollContainer/HBoxContainer" index="0" instance=ExtResource( 3 )]
-margin_bottom = 1056.0
+margin_bottom = 1068.0
 
 [node name="MakesiftLevelCard" parent="ScrollContainer/HBoxContainer" index="1" instance=ExtResource( 4 )]
-margin_left = 808.0
-margin_right = 1608.0
-margin_bottom = 1056.0
+margin_left = 804.0
+margin_right = 1604.0
+margin_bottom = 1068.0
 
 [node name="MusicEnjoyLevelCard" parent="ScrollContainer/HBoxContainer" index="2" instance=ExtResource( 5 )]
-margin_left = 1616.0
-margin_right = 2416.0
-margin_bottom = 1056.0
+margin_left = 1608.0
+margin_right = 2408.0
+margin_bottom = 1068.0
 
 [node name="RandomLoncatingBarrel-LevelCard" parent="ScrollContainer/HBoxContainer" index="3" instance=ExtResource( 6 )]
-margin_left = 2424.0
-margin_right = 3224.0
-margin_bottom = 1056.0
+margin_left = 2412.0
+margin_right = 3212.0
+margin_bottom = 1068.0
