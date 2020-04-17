@@ -1,7 +1,6 @@
 - name: Godot Export
   uses: firebelley/godot-export@v1.2.0
 
-# Whenever a push is made to the master branch then run the job
 on: 
   push:
     branches:
