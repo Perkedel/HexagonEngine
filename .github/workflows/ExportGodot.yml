@@ -1,0 +1,33 @@
+- name: Godot Export
+  uses: firebelley/godot-export@v1.2.0
+
+# Whenever a push is made to the master branch then run the job
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  # job id, can be anything
+  export_game:
+    # Always use ubuntu-latest for this action
+    runs-on: ubuntu-latest
+    # Job name, can be anything
+    name: Export Game Job
+    steps:
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v2.0.0
+    - name: export game
+      # Use version 1.2.0 (see releases for all versions)
+      uses: firebelley/godot-export@v1.2.0
+      with:
+        # Defining all the required inputs
+        # I used the mono version of Godot in this example
+        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_linux_headless.64.zip
+        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_export_templates.tpz
+        godot_template_version: 3.2.1.stable.mono
+        relative_project_path: ./
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
