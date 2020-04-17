@@ -3,6 +3,9 @@
  
  [![Visit Hexagon Engine](https://img.shields.io/badge/Hexagon%20Engine-Visit%20GitHub%20Repo-yellow?style=for-the-badge )](https://github.com/Perkedel/HexagonEngine )
  
+ ![Godot Export](https://github.com/Perkedel/HexagonEngine/workflows/Godot%20Export/badge.svg)
+ ![Greet Everyone](https://github.com/Perkedel/HexagonEngine/workflows/Greet%20Everyone/badge.svg)
+ 
  [![HitCount](http://hits.dwyl.io/Perkedel/HexagonEngine.svg )](http://hits.dwyl.io/Perkedel/HexagonEngine )
  [![Joel's Linktree](https://img.shields.io/badge/Linktree-Visit-green )](https://www.linktr.ee/joelwindows7 )
  [![Hexagon Engine is Open Source!](https://img.shields.io/github/license/Perkedel/HexagonEngine?logo=gnu )](https://github.com/Perkedel/HexagonEngine/blob/master/LICENSE )
