@@ -1,5 +1,4 @@
-- name: Godot Export
-  uses: firebelley/godot-export@v1.2.0
+name: Godot Export
 
 on: 
   push:
