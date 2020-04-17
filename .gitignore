@@ -2,7 +2,7 @@
 # Godot-specific ignores
 .import/
 export.cfg
-export_presets.cfg
+# export_presets.cfg # Do not ignore due to Workflow Exporter!
 
 # Mono-specific ignores
 .mono/
@@ -10,7 +10,10 @@ export_presets.cfg
 # Admob-specific ignores, it is dangerous to reveal the real AdMob id as it could be abused!
 *.admob
 
-# Unity meta files
+# Google API Secret proposed extension
+*.GoogleAPI
+
+# Unity meta files, what's the point of Unity Meta file in Godot project?
 *.meta
 
 # Blender Backup file must be ignored
