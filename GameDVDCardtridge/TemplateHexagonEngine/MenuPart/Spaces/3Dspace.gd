@@ -32,6 +32,9 @@ func _ready():
 	Prev3DSpaceLevel = Now3DSpaceLevel
 	pass # Replace with function body.
 
+func _exit_tree():
+	#custom_Resource_Queue = null
+	pass
 
 
 func spawnAScene(pathO):

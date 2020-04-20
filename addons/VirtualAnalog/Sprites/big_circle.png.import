@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/small_circle.png-3a1aa0e745eb2f0da1bf20ee4857134f.stex"
+path="res://.import/big_circle.png-0e89bc8d181f5baa8b1d1f5e33733028.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VirtualAnalog/Sprites/small_circle.png"
-dest_files=[ "res://.import/small_circle.png-3a1aa0e745eb2f0da1bf20ee4857134f.stex" ]
+source_file="res://addons/VirtualAnalog/Sprites/big_circle.png"
+dest_files=[ "res://.import/big_circle.png-0e89bc8d181f5baa8b1d1f5e33733028.stex" ]
 
 [params]
 

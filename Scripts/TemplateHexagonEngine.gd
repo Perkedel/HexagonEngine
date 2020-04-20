@@ -63,6 +63,10 @@ func _ready():
 	PrepareHUD()
 	pass # Replace with function body.
 
+func _exit_tree():
+	#free()
+	pass
+
 func _input(event):
 	if isPlayingTheGameNow:
 		pass
@@ -287,7 +291,7 @@ func ThreadLoadLevel(aVariable): #Execute in Thread!
 
 # https://docs.godotengine.org/en/3.1/tutorials/threads/using_multiple_threads.html
 func goto_scene(a3Dpath, a2Dpath):
-	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+	#$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
 	Sub2DLoadCompleted = false
 	Sub3DLoadCompleted = false
 	Sub2DLoadValue = 0

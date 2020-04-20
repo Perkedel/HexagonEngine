@@ -15,3 +15,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func Nonaktifkan_Sistem():
+	Kixlonzing.SaveKixlonz()
+	print("Quit Game!")
+	#get_tree().queue_delete(get_tree())
+	#get_tree().queue_free()
+	get_tree().quit()
+	pass
+
+func _exit_tree():
+	pass

@@ -22,6 +22,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func _exit_tree():
+	pass
 
 func DoLaunchTheDVD():
 	
@@ -29,7 +31,7 @@ func DoLaunchTheDVD():
 
 func DoChangeDVDNow():
 	print("Change DVD!")
-	$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
+	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
 	# Ah peck! free() error, attempted to free locked object
 	#$MetaMenu/ChangeDVDMenu.show()
 	$MetaMenu/ChangeDVDMenu.ShowMeSelf()
@@ -38,9 +40,8 @@ func DoChangeDVDNow():
 
 func DoShutdownNow():
 	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
-	Kixlonzing.SaveKixlonz()
-	print("Quit Game!")
-	get_tree().quit()
+	
+	Singletoner.Nonaktifkan_Sistem()
 	pass
 
 func _on_DVDCartridgeSlot_ChangeDVD_Exec():
@@ -84,6 +85,9 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 			pass
 		7:
 			LoadDVD = load("res://GameDVDCardtridge/Splitscrin/Splitscrin Taris.tscn")
+			pass
+		8:
+			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
 			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big_circle.png-3ba2aa43b565b37546a44d8e2dae2840.stex"
+path="res://.import/icon.png-cf71da43edffd557bcb9d5d13b9b5ccb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VirtualAnalog/Sprites/big_circle.png"
-dest_files=[ "res://.import/big_circle.png-3ba2aa43b565b37546a44d8e2dae2840.stex" ]
+source_file="res://Example Project/Kinetic Controller/icon.png"
+dest_files=[ "res://.import/icon.png-cf71da43edffd557bcb9d5d13b9b5ccb.stex" ]
 
 [params]
 
