@@ -10,7 +10,8 @@ extends Node
 #export var PauseTheGame = false
 var ConThread
 export var isRunningDVD = true
-export var preloadDVD = 0
+export(int) var preloadDVD = 0
+export(bool) var doPreloadDVD = false
 export(PackedScene) var LoadDVD 
 enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 
@@ -106,3 +107,8 @@ func _on_DVDCartridgeSlot_DVDTryLoad():
 # Editor, Setting, Export, Windows, rcedit, refer that rcedit exe file
 
 # Fenix Github Integration asset lib
+
+
+func _on_DVDCartridgeSlot_NoDisc():
+	DoChangeDVDNow()
+	pass # Replace with function body.

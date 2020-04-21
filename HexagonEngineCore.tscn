@@ -13,8 +13,6 @@ LoadDVD = ExtResource( 2 )
 [node name="DVDCartridgeSlot" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="TemplateHexagonEngine" parent="DVDCartridgeSlot" instance=ExtResource( 2 )]
-
 [node name="MetaMenu" type="CanvasLayer" parent="."]
 layer = 11
 
@@ -36,6 +34,7 @@ pause_mode = 2
 use_threads = true
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]
+[connection signal="NoDisc" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_NoDisc"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
 [connection signal="ItemClickEnter" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnter"]
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]

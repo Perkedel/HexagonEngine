@@ -4,6 +4,7 @@ var InstanceDVD
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal NoDisc()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,13 +18,23 @@ func _ready():
 
 func CheckDVD():
 	InstanceDVD = get_child(0)
+	if(!InstanceDVD):
+		emit_signal("NoDisc")
+		pass
+	else:
+		pass
 	pass
 
 func ConnectCartridge():
 	# Connect important signals of basically every DVD Cartridge
-	print("Connect Cartridge") #cartride connecc say
-	get_child(0).connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
-	get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+	if(InstanceDVD):
+		print("Connect Cartridge!") #cartride connecc say
+		InstanceDVD.connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
+		InstanceDVD.connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		pass
+	else:
+		print("No Connect Cartridge, DVD slot empty!")
+		pass
 	pass
 
 signal ChangeDVD_Exec()
