@@ -36,7 +36,7 @@ jobs:
           name: Export linux64 build
           command: |
               mkdir -p linux64
-              ./godot --export "Linux/X11" project.godot "linux64/hexagon-engine_Circle-CI"
+              ./godot --export linux project.godot "linux64/hexagon-engine_Circle-CI"
       - run:
           name: Upload linux64 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push linux64 joelwindows7/hexagon-engine:linux-64bit-circleci; fi
@@ -54,7 +54,7 @@ jobs:
           name: Export win64 build
           command: |
               mkdir -p win64
-              ./godot --export "Windows Desktop" project.godot "win64/hexagon-engine_Circle-CI.exe"
+              ./godot --export win64 project.godot "win64/hexagon-engine_Circle-CI.exe"
       - run:
           name: Upload win64 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push win64 joelwindows7/hexagon-engine:win-64bit-circleci; fi

@@ -8,12 +8,12 @@ extends Node
 #export(MenuLists) var MenuIsRightNow = 0
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
-var ConThread
-export var isRunningDVD = true
-export(int) var preloadDVD = 0
-export(bool) var doPreloadDVD = false
+#var ConThread
+onready var isRunningDVD = true
+onready var preloadDVD = 0
+onready var doPreloadDVD = false
 export(PackedScene) var LoadDVD 
-enum ListOfDVDsTemporarily {Template, AdmobTestoid}
+#enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,6 +41,7 @@ func DoChangeDVDNow():
 
 func PatchedChangeDVDNow():
 	LoadDVD = "res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn"
+	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass
 
 func DoShutdownNow():

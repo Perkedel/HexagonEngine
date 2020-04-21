@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://GameDVDCardtridge/ChangeDVDv3/Shared/bootBanner/RowCellA.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameDVDCardtridge/ChangeDVDv3/bootThis.gd" type="Script" id=3]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/DefaultBackground_copy.png" type="Texture" id=4]
@@ -31,16 +30,6 @@ alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="RowCellA" parent="Splash/SplashMan/SplashControl/ColumnStack" instance=ExtResource( 1 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 440.0
-margin_right = 1920.0
-margin_bottom = 640.0
 
 [node name="BekgronMan" type="CanvasLayer" parent="Splash"]
 layer = 99

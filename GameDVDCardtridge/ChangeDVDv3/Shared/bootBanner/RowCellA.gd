@@ -11,6 +11,7 @@ onready var tween = $Tween
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal ImDone()
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,4 +29,9 @@ func _ready():
 
 
 func _on_Tween_tween_completed(object, key):
+	pass # Replace with function body.
+
+
+func _on_Tween_tween_all_completed():
+	emit_signal("ImDone")
 	pass # Replace with function body.
