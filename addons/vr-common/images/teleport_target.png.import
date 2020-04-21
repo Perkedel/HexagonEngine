@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.s3tc.stex"
 path.etc2="res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.etc2.stex"
+path.etc="res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/vr-common/images/teleport_target.png"
-dest_files=[ "res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.s3tc.stex", "res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.etc2.stex" ]
+dest_files=[ "res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.s3tc.stex", "res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.etc2.stex", "res://.import/teleport_target.png-779f853f62e0e2207f5821dfbc8b780c.etc.stex" ]
 
 [params]
 

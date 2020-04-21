@@ -186,3 +186,5 @@ Used Assets and Tools!
 - https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow
 - https://docs.godotengine.org/en/latest/getting_started/workflow/export/exporting_for_uwp.html
 - https://github.com/Malinskiy/action-android
+- https://github.com/JOELwindows7/ourwear_prototype
+- https://github.com/marketplace/actions/github-script

@@ -31,14 +31,7 @@ jobs:
               wget -q -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
               unzip butler.zip
               chmod +x butler
-      - run:
-          name: Export win64 build
-          command: |
-              mkdir -p win64
-              ./godot --export "Windows Desktop" project.godot "win64/hexagon-engine_Circle-CI.exe"
-      - run:
-          name: Upload win64 build
-          command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push win64 joelwindows7/hexagon-engine:win-64bit-circleci; fi
+      
       - run:
           name: Export linux64 build
           command: |
@@ -56,6 +49,15 @@ jobs:
       - run:
           name: Upload mac build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push hexagon-engine-mac.zip joelwindows7/hexagon-engine:mac-circleci; fi
+      
+      - run:
+          name: Export win64 build
+          command: |
+              mkdir -p win64
+              ./godot --export "Windows Desktop" project.godot "win64/hexagon-engine_Circle-CI.exe"
+      - run:
+          name: Upload win64 build
+          command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push win64 joelwindows7/hexagon-engine:win-64bit-circleci; fi
       
       - run:
           name: Export HTML5 build

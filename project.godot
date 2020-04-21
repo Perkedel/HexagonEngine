@@ -867,7 +867,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Dialogbox", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "fabianlc_gpu_tilemap", "file-editor", "gcode", "gd-sqlite", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "midi", "mixing-desk", "modifiers", "notes_tab", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "tile_spawner", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "Dialogbox", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "fabianlc_gpu_tilemap", "file-editor", "gcode", "gd-sqlite", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "midi", "mixing-desk", "modifiers", "notes_tab", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "tile_spawner", "vector_resource", "vnen.tiled_importer", "voxel_factory", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
@@ -1004,9 +1004,7 @@ common/physics_fps=500
 quality/driver/fallback_to_gles2=true
 quality/intended_usage/framebuffer_allocation.mobile=2
 threads/thread_model=2
-vram_compression/import_bptc=true
 vram_compression/import_etc=true
-vram_compression/import_pvrtc=true
 quality/subsurface_scattering/quality=2
 environment/default_clear_color=Color( 0.0666667, 0.168627, 0.317647, 1 )
 quality/depth/hdr.mobile=true
