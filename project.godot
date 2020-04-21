@@ -1001,8 +1001,12 @@ common/physics_fps=500
 
 [rendering]
 
+quality/driver/fallback_to_gles2=true
 quality/intended_usage/framebuffer_allocation.mobile=2
 threads/thread_model=2
+vram_compression/import_bptc=true
+vram_compression/import_etc=true
+vram_compression/import_pvrtc=true
 quality/subsurface_scattering/quality=2
 environment/default_clear_color=Color( 0.0666667, 0.168627, 0.317647, 1 )
 quality/depth/hdr.mobile=true

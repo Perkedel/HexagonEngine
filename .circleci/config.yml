@@ -61,7 +61,7 @@ jobs:
           name: Export HTML5 build
           command: |
               mkdir -p HTML5
-              ./godot --export HTML5 project.godot "HTML5/hexagon-engine_Circle-CI.html"
+              ./godot --export HTML5 project.godot "HTML5/index.html"
       - run:
           name: Upload HTML5 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push HTML5 joelwindows7/hexagon-engine:HTML5-circleci; fi

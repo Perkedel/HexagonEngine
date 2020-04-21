@@ -4,15 +4,17 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.s3tc.stex"
 path.etc2="res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.etc2.stex"
+path.etc="res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.etc.stex"
+path.pvrtc="res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/procedural_maze/test_procedural_maze/models/materials/floor_normal_map.png"
-dest_files=[ "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.s3tc.stex", "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.etc2.stex" ]
+dest_files=[ "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.s3tc.stex", "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.etc2.stex", "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.etc.stex", "res://.import/floor_normal_map.png-4c372c97091d902901fa309b4e16b2aa.pvrtc.stex" ]
 
 [params]
 

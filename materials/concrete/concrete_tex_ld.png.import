@@ -4,15 +4,17 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.s3tc.stex"
 path.etc2="res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.etc2.stex"
+path.etc="res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.etc.stex"
+path.pvrtc="res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://materials/concrete/concrete_tex_ld.png"
-dest_files=[ "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.s3tc.stex", "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.etc2.stex" ]
+dest_files=[ "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.s3tc.stex", "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.etc2.stex", "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.etc.stex", "res://.import/concrete_tex_ld.png-bf49ac8c0534ac6082d46d66d0b7f4f7.pvrtc.stex" ]
 
 [params]
 

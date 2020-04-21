@@ -4,15 +4,17 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.s3tc.stex"
 path.etc2="res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.etc2.stex"
+path.etc="res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.etc.stex"
+path.pvrtc="res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/MavrickleIcon.png"
-dest_files=[ "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.s3tc.stex", "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.etc2.stex" ]
+dest_files=[ "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.s3tc.stex", "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.etc2.stex", "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.etc.stex", "res://.import/MavrickleIcon.png-ddc735cfaf681bec4786d5823b808657.pvrtc.stex" ]
 
 [params]
 
