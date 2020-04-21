@@ -39,6 +39,10 @@ func DoChangeDVDNow():
 	#$DVDCartridgeSlot.get_child(0).free()
 	pass
 
+func PatchedChangeDVDNow():
+	LoadDVD = "res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn"
+	pass
+
 func DoShutdownNow():
 	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
 	

@@ -2,6 +2,7 @@ extends Node
 
 export(float) var TimeDelay
 export(PackedScene) var bootTheDVD
+export(PoolStringArray) var bootBannerLocations
 
 onready var tween = $Tween
 # Declare member variables here. Examples:
