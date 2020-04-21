@@ -16,7 +16,7 @@ jobs:
           command: |
               wget -q https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_linux_headless.64.zip
               unzip Godot_v3.2.1-stable_linux_headless.64.zip
-              mv Godot_v3.1-stable_linux_headless.64 godot
+              mv Godot_v3.2.1-stable_linux_headless.64 godot
               chmod +x godot
       - run:
           name: Download Godot 3.2.1 Export Templates
