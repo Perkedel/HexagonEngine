@@ -17,7 +17,7 @@
  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Perkedel/HexagonEngine?logo=Github )
  ![GitHub repo size](https://img.shields.io/github/repo-size/Perkedel/HexagonEngine?logo=Github )
  ![Liberapay patrons](https://img.shields.io/liberapay/patrons/JOELwindows7?logo=liberapay ) 
- [![time tracker](https://wakatime.com/badge/github/Perkedel/HexagonEngine.svg )](https://wakatime.com/badge/github/Perkedel/HexagonEngine )
+ [![time tracker](https://wakatime.com/badge/github/Perkedel/HexagonEngine.svg )](https://wakatime.com/@JOELwindows7/projects/mvyrdikben?start=2020-04-09&end=2020-04-22 )
  
  ![how many goto here?](https://img.shields.io/github/search/Perkedel/HexagonEngine/goto?logo=github )
  ![Top Language in this Repo](https://img.shields.io/github/languages/top/Perkedel/HexagonEngine?logo=github )
@@ -118,6 +118,15 @@ Perkedel Technologies
 Softwares: GNU GPL v3
 
 Assets and Documents: CC4.0-BY-SA
-	
+
+# Oh no! Our CI is problematic right now.
+Pardon us for this problem. the build keeps failing all time with weird inunderstandable problem like
+
+```
+export template 'linux' appears to be missing
+```
+
+sadd. But don't worry, we'll setup and upload the manual render build version anyway, **Which ironically works!**
+
 
 

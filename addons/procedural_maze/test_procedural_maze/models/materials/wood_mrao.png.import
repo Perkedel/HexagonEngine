@@ -5,16 +5,15 @@ type="StreamTexture"
 path.s3tc="res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.s3tc.stex"
 path.etc2="res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc2.stex"
 path.etc="res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc.stex"
-path.pvrtc="res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.pvrtc.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/procedural_maze/test_procedural_maze/models/materials/wood_mrao.png"
-dest_files=[ "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.s3tc.stex", "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc2.stex", "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc.stex", "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.pvrtc.stex" ]
+dest_files=[ "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.s3tc.stex", "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc2.stex", "res://.import/wood_mrao.png-17c9c4beebc53a74fcd852dcd15b0f17.etc.stex" ]
 
 [params]
 

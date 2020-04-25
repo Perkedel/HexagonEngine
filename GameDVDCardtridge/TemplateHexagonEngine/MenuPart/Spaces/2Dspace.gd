@@ -6,7 +6,7 @@ extends Node2D
 onready var LevelLoadRoot = $Level2DCartridgeSlot
 var a2DResource
 export(PackedScene) var Your2DSpaceLevel
-export(String) var Raw2DSpaceLevelPath
+export(String) var Raw2DSpaceLevelPath = ""
 var Prev2DSpaceLevel
 var Now2DSpaceLevel
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html

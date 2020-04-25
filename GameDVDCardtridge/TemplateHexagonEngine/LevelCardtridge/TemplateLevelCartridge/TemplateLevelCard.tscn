@@ -71,10 +71,10 @@ rect_min_size = Vector2( 0, 100 )
 scroll_vertical_enabled = false
 
 [node name="Title" type="Label" parent="LevelCardContainer/TitleScroll"]
-margin_right = 1047.0
+margin_right = 1399.0
 margin_bottom = 90.0
 custom_fonts/font = ExtResource( 5 )
-text = "Title of This Card HUEUEUEUE"
+text = "Template Titleg of Level HUEUEUEUEUE"
 
 [node name="DescriptionScroll" type="ScrollContainer" parent="LevelCardContainer"]
 margin_top = 543.0
@@ -98,14 +98,20 @@ bbcode_text = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]
 [code]if this then that[/code]
-[b][i]Hendlo Hazard World[/i][/b]
-ddddddddddddddddddddddddddddddddddddddddddddd"
+FROMER
+[b][i]Henlo Hazard WOrld[/i][/b]
+https://linktr.ee/joelwindows7
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ahuihahuhahuhahuhahu"
 text = "Descriptioner
 WEEEW
 OUOUOUOUOUOUO
 if this then that
-Hendlo Hazard World
-ddddddddddddddddddddddddddddddddddddddddddddd"
+FROMER
+Henlo Hazard WOrld
+https://linktr.ee/joelwindows7
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ahuihahuhahuhahuhahu"
 
 [node name="PlayTheLevelButton" type="Button" parent="LevelCardContainer"]
 margin_top = 980.0

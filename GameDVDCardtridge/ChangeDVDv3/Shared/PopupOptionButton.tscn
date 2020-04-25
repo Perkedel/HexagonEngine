@@ -13,6 +13,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+ButtonIcon = ExtResource( 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -25,6 +26,7 @@ __meta__ = {
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
+mouse_filter = 1
 
 [node name="Icon" type="TextureRect" parent="HBoxContainer/IconBenefactor"]
 margin_right = 200.0

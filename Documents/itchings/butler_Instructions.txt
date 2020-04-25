@@ -1,0 +1,7 @@
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine" joelwindows7/hexagon-engine:source_codes &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine" joelwindows7/hexagon-engine:main &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine\Windows" joelwindows7/hexagon-engine:just_windows &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine\macOS" joelwindows7/hexagon-engine:just_macOS &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine\Linux" joelwindows7/hexagon-engine:just_linux &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine\Android" joelwindows7/hexagon-engine:just_android &&
+butler push "C:\Users\joelr\Documents\starring codes\Godot Projects\Just Renders\HexagonEngine\HTML5" joelwindows7/hexagon-engine:just_html5 && 

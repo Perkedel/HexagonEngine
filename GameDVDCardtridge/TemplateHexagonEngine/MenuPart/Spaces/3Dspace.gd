@@ -12,7 +12,7 @@ signal IncludeMeForYourLoading(MayI)
 signal a3D_Loading_ProgressBar(valuet)
 var ProgressValue
 export(PackedScene) var Your3DSpaceLevel
-export(String) var Raw3DSpaceLevelPath
+export(String) var Raw3DSpaceLevelPath = ""
 var Now3DSpaceLevel
 var Prev3DSpaceLevel
 var StartLoadSceneL = true

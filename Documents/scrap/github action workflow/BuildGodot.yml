@@ -1,0 +1,10 @@
+- name: Build Godot
+  uses: josephbmanley/build-godot-action@v1.3.4
+
+
+steps:
+- uses: josephbmanley/build-godot-action@v1.3.4
+  with:
+    name: Hexagon-Engine
+    preset: HTML5
+    subdirectory: build/

@@ -5,16 +5,15 @@ type="StreamTexture"
 path.s3tc="res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.s3tc.stex"
 path.etc2="res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc2.stex"
 path.etc="res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc.stex"
-path.pvrtc="res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.pvrtc.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/sprite-baker/models/anime_female/anime_female_body_derm.png"
-dest_files=[ "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.s3tc.stex", "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc2.stex", "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc.stex", "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.pvrtc.stex" ]
+dest_files=[ "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.s3tc.stex", "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc2.stex", "res://.import/anime_female_body_derm.png-af0e909bce32a2fa7398f52c44e82db4.etc.stex" ]
 
 [params]
 

@@ -3,7 +3,7 @@ extends Popup
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(float, 0, 100) var ProgressMeterValue
+export(float, 0, 100) var ProgressMeterValue = 0
 export(String) var ProgressWording
 var Dots = "......."
 export(bool) var LoadingCompleted = false
@@ -27,7 +27,7 @@ func DespawnLoading():
 	hide()
 	pass
 
-func ManageLoading(ProgressValuei = 0, WordingHint = "Loaden", isComplete = false):
+func ManageLoading(ProgressValuei:float = 0, WordingHint = "Loaden", isComplete = false):
 	ProgressMeterValue = ProgressValuei
 	if not isComplete:
 		ProgressWording = WordingHint

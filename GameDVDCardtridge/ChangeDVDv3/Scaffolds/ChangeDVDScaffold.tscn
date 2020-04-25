@@ -88,6 +88,7 @@ __meta__ = {
 margin_right = 100.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 100, 100 )
+mouse_filter = 1
 
 [node name="TextureRect" type="TextureRect" parent="ColumnInScaffold/RowMenuBar/StartMenuButton/HBoxContainer/IconFactor"]
 margin_right = 100.0

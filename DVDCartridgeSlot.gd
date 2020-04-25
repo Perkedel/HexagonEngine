@@ -45,10 +45,18 @@ func ExecuteChangeDVD():
 	if InstanceDVD:
 		InstanceDVD.queue_free()
 		pass
+	ExecuteRemoveAllDVDs()
 	emit_signal("ChangeDVD_Exec")
 	pass
 func ExecuteShutdown():
 	emit_signal("Shutdown_Exec")
+	pass
+func ExecuteRemoveAllDVDs():
+	for leftovers in get_children():
+		if leftovers.is_connected("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec"): leftovers.disconnect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
+		if leftovers.is_connected("Shutdown_Exec", self, "_on_Shutdown_Exec"): leftovers.disconnect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		leftovers.queue_free()
+		pass
 	pass
 
 signal DVDTryLoad

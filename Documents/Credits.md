@@ -192,3 +192,5 @@ Used Assets and Tools!
 - https://daringfireball.net/projects/markdown/syntax#link
 - https://circleci.com/docs/2.0/status-badges/
 - https://nakyle.com/godot-ci/
+- https://circleci.com/docs/2.0/docker-layer-caching/
+- https://circleci.com/docs/2.0/docker-layer-caching/

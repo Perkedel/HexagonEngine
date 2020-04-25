@@ -397,7 +397,7 @@ func DespawnLoadingBar():
 	$LoadingPopup.DespawnLoading()
 	pass
 
-func ManageLoading(ProgressValuei = 0, WordingHint = "Loadinger", isComplete = false):
+func ManageLoading(ProgressValuei:float = 0, WordingHint = "Loadinger", isComplete = false):
 	$LoadingPopup.ManageLoading(ProgressValuei, WordingHint, isComplete)
 	pass
 

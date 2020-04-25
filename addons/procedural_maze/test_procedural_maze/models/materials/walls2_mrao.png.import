@@ -5,16 +5,15 @@ type="StreamTexture"
 path.s3tc="res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.s3tc.stex"
 path.etc2="res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc2.stex"
 path.etc="res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc.stex"
-path.pvrtc="res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.pvrtc.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/procedural_maze/test_procedural_maze/models/materials/walls2_mrao.png"
-dest_files=[ "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.s3tc.stex", "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc2.stex", "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc.stex", "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.pvrtc.stex" ]
+dest_files=[ "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.s3tc.stex", "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc2.stex", "res://.import/walls2_mrao.png-56ac9c725966bd9eab536985f0e92bb6.etc.stex" ]
 
 [params]
 

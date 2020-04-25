@@ -42,10 +42,10 @@ export(bool) var a3DSpaceReportHP = false
 export(bool) var a2DSpaceReportScore = false
 export(bool) var a3DSpaceReportScore = false
 
-export (float) var See3DHP
-export (float) var See2DHP
-export (float) var See3DScore
-export (float) var See2DScore
+export (float) var See3DHP = 100
+export (float) var See2DHP = 100
+export (float) var See3DScore = 0
+export (float) var See2DScore = 0
 
 export (float) var emitHP = 100
 export (float) var emitScore = 2000

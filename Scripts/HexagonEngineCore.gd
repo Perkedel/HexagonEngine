@@ -30,6 +30,11 @@ func DoLaunchTheDVD():
 	
 	pass
 
+func JustRemoveDVDThatsIt():
+	$DVDCartridgeSlot.ExecuteRemoveAllDVDs()
+	pass
+
+
 func DoChangeDVDNow():
 	print("Change DVD!")
 	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
@@ -46,7 +51,7 @@ func PatchedChangeDVDNow():
 
 func DoShutdownNow():
 	# https://godotengine.org/qa/554/is-there-a-way-to-close-a-game-using-gdscript
-	
+	JustRemoveDVDThatsIt()
 	Singletoner.Nonaktifkan_Sistem()
 	pass
 
