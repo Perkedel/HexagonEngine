@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/Level01.tmx-63b136a091bec633e1d49dbfb4bc581c.scn"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/TiledThings/Level01.tmx"
+dest_files=[ "res://.import/Level01.tmx-63b136a091bec633e1d49dbfb4bc581c.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

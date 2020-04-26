@@ -1,0 +1,44 @@
+My hand is tired moving mouse virgorously while holding mid click with high tendency to roll scroll wheel.
+
+I made smeel cheese but smeel time piece. in Blender 2.8 Beta.
+I'm sorry.
+
+A Hat in Time Camera badge:
+Focus = just Hat kid, -200??
+FOV = close to face, about 30 degrees
+Depth of field = Maximum
+
+Song: Daily Beetle - Kevin Macleod (less than 100%)
+"Daily Beetle" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+I like royalty free music. thank you.
+
+Source code:
+KDENLive edit:
+https://github.com/Perkedel/Geogon_Polymetry_Havent_Done_Yet/tree/reimport-from-corruption/Assets/Kdenlive/IsmeelTimePiece
+Blender file (including Time Piece badly modelled + sand absent):
+https://github.com/Perkedel/Geogon_Polymetry_Havent_Done_Yet/tree/reimport-from-corruption/Assets/Blender/I%20smeel%20tiem%20piece
+Perkedel logo Press kit:
+https://github.com/Perkedel/GeogonPrototype/tree/master/Assets/src/Drawings/Logo%20Setup
+
+sorry, the render and the raw video are larger than 100 MB and requires Git LFS. Here is Google Photo link: https://photos.app.goo.gl/PRCH5zcqBMbBCpgB9
+
+the frame drop only occurs in the Blender, not the Streamlabs OBS nor the Mouse cursor.
+
+References:
+Incredibly Realistic wolf animation: https://www.youtube.com/watch?v=U-skKMQiBDA
+I smeel cheese: https://www.youtube.com/watch?v=yz41DSNUYVY
+how to make smeel cheese: https://www.youtube.com/watch?v=NNfteFNaB9g&t=274s
+
+Tools:
+Streamlabs OBS https://streamlabs.com
+KDENLive https://kdenlive.org
+blender https://blender.org
+Windows 10 https://windows.com
+A Hat in Time (get Camera badge by helping tourist guy in Mafia Town! + DLC (optional, though you may want so)) https://store.steampowered.com/app/253230/A_Hat_in_Time/
+
+Hatalina intrudes Jefrey's stage! (Hat kid breaks into Conductor's stage!)
+
+I should start mod despite how busy my college is. I have homework, make game. my college is about make games.

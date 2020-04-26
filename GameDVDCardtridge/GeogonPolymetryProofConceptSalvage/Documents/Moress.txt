@@ -1,0 +1,66 @@
+Geogon Polymetry: The Proof Concept
+Change your shape to do something!
+
+Readme extended bellow:
+This game was built under Unity. long short, it succ.
+it shows terrible cannot be disabled without purchase of higher tier, Made with Unity logo.
+Avoid at all cost!
+Unity Pro is only available as subscription!!! no permanent single time purchase!
+fck Unity!
+
+If you want to develop AAA games, use Godot latest version instead! it is now has the similar or same Mono behaviour like the Unity. Yes, C# is available for Godot!
+also you can use GDNative C++, or GDscript Python-like.
+
+Godot is started as 2D. Unity was 3D.
+Godot is native 2D. Unity is 3D locked in 2D.
+Godot will have less resource compared to indifferent Unity's usage.
+
+One day, Perkedel maybe use Godot to start their life of Hexagon Engine. They will create a bunch of prefabs like Controller, UI, Characters, and other fetishes (heartbeat, sexual, etc), and etc.
+that's one of the possibility that Hexagon Engine can start.
+But we're not sure. will it become the choice? we'll find out soon.
+most importantly, we must have the game engine that emphasize freedom, all aspects of them. Gratis, Open Source, Full version!
+pray.
+
+SHoonbee speaks about soul composing recently. Joel has the answer. he has spoken, to the people who curious about this Moress file.
+and it is.
+DD-TG-58-17-SP-VL-GB
+That's the Key sprout! it's another game! check it out! it's cool.
+Yes, I know, Joel was too lazy to play it. but look at the concept! it's cool!
+don't spoil! if spoil, fun ruins!
+
+Explain Job tiers before Joel forgot! ft. Voice Actor tier.
+- Volunteer. Initial tier when got accepted in Perkedel Technologies for certain times only. Just contribute. No salary.
+- Intern. Second tier. Just like real employer but temporary too. less likely salary.
+- Entry. Third tier. When proven compliant and have been great job recently, this is real employer and permanent. usual salary.
+- Medium. fourth tier. being reliable and cannot leave just be like that. high salary.
+- Patent. final tier. have ability that cannot be found any else. extreme salary. This tier cannot be acquired by reputation! must because of rare uniqueness out of others!
+
+Voice Actor!!!
+- Volunteer. Any Language.
+- Intern. Bahasa Indonesia + Any Language.
+- Entry. Bahasa Indonesia + English + Any Language. Swearings.
+- Medium. Bahasa Indonesia very fluent + English fluent + optional Any Language. Swearings. Mild Anti-Wumpus. Standard heartbeat record.
+- Patent. Bahasa Indonesia real native + English very fluent + optional Any Language. Real Swearings. Full Anti-Wumpus. Full Cardiophille. METICULOUSY!!!
+
+Godot refferences
+https://www.godotengine.org Godot Engine website
+https://www.youtube.com/watch?v=1GlGzFeB_Tc . Change exe icon. (violation detected) no credit name of music
+http://docs.godotengine.org/en/3.0/getting_started/step_by_step/index.html . learn Godot for the 1st time.
+
+Issues!
+This:
+	Sound off sync compared to vibration by around 10 to 40 ms. check SHanpe's jump sound and collide to object on your Android device.
+Super Tiled 2 Unity:
+	Scale did not update composite collider! Solution: Spawn this Tiled level under Level Design, set their scale the same as the Level design scale. if Level design is 2, then this TMX is 2 as well.
+	unity:isTrigger did not read! that layer of Laharr did not isTrigger despite on TMX has set to true!
+Other life Issues as of this season:
+	Confuse, Stress, for each homeworks
+	usually is happening
+	too late that I have entered University. But world still needs a degree. wish it not. If only, I don't have to waste age. extend use of space for tune up something.
+	things I want becomes needed. they are too expensive for us to get.
+	Quality job will be decreased because of this. sorry.
+	
+Trobnus!
+Filer it free!
+
+Continue Development gamepad zone

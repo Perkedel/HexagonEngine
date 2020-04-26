@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt title="Anonymous Submission" LC_NUMERIC="id_ID" producer="main_bin" version="6.15.0" root="C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Kdenlive/TestKeys">
+ <profile frame_rate_num="60" sample_aspect_num="1" display_aspect_den="9" colorspace="709" progressive="1" description="HD 1080p 60 fps" display_aspect_num="16" frame_rate_den="1" width="1920" height="1080" sample_aspect_den="1"/>
+ <producer id="producer0" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/cth.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">1143</property>
+  <property name="meta.media.height">840</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">2</property>
+  <property name="kdenlive:file_size">295564</property>
+  <property name="kdenlive:file_hash">9b74643b6cc205b3a15017a460ff4df0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer1" in="00:00:00,000" out="00:00:40,480">
+  <property name="length">1013</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Icon.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">600</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:file_size">9967</property>
+  <property name="kdenlive:file_hash">e18dbab21a54a2e0114016d21dd5cc22</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:activeeffect">0</property>
+  <filter id="filter0">
+   <property name="background">colour:0x00000000</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affinerotate</property>
+   <property name="transition.rotate_x">0=0</property>
+   <property name="transition.rotate_y">0=0</property>
+   <property name="transition.rotate_z">0=0</property>
+   <property name="transition.ox">0=0</property>
+   <property name="transition.oy">0=0</property>
+   <property name="transition.keyed">1</property>
+   <property name="transition.always_active">1</property>
+   <property name="kdenlive:collapsed">0</property>
+  </filter>
+ </producer>
+ <producer id="producer2" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/mutanisasi..png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">1134</property>
+  <property name="meta.media.height">817</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">4</property>
+  <property name="kdenlive:file_size">438085</property>
+  <property name="kdenlive:file_hash">da1ba7afec63ccede76ade9c1b97e499</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer3" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Short Darkborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">1861</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:file_size">30221</property>
+  <property name="kdenlive:file_hash">d2a073253f58123ffe5c697fe9f0ae4a</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer4" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Short Noborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">1861</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">10</property>
+  <property name="kdenlive:file_size">34494</property>
+  <property name="kdenlive:file_hash">b40ebb856277968c9d96a14aa153df03</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer5" in="00:00:00,000" out="00:00:13,880">
+  <property name="length">348</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Short Typeborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">1863</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">11</property>
+  <property name="kdenlive:file_size">55548</property>
+  <property name="kdenlive:file_hash">7bb342b6d437ff54a8357d4a17d62f0a</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer6" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Logo Darkborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">3709</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">6</property>
+  <property name="kdenlive:file_size">56117</property>
+  <property name="kdenlive:file_hash">1b7008765325862e4c2bcf36d1ea1f9c</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer7" in="00:00:00,000" out="00:00:04,960">
+  <property name="length">00:00:05,000</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Logo Typeborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">3710</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:file_size">119450</property>
+  <property name="kdenlive:file_hash">81b4d85fc829a413ec806ebe90660960</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer id="producer8" in="00:00:00,000" out="00:00:19,160">
+  <property name="length">480</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/Perkedel Logo Noborder.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">3709</property>
+  <property name="meta.media.height">400</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">7</property>
+  <property name="kdenlive:file_size">60487</property>
+  <property name="kdenlive:file_hash">799d82dfc61b78cee9fc97933f4ba048</property>
+  <property name="kdenlive:folderid">-1</property>
+ </producer>
+ <producer title="Anonymous Submission" id="producer9" in="00:00:00,000" out="00:00:33,440">
+  <property name="length">837</property>
+  <property name="eof">pause</property>
+  <property name="resource">C:/Users/ASUS/Documents/starring codes/Unity Projects/Geogon_Polymetry_Havent_Done_Yet/Assets/Sprites/GameTitle2.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">10000</property>
+  <property name="meta.media.height">2500</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05,000</property>
+  <property name="kdenlive:id">3</property>
+  <property name="kdenlive:file_size">644598</property>
+  <property name="kdenlive:file_hash">b9ea52ec449604c1f4d6e8c02f57f4e8</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="global_feed">1</property>
+ </producer>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.activeTrack">2</property>
+  <property name="kdenlive:docproperties.audioTarget">1</property>
+  <property name="kdenlive:docproperties.decimalPoint">,</property>
+  <property name="kdenlive:docproperties.disablepreview">0</property>
+  <property name="kdenlive:docproperties.documentid">1556126832241</property>
+  <property name="kdenlive:docproperties.enableTimelineZone">0</property>
+  <property name="kdenlive:docproperties.enableexternalproxy">0</property>
+  <property name="kdenlive:docproperties.enableproxy">0</property>
+  <property name="kdenlive:docproperties.externalproxyparams">../Sub;;S03.MP4;../Clip;;.MXF</property>
+  <property name="kdenlive:docproperties.generateimageproxy">0</property>
+  <property name="kdenlive:docproperties.generateproxy">0</property>
+  <property name="kdenlive:docproperties.kdenliveversion">19.04.0</property>
+  <property name="kdenlive:docproperties.position">2882</property>
+  <property name="kdenlive:docproperties.previewextension">mov</property>
+  <property name="kdenlive:docproperties.previewparameters">r=25 s=1920x1080 vb=36M threads=0 vcodec=dnxhd</property>
+  <property name="kdenlive:docproperties.profile">atsc_1080p_60</property>
+  <property name="kdenlive:docproperties.proxyextension">mkv</property>
+  <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
+  <property name="kdenlive:docproperties.proxyimagesize">800</property>
+  <property name="kdenlive:docproperties.proxyminsize">1000</property>
+  <property name="kdenlive:docproperties.proxyparams">-vf yadif,scale=960:-2 -qscale 3 -vcodec mjpeg -acodec pcm_s16le</property>
+  <property name="kdenlive:docproperties.scrollPos">0</property>
+  <property name="kdenlive:docproperties.version">0.98</property>
+  <property name="kdenlive:docproperties.verticalzoom">1</property>
+  <property name="kdenlive:docproperties.videoTarget">2</property>
+  <property name="kdenlive:docproperties.zonein">0</property>
+  <property name="kdenlive:docproperties.zoneout">75</property>
+  <property name="kdenlive:docproperties.zoom">10</property>
+  <property name="kdenlive:documentnotes"/>
+  <property name="kdenlive:docproperties.groups">[&#xd;
+]&#xd;
+</property>
+  <property name="kdenlive:docproperties.dirtypreviewchunks"/>
+  <property name="kdenlive:docproperties.previewchunks"/>
+  <property name="xml_retain">1</property>
+  <entry producer="producer0" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer1" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer2" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer3" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer4" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer5" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer6" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer7" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer8" in="00:00:00,000" out="00:00:04,960"/>
+  <entry producer="producer9" in="00:00:00,000" out="00:00:04,960"/>
+ </playlist>
+ <producer id="black_track" in="00:00:00,000" out="00:21:55,320">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <playlist id="playlist0">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <playlist id="playlist1">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <tractor id="tractor0" in="00:00:00,000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="video" producer="playlist0"/>
+  <track hide="video" producer="playlist1"/>
+ </tractor>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <tractor id="tractor1" in="00:00:00,000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="video" producer="playlist2"/>
+  <track hide="video" producer="playlist3"/>
+ </tractor>
+ <playlist id="playlist4">
+  <entry producer="producer5" in="00:00:00,000" out="00:00:13,880">
+   <property name="kdenlive:id">11</property>
+  </entry>
+  <blank length="00:00:09,640"/>
+  <entry producer="producer8" in="00:00:00,000" out="00:00:19,160">
+   <property name="kdenlive:id">7</property>
+  </entry>
+  <blank length="00:00:32,040"/>
+  <entry producer="producer1" in="00:00:00,000" out="00:00:34,320">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter1">
+    <property name="background">colour:0x00000000</property>
+    <property name="mlt_service">affine</property>
+    <property name="kdenlive_id">affinerotate</property>
+    <property name="transition.rotate_x">0=-53;253=-53;445=-2,3;659=86,5;722=160,2</property>
+    <property name="transition.rotate_y">0=-3,6;253=-3,6;445=-1,6;659=-1,6;722=-1,6</property>
+    <property name="transition.rotate_z">0=0,3;253=-78,6;445=-4,3;659=-4,3;722=-4,3</property>
+    <property name="transition.ox">0=0;253=0;445=0;659=0;722=0</property>
+    <property name="transition.oy">0=0;253=0;445=0;659=0;722=0</property>
+    <property name="transition.keyed">1</property>
+    <property name="transition.always_active">1</property>
+    <property name="kdenlive:collapsed">0</property>
+    <property name="disable">0</property>
+   </filter>
+  </entry>
+  <entry producer="producer1" in="00:00:00,000" out="00:00:06,120">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter2">
+    <property name="background">colour:0x00000000</property>
+    <property name="mlt_service">affine</property>
+    <property name="kdenlive_id">affinerotate</property>
+    <property name="transition.rotate_x">0=49,7</property>
+    <property name="transition.rotate_y">0=-45,1</property>
+    <property name="transition.rotate_z">0=-76,7</property>
+    <property name="transition.ox">0=0</property>
+    <property name="transition.oy">0=0</property>
+    <property name="transition.keyed">1</property>
+    <property name="transition.always_active">1</property>
+   </filter>
+  </entry>
+ </playlist>
+ <playlist id="playlist5"/>
+ <tractor id="tractor2" in="00:00:00,000" out="00:01:55,280">
+  <property name="kdenlive:trackheight">209</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist4"/>
+  <track hide="audio" producer="playlist5"/>
+ </tractor>
+ <playlist id="playlist6">
+  <blank length="00:00:38,640"/>
+  <entry producer="producer9" in="00:00:00,000" out="00:00:33,440">
+   <property name="kdenlive:id">3</property>
+   <filter id="filter3">
+    <property name="rotate_center">1</property>
+    <property name="mlt_service">qtblend</property>
+    <property name="kdenlive_id">qtblend</property>
+    <property name="rect">00:00:00,000=-170 68 1920 1080 1</property>
+    <property name="rotation">00:00:00,000=2</property>
+    <property name="compositing">0</property>
+    <property name="distort">0</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+   <filter id="filter4">
+    <property name="rotate_center">1</property>
+    <property name="mlt_service">qtblend</property>
+    <property name="kdenlive_id">qtblend</property>
+    <property name="rect">00:00:00,000=0 0 1920 1080 1</property>
+    <property name="rotation">00:00:00,000=16</property>
+    <property name="compositing">0</property>
+    <property name="distort">0</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+  </entry>
+ </playlist>
+ <playlist id="playlist7"/>
+ <tractor id="tractor3" in="00:00:00,000" out="00:01:12,080">
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist6"/>
+  <track hide="audio" producer="playlist7"/>
+ </tractor>
+ <tractor title="Anonymous Submission" id="tractor4" global_feed="1" in="00:00:00,000" out="00:21:55,320">
+  <track producer="black_track"/>
+  <track producer="tractor0"/>
+  <track producer="tractor1"/>
+  <track producer="tractor2"/>
+  <track producer="tractor3"/>
+  <transition id="transition0">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition1">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">3</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">4</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+ </tractor>
+</mlt>

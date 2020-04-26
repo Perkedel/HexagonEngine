@@ -1,0 +1,30 @@
+Archive Oldings
+
+Description {
+Change your shape to do something.
+You will play as SHanpe, a hero that can change its shape to another geometry.
+From Circle to Polygon! Set which geometry you'd like to be. Angles and Sides!!!
+Go ahead! enjoy your adventure. Choosing proper geometry helps you to get the finish line!
+NOTE: You are looking at a very old version of Geogon that was built in Unity. congratulations my children! You got 100 in History class!
+COMING SOON: Geogon Polymetry: Let's Begin. Geogon Hexagon engine version! uses Gratis, Open Source, and FULL VERSION game engine called Hexagon Engine!
+This is the proof of concept for Geogon Polymetry! It's a V-slice for future Geogon Polymetry!
+//Shrink or Enlarge! Scroll to adjust your size!
+WARNING: This is the Unity edition. This game was built under Unity (Proprietary Expensive Subscription only), for the project of Joel's college during his 3rd semester that time. You may want to check out "Geogon Polymetry: Let's Begin!" which you can download from Hexagon Engine (place link to download here). Includes this Proof Concept pack as well!
+ATTENTION: For Joel, and fellow in Perkedel, Do not continue development of this project after final release! You are using the game engine that is not permanently owned! If you wish to continue its development, please use the actual Hexagon Engine version of Geogon Begin. Other users are free to fork, edit, and redistribute under the same license of (Software) GNU GPL v3 and (Game stuffs) CC4.0-BY-SA.
+Post release development is only for minor improvements such as:
+Operating Systems
+Controllers
+Display mode (2D, VR, HoloLens, etc.)
+Bug fix
+Optimise
+Etc.
+(For fellow in Perkedel, and Joel himself) PENALTY for keep using proprietary systems: Ask Joel on PM. @JOELwindows7. maybe loss of financial and embarrasment.  Depression, Treason, Imprisoned.
+by JOELwindows7, Perkedel Technologies
+Software: GNU GPL v3; Game Stuffs: CC4.0-BY-SA
+.
+PS: How's Unity now, my children? still prime? already down? can you tell me?
+Links:
+Github page: https://github.com/Perkedel/GeogonPrototype
+}
+
+

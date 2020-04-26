@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="GradeAUnderA Tada_data" version="1.3.0" audacityversion="2.2.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1004.5457577375" rate="44100.0" snapto="off" selectionformat="jj:mm:dd: + milidetik" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="ARTIST" value="Grade A Under A"/>
+		<tag name="TITLE" value="You&apos;re correct!"/>
+	</tags>
+	<wavetrack name="Ta-da! sound effect-skMloYSZiRw" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="42320">
+				<waveblock start="0">
+					<simpleblockfile filename="e08086ea.au" len="42320" min="-0.970264" max="0.874572" rms="0.266973"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Ta-da! sound effect-skMloYSZiRw" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="42320">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808046.au" len="42320" min="-0.998576" max="0.89544" rms="0.257463"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

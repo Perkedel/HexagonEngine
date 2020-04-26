@@ -1,0 +1,10 @@
+How to Play:
+Keyboard + Mouse:
+WASD / Arrows = Move
+Space = Jump
+1 2 3 = Change Shape
+(Hold Middle Click / Hold Right Click) + Move Mouse = Move camera
+Scroll Mouse Wheel = Zoom
+Tab = reset camera zoom and position
+
+visit bit.ly/GeogonMe1st for more help, news, and software update.

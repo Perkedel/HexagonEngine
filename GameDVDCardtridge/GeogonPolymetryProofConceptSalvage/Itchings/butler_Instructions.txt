@@ -1,0 +1,7 @@
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\JOELwindows7_GeoGon-ProofConcept_2DgameProg_Unity" joelwindows7/geogon-polymetry-the-proof-concept:source_codes &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice" joelwindows7/geogon-polymetry-the-proof-concept:main &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice\Windows" joelwindows7/geogon-polymetry-the-proof-concept:just_windows &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice\macOS" joelwindows7/geogon-polymetry-the-proof-concept:just_macOS &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice\Linux" joelwindows7/geogon-polymetry-the-proof-concept:just_linux &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice\Android" joelwindows7/geogon-polymetry-the-proof-concept:just_android &&
+butler push "C:\Users\ASUS\Documents\starring codes\Unity Projects\Just Renders\Geogon-Vslice\WebGL" joelwindows7/geogon-polymetry-the-proof-concept:just_webGL && 

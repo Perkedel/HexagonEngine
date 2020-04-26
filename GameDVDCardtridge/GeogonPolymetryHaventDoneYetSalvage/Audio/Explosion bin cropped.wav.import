@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion bin cropped.wav-bb67123624a1c33d5dfb58c821e51dac.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/GeogonPolymetryHaventDoneYetSalvage/Audio/Explosion bin cropped.wav"
+dest_files=[ "res://.import/Explosion bin cropped.wav-bb67123624a1c33d5dfb58c821e51dac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,3 @@
+we better make these bones in that Unity Ragdolling than these inefficient, messy, spritesheet  that consumes whole memory!
+
+wait nvm. I don't have time for rearange bones one by one.

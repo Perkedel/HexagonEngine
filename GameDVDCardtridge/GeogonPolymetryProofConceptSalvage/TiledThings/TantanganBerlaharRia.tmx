@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="2018.11.13" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="70" tileheight="70" infinite="0" nextlayerid="9" nextobjectid="1">
+ <tileset firstgid="1" source="tiles_spritesheet.tsx"/>
+ <layer id="5" name="Template" width="64" height="32" visible="0" locked="1">
+  <properties>
+   <property name="unity:isTrigger" value="false"/>
+   <property name="unity:layer" value="Default"/>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+   <property name="unity:sortingOrder" value="0"/>
+   <property name="unity:tag" value="Untagged"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAgHcDIAAAAQ==
+  </data>
+ </layer>
+ <layer id="6" name="Laharr" width="64" height="32">
+  <properties>
+   <property name="unity:isTrigger" value="true"/>
+   <property name="unity:layer" value="Default"/>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+   <property name="unity:sortingOrder" value="0"/>
+   <property name="unity:tag" value="Lahar"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztz7ENADAIAzDG/n8xJ7QqTGBLGRMpEQAAAMBW55KfzstOpdvJ/93/AQAApknjBQMB
+  </data>
+ </layer>
+ <layer id="7" name="Ground" width="64" height="32">
+  <properties>
+   <property name="unity:isTrigger" value="false"/>
+   <property name="unity:layer" value="Default"/>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+   <property name="unity:sortingOrder" value="0"/>
+   <property name="unity:tag" value="Ground"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztz0ERgDAMRNFcEYAABCAAAQioCyS1bkEAyWwycOn8N5NTu9vGDAAAAACA+Z3PHC+zBJmtkGliT9ThZXcxk9GDs7WQUXvUDu8PXxmFsyij3lc7sm9lsb/Z5Uy0v5dRe9SOv/cHAAAAMJ8bfIUcKw==
+  </data>
+ </layer>
+ <layer id="8" name="Atapp" width="64" height="32">
+  <properties>
+   <property name="unity:isTrigger" value="false"/>
+   <property name="unity:layer" value="Default"/>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+   <property name="unity:sortingOrder" value="0"/>
+   <property name="unity:tag" value="Ceiling"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt17ENgDAMRUEXMEB6BmAABmA72IFloaCjiXCDxZ30y0h+ZdaI2IpvjveWa0fxTYn+9oH7s2v69et/GH7e32O831fenugHAABq6fnnAQAAnPV/zNg=
+  </data>
+ </layer>
+</map>
