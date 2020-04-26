@@ -6,7 +6,7 @@ jobs:
         enabled: true
     steps:
       - checkout
-      - setup_remore_docker:
+      - setup_remote_docker:
           # https://circleci.com/docs/2.0/docker-layer-caching/
           # https://circleci.com/docs/2.0/docker-layer-caching/
           docker_layer_caching: true
