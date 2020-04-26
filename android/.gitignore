@@ -1,0 +1,6 @@
+# Android Build must not be included as it is biig
+build/
+.build_version
+
+# https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
+# Compared, that the Build folder isn't there and could be the result of the compilation for Android custom build.

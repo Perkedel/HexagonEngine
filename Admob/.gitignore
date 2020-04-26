@@ -1,0 +1,3 @@
+# for safety in case original gitignore gone
+*.admob
+*.GoogleAPI
