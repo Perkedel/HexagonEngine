@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/PauseIcon.svg.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/HexagonEngineSign.png" type="Texture" id=13]
+[ext_resource path="res://Inkscape/PostingImage/May_I_Have_One_Please_3.png" type="Texture" id=14]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -42,7 +43,7 @@ hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 9 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false ]
+items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false ]
 fixed_icon_size = Vector2( 256, 256 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
