@@ -39,7 +39,7 @@ jobs:
     - name: Install Something Library First
       run: |
         sudo apt update; sudo apt upgrade -y
-        sudo apt install pulseaudio jackd2 pavumeter pavucontrol paman paprefs ubuntu-sounds avahi-daemon -y
+        sudo apt install pulseaudio jackd2 paprefs ubuntu-sounds avahi-daemon -y
         sudo apt install --fix-missing
         
     - name: Build Windows
