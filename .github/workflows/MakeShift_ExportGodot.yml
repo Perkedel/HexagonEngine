@@ -35,6 +35,10 @@ jobs:
         mkdir -p ~/.local/share/godot/templates
         unzip Godot_v3.2.1-stable_export_templates.tpz -d ~/.local/share/godot/templates
         mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.1.stable.
+    
+    - name: Install Something Library First
+      run: |
+        sudo apt install pulseaudio -y
         
     - name: Build Windows
       run: |
