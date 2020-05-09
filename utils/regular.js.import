@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/regular.js-31a5614085b5aa8a9a85a27cb54715d8.res"
+
+[deps]
+
+source_file="res://utils/regular.js"
+dest_files=[ "res://.import/regular.js-31a5614085b5aa8a9a85a27cb54715d8.res" ]
+
+[params]
+

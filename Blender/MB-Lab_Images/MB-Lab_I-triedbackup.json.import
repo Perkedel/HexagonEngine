@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/MB-Lab_I-triedbackup.json-13aeae267e41bb3413896cb400401948.res"
+
+[deps]
+
+source_file="res://Blender/MB-Lab_Images/MB-Lab_I-triedbackup.json"
+dest_files=[ "res://.import/MB-Lab_I-triedbackup.json-13aeae267e41bb3413896cb400401948.res" ]
+
+[params]
+

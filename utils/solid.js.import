@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/solid.js-fcb66b9e28c2552ff694b89b1c63558d.res"
+
+[deps]
+
+source_file="res://utils/solid.js"
+dest_files=[ "res://.import/solid.js-fcb66b9e28c2552ff694b89b1c63558d.res" ]
+
+[params]
+

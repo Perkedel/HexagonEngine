@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/NoMatbackup.json-e931d6d3bd62e0c8d3bdfb6bc846d1b4.res"
+
+[deps]
+
+source_file="res://Blender/MB-Lab_Images/NoMatbackup.json"
+dest_files=[ "res://.import/NoMatbackup.json-e931d6d3bd62e0c8d3bdfb6bc846d1b4.res" ]
+
+[params]
+

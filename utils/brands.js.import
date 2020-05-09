@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/brands.js-99c65f38276bebce810fecbe64c366db.res"
+
+[deps]
+
+source_file="res://utils/brands.js"
+dest_files=[ "res://.import/brands.js-99c65f38276bebce810fecbe64c366db.res" ]
+
+[params]
+
