@@ -194,3 +194,4 @@ Used Assets and Tools!
 - https://nakyle.com/godot-ci/
 - https://circleci.com/docs/2.0/docker-layer-caching/
 - https://circleci.com/docs/2.0/docker-layer-caching/
+- https://youtu.be/39_HhRkXDpQ Poop post explosion meme sound original
