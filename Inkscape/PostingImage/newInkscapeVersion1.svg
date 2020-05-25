@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="newInkscapeVersion1.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2">
+    <symbol
+       id="Airport_Inv">
+      <title
+         id="title1552">Airport</title>
+      <rect
+         x="0.13229166"
+         y="0.13229166"
+         width="18.785418"
+         height="18.785418"
+         ry="1.5875"
+         style="stroke:#ffffff;stroke-width:0.264583"
+         id="rect1554" />
+      <path
+         d="m 10.31875,2.6458333 v 4.7625 l 6.614583,3.9687497 v 1.852084 l -6.614583,-2.38125 v 3.704166 l 1.5875,1.058334 v 1.5875 L 9.525,16.404167 7.14375,17.197917 v -1.5875 l 1.5875,-1.058334 v -3.704166 l -6.6145833,2.38125 V 11.377083 L 8.73125,7.4083333 v -4.7625 a 0.79375,0.79375 0 0 1 1.5875,0 z"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264583"
+         id="path1556" />
+    </symbol>
+    <symbol
+       id="MotorBikeTrail_Inv">
+      <title
+         id="title2101">Motorbike Trail</title>
+      <rect
+         x="0.13229166"
+         y="0.13229166"
+         width="18.785418"
+         height="18.785418"
+         ry="1.5875"
+         style="stroke:#ffffff;stroke-width:0.264583"
+         id="rect2103" />
+      <g
+         style="fill:#ffffff;stroke:none"
+         id="g2117">
+        <path
+           style="stroke-width:0.264583"
+           d="m 9.6903646,6.9453125 h 1.6205724 a 0.46302085,0.46302085 0 0 1 0,0.9260417 H 9.3927083 c -0.1984375,0 -0.4299479,-0.066146 -0.5953125,-0.3307292 L 8.0697917,6.4161458 6.6807292,8.5328125 8.5989583,9.525 C 9.128125,9.7895833 9.128125,10.186458 9.128125,10.451042 v 3.571875 a 0.72760417,0.72760417 0 0 1 -1.4552083,0 V 11.1125 L 4.6302083,9.4588542 C 4.1010417,9.128125 4.0348958,8.4666667 4.2994792,8.0697917 L 6.5484375,4.6302083 c 0.3307292,-0.4960937 1.190625,-0.5953125 1.5875,-0.066146 z"
+           id="path2105" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 7.0114583,11.575521 v 0.661458 L 3.4395833,10.252604 C 2.778125,9.921875 2.1166667,9.9880208 1.5875,10.252604 1.4552083,10.31875 1.2567708,10.120312 1.4552083,9.921875 2.1166667,9.3596354 3.175,9.3927083 3.8364583,9.7895833 Z"
+           id="path2107" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 10.583333,14.022917 c -0.198437,0.198437 -0.463021,0.396875 -0.7937497,0.396875 v -4.167188 l 2.8442707,-0.7937498 0.727604,1.3890628 z"
+           id="path2109" />
+        <path
+           style="stroke-width:0.264583"
+           d="M 14.783594,11.277865 13.49375,8.6651042 C 13.295312,8.2682292 12.964583,8.0697917 12.567708,8.0697917 h -0.859896 c -0.396875,0 -0.396875,0.5953125 0,0.5953125 h 0.859896 c 0.132292,0 0.330729,0.1322916 0.396875,0.3307291 l 1.223698,2.4804687 z"
+           id="path2111" />
+        <path
+           style="stroke-width:0.264583"
+           d="M 16.271875,9.525 C 15.544271,9.1611979 14.948958,9.2604167 14.485937,9.7234375 L 14.155208,9.0619792 C 14.948958,8.73125 15.875,8.6651042 16.503385,9.2604167 16.66875,9.4257812 16.470312,9.6242187 16.271875,9.525 Z"
+           id="path2113" />
+        <path
+           style="stroke-width:0.264583"
+           d="M 10.120312,2.6458333 A 1.3229167,1.3229167 0 0 1 7.6729167,3.6380208 H 6.9453125 A 1.9182292,1.9182292 0 1 1 10.649479,2.6458333 Z"
+           id="path2115" />
+      </g>
+      <g
+         style="fill:none;stroke:#ffffff;stroke-width:3"
+         id="g2123">
+        <circle
+           style="stroke-width:0.79375"
+           cx="4.1010418"
+           cy="14.353646"
+           r="2.3151042"
+           id="circle2119" />
+        <circle
+           style="stroke-width:0.79375"
+           cx="15.411979"
+           cy="14.353646"
+           r="2.3151042"
+           id="circle2121" />
+      </g>
+    </symbol>
+    <symbol
+       id="FirstAid">
+      <title
+         id="title1827">First Aid</title>
+      <path
+         d="m 11.641667,3.4395833 v 3.96875 h 3.96875 v 4.2333337 h -3.96875 v 3.96875 H 7.4083333 v -3.96875 h -3.96875 V 7.4083333 h 3.96875 v -3.96875 z"
+         style="stroke:none;stroke-width:0.264583"
+         id="path1829" />
+    </symbol>
+    <symbol
+       id="Hospital">
+      <title
+         id="title1943">Hospital</title>
+      <path
+         d="m 12.038542,3.571875 v 3.96875 H 7.0114583 V 3.571875 H 4.365625 v 11.90625 h 2.6458333 v -5.291667 h 5.0270837 v 5.291667 h 2.645833 V 3.571875 Z"
+         style="stroke:none;stroke-width:0.264583"
+         id="path1945" />
+    </symbol>
+    <symbol
+       id="Recycling">
+      <title
+         id="title2154">Recycling</title>
+      <g
+         style="stroke:none"
+         id="g2168">
+        <path
+           style="stroke-width:0.264583"
+           d="m 14.684375,3.9026042 -1.389063,0.79375 -0.926041,-1.5875 C 12.236979,2.8773437 11.972396,2.7119792 11.608594,2.7119792 H 8.8304687 C 9.0289062,2.9104167 9.0619792,2.9765625 9.1611979,3.1419271 L 10.88099,6.1184896 9.4919271,6.9122396 H 12.93151 Z"
+           id="path2156" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 14.254427,12.038542 h 1.389063 c 0.826822,0 1.322916,-0.892969 0.926041,-1.5875 l -1.752864,-3.069167 -2.38125,1.3890625 z"
+           id="path2158" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 12.170833,17.065625 v -1.5875 h 1.852084 c 0.264583,0 0.529166,-0.132292 0.727604,-0.463021 l 1.389062,-2.38125 C 15.875,12.7 15.775781,12.7 15.610417,12.7 h -3.439584 v -1.5875 l -1.719791,2.976562 z"
+           id="path2160" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 5.3578125,12.7 -0.6945313,1.190625 c -0.396875,0.727604 0.099219,1.5875 0.8929688,1.5875 H 9.0619792 V 12.7 Z"
+           id="path2162" />
+        <path
+           style="stroke-width:0.264583"
+           d="m 2.0505208,8.4005208 1.3890625,0.79375 -0.9260416,1.5875002 C 2.38125,11.013281 2.38125,11.310937 2.5466146,11.641667 l 1.3559896,2.38125 c 0.066146,-0.264584 0.099219,-0.33073 0.1984375,-0.496094 L 5.8208333,10.55026 7.2098958,11.34401 5.4901042,8.3674479 Z"
+           id="path2164" />
+        <path
+           style="stroke-width:0.264583"
+           d="M 9.2604167,4.6302083 8.5989583,3.4395833 c -0.4299479,-0.6945312 -1.4221354,-0.6945312 -1.8190104,0 l -1.7528646,3.0427084 2.38125,1.3890625 z"
+           id="path2166" />
+      </g>
+    </symbol>
+    <symbol
+       id="Telephone">
+      <title
+         id="title2736">Telephone</title>
+      <g
+         style="stroke:none"
+         id="g2743">
+        <path
+           style="stroke-width:0.264583"
+           d="m 6.0854167,9.525 c 0,6.35 2.9104166,7.9375 3.4395833,7.9375 v -4.497917 c -0.79375,0 -0.79375,-2.116666 -0.79375,-3.439583 0,-1.3229167 0,-3.4395833 0.79375,-3.4395833 V 1.5875 c -0.79375,0 -3.4395833,1.5875 -3.4395833,7.9375 z"
+           id="path2738" />
+        <path
+           style="stroke-width:0.264583"
+           id="ear1"
+           d="M 11.1125,6.0854167 A 0.52916667,0.52916667 0 0 0 11.641667,5.55625 V 2.1166667 A 0.52916667,0.52916667 0 0 0 11.1125,1.5875 h -1.058333 v 4.4979167 z" />
+        <use
+           height="100%"
+           width="100%"
+           x="0"
+           y="43"
+           xlink:href="#ear1"
+           id="use2741" />
+      </g>
+    </symbol>
+    <symbol
+       id="Swimming_Inv">
+      <title
+         id="title2725">Swimming</title>
+      <rect
+         x="0.13229166"
+         y="0.13229166"
+         width="18.785418"
+         height="18.785418"
+         ry="1.5875"
+         style="stroke:#ffffff;stroke-width:0.264583"
+         id="rect2727" />
+      <path
+         d="m 1.5875,14.419792 c 0.6614583,0 1.3229167,-0.463021 1.984375,-0.463021 0.6614583,0 1.3229167,0.463021 1.984375,0.463021 0.6614583,0 1.3229167,-0.463021 1.984375,-0.463021 0.6614583,0 1.3229167,0.463021 1.984375,0.463021 0.661458,0 1.322917,-0.463021 1.984375,-0.463021 0.661458,0 1.322917,0.463021 1.984375,0.463021 0.661458,0 1.322917,-0.463021 1.984375,-0.463021 0.661458,0 1.322917,0.463021 1.984375,0.463021 V 15.875 c -0.661458,0 -1.322917,-0.463021 -1.984375,-0.463021 -0.661458,0 -1.322917,0.463021 -1.984375,0.463021 -0.661458,0 -1.322917,-0.463021 -1.984375,-0.463021 -0.661458,0 -1.322917,0.463021 -1.984375,0.463021 -0.6614583,0 -1.3229167,-0.463021 -1.984375,-0.463021 -0.6614583,0 -1.3229167,0.463021 -1.984375,0.463021 -0.6614583,0 -1.3229167,-0.463021 -1.984375,-0.463021 -0.6614583,0 -1.3229167,0.463021 -1.984375,0.463021 z"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264583"
+         id="path2729" />
+      <path
+         d="M 10.980208,7.6729167 14.552083,7.0114583 C 15.875,6.746875 15.478125,4.7625 14.155208,5.0270833 L 8.8635417,6.0192708 C 8.1359375,6.1515625 8.0697917,7.0114583 8.334375,7.4744792 L 9.7895833,9.9880208 4.4317708,12.898437 c 0.396875,0.132292 0.79375,0.33073 1.190625,0.33073 0.6614584,0 1.3229167,-0.463021 1.984375,-0.463021 0.6614584,0 1.3229167,0.463021 1.984375,0.463021 0.6614582,0 1.3229162,-0.463021 1.9843752,-0.463021 0.661458,0 1.322916,0.463021 1.984375,0.463021 0.132291,0 0.363802,-0.03307 0.529166,-0.06615 z"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264583"
+         id="path2731" />
+      <circle
+         cx="14.882812"
+         cy="9.9880209"
+         r="1.7859375"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264583"
+         id="circle2733" />
+    </symbol>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="337.66464"
+     inkscape:cx="372.53801"
+     inkscape:zoom="0.7"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Lapis 1">
+    <use
+       transform="matrix(1.4208969,0,0,1.4208969,132.92943,99.169674)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use6803"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Airport_Inv" />
+    <use
+       transform="translate(89.042348,79.815435)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use6840"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#MotorBikeTrail_Inv" />
+    <use
+       transform="translate(155.27262,48.305357)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use6898"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#FirstAid" />
+    <use
+       transform="translate(184.75476,67.960119)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use6923"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Hospital" />
+    <use
+       transform="translate(194.34953,70.620127)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use6954"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Recycling" />
+    <use
+       transform="matrix(19.822257,0,0,2.0951168,-36.615331,51.166115)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use7010"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Telephone" />
+    <use
+       transform="translate(158.95789,162.13973)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use7100"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Telephone" />
+    <use
+       transform="translate(126.9244,155.27262)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use7128"
+       style="fill:#000000;stroke:#000000"
+       xlink:href="#Swimming_Inv" />
+  </g>
+</svg>
