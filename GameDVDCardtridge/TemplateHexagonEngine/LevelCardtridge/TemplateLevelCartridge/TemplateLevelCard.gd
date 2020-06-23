@@ -8,6 +8,7 @@ export(PackedScene) var Your3DSpaceLevel
 export(PackedScene) var Your2DSpaceLevel
 export(Texture) var LevelBannerThumbnail
 export(String) var LevelTitleg
+export(String) var LoadThisCardButton
 export(bool) var a2DSpaceReportHP = false
 export(bool) var a3DSpaceReportHP = false
 export(bool) var a2DSpaceReportScore = false
@@ -25,6 +26,7 @@ func UpdateDetails():
 	$LevelCardContainer/ImagePanel/LevelIconImage.texture = LevelBannerThumbnail
 	$LevelCardContainer/TitleScroll/Title.text = LevelTitleg
 	$LevelCardContainer/DescriptionScroll/RichTextLabel.bbcode_text = LevelDescription
+	$LevelCardContainer/PlayTheLevelButton.text = LoadThisCardButton
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

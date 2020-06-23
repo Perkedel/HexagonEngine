@@ -61,6 +61,7 @@ font_data = ExtResource( 3 )
 Your3DSpaceLevel = ExtResource( 8 )
 Your2DSpaceLevel = ExtResource( 7 )
 LevelTitleg = "Random Crazy Barrel"
+LoadThisCardButton = "Try Luck Now!"
 a2DSpaceReportHP = true
 LevelDescription = "[i]Select your button[/i]
 
@@ -68,15 +69,38 @@ there are 1 in number of buttons that cause the barrel to pop.
 
 [b]good luck.[/b]"
 
+[node name="ImagePanel" parent="LevelCardContainer" index="0"]
+margin_bottom = 434.0
+
+[node name="TitleScroll" parent="LevelCardContainer" index="1"]
+margin_top = 438.0
+margin_bottom = 538.0
+
 [node name="Title" parent="LevelCardContainer/TitleScroll" index="0"]
+margin_right = 726.0
 custom_fonts/font = SubResource( 1 )
+text = "Random Crazy Barrel"
+
+[node name="DescriptionScroll" parent="LevelCardContainer" index="2"]
+margin_top = 542.0
 
 [node name="RichTextLabel" parent="LevelCardContainer/DescriptionScroll" index="0"]
+margin_bottom = 434.0
 custom_fonts/mono_font = SubResource( 2 )
 custom_fonts/bold_italics_font = SubResource( 3 )
 custom_fonts/italics_font = SubResource( 4 )
 custom_fonts/bold_font = SubResource( 5 )
 custom_fonts/normal_font = SubResource( 6 )
+bbcode_text = "[i]Select your button[/i]
+
+there are 1 in number of buttons that cause the barrel to pop.
+
+[b]good luck.[/b]"
+text = "Select your button
+
+there are 1 in number of buttons that cause the barrel to pop.
+
+good luck."
 
 [node name="PlayTheLevelButton" parent="LevelCardContainer" index="3"]
 custom_fonts/font = SubResource( 1 )

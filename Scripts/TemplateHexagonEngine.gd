@@ -165,7 +165,7 @@ func ManageHUD():
 		emitHP = clamp((See2DHP+See3DHP)/2, 0, 100)
 		pass
 	elif not a2DSpaceReportHP and a3DSpaceReportHP:
-		emitHP = clamp((See3DHP)/2, 0, 100)
+		emitHP = clamp((See3DHP), 0, 100)
 		pass
 	elif a2DSpaceReportHP and not a3DSpaceReportHP:
 		emitHP = clamp((See2DHP), 0, 100)

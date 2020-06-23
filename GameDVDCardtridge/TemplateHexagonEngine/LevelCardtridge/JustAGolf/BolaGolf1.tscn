@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/BolaGolf1.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterKotak.tres" type="CubeMesh" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterRelax.tres" type="Material" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterStress.tres" type="Material" id=4]
+[ext_resource path="res://Audio/EfekSuara/425728__moogy73__click01.wav" type="AudioStream" id=5]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.05
+
+[node name="BolaGolf1" type="RigidBody"]
+angular_damp = 0.5
+script = ExtResource( 1 )
+PowerMeterRelax = ExtResource( 3 )
+PowerMeterStress = ExtResource( 4 )
+PuttSound = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+radius = 0.05
+radial_segments = 32
+rings = 32
+
+[node name="RemoteTransform" type="RemoteTransform" parent="."]
+update_rotation = false
+update_scale = false
+
+[node name="PowerMeter" type="CSGMesh" parent="."]
+mesh = ExtResource( 2 )
+material = ExtResource( 3 )
+
+[node name="Speeker" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
+[connection signal="body_entered" from="." to="." method="_on_BolaGolf1_body_entered"]

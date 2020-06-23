@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/CumanGolfCourse.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/JustAGolf.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/BolaGolf1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/CamStickPole.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=5]
+[ext_resource path="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/Sounds/GradeAUnderA Tada.wav" type="AudioStream" id=6]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/YayComplete.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/MetererProgress.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MetererBekgron.png" type="Texture" id=9]
+[ext_resource path="res://GameDVDCardtridge/GeogonPolymetryProofConceptSalvage/Sounds/WoodCollision-01.wav" type="AudioStream" id=10]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.0297124
+
+[node name="JustAGolf" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="TheLoadedCourse" type="Spatial" parent="."]
+
+[node name="CumanGolfCoursing" type="Spatial" parent="TheLoadedCourse"]
+
+[node name="HoleSensor" type="Area" parent="TheLoadedCourse/CumanGolfCoursing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19058, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="TheLoadedCourse/CumanGolfCoursing/HoleSensor"]
+shape = SubResource( 1 )
+
+[node name="CumanGolfCourse" parent="TheLoadedCourse/CumanGolfCoursing" instance=ExtResource( 1 )]
+
+[node name="Player" type="Spatial" parent="."]
+
+[node name="BolaGolf1" parent="Player" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9 )
+linear_damp = 0.5
+
+[node name="RemoteTransform" parent="Player/BolaGolf1" index="2"]
+remote_path = NodePath("../../../CamStickPole")
+
+[node name="CamStickPole" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 9 )
+
+[node name="SpeakerYay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="SpeakerStopWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -15.0
+
+[node name="CanvasUI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MINI-UI" type="Control" parent="CanvasUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DotRectAwal" type="TextureRect" parent="CanvasUI/MINI-UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 32, 32 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DotRectAkhir" type="TextureRect" parent="CanvasUI/MINI-UI"]
+self_modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 32, 32 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YayComplete" parent="CanvasUI/MINI-UI" instance=ExtResource( 7 )]
+
+[node name="PowerProgress" type="TextureProgress" parent="CanvasUI/MINI-UI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 274.0
+rect_pivot_offset = Vector2( 32, 0 )
+max_value = 10.0
+step = 0.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 8 )
+fill_mode = 2
+nine_patch_stretch = true
+[connection signal="body_entered" from="TheLoadedCourse/CumanGolfCoursing/HoleSensor" to="." method="_on_HoleSensor_body_entered"]
+[connection signal="body_entered" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_body_entered"]
+[connection signal="entered_goal" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_entered_goal"]
+[connection signal="noLongerWalking" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_noLongerWalking"]
+[connection signal="stroked" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_stroked"]
+
+[editable path="Player/BolaGolf1"]

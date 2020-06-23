@@ -177,8 +177,8 @@ mode = 0
 access = 2
 filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
 show_hidden_files = true
-current_dir = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }

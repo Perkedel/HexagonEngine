@@ -32,6 +32,7 @@ Your3DSpaceLevel = ExtResource( 2 )
 Your2DSpaceLevel = ExtResource( 3 )
 LevelBannerThumbnail = ExtResource( 4 )
 LevelTitleg = "Template Titleg of Level HUEUEUEUEUE"
+LoadThisCardButton = "Load This Card"
 LevelDescription = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]
@@ -119,5 +120,5 @@ margin_right = 800.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 custom_fonts/font = ExtResource( 5 )
-text = "Load This Card!"
+text = "Load This Card"
 [connection signal="pressed" from="LevelCardContainer/PlayTheLevelButton" to="." method="_on_PlayTheLevelButton_pressed"]

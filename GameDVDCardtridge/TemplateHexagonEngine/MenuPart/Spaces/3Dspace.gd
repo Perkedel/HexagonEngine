@@ -38,7 +38,7 @@ func _exit_tree():
 
 
 func spawnAScene(pathO):
-	$Dummy3DLoad.hide()
+	# $Dummy3DLoad.hide()
 	emit_signal("IncludeMeForYourLoading", true)
 	if LevelLoadRoot.get_child(0):
 		Prev3DSpaceLevel = LevelLoadRoot.get_child(0)
@@ -84,7 +84,7 @@ func despawnTheScene():
 		pass
 	SceneHasLoaded = false
 	StartLoadSceneL = false
-	$Dummy3DLoad.show()
+	# $Dummy3DLoad.show()
 	pass
 
 signal hasLoadingCompleted
