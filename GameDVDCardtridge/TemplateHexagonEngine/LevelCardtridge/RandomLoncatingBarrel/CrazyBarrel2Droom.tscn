@@ -42,9 +42,9 @@ __meta__ = {
 
 [node name="Panel" type="Panel" parent="UI-Standpoint/UI Game/Contains"]
 self_modulate = Color( 1, 0, 0, 0.392157 )
-margin_top = 257.0
+margin_top = 261.0
 margin_right = 1920.0
-margin_bottom = 507.0
+margin_bottom = 511.0
 rect_min_size = Vector2( 0, 250 )
 mouse_filter = 2
 
@@ -57,10 +57,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="UI-Standpoint/UI Game/Contains/Panel/Display"]
-margin_left = 636.0
-margin_top = 84.0
-margin_right = 1283.0
-margin_bottom = 166.0
+margin_left = 632.0
+margin_top = 80.0
+margin_right = 1287.0
+margin_bottom = 170.0
 custom_fonts/font = ExtResource( 4 )
 text = "Barrel Guess Game"
 
@@ -72,9 +72,9 @@ margin_right = 1920.0
 margin_bottom = 665.0
 
 [node name="ButtonSetsAccountable" type="HBoxContainer" parent="UI-Standpoint/UI Game/Contains"]
-margin_top = 673.0
+margin_top = 669.0
 margin_right = 1920.0
-margin_bottom = 823.0
+margin_bottom = 819.0
 rect_min_size = Vector2( 0, 150 )
 mouse_filter = 2
 size_flags_horizontal = 3
@@ -82,7 +82,7 @@ size_flags_horizontal = 3
 [node name="PrussieButtonChanceAnezic" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 313.0
+margin_right = 316.0
 margin_bottom = 150.0
 mouse_filter = 1
 custom_fonts/font = SubResource( 1 )
@@ -90,8 +90,8 @@ custom_fonts/font = SubResource( 1 )
 [node name="PrussieButtonChanceAnezic2" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 321.0
-margin_right = 634.0
+margin_left = 320.0
+margin_right = 636.0
 margin_bottom = 150.0
 mouse_filter = 1
 custom_fonts/font = SubResource( 1 )
@@ -99,8 +99,8 @@ custom_fonts/font = SubResource( 1 )
 [node name="PrussieButtonChanceAnezic3" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 642.0
-margin_right = 955.0
+margin_left = 640.0
+margin_right = 956.0
 margin_bottom = 150.0
 mouse_filter = 1
 custom_fonts/font = SubResource( 1 )
@@ -108,7 +108,7 @@ custom_fonts/font = SubResource( 1 )
 [node name="PrussieButtonChanceAnezic4" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 963.0
+margin_left = 960.0
 margin_right = 1276.0
 margin_bottom = 150.0
 mouse_filter = 1
@@ -117,8 +117,8 @@ custom_fonts/font = SubResource( 1 )
 [node name="PrussieButtonChanceAnezic5" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1284.0
-margin_right = 1597.0
+margin_left = 1280.0
+margin_right = 1596.0
 margin_bottom = 150.0
 mouse_filter = 1
 custom_fonts/font = SubResource( 1 )
@@ -126,7 +126,7 @@ custom_fonts/font = SubResource( 1 )
 [node name="PrussieButtonChanceAnezic6" parent="UI-Standpoint/UI Game/Contains/ButtonSetsAccountable" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1605.0
+margin_left = 1600.0
 margin_right = 1920.0
 margin_bottom = 150.0
 mouse_filter = 1

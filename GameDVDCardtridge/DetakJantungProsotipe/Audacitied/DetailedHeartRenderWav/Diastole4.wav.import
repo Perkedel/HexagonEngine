@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Diastole4.wav-f23c7b4a8c38637204557b2f59fe5db3.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRenderWav/Diastole4.wav"
+dest_files=[ "res://.import/Diastole4.wav-f23c7b4a8c38637204557b2f59fe5db3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

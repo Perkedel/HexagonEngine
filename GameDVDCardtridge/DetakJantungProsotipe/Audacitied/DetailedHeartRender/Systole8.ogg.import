@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Systole8.ogg-3fd402275654bdb26c92a2ac211ce8e0.oggstr"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRender/Systole8.ogg"
+dest_files=[ "res://.import/Systole8.ogg-3fd402275654bdb26c92a2ac211ce8e0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

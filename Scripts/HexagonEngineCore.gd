@@ -37,6 +37,7 @@ func JustRemoveDVDThatsIt():
 
 func DoChangeDVDNow():
 	print("Change DVD!")
+	Singletoner.ResumeGameNow()
 	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
 	# Ah peck! free() error, attempted to free locked object
 	#$MetaMenu/ChangeDVDMenu.show()
@@ -99,6 +100,12 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 			pass
 		8:
 			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
+			pass
+		9:
+			LoadDVD = load("res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn")
+			pass
+		10:
+			LoadDVD = load("res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn")
 			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")

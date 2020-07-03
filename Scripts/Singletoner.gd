@@ -26,3 +26,13 @@ func Nonaktifkan_Sistem():
 
 func _exit_tree():
 	pass
+
+func PauseGameNow():
+	get_tree().paused = true
+	isGamePaused = true
+	pass
+
+func ResumeGameNow():
+	get_tree().paused = false
+	isGamePaused = false
+	pass
