@@ -12,6 +12,8 @@ extends Node
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 
+onready var captureMouse = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,14 +42,18 @@ func _input(event):
 
 
 func _on_PauseMenu_ChangeDVDNow():
-	emit_signal("ChangeDVD_Exec")
+	captureMouse = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	emit_signal("ChangeDVD_Exec")
+	
 	pass # Replace with function body.
 
 
 func _on_PauseMenu_ShutdownNow():
-	emit_signal("Shutdown_Exec")
+	captureMouse = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	emit_signal("Shutdown_Exec")
+	
 	pass # Replace with function body.
 
 
@@ -59,5 +65,7 @@ func _on_PauseMenu_OkButton():
 
 func _on_PauseMenu_popup_hide():
 	Singletoner.ResumeGameNow()
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# yield(get_tree().create_timer(.1), "timeout")
+	if captureMouse:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass # Replace with function body.

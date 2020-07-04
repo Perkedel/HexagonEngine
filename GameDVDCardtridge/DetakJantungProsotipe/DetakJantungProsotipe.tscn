@@ -113,6 +113,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
+[node name="HeartProgress" type="ProgressBar" parent="CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting"]
+margin_right = 958.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 10 )
+step = 0.001
+
 [node name="RightSetting" type="VBoxContainer" parent="CanvasLayer/UIsoWe/Listoid/Settings"]
 margin_left = 962.0
 margin_right = 1920.0
@@ -128,7 +136,7 @@ margin_bottom = 81.0
 hint_tooltip = "Whether Enable or Mute the sound of the hearbeat organ"
 custom_fonts/font = ExtResource( 10 )
 pressed = true
-text = "Sound"
+text = "Stethoscope"
 icon = ExtResource( 15 )
 expand_icon = true
 
@@ -172,10 +180,39 @@ Pen and Paper (Discord) [url=https://drive.google.com/file/d/1bUuP9Xj6VftLueQud3
 
 Want to Tell me the Hearbeat sfx to download? or want to share your hearbeat recording? Upload the sounds somewhere you'd like, or pick the link of those heartbeat sfx files in pack or one. Then, go to [url]www.discord.gg/62xXqEW [/url] and to channel [code]#suara-hati[/code] for [color=blue]SFW[/color], [b]OR[/b]..., [code]#suara-baboom[/code] for [shake rate=15 level=15][color=red]NSFW[/color][/shake].
 [b]IMPORTANT![/b]
+Format template is like
+[code]
+(Link)
+Name: 
+Being:
+Gender:
+Status:
+[/code]
+
+How to use:
+[code]
+[url]link[/url]
+Name: (string) up to 9999999999999 character long name
+Being: (enum) Human, Other Animal, Alien, etc.
+Gender: (enum) Female, Male
+Status: (multiple choice) Normal Resting, Fass, Very Fass, Fibrilation, Pounding, Visible, Directly with contact mic to organ, etc.
+[/code]
+
+Example:
+[code]
+[url]...[/url]
+Name: Krostenqeni
+Being: Snoworldean
+Gender: Female
+Status: Fass, Pounding, Visible
+[/code]
+
 Do make sure you license those shares / they are licensed under [color=green][b]Creative Commons[/b][/color] licenses,
 [color=red]Rejects[/color]:
 - ND (No Derivative)
 - NC (No Commercial)
+- ??? (No license put into it)
+- All rights Reserved (Proprietary)
 [color=green]Accepts[/color]
 - BY (Attribution) (Recommended)
 - SA (Share Alike) (Recommended)
@@ -203,10 +240,39 @@ Pen and Paper (Discord)  Google Drive  . Heartbeat detailed.
 
 Want to Tell me the Hearbeat sfx to download? or want to share your hearbeat recording? Upload the sounds somewhere you'd like, or pick the link of those heartbeat sfx files in pack or one. Then, go to www.discord.gg/62xXqEW  and to channel #suara-hati for SFW, OR..., #suara-baboom for NSFW.
 IMPORTANT!
+Format template is like
+
+(Link)
+Name: 
+Being:
+Gender:
+Status:
+
+
+How to use:
+
+link
+Name: (string) up to 9999999999999 character long name
+Being: (enum) Human, Other Animal, Alien, etc.
+Gender: (enum) Female, Male
+Status: (multiple choice) Normal Resting, Fass, Very Fass, Fibrilation, Pounding, Visible, Directly with contact mic to organ, etc.
+
+
+Example:
+
+...
+Name: Krostenqeni
+Being: Snoworldean
+Gender: Female
+Status: Fass, Pounding, Visible
+
+
 Do make sure you license those shares / they are licensed under Creative Commons licenses,
 Rejects:
 - ND (No Derivative)
 - NC (No Commercial)
+- ??? (No license put into it)
+- All rights Reserved (Proprietary)
 Accepts
 - BY (Attribution) (Recommended)
 - SA (Share Alike) (Recommended)

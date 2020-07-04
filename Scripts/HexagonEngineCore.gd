@@ -38,10 +38,12 @@ func JustRemoveDVDThatsIt():
 func DoChangeDVDNow():
 	print("Change DVD!")
 	Singletoner.ResumeGameNow()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
 	# Ah peck! free() error, attempted to free locked object
 	#$MetaMenu/ChangeDVDMenu.show()
 	$MetaMenu/ChangeDVDMenu.ShowMeSelf()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#$DVDCartridgeSlot.get_child(0).free()
 	pass
 

@@ -57,15 +57,15 @@ func DecideReturnTime(var forWhathowMuch):
 		pass
 	elif forWhathowMuch >= 1 and forWhathowMuch < 19:
 		ToggleSays = "..."
-		returnTime = 3
+		returnTime = .75
 		pass
 	elif forWhathowMuch >= 20 and forWhathowMuch < 49:
 		ToggleSays = "Looooooooww... heeeaarrt raaaaaate..."
-		returnTime = 2
+		returnTime = .5
 		pass
 	elif forWhathowMuch >= 50 and forWhathowMuch < 69:
 		ToggleSays = "Sleepie"
-		returnTime = 1
+		returnTime = .3
 		pass
 	elif forWhathowMuch >= 70 and forWhathowMuch < 89:
 		ToggleSays = "Heartbeat"
@@ -144,11 +144,17 @@ func NewHeartbeatMode(var delta):
 			$Systole.play()
 		Lub = true
 		pass
+	else:
+		$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.max_value = PeriodT
+		$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.value = PeriodT-remainPeriod
+		pass
 	
 	if Lub:
 		startReturnTime -= delta
 		startReturnTimeMillisec = startReturnTime * 1000
 		if startReturnTimeMillisec <= 0:
+			$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.max_value = returnTime
+			$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.value = 0
 			stateIndex = 0
 			if(debugToggle):
 				debugToggle.pressed = false
@@ -160,7 +166,15 @@ func NewHeartbeatMode(var delta):
 			Lub = false
 			if EnableSound:
 				$Diastole.play()
+			
 			pass
+		else:
+			$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.max_value = returnTime
+			$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.value = startReturnTime
+		pass
+	else:
+#		$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.max_value = PeriodT
+#		$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.value = PeriodT-remainPeriod
 		pass
 	pass
 
