@@ -17,6 +17,9 @@ onready var isItWalking = false
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
+signal BackMenuButton
+signal ResetButton
+signal NextLevelButton
 
 
 # Called when the node enters the scene tree for the first time.
@@ -103,4 +106,19 @@ func _on_BolaGolf1_body_entered(body):
 	if body == $TheLoadedCourse/CumanGolfCoursing/HoleSensor:
 		print("Yep! ", body.name, " is indeed the hole sensor")
 		pass
+	pass # Replace with function body.
+
+
+func _on_YayComplete_BackMenuButton():
+	emit_signal("BackMenuButton")
+	pass # Replace with function body.
+
+
+func _on_YayComplete_NextLevelButton():
+	emit_signal("NextLevelButton")
+	pass # Replace with function body.
+
+
+func _on_YayComplete_ResetButton():
+	emit_signal("ResetButton")
 	pass # Replace with function body.

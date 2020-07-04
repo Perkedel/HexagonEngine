@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/walking_character7.wav-fca90b632336dba47a699767517cafb0.sample"
+
+[deps]
+
+source_file="res://addons/randomAudioStreamPlayer/sound_effects/walking_character7.wav"
+dest_files=[ "res://.import/walking_character7.wav-fca90b632336dba47a699767517cafb0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

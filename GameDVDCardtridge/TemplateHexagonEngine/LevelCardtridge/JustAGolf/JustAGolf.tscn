@@ -114,5 +114,8 @@ nine_patch_stretch = true
 [connection signal="entered_goal" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_entered_goal"]
 [connection signal="noLongerWalking" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_noLongerWalking"]
 [connection signal="stroked" from="Player/BolaGolf1" to="." method="_on_BolaGolf1_stroked"]
+[connection signal="BackMenuButton" from="CanvasUI/MINI-UI/YayComplete" to="." method="_on_YayComplete_BackMenuButton"]
+[connection signal="NextLevelButton" from="CanvasUI/MINI-UI/YayComplete" to="." method="_on_YayComplete_NextLevelButton"]
+[connection signal="ResetButton" from="CanvasUI/MINI-UI/YayComplete" to="." method="_on_YayComplete_ResetButton"]
 
 [editable path="Player/BolaGolf1"]

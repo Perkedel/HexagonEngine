@@ -1,0 +1,370 @@
+{
+	"connections": [
+		{
+			"from": "graph",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "graph",
+			"from_port": 1,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "transform",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "graph",
+			"to_port": 0
+		},
+		{
+			"from": "graph",
+			"from_port": 0,
+			"to": "edge_detect_1",
+			"to_port": 0
+		},
+		{
+			"from": "edge_detect_1",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "box",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "sphere",
+			"from_port": 0,
+			"to": "transform",
+			"to_port": 0
+		},
+		{
+			"from": "graph",
+			"from_port": 2,
+			"to": "Material",
+			"to_port": 6
+		}
+	],
+	"label": "Graph",
+	"name": "49",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": -165,
+				"y": 7
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 1,
+				"emission_energy": 1,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "transform",
+			"node_position": {
+				"x": -997.5,
+				"y": -141
+			},
+			"parameters": {
+				"repeat": true,
+				"rotate": 0,
+				"scale_x": 0.5,
+				"scale_y": 0.5,
+				"translate_x": 0.25,
+				"translate_y": 0.25
+			},
+			"type": "transform"
+		},
+		{
+			"connections": [
+				{
+					"from": "colorize",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 2
+				},
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "colorize",
+					"to_port": 0
+				},
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "occlusion",
+					"to_port": 0
+				},
+				{
+					"from": "occlusion",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 1
+				},
+				{
+					"from": "normal_map",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 0
+				},
+				{
+					"from": "gen_inputs",
+					"from_port": 0,
+					"to": "normal_map",
+					"to_port": 0
+				}
+			],
+			"label": "NOD",
+			"name": "graph",
+			"node_position": {
+				"x": -431.27063,
+				"y": 70.5
+			},
+			"nodes": [
+				{
+					"name": "occlusion",
+					"node_position": {
+						"x": -84.811829,
+						"y": 70.5
+					},
+					"parameters": {
+						"param0": 9,
+						"param2": 2
+					},
+					"type": "occlusion"
+				},
+				{
+					"name": "colorize",
+					"node_position": {
+						"x": -65.5,
+						"y": 158
+					},
+					"parameters": {
+						"gradient": {
+							"interpolation": 1,
+							"points": [
+								{
+									"a": 1,
+									"b": 1,
+									"g": 1,
+									"pos": 0,
+									"r": 1
+								},
+								{
+									"a": 1,
+									"b": 0,
+									"g": 0,
+									"pos": 1,
+									"r": 0
+								}
+							],
+							"type": "Gradient"
+						}
+					},
+					"type": "colorize"
+				},
+				{
+					"name": "gen_inputs",
+					"node_position": {
+						"x": -381.811829,
+						"y": 49.5
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"name": "port0",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_outputs",
+					"node_position": {
+						"x": 244.5,
+						"y": 49.5
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"name": "port0",
+							"type": "rgba"
+						},
+						{
+							"name": "port2",
+							"type": "rgba"
+						},
+						{
+							"name": "port1",
+							"type": "rgba"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_parameters",
+					"node_position": {
+						"x": -38.270599,
+						"y": -143
+					},
+					"parameters": {
+
+					},
+					"seed_value": -7495,
+					"type": "remote",
+					"widgets": [
+
+					]
+				},
+				{
+					"name": "normal_map",
+					"node_position": {
+						"x": -60.565704,
+						"y": -60.166656
+					},
+					"parameters": {
+						"param0": 9,
+						"param1": 1,
+						"param2": 0,
+						"param4": 0
+					},
+					"type": "normal_map"
+				}
+			],
+			"parameters": {
+
+			},
+			"type": "graph"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -451.598755,
+				"y": -11.262512
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 0,
+							"r": 1
+						},
+						{
+							"a": 1,
+							"b": 0,
+							"g": 0,
+							"pos": 0.136364,
+							"r": 0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -718.608398,
+				"y": 67.325012
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 9
+			},
+			"type": "blend"
+		},
+		{
+			"name": "edge_detect_1",
+			"node_position": {
+				"x": -460.608398,
+				"y": -66.674988
+			},
+			"parameters": {
+				"size": 9
+			},
+			"type": "edge_detect_1"
+		},
+		{
+			"name": "box",
+			"node_position": {
+				"x": -988.422119,
+				"y": 68.460938
+			},
+			"parameters": {
+				"cx": 0.5,
+				"cy": 0.5,
+				"cz": 0.5,
+				"rx": 40,
+				"ry": 40,
+				"rz": 90,
+				"sx": 0.25,
+				"sy": 0.25,
+				"sz": 0.25
+			},
+			"type": "box"
+		},
+		{
+			"name": "sphere",
+			"node_position": {
+				"x": -989.422119,
+				"y": -247.039063
+			},
+			"parameters": {
+				"cx": 0.5,
+				"cy": 0.5,
+				"r": 0.5
+			},
+			"type": "sphere"
+		}
+	],
+	"parameters": {
+
+	},
+	"type": "graph"
+}

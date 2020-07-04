@@ -8,6 +8,11 @@
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
 script = ExtResource( 1 )
+__meta__ = {
+"GNU GPL v3": "Yess",
+"HexagonEngine": "Core",
+"by JOELwindows7": "Perkedel Technologies"
+}
 LoadDVD = ExtResource( 2 )
 
 [node name="DVDCartridgeSlot" type="Node" parent="."]

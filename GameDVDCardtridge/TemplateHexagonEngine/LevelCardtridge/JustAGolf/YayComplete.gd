@@ -29,15 +29,18 @@ func setDialogText(var sayWha:String):
 
 
 func _on_BackMenu_pressed():
+	emit_signal("BackMenuButton")
 	hide()
 	pass # Replace with function body.
 
 
 func _on_Reset_pressed():
+	emit_signal("ResetButton")
 	hide()
 	pass # Replace with function body.
 
 
 func _on_NextLevel_pressed():
+	emit_signal("NextLevelButton")
 	hide()
 	pass # Replace with function body.

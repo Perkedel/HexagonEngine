@@ -5,7 +5,7 @@ const OAUTH_HOSTNAME = "sketchfab.com"
 const API_HOSTNAME = "api.sketchfab.com"
 const USE_SSL = true
 const BASE_PATH = "/v3"
-const CLIENT_ID = "IUO8d5VVOIUCzWQArQ3VuXfbwx5QekZfLeDlpOmW"
+const CLIENT_ID = "a99JEwOhmIWHdRRDDgBsxbBf8ufC0ACoUcDAifSV"
 
 enum SymbolicErrors {
 	NOT_AUTHORIZED,
@@ -147,7 +147,7 @@ func _handle_result(result):
 	# HTTP error
 	var kind = result.code / 100
 	if kind == 4:
-		return NOT_AUTHORIZED
+		return SymbolicErrors.NOT_AUTHORIZED
 	elif kind == 5:
 		OS.alert('Server error. Try again later.', 'Error')
 		return null

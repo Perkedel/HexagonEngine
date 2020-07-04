@@ -3,8 +3,8 @@ extends Node
 """
 	pure GDScript MIDI Player [Godot MIDI Player] by Yui Kinomoto @arlez80
 """
-# JOELwindows7 edit, readd icones
-class_name MidiPlayer, "res://addons/midi/icon.png"
+
+class_name MidiPlayer
 
 # -----------------------------------------------------------------------------
 # Import
@@ -230,29 +230,30 @@ signal looped
 	準備
 """
 func _ready( ):
-	AudioServer.add_bus( -1 )
-	var midi_master_bus_idx:int = AudioServer.get_bus_count( ) - 1
-	AudioServer.set_bus_name( midi_master_bus_idx, self.midi_master_bus_name )
-	AudioServer.set_bus_send( midi_master_bus_idx, self.bus )
-	AudioServer.set_bus_volume_db( AudioServer.get_bus_index( self.midi_master_bus_name ), self.volume_db )
-
-	for i in range( 0, 16 ):
+	if AudioServer.get_bus_index( self.midi_master_bus_name ) == -1:
 		AudioServer.add_bus( -1 )
-		var midi_channel_bus_idx:int = AudioServer.get_bus_count( ) - 1
-		AudioServer.set_bus_name( midi_channel_bus_idx, self.midi_channel_bus_name % i )
-		AudioServer.set_bus_send( midi_channel_bus_idx, self.midi_master_bus_name )
-		AudioServer.set_bus_volume_db( midi_channel_bus_idx, 0.0 )
+		var midi_master_bus_idx:int = AudioServer.get_bus_count( ) - 1
+		AudioServer.set_bus_name( midi_master_bus_idx, self.midi_master_bus_name )
+		AudioServer.set_bus_send( midi_master_bus_idx, self.bus )
+		AudioServer.set_bus_volume_db( AudioServer.get_bus_index( self.midi_master_bus_name ), self.volume_db )
 
-		var cae = GodotMIDIPlayerChannelAudioEffect.new( )
-		cae.ae_panner = AudioEffectPanner.new( )
-		cae.ae_reverb = AudioEffectReverb.new( )
-		cae.ae_reverb.wet = 0.03
-		cae.ae_chorus = AudioEffectChorus.new( )
-		cae.ae_chorus.wet = 0.0
-		AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_chorus )
-		AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_panner )
-		AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_reverb )
-		self.channel_audio_effects.append( cae )
+		for i in range( 0, 16 ):
+			AudioServer.add_bus( -1 )
+			var midi_channel_bus_idx:int = AudioServer.get_bus_count( ) - 1
+			AudioServer.set_bus_name( midi_channel_bus_idx, self.midi_channel_bus_name % i )
+			AudioServer.set_bus_send( midi_channel_bus_idx, self.midi_master_bus_name )
+			AudioServer.set_bus_volume_db( midi_channel_bus_idx, 0.0 )
+
+			var cae: = GodotMIDIPlayerChannelAudioEffect.new( )
+			cae.ae_panner = AudioEffectPanner.new( )
+			cae.ae_reverb = AudioEffectReverb.new( )
+			cae.ae_reverb.wet = 0.03
+			cae.ae_chorus = AudioEffectChorus.new( )
+			cae.ae_chorus.wet = 0.0
+			AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_chorus )
+			AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_panner )
+			AudioServer.add_bus_effect( midi_channel_bus_idx, cae.ae_reverb )
+			self.channel_audio_effects.append( cae )
 
 	self.channel_status = []
 	for i in range( max_channel ):
@@ -262,8 +263,6 @@ func _ready( ):
 		self.channel_status.append( GodotMIDIPlayerChannelStatus.new( i, bank, drum_track ) )
 
 	self.set_max_polyphony( self.max_polyphony )
-	if self.soundfont != "":
-		self.set_soundfont( self.soundfont )
 
 	if self.playing:
 		self.play( )
@@ -274,9 +273,10 @@ func _ready( ):
 func _notification( what:int ):
 	# 破棄時
 	if what == NOTIFICATION_PREDELETE:
-		AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_master_bus_name ) )
-		for i in range( 0, 16 ):
-			AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_channel_bus_name % i ) )
+		pass
+		#AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_master_bus_name ) )
+		#for i in range( 0, 16 ):
+		#	AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_channel_bus_name % i ) )
 
 """
 	再生前の初期化
@@ -476,11 +476,6 @@ func set_soundfont( path:String ):
 	var voices = null
 	if not self.load_all_voices_from_soundfont:
 		voices = self._used_program_numbers
-
-	if is_instance_valid( self.bank ):
-		for i in self.bank.presets:
-			self.bank.presets[i].instruments = []
-			self.bank.presets[i].bags = []
 
 	self.bank = Bank.new( )
 	self.bank.read_soundfont( sf2, voices )

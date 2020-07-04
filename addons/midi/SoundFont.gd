@@ -84,7 +84,7 @@ const gen_oper_end_oper:int = 60
 """
 const sample_mode_no_loop:int = 0
 const sample_mode_loop_continuously:int = 1
-const sample_mode_unused_no_loop:int = 2
+const sample_mode_unused_no_loop:int = 2	# this is unused, but it needs interpreted as no loop
 const sample_mode_loop_ends_by_key_depression:int = 3
 
 """
@@ -381,18 +381,20 @@ func _read_pdta( stream:StreamPeerBuffer ) -> SoundFontPresetData:
 """
 func _read_pdta_phdr( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream, "phdr" )
-	var phdrs:Array = []
+	var phdrs:Array = Array( )
 
-	while 0 < chunk.stream.get_available_bytes( ):
+	var chunk_stream:StreamPeerBuffer = chunk.stream
+
+	while 0 < chunk_stream.get_available_bytes( ):
 		var phdr:SoundFontPresetHeader = SoundFontPresetHeader.new( )
 
-		phdr.name = chunk.stream.get_string( 20 )
-		phdr.preset = chunk.stream.get_u16( )
-		phdr.bank = chunk.stream.get_u16( )
-		phdr.preset_bag_index = chunk.stream.get_u16( )
-		phdr.library = chunk.stream.get_32( )
-		phdr.genre = chunk.stream.get_32( )
-		phdr.morphology = chunk.stream.get_32( )
+		phdr.name = chunk_stream.get_string( 20 )
+		phdr.preset = chunk_stream.get_u16( )
+		phdr.bank = chunk_stream.get_u16( )
+		phdr.preset_bag_index = chunk_stream.get_u16( )
+		phdr.library = chunk_stream.get_32( )
+		phdr.genre = chunk_stream.get_32( )
+		phdr.morphology = chunk_stream.get_32( )
 
 		phdrs.append( phdr )
 
@@ -405,17 +407,19 @@ func _read_pdta_phdr( stream:StreamPeerBuffer ) -> Array:
 """
 func _read_pdta_bag( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream )
-	var bags:Array = []
+	var bags:Array = Array( )
 
 	if chunk.header.substr( 1, 3 ) != "bag":
 		print( "Doesn't exist *bag header." )
 		breakpoint
 
-	while 0 < chunk.stream.get_available_bytes( ):
+	var chunk_stream:StreamPeerBuffer = chunk.stream
+
+	while 0 < chunk_stream.get_available_bytes( ):
 		var bag:SoundFontBag = SoundFontBag.new( )
 	
-		bag.gen_ndx = chunk.stream.get_u16( )
-		bag.mod_ndx = chunk.stream.get_u16( )
+		bag.gen_ndx = chunk_stream.get_u16( )
+		bag.mod_ndx = chunk_stream.get_u16( )
 		bags.append( bag )
 
 	return bags
@@ -427,20 +431,22 @@ func _read_pdta_bag( stream:StreamPeerBuffer ) -> Array:
 """
 func _read_pdta_mod( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream )
-	var mods:Array = []
+	var mods:Array = Array( )
 
 	if chunk.header.substr( 1, 3 ) != "mod":
 		print( "Doesn't exist *mod header." )
 		breakpoint
 
-	while 0 < chunk.stream.get_available_bytes( ):
+	var chunk_stream:StreamPeerBuffer = chunk.stream
+
+	while 0 < chunk_stream.get_available_bytes( ):
 		var mod:SoundFontModule = SoundFontModule.new( )
 	
-		mod.src_oper = SoundFontPresetDataModulator.new( chunk.stream.get_u16( ) )
-		mod.dest_oper = chunk.stream.get_u16( )
-		mod.amount = chunk.stream.get_u16( )
-		mod.amt_src_oper = SoundFontPresetDataModulator.new( chunk.stream.get_u16( ) )
-		mod.trans_oper = chunk.stream.get_u16( )
+		mod.src_oper = SoundFontPresetDataModulator.new( chunk_stream.get_u16( ) )
+		mod.dest_oper = chunk_stream.get_u16( )
+		mod.amount = chunk_stream.get_u16( )
+		mod.amt_src_oper = SoundFontPresetDataModulator.new( chunk_stream.get_u16( ) )
+		mod.trans_oper = chunk_stream.get_u16( )
 		mods.append( mod )
 
 	return mods
@@ -452,21 +458,23 @@ func _read_pdta_mod( stream:StreamPeerBuffer ) -> Array:
 """
 func _read_pdta_gen( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream )
-	var chunk_stream:StreamPeerBuffer = chunk.stream
-	var gens:Array = []
+	var gens:Array = Array( )
 
 	if chunk.header.substr( 1, 3 ) != "gen":
 		print( "Doesn't exist *gen header." )
 		breakpoint
 
-	while 0 < chunk_stream.get_available_bytes( ):
+	var chunk_stream:StreamPeerBuffer = chunk.stream
+
+	# 4 bytes
+	#while 0 < chunk_stream.get_available_bytes( ):
+	for i in range( chunk_stream.get_available_bytes( ) / 4 ):
 		var gen:SoundFontGenerator = SoundFontGenerator.new( )
 		
 		gen.gen_oper = chunk_stream.get_u16( )
 		var uamount:int = chunk_stream.get_u16( )
 		gen.uamount = uamount
-		gen.amount = uamount
-		if 32767 < uamount: gen.amount = - ( 65536 - uamount )
+		gen.amount = uamount if uamount <= 32767 else -( 65536 - uamount )
 
 		gens.append( gen )
 
@@ -479,8 +487,9 @@ func _read_pdta_gen( stream:StreamPeerBuffer ) -> Array:
 """
 func _read_pdta_inst( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream, "inst" )
+	var insts:Array = Array( )
+
 	var chunk_stream:StreamPeerBuffer = chunk.stream
-	var insts:Array = []
 
 	while 0 < chunk_stream.get_available_bytes( ):
 		var inst:SoundFontInstrument = SoundFontInstrument.new( )
@@ -498,8 +507,9 @@ func _read_pdta_inst( stream:StreamPeerBuffer ) -> Array:
 """
 func _read_pdta_shdr( stream:StreamPeerBuffer ) -> Array:
 	var chunk:SoundFontChunk = self._read_chunk( stream, "shdr" )
+	var shdrs:Array = Array( )
+
 	var chunk_stream:StreamPeerBuffer = chunk.stream
-	var shdrs:Array = []
 
 	while 0 < chunk_stream.get_available_bytes( ):
 		var shdr:SoundFontSampleHeader = SoundFontSampleHeader.new( )

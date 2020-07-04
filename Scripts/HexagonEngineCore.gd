@@ -48,6 +48,9 @@ func DoChangeDVDNow():
 	pass
 
 func PatchedChangeDVDNow():
+	print("Patched Change DVD!")
+	Singletoner.ResumeGameNow()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	LoadDVD = "res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn"
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass

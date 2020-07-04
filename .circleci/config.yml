@@ -18,17 +18,17 @@ jobs:
       - run:
           name: Download Godot 3.2.1
           command: |
-              wget -q https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_linux_headless.64.zip
-              unzip Godot_v3.2.1-stable_linux_headless.64.zip
-              mv Godot_v3.2.1-stable_linux_headless.64 godot
+              wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_linux_headless.64.zip
+              unzip Godot_v3.2.2-stable_linux_headless.64.zip
+              mv Godot_v3.2.2-stable_linux_headless.64 godot
               chmod +x godot
       - run:
           name: Download Godot 3.2.1 Export Templates
           command: |
-              wget -q https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_export_templates.tpz
+              wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_export_templates.tpz
               mkdir -p ~/.local/share/godot/templates
-              unzip Godot_v3.2.1-stable_export_templates.tpz -d ~/.local/share/godot/templates
-              mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.1.stable
+              unzip Godot_v3.2.2-stable_export_templates.tpz -d ~/.local/share/godot/templates
+              mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.2.stable
       - run:
           name: Download butler
           command: |

@@ -2,17 +2,11 @@ extends AudioStreamPlayer
 
 class_name AudioStreamPlayerADSR
 
+const Bank = preload( "Bank.gd" )
+
 """
 	AudioStreamPlayer with ADSR + Linked by Yui Kinomoto @arlez80
 """
-
-class VolumeState:
-	var time:float = 0.0
-	var volume_db:float = 0.0
-
-	func _init( time:float = 0.0, volume_db:float = 0.0 ):
-		self.time = time
-		self.volume_db = volume_db
 
 # 発音チャンネル
 var channel_number:int = -1
@@ -25,7 +19,7 @@ var releasing:bool = false
 # リリース要求
 var request_release:bool = false
 # 楽器情報
-var instrument = null
+var instrument:Bank.Instrument = null
 # 合成情報
 var velocity:int = 0
 var pitch_bend:float = 0.0
@@ -50,14 +44,14 @@ var auto_release_mode:bool = false
 
 # ADSステート
 onready var ads_state:Array = [
-	VolumeState.new( 0.0, 0.0 ),
-	VolumeState.new( 0.2, -144.0 )
+	Bank.VolumeState.new( 0.0, 0.0 ),
+	Bank.VolumeState.new( 0.2, -144.0 )
 	# { "time": 0.2, "jump_to": 0.0 },	# not implemented
 ]
 # Rステート
 onready var release_state:Array = [
-	VolumeState.new( 0.0, 0.0 ),
-	VolumeState.new( 0.01, -144.0 )
+	Bank.VolumeState.new( 0.0, 0.0 ),
+	Bank.VolumeState.new( 0.01, -144.0 )
 	# { "time": 0.2, "jump_to": 0.0 },	# not implemented
 ]
 
@@ -68,7 +62,7 @@ func _ready( ):
 func _check_using_linked( ):
 	return self.instrument != null and 2 <= len( self.instrument.array_stream )
 
-func set_instrument( instrument ):
+func set_instrument( instrument:Bank.Instrument ):
 	self.instrument = instrument
 	self.base_pitch = instrument.array_base_pitch[0]
 	self.stream = instrument.array_stream[0]
@@ -123,9 +117,9 @@ func _update_adsr( delta:float ):
 		if self.auto_release_mode: self.request_release = true
 	else:
 		for state_number in range( 1, all_states ):
-			var state = use_state[state_number]
+			var state:Bank.VolumeState = use_state[state_number]
 			if self.timer < state.time:
-				var pre_state = use_state[state_number-1]
+				var pre_state:Bank.VolumeState = use_state[state_number-1]
 				var s:float = ( state.time - self.timer ) / ( state.time - pre_state.time )
 				var t:float = 1.0 - s
 				self.current_volume_db = pre_state.volume_db * s + state.volume_db * t

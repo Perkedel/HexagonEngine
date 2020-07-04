@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/E4.ogg-097b0b480837fe52ce6f622c5030e90d.oggstr"
+
+[deps]
+
+source_file="res://addons/SimpleSampler/samples/synth/E4.ogg"
+dest_files=[ "res://.import/E4.ogg-097b0b480837fe52ce6f622c5030e90d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

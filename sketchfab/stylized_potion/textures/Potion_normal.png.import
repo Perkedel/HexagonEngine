@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.s3tc.stex"
+path.etc2="res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.etc2.stex"
+path.etc="res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://sketchfab/stylized_potion/textures/Potion_normal.png"
+dest_files=[ "res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.s3tc.stex", "res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.etc2.stex", "res://.import/Potion_normal.png-354d78584fe56d1eaadb42e61dc64785.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

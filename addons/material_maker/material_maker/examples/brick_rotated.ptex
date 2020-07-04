@@ -1,0 +1,234 @@
+{
+	"connections": [
+		{
+			"from": "transform",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "pattern",
+			"from_port": 0,
+			"to": "transform",
+			"to_port": 0
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 6
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "normal_map",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "bricks_2",
+			"from_port": 2,
+			"to": "transform",
+			"to_port": 1
+		},
+		{
+			"from": "bricks_2",
+			"from_port": 3,
+			"to": "transform",
+			"to_port": 2
+		},
+		{
+			"from": "bricks_2",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "bricks_2",
+			"from_port": 1,
+			"to": "transform",
+			"to_port": 3
+		}
+	],
+	"label": "Graph",
+	"name": "47",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 70,
+				"y": 113
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 1,
+				"emission_energy": 1,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -286.5,
+				"y": 14.5
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 2
+			},
+			"type": "blend"
+		},
+		{
+			"name": "pattern",
+			"node_position": {
+				"x": -547.5,
+				"y": -227.068176
+			},
+			"parameters": {
+				"mix": 0,
+				"x_scale": 1,
+				"x_wave": 3,
+				"y_scale": 0,
+				"y_wave": 4
+			},
+			"type": "pattern"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -10.209106,
+				"y": -146.068176
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 1,
+							"g": 1,
+							"pos": 0,
+							"r": 1
+						},
+						{
+							"a": 1,
+							"b": 0,
+							"g": 0,
+							"pos": 1,
+							"r": 0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"name": "transform",
+			"node_position": {
+				"x": -258.5,
+				"y": -196.5
+			},
+			"parameters": {
+				"repeat": false,
+				"rotate": 360,
+				"scale_x": 1,
+				"scale_y": 1,
+				"translate_x": 0.5,
+				"translate_y": 0.5
+			},
+			"type": "transform"
+		},
+		{
+			"color": {
+				"a": 1,
+				"b": 0,
+				"g": 0.5,
+				"r": 1,
+				"type": "Color"
+			},
+			"name": "comment",
+			"node_position": {
+				"x": -391.274048,
+				"y": 165.542206
+			},
+			"parameters": {
+
+			},
+			"size": {
+				"x": 280,
+				"y": 85
+			},
+			"text": "This example shows how to use the 3rd and 4th outputs of the bricks node to get the center of each brick.",
+			"title": "Comment",
+			"type": "comment"
+		},
+		{
+			"name": "normal_map",
+			"node_position": {
+				"x": 14.29071,
+				"y": -40.645294
+			},
+			"parameters": {
+				"param0": 11,
+				"param1": 0.995,
+				"param2": 0,
+				"param4": 1
+			},
+			"type": "normal_map"
+		},
+		{
+			"name": "bricks_2",
+			"node_position": {
+				"x": -528.086548,
+				"y": -114.154938
+			},
+			"parameters": {
+				"bevel": 0.1,
+				"columns": 3,
+				"corner": 0,
+				"mortar": 0.1,
+				"pattern": 0,
+				"repeat": 1,
+				"round": 0,
+				"row_offset": 0.5,
+				"rows": 6
+			},
+			"type": "bricks"
+		}
+	],
+	"parameters": {
+
+	},
+	"type": "graph"
+}

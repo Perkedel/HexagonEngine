@@ -30,11 +30,6 @@ _global_script_classes=[ {
 "path": "res://addons/midi/ADSR.gd"
 }, {
 "base": "Reference",
-"class": "AutotileScript",
-"language": "GDScript",
-"path": "res://addons/fabianlc_gpu_tilemap/autotile scripts/autotile_script.gd"
-}, {
-"base": "Reference",
 "class": "Bank",
 "language": "GDScript",
 "path": "res://addons/midi/Bank.gd"
@@ -259,11 +254,6 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/gd-sqlite/statement.gdns"
 }, {
-"base": "ColorRect",
-"class": "GPUTileMap",
-"language": "GDScript",
-"path": "res://addons/fabianlc_gpu_tilemap/gpu_tilemap.gd"
-}, {
 "base": "InspectorGadgetBase",
 "class": "GadgetAABB",
 "language": "GDScript",
@@ -475,6 +465,11 @@ _global_script_classes=[ {
 "path": "res://addons/inspector-gadget/src/inspector_gadget_util.gd"
 }, {
 "base": "Control",
+"class": "IsoCube",
+"language": "GDScript",
+"path": "res://addons/IsoCube/IsoCube.gd"
+}, {
+"base": "Control",
 "class": "Joystick",
 "language": "GDScript",
 "path": "res://addons/MarcoFazio-VirtualJoystick/Joystick/Joystick.gd"
@@ -604,6 +599,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/Slicer2D.gd"
 }, {
+"base": "AudioStreamPlayer3D",
+"class": "SmartAudioStream",
+"language": "GDScript",
+"path": "res://addons/smart_audio_stream/SmartAudioStream.gd"
+}, {
 "base": "Node",
 "class": "SoundManager_Pluggits",
 "language": "GDScript",
@@ -639,6 +639,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/references/tween_sequence.gd"
 }, {
+"base": "Object",
+"class": "TypeFormattingLogic",
+"language": "GDScript",
+"path": "res://addons/metadata_inspector/TypeFormattingLogic.gd"
+}, {
 "base": "VBoxContainer",
 "class": "VBoxItemList",
 "language": "GDScript",
@@ -669,7 +674,6 @@ _global_script_class_icons={
 "Array2D": "",
 "ArrayUtils": "",
 "AudioStreamPlayerADSR": "",
-"AutotileScript": "",
 "Bank": "",
 "BaseGameObject": "",
 "BaseGameSystem": "",
@@ -715,7 +719,6 @@ _global_script_class_icons={
 "GDSQLiteBinaryDownloader": "",
 "GDSQLiteDatabase": "",
 "GDSQLiteStatement": "",
-"GPUTileMap": "",
 "GadgetAABB": "",
 "GadgetBasis": "",
 "GadgetBool": "",
@@ -758,6 +761,7 @@ _global_script_class_icons={
 "InspectorGadget": "",
 "InspectorGadgetBase": "",
 "InspectorGadgetUtil": "",
+"IsoCube": "",
 "Joystick": "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png",
 "MessageDispatcher": "",
 "MessageDispatcherWrapper": "",
@@ -784,6 +788,7 @@ _global_script_class_icons={
 "Singletons": "",
 "Sliceable2D": "",
 "Slicer2D": "",
+"SmartAudioStream": "",
 "SoundManager_Pluggits": "",
 "SpriteText": "",
 "Tello": "res://addons/TelloDroneNode/drone_icon.png",
@@ -791,6 +796,7 @@ _global_script_class_icons={
 "Trail2D": "res://addons/godot-next/icons/icon_trail_2d.svg",
 "Trail3D": "res://addons/godot-next/icons/icon_trail_3d.svg",
 "TweenSequence": "",
+"TypeFormattingLogic": "",
 "VBoxItemList": "res://addons/godot-next/icons/icon_v_box_item_list.svg",
 "Variant": "",
 "VectorResource": "",
@@ -810,6 +816,12 @@ gdinv/LoadOnReady=true
 [WAT]
 
 Test_Directory="res://Datas/Totaling/WAT-Tests"
+
+[addons]
+
+quick_scenes/selected_scene=-1
+quick_scenes/quick_run_shortcut=Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":true,"scancode":16777252,"unicode":0,"echo":false,"script":null)
+
 
 [android]
 
@@ -841,6 +853,8 @@ AES="*res://Scripts/ExtraImportAsset/AES.gd"
 GDBehavior="*res://addons/GDBehavior/GDBehavior.gd"
 GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 GDDlg_DialogDB="*res://addons/gddlg/GDDlg_DialogDB.gd"
+RestHandler="*res://addons/github-integration/scripts/RestHandler.gd"
+NoteValue="*res://addons/SimpleSampler/note_value.gd"
 
 [compression]
 
@@ -867,7 +881,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Dialogbox", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "SIsilicon.3d.text", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "fabianlc_gpu_tilemap", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "midi", "mixing-desk", "modifiers", "notes_tab", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "replicator", "rmsmartshape", "scale_importer", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "tile_spawner", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "Holepunch", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "explore-editor-theme", "extend", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "notes_tab", "opus", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "randomAudioStreamPlayer", "replicator", "rmsmartshape", "scale_importer", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "tile_spawner", "time-tracker", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 

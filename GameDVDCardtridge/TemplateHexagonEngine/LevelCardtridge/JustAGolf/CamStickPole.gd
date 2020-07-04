@@ -35,8 +35,10 @@ func _input(event):
 		if !event.pressed:
 			if !cameraAimMode:
 				cameraAimMode = true
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			else:
 				cameraAimMode = false
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			pass
 		pass
 	
