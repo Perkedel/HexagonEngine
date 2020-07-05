@@ -1,6 +1,7 @@
 # Android Build must not be included as it is biig
-build/
-.build_version
+# nope nvm. 3.2 has some changes
+# build/ # Ok you may go
+# .build_version
 
 # https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
 # Compared, that the Build folder isn't there and could be the result of the compilation for Android custom build.

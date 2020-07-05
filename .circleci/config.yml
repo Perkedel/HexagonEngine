@@ -16,14 +16,14 @@ jobs:
               sudo apt-get update
               sudo apt-get -y install wget zip unzip
       - run:
-          name: Download Godot 3.2.1
+          name: Download Godot 3.2.2
           command: |
               wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_linux_headless.64.zip
               unzip Godot_v3.2.2-stable_linux_headless.64.zip
               mv Godot_v3.2.2-stable_linux_headless.64 godot
               chmod +x godot
       - run:
-          name: Download Godot 3.2.1 Export Templates
+          name: Download Godot 3.2.2 Export Templates
           command: |
               wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_export_templates.tpz
               mkdir -p ~/.local/share/godot/templates
@@ -40,7 +40,7 @@ jobs:
           name: Export linux64 build
           command: |
               mkdir -p linux64
-              ./godot --export linux project.godot "linux64/hexagon-engine_Circle-CI"
+              ./godot --export linux project.godot "linux64/hexagon-engine_Circle-CI --quiet"
       - run:
           name: Upload linux64 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push linux64 joelwindows7/hexagon-engine:linux-64bit-circleci; fi
@@ -48,7 +48,7 @@ jobs:
       - run:
           name: Export mac build
           command: |
-              ./godot --export macOS project.godot "hexagon-engine-mac_Circle-CI"
+              ./godot --export macOS project.godot "hexagon-engine-mac_Circle-CI --quiet"
               mv hexagon-engine-mac hexagon-engine-mac.zip
       - run:
           name: Upload mac build
@@ -58,7 +58,7 @@ jobs:
           name: Export win64 build
           command: |
               mkdir -p win64
-              ./godot --export win64 project.godot "win64/hexagon-engine_Circle-CI.exe"
+              ./godot --export win64 project.godot "win64/hexagon-engine_Circle-CI.exe --quiet"
       - run:
           name: Upload win64 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push win64 joelwindows7/hexagon-engine:win-64bit-circleci; fi
@@ -67,7 +67,7 @@ jobs:
           name: Export HTML5 build
           command: |
               mkdir -p HTML5
-              ./godot --export HTML5 project.godot "HTML5/index.html"
+              ./godot --export HTML5 project.godot "HTML5/index.html --quiet"
       - run:
           name: Upload HTML5 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push HTML5 joelwindows7/hexagon-engine:HTML5-circleci; fi

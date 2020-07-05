@@ -41,18 +41,20 @@ jobs:
     #    sudo apt update; sudo apt upgrade -y
     #    sudo apt install pulseaudio jackd2 paprefs ubuntu-sounds avahi-daemon -y
     #    sudo apt install --fix-missing
-        
-    - name: Build Windows
-      run: |
-        mkdir -p win64
-        ./godot --export win64 project.godot "win64/hexagon-engine_GitHub-CI.exe"
-    
-    - name: Build macOS
-      run: |
-        ./godot --export macOS project.godot "hexagon-engine-mac_GitHub-CI"
-        mv hexagon-engine-mac hexagon-engine-mac.zip
     
     - name: Build Linux
       run: |
         mkdir -p linux64
-        ./godot --export linux project.godot "linux64/hexagon-engine_GitHub-CI"
+        ./godot --export linux project.godot "linux64/hexagon-engine_GitHub-CI --quiet"
+    
+    - name: Build Windows
+      run: |
+        mkdir -p win64
+        ./godot --export win64 project.godot "win64/hexagon-engine_GitHub-CI.exe --quiet"
+    
+    - name: Build macOS
+      run: |
+        ./godot --export macOS project.godot "hexagon-engine-mac_GitHub-CI --quiet"
+        mv hexagon-engine-mac hexagon-engine-mac.zip
+    
+    

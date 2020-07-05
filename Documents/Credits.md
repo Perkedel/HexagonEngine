@@ -201,5 +201,6 @@ Used Assets and Tools!
 - https://github.com/vini-guerrero/Godot_Game_Tools **WHAT THE PECK?! WHERE IS THE ORIGINAL FBX & BLEND FILE?! WHY ONLY HERE THIS? HUH? AM i MISSING SOMETHING?!**
 - https://github.com/WolfgangSenff/GodotFirebase/
 - https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
+- https://github.com/yalcin-ata/godot-android-plugin-firebase
 
 
