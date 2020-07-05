@@ -10,7 +10,7 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "Admob",
+"class": "AdMob",
 "language": "GDScript",
 "path": "res://admob-lib/admob.gd"
 }, {
@@ -138,6 +138,31 @@ _global_script_classes=[ {
 "class": "FileSystemLink",
 "language": "GDScript",
 "path": "res://addons/godot-next/global/file_system_link.gd"
+}, {
+"base": "Resource",
+"class": "FirebaseResource",
+"language": "GDScript",
+"path": "res://addons/GDFirebase/FirebaseResource.gd"
+}, {
+"base": "HTTPRequest",
+"class": "FirebaseStorage",
+"language": "GDScript",
+"path": "res://addons/GDFirebase/FirebaseStorage.gd"
+}, {
+"base": "Reference",
+"class": "FirebaseUserData",
+"language": "GDScript",
+"path": "res://addons/GDFirebase/FirebaseUserData.gd"
+}, {
+"base": "Node",
+"class": "FirestoreCollection",
+"language": "GDScript",
+"path": "res://addons/GDFirebase/FirebaseFirestoreCollection.gd"
+}, {
+"base": "Node",
+"class": "FirestoreDocument",
+"language": "GDScript",
+"path": "res://addons/GDFirebase/FirebaseFirestoreDocument.gd"
 }, {
 "base": "CanvasLayer",
 "class": "FpsLabel",
@@ -670,7 +695,7 @@ _global_script_classes=[ {
 "path": "res://addons/WAT/runner/test.gd"
 } ]
 _global_script_class_icons={
-"Admob": "res://admob-lib/icon.png",
+"AdMob": "res://admob-lib/icon.png",
 "Array2D": "",
 "ArrayUtils": "",
 "AudioStreamPlayerADSR": "",
@@ -696,6 +721,11 @@ _global_script_class_icons={
 "FastTextInit": "",
 "FileSearch": "",
 "FileSystemLink": "",
+"FirebaseResource": "",
+"FirebaseStorage": "",
+"FirebaseUserData": "",
+"FirestoreCollection": "",
+"FirestoreDocument": "",
 "FpsLabel": "",
 "GDDlg_AttributeArray": "",
 "GDDlg_AttributeBase": "",
@@ -825,7 +855,7 @@ quick_scenes/quick_run_shortcut=Object(InputEventKey,"resource_local_to_scene":f
 
 [android]
 
-modules="org/godotengine/godot/GodotAdMob"
+modules="org/godotengine/godot/Vibration"
 
 [application]
 

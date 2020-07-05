@@ -27,7 +27,7 @@
     <!-- Any tag in this line after android:icon will be erased when doing custom builds. -->
     <!-- If you want to add tags manually, do before it. -->
     <!-- WARNING: This should stay on a single line until the parsing code is improved. See GH-32414. -->
-    <application android:label="@string/godot_project_name_string" android:allowBackup="false" tools:ignore="GoogleAppIndexingWarning" android:icon="@mipmap/icon">
+    <application android:label="@string/godot_project_name_string" android:allowBackup="false" tools:ignore="GoogleAppIndexingWarning" android:icon="@mipmap/icon" >
 
         <!-- The following metadata values are replaced when Godot exports, modifying them here has no effect. -->
         <!-- Do these changes in the export preset. Adding new ones is fine. -->
@@ -36,6 +36,11 @@
         <meta-data
             android:name="xr_mode_metadata_name"
             android:value="xr_mode_metadata_value" />
+
+        <!-- Metadata populated at export time and used by Godot to figure out which plugins must be enabled. -->
+        <meta-data
+            android:name="plugins"
+            android:value="plugins_value"/>
 
         <activity
             android:name=".GodotApp"
@@ -47,6 +52,9 @@
             android:resizeableActivity="false"
             tools:ignore="UnusedAttribute" >
 
+            <!-- Focus awareness metadata populated at export time if the user enables it in the 'Xr Features' section. -->
+            <meta-data android:name="com.oculus.vr.focusaware" android:value="oculus_focus_aware_value" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -55,32 +63,8 @@
 
 <!-- Custom application XML added by add-ons. -->
 <!--CHUNK_APPLICATION_BEGIN-->
-	<activity android:name="com.google.android.gms.ads.AdActivity"
-		android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-	<meta-data android:name="com.google.android.gms.version"
-		android:value="@integer/google_play_services_version" />
-	<meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
 <!--CHUNK_APPLICATION_END-->
 
     </application>
 
 </manifest>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

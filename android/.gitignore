@@ -4,3 +4,6 @@ build/
 
 # https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
 # Compared, that the Build folder isn't there and could be the result of the compilation for Android custom build.
+
+# legacy removal
+legacy/

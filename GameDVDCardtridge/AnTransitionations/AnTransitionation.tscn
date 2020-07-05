@@ -1,0 +1,141 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/AnTransitionations/AnTransitionation.gd" type="Script" id=1]
+[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=4]
+
+[node name="AnTransitionation" type="Node"]
+script = ExtResource( 1 )
+
+[node name="UIixef" type="CanvasLayer" parent="."]
+
+[node name="BaseOf" type="Control" parent="UIixef"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scene1" type="Control" parent="UIixef/BaseOf"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="UIixef/BaseOf/Scene1"]
+margin_left = 508.542
+margin_top = 311.482
+margin_right = 1050.54
+margin_bottom = 395.482
+focus_neighbour_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
+custom_fonts/font = ExtResource( 2 )
+text = "An Button to Next Scene"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scene2" type="Control" parent="UIixef/BaseOf"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="UIixef/BaseOf/Scene2"]
+margin_left = 700.0
+margin_top = 640.0
+margin_right = 1694.0
+margin_bottom = 829.0
+focus_neighbour_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
+custom_fonts/font = ExtResource( 2 )
+text = "An Button to go back to scene 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UIixef/BaseOf/Scene2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -811.44
+margin_top = -423.826
+margin_right = 951.56
+margin_bottom = 45.1738
+custom_fonts/font = ExtResource( 2 )
+text = "This, is a big step forward for 3D Platformer game that uses transitions like this:
+M tendo Copyright strike
+A Hat in Time
+Spaicy 3D (Krostenqeni-Platformer)
+Milk gang Series
+etc.
+But not limited to other genres of films and games that might uses transitionings
+as well."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIMeta" type="CanvasLayer" parent="."]
+
+[node name="QuitButtons" type="VBoxContainer" parent="UIMeta"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TheyContains" type="HBoxContainer" parent="UIMeta/QuitButtons"]
+margin_top = 980.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 0, 100 )
+mouse_filter = 2
+alignment = 1
+
+[node name="ChangeDVD" type="Button" parent="UIMeta/QuitButtons/TheyContains"]
+margin_left = 458.0
+margin_right = 958.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 0 )
+focus_neighbour_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
+custom_fonts/font = ExtResource( 2 )
+text = "Change DVD"
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="Shutdown" type="Button" parent="UIMeta/QuitButtons/TheyContains"]
+margin_left = 962.0
+margin_right = 1462.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 0 )
+focus_neighbour_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
+custom_fonts/font = ExtResource( 2 )
+text = "Shutdown"
+icon = ExtResource( 4 )
+expand_icon = true
+[connection signal="pressed" from="UIixef/BaseOf/Scene1/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="UIixef/BaseOf/Scene2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+[connection signal="pressed" from="UIMeta/QuitButtons/TheyContains/ChangeDVD" to="." method="_on_ChangeDVD_pressed"]
+[connection signal="pressed" from="UIMeta/QuitButtons/TheyContains/Shutdown" to="." method="_on_Shutdown_pressed"]

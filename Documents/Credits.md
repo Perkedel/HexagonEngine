@@ -199,5 +199,7 @@ Used Assets and Tools!
 - https://sketchfab.com/3d-models/epson-wacom-laptop-c8b1de9e6b05449f9f01cc803cf70797
 - https://sketchfab.com/3d-models/godette-chan-5e5dd8978e21431f992dee953c11558d
 - https://github.com/vini-guerrero/Godot_Game_Tools **WHAT THE PECK?! WHERE IS THE ORIGINAL FBX & BLEND FILE?! WHY ONLY HERE THIS? HUH? AM i MISSING SOMETHING?!**
+- https://github.com/WolfgangSenff/GodotFirebase/
+- https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
 
 

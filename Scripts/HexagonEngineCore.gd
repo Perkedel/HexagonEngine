@@ -112,6 +112,9 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		10:
 			LoadDVD = load("res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn")
 			pass
+		11:
+			LoadDVD = load("res://GameDVDCardtridge/AnTransitionations/AnTransitionation.tscn")
+			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass
