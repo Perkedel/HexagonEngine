@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Sampling/Pen-and-paper (Discorded)/Heart_54_Asystole.wav"
+dest_files=[ "res://.import/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

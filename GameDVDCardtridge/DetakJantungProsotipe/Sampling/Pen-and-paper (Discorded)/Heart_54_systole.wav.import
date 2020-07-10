@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Sampling/Pen-and-paper (Discorded)/Heart_54_systole.wav"
+dest_files=[ "res://.import/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
