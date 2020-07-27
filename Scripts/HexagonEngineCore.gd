@@ -77,6 +77,7 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
+	# pls don't do this. bad code! use level card system!
 	print("Receive DVD Click Index No. " + String(Index))
 	match Index:
 		0:
