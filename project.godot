@@ -49,11 +49,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/gcs/baseGameWorld.gd"
 }, {
-"base": "IOMethod2D",
-"class": "BaseSlot2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.gd"
-}, {
 "base": "AudioStreamPlayer",
 "class": "BeatPlayer",
 "language": "GDScript",
@@ -409,21 +404,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
 }, {
-"base": "IOMethod2D",
-"class": "IOGadgets2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/io_gadgets_2d/io_gadgets_2d.gd"
-}, {
-"base": "IOMethod2D",
-"class": "IOHub2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/io_hub_2d/io_hub_2d.gd"
-}, {
-"base": "Node2D",
-"class": "IOMethod2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/io_method_2d/io_method_2d.gd"
-}, {
 "base": "Reference",
 "class": "Icons",
 "language": "GDScript",
@@ -463,11 +443,6 @@ _global_script_classes=[ {
 "class": "InputEventSingleScreenTouch",
 "language": "GDScript",
 "path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
-}, {
-"base": "BaseSlot2D",
-"class": "InputSlot2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/input_slot_2d/input_slot_2d.gd"
 }, {
 "base": "Reference",
 "class": "InspectorControls",
@@ -528,11 +503,6 @@ _global_script_classes=[ {
 "class": "Modifiers",
 "language": "GDScript",
 "path": "res://addons/modifiers/modifiers.gd"
-}, {
-"base": "BaseSlot2D",
-"class": "OutputSlot2D",
-"language": "GDScript",
-"path": "res://addons/io_method/classes/output_slot_2d/output_slot_2d.gd"
 }, {
 "base": "Resource",
 "class": "PhysicsLayers",
@@ -703,7 +673,6 @@ _global_script_class_icons={
 "BaseGameObject": "",
 "BaseGameSystem": "",
 "BaseGameWorld": "",
-"BaseSlot2D": "res://addons/io_method/classes/base_slot_2d/base_slot_2d.png",
 "BeatPlayer": "",
 "Behavior": "",
 "BitFlag": "",
@@ -775,9 +744,6 @@ _global_script_class_icons={
 "Geometry2D": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
-"IOGadgets2D": "res://addons/io_method/classes/io_gadgets_2d/io_gadgets_2d.png",
-"IOHub2D": "res://addons/io_method/classes/io_hub_2d/io_hub_2d.png",
-"IOMethod2D": "",
 "Icons": "",
 "Inflector": "",
 "InputEventMultiScreenDrag": "",
@@ -786,7 +752,6 @@ _global_script_class_icons={
 "InputEventSingleScreenDrag": "",
 "InputEventSingleScreenTap": "",
 "InputEventSingleScreenTouch": "",
-"InputSlot2D": "res://addons/io_method/classes/input_slot_2d/input_slot_2d.png",
 "InspectorControls": "",
 "InspectorGadget": "",
 "InspectorGadgetBase": "",
@@ -799,7 +764,6 @@ _global_script_class_icons={
 "MixMode": "res://addons/modifiers/icon_modifiers.svg",
 "MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
 "Modifiers": "res://addons/modifiers/icon_modifiers.svg",
-"OutputSlot2D": "res://addons/io_method/classes/output_slot_2d/output_slot_2d.png",
 "PhysicsLayers": "",
 "Player": "",
 "PoissonDiscSampling": "",
@@ -862,6 +826,8 @@ modules="org/godotengine/godot/Vibration"
 config/name="HexagonEngine"
 config/description="Cinema enters game console"
 run/main_scene="res://HexagonEngineCore.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Perkedel Technologies/Hexagon Engine"
 boot_splash/image="res://Sprites/HexagonEngineBootSplash - Whait.png"
 boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
 config/icon="res://Sprites/HexagonEngineSign.png"
@@ -872,6 +838,7 @@ config/quit_on_go_back=false
 [autoload]
 
 Singletoner="*res://Scripts/Singletoner.gd"
+Settingers="*res://Scripts/Settingers.gd"
 Kixlonzing="*res://Scripts/Kixlonzing.gd"
 IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
 LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
@@ -911,7 +878,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "Holepunch", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "explore-editor-theme", "extend", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "notes_tab", "opus", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "randomAudioStreamPlayer", "replicator", "rmsmartshape", "scale_importer", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "tile_spawner", "time-tracker", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "Holepunch", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "explore-editor-theme", "extend", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "notes_tab", "opus", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "randomAudioStreamPlayer", "replicator", "rmsmartshape", "scale_importer", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "terminal", "tile_spawner", "time-tracker", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
@@ -1101,7 +1068,7 @@ quality/intended_usage/framebuffer_allocation.mobile=2
 threads/thread_model=2
 vram_compression/import_etc=true
 quality/subsurface_scattering/quality=2
-environment/default_clear_color=Color( 0.0666667, 0.168627, 0.317647, 1 )
+environment/default_clear_color=Color( 0.0392157, 0.0509804, 0.360784, 1 )
 quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"
 

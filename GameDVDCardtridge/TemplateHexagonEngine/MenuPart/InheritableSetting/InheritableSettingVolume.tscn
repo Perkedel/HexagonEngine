@@ -4,7 +4,6 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.gd" type="Script" id=2]
 [ext_resource path="res://Audio/EfekSuara/425728__moogy73__click01.wav" type="AudioStream" id=3]
 
-
 [node name="InheritableSettingVolume" type="HBoxContainer"]
 margin_right = 1924.0
 margin_bottom = 55.0
@@ -18,8 +17,8 @@ PlayTestoidFile = true
 TestoidAudio = ExtResource( 3 )
 
 [node name="LabelContainer" type="HBoxContainer" parent="."]
-margin_right = 958.0
-margin_bottom = 55.0
+margin_right = 960.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -27,40 +26,41 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="LabelContainer"]
-margin_right = 854.0
-margin_bottom = 55.0
+margin_right = 849.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )
 text = "Volume"
 valign = 1
 
 [node name="LabelValue" type="Label" parent="LabelContainer"]
-margin_left = 862.0
-margin_right = 958.0
-margin_bottom = 55.0
+margin_left = 853.0
+margin_right = 960.0
+margin_bottom = 63.0
 custom_fonts/font = ExtResource( 1 )
-text = "0 db"
+text = "0 dB"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 966.0
+margin_left = 964.0
 margin_right = 1924.0
-margin_bottom = 55.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HSlider" type="HSlider" parent="HBoxContainer"]
-margin_right = 958.0
-margin_bottom = 55.0
+margin_right = 960.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 min_value = -80.0
 max_value = 24.0
 
 [node name="Testoider" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 bus = "Dummy"
 [connection signal="changed" from="HBoxContainer/HSlider" to="." method="_on_HSlider_changed"]
 [connection signal="gui_input" from="HBoxContainer/HSlider" to="." method="_on_HSlider_gui_input"]

@@ -144,6 +144,8 @@ signal PressBackButton()
 func _on_BackButton_pressed():
 	StopTesting()
 	emit_signal("PressBackButton")
+	if $VBoxContainer/MenuSpaceArea/SettingArea.visible:
+		Settingers.SettingSave()
 	pass # Replace with function body.
 
 

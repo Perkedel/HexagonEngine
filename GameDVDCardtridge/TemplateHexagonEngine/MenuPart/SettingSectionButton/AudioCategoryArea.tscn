@@ -15,21 +15,22 @@ script = ExtResource( 2 )
 
 [node name="MasterVolume" parent="." index="0" instance=ExtResource( 3 )]
 margin_right = 1920.0
+margin_bottom = 63.0
 VariableName = "Master"
 VolumeBus = "Master"
 
 [node name="Music" parent="." index="1" instance=ExtResource( 3 )]
-margin_top = 63.0
+margin_top = 67.0
 margin_right = 1920.0
-margin_bottom = 118.0
+margin_bottom = 130.0
 VariableName = "Music"
 VolumeBus = "Music"
 TestoidPitch = 0.5
 
 [node name="SoundEffect" parent="." index="2" instance=ExtResource( 3 )]
-margin_top = 126.0
+margin_top = 134.0
 margin_right = 1920.0
-margin_bottom = 181.0
+margin_bottom = 197.0
 VariableName = "Sound Effect"
 VolumeBus = "SoundEffect"
 TestoidPitch = 1.5
@@ -79,6 +80,7 @@ margin_bottom = 244.0
 visible = false
 margin_top = 189.0
 margin_bottom = 439.0
+VU_counts = 16
 
 [node name="TestoidMusicPlayer" parent="." index="12"]
 visible = false
@@ -86,20 +88,21 @@ margin_top = 510.0
 margin_bottom = 577.0
 
 [node name="AudioTestMeter" parent="." index="13" instance=ExtResource( 5 )]
-margin_top = 189.0
+margin_top = 201.0
 margin_right = 1920.0
-margin_bottom = 244.0
+margin_bottom = 264.0
 VariableName = "VU meter"
 maximum = 1.0
 stepp = 0.001
 
 [node name="AudioSpectrum" parent="." index="14" instance=ExtResource( 7 )]
-margin_top = 252.0
-margin_bottom = 502.0
+margin_top = 268.0
+margin_bottom = 518.0
+VU_counts = 16
 
 [node name="AudioTestPlayer" parent="." index="15" instance=ExtResource( 6 )]
-margin_top = 510.0
-margin_bottom = 577.0
+margin_top = 522.0
+margin_bottom = 585.0
 VariableName = "J. Fontanez - Floaters"
 
 [node name="Testoid" type="AudioStreamPlayer" parent="." index="16"]

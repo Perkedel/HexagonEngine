@@ -10,6 +10,7 @@ export (bool) var isGamePaused
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +19,7 @@ func _ready():
 
 func Nonaktifkan_Sistem():
 	Kixlonzing.SaveKixlonz()
+	Settingers.SettingSave()
 	print("Quit Game!")
 	#get_tree().queue_delete(get_tree())
 	#get_tree().queue_free()

@@ -1,3 +1,4 @@
+tool
 extends HBoxContainer
 
 
@@ -17,6 +18,8 @@ export (String) var VolumeBus = "Dummy"
 export (AudioStream) var TestoidAudio
 export (float, 0.01, 32) var TestoidPitch = 1
 
+var VolumeHasLoaded = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,6 +28,10 @@ func _ready():
 	$Testoider.stream = TestoidAudio
 	$Testoider.bus = VolumeBus
 	$Testoider.pitch_scale = TestoidPitch
+	
+	VolumeLevel = AudioServer.get_bus_volume_db(AudioServer.get_bus_index(VolumeBus))
+	SetVolume(VolumeLevel)
+	VolumeHasLoaded = true
 	pass # Replace with function body.
 
 
@@ -46,20 +53,24 @@ func SetVolume(value : float) -> void:
 # signal ValueOfIt(value: float)
 signal ValueOfIt(value)
 func _on_HSlider_value_changed(value, valou):
-	VolumeLevel = value
-	if EmitVolumeSignal:
-		emit_signal("ValueOfIt", value)
-		pass
-	
-	if InitiativelyControlVolumeBus:
-		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(VolumeBus), value)
-		pass
-	print("Slider: " + String(value) + ", Valou: " + String(valou))
+	if VolumeHasLoaded:
+		VolumeLevel = value
+		if EmitVolumeSignal:
+			emit_signal("ValueOfIt", value)
+			pass
+		
+		if InitiativelyControlVolumeBus:
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index(VolumeBus), value)
+			Settingers.SettingData.AudioSetting[VolumeBus + "Volume"] = value
+			#Settingers.SettingSave()
+			pass
+		print("Slider: " + String(value) + ", Valou: " + String(valou))
 	pass # Replace with function body.
 
 signal HasChanged
 func _on_HSlider_changed():
-	emit_signal("HasChanged")
+	if VolumeHasLoaded:
+		emit_signal("HasChanged")
 	pass # Replace with function body.
 
 signal SliderReleased
@@ -69,7 +80,7 @@ func _on_HSlider_gui_input(event : InputEvent):
 			emit_signal("SliderReleased")
 			pass
 		
-		if PlayTestoidFile:
+		if PlayTestoidFile and VolumeHasLoaded:
 			$Testoider.play()
 			pass
 		pass

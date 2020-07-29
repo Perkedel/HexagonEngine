@@ -202,5 +202,6 @@ Used Assets and Tools!
 - https://github.com/WolfgangSenff/GodotFirebase/
 - https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
 - https://github.com/yalcin-ata/godot-android-plugin-firebase
+- https://docs.godotengine.org/en/stable/classes/class_file.html
 
 

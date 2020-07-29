@@ -173,12 +173,13 @@ margin_right = 519.0
 margin_bottom = 303.5
 theme = ExtResource( 10 )
 window_title = "Buka sebuah File"
+resizable = true
 mode = 0
 access = 2
 filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
 show_hidden_files = true
-current_dir = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }

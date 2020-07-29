@@ -1,0 +1,7 @@
+help
+echo aa
+help
+help --all
+ls
+dir
+mkdir TermTestoid
