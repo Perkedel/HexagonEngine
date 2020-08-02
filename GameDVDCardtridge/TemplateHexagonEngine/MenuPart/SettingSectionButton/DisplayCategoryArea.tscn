@@ -72,5 +72,8 @@ margin_top = 67.0
 margin_right = 1920.0
 margin_bottom = 130.0
 VariableName = "Vsync"
+[connection signal="visibility_changed" from="." to="." method="_on_DisplayCategoryArea_visibility_changed"]
 [connection signal="Statement" from="FullScreen" to="." method="_on_FullScreen_Statement"]
+[connection signal="visibility_changed" from="FullScreen" to="." method="_on_FullScreen_visibility_changed"]
 [connection signal="Statement" from="Vsync" to="." method="_on_Vsync_Statement"]
+[connection signal="visibility_changed" from="Vsync" to="." method="_on_Vsync_visibility_changed"]

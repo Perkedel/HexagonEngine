@@ -1,3 +1,5 @@
+tool
+
 extends PopupDialog
 
 
@@ -7,6 +9,7 @@ extends PopupDialog
 signal BackMenuButton
 signal ResetButton
 signal NextLevelButton
+export var ContentWindow = "Yay, you've completed just golf! congrats"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,13 +22,15 @@ func PopThisDialogWith(var sayWha:String):
 	pass
 
 func setDialogText(var sayWha:String):
-	$Contains/Say.text = sayWha
+	ContentWindow = sayWha
+	#$Contains/Say.text = sayWha
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$Contains/Say.text = ContentWindow
+	pass
 
 
 func _on_BackMenu_pressed():

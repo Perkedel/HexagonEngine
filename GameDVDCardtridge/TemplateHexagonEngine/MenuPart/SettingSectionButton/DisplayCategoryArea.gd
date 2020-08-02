@@ -9,11 +9,15 @@ extends VBoxContainer
 # var b = "text"
 export (bool) var DisplaySettingLoaded = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func reload():
 	$FullScreen.ForceValue(OS.is_window_fullscreen())
 	$Vsync.ForceValue(OS.vsync_enabled)
 	DisplaySettingLoaded = true
+	pass
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	reload()
 	pass # Replace with function body.
 
 
@@ -37,4 +41,21 @@ func _on_Vsync_Statement(value1):
 		Settingers.SettingData.DisplaySetting.Vsync = value1
 		#Settingers.SettingSave()
 		pass
+	pass # Replace with function body.
+
+
+func _on_FullScreen_visibility_changed():
+	#DisplaySettingLoaded = false
+	pass # Replace with function body.
+
+
+func _on_Vsync_visibility_changed():
+	#DisplaySettingLoaded = false
+	#reload()
+	pass # Replace with function body.
+
+
+func _on_DisplayCategoryArea_visibility_changed():
+	DisplaySettingLoaded = false
+	reload()
 	pass # Replace with function body.

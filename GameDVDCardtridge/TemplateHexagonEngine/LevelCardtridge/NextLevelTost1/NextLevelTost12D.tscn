@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/NextLevelTost1/NextLevelTost12D.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/YayComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/JustAGolfLevelCard.tscn" type="PackedScene" id=4]
+
+[node name="NextLevelTost12D" type="Node2D"]
+script = ExtResource( 1 )
+NextLevelPath = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="NextUI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="CanvasLayer/NextUI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -691.0
+margin_top = -147.0
+margin_right = 690.0
+margin_bottom = 148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelCompleteNow" type="Button" parent="CanvasLayer/NextUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -266.0
+margin_top = -77.0
+margin_right = 266.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level COmplete Now"
+
+[node name="YayComplete" parent="CanvasLayer" instance=ExtResource( 2 )]
+margin_left = -375.0
+margin_top = 128.317
+margin_right = 374.0
+margin_bottom = 385.317
+ContentWindow = "Yay you've level complete! cool and good"
+[connection signal="pressed" from="CanvasLayer/NextUI/LevelCompleteNow" to="." method="_on_LevelCompleteNow_pressed"]
+[connection signal="BackMenuButton" from="CanvasLayer/YayComplete" to="." method="_on_YayComplete_BackMenuButton"]
+[connection signal="NextLevelButton" from="CanvasLayer/YayComplete" to="." method="_on_YayComplete_NextLevelButton"]
+[connection signal="ResetButton" from="CanvasLayer/YayComplete" to="." method="_on_YayComplete_ResetButton"]

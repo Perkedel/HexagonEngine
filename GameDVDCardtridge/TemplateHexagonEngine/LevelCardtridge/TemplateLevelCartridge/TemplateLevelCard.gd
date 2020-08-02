@@ -37,6 +37,7 @@ func _process(delta):
 signal PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
 signal canThisLevelPlayEvenOutOfFocus(mayI)
+
 func LoadThisLevelOfThat():
 	
 	emit_signal("PleaseLoadThisLevelOf", Your3DSpaceLevel.get_path(), Your2DSpaceLevel.get_path(), LevelBannerThumbnail.get_path(), LevelTitleg, LevelDescription)
@@ -45,8 +46,12 @@ func LoadThisLevelOfThat():
 	emit_signal("canThisLevelPlayEvenOutOfFocus",KeepPlayingEvenOutOfFocus)
 	pass
 
-
-func _on_PlayTheLevelButton_pressed():
+func pressLoadLevelButton():
 	print("Play The Level Button")
 	LoadThisLevelOfThat()
+	pass
+
+
+func _on_PlayTheLevelButton_pressed():
+	pressLoadLevelButton()
 	pass # Replace with function body.

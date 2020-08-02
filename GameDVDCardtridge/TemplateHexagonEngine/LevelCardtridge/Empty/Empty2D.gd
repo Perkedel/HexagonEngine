@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
+signal reportNextLevel(cardWhich)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

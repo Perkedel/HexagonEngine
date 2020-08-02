@@ -2,7 +2,23 @@ extends Node
 
 # Are you coding son
 # https://youtu.be/d0B770ZM8Ic
+# https://www.youtube.com/watch?v=L9Zekkb4ZXc
+# https://godotengine.org/asset-library/asset/157
+# YOINK! your coding is now mine! jk, it's still yours.
 
+var DefaultSetting = {
+	Nama = "a Dasandimian",
+	AudioSetting = {
+		MasterVolume = 0,
+		MusicVolume = 0,
+		SoundEffectVolume = 0,
+		DummyVolume = 0,
+	},
+	DisplaySetting = {
+		FullScreen = OS.is_window_fullscreen(),
+		Vsync = OS.vsync_enabled,
+	}
+}
 onready var SettingData = {
 	Nama = "a Dasandimian",
 	AudioSetting = {
@@ -20,6 +36,7 @@ var SettingFile
 var SettingFolder
 const SettingDirectory = "user://Pengaturan/"
 var SettingPath = SettingDirectory + "Setelan.simpan"
+var SettingJson = SettingDirectory + "Setelan.json"
 
 var TheFirstTime : bool = false
 # Declare member variables here. Examples:
@@ -72,25 +89,25 @@ func SettingLoad():
 		pass
 	# ApplySetting()
 	SettingFile.close()
+	
+	pass
+
+func ResetFirstTimer():
+	SettingData = DefaultSetting
+	
+	for manyAudioVol in AudioServer.get_bus_count():
+			SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
+			pass
+	pass
+
+func RenameGlobally(nama:String):
+	SettingData.Nama = nama
 	pass
 
 func SettingSave():
 	
 	if TheFirstTime:
-		SettingData = {
-			Nama = "a Dasandimian",
-			AudioSetting = {
-				
-			},
-			DisplaySetting = {
-				FullScreen = OS.is_window_fullscreen(),
-				Vsync = OS.is_vsync_enabled(),
-			}
-		}
-		
-		for manyAudioVol in AudioServer.get_bus_count():
-			SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
-			pass
+		ResetFirstTimer()
 		pass
 	
 	SettingFolder = Directory.new()
@@ -103,12 +120,25 @@ func SettingSave():
 	match(werror):
 		OK:
 			SettingFile.store_var(SettingData)
-			
 			SettingFile.close()
-			print("Setting Saved")
+			print("Setting Bin Saved")
 			pass
 		_:
-			print('Werror Saving File')
+			print('Werror Saving File Bin code ' + werror)
+			pass
+	SettingFile = File.new()
+	werror = SettingFile.open(SettingJson, File.WRITE)
+	match(werror):
+		OK:
+			# https://godotengine.org/asset-library/asset/157
+			# https://www.youtube.com/watch?v=L9Zekkb4ZXc
+			var SettingJsonBeautiful = JSONBeautifier.beautify_json(to_json(SettingData))
+			SettingFile.store_string(SettingJsonBeautiful)
+			SettingFile.close()
+			print("Setting Json Saved")
+			pass
+		_:
+			print('Werror Saving File Json code ' + werror)
 			pass
 	pass
 

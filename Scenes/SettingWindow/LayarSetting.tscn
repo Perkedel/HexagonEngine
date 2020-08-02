@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/SettingWindow/LayarSetting.gd" type="Script" id=2]
+
+[node name="LayarSetting" type="HBoxContainer"]
+margin_top = 104.0
+margin_right = 1198.0
+margin_bottom = 167.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullSkren" type="CheckButton" parent="."]
+margin_right = 597.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "FullScreen"
+align = 1
+expand_icon = true
+
+[node name="Vsync" type="CheckButton" parent="."]
+margin_left = 601.0
+margin_right = 1198.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Vsync"
+align = 1
+expand_icon = true
+[connection signal="visibility_changed" from="." to="." method="_on_LayarSetting_visibility_changed"]
+[connection signal="toggled" from="FullSkren" to="." method="_on_FullSkren_toggled"]
+[connection signal="toggled" from="Vsync" to="." method="_on_Vsync_toggled"]

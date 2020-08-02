@@ -17,6 +17,7 @@ onready var isItWalking = false
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
+signal reportNextLevel(cardWhich)
 signal BackMenuButton
 signal ResetButton
 signal NextLevelButton

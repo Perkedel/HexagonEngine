@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture" id=15]
 [ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=17]
+[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=18]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -32,11 +33,21 @@ margin_bottom = 90.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="TitleBar"]
-margin_right = 1920.0
+margin_right = 1416.0
 margin_bottom = 90.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Hexagon DVD Select"
+
+[node name="AccountButton" type="Button" parent="TitleBar"]
+margin_left = 1420.0
+margin_right = 1920.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = ExtResource( 18 )
+text = "Nama On it"
+icon = ExtResource( 4 )
+expand_icon = true
 
 [node name="ItemList" type="ItemList" parent="."]
 margin_top = 94.0
@@ -86,6 +97,7 @@ custom_fonts/font = ExtResource( 7 )
 text = "Shutdown"
 align = 1
 valign = 1
+[connection signal="pressed" from="TitleBar/AccountButton" to="." method="_on_AccountButton_pressed"]
 [connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
 [connection signal="pressed" from="HBoxContainer/PowerOffButton" to="." method="_on_PowerOffButton_pressed"]

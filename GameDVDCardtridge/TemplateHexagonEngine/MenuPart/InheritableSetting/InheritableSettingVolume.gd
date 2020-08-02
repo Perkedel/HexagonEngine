@@ -85,3 +85,10 @@ func _on_HSlider_gui_input(event : InputEvent):
 			pass
 		pass
 	pass # Replace with function body.
+
+func _on_InheritableSettingVolume_visibility_changed():
+	VolumeHasLoaded = false
+	VolumeLevel = AudioServer.get_bus_volume_db(AudioServer.get_bus_index(VolumeBus))
+	SetVolume(VolumeLevel)
+	VolumeHasLoaded = true
+	pass # Replace with function body.

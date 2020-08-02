@@ -24,6 +24,7 @@ export (int) var SelectedFileAccess
 signal reportHP(level)
 signal reportScore(number)
 signal reportScoreIcon(Texturer)
+signal reportNextLevel(cardWhich)
 #todo: reportTexture for score icon
 
 func TestoidDummyFileMake():

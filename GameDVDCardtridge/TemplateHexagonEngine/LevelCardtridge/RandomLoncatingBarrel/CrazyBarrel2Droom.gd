@@ -20,6 +20,7 @@ export (PackedScene) var PrussieButtons = load("res://GameDVDCardtridge/Template
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
+signal reportNextLevel(cardWhich)
 
 func ApplyResetGame():
 #	for i in $"UI-Standpoint/UI Game/Contains/ButtonSetsAccountable".get_child_count():

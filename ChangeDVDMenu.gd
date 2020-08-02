@@ -59,3 +59,22 @@ func _notification(what): #add heurestic of changeDVD menu! check visible of cha
 			pass
 		pass
 	pass
+
+
+func _on_JustWorkingMenu_openSetting():
+	$JustWorkingSetting.popup()
+	pass # Replace with function body.
+
+
+func _on_JustWorkingSetting_confirmed():
+	$JustWorkingMenu.reloadAccountName()
+	pass # Replace with function body.
+
+
+func _on_JustWorkingSetting_custom_action(action):
+	pass # Replace with function body.
+
+
+func _on_JustWorkingSetting_popup_hide():
+	$JustWorkingMenu.reloadAccountName()
+	pass # Replace with function body.

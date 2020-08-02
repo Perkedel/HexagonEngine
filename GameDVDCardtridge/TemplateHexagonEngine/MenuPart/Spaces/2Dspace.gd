@@ -20,6 +20,7 @@ var SceneHasLoaded = true
 var ConnectedSignal = false
 signal TellHP(Level)
 signal TellScore(value)
+signal TellLevelCard(path)
 
 # These are easiner from that Background Loading document https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
 
@@ -166,9 +167,11 @@ func ConnecStatusSignal():
 #			if !Now2DSpaceLevel.is_connected("reportScore",self,"_EmitStatuso_Score"):
 #				Now2DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
 #				pass
+			var werrorSignal
 			Now2DSpaceLevel.connect("reportHP",self,"_EmitStatuso_HP")
 			Now2DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
-#			ConnectedSignal = true
+			werrorSignal = Now2DSpaceLevel.connect("reportNextLevel", self, "_On_TellNextLevel")
+			ConnectedSignal = true
 			pass
 		else:
 			printerr("Werror 2D connect")
@@ -216,4 +219,8 @@ func _EmitStatuso_HP(HPleveli):
 func _EmitStatuso_Score(ScoreLeveli):
 	emit_signal("TellScore",ScoreLeveli)
 	#print("Score Leveli 2D = " + String(ScoreLeveli))
+	pass
+
+func _on_TellNextLevel(LevelCard):
+	emit_signal("TellLevelCard",LevelCard)
 	pass

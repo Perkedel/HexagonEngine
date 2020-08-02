@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TostLeveling/TostLeveling.gd" type="Script" id=1]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=3]
+
+[node name="TostLeveling" type="Node"]
+script = ExtResource( 1 )
+
+[node name="LevelSlot" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Optioner" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer"]
+margin_top = 876.0
+margin_right = 1920.0
+margin_bottom = 976.0
+rect_min_size = Vector2( 0, 100 )
+mouse_filter = 2
+alignment = 1
+
+[node name="Unload" type="Button" parent="CanvasLayer/UI/VBoxContainer/Optioner"]
+margin_right = 380.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Unload"
+
+[node name="Level 1" type="Button" parent="CanvasLayer/UI/VBoxContainer/Optioner"]
+margin_left = 384.0
+margin_right = 764.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Level 1"
+
+[node name="Level 2" type="Button" parent="CanvasLayer/UI/VBoxContainer/Optioner"]
+margin_left = 768.0
+margin_right = 1148.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="CanvasLayer/UI/VBoxContainer/Optioner"]
+margin_left = 1152.0
+margin_right = 1532.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Level 3"
+
+[node name="Level 4" type="Button" parent="CanvasLayer/UI/VBoxContainer/Optioner"]
+margin_left = 1536.0
+margin_right = 1920.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Level 4"
+
+[node name="Menu404" parent="CanvasLayer/UI/VBoxContainer" instance=ExtResource( 3 )]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Unload" to="." method="_on_Unload_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 1" to="." method="_on_Level_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 2" to="." method="_on_Level_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 3" to="." method="_on_Level_3_pressed"]

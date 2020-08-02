@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ChangeDVDMenu.gd" type="Script" id=1]
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/JustWorkingSetting.tscn" type="PackedScene" id=4]
 
 [node name="ChangeDVDMenu" type="Control"]
 pause_mode = 2
@@ -28,6 +29,13 @@ dialog_text = "Are you sure to shutdown?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="JustWorkingSetting" parent="." instance=ExtResource( 4 )]
+popup_exclusive = true
 [connection signal="ItemClickEnter" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_ItemClickEnter"]
 [connection signal="PressShutDown" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_PressShutDown"]
+[connection signal="openSetting" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_openSetting"]
 [connection signal="confirmed" from="JustWorkingAreYouSure" to="." method="_on_JustWorkingAreYouSure_confirmed"]
+[connection signal="confirmed" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_confirmed"]
+[connection signal="custom_action" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_custom_action"]
+[connection signal="popup_hide" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_popup_hide"]
