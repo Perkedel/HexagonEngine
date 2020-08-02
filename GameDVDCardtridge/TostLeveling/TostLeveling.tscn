@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TostLeveling/TostLeveling.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [node name="TostLeveling" type="Node"]
 script = ExtResource( 1 )
@@ -82,7 +91,17 @@ custom_fonts/font = ExtResource( 2 )
 text = "Level 4"
 
 [node name="Menu404" parent="CanvasLayer/UI/VBoxContainer" instance=ExtResource( 3 )]
+
+[node name="ChangeDVDButton" parent="CanvasLayer/UI/VBoxContainer/Menu404" index="0"]
+custom_fonts/font = SubResource( 1 )
+
+[node name="ExitGameButton" parent="CanvasLayer/UI/VBoxContainer/Menu404" index="1"]
+custom_fonts/font = SubResource( 1 )
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Unload" to="." method="_on_Unload_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 1" to="." method="_on_Level_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 2" to="." method="_on_Level_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Optioner/Level 3" to="." method="_on_Level_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
+
+[editable path="CanvasLayer/UI/VBoxContainer/Menu404"]

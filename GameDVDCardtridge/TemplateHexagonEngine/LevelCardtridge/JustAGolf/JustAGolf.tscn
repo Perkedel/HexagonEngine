@@ -69,6 +69,7 @@ margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 32, 32 )
+mouse_filter = 2
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -85,6 +86,7 @@ margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 32, 32 )
+mouse_filter = 2
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -103,6 +105,7 @@ margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 274.0
 rect_pivot_offset = Vector2( 32, 0 )
+mouse_filter = 2
 max_value = 10.0
 step = 0.0
 texture_under = ExtResource( 9 )

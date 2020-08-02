@@ -116,6 +116,9 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		11:
 			LoadDVD = load("res://GameDVDCardtridge/AnTransitionations/AnTransitionation.tscn")
 			pass
+		12:
+			LoadDVD = load("res://GameDVDCardtridge/TostLeveling/TostLeveling.tscn")
+			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass
