@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/HexagonEngineSymbolVeryLarge.png" type="Texture" id=2]
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/HexagonEnginev3PauseMainMenu.gd" type="Script" id=3]
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=4]
+
+[node name="HexagonEnginev3PauseMainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KonMenu" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleHeader" type="HBoxContainer" parent="KonMenu"]
+margin_right = 1920.0
+margin_bottom = 125.0
+
+[node name="Icon" type="TextureRect" parent="KonMenu/TitleHeader"]
+margin_right = 200.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 200, 125 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="KonMenu/TitleHeader"]
+margin_left = 204.0
+margin_right = 1920.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 125 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 1 )
+text = "Hexagon Engine"
+valign = 1
+
+[node name="Spacing" type="Control" parent="KonMenu"]
+margin_top = 129.0
+margin_right = 1920.0
+margin_bottom = 826.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuNavigation" type="Control" parent="KonMenu"]
+margin_top = 830.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 0, 250 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="KonMenu/MenuNavigation"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+follow_focus = true
+scroll_vertical_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="KonMenu/MenuNavigation/ScrollContainer"]
+margin_right = 1920.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/GridContainer" instance=ExtResource( 4 )]

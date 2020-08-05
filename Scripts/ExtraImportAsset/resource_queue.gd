@@ -1,3 +1,5 @@
+signal iAmReady
+
 #https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
 var thread
 var mutex
@@ -74,7 +76,7 @@ func is_ready(path):
 		ret = false
 
 	_unlock("is_ready")
-
+	emit_signal("iAmReady")
 	return ret
 
 func _wait_for_resource(res, path):

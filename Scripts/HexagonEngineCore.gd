@@ -81,7 +81,7 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 	print("Receive DVD Click Index No. " + String(Index))
 	match Index:
 		0:
-			LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn")
+			LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn")
 			pass
 		1:
 			LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
@@ -105,7 +105,7 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 			LoadDVD = load("res://GameDVDCardtridge/Splitscrin/Splitscrin Taris.tscn")
 			pass
 		8:
-			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
+			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn")
 			pass
 		9:
 			LoadDVD = load("res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn")

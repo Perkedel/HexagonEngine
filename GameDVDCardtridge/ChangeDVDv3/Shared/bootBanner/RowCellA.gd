@@ -1,5 +1,7 @@
+tool
 extends HBoxContainer
 
+# Rimborn please add "Made with -Unity- Godot" here
 export(Texture) var imageFile = load("res://Sprites/HexagonEngineLogo.png")
 
 export(float) var startAppearTime = .3
@@ -24,13 +26,17 @@ func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$Splash.texture = imageFile
+	pass
 
 
 func _on_Tween_tween_completed(object, key):
 	pass # Replace with function body.
 
+func startNow():
+	tween.start()
+	pass
 
 func _on_Tween_tween_all_completed():
 	emit_signal("ImDone")

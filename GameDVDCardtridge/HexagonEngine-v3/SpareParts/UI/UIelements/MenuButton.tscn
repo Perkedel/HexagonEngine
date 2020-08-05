@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.gd" type="Script" id=1]
+
+[node name="MenuButton" type="Button"]
+margin_right = 400.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
