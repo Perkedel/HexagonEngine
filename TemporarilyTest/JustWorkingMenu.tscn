@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=17]
 [ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=18]
 [ext_resource path="res://Sprites/HexagonEngineSign_Bekgrond.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/MetererBekgron.png" type="Texture" id=20]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -58,7 +59,7 @@ hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false, "Prosotipe Platformer 3D Miziziz", ExtResource( 15 ), false, "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788", ExtResource( 16 ), false, "An Transitioning like AHiT & SM64", ExtResource( 17 ), false, "Tost Leveling", ExtResource( 19 ), false ]
+items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false, "Prosotipe Platformer 3D Miziziz", ExtResource( 15 ), false, "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788", ExtResource( 16 ), false, "An Transitioning like AHiT & SM64", ExtResource( 17 ), false, "Tost Leveling", ExtResource( 19 ), false, "Quine", ExtResource( 20 ), false ]
 fixed_icon_size = Vector2( 128, 128 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

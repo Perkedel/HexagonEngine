@@ -119,6 +119,9 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		12:
 			LoadDVD = load("res://GameDVDCardtridge/TostLeveling/TostLeveling.tscn")
 			pass
+		13:
+			LoadDVD = load("res://GameDVDCardtridge/ExportMyself/ExportMyself.tscn")
+			pass
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass
