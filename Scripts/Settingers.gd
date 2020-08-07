@@ -1,10 +1,12 @@
 extends Node
 
+var tempAreYouSureDialog = preload("res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn")
 # Are you coding son
 # https://youtu.be/d0B770ZM8Ic
 # https://www.youtube.com/watch?v=L9Zekkb4ZXc
 # https://godotengine.org/asset-library/asset/157
 # YOINK! your coding is now mine! jk, it's still yours.
+onready var useJSON = true
 
 var DefaultSetting = {
 	Nama = "a Dasandimian",
@@ -17,10 +19,15 @@ var DefaultSetting = {
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),
 		Vsync = OS.vsync_enabled,
-	}
+	},
+	ControllerMappings = {
+		
+	},
+	PleaseResetMe = false
 }
 onready var SettingData = {
 	Nama = "a Dasandimian",
+	PleaseResetMe = false,
 	AudioSetting = {
 		MasterVolume = 0,
 		MusicVolume = 0,
@@ -30,7 +37,9 @@ onready var SettingData = {
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),
 		Vsync = OS.vsync_enabled,
-	}
+	},
+	ControllerMappings = {},
+	
 }
 var SettingFile
 var SettingFolder
@@ -43,9 +52,24 @@ var TheFirstTime : bool = false
 # var a = 2
 # var b = "text"
 
+enum DialogReason  {Nothing, ResetMe}
+var SelectDialogReason
+func prepareDialog():
+	var instanceDialog = tempAreYouSureDialog.instance()
+	add_child(instanceDialog)
+	
+	pass
+
+func _dialog_Yes():
+	pass
+
+func _dialog_No():
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	prepareDialog()
+	
 	SettingLoad()
 	pass # Replace with function body.
 
@@ -65,7 +89,7 @@ func ApplySetting():
 
 func SettingLoad():
 	SettingFile = File.new()
-	if SettingFile.file_exists(SettingPath):
+	if SettingFile.file_exists(SettingPath) && not useJSON:
 		var werror = SettingFile.open(SettingPath, File.READ)
 		match(werror):
 			OK:
@@ -75,10 +99,25 @@ func SettingLoad():
 				
 				ApplySetting()
 				SettingFile.close()
-				print("Setting Loaded")
+				print("Setting Loaded BIN Dictionary")
 				pass
 			_:
-				print('Werror Loading File')
+				print('Werror Loading File BIN Dictionary')
+				TheFirstTime = true
+				pass
+		pass
+	elif SettingFile.file_exists(SettingJson) && useJSON:
+		var werror = SettingFile.open(SettingJson, File.READ)
+		match(werror):
+			OK:
+				TheFirstTime = false
+				SettingData = parse_json(SettingFile.get_as_text())
+				
+				ApplySetting()
+				SettingFile.close()
+				print("Setting Loaded JSON")
+			_:
+				print('Werror Loading File JSON')
 				TheFirstTime = true
 				pass
 		pass
@@ -89,7 +128,35 @@ func SettingLoad():
 		pass
 	# ApplySetting()
 	SettingFile.close()
-	
+	#checkForResetMe() #doesn't work. Singleton cannot display driver?
+	pass
+
+var ResetSay = "Reset Factory DIP switch is on! Re"
+func checkForResetMe():
+	if SettingData["PleaseResetMe"]:
+		SelectDialogReason = DialogReason.ResetMe
+		var theDialog = get_node("AreYouSureDialog")
+		theDialog.SpawnDialogWithText(ResetSay)
+		var whatAnswer = yield(theDialog, "YesOrNoo")
+		if whatAnswer:
+			engageFactoryReset()
+		pass
+	pass
+
+func engageFactoryReset():
+	TheFirstTime = true
+	SettingSave()
+	ApplySetting()
+	pass
+
+func ResetControllerMaps():
+	InputMap.load_from_globals()
+	var Actions = InputMap.get_actions()
+	var EachActionContains
+	#SettingData.ControllerMappings = Actions
+	for everye in Actions:
+		EachActionContains = InputMap.get_action_list(everye)
+		SettingData.ControllerMappings[String(everye)] = EachActionContains
 	pass
 
 func ResetFirstTimer():
@@ -98,6 +165,10 @@ func ResetFirstTimer():
 	for manyAudioVol in AudioServer.get_bus_count():
 			SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
 			pass
+	
+	ResetControllerMaps()
+	
+	TheFirstTime = false
 	pass
 
 func RenameGlobally(nama:String):

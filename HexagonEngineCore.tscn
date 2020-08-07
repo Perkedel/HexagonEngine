@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DVDCartridgeSlot.gd" type="Script" id=3]
 [ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
@@ -25,6 +26,8 @@ layer = 11
 visible = false
 mouse_filter = 1
 
+[node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource( 5 )]
+
 [node name="SystemGut" type="Node" parent="."]
 pause_mode = 2
 
@@ -43,3 +46,4 @@ use_threads = true
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
 [connection signal="ItemClickEnter" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnter"]
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]
+[connection signal="YesOrNoo" from="MetaMenu/AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesOrNoo"]

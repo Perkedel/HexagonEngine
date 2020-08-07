@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.gd" type="Script" id=1]
 [ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
 [ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
 
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0, 0.294118, 0.662745 )
+
 [node name="AreYouSureDialog" type="Popup"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -22,6 +26,7 @@ __meta__ = {
 self_modulate = Color( 1, 1, 1, 0.364706 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 anchor_right = 1.0
@@ -29,7 +34,7 @@ anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 margin_right = 1134.0
-margin_bottom = 453.0
+margin_bottom = 457.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
@@ -46,7 +51,7 @@ margin_bottom = 561.0
 rect_min_size = Vector2( 0, 100 )
 
 [node name="Yes" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
-margin_right = 563.0
+margin_right = 565.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -57,7 +62,7 @@ custom_colors/font_color_pressed = Color( 0.0901961, 0, 0, 1 )
 text = "YES"
 
 [node name="No" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
-margin_left = 571.0
+margin_left = 569.0
 margin_right = 1134.0
 margin_bottom = 100.0
 size_flags_horizontal = 3

@@ -17,7 +17,7 @@ export(PackedScene) var LoadDVD
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	checkForResetMe()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -143,4 +143,24 @@ func _on_DVDCartridgeSlot_DVDTryLoad():
 
 func _on_DVDCartridgeSlot_NoDisc():
 	DoChangeDVDNow()
+	pass # Replace with function body.
+
+enum DialogReason {Nothing, ResetMe}
+var SelectDialogReason
+var ResetSay = "Reset Factory DIP switch is on! Reset setting?"
+func checkForResetMe():
+	if Settingers.SettingData["PleaseResetMe"]:
+		SelectDialogReason = DialogReason.ResetMe
+		var theDialog = $MetaMenu/AreYouSureDialog
+		theDialog.SpawnDialogWithText(ResetSay)
+		var whatAnswer = yield(theDialog, "YesOrNoo")
+		if whatAnswer:
+			Settingers.engageFactoryReset()
+		else:
+			Settingers.SettingData["PleaseResetMe"] = false
+		pass
+	pass
+
+func _on_AreYouSureDialog_YesOrNoo(which):
+	
 	pass # Replace with function body.
