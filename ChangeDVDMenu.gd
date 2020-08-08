@@ -18,6 +18,7 @@ signal ShutdownButton
 
 signal ShutdownHexagonEngineNow
 func _on_JustWorkingAreYouSure_confirmed():
+	hide()
 	emit_signal("ShutdownHexagonEngineNow")
 	pass # Replace with function body.
 

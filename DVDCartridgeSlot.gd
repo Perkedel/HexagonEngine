@@ -8,7 +8,7 @@ signal NoDisc()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	CheckDVD()
+	#CheckDVD()
 	ConnectCartridge()
 	pass # Replace with function body.
 
@@ -43,9 +43,11 @@ signal Shutdown_Exec()
 func ExecuteChangeDVD():
 	CheckDVD()
 	if InstanceDVD:
+		remove_child(InstanceDVD)
 		InstanceDVD.queue_free()
+		#InstanceDVD.free()
 		pass
-	ExecuteRemoveAllDVDs()
+	ExecuteRemoveAllDVDs() # Make sure they are empty really
 	emit_signal("ChangeDVD_Exec")
 	pass
 func ExecuteShutdown():
@@ -53,9 +55,13 @@ func ExecuteShutdown():
 	pass
 func ExecuteRemoveAllDVDs():
 	for leftovers in get_children():
-		if leftovers.is_connected("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec"): leftovers.disconnect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
-		if leftovers.is_connected("Shutdown_Exec", self, "_on_Shutdown_Exec"): leftovers.disconnect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		if leftovers.is_connected("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec"):
+			leftovers.disconnect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
+		if leftovers.is_connected("Shutdown_Exec", self, "_on_Shutdown_Exec"):
+			leftovers.disconnect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		remove_child(leftovers)
 		leftovers.queue_free()
+		#leftovers.free()
 		pass
 	pass
 

@@ -24,6 +24,13 @@ func preloadGameplayHUDMenu(scened:PackedScene):
 func preloadJustPauseMenu(scened:PackedScene):
 	JustPauseMenuNode.add_child(scened.instance())
 
+func backToMainMenu():
+	PauseMainMenuNode.show()
+	PauseMainMenuNode.get_child(0).preAnimate()
+	GameplayHUDMenuNode.hide()
+	JustPauseMenuNode.hide()
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

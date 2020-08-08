@@ -5,6 +5,8 @@ onready var UIplace = $UICanvas/UIplace
 export(PackedScene) var PauseMainMenuFile
 export(PackedScene) var GameplayHUDMenuFile
 export(PackedScene) var JustPauseMenuFile
+
+export(bool) var StartFromGameHUD = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

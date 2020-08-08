@@ -766,7 +766,7 @@ _global_script_class_icons={
 "Joystick": "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png",
 "MessageDispatcher": "",
 "MessageDispatcherWrapper": "",
-"MidiPlayer": "res://addons/midi/icon.png",
+"MidiPlayer": "",
 "MixMode": "res://addons/modifiers/icon_modifiers.svg",
 "MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
 "Modifiers": "res://addons/modifiers/icon_modifiers.svg",
@@ -846,8 +846,6 @@ config/quit_on_go_back=false
 Singletoner="*res://Scripts/Singletoner.gd"
 Settingers="*res://Scripts/Settingers.gd"
 Kixlonzing="*res://Scripts/Kixlonzing.gd"
-IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
-LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
@@ -858,6 +856,9 @@ GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 GDDlg_DialogDB="*res://addons/gddlg/GDDlg_DialogDB.gd"
 RestHandler="*res://addons/github-integration/scripts/RestHandler.gd"
 NoteValue="*res://addons/SimpleSampler/note_value.gd"
+IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
+LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
+AutoSpeaker="*res://Scripts/AutoSpeaker.gd"
 
 [compression]
 

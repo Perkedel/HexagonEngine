@@ -76,3 +76,5 @@ __meta__ = {
 }
 
 [node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/GridContainer" instance=ExtResource( 4 )]
+
+[node name="aTween" type="Tween" parent="."]

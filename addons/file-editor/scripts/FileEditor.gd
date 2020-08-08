@@ -20,6 +20,9 @@ onready var SplitEditorContainer = $FileEditorContainer/SplitContainer/EditorCon
 onready var WrapBTN = $FileEditorContainer/SplitContainer/EditorContainer/HBoxContainer/wrap_button
 onready var MapBTN = $FileEditorContainer/SplitContainer/EditorContainer/HBoxContainer/map_button
 
+var IconLoader = preload("res://addons/file-editor/scripts/IconLoader.gd").new()
+var LastOpenedFiles = preload("res://addons/file-editor/scripts/LastOpenedFiles.gd").new()
+
 var Preview = preload("res://addons/file-editor/scenes/Preview.tscn")
 var IniEditor = preload("res://addons/file-editor/scenes/IniEditor.tscn")
 var VanillaEditor = preload("res://addons/file-editor/scenes/VanillaEditor.tscn")
@@ -30,9 +33,9 @@ onready var EditorContainer = $FileEditorContainer/SplitContainer
 var DIRECTORY : String = "res://"
 var EXCEPTIONS : String = "addons"
 var EXTENSIONS : PoolStringArray = [
-"*.txt ; Plain Text File", 
-"*.rtf ; Rich Text Format File", 
-"*.log ; Log File", 
+"*.txt ; Plain Text File",
+"*.rtf ; Rich Text Format File",
+"*.log ; Log File",
 "*.md ; MD File",
 "*.doc ; WordPad Document",
 "*.doc ; Microsoft Word Document",
@@ -48,6 +51,7 @@ var EXTENSIONS : PoolStringArray = [
 "*.cfg ; Configuration File",
 "*.ini ; Initialization File (same as .cfg Configuration File)",
 "*.csv ; Comma-separated values File",
+"*.res ; Resource File",
 ]
 
 var directories = []
@@ -55,11 +59,14 @@ var files = []
 var current_file_index = -1
 var current_file_path = ""
 var save_as = false
-var current_editor : Control 
+var current_editor : Control
 var current_ini_editor : Control
 var current_csv_editor : Control
 
+
+
 func _ready():
+	
 	clean_editor()
 	update_version()
 	connect_signals()
@@ -73,7 +80,7 @@ func _ready():
 	FileList.set_filters(EXTENSIONS)
 
 func create_shortcuts():
-	var hotkey 
+	var hotkey
 	
 	hotkey = InputEventKey.new()
 	hotkey.scancode = KEY_S
@@ -156,6 +163,7 @@ func update_version():
 	if err == OK:
 		plugin_version = config.get_value("plugin","version")
 	Version.set_text("v"+plugin_version)
+	print(plugin_version)
 
 func create_selected_file():
 	update_list()
@@ -218,6 +226,8 @@ func _on_filebtn_pressed(index : int):
 		3:
 			if current_file_index!=-1 and current_file_path != "":
 				save_as = false
+				if current_csv_editor and current_csv_editor.visible:
+					current_csv_editor.save_table()
 				save_file(current_file_path)
 		4:
 			if current_file_index!=-1 and current_file_path != "":
@@ -238,6 +248,8 @@ func _on_previewbtn_pressed(id : int):
 		markdown_preview()
 	elif id == 2:
 		html_preview()
+	elif id == 3:
+		csv_preview()
 	elif id == 4:
 		xml_preview()
 	elif id == 5:
@@ -254,23 +266,25 @@ func _on_editorbtn_pressed(index : int):
 					current_ini_editor.hide()
 		1:
 			if current_csv_editor and not current_csv_editor.visible:
-				current_csv_editor.show()
-				current_editor.hide()
 				if current_ini_editor:
 					current_ini_editor.hide()
+				current_editor.hide()
+				current_csv_editor = open_in_csveditor(current_file_path)
+				current_csv_editor.show()
 		2:
 			if current_ini_editor and not current_ini_editor.visible:
 				current_editor.hide()
 				if current_csv_editor:
 					current_csv_editor.hide()
+				current_ini_editor = open_in_inieditor(current_file_path)
 				current_ini_editor.show()
 
 func _on_fileitem_pressed(index : int):
 	current_file_index = index
-	var selected_item_metadata = OpenFileList.get_item_metadata(index)
+	var selected_item_metadata = OpenFileList.get_item_metadata(current_file_index)
 	var extension = selected_item_metadata[0].current_path.get_file().get_extension()
-	current_file_path = selected_item_metadata[0].current_path
 	
+	current_file_path = selected_item_metadata[0].current_path
 	if current_editor.visible:
 		current_editor.hide()
 		current_editor = selected_item_metadata[0]
@@ -350,6 +364,10 @@ func open_in_vanillaeditor(path : String) -> Control:
 	if current_editor and current_editor!=editor:
 		editor.show()
 		current_editor.hide()
+	if current_csv_editor and current_csv_editor.visible:
+		current_csv_editor.hide()
+	if current_ini_editor and current_ini_editor.visible:
+		current_ini_editor.hide()
 	
 	current_editor = editor
 	
@@ -371,6 +389,7 @@ func open_in_vanillaeditor(path : String) -> Control:
 	
 	if WrapBTN.get_selected_id() == 1:
 		current_editor.set_wrap_enabled(true)
+	
 	
 	return editor
 
@@ -423,11 +442,12 @@ func close_file(index):
 	OpenFileName.clear()
 	current_editor.queue_free()
 	
-	OpenFileList.select(OpenFileList.get_item_count()-1)
-	_on_fileitem_pressed(OpenFileList.get_item_count()-1)
+	if index>0:
+		OpenFileList.select(OpenFileList.get_item_count()-1)
+		_on_fileitem_pressed(OpenFileList.get_item_count()-1)
 
 func _on_update_file():
-	current_editor.clean_editor()
+#	current_editor.clean_editor()
 	var current_file : File = File.new()
 	current_file.open(current_file_path,File.READ)
 	
@@ -473,17 +493,18 @@ func save_file(current_path : String):
 		current_file.store_line(current_editor.get_node("TextEditor").get_line(line))
 	current_file.close()
 	
-	current_file_path = current_file_path
+	current_file_path = current_path
 	
-	var last_modified = OS.get_datetime_from_unix_time(current_file.get_modified_time(current_path))
+	var last_modified = OS.get_datetime_from_unix_time(current_file.get_modified_time(current_file_path))
 	
 	current_editor.update_lastmodified(last_modified,"save")
-	OpenFileList.set_item_metadata(current_file_index,[current_content,last_modified,current_path])
+	OpenFileList.set_item_metadata(current_file_index,[current_editor,current_ini_editor,current_csv_editor])
+	print(OpenFileList.get_item_metadata(current_file_index))
 	
 	if OpenFileList.get_item_text(current_file_index).ends_with("(*)"):
 		OpenFileList.set_item_text(current_file_index,OpenFileList.get_item_text(current_file_index).rstrip("(*)"))
 	
-	OpenFileList.set_item_metadata(current_file_index,[current_editor,open_in_inieditor(current_file_path),open_in_csveditor(current_file_path)])
+#	OpenFileList.set_item_metadata(current_file_index,[current_editor,open_in_inieditor(current_file_path),open_in_csveditor(current_file_path)])
 	
 	update_list()
 
@@ -556,3 +577,7 @@ func on_minimap_button(index:int):
 			current_editor.draw_minimap(false)
 		1:
 			current_editor.draw_minimap(true)
+
+func check_file_preview(file : String):
+	# check whether the opened file has a corresponding preview session for its extension
+	 pass

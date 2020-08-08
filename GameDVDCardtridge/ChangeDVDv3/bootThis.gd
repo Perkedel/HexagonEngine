@@ -39,7 +39,10 @@ func loadBootBanner(var which:String):
 	pass
 
 func removeBootBanners():
+	#
 	for things in $Splash/SplashMan/SplashControl/ColumnStack.get_children():
+		#
+		$Splash/SplashMan/SplashControl/ColumnStack.remove_child(things)
 		things.queue_free()
 		pass
 	pass

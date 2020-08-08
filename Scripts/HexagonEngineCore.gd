@@ -17,6 +17,7 @@ export(PackedScene) var LoadDVD
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	OS.request_permissions()
 	checkForResetMe()
 	pass # Replace with function body.
 
@@ -159,6 +160,11 @@ func checkForResetMe():
 		else:
 			Settingers.SettingData["PleaseResetMe"] = false
 		pass
+		
+	else:
+		
+		pass
+	$DVDCartridgeSlot.CheckDVD()
 	pass
 
 func _on_AreYouSureDialog_YesOrNoo(which):
