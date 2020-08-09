@@ -13,7 +13,11 @@ margin_right = 100.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 200, 200 )
 rect_pivot_offset = Vector2( 100, 100 )
+size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}

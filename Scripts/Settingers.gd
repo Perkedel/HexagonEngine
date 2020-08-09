@@ -9,12 +9,14 @@ var tempAreYouSureDialog = preload("res://GameDVDCardtridge/TemplateHexagonEngin
 onready var useJSON = true
 
 var DefaultSetting = {
+	Version = 0,
 	Nama = "a Dasandimian",
 	AudioSetting = {
 		MasterVolume = 0,
 		MusicVolume = 0,
 		SoundEffectVolume = 0,
 		DummyVolume = 0,
+		SpeechVolume = 0
 	},
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),
@@ -26,6 +28,7 @@ var DefaultSetting = {
 	PleaseResetMe = false
 }
 onready var SettingData = {
+	Version = 0,
 	Nama = "a Dasandimian",
 	PleaseResetMe = false,
 	AudioSetting = {
@@ -33,6 +36,7 @@ onready var SettingData = {
 		MusicVolume = 0,
 		SoundEffectVolume = 0,
 		DummyVolume = 0,
+		SpeechVolume = 0,
 	},
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),

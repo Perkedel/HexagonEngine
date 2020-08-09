@@ -15,16 +15,29 @@ onready var Database = Node.new()
 
 # read https://github.com/WolfgangSenff/GodotFirebase/issues/27
 
+# uh udpdate. he said it's public. things to concern is the security rule.
+
 # DO NOT USE THIS NOW!!! WAIT UNTIL FIX COMES
+#var config = {  
+#	"apiKey": ProjectSettings.get_setting("Google/FireBase/ApiKey"),
+#	"authDomain": ProjectSettings.get_setting("Google/FireBase/AuthDomain"),
+#	"databaseURL": ProjectSettings.get_setting("Google/FireBase/DatabaseUrl"),
+#	"projectId": ProjectSettings.get_setting("Google/FireBase/ProjectId"),
+#	"storageBucket": ProjectSettings.get_setting("Google/FireBase/StorageBucket"),
+#	"messagingSenderId": ProjectSettings.get_setting("Google/FireBase/MessagingSenderId"),
+#	"appId": ProjectSettings.get_setting("Google/FireBase/AppId"),
+#	"measurementId": ProjectSettings.get_setting("Google/FireBase/MeasurementId"),
+#	}
+
 var config = {  
-	"apiKey": "",
-	"authDomain": "",
-	"databaseURL": "",
-	"projectId": "",
-	"storageBucket": "",
-	"messagingSenderId": "",
-	"appId": "",
-	"measurementId": "",
+	"apiKey": "AIzaSyDtTuVW5h-ehAj9E0v-hL64Lpnva395ZL8",
+	"authDomain": "hexagon-engine.firebaseapp.com",
+	"databaseURL": "https://hexagon-engine.firebaseio.com",
+	"projectId": "hexagon-engine",
+	"storageBucket": "hexagon-engine.appspot.com",
+	"messagingSenderId": "1058646999710",
+	"appId": "1:1058646999710:web:61990d2eeca7053c64718f",
+	"measurementId": "G-9K4LW2G9JW",
 	}
 
 func load_config():

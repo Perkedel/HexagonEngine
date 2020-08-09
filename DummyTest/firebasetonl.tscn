@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://DummyTest/firebasetonl.gd" type="Script" id=1]
+[ext_resource path="res://addons/FontAwesome5/FontAwesome.gd" type="Script" id=2]
+[ext_resource path="res://addons/FontAwesome5/fa-solid-900.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Modules/FireBaseAuther.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="firebaseton" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -542.0
+margin_top = -163.5
+margin_right = 542.0
+margin_bottom = 163.5
+text = "Test The Firebaseton"
+
+[node name="FontAwesome" type="Label" parent="."]
+margin_right = 362.0
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 1 )
+text = ""
+script = ExtResource( 2 )
+icon_size = 16
+icon_type = "solid"
+icon_name = "flag"
+
+[node name="FireBaseAuth" parent="." instance=ExtResource( 4 )]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="loggedInAuthed" from="FireBaseAuth" to="." method="_on_FireBaseAuth_loggedInAuthed"]

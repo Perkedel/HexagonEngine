@@ -804,6 +804,17 @@ _global_script_class_icons={
 "WATTest": ""
 }
 
+[Google]
+
+Firebase/ApiKey="AIzaSyDtTuVW5h-ehAj9E0v-hL64Lpnva395ZL8"
+Firebase/AutoDomain="hexagon-engine.firebaseapp.com"
+Firebase/DatabaseUrl="https://hexagon-engine.firebaseio.com"
+Firebase/ProjectId="hexagon-engine"
+Firebase/StorageBucket="hexagon-engine.appspot.com"
+Firebase/MessagingSenderId="1058646999710"
+Firebase/AppId="1:1058646999710:web:61990d2eeca7053c64718f"
+Firebase/MeasurementId="G-9K4LW2G9JW"
+
 [PluginSettings]
 
 gddlg/DialogJsonPaths=PoolStringArray( "res://Datas/Totaling/GDInventory/" )
@@ -859,6 +870,7 @@ NoteValue="*res://addons/SimpleSampler/note_value.gd"
 IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
 LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
 AutoSpeaker="*res://Scripts/AutoSpeaker.gd"
+Firebase="*res://addons/GDFirebase/Firebase.gd"
 
 [compression]
 
@@ -885,7 +897,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "Holepunch", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "explore-editor-theme", "extend", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "notes_tab", "opus", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "randomAudioStreamPlayer", "replicator", "rmsmartshape", "scale_importer", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "terminal", "tile_spawner", "time-tracker", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
+enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "GDFirebase", "Holepunch", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "balloon", "beatplayer", "bone_gizmo", "camera_limiter", "decals", "destruction", "editor_icon_previewer", "explore-editor-theme", "extend", "file-editor", "gcode", "gddlg", "gdinv", "github-integration", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-plugin-refresher", "godot-stopwatch-master", "godot_sheets", "goutte.camera.trackball", "inspector-gadget", "joystick_control", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "notes_tab", "opus", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "pixijs_spritesheet_importer", "plugin_maker", "radial_progress", "randomAudioStreamPlayer", "replicator", "rmsmartshape", "scale_importer", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "terminal", "tile_spawner", "time-tracker", "vector_resource", "vnen.tiled_importer", "voxel_factory", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.translation_editor" )
 
 [gdnative]
 
