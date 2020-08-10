@@ -18,12 +18,17 @@ onready var TimePiece = $PLSWAIT/HourGlassContainer/GravityHourGlass
 onready var TimerFrameHourglass = $PLSWAIT/HourglassFramePerSecond
 
 signal loggedInAuthed(theAuth)
-signal loggedFaile()
+signal loggedFaile(code, message)
+signal userDataGet(userData)
+signal userDataDictionary(userDataDictionary)
+
+var userDictionaryData = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Firebase.Auth.connect("login_succeeded", self, "_on_FirebaseAuth_LoginSuccess")
-	Firebase.Auth.connect("login_failed", self, "on_FirebaseAuth_LoginFail")
+	Firebase.Auth.connect("login_failed", self, "_on_FirebaseAuth_LoginFail")
+	Firebase.Auth.connect("userdata_received", self, "_on_FirebaseAuth_GetUserData")
 	pass # Replace with function body.
 
 func RotateHourglass():
@@ -44,18 +49,42 @@ func loggedIn(whoAuth):
 	Authed.show()
 	PlsWaiter.hide()
 	authedMe = whoAuth
-	print(String(authedMe))
+	Firebase.Auth.get_user_data()
+	#print(String(authedMe))
 	firebaseReferencer = Firebase.Database.get_database_reference("sandbox/dd", {})
 	userButton.text
-	emit_signal("loggedInAuthed")
+	emit_signal("loggedInAuthed", whoAuth)
 	pass
 
-func loggedFaile():
+func loggedFaile(code,message):
 	TimerFrameHourglass.stop()
 	Authing.show()
 	Authed.hide()
 	PlsWaiter.hide()
-	emit_signal("loggedFaile")
+	emit_signal("loggedFaile",code,message)
+	pass
+
+func receiveUserDictionary(userData : FirebaseUserData):
+	userDictionaryData = {
+		"local_id" : userData.local_id,
+		"email" :userData.email,
+		"email_verified" :userData.email_verified,
+		"password_updated_at" :userData.password_updated_at,
+		"last_login_at": userData.last_login_at,
+		"created_at" :userData.created_at,
+		
+		"provider_id" :userData.provider_id,
+		"display_name" :userData.display_name,
+		"photo_url" :userData.photo_url,
+	}
+	firebaseReferencer.update("pengguna/" + String(userDictionaryData["local_id"]), userDictionaryData)
+	emit_signal("userDataDictionary", userDictionaryData)
+	pass
+
+func receiveUserData(userData):
+	
+	emit_signal("userDataGet",userData)
+	receiveUserDictionary(userData)
 	pass
 
 func tryLogin():
@@ -100,9 +129,14 @@ func _on_FirebaseAuth_LoginSuccess(whoAuth):
 	loggedIn(whoAuth)
 	pass
 
-func _on_FirebaseAuth_LoginFail():
+func _on_FirebaseAuth_LoginFail(code,message):
 	print("login faile")
-	loggedFaile()
+	loggedFaile(code, message)
+	pass
+
+func _on_FirebaseAuth_GetUserData(userData):
+	print("receive user data")
+	receiveUserData(userData)
 	pass
 
 
