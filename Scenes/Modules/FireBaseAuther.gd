@@ -51,7 +51,7 @@ func loggedIn(whoAuth):
 	authedMe = whoAuth
 	Firebase.Auth.get_user_data()
 	#print(String(authedMe))
-	firebaseReferencer = Firebase.Database.get_database_reference("sandbox/dd", {})
+	firebaseReferencer = Firebase.Database.get_database_reference("pengguna", {})
 	userButton.text
 	emit_signal("loggedInAuthed", whoAuth)
 	pass
@@ -77,7 +77,7 @@ func receiveUserDictionary(userData : FirebaseUserData):
 		"display_name" :userData.display_name,
 		"photo_url" :userData.photo_url,
 	}
-	firebaseReferencer.update("pengguna/" + String(userDictionaryData["local_id"]), userDictionaryData)
+	firebaseReferencer.update(String(userDictionaryData["local_id"]), userDictionaryData)
 	emit_signal("userDataDictionary", userDictionaryData)
 	pass
 

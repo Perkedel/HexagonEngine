@@ -56,7 +56,8 @@ func saveRawNow(userRaw):
 	pass
 
 func _on_Button_pressed():
-	
+	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
+	aDatabasa.push({"Auza":{"stringValue":"aaaaaaaaaaaw"}})
 	pass # Replace with function body.
 
 

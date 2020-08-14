@@ -872,6 +872,7 @@ IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
 LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
 AutoSpeaker="*res://Scripts/AutoSpeaker.gd"
 Firebase="*res://addons/GDFirebase/Firebase.gd"
+FirebaseQuest="*res://Scripts/GDquest-Firebase.gd"
 
 [compression]
 
