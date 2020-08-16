@@ -1,0 +1,212 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://modules/UI/FirebaseQuestChallenge.gd" type="Script" id=2]
+[ext_resource path="res://modules/UI/SparePart/JustLineEdit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://modules/UI/SparePart/TitleBarMini.tscn" type="PackedScene" id=4]
+[ext_resource path="res://modules/UI/SparePart/PLSWAIT.tscn" type="PackedScene" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Medium 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.129412, 0, 0.219608, 1 )
+font_data = ExtResource( 6 )
+
+[node name="FirebaseQuestChallenge" type="VBoxContainer"]
+anchor_right = 1.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectAuthMode" type="VBoxContainer" parent="."]
+visible = false
+margin_right = 1920.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Firebase THome" parent="SelectAuthMode" instance=ExtResource( 4 )]
+anchor_right = 0.0
+margin_right = 1920.0
+TitleBar = "Firebase GDQuest"
+
+[node name="WhichButtons" type="HBoxContainer" parent="SelectAuthMode"]
+margin_top = 94.0
+margin_right = 1920.0
+margin_bottom = 184.0
+
+[node name="RegistButton" type="Button" parent="SelectAuthMode/WhichButtons"]
+margin_right = 958.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "REGISTER SIGNUP"
+
+[node name="LoginButton" type="Button" parent="SelectAuthMode/WhichButtons"]
+margin_left = 962.0
+margin_right = 1920.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "LOGIN SIGNIN"
+
+[node name="LoginNow" type="VBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Login Now" parent="LoginNow" instance=ExtResource( 4 )]
+anchor_right = 0.0
+margin_right = 1920.0
+showBackButton = true
+TitleBar = "Login Now"
+
+[node name="Emaile" parent="LoginNow" instance=ExtResource( 3 )]
+margin_top = 94.0
+margin_bottom = 184.0
+VariableTitle = "Email"
+PlaceHolderer = "example@example.example"
+
+[node name="Passwordo" parent="LoginNow" instance=ExtResource( 3 )]
+margin_top = 188.0
+margin_bottom = 278.0
+VariableTitle = "Passwordo"
+PlaceHolderer = "********"
+Secret = true
+
+[node name="AuthenticateLogin" type="Button" parent="LoginNow"]
+margin_top = 282.0
+margin_right = 1920.0
+margin_bottom = 372.0
+custom_fonts/font = ExtResource( 1 )
+text = "Authenticate Login"
+
+[node name="LoginStatusLabel" type="Label" parent="LoginNow"]
+margin_top = 376.0
+margin_right = 1920.0
+margin_bottom = 439.0
+custom_fonts/font = ExtResource( 7 )
+text = "Logine"
+
+[node name="RegisterNow" type="VBoxContainer" parent="."]
+visible = false
+margin_top = 188.0
+margin_right = 1920.0
+margin_bottom = 654.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RegisterNow" parent="RegisterNow" instance=ExtResource( 4 )]
+anchor_right = 0.0
+margin_right = 1920.0
+
+[node name="Emailen" parent="RegisterNow" instance=ExtResource( 3 )]
+margin_top = 94.0
+margin_bottom = 184.0
+VariableTitle = "Email"
+PlaceHolderer = "example@example.example"
+
+[node name="Passworde" parent="RegisterNow" instance=ExtResource( 3 )]
+margin_top = 188.0
+margin_bottom = 278.0
+VariableTitle = "Password"
+PlaceHolderer = "**********"
+Secret = true
+
+[node name="ConfirmPassword" parent="RegisterNow" instance=ExtResource( 3 )]
+margin_top = 282.0
+margin_bottom = 372.0
+VariableTitle = "Confirm Pass"
+PlaceHolderer = "**********"
+Secret = true
+
+[node name="AuthenticateRegister" type="Button" parent="RegisterNow"]
+margin_top = 376.0
+margin_right = 1920.0
+margin_bottom = 466.0
+custom_fonts/font = ExtResource( 1 )
+text = "Authenticate Register"
+
+[node name="RegisterStatusLabel" type="Label" parent="RegisterNow"]
+margin_top = 255.0
+margin_right = 1920.0
+margin_bottom = 318.0
+custom_fonts/font = ExtResource( 7 )
+text = "Logine"
+
+[node name="LoggedInYay" type="VBoxContainer" parent="."]
+visible = false
+margin_top = 560.0
+margin_right = 1920.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LoadingNow" type="VBoxContainer" parent="."]
+visible = false
+margin_right = 1920.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LoadingNowtitle" parent="LoadingNow" instance=ExtResource( 4 )]
+anchor_right = 0.0
+margin_right = 1920.0
+TitleBar = "Authenticating..."
+
+[node name="PLSWAIT" parent="LoadingNow" instance=ExtResource( 5 )]
+visible = true
+margin_top = 94.0
+margin_right = 1920.0
+margin_bottom = 310.0
+
+[node name="HourGlassContainer" parent="LoadingNow/PLSWAIT" index="0"]
+margin_right = 250.0
+margin_bottom = 216.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="GravityHourGlass" parent="LoadingNow/PLSWAIT/HourGlassContainer" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+rect_pivot_offset = Vector2( 125, 108 )
+
+[node name="LabelPlsWait" parent="LoadingNow/PLSWAIT" index="1"]
+margin_left = 254.0
+margin_right = 1920.0
+margin_bottom = 216.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="SelectAuthMode/WhichButtons/RegistButton" to="." method="_on_RegistButton_pressed"]
+[connection signal="pressed" from="SelectAuthMode/WhichButtons/LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="letsGoBack" from="LoginNow/Login Now" to="." method="_on_Login_Now_letsGoBack"]
+[connection signal="TextChanged" from="LoginNow/Emaile" to="." method="_on_Emaile_TextChanged"]
+[connection signal="TextEntered" from="LoginNow/Emaile" to="." method="_on_Emaile_TextEntered"]
+[connection signal="TextChanged" from="LoginNow/Passwordo" to="." method="_on_Passwordo_TextChanged"]
+[connection signal="TextEntered" from="LoginNow/Passwordo" to="." method="_on_Passwordo_TextEntered"]
+[connection signal="pressed" from="LoginNow/AuthenticateLogin" to="." method="_on_AuthenticateLogin_pressed"]
+[connection signal="letsGoBack" from="RegisterNow/RegisterNow" to="." method="_on_RegisterNow_letsGoBack"]
+[connection signal="TextChanged" from="RegisterNow/Emailen" to="." method="_on_Emailen_TextChanged"]
+[connection signal="TextEntered" from="RegisterNow/Emailen" to="." method="_on_Emailen_TextEntered"]
+[connection signal="TextChanged" from="RegisterNow/Passworde" to="." method="_on_Passworde_TextChanged"]
+[connection signal="TextEntered" from="RegisterNow/Passworde" to="." method="_on_Passworde_TextEntered"]
+[connection signal="TextChanged" from="RegisterNow/ConfirmPassword" to="." method="_on_ConfirmPassword_TextChanged"]
+[connection signal="TextEntered" from="RegisterNow/ConfirmPassword" to="." method="_on_ConfirmPassword_TextEntered"]
+[connection signal="pressed" from="RegisterNow/AuthenticateRegister" to="." method="_on_AuthenticateRegister_pressed"]
+[connection signal="timeout" from="LoadingNow/PLSWAIT/HourglassFramePerSecond" to="." method="_on_HourglassFramePerSecond_timeout"]
+
+[editable path="LoadingNow/PLSWAIT"]
