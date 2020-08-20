@@ -817,7 +817,7 @@ Firebase/MeasurementId="G-9K4LW2G9JW"
 
 [PluginSettings]
 
-gddlg/DialogJsonPaths=PoolStringArray( "res://Datas/Totaling/GDInventory/" )
+gddlg/DialogJsonPaths=PoolStringArray( "res://Datas/Totaling/GDDialog/" )
 gddlg/LoadOnReady=true
 gddlg/StrictDialogAttributes=false
 gddlg/StrictOptionAttributes=false

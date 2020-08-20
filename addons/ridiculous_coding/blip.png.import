@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/se.png-e2b4f76b280be2edfdda792d18e61fd1.stex"
+path="res://.import/blip.png-7449238b2e7dcd337fbb9eec8c7b957e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/EXP-System-Dialog/Images/se.png"
-dest_files=[ "res://.import/se.png-e2b4f76b280be2edfdda792d18e61fd1.stex" ]
+source_file="res://addons/ridiculous_coding/blip.png"
+dest_files=[ "res://.import/blip.png-7449238b2e7dcd337fbb9eec8c7b957e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

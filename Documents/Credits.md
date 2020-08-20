@@ -205,6 +205,12 @@ Used Assets and Tools!
 - https://docs.godotengine.org/en/stable/classes/class_file.html
 - https://skfb.ly/6SvpG
 - https://www.javatpoint.com/queue-free-and-reload-current-scene-functions-in-godot
+- https://ash-k.itch.io/textreme-2 **HOW DARE YOU?!**
+- https://itch.io/t/929224/code-editor-by-yafd **actually he's a nice guy?**
+- https://github.com/maksloboda/Godot-Tutorials **my apology**
+- https://github.com/jotson/ridiculous_coding **OH!!!**
+- a
+- 
 
 
 

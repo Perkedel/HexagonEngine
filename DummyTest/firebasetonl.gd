@@ -17,6 +17,7 @@ var aDokumente = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#aDatabasa = Firebase.Database.get_database_reference("Sandbox", aDokumente)
+	#aDatabasa = Firebase.Database.get_database_reference("sandbox",{})
 	pass # Replace with function body.
 
 
@@ -56,8 +57,13 @@ func saveRawNow(userRaw):
 	pass
 
 func _on_Button_pressed():
-	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
-	aDatabasa.push({"Auza":{"stringValue":"aaaaaaaaaaaw"}})
+	#aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
+	var tobePush = {
+		"fields":{
+			"Auza":{"stringValue":"aaaaaaaaaaaw"}
+		},
+	}
+	aDatabasa.push(tobePush)
 	pass # Replace with function body.
 
 
@@ -82,4 +88,9 @@ func _on_FireBaseAuth_userDataGet(userData):
 func _on_FireBaseAuth_userDataDictionary(userDataDictionary):
 	print_debug("USER DICTIONARY DATA GET")
 	saveUserData(userDataDictionary)
+	pass # Replace with function body.
+
+
+func _on_Button2_pressed():
+	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
 	pass # Replace with function body.

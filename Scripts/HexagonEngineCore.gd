@@ -168,5 +168,5 @@ func checkForResetMe():
 	pass
 
 func _on_AreYouSureDialog_YesOrNoo(which):
-	
+	# YesNoYes
 	pass # Replace with function body.

@@ -14,6 +14,7 @@ __meta__ = {
 BackButtonIcon = ExtResource( 3 )
 
 [node name="BackBacking" type="Button" parent="."]
+visible = false
 margin_right = 100.0
 margin_bottom = 90.0
 rect_min_size = Vector2( 100, 0 )
@@ -21,7 +22,6 @@ icon = ExtResource( 3 )
 expand_icon = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 104.0
 margin_right = 1920.0
 margin_bottom = 90.0
 size_flags_horizontal = 3

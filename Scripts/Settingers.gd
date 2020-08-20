@@ -25,6 +25,9 @@ var DefaultSetting = {
 	ControllerMappings = {
 		
 	},
+	Firebasers = {
+		RememberMe = false
+	},
 	PleaseResetMe = false
 }
 onready var SettingData = {
@@ -43,7 +46,9 @@ onready var SettingData = {
 		Vsync = OS.vsync_enabled,
 	},
 	ControllerMappings = {},
-	
+	Firebasers = {
+		RememberMe = false
+	},
 }
 var SettingFile
 var SettingFolder

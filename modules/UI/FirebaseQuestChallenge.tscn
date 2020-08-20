@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://modules/UI/FirebaseQuestChallenge.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://modules/UI/SparePart/PLSWAIT.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=7]
+[ext_resource path="res://font/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=8]
+[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -28,7 +30,7 @@ __meta__ = {
 [node name="SelectAuthMode" type="VBoxContainer" parent="."]
 visible = false
 margin_right = 1920.0
-margin_bottom = 184.0
+margin_bottom = 382.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -59,9 +61,16 @@ size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
 text = "LOGIN SIGNIN"
 
+[node name="SelectStatusLabel" type="Label" parent="SelectAuthMode"]
+margin_top = 510.0
+margin_right = 1920.0
+margin_bottom = 573.0
+custom_fonts/font = ExtResource( 7 )
+text = "Select Auth mode!"
+
 [node name="LoginNow" type="VBoxContainer" parent="."]
 margin_right = 1920.0
-margin_bottom = 564.0
+margin_bottom = 573.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -84,17 +93,25 @@ VariableTitle = "Passwordo"
 PlaceHolderer = "********"
 Secret = true
 
-[node name="AuthenticateLogin" type="Button" parent="LoginNow"]
+[node name="RememberMeChecko" type="CheckButton" parent="LoginNow"]
 margin_top = 282.0
 margin_right = 1920.0
-margin_bottom = 372.0
+margin_bottom = 345.0
+custom_fonts/font = ExtResource( 9 )
+text = "Remember Me (Do not check in public computer!)"
+expand_icon = true
+
+[node name="AuthenticateLogin" type="Button" parent="LoginNow"]
+margin_top = 349.0
+margin_right = 1920.0
+margin_bottom = 439.0
 custom_fonts/font = ExtResource( 1 )
 text = "Authenticate Login"
 
 [node name="LoginStatusLabel" type="Label" parent="LoginNow"]
-margin_top = 376.0
+margin_top = 443.0
 margin_right = 1920.0
-margin_bottom = 439.0
+margin_bottom = 506.0
 custom_fonts/font = ExtResource( 7 )
 text = "Logine"
 
@@ -130,6 +147,14 @@ VariableTitle = "Confirm Pass"
 PlaceHolderer = "**********"
 Secret = true
 
+[node name="RememberMeChecki" type="CheckButton" parent="RegisterNow"]
+margin_top = 161.0
+margin_right = 1920.0
+margin_bottom = 224.0
+custom_fonts/font = ExtResource( 9 )
+text = "Remember Me (Do not check in public computer!)"
+expand_icon = true
+
 [node name="AuthenticateRegister" type="Button" parent="RegisterNow"]
 margin_top = 376.0
 margin_right = 1920.0
@@ -146,16 +171,34 @@ text = "Logine"
 
 [node name="LoggedInYay" type="VBoxContainer" parent="."]
 visible = false
-margin_top = 560.0
 margin_right = 1920.0
-margin_bottom = 560.0
+margin_bottom = 310.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="LogedinTitle" parent="LoggedInYay" instance=ExtResource( 4 )]
+anchor_right = 0.0
+margin_right = 1920.0
+TitleBar = "Firebase Logged in"
+
+[node name="LogoutButtoner" type="HBoxContainer" parent="LoggedInYay"]
+margin_top = 94.0
+margin_right = 1920.0
+margin_bottom = 130.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="LogoutButton" type="Button" parent="LoggedInYay/LogoutButtoner"]
+margin_left = 914.0
+margin_right = 1005.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 8 )
+text = "Logout"
 
 [node name="LoadingNow" type="VBoxContainer" parent="."]
 visible = false
 margin_right = 1920.0
-margin_bottom = 310.0
+margin_bottom = 382.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -168,26 +211,23 @@ TitleBar = "Authenticating..."
 visible = true
 margin_top = 94.0
 margin_right = 1920.0
-margin_bottom = 310.0
+margin_bottom = 382.0
 
 [node name="HourGlassContainer" parent="LoadingNow/PLSWAIT" index="0"]
 margin_right = 250.0
-margin_bottom = 216.0
+margin_bottom = 288.0
 rect_min_size = Vector2( 250, 0 )
 
 [node name="GravityHourGlass" parent="LoadingNow/PLSWAIT/HourGlassContainer" index="0"]
-anchor_left = 0.0
-anchor_top = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 0.0
-rect_pivot_offset = Vector2( 125, 108 )
+margin_left = 75.0
+margin_top = 94.0
+margin_right = 175.0
+margin_bottom = 194.0
 
 [node name="LabelPlsWait" parent="LoadingNow/PLSWAIT" index="1"]
 margin_left = 254.0
 margin_right = 1920.0
-margin_bottom = 216.0
+margin_bottom = 288.0
 custom_fonts/font = SubResource( 1 )
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
@@ -198,6 +238,7 @@ custom_fonts/font = SubResource( 1 )
 [connection signal="TextEntered" from="LoginNow/Emaile" to="." method="_on_Emaile_TextEntered"]
 [connection signal="TextChanged" from="LoginNow/Passwordo" to="." method="_on_Passwordo_TextChanged"]
 [connection signal="TextEntered" from="LoginNow/Passwordo" to="." method="_on_Passwordo_TextEntered"]
+[connection signal="toggled" from="LoginNow/RememberMeChecko" to="." method="_on_RememberMeChecko_toggled"]
 [connection signal="pressed" from="LoginNow/AuthenticateLogin" to="." method="_on_AuthenticateLogin_pressed"]
 [connection signal="letsGoBack" from="RegisterNow/RegisterNow" to="." method="_on_RegisterNow_letsGoBack"]
 [connection signal="TextChanged" from="RegisterNow/Emailen" to="." method="_on_Emailen_TextChanged"]
@@ -206,7 +247,9 @@ custom_fonts/font = SubResource( 1 )
 [connection signal="TextEntered" from="RegisterNow/Passworde" to="." method="_on_Passworde_TextEntered"]
 [connection signal="TextChanged" from="RegisterNow/ConfirmPassword" to="." method="_on_ConfirmPassword_TextChanged"]
 [connection signal="TextEntered" from="RegisterNow/ConfirmPassword" to="." method="_on_ConfirmPassword_TextEntered"]
+[connection signal="toggled" from="RegisterNow/RememberMeChecki" to="." method="_on_RememberMeChecki_toggled"]
 [connection signal="pressed" from="RegisterNow/AuthenticateRegister" to="." method="_on_AuthenticateRegister_pressed"]
+[connection signal="pressed" from="LoggedInYay/LogoutButtoner/LogoutButton" to="." method="_on_LogoutButton_pressed"]
 [connection signal="timeout" from="LoadingNow/PLSWAIT/HourglassFramePerSecond" to="." method="_on_HourglassFramePerSecond_timeout"]
 
 [editable path="LoadingNow/PLSWAIT"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-47dc6e8cad94817cb2e2b72e131ff5fa.stex"
+path="res://.import/se.png-4f703ae9aa5b43fdf8d1084aba43974d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/EXP-System-Dialog/Images/icon.png"
-dest_files=[ "res://.import/icon.png-47dc6e8cad94817cb2e2b72e131ff5fa.stex" ]
+source_file="res://arka/EXP-System-Dialog/Images/se.png"
+dest_files=[ "res://.import/se.png-4f703ae9aa5b43fdf8d1084aba43974d.stex" ]
 
 [params]
 
