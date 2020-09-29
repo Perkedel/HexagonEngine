@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name HeroicPlayer
 
 var MOVE_SPEED = 12
 const JUMP_FORCE = 100
@@ -24,6 +25,13 @@ var extraJumpTokenInit = 1
 var JumpTokenRightNow = 1
 var shouldUseExtraJumpToken = false
 
+# Mitch Makes things interact https://youtu.be/C_-faOyIuTQ
+export var interaction_parent : NodePath = self.get_path()
+
+var interaction_target:Node
+
+signal on_interact_changed(newInteractable) 
+
 func _ready():
 	anim.get_animation("walk").set_loop(true)
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -33,6 +41,22 @@ func _input(event):
 		cam.rotation_degrees.x -= event.relative.y * V_LOOK_SENS
 		cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
 		rotation_degrees.y -= event.relative.x * H_LOOK_SENS
+	
+#	if event is InputEventJoypadMotion:
+#		if event.axis == JOY_ANALOG_RX:
+#			cam.rotation_degrees.y -= event.axis_value * H_LOOK_SENS
+#			pass
+#		if event.axis == JOY_ANALOG_RY:
+#			cam.rotation_degrees.x -= event.axis_value * V_LOOK_SENS
+#			pass
+#		cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
+#		pass
+	
+	if event is InputEventMouseButton:
+		if event.pressed and event.button_index == BUTTON_LEFT:
+			if interaction_target != null:
+				if (interaction_target.has_method("interaction_interact")):
+					interaction_target.interaction_interact(self)
 
 func _physics_process(delta):
 	var move_vec = Vector3()
@@ -54,7 +78,11 @@ func _physics_process(delta):
 	y_velo -= GRAVITY
 	var just_jumped = false
 	
-	if Input.is_action_just_pressed("Loncat"):
+	cam.rotation_degrees.x -= Input.get_action_strength("AnalogKanan_y-") - Input.get_action_strength("AnalogKanan_y") * V_LOOK_SENS
+	rotation_degrees.y -= Input.get_action_strength("AnalogKanan_x") - Input.get_action_strength("AnalogKanan_x-") * H_LOOK_SENS
+	cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
+	
+	if Input.is_action_just_pressed("Loncat") or Input.is_action_just_pressed("Keyboard_Space"):
 		jumpJustPressed = true
 		rememberJumpTime()
 		if shouldCoyoteJump:
@@ -67,6 +95,11 @@ func _physics_process(delta):
 			JumpTokenRightNow -= 1
 			pass
 		pass
+	
+	if Input.is_action_just_pressed("Pindai"):
+		if interaction_target != null:
+			if (interaction_target.has_method("interaction_interact")):
+				interaction_target.interaction_interact(self)
 	# edit grounde
 	if grounded:
 		shouldCoyoteJump = true
@@ -132,3 +165,28 @@ func rememberJumpTime():
 func resetJumpToken():
 	JumpTokenRightNow = extraJumpTokenInit
 	pass
+
+# https://youtu.be/C_-faOyIuTQ
+# Mitch Interaction system
+func _on_Handteract_body_exited(body):
+	if (body == interaction_target):
+		interaction_target = null
+		emit_signal("on_interactable_changed", null)
+	pass # Replace with function body.
+
+func _on_Handteract_body_entered(body):
+	var canInteract := false
+	
+	# GDScript lacks the concept of interfaces, so we can't check whether the body implements an interface
+	# Instead, we'll see if it has the methods we need
+	if (body.has_method("interaction_can_interact")):
+		# Interactables tell us whether we're allowed to interact with them.
+		canInteract = body.interaction_can_interact(get_node(interaction_parent))
+	
+	if not canInteract:
+		return
+	
+	interaction_target = body
+	emit_signal("on_interactable_changed", interaction_target)
+	
+	pass # Replace with function body.

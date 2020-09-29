@@ -1,17 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ManOfCoyote/polycat.dae" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/ManOfCoyote/ProsotipePlatformerGuy.gd" type="Script" id=2]
+[ext_resource path="res://GameDVDCardtridge/ManOfCoyote/Handteract.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.530138
 height = 0.426055
 
-[sub_resource type="Environment" id=2]
-ambient_light_color = Color( 1, 1, 1, 1 )
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.25, 0.25, 0.25 )
 
 [node name="ProsotipePlatformerGuy" type="KinematicBody"]
 script = ExtResource( 2 )
+interaction_parent = NodePath(".")
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.75, 0 )
@@ -21,8 +23,16 @@ shape = SubResource( 1 )
 
 [node name="Kamera" type="Camera" parent="HoldRigKamera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
-environment = SubResource( 2 )
 current = true
 
 [node name="Graphics" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+
+[node name="Handteract" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -1 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Handteract"]
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Handteract" to="." method="_on_Handteract_body_entered"]
+[connection signal="body_exited" from="Handteract" to="." method="_on_Handteract_body_exited"]

@@ -33,7 +33,7 @@ margin_right = 749.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
 custom_fonts/font = ExtResource( 1 )
-text = "Yay, you've completed just golf! congrats"
+text = "Yay you've level complete!"
 align = 1
 valign = 1
 

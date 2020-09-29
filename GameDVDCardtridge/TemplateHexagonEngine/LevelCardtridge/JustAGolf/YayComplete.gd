@@ -17,7 +17,8 @@ func _ready():
 	pass # Replace with function body.
 
 func PopThisDialogWith(var sayWha:String):
-	setDialogText(sayWha)
+	if sayWha != "":
+		setDialogText(sayWha)
 	popup()
 	pass
 

@@ -4,7 +4,7 @@ extends Area
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-signal PlayerDidFell()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,15 +12,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func _enter_tree():
-	
+func _process(delta):
 	pass
 
+func _on_Handteract_body_entered(body):
+	pass # Replace with function body.
 
-func _on_JatuhAAA_body_entered(body):
-	if body is HeroicPlayer:
-		emit_signal("PlayerDidFell")
+func _on_Handteract_body_exited(body):
 	pass # Replace with function body.

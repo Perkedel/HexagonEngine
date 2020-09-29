@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAMellinda/InteractThisA-ColorNotYet.tres" type="Material" id=1]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAMellinda/InteractThisA-ColorDid.tres" type="Material" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAMellinda/InteractThisA.gd" type="Script" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAMellinda/InteractThisA-ColorNotPrerequisiteYet.tres" type="Material" id=4]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.5
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.5
+
+[node name="LifePartnerWin" type="StaticBody"]
+script = ExtResource( 3 )
+do_prerequisite = true
+is_toggle = false
+is_goal = true
+colorNotYet = ExtResource( 1 )
+colorDid = ExtResource( 2 )
+colorNotPrerequisiteYet = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 2 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
