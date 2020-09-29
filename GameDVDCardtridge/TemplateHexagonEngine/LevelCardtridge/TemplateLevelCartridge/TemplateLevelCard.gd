@@ -55,3 +55,8 @@ func pressLoadLevelButton():
 func _on_PlayTheLevelButton_pressed():
 	pressLoadLevelButton()
 	pass # Replace with function body.
+
+
+func _on_RichTextLabel_meta_clicked(meta):
+	OS.shell_open(meta)
+	pass # Replace with function body.

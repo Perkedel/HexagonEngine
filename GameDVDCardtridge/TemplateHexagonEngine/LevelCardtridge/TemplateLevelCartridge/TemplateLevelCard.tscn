@@ -121,4 +121,5 @@ margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 custom_fonts/font = ExtResource( 5 )
 text = "Load This Card"
+[connection signal="meta_clicked" from="LevelCardContainer/DescriptionScroll/RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="pressed" from="LevelCardContainer/PlayTheLevelButton" to="." method="_on_PlayTheLevelButton_pressed"]
