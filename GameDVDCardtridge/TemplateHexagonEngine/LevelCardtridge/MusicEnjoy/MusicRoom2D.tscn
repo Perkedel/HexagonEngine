@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=10]
+[ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )
@@ -95,6 +96,16 @@ __meta__ = {
 pause_mode = 1
 bus = "Music"
 
+[node name="GodotMIDIPlayer" type="AudioStreamPlayer" parent="MusicController/MusicUI"]
+pause_mode = 1
+bus = "Music"
+script = ExtResource( 11 )
+file = "res://DummyTest/dataArlez80/fairyland_gm.mid"
+load_all_voices_from_soundfont = true
+no_reload_soundfont = true
+soundfont = "res://Soundfonts/Aspirin-Stereo.sf2"
+bus = "Music"
+
 [node name="MainContains" type="VBoxContainer" parent="MusicController/MusicUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -176,7 +187,7 @@ window_title = "Buka sebuah File"
 resizable = true
 mode = 0
 access = 2
-filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
+filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis", "*.mod; Music Module", "*.it; Impulse Tracker", "*.s3m; Scream Tracker", "*.xm; Extended Module Music", "*.mp3; MPEG Layer 3", "*.midi; Musical Digital Interface", "*.mid; Musical Digital Interface" )
 show_hidden_files = true
 current_dir = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
 current_path = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"

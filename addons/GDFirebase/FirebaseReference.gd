@@ -88,6 +88,8 @@ func push(data):
 		pusher.request(_get_list_url() + db_path + _get_remaining_path(), PoolStringArray(), true, HTTPClient.METHOD_POST, to_push)
 	else:
 		push_queue.append(data)
+	
+	print("Push the: " + _get_list_url() + db_path + _get_remaining_path())
 
 func _get_remaining_path(is_push = true):
 	if !filter_query or is_push:
@@ -132,8 +134,10 @@ func _route_data(command, path, data):
 func on_push_request_complete(result, response_code, headers, body):
 	if response_code == HTTPClient.RESPONSE_OK:
 		emit_signal("push_successful")
+		print("\npush Success\n")
 	else:
 		emit_signal("push_failed")
+		print("\npush faile! code ", response_code ,"\n")
 	
 	if push_queue.size() > 0:
 		push(push_queue[0])

@@ -18,6 +18,19 @@ var openFile
 export (AudioStream) var FileAudio
 enum FileAccessModes {Resourcer = 0, Userer = 1, FileSystemer = 2, Canceler = -1}
 export (int) var SelectedFileAccess
+onready var GMEPlayer = AutoSpeaker.FLMmusic
+var useGME = false
+onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
+var useArlezMidi = false
+
+# https://github.com/MightyPrinny/godot-FLMusicLib/blob/demo/MyScene.gd
+# GME specific variables
+var loopStart = 0;
+var loopEnd = 0;
+var loop = false;
+var trackNum = 0;
+var vol = "1";
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -42,7 +55,8 @@ func _ready():
 	#LoadFile(FileAudio)
 	SetAudioStream(FileAudio)
 	spectrum = AudioServer.get_bus_effect_instance(AudioServer.get_bus_index(AnalyzeBus), WhereIsSpectrumAnalyzerEffect)
-	
+	GMEPlayer.connect("track_ended",self,"_GMEtrack_ended")
+	ArlezMidi.connect("appeared_lyric",self, "_ArlezMIDI_lyric")
 	pass # Replace with function body.
 
 func Spectruder():
@@ -98,6 +112,7 @@ func CountCrackleCounts():
 func DeTogglePlay():
 	$MusicController/MusicUI/MainContains/ControllingMusic/Play.pressed = false
 	#$MusicUI/MainContains/ControllingMusic/Play.pressed = false
+	#GMEPlayer.stop_music()
 	pass
 
 func ReTogglePlay():
@@ -106,11 +121,24 @@ func ReTogglePlay():
 	pass
 
 func PlaySong():
+	if useGME:
+		GMEPlayer.play_music(FilePath,trackNum,loop,loopStart,loopEnd,0)
+		GMEPlayer.set_volume(vol.to_float())
+		return
+	if useArlezMidi:
+		ArlezMidi.play()
+		return
 	$MusicController/MusicUI/MusicPlaySpeaker.play()
 	#$MusicUI/MusicPlaySpeaker.play()
 	pass
 
 func StopSong():
+	if useGME:
+		GMEPlayer.stop_music()
+		return
+	if useArlezMidi:
+		ArlezMidi.stop()
+		return
 	$MusicController/MusicUI/MusicPlaySpeaker.stop()
 	#$MusicUI/MusicPlaySpeaker.stop()
 	pass
@@ -181,7 +209,10 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 	var Buffering = openFile.get_buffer(openFile.get_len())
 	var streamSample
 	#streamSample.data = ProcessAudio(Buffering,path)
-	if path.ends_with(".wav"):
+	useGME = false
+	useArlezMidi = false
+	
+	if path.ends_with(".wav"): #Oh no, elseifs!!!
 		streamSample = AudioStreamSample.new()
 		if cutNoise:
 			print("Cutting Noise...")
@@ -203,17 +234,35 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 		# # https://github.com/godotengine/godot/issues/17748#issuecomment-376320424
 		streamSample = AudioStreamOGGVorbis.new()
 		pass
-	else:
-		printerr("/!\\ UNSUPPORTED AUDIO FILE EXTENSION /!\\ Will use WAV Audio Stream Sampler")
-		streamSample = AudioStreamSample.new()
+	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m") or path.ends_with(".mp3"):
+		useGME = true
+		
 		pass
+	elif path.ends_with(".mid") or path.ends_with(".midi"):
+		useArlezMidi = true
+		pass
+	else:
+		printerr("/!\\ UNSUPPORTED AUDIO FILE EXTENSION /!\\ Will use GME player")
+#		streamSample = AudioStreamSample.new()
+		useGME = true
+		pass
+	
 	pass
-	streamSample.data = Buffering
-	print("Audio Loaded = " + openFile.get_path())
+	
+	if useArlezMidi:
+		ArlezMidi.file = openFile.get_path()
+		print("Use Arlez80 MIDI player = " + openFile.get_path())
+		pass
+	elif useGME:
+		print("Use GME = " + openFile.get_path())
+	else:
+		streamSample.data = Buffering
+		print("Audio Loaded = " + openFile.get_path())
+		FileAudio = streamSample
+		$MusicController/MusicUI/MusicPlaySpeaker.stream = streamSample
+		pass
 	openFile.close()
 	#SetAudioStream(streamSample)
-	FileAudio = streamSample
-	$MusicController/MusicUI/MusicPlaySpeaker.stream = streamSample
 	pass
 
 func LoadFile(filer : String):
@@ -261,6 +310,14 @@ func _on_AudioStreamPlayer_finished():
 	DeTogglePlay()
 	pass # Replace with function body.
 
+func _GMEtrack_ended():
+	DeTogglePlay()
+	print("GME end of track")
+	pass
+
+func _ArlezMIDI_lyric(var lyric):
+	print(lyric)
+	pass
 
 func _on_Play_pressed():
 	pass # Replace with function body.

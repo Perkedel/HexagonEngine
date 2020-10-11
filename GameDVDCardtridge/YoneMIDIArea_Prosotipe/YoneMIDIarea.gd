@@ -25,7 +25,8 @@ signal Shutdown_Exec()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MidiPlayer.play()
+	$GodotMIDIPlayer.send_reset()
+	$GodotMIDIPlayer.play(0.0)
 	pass # Replace with function body.
 
 
