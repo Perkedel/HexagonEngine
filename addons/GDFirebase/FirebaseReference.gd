@@ -55,6 +55,7 @@ func set_listener(listener_ref):
 		listener.connect_to_host(base_url, extended_url)
 
 func on_new_sse_event(headers, event, data):
+	#print("\n\non new sse event \n\n", headers, "\n\n", event, "\n\n", data)
 	if data:
 		var command = event        
 		if command and command != "keep-alive":
@@ -118,6 +119,7 @@ func _get_filter():
 	return cached_filter
 
 func _route_data(command, path, data):
+	#print("\n\nroute data \n\n", command, "\n", path,"\n", data)
 	if path == separator and data.size() > 0:
 		for key in data.keys():
 			if command == put_tag:

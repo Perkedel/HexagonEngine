@@ -20,6 +20,7 @@ enum FileAccessModes {Resourcer = 0, Userer = 1, FileSystemer = 2, Canceler = -1
 export (int) var SelectedFileAccess
 onready var GMEPlayer = AutoSpeaker.FLMmusic
 var useGME = false
+var GMEplayed = false
 onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
 var useArlezMidi = false
 
@@ -124,23 +125,25 @@ func PlaySong():
 	if useGME:
 		GMEPlayer.play_music(FilePath,trackNum,loop,loopStart,loopEnd,0)
 		GMEPlayer.set_volume(vol.to_float())
-		return
-	if useArlezMidi:
+		GMEplayed = true
+	elif useArlezMidi:
 		ArlezMidi.play()
-		return
-	$MusicController/MusicUI/MusicPlaySpeaker.play()
-	#$MusicUI/MusicPlaySpeaker.play()
+	else:
+		$MusicController/MusicUI/MusicPlaySpeaker.play()
+		#$MusicUI/MusicPlaySpeaker.play()
 	pass
 
 func StopSong():
 	if useGME:
-		GMEPlayer.stop_music()
-		return
-	if useArlezMidi:
+		if GMEplayed:
+			GMEPlayer.stop_music()
+		GMEplayed = false
+	elif useArlezMidi:
 		ArlezMidi.stop()
 		return
-	$MusicController/MusicUI/MusicPlaySpeaker.stop()
-	#$MusicUI/MusicPlaySpeaker.stop()
+	else:
+		$MusicController/MusicUI/MusicPlaySpeaker.stop()
+		#$MusicUI/MusicPlaySpeaker.stop()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -238,7 +241,7 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 		useGME = true
 		
 		pass
-	elif path.ends_with(".mid") or path.ends_with(".midi"):
+	elif path.ends_with(".mid") or path.ends_with(".midi") or path.ends_with(".MID") or path.ends_with(".MIDI"):
 		useArlezMidi = true
 		pass
 	else:
@@ -312,6 +315,7 @@ func _on_AudioStreamPlayer_finished():
 	pass # Replace with function body.
 
 func _GMEtrack_ended():
+	GMEplayed = false
 	DeTogglePlay()
 	print("GME end of track")
 	pass

@@ -18,6 +18,7 @@ var aDokumente = {
 func _ready():
 	#aDatabasa = Firebase.Database.get_database_reference("Sandbox", aDokumente)
 	#aDatabasa = Firebase.Database.get_database_reference("sandbox",{})
+	
 	pass # Replace with function body.
 
 
@@ -57,20 +58,24 @@ func saveRawNow(userRaw):
 	pass
 
 func _on_Button_pressed():
-	#aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
-	var tobePush = {
-		"fields":{
-			"Auza":{"stringValue":"aaaaaaaaaaaw"}
-		},
-	}
-	aDatabasa.push(tobePush)
+	if Firebase.Auth.auth:
+		#aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
+	#	var tobePush = {
+	#		"fields":{
+	#			"Auza":{"stringValue":"aaaaaaaaaaaw"}
+	#		},
+	#	}
+		#var tobePush = { "first": "Jack", "last": "Sparrow" }
+		#aDatabasa.push(tobePush)
+		aDatabasa.push({"awag" : "awag", "yawg" : "way"})
 	pass # Replace with function body.
 
 
 func _on_FireBaseAuth_loggedInAuthed(theAuth):
 	print("Amlogedin")
+	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
 	$MehLog.text = String(theAuth)
-	saveToFile(theAuth)
+	#saveToFile(theAuth)
 	pass # Replace with function body.
 
 
@@ -81,7 +86,7 @@ func _on_FireBaseAuth_loggedFaile(code,message):
 
 func _on_FireBaseAuth_userDataGet(userData):
 	print_debug("USER DATA GET")
-	saveRawNow(userData)
+	#saveRawNow(userData)
 	pass # Replace with function body.
 
 
@@ -92,5 +97,5 @@ func _on_FireBaseAuth_userDataDictionary(userDataDictionary):
 
 
 func _on_Button2_pressed():
-	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
+	aDatabasa = Firebase.Database.get_database_reference("sandbox/yest", {})
 	pass # Replace with function body.

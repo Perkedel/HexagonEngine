@@ -1,5 +1,12 @@
 extends HBoxContainer
 # https://github.com/WolfgangSenff/GodotFirebase
+"""
+https://firebase.google.com/docs/firestore/use-rest-api
+https://firebase.google.com/docs/firestore/reference/rest?hl=en
+https://firebase.google.com/docs/firestore/reference/rest
+https://www.epochconverter.com/
+https://duckduckgo.com/?q=firebase+firestore+rest+api&t=brave&ia=web
+"""
 
 onready var Authing = $AUTHING
 onready var Authed = $AUTHED
@@ -10,6 +17,7 @@ onready var userButton = Authed.get_node("USERbutton")
 # var b = "text"
 var authedMe
 var firebaseReferencer
+var firestorer
 var UserNameText
 var PasswordText ## Do not save this variable on disk unencrypted!!!
 
@@ -21,6 +29,7 @@ signal loggedInAuthed(theAuth)
 signal loggedFaile(code, message)
 signal userDataGet(userData)
 signal userDataDictionary(userDataDictionary)
+signal werrorCode(code)
 
 var userDictionaryData = {}
 
@@ -29,6 +38,7 @@ func _ready():
 	Firebase.Auth.connect("login_succeeded", self, "_on_FirebaseAuth_LoginSuccess")
 	Firebase.Auth.connect("login_failed", self, "_on_FirebaseAuth_LoginFail")
 	Firebase.Auth.connect("userdata_received", self, "_on_FirebaseAuth_GetUserData")
+	
 	pass # Replace with function body.
 
 func RotateHourglass():
@@ -51,8 +61,11 @@ func loggedIn(whoAuth):
 	authedMe = whoAuth
 	Firebase.Auth.get_user_data()
 	#print(String(authedMe))
-	firebaseReferencer = Firebase.Database.get_database_reference("pengguna", {})
+	yield(get_tree().create_timer(0.1),"timeout")
+	#firebaseReferencer = Firebase.Database.get_database_reference("pengguna", { })
+	#firestorer = Firebase.Firestore.collection("pengguna/")
 	userButton.text
+	
 	emit_signal("loggedInAuthed", whoAuth)
 	pass
 
@@ -77,7 +90,25 @@ func receiveUserDictionary(userData : FirebaseUserData):
 		"display_name" :userData.display_name,
 		"photo_url" :userData.photo_url,
 	}
-	firebaseReferencer.update(String(userDictionaryData["local_id"]), userDictionaryData)
+	var forFirestorer = {
+		"fields":
+			{
+				"local_id" : {"stringValue": userData.local_id},
+				"email" : {"stringValue": userData.email},
+				"email_verified" : {"booleanValue": userData.email_verified},
+				"password_updated_at" : {"integerValue": userData.password_updated_at},
+				"last_login_at": {"integerValue":userData.last_login_at},
+				"created_at" : {"integerValue":userData.created_at},
+				
+				"provider_id" : {"stringValue": userData.provider_id},
+				"display_name" : {"stringValue": userData.display_name},
+				"photo_url" : {"stringValue": userData.photo_url},
+			}
+	}
+	#firebaseReferencer.update(String(userDictionaryData["local_id"]), userDictionaryData)
+	#firebaseReferencer.push(userDictionaryData)
+	firestorer = Firebase.Firestore.collection("pengguna")
+	firestorer.update(userData.local_id,forFirestorer)
 	emit_signal("userDataDictionary", userDictionaryData)
 	pass
 
@@ -125,13 +156,14 @@ func _on_SIGNUPbutton_pressed():
 
 func _on_FirebaseAuth_LoginSuccess(whoAuth):
 	print("login success")
-	
+	yield(get_tree().create_timer(.1),"timeout")
 	loggedIn(whoAuth)
 	pass
 
 func _on_FirebaseAuth_LoginFail(code,message):
 	print("login faile")
 	loggedFaile(code, message)
+	emit_signal("werrorCode", code)
 	pass
 
 func _on_FirebaseAuth_GetUserData(userData):

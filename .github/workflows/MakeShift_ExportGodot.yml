@@ -23,18 +23,18 @@ jobs:
     # Pls download Godot
     - name: Download Godot
       run: |
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_linux_headless.64.zip
-        unzip Godot_v3.2.2-stable_linux_headless.64.zip
-        mv Godot_v3.2.2-stable_linux_headless.64 godot
+        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_linux_headless.64.zip
+        unzip Godot_v3.2.3-stable_linux_headless.64.zip
+        mv Godot_v3.2.3-stable_linux_headless.64 godot
         chmod +x godot
 
     # Pls download export Template
     - name: Download Godot Export Template
       run: |
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_export_templates.tpz
+        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_export_templates.tpz
         mkdir -p ~/.local/share/godot/templates
-        unzip Godot_v3.2.2-stable_export_templates.tpz -d ~/.local/share/godot/templates
-        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.2.stable.
+        unzip Godot_v3.2.3-stable_export_templates.tpz -d ~/.local/share/godot/templates
+        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.3.stable.
     
     #- name: Install Something Library First
     #  run: |
