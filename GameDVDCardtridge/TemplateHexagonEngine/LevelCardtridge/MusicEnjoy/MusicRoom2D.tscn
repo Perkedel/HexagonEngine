@@ -100,6 +100,7 @@ bus = "Music"
 pause_mode = 1
 bus = "Music"
 script = ExtResource( 11 )
+max_polyphony = 128
 file = "res://DummyTest/dataArlez80/fairyland_gm.mid"
 load_all_voices_from_soundfont = true
 no_reload_soundfont = true
@@ -189,8 +190,8 @@ mode = 0
 access = 2
 filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis", "*.mod; Music Module", "*.it; Impulse Tracker", "*.s3m; Scream Tracker", "*.xm; Extended Module Music", "*.mp3; MPEG Layer 3", "*.midi; Musical Digital Interface", "*.mid; Musical Digital Interface" )
 show_hidden_files = true
-current_dir = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "/media/joelwindows7/OS/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "/media/joelwindows7/OS/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -5,3 +5,6 @@ help --all
 ls
 dir
 mkdir TermTestoid
+help
+ls
+sudo apt upgrade

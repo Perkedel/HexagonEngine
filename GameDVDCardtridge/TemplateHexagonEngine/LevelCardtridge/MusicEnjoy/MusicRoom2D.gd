@@ -212,7 +212,7 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 	useGME = false
 	useArlezMidi = false
 	
-	if path.ends_with(".wav"): #Oh no, elseifs!!!
+	if path.ends_with(".wav") or path.ends_with(".WAV"): #Oh no, elseifs!!!
 		streamSample = AudioStreamSample.new()
 		if cutNoise:
 			print("Cutting Noise...")
@@ -230,11 +230,11 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 			streamSample.stereo = ConvertStereo
 			pass
 		pass
-	elif path.ends_with(".ogg"):
+	elif path.ends_with(".ogg") or path.ends_with(".OGG"):
 		# # https://github.com/godotengine/godot/issues/17748#issuecomment-376320424
 		streamSample = AudioStreamOGGVorbis.new()
 		pass
-	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m") or path.ends_with(".mp3"):
+	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m") or path.ends_with(".mp3") or path.ends_with(".XM") or path.ends_with(".MOD") or path.ends_with(".IT") or path.ends_with(".S3M") or path.ends_with(".MP3"):
 		useGME = true
 		
 		pass
@@ -243,6 +243,7 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 		pass
 	else:
 		printerr("/!\\ UNSUPPORTED AUDIO FILE EXTENSION /!\\ Will use GME player")
+		print_stack()
 #		streamSample = AudioStreamSample.new()
 		useGME = true
 		pass
@@ -316,6 +317,7 @@ func _GMEtrack_ended():
 	pass
 
 func _ArlezMIDI_lyric(var lyric):
+	##printraw(lyric)
 	print(lyric)
 	pass
 
