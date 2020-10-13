@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ChangeDVDMenu.gd" type="Script" id=1]
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=3]
 [ext_resource path="res://Scenes/JustWorkingSetting.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=5]
 
 [node name="ChangeDVDMenu" type="Control"]
 pause_mode = 2
@@ -32,10 +33,25 @@ __meta__ = {
 
 [node name="JustWorkingSetting" parent="." instance=ExtResource( 4 )]
 popup_exclusive = true
+
+[node name="SelectFileLoadingMode" parent="." instance=ExtResource( 5 )]
+
+[node name="JustAFileDialog" type="FileDialog" parent="."]
+margin_top = 43.0
+margin_right = 1887.0
+margin_bottom = 1053.0
+window_title = "Buka sebuah File"
+mode = 0
+filters = PoolStringArray( "*.tscn; Godot Tscene", "*.scn; Godot scene" )
+show_hidden_files = true
 [connection signal="ItemClickEnter" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_ItemClickEnter"]
 [connection signal="PressShutDown" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_PressShutDown"]
+[connection signal="importModPCKnow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_importModPCKnow"]
+[connection signal="loadMoreDVDsNow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_loadMoreDVDsNow"]
 [connection signal="openSetting" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_openSetting"]
 [connection signal="confirmed" from="JustWorkingAreYouSure" to="." method="_on_JustWorkingAreYouSure_confirmed"]
 [connection signal="confirmed" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_confirmed"]
 [connection signal="custom_action" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_custom_action"]
 [connection signal="popup_hide" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_popup_hide"]
+[connection signal="FileAccessModeSelected" from="SelectFileLoadingMode" to="." method="_on_SelectFileLoadingMode_FileAccessModeSelected"]
+[connection signal="file_selected" from="JustAFileDialog" to="." method="_on_JustAFileDialog_file_selected"]

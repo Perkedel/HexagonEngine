@@ -46,3 +46,13 @@ func _on_ItemList_item_activated(index):
 func _on_AccountButton_pressed():
 	emit_signal("openSetting")
 	pass # Replace with function body.
+
+signal loadMoreDVDsNow()
+func _on_LoadMoreDVDsButton_pressed():
+	emit_signal("loadMoreDVDsNow")
+	pass # Replace with function body.
+
+signal importModPCKnow()
+func _on_ImportModPackButton_pressed():
+	emit_signal("importModPCKnow")
+	pass # Replace with function body.

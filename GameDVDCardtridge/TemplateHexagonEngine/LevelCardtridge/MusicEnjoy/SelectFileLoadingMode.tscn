@@ -32,7 +32,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 margin_right = 1041.0
-margin_bottom = 454.0
+margin_bottom = 458.0
 rect_min_size = Vector2( 0, 300 )
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -50,7 +50,7 @@ rect_min_size = Vector2( 0, 150 )
 
 [node name="Resourcer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
 self_modulate = Color( 0.0784314, 1, 0, 1 )
-margin_right = 254.0
+margin_right = 257.0
 margin_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -60,8 +60,8 @@ clip_text = true
 
 [node name="Userer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
 self_modulate = Color( 0, 0.984314, 1, 1 )
-margin_left = 262.0
-margin_right = 516.0
+margin_left = 261.0
+margin_right = 518.0
 margin_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -71,8 +71,8 @@ clip_text = true
 
 [node name="FileSystemer" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
 self_modulate = Color( 1, 0.713726, 0, 1 )
-margin_left = 524.0
-margin_right = 778.0
+margin_left = 522.0
+margin_right = 779.0
 margin_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -82,7 +82,7 @@ clip_text = true
 
 [node name="Canceler" type="Button" parent="Panel/VBoxContainer/ButtonsConfirm"]
 self_modulate = Color( 0.992157, 0.121569, 0.121569, 1 )
-margin_left = 786.0
+margin_left = 783.0
 margin_right = 1041.0
 margin_bottom = 150.0
 size_flags_horizontal = 3

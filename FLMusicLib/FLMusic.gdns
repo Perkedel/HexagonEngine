@@ -7,4 +7,3 @@ resource_name = "GameMusicEmu"
 class_name = "FLMusicLib"
 library = ExtResource( 1 )
 script_class_name = "FLMusicLib"
-

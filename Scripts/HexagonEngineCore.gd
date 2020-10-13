@@ -123,11 +123,15 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 		13:
 			LoadDVD = load("res://GameDVDCardtridge/ExportMyself/ExportMyself.tscn")
 			pass
+		14:
+			LoadDVD = load("res://GameDVDCardtridge/WhereIsLoadingBarFunctions/WhereIsLoadingFunctions.tscn")
 		_:
 			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
 			pass
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
+
+
 
 
 func _on_DVDCartridgeSlot_DVDTryLoad():
@@ -169,4 +173,11 @@ func checkForResetMe():
 
 func _on_AreYouSureDialog_YesOrNoo(which):
 	# YesNoYes
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
+	print("Custom load this ", path, " right here")
+	LoadDVD = load(path)
+	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
