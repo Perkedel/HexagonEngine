@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ReceptionBell.wav-0ddabddf3174b7a8e91b124294f835bf.sample"
+
+[deps]
+
+source_file="res://Audio/Sounds/ReceptionBell.wav"
+dest_files=[ "res://.import/ReceptionBell.wav-0ddabddf3174b7a8e91b124294f835bf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

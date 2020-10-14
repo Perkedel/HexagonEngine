@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WoodCollision-01.wav-e45a5cfbeefb4a4f3d8b828d05baa3f7.sample"
+
+[deps]
+
+source_file="res://Audio/Sounds/WoodCollision-01.wav"
+dest_files=[ "res://.import/WoodCollision-01.wav-e45a5cfbeefb4a4f3d8b828d05baa3f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
