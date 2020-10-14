@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.gd" type="Script" id=3]
+
 
 [node name="SelectFileLoadingMode" type="Popup"]
 anchor_left = 0.5

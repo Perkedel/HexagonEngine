@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WoodCollision-04.wav-acc2333a8e5674a92ddc69b0fbae18fb.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/WoodCollision-04.wav"
+dest_files=[ "res://.import/WoodCollision-04.wav-acc2333a8e5674a92ddc69b0fbae18fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

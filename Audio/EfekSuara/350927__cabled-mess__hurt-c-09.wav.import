@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/350927__cabled-mess__hurt-c-09.wav-c122111b4d8833d05f002d493120ef06.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/350927__cabled-mess__hurt-c-09.wav"
+dest_files=[ "res://.import/350927__cabled-mess__hurt-c-09.wav-c122111b4d8833d05f002d493120ef06.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

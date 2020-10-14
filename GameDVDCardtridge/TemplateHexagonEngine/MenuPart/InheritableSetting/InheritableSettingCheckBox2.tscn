@@ -2,9 +2,10 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox2.gd" type="Script" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/CustomButtonGroup2.tres" type="ButtonGroup" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

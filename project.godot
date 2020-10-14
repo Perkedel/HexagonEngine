@@ -892,7 +892,7 @@ singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://ad
 
 theme/use_hidpi=true
 theme/custom="res://Theme/Perkedel_Tema.tres"
-theme/custom_font="res://font/Built/Ubuntu_R_16tred.tres"
+theme/custom_font="res://fonts/Built/Ubuntu_R_16tred.tres"
 
 [input]
 

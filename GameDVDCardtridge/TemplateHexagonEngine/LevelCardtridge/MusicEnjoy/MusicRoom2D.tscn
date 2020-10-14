@@ -2,15 +2,16 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=10]
 [ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=11]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )

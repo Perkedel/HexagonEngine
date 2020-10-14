@@ -2,8 +2,9 @@
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tres/BalonDuar.tres" type="Material" id=1]
 [ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=2]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Audio/82109__gniffelbaf__balloon-burst-01.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/EfekSuara/82109__gniffelbaf__balloon-burst-01.wav" type="AudioStream" id=3]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/DorMeletus.gd" type="Script" id=4]
+
 
 [node name="DorMeletus" type="Particles2D"]
 emitting = false

@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://GameDVDCardtridge/AdmobberTestio/LEDs.gd" type="Script" id=2]
+
 
 [node name="LEDs" type="HBoxContainer"]
 margin_top = 57.0

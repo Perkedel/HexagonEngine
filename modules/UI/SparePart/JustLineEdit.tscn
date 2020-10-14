@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://modules/UI/SparePart/JustLineEdit.gd" type="Script" id=2]
+
 
 [node name="JustLineEdit" type="HBoxContainer"]
 margin_right = 1920.0

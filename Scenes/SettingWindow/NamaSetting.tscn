@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/SettingWindow/NamaSetting.gd" type="Script" id=3]
+
 
 [node name="NamaSetting" type="HBoxContainer"]
 margin_right = 1210.0

@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/AnTransitionations/AnTransitionation.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=4]
+
 
 [node name="AnTransitionation" type="Node"]
 script = ExtResource( 1 )

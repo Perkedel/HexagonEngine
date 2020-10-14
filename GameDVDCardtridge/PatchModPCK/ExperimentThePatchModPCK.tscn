@@ -2,12 +2,13 @@
 
 [ext_resource path="res://GameDVDCardtridge/PatchModPCK/ExperimentThePatchModPCK.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=8]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

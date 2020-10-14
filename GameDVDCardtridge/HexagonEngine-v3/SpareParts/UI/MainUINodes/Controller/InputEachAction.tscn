@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Controller/InputEachAction.gd" type="Script" id=3]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.556863, 0, 0.607843, 0.686275 )

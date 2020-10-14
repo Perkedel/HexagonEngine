@@ -1,14 +1,15 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://modules/UI/FirebaseQuestChallenge.gd" type="Script" id=2]
 [ext_resource path="res://modules/UI/SparePart/JustLineEdit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://modules/UI/SparePart/TitleBarMini.tscn" type="PackedScene" id=4]
 [ext_resource path="res://modules/UI/SparePart/PLSWAIT.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=7]
-[ext_resource path="res://font/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=8]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=9]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=8]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=9]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

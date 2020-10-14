@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=1]
+
 
 [node name="Menu404" type="HBoxContainer"]
 margin_top = 980.0

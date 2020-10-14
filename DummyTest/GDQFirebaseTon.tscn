@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://DummyTest/GDQFirebaseTon.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=3]
+
 
 [node name="GDQFirebaseTon" type="Node"]
 script = ExtResource( 1 )

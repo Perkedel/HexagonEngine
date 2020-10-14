@@ -7,7 +7,7 @@
 [ext_resource path="res://Sprites/UnkownIcon.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/PlayIcon.png" type="Texture" id=7]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=8]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=11]
@@ -15,6 +15,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/GameplayLevelLoadingInfoArea.tscn" type="PackedScene" id=13]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=14]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=15]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Systole1.ogg" type="AudioStream" id=3]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Diastole2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-MI.ttf" type="DynamicFontData" id=5]
@@ -9,12 +9,13 @@
 [ext_resource path="res://font/ubuntu-font-family-0.83/UbuntuMono-R.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/DescriptionTextLabel.tscn" type="PackedScene" id=9]
-[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=10]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=12]
 [ext_resource path="res://Theme/Perkedel_Tema_BigFon.tres" type="Theme" id=13]
 [ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/AudioSetting.png" type="Texture" id=15]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

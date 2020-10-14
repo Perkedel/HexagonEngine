@@ -2,8 +2,9 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/NextLevelTost1/NextLevelTost12D.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/YayComplete.tscn" type="PackedScene" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/JustAGolfLevelCard.tscn" type="PackedScene" id=4]
+
 
 [node name="NextLevelTost12D" type="Node2D"]
 script = ExtResource( 1 )

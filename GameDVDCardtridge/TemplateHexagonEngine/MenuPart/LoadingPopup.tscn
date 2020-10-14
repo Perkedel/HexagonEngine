@@ -2,7 +2,8 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" type="PackedScene" id=2]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+
 
 [node name="LoadingPopup" type="Popup"]
 visible = true

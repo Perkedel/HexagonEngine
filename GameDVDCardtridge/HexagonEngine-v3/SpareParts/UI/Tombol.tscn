@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/Tombol.gd" type="Script" id=3]
+
 
 [node name="Tombol" type="Button"]
 margin_right = 575.0

@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TostLeveling/TostLeveling.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=3]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=4]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

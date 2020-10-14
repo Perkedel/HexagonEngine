@@ -1,16 +1,17 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/404/404.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
-[ext_resource path="res://font/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=5]
-[ext_resource path="res://font/Built/Ubuntu_MI_48tred.tres" type="DynamicFont" id=6]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=5]
+[ext_resource path="res://fonts/Built/Ubuntu_MI_48tred.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
 [ext_resource path="res://GameDVDCardtridge/404/videos/Sonne_Zeitraffer_-_Sun_Time_Lapse_3840x2160p_24FPS_CC_(Royalty_Free)_(Kostenlos)_10bit.webm" type="VideoStream" id=8]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=9]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=10]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=11]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

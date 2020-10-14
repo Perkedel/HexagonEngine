@@ -1,14 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ExportMyself/ExportMyself.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
-[ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=5]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=6]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture" id=9]
+
 
 [node name="ExportMyself" type="Node"]
 script = ExtResource( 1 )
