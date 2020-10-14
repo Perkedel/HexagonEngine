@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://DummyTest/firebasetonl.gd" type="Script" id=1]
 [ext_resource path="res://addons/FontAwesome5/FontAwesome.gd" type="Script" id=2]
 [ext_resource path="res://addons/FontAwesome5/fa-solid-900.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/Modules/FireBaseAuther.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -27,6 +28,17 @@ margin_right = 542.0
 margin_bottom = 164.0
 text = "Test The Firebaseton"
 
+[node name="Button3" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 556.0
+margin_top = -163.0
+margin_right = 934.0
+margin_bottom = 164.0
+text = "Test The upload to Storageon"
+
 [node name="Button2" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -37,6 +49,17 @@ margin_top = 164.0
 margin_right = 542.0
 margin_bottom = 491.0
 text = "Connek firebaseton"
+
+[node name="Button4" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 560.0
+margin_top = 164.0
+margin_right = 926.0
+margin_bottom = 491.0
+text = "Downlod fel"
 
 [node name="FontAwesome" type="Label" parent="."]
 margin_right = 362.0
@@ -59,9 +82,28 @@ ahahahahahaha"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SelectFileLoadingMode" parent="." instance=ExtResource( 5 )]
+
+[node name="FileDialog" type="FileDialog" parent="."]
+visible = true
+margin_left = 336.38
+margin_top = 152.172
+margin_right = 1721.38
+margin_bottom = 894.172
+window_title = "Buka sebuah File"
+mode = 0
+show_hidden_files = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
 [connection signal="loggedFaile" from="FireBaseAuth" to="." method="_on_FireBaseAuth_loggedFaile"]
 [connection signal="loggedInAuthed" from="FireBaseAuth" to="." method="_on_FireBaseAuth_loggedInAuthed"]
 [connection signal="userDataDictionary" from="FireBaseAuth" to="." method="_on_FireBaseAuth_userDataDictionary"]
 [connection signal="userDataGet" from="FireBaseAuth" to="." method="_on_FireBaseAuth_userDataGet"]
+[connection signal="FileAccessModeSelected" from="SelectFileLoadingMode" to="." method="_on_SelectFileLoadingMode_FileAccessModeSelected"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]

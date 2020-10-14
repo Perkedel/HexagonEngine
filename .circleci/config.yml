@@ -4,6 +4,7 @@ jobs:
   build:
     machine:
         enabled: true
+	#resource_class: 2xlarge #peck you Circle CI why no resource class!?
     steps:
       - checkout
       #- setup_remote_docker: # PEXK YOU CIRCLE CI!!! why I must buy premium plan?!
@@ -71,3 +72,4 @@ jobs:
       - run:
           name: Upload HTML5 build
           command: if [[ $(git log -1 --oneline) == *"[RELEASE]"* ]]; then ./butler push HTML5 joelwindows7/hexagon-engine:HTML5-circleci; fi
+

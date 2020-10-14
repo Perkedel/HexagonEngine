@@ -13,6 +13,8 @@ var aDokumente = {
 	an = "a",
 	tand = "12.4a",
 }
+onready var aStoreg = Firebase.Storage
+onready var FileAccessModed: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,6 +60,7 @@ func saveRawNow(userRaw):
 	pass
 
 func _on_Button_pressed():
+	# realtime database push data
 	if Firebase.Auth.auth:
 		#aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
 	#	var tobePush = {
@@ -97,5 +100,43 @@ func _on_FireBaseAuth_userDataDictionary(userDataDictionary):
 
 
 func _on_Button2_pressed():
-	aDatabasa = Firebase.Database.get_database_reference("sandbox/yest", {})
+	# realtime database connect
+	aDatabasa = Firebase.Database.get_database_reference("sandbox", {})
+	pass # Replace with function body.
+
+
+func _on_Button3_pressed():
+	# storage
+	$SelectFileLoadingMode.popup_centered()
+	pass # Replace with function body.
+
+
+func _on_SelectFileLoadingMode_FileAccessModeSelected(Which):
+	match(Which):
+		-1:
+			#canceled
+			pass
+		0:
+			$FileDialog.access = FileDialog.ACCESS_RESOURCES
+			pass
+		1:
+			$FileDialog.access = FileDialog.ACCESS_USERDATA
+			pass
+		2:
+			$FileDialog.access = FileDialog.ACCESS_FILESYSTEM
+			pass
+	
+	if Which != -1:
+		$FileDialog.popup_centered()
+		pass
+	pass # Replace with function body.
+
+
+func _on_FileDialog_file_selected(path):
+	aStoreg.upload(path,".","Spinning-crocodillo-oliveEdit-windows10Emoji.png") # it seems it's incomplete I think? idk
+	pass # Replace with function body.
+
+# https://firebasestorage.googleapis.com/v0/b/hexagon-engine.appspot.com/o/Spinning-crocodillo-oliveEdit-windows10Emoji.png?alt=media&token=fd446f96-1802-451d-bc6c-0410c737eba0
+func _on_Button4_pressed():
+	aStoreg.download(".","Spinning-crocodillo-oliveEdit-windows10Emoji.png")
 	pass # Replace with function body.
