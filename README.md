@@ -30,6 +30,21 @@ A Higher Level Application and Game Framework.
 
 Powered by Godot Engine.
  
+# Installing
+## Source Code, Modding, or Compiling yourselves
+- use https://desktop.github.com to easily clone with GUI Git. Install it!
+- Click Green download button.
+- `Open with GitHub Desktop`
+- Put where to clone this repository. e.g. `~/Dokumen/kolmorotzzet/Artistic Setups/JOELwindows7`. The next folder where the actual repo be, will be automatically created for you.
+- `Clone` button
+- wait
+- get https://godotengine.org . download latest version for your operating system!
+- Extract the compressed download
+- Open executable
+- Open the `project.godot` in the repo root directory you've just cloned.
+- Enjoy source codes!
+- Press `Play` to play Hexagon Engine.
+
 # Synopsis
 ## What is this?
 A Godot template to make your games on.
@@ -128,6 +143,7 @@ export template 'linux' appears to be missing
 ```
 
 sadd. But don't worry, we'll setup and upload the manual render build version anyway, **Which ironically works!**
+
 
 
 
