@@ -13,6 +13,7 @@ func _ready():
 	pass # Replace with function body.
 
 func reload():
+	print("Welcome, ", String(Settingers.SettingData[SettingersPath]))
 	$LineEdit.text = Settingers.SettingData[SettingersPath]
 	settingLoaded = true
 	pass

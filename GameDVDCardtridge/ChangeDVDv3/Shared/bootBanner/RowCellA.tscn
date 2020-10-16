@@ -22,7 +22,7 @@ __meta__ = {
 imageFile = ExtResource( 1 )
 
 [node name="Splash" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.984846 )
 margin_left = 460.0
 margin_right = 1460.0
 margin_bottom = 200.0

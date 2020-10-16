@@ -20,6 +20,7 @@ jobs:
           name: Download Godot 3.2.3
           command: |
               wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_linux_headless.64.zip
+              # wget -q https://godotengine.itch.io/godot/linux-amd64/LATEST/archive/default
               unzip Godot_v3.2.3-stable_linux_headless.64.zip
               mv Godot_v3.2.3-stable_linux_headless.64 godot
               chmod +x godot

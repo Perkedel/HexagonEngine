@@ -5,8 +5,8 @@ extends HBoxContainer
 export(Texture) var imageFile = load("res://Sprites/HexagonEngineLogo.png")
 
 export(float) var startAppearTime = .3
-export(float) var startInflateTime = 5
-export(float) var plusDisappearIn = 2
+export(float) var startInflateTime = 3
+export(float) var plusDisappearIn = 1
 export(float) var stopAppearTime = 1
 
 onready var tween = $Tween
@@ -28,6 +28,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Splash.texture = imageFile
+	pass
+
+func justSkipAlready():
+	print("\n\nOkay I'm skip!\n\n")
+	tween.stop_all()
+	emit_signal("ImDone")
 	pass
 
 

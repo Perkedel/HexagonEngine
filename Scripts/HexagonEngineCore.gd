@@ -15,10 +15,17 @@ onready var doPreloadDVD = false
 export(PackedScene) var LoadDVD 
 #enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 
+func _sysInit():
+	OS.request_permissions()
+	# Yield Modloader PCK to load mods
+	ModPckLoader.loadAllMods()
+	#yield(ModPckLoader,"modLoaded")
+	checkForResetMe()
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	OS.request_permissions()
-	checkForResetMe()
+	_sysInit()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -7,5 +7,8 @@
 imageFile = ExtResource( 2 )
 
 [node name="Splash" parent="." index="0"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.151838 )
 texture = ExtResource( 2 )
+
+[node name="Tween" parent="." index="1"]
+playback/active = true

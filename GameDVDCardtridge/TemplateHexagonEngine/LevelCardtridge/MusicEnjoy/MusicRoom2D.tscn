@@ -12,7 +12,6 @@
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=10]
 [ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=11]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )
 

@@ -23,6 +23,7 @@ var useGME = false
 var GMEplayed = false
 onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
 var useArlezMidi = false
+#var Dau = DauMainLooper
 
 # https://github.com/MightyPrinny/godot-FLMusicLib/blob/demo/MyScene.gd
 # GME specific variables
@@ -51,6 +52,7 @@ func TestoidDummyFileMake():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().connect("files_dropped",self,"_drag_drop")
 	SetPath(FileAudio.get_path())
 	TestoidDummyFileMake()
 	#LoadFile(FileAudio)
@@ -379,3 +381,13 @@ func _on_Scroncher_body_entered(body):
 		print("\n\n(ATTENTION!!!) YOU ARE GOING TO LOSE ALL CRACKLES! LEFT "+ String(CrackleCounter) +" PCS!!! (ATTENTION!!!)\n\n")
 		pass
 	pass # Replace with function body.
+
+# https://docs.godotengine.org/en/stable/classes/class_mainloop.html#method-descriptions
+# https://github.com/godotengine/godot/issues/5625
+# https://www.reddit.com/r/godot/comments/46em5w/minimal_drag_and_drop_example/
+# https://godotforums.org/discussion/20252/drag-and-drop-files-to-game-at-runtime
+func _drag_drop(filePaths:PoolStringArray,screenOf:int):
+	print("Drag Drop the ", filePaths[0], " to screen ", String(screenOf))
+	SelectedFileAccess = FileAccessModes.FileSystemer
+	_on_FileDialog_file_selected(filePaths[0])
+	pass

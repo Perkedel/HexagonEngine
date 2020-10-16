@@ -11,6 +11,12 @@ onready var useJSON = true
 var DefaultSetting = {
 	Version = 0,
 	Nama = "a Dasandimian",
+	ModsPCKs={
+		Sample={
+			Patho="",
+			Replaceo=false
+		},
+	},
 	AudioSetting = {
 		MasterVolume = 0,
 		MusicVolume = 0,
@@ -33,6 +39,9 @@ var DefaultSetting = {
 onready var SettingData = {
 	Version = 0,
 	Nama = "a Dasandimian",
+	ModsPCKs={
+		
+	},
 	PleaseResetMe = false,
 	AudioSetting = {
 		MasterVolume = 0,
@@ -81,6 +90,9 @@ func _ready():
 	
 	SettingLoad()
 	pass # Replace with function body.
+func get_settings ():
+	return SettingData
+	pass
 
 func ApplySetting():
 #	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), SettingData.AudioSetting.MasterVolume)

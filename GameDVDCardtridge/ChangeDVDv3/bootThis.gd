@@ -17,12 +17,14 @@ export(float) var fadeSplashIn = .5
 onready var resourcering = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 var ContainsBootBannerInstance
 var ContainsDVDInstance
+var pleaseJustSkip = false
 
 onready var tween = $Tweenee
 onready var indexBootBanner = 0
 onready var howManyBootBanners = 0
 onready var finishedBootBanner = false
 onready var finishedDVDLoading = false
+onready var hasTooDone = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -64,8 +66,7 @@ func loadTray(whatDVD):
 	$Tray.get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
 	pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func _splashing():
 	#$"Splash/CanvasLayer/SplashControl".modulate = Color(1,1,1,0)
 	#$Splash/CanvasLayer/SplashControl/ColumnStack/RowCell.rect_scale = Vector2(.5,.5)
 #	tween.interpolate_property($"Splash/CanvasLayer/SplashControl/ColumnStack/RowCellA", "modulate", Color(1,1,1,0), Color(1,1,1,1), .5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
@@ -81,6 +82,9 @@ func _ready():
 		yield($Splash/SplashMan/SplashControl/ColumnStack, "ImDone")
 		print("Done the " + bootBannersHere)
 		# $Splash/SplashMan/SplashControl/ColumnStack.get_child(0).queue_free()
+		if pleaseJustSkip:
+			ContainsBootBannerInstance.justSkipAlready()
+			break
 		pass
 	finishedBootBanner = true
 	# yield(resourcering,"iAmReady")
@@ -98,14 +102,34 @@ func _ready():
 	yield(tween, "tween_all_completed")
 	$Splash/SplashMan/SplashControl.hide()
 	$Splash/BekgronMan/BekgronControl.hide()
+	pass
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	_splashing()
 	pass # Replace with function body.
 
+func skipSplash():
+	pleaseJustSkip = true
+	if not finishedBootBanner:
+		ContainsBootBannerInstance.justSkipAlready()
+	if finishedDVDLoading and not finishedBootBanner:
+		#ContainsBootBannerInstance.justSkipAlready()
+		#$Splash/SplashMan/SplashControl/ColumnStack.get_child(0).justSkipAlready()
+		pass
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#$Splash/CanvasLayer/SplashControl.modulate += Color(0,0,0,1 * delta)
 	
 	pass
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.pressed and event.button_index == BUTTON_LEFT:
+			skipSplash()
+			pass
 
 
 func _on_Tween_tween_all_completed():
