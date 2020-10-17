@@ -1,0 +1,9 @@
+{
+    "id": "man-of-coyote-miziziziz-Artindi",
+    "Title": "Miziziziz + Artindi Platformer Follow tutorial (Man of Coyote)",
+    "IconUrl": "res://Sprites/Umbrella-Icon-Image.png",
+    "BootThisTscene": "res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

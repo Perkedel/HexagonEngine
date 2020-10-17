@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-5e4004819886c0f6e646718653ce9d53.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/ManOfCoyote/boot.json"
+dest_files=[ "res://.import/boot.json-5e4004819886c0f6e646718653ce9d53.res" ]
+
+[params]
+

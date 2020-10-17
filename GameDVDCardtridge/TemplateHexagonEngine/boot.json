@@ -1,0 +1,9 @@
+{
+    "id": "template-hexagon",
+    "Title": "Template Hexagon Engine",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

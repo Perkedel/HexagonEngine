@@ -1,0 +1,9 @@
+{
+    "id": "Path-Mod-PCK",
+    "Title": "Patch Mod PCK",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/PatchModPCK/ExperimentThePatchModPCK.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

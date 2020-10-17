@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-fe2ae01777a123c9978ff86860e85ffd.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/TemplateHexagonEngine/boot.json"
+dest_files=[ "res://.import/boot.json-fe2ae01777a123c9978ff86860e85ffd.res" ]
+
+[params]
+

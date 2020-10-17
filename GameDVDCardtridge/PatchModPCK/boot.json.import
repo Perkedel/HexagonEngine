@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-916269fb9827829790302f1c22d11d1a.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/PatchModPCK/boot.json"
+dest_files=[ "res://.import/boot.json-916269fb9827829790302f1c22d11d1a.res" ]
+
+[params]
+

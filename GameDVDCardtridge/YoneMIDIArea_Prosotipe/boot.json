@@ -1,0 +1,9 @@
+{
+    "id": "Yone-Arlez80-MIDI-prototype",
+    "Title": "Tone Arlez MIDI Prototype",
+    "IconUrl": "res://addons/midi/icon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

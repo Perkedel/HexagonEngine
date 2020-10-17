@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-089fea211b8a8bc827c1d64b5cd78e58.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/boot.json"
+dest_files=[ "res://.import/boot.json-089fea211b8a8bc827c1d64b5cd78e58.res" ]
+
+[params]
+

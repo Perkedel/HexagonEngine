@@ -1,0 +1,9 @@
+{
+    "id": "detak-jantung-prosotipe",
+    "Title": "Detak Jantung Prosotipe (Open Source Shinon51788 Lub Dubb)",
+    "IconUrl": "res://Inkscape/PostingImage/HeartIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

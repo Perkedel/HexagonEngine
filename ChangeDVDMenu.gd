@@ -51,10 +51,12 @@ func _on_JustWorkingMenu_PressShutDown():
 	$JustWorkingAreYouSure.popup()
 	pass # Replace with function body.
 
-signal ItemClickEnter(Index)
-func _on_JustWorkingMenu_ItemClickEnter(Index):
-	emit_signal("ItemClickEnter",Index)
-	print("Item Click Enter No. " + String(Index))
+signal ItemClickEnter(Index, pathOfThis)
+signal ItemClickEnterName(pathOfThis)
+func _on_JustWorkingMenu_ItemClickEnter(Index, pathOfThis):
+	emit_signal("ItemClickEnter",Index, pathOfThis)
+	emit_signal("ItemClickEnterName",pathOfThis)
+	print("Item Click Enter No. " + String(Index), " which is \n" + pathOfThis,"\nyeah")
 	pass # Replace with function body.
 
 func _input(event):
@@ -149,4 +151,8 @@ func _on_JustWorkingMenu_importModPCKnow():
 	print("time to import PCK")
 	LoadWhichContext = LoadInContext.ImportDVD
 	$SelectFileLoadingMode.popup_centered()
+	pass # Replace with function body.
+
+
+func _on_JustWorkingMenu_shareBootInfoJson(JsonOfIt, pathOfIt):
 	pass # Replace with function body.

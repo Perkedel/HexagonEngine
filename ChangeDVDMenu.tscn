@@ -50,6 +50,7 @@ show_hidden_files = true
 [connection signal="importModPCKnow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_importModPCKnow"]
 [connection signal="loadMoreDVDsNow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_loadMoreDVDsNow"]
 [connection signal="openSetting" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_openSetting"]
+[connection signal="shareBootInfoJson" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_shareBootInfoJson"]
 [connection signal="confirmed" from="JustWorkingAreYouSure" to="." method="_on_JustWorkingAreYouSure_confirmed"]
 [connection signal="confirmed" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_confirmed"]
 [connection signal="custom_action" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_custom_action"]

@@ -1,0 +1,9 @@
+{
+    "id": "iseng-hedboll",
+    "Title": "an Iseng BasHedboll",
+    "IconUrl": "res://icon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/IsengHedBoll/IsengModeHeddBoll.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true
+}

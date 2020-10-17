@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-07163f534e7a144cb48738c457998fec.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/boot.json"
+dest_files=[ "res://.import/boot.json-07163f534e7a144cb48738c457998fec.res" ]
+
+[params]
+

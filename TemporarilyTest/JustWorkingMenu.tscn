@@ -23,7 +23,6 @@
 [ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/MetererOver.png" type="Texture" id=22]
 
-
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -179,6 +178,7 @@ align = 1
 valign = 1
 [connection signal="pressed" from="TitleBar/AccountButton" to="." method="_on_AccountButton_pressed"]
 [connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
 [connection signal="pressed" from="HBoxContainer/PowerOffButton" to="." method="_on_PowerOffButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/LoadMoreDVDsButton" to="." method="_on_LoadMoreDVDsButton_pressed"]

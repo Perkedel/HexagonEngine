@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-4d9c2de27184d154bcda34421bf96d73.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/IsengHedBoll/boot.json"
+dest_files=[ "res://.import/boot.json-4d9c2de27184d154bcda34421bf96d73.res" ]
+
+[params]
+

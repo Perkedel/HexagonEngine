@@ -9,6 +9,7 @@ extends Node
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
 #var ConThread
+var DVDCardtridgeLists
 onready var isRunningDVD = true
 onready var preloadDVD = 0
 onready var doPreloadDVD = false
@@ -83,59 +84,65 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 	DoShutdownNow()
 	pass # Replace with function body.
 
+func _on_ChangeDVDMenu_ItemClickEnterName(loadName):
+	print("Receive DVD Click Name " + loadName)
+	LoadDVD = load(loadName)
+	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	pass
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
 	# pls don't do this. bad code! use level card system!
-	print("Receive DVD Click Index No. " + String(Index))
-	match Index:
-		0:
-			LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn")
-			pass
-		1:
-			LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
-			pass
-		2:
-			LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
-			pass
-		3:
-			LoadDVD = load("res://GameDVDCardtridge/IsengHedBoll/IsengModeHeddBoll.tscn")
-			pass
-		4:
-			LoadDVD = load("res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn")
-			pass
-		5: 
-			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
-			pass
-		6:
-			LoadDVD = load("res://GameDVDCardtridge/BolaAccelerometer/BolaAccelerometer.tscn")
-			pass
-		7:
-			LoadDVD = load("res://GameDVDCardtridge/Splitscrin/Splitscrin Taris.tscn")
-			pass
-		8:
-			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn")
-			pass
-		9:
-			LoadDVD = load("res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn")
-			pass
-		10:
-			LoadDVD = load("res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn")
-			pass
-		11:
-			LoadDVD = load("res://GameDVDCardtridge/AnTransitionations/AnTransitionation.tscn")
-			pass
-		12:
-			LoadDVD = load("res://GameDVDCardtridge/TostLeveling/TostLeveling.tscn")
-			pass
-		13:
-			LoadDVD = load("res://GameDVDCardtridge/ExportMyself/ExportMyself.tscn")
-			pass
-		14:
-			LoadDVD = load("res://GameDVDCardtridge/WhereIsLoadingBarFunctions/WhereIsLoadingFunctions.tscn")
-		_:
-			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
-			pass
-	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	#print("Receive DVD Click Index No. " + String(Index))
+#	match Index:
+#		0:
+#			LoadDVD = load("res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn")
+#			pass
+#		1:
+#			LoadDVD = load("res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.tscn")
+#			pass
+#		2:
+#			LoadDVD = load("res://GameDVDCardtridge/ParlorClassic/Parlor.tscn")
+#			pass
+#		3:
+#			LoadDVD = load("res://GameDVDCardtridge/IsengHedBoll/IsengModeHeddBoll.tscn")
+#			pass
+#		4:
+#			LoadDVD = load("res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn")
+#			pass
+#		5: 
+#			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
+#			pass
+#		6:
+#			LoadDVD = load("res://GameDVDCardtridge/BolaAccelerometer/BolaAccelerometer.tscn")
+#			pass
+#		7:
+#			LoadDVD = load("res://GameDVDCardtridge/Splitscrin/Splitscrin Taris.tscn")
+#			pass
+#		8:
+#			LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn")
+#			pass
+#		9:
+#			LoadDVD = load("res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn")
+#			pass
+#		10:
+#			LoadDVD = load("res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn")
+#			pass
+#		11:
+#			LoadDVD = load("res://GameDVDCardtridge/AnTransitionations/AnTransitionation.tscn")
+#			pass
+#		12:
+#			LoadDVD = load("res://GameDVDCardtridge/TostLeveling/TostLeveling.tscn")
+#			pass
+#		13:
+#			LoadDVD = load("res://GameDVDCardtridge/ExportMyself/ExportMyself.tscn")
+#			pass
+#		14:
+#			LoadDVD = load("res://GameDVDCardtridge/WhereIsLoadingBarFunctions/WhereIsLoadingFunctions.tscn")
+#		_:
+#			LoadDVD = load("res://GameDVDCardtridge/404/404.tscn")
+#			pass
+#	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	# deprecated
 	pass # Replace with function body.
 
 
