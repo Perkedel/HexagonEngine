@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-31a504901b6aa1500b68dffccd4d3367.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/VLCrun/boot.json"
+dest_files=[ "res://.import/boot.json-31a504901b6aa1500b68dffccd4d3367.res" ]
+
+[params]
+

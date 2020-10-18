@@ -211,6 +211,8 @@ Used Assets and Tools!
 - https://github.com/jotson/ridiculous_coding **OH!!!**
 - a
 - https://godotengine.org/asset-library/asset/157
+- https://gamefromscratch.com/vpainter-for-godot/
+- https://github.com/tomankirilov/VPainter
 
 
 

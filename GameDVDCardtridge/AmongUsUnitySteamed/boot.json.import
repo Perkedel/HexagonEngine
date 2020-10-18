@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-b42d95c1d17ceeb162e3cf7e97abfb0a.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/AmongUsUnitySteamed/boot.json"
+dest_files=[ "res://.import/boot.json-b42d95c1d17ceeb162e3cf7e97abfb0a.res" ]
+
+[params]
+

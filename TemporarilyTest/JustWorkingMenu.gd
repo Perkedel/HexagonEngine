@@ -111,3 +111,8 @@ func _on_ImportModPackButton_pressed():
 
 func _on_ItemList_item_rmb_selected(index, at_position):
 	pass # Replace with function body.
+
+
+func _on_RefreshDVDbutton_pressed():
+	refreshDVDs()
+	pass # Replace with function body.

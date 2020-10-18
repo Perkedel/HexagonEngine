@@ -5,5 +5,8 @@
     "BootThisTscene": "res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.tscn",
     "CatalogueBanner": "",
     "DVDCover":"",
-    "isSelectable": true
+    "isSelectable": true,
+    "hidden":false,
+    "actuallyBootJsonPath" : "",
+    "args":["",""]
 }

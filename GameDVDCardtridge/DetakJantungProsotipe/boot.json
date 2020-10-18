@@ -5,5 +5,7 @@
     "BootThisTscene": "res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.tscn",
     "CatalogueBanner": "",
     "DVDCover":"",
-    "isSelectable": true
+    "isSelectable": true,
+    "actuallyBootJsonPath" : "",
+    "args":["",""]
 }

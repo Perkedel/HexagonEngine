@@ -176,6 +176,42 @@ custom_fonts/font = ExtResource( 7 )
 text = "Import Mod PCK"
 align = 1
 valign = 1
+
+[node name="RefreshDVDbutton" type="Button" parent="HBoxContainer"]
+margin_left = 1412.0
+margin_right = 1912.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 0 )
+hint_tooltip = "Terminate Hexagon Engine"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RefreshDVDbutton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
+margin_right = 121.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
+margin_left = 125.0
+margin_right = 500.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+text = "Refresh DVD list"
+align = 1
+valign = 1
 [connection signal="pressed" from="TitleBar/AccountButton" to="." method="_on_AccountButton_pressed"]
 [connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]
@@ -183,3 +219,4 @@ valign = 1
 [connection signal="pressed" from="HBoxContainer/PowerOffButton" to="." method="_on_PowerOffButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/LoadMoreDVDsButton" to="." method="_on_LoadMoreDVDsButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/ImportModPackButton" to="." method="_on_ImportModPackButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/RefreshDVDbutton" to="." method="_on_RefreshDVDbutton_pressed"]

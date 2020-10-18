@@ -5,5 +5,8 @@
     "BootThisTscene": "res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/YoneMIDIarea.tscn",
     "CatalogueBanner": "",
     "DVDCover":"",
-    "isSelectable": true
+    "isSelectable": true,
+    "hidden":false,
+    "actuallyBootJsonPath" : "",
+    "args":["",""]
 }

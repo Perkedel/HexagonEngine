@@ -1,0 +1,15 @@
+{
+    "id": "vlc-run",
+    "Title": "run VLC Media Player",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/VLCrun/runVLCNow.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "actuallyBootJsonPath" : "",
+    "args":["OSExecute","C:/Program Files/VideoLAN/VLC/vlc.exe","",""],
+    "appArgs":["",""],
+    "doBlocking":false,
+    "readStdErr":false,
+}
