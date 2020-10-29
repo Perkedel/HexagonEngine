@@ -9,6 +9,9 @@ extends Node
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
 #var ConThread
+onready var zetrixViewport = $ZetrixViewport
+onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
+onready var dvdSlot = $DVDCartridgeSlot
 var DVDCardtridgeLists
 onready var isRunningDVD = true
 onready var preloadDVD = 0
@@ -16,7 +19,17 @@ onready var doPreloadDVD = false
 export(PackedScene) var LoadDVD 
 #enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 
+# demo of 3D in 2D official Godot
+func _zetrixInit():
+	zetrixViewport.hdr = false
+	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
+	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame")
+	$ZetrixViewport/PortScreen/ScreenMesh.material_override.albedo_texture = get_viewport().get_texture()
+	pass
+
 func _sysInit():
+	_zetrixInit()
 	OS.request_permissions()
 	# Yield Modloader PCK to load mods
 	ModPckLoader.loadAllMods()

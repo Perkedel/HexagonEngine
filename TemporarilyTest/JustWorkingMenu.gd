@@ -116,3 +116,8 @@ func _on_ItemList_item_rmb_selected(index, at_position):
 func _on_RefreshDVDbutton_pressed():
 	refreshDVDs()
 	pass # Replace with function body.
+
+signal viewVRImageNow()
+func _on_ViewVRImage_pressed():
+	emit_signal("viewVRImageNow")
+	pass # Replace with function body.

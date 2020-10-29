@@ -3,6 +3,7 @@ extends Control
 enum LoadInContext {ImportDVD, LoadCustomDVD}
 var LoadWhichContext
 var importDVDmodeWayhemAdd = false
+var zetrixViewport
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,6 +17,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func ReceiveZetrixViewport(getIt:Viewport):
+	zetrixViewport = getIt
+	$JustZetrixVRViewer.ReceiveZetrixViewport(zetrixViewport)
+	pass
 
 signal ShutdownButton
 
@@ -155,4 +161,9 @@ func _on_JustWorkingMenu_importModPCKnow():
 
 
 func _on_JustWorkingMenu_shareBootInfoJson(JsonOfIt, pathOfIt):
+	pass # Replace with function body.
+
+
+func _on_JustWorkingMenu_viewVRImageNow():
+	$JustZetrixVRViewer.popup_centered()
 	pass # Replace with function body.
