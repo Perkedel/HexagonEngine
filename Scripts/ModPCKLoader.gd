@@ -25,7 +25,7 @@ func loadAllMods():
 			print(modLists[modu].Patho, " Failed")
 		pass
 	print("\n\n\n Warning! Godot FileDialog bug!\nIf you load mod PCK resource pack while a FileDialog instance is still there on a node somewhere, the FileDialog access res:// is unable to see those newly imported files! you must kill FileDialog instance and then readd fresh one again. the system however can found this file no problem.")
-	
+	#yield(get_tree().create_timer(.1),"timeout")
 	emit_signal("modLoaded")
 	pass
 

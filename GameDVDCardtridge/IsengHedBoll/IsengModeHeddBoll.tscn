@@ -9,7 +9,6 @@
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
 [ext_resource path="res://admob-lib/admob.gd" type="Script" id=8]
 
-
 [node name="IsengModeHeddBoll" type="Node"]
 script = ExtResource( 1 )
 
@@ -73,15 +72,15 @@ rect_min_size = Vector2( 0, 100 )
 alignment = 1
 
 [node name="ChangeDVD" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
-margin_left = 460.0
-margin_right = 915.0
+margin_left = 474.0
+margin_right = 917.0
 margin_bottom = 100.0
 custom_fonts/font = ExtResource( 7 )
 text = "Change DVD"
 
 [node name="ShutdownHexagon" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
-margin_left = 923.0
-margin_right = 1459.0
+margin_left = 921.0
+margin_right = 1445.0
 margin_bottom = 100.0
 custom_fonts/font = ExtResource( 7 )
 text = "Shutdown Quit"

@@ -23,6 +23,10 @@ func ReceiveZetrixViewport(getIt:Viewport):
 	$JustZetrixVRViewer.ReceiveZetrixViewport(zetrixViewport)
 	pass
 
+func RefreshDVDs():
+	$JustWorkingMenu.refreshDVDs()
+	pass
+
 signal ShutdownButton
 
 signal ShutdownHexagonEngineNow

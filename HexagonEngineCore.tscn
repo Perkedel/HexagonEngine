@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Zetrix/ZetrixViewport.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/JustZetrixVRViewer.tscn" type="PackedScene" id=7]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
@@ -28,6 +29,8 @@ visible = false
 mouse_filter = 1
 
 [node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource( 5 )]
+
+[node name="JustZetrixVRViewer" parent="MetaMenu" instance=ExtResource( 7 )]
 
 [node name="SystemGut" type="Node" parent="."]
 pause_mode = 2

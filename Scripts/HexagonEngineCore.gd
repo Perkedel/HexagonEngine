@@ -11,6 +11,7 @@ extends Node
 #var ConThread
 onready var zetrixViewport = $ZetrixViewport
 onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
+onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
 onready var dvdSlot = $DVDCartridgeSlot
 var DVDCardtridgeLists
 onready var isRunningDVD = true
@@ -21,11 +22,12 @@ export(PackedScene) var LoadDVD
 
 # demo of 3D in 2D official Godot
 func _zetrixInit():
-	zetrixViewport.hdr = false
+	#zetrixViewport.hdr = false
 	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
-	yield(get_tree(), "idle_frame")
-	yield(get_tree(), "idle_frame")
-	$ZetrixViewport/PortScreen/ScreenMesh.material_override.albedo_texture = get_viewport().get_texture()
+	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)
+	zetrixViewport.ReceiveRootViewport(get_viewport())
+	zetrixViewport.ReinstallOwnWorld()
+	# https://godotengine.org/qa/23713/how-to-convert-image-to-texture
 	pass
 
 func _sysInit():
@@ -34,6 +36,7 @@ func _sysInit():
 	# Yield Modloader PCK to load mods
 	ModPckLoader.loadAllMods()
 	#yield(ModPckLoader,"modLoaded")
+	changeDVDMenu.RefreshDVDs()
 	checkForResetMe()
 	pass
 
@@ -45,6 +48,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _input(event):
+	if Input.is_action_just_pressed("debug_showZetrixView"):
+		# Press Ctrl + Alt + Shift + T, for Tari
+		# https://www.youtube.com/watch?v=HmKcvlLxGqo
+		zetrixPreview.show()
+		pass
+	pass
+
 func _exit_tree():
 	pass
 
@@ -157,9 +169,6 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 #	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	# deprecated
 	pass # Replace with function body.
-
-
-
 
 func _on_DVDCartridgeSlot_DVDTryLoad():
 	print("DVD has tried to load!")

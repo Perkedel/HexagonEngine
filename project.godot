@@ -887,8 +887,8 @@ enabled=PoolStringArray( "AudioEffectInspector", "Dialogbox", "EXP-System-Dialog
 
 [gdnative]
 
-singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
-singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot-openxr/godot_openxr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib" ]
 
 [gui]
 
@@ -926,6 +926,12 @@ Pindai={
 Jongkok={
 "deadzone": 0.5,
 "events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+AnalogKiri_x={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
  ]
 }
 AnalogKiri_x-={
@@ -1050,6 +1056,17 @@ Keyboard_Space={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
+debug_showZetrixView={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":true,"shift":true,"control":true,"meta":false,"command":true,"pressed":false,"scancode":84,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+3d_render/layer_1="Entire"
+3d_render/layer_2="HMD Only"
+3d_render/layer_3="Monitor Only"
 
 [locale]
 
