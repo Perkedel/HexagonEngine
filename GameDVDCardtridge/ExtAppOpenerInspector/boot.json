@@ -1,0 +1,11 @@
+{
+    "id": "ext-app-opener-inspector",
+    "Title": "Launch app template based on Inspector",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/ExtAppOpenerInspector/ExtAppOpenerInspector.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "requiredEggsellents":[]
+}

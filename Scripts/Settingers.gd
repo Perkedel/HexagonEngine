@@ -34,7 +34,8 @@ var DefaultSetting = {
 	Firebasers = {
 		RememberMe = false
 	},
-	PleaseResetMe = false
+	PleaseResetMe = false,
+	Eggsellents = {},
 }
 onready var SettingData = {
 	Version = 0,
@@ -58,6 +59,7 @@ onready var SettingData = {
 	Firebasers = {
 		RememberMe = false
 	},
+	Eggsellents = {},
 }
 var SettingFile
 var SettingFolder

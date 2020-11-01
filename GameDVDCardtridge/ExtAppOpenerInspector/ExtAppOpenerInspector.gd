@@ -1,0 +1,37 @@
+extends Node
+
+# https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_exports.html
+enum OpenModes {shellOpen,OSExecute}
+export(OpenModes) var open_mode
+export(String) var target = "https://cointr.ee/joelwindows7"
+export var appArgs :PoolStringArray
+export var doBlocking :bool = false
+export var readStdErr :bool = false
+#export var requiredEggselents:PoolStringArray
+var pid_error_code
+var output = []
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+signal ChangeDVD_Exec()
+signal Shutdown_Exec()
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	match open_mode:
+		OpenModes.shellOpen:
+			print("\n\nOpen Shell url now!")
+			OS.shell_open(target)
+			pass
+		OpenModes.OSExecute:
+			print("\n\nExecute app now!")
+			pid_error_code = OS.execute(target, appArgs, doBlocking, output, readStdErr)
+			print("\n\npid or error code ", pid_error_code)
+			pass
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass

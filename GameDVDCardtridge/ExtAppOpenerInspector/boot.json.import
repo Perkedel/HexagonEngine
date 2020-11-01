@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/boot.json-5ca15edcfb96fd5cf66aa4a3c3cd18f4.res"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/ExtAppOpenerInspector/boot.json"
+dest_files=[ "res://.import/boot.json-5ca15edcfb96fd5cf66aa4a3c3cd18f4.res" ]
+
+[params]
+

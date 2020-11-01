@@ -11,5 +11,5 @@
     "args":["shellOpen","https://cointr.ee/joelwindows7","",""],
     "appArgs":["",""],
     "doBlocking":false,
-    "readStdErr":false,
+    "readStdErr":false
 }

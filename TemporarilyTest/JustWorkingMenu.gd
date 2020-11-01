@@ -58,9 +58,50 @@ func refreshDVDs():
 	$ItemList.clear()
 	DVDcounter = 0
 	for aDVD in DVDItemLists:
-		$ItemList.add_item(DVDItemLists[aDVD].Title, load(DVDItemLists[aDVD].IconUrl))
-		DVDarrayPathLoad.insert(DVDcounter, DVDItemLists[aDVD].BootThisTscene)
-		DVDcounter+=1
+		var deserve_addition = false
+		if DVDItemLists.has("hidden"):
+			
+			if !DVDItemLists[aDVD].hidden:  # is not hidden
+				deserve_addition = true
+			else: # is hidden
+				# Read required activation of easter eggsellent
+				if aDVD.requiredEggsellents.empty():
+					# No easter egg needed but it's hidden
+					deserve_addition = false
+				else:
+					# there is easter egg required for unhide
+					var current_eggs = Settingers.SettingData.Eggsellents # Dictionary
+					var wantede_eggs = aDVD.requiredEggsellents # Array has
+					if current_eggs.has_all(wantede_eggs):
+						deserve_addition = true
+					else:
+						deserve_addition = false
+					
+					#### WILL REMOVE BY
+					#### ANGLE GRINDER
+					#### START DELETION
+	#				var lengthRequired = wantede_eggs.length
+	#				var lengthNow = 0
+					# https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/
+	#				for egg in range(lengthRequired):
+	#					if current_eggs.has(wantede_eggs.egg):
+	#						lengthNow += 1
+	#					pass
+	#				if lengthNow >= lengthRequired:
+	#					deserve_addition = true
+	#				else:
+	#					deserve_addition = false
+					#### END DELETION
+					#### PAIN IS TEMPORARY
+					#### GLORY IS FOREVER
+					#### LOL WINTERGATAN
+		else:
+			deserve_addition = true
+		
+		if deserve_addition:
+			$ItemList.add_item(DVDItemLists[aDVD].Title, load(DVDItemLists[aDVD].IconUrl))
+			DVDarrayPathLoad.insert(DVDcounter, DVDItemLists[aDVD].BootThisTscene)
+			DVDcounter+=1
 		pass
 	
 	pass
