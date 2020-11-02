@@ -121,3 +121,4 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="JatuhAAA" parent="." instance=ExtResource( 3 )]
+[connection signal="body_entered" from="JatuhAAA" to="." method="_on_JatuhAAA_body_entered"]

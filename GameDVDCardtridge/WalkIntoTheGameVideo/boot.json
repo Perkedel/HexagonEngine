@@ -1,0 +1,11 @@
+{
+    "id": "meta-runner-season-1",
+    "Title": "Watch this video why Zetrix VR means Walk into the game",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/WalkIntoTheGameVideo/WalkIntoTheGameVideo.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":true,
+    "requiredEggsellents":["WalkIntoTheGame"]
+}

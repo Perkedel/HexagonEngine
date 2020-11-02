@@ -59,43 +59,43 @@ func refreshDVDs():
 	DVDcounter = 0
 	for aDVD in DVDItemLists:
 		var deserve_addition = false
-		if DVDItemLists.has("hidden"):
+		if DVDItemLists[aDVD].has("hidden"):
 			
 			if !DVDItemLists[aDVD].hidden:  # is not hidden
+				print(aDVD, " is not hidden\n")
 				deserve_addition = true
 			else: # is hidden
 				# Read required activation of easter eggsellent
-				if aDVD.requiredEggsellents.empty():
-					# No easter egg needed but it's hidden
-					deserve_addition = false
-				else:
-					# there is easter egg required for unhide
-					var current_eggs = Settingers.SettingData.Eggsellents # Dictionary
-					var wantede_eggs = aDVD.requiredEggsellents # Array has
-					if current_eggs.has_all(wantede_eggs):
-						deserve_addition = true
-					else:
+				if DVDItemLists[aDVD].has("requiredEggsellents"):
+					if DVDItemLists[aDVD].requiredEggsellents.empty():
+						# No easter egg needed but it's hidden
+						print(aDVD, " is hidden, empty eggsellent\n")
 						deserve_addition = false
+					else:
+						# there is easter egg required for unhide
+						var current_eggs = Settingers.SettingData.Eggsellents # Dictionary
+						var wantede_eggs = DVDItemLists[aDVD].requiredEggsellents # Array has
+						if current_eggs.has_all(wantede_eggs):
+							print(aDVD, " eggsellent is met, show it!\n")
+							deserve_addition = true
+						else:
+							print(aDVD, " eggsellent is unmet, no show.\n")
+							deserve_addition = false
+				else:
+					print(aDVD, " is hidden absolutely\n")
+					deserve_addition = false
+					pass
 					
 					#### WILL REMOVE BY
 					#### ANGLE GRINDER
 					#### START DELETION
-	#				var lengthRequired = wantede_eggs.length
-	#				var lengthNow = 0
-					# https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/
-	#				for egg in range(lengthRequired):
-	#					if current_eggs.has(wantede_eggs.egg):
-	#						lengthNow += 1
-	#					pass
-	#				if lengthNow >= lengthRequired:
-	#					deserve_addition = true
-	#				else:
-	#					deserve_addition = false
+					## but we don't recycle this code to the plastic containers.
 					#### END DELETION
 					#### PAIN IS TEMPORARY
 					#### GLORY IS FOREVER
 					#### LOL WINTERGATAN
 		else:
+			print(aDVD, " has no Hidden here, show it anyway\n")
 			deserve_addition = true
 		
 		if deserve_addition:

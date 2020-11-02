@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ExtAppOpenerInspector/ExtAppOpenerInspector.tscn" type="PackedScene" id=1]
+
+[node name="MinecraftJavaExecute" instance=ExtResource( 1 )]
+open_mode = 1
+target = "C:\\\\Program Files (x86)\\\\Minecraft Launcher\\\\MinecraftLauncher.exe"

@@ -9,10 +9,12 @@ var settingLoaded : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	reload()
+	#yield(get_tree().create_timer(.01),"timeout")
+	#reload()
 	pass # Replace with function body.
 
 func reload():
+	
 	print("Welcome, ", String(Settingers.SettingData[SettingersPath]))
 	$LineEdit.text = Settingers.SettingData[SettingersPath]
 	settingLoaded = true

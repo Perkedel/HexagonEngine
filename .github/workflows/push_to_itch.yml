@@ -1,4 +1,6 @@
 # https://open.lbry.com/@josephbmanley:b/publish-godot-to-itch-with-github:2
+# https://github.com/marketplace/actions/build-godot
+# https://github.com/marketplace/actions/butler-push
 # HELEP
 
 name: Push to Itch
@@ -13,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [linux, win64, osx]
+        platform: [linux, win64, macOS]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,11 +32,11 @@ jobs:
         with:
           name: hexagon-engine_${{ matrix.platform }_GitHub-Action${{ env.EXPORT_SUFFIX }}
           preset: ${{ matrix.platform }}
-          projectDir: . 
+          projectDir: ./ 
           # We settled git from root
           debugMode: 'true'
       - name: Push to Itch
-        uses: josephbmanley/butler-publish-itchio-action@v1.0.1
+        uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
           CHANNEL: ${{ matrix.platform }}-GitHubAction
           ITCH_GAME: hexagon-engine

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/JustModListToLoad.gd" type="Script" id=3]
+
+[node name="JustModListToLoad" type="WindowDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -677.0
+margin_top = -331.5
+margin_right = 677.0
+margin_bottom = 331.5
+window_title = "Mod Lists"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempTextModList" type="TextEdit" parent="VBoxContainer"]
+margin_right = 1354.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "aaaa"
+show_line_numbers = true
+draw_tabs = true
+smooth_scrolling = true
+wrap_enabled = true
+
+[node name="Buttonings" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 600.0
+margin_right = 1354.0
+margin_bottom = 663.0
+alignment = 1
+
+[node name="SaveClose" type="Button" parent="VBoxContainer/Buttonings"]
+margin_left = 533.0
+margin_right = 820.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "Save & Close"
+[connection signal="visibility_changed" from="." to="." method="_on_JustModListToLoad_visibility_changed"]
+[connection signal="text_changed" from="VBoxContainer/TempTextModList" to="." method="_on_TempTextModList_text_changed"]
+[connection signal="pressed" from="VBoxContainer/Buttonings/SaveClose" to="." method="_on_SaveClose_pressed"]

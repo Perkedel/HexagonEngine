@@ -6,7 +6,7 @@
     "CatalogueBanner": "",
     "DVDCover":"",
     "isSelectable": true,
-    "hidden":false,
+    "hidden":true,
     "actuallyBootJsonPath" : "",
     "args":["",""]
 }

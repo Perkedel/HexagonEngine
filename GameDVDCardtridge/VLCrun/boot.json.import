@@ -1,13 +1,20 @@
 [remap]
 
-importer="pixijs_import_spritesheet"
-type="Resource"
-path="res://.import/boot.json-31a504901b6aa1500b68dffccd4d3367.res"
+importer="vnen.tiled_importer"
+type="PackedScene"
+valid=false
 
 [deps]
 
 source_file="res://GameDVDCardtridge/VLCrun/boot.json"
-dest_files=[ "res://.import/boot.json-31a504901b6aa1500b68dffccd4d3367.res" ]
-
 [params]
 
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

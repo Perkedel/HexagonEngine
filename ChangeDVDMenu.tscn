@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ChangeDVDMenu.gd" type="Script" id=1]
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/JustWorkingSetting.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/JustZetrixVRViewer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/JustModListToLoad.tscn" type="PackedScene" id=7]
 
 [node name="ChangeDVDMenu" type="Control"]
 pause_mode = 2
@@ -48,6 +49,8 @@ filters = PoolStringArray( "*.tscn; Godot Tscene", "*.scn; Godot scene" )
 show_hidden_files = true
 
 [node name="JustZetrixVRViewer" parent="." instance=ExtResource( 6 )]
+
+[node name="JustModListToLoad" parent="." instance=ExtResource( 7 )]
 [connection signal="ItemClickEnter" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_ItemClickEnter"]
 [connection signal="PressShutDown" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_PressShutDown"]
 [connection signal="importModPCKnow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_importModPCKnow"]
@@ -56,6 +59,7 @@ show_hidden_files = true
 [connection signal="shareBootInfoJson" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_shareBootInfoJson"]
 [connection signal="viewVRImageNow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_viewVRImageNow"]
 [connection signal="confirmed" from="JustWorkingAreYouSure" to="." method="_on_JustWorkingAreYouSure_confirmed"]
+[connection signal="ShowModListMenuNow" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_ShowModListMenuNow"]
 [connection signal="confirmed" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_confirmed"]
 [connection signal="custom_action" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_custom_action"]
 [connection signal="popup_hide" from="JustWorkingSetting" to="." method="_on_JustWorkingSetting_popup_hide"]

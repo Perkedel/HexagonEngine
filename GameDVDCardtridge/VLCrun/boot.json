@@ -11,5 +11,5 @@
     "args":["OSExecute","C:/Program Files/VideoLAN/VLC/vlc.exe","",""],
     "appArgs":["",""],
     "doBlocking":false,
-    "readStdErr":false,
+    "readStdErr":false
 }

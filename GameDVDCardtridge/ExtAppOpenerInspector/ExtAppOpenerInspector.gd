@@ -20,15 +20,17 @@ signal Shutdown_Exec()
 func _ready():
 	match open_mode:
 		OpenModes.shellOpen:
-			print("\n\nOpen Shell url now!")
+			print("\n\nOpen Shell url now! ", target)
 			OS.shell_open(target)
 			pass
 		OpenModes.OSExecute:
-			print("\n\nExecute app now!")
+			print("\n\nExecute app now! ", target)
 			pid_error_code = OS.execute(target, appArgs, doBlocking, output, readStdErr)
 			print("\n\npid or error code ", pid_error_code)
 			pass
 	
+	yield(get_tree().create_timer(1),"timeout")
+	emit_signal("ChangeDVD_Exec")
 	pass # Replace with function body.
 
 

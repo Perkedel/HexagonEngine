@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/JustZetrixVRViewer.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Perkedel Short Typeborder.png" type="Texture" id=2]
+[ext_resource path="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav" type="AudioStream" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_R_18tred.tres" type="DynamicFont" id=4]
 
 [node name="JustZetrixVRViewer" type="WindowDialog"]
 anchor_left = 0.5
@@ -25,3 +27,15 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 flip_v = true
+
+[node name="ZetrixMonitorSpeaker" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ZetrixCheatCode" type="LineEdit" parent="."]
+visible = false
+anchor_right = 1.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "Type \"ri\" and press Enter to complete \"Tari\" as in Van Elektronische Tari (Meta Runner)."
+[connection signal="text_entered" from="ZetrixCheatCode" to="." method="_on_ZetrixCheatCode_text_entered"]

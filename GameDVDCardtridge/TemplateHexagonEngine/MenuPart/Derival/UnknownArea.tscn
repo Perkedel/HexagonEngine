@@ -5,7 +5,6 @@
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=4]
 
-
 [node name="UnknownArea" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 

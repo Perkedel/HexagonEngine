@@ -213,6 +213,18 @@ Used Assets and Tools!
 - https://godotengine.org/asset-library/asset/157
 - https://gamefromscratch.com/vpainter-for-godot/
 - https://github.com/tomankirilov/VPainter
-
+- https://github.com/godotengine?page=1
+- https://github.com/godotengine/godot
+- https://github.com/godotengine/awesome-godot
+- https://github.com/aBARICHELLO/godot-ci/blob/master/.github/workflows/godot-ci.yml#L8-99
+- https://github.com/utopia-rise/fmod-gdnative **FMOD plugin GDNative**
+- https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/
+- https://generalistprogrammer.com/godot/godot-dictionary-tutorial-with-examples/
+- https://www.fmod.com **PROPRIETARY AMBIGUOUS-GRATIS!!! DO NOT REDISTRIBUTE WITH SOURCE CODE; IMPLEMENTATION CANCELED, WILL LOOK AGAIN LATER**
+- https://github.com/marketplace/actions/build-godot 
+- https://godotengine.org/community
+- https://github.com/godotengine/awesome-godot
+- https://anti.itch.io/super-tux-party **Fork for DVD making!!!**
+- https://docs.godotengine.org/en/stable/classes/class_tree.html#class-tree
 
 

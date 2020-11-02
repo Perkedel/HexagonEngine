@@ -171,3 +171,8 @@ func _on_JustWorkingMenu_shareBootInfoJson(JsonOfIt, pathOfIt):
 func _on_JustWorkingMenu_viewVRImageNow():
 	$JustZetrixVRViewer.popup_centered()
 	pass # Replace with function body.
+
+
+func _on_JustWorkingSetting_ShowModListMenuNow():
+	$JustModListToLoad.popup_centered()
+	pass # Replace with function body.

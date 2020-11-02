@@ -1,5 +1,30 @@
 extends Node
 
+"""
+WARNING!!!
+
+Settingers may not be used to save each DVD save game data!!!
+DO NOT & NEVER use Settinger to save game!!!
+Please make own DVD json or whatever save file in user://GameDVDCardtridges/YourGame instead.
+
+If you lost or reset user://Pengaturan/Setelan.json, you'll lose your game save too! oof!!! (& we unable to be responsible for that file loss)
+So make sure game save is separate from Setelan.json.
+This way also make easy to backup game saves, and handle particular gamesave if
+a save on a DVD had trouble or whatever.
+"""
+
+"""
+PERHATIAN!!!
+
+Settingers tidak boleh dipakai untuk menyimpan data simpan game setiap DVD!!!
+JANGAN & JANGAN PERNAH menggunakan Settinger untuk menyimpan game!!!
+Mohon gunakan json atau file simpan terserah pada DVD itu sendiri di user://GameDVDCardtridges/GameElu sebaiknya.
+
+Jika Anda kehilangan atau mereset user://Pengaturan/Setelan.json, Anda akan kehilangan simpanan game Anda juga! oof!!! (& kami tidak dapat bertanggung jawab atas keguguran file tersebut)
+Jadi pastikan simpan game terpisah dari Setelan.json.
+Ini juga akan mempermudah mencadangkan simpanan2 game, dan menangani simpanan game tertentu bila terjadi masalah pada DVD tertentu atau ya gitulah.
+"""
+
 var tempAreYouSureDialog = preload("res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn")
 # Are you coding son
 # https://youtu.be/d0B770ZM8Ic
@@ -239,3 +264,7 @@ func SettingSave():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func addEggsellent(name:String, value):
+	SettingData["Eggsellents"][name] = value
+	pass

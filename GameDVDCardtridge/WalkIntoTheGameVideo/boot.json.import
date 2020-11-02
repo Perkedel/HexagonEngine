@@ -6,7 +6,7 @@ valid=false
 
 [deps]
 
-source_file="res://GameDVDCardtridge/YoneMIDIArea_Prosotipe/boot.json"
+source_file="res://GameDVDCardtridge/WalkIntoTheGameVideo/boot.json"
 [params]
 
 custom_properties=true

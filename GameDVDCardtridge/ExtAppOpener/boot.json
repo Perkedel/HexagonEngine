@@ -6,7 +6,7 @@
     "CatalogueBanner": "",
     "DVDCover":"",
     "isSelectable": true,
-    "hidden":false,
+    "hidden":true,
     "actuallyBootJsonPath" : "",
     "args":["shellOpen","https://cointr.ee/joelwindows7","",""],
     "appArgs":["",""],
