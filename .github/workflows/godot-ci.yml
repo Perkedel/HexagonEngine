@@ -24,6 +24,7 @@ jobs:
       - name: Windows Build
         run: |
           mkdir -v -p build/windows
+          ls -l
           cd $PROJECT_NAME
           godot -v --export "win64" ../build/windows/$EXPORT_NAME.exe
       - name: Upload Artifact
@@ -47,6 +48,7 @@ jobs:
       - name: Linux Build
         run: |
           mkdir -v -p build/linux
+          ls -l
           cd $PROJECT_NAME
           godot -v --export "linux" ../build/linux/$EXPORT_NAME.x86_64
       - name: Upload Artifact
@@ -70,6 +72,7 @@ jobs:
       - name: Web Build
         run: |
           mkdir -v -p build/web
+          ls -l
           cd $PROJECT_NAME
           godot -v --export "HTML5" ../build/web/index.html
       - name: Upload Artifact
@@ -103,6 +106,7 @@ jobs:
       - name: Mac Build
         run: |
           mkdir -v -p build/mac
+          ls -l
           cd $PROJECT_NAME
           godot -v --export "macOS" ../build/mac/$EXPORT_NAME.zip
       - name: Upload Artifact

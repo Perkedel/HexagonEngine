@@ -1,0 +1,53 @@
+name: Hexk the Godot Export
+
+# Same but done in one single step
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Pls download Godot
+    - name: Download Godot, Export Template, and Export now!
+      run: |
+        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_linux_headless.64.zip
+        unzip Godot_v3.2.3-stable_linux_headless.64.zip
+        mv Godot_v3.2.3-stable_linux_headless.64 godot
+        chmod +x godot
+        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_export_templates.tpz
+        mkdir -p ~/.local/share/godot/templates
+        unzip Godot_v3.2.3-stable_export_templates.tpz -d ~/.local/share/godot/templates
+        wget -q -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+        unzip butler.zip
+        chmod +x butler
+        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.3.stable.
+        mkdir -p linux64
+        ./godot --export linux project.godot "linux64/hexagon-engine_Hexk-CI --quiet"
+        mkdir -p win64
+        ./godot --export win64 project.godot "win64/hexagon-engine_Hexk-CI.exe --quiet"
+        ./godot --export macOS project.godot "hexagon-engine-mac_Hexk-CI --quiet"
+        mv hexagon-engine-mac_Hexk hexagon-engine-mac_Hexk.zip
+        mkdir -p HTML5
+        ./godot --export HTML5 project.godot "HTML5/index.html --quiet"
+        ./butler push linux64 joelwindows7/hexagon-engine:linux-64bit-hexkCI
+        ./butler push hexagon-engine-mac_Hexk.zip joelwindows7/hexagon-engine:mac-hexkCI
+        ./butler push win64 joelwindows7/hexagon-engine:win-64bit-hexkCI
+        ./butler push HTML5 joelwindows7/hexagon-engine:HTML5-hexkCI
+
+    # Pls download export Template
+        
