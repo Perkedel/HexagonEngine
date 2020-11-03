@@ -860,6 +860,9 @@ DauMainLooper="*res://Scripts/DauMainLooper.gd"
 
 [compression]
 
+formats/zstd/long_distance_matching=true
+formats/zstd/compression_level=22
+formats/zstd/window_log_size=30
 formats/zlib/compression_level=9
 formats/gzip/compression_level=9
 
