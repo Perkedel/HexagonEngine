@@ -30,7 +30,7 @@ jobs:
         uses: josephbmanley/build-godot-action@v1.4.0
         id: godot_build
         with:
-          name: hexagon-engine_${{ matrix.platform }_GitHub-Action${{ env.EXPORT_SUFFIX }}
+          name: hexagon-engine_${{ matrix.platform }}_GitHub-Action${{ env.EXPORT_SUFFIX }}
           preset: ${{ matrix.platform }}
           projectDir: ./ 
           # We settled git from root
