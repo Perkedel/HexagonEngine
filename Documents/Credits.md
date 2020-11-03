@@ -226,5 +226,14 @@ Used Assets and Tools!
 - https://github.com/godotengine/awesome-godot
 - https://anti.itch.io/super-tux-party **Fork for DVD making!!!**
 - https://docs.godotengine.org/en/stable/classes/class_tree.html#class-tree
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_for_uwp.html
+- https://docs.microsoft.com/id-id/windows/win32/appxpkg/how-to-create-a-package-signing-certificate?redirectedfrom=MSDN
+- https://docs.microsoft.com/en-us/windows/msix/package/create-certificate-package-signing
+- https://docs.microsoft.com/en-us/powershell/module/pkiclient/New-SelfSignedCertificate?view=win10-ps
+- https://duckduckgo.com/?q=makecert+fail&t=brave&ia=web&iai=r1-0&page=1&adx=prdsdc&sexp=%7B%22prodexp%22%3A%22b%22%2C%22prdsdexp%22%3A%22c%22%2C%22biaexp%22%3A%22b%22%2C%22direxp%22%3A%22b%22%7D
+- https://stackoverflow.com/questions/9506671/why-do-i-keep-getting-a-failed-when-trying-to-make-a-cer-for-testing
+- https://docs.microsoft.com/id-id/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
+- https://github.com/PowerShell/PowerShell/releases/tag/v7.0.3
+- 
 
 

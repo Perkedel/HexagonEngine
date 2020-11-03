@@ -47,7 +47,7 @@ Powered by Godot Engine.
 
 # Synopsis
 ## What is this?
-A Godot template to make your games on.
+A Godot template platform to make your games on.
 
 Framework for make things AAA atleast so.
 	
@@ -127,6 +127,8 @@ More Credits are available in [**Documents/Credit.md** ](https://github.com/Perk
 [![Visit Credit Page now!](https://img.shields.io/badge/Credit.md-Big%20Shoutout-yellowgreen?style=for-the-badge ) ](https://github.com/Perkedel/HexagonEngine/blob/master/Documents/Credits.md )
 
 ## Origin
+assets (c) original authors (rights reserved varies)
+
 by JOELwindows7
 
 Perkedel Technologies

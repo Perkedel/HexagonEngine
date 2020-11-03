@@ -17,7 +17,7 @@ Main character bears the following gears and attributes:
 - 12% comparison size than larger ones. suspectably / presumably larger ones are larger than us the common *Homo sapiens* perhaps.
 - uh, what else?
 - female
-- also **stunk** in this terrible water ship called **Maw**.
+- also **stucc** in this terrible water ship called **Maw**.
 - etc. etc.
 
 He also noticed things that bugs him:
