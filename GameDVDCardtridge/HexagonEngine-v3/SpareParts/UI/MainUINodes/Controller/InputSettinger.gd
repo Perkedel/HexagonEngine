@@ -42,7 +42,7 @@ func add_actions():
 		child.queue_free()
 	
 	# get settings
-	var settingsControls:Dictionary = Settingers.SettingData.ControllerMappings
+	var settingsControls:Dictionary = Settingers.getControllerMap()
 	
 	# Try to use preferred_order for the list of action names ...
 	var action_names = preferred_order.duplicate()

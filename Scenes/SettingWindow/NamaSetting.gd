@@ -15,8 +15,8 @@ func _ready():
 
 func reload():
 	
-	print("Welcome, ", String(Settingers.SettingData[SettingersPath]))
-	$LineEdit.text = Settingers.SettingData[SettingersPath]
+	print("Welcome, ", String(Settingers.get_setting(SettingersPath)))
+	$LineEdit.text = Settingers.get_setting(SettingersPath)
 	settingLoaded = true
 	pass
 
@@ -26,15 +26,17 @@ func reload():
 
 
 func _on_LineEdit_text_entered(new_text):
+	print("Set new name to ", new_text)
 	if settingLoaded:
-		Settingers.SettingData[SettingersPath] = new_text
-	# Settingers.SettingSave()
+		Settingers.setNama(new_text)
+	Settingers.SettingSave()
 	pass # Replace with function body.
 
 
 func _on_LineEdit_text_changed(new_text):
+	print("typing new name: ", new_text)
 	if settingLoaded:
-		Settingers.SettingData[SettingersPath] = new_text
+		Settingers.setNama(new_text)
 	pass # Replace with function body.
 
 

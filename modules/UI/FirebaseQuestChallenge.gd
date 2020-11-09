@@ -101,7 +101,7 @@ func _deleteSecretFile():
 	direr.remove(_dirSecret)
 
 func _preAuthenticate():
-	var didRemember = Settingers.SettingData.Firebasers["RememberMe"]
+	var didRemember = Settingers.getFirebaser("RememberMe")
 	RememberMeNow = didRemember
 	if didRemember:
 		_checkSecretFile()
@@ -109,11 +109,11 @@ func _preAuthenticate():
 			_authenticateNow()
 		else:
 			SelectStatus.text = "email or password is empty!"
-			Settingers.SettingData.Firebasers.RememberMe = false
+			Settingers.setFirebaser("RememberMe", false)
 			_GoHome()
 		pass
 	else:
-		Settingers.SettingData.Firebasers.RememberMe = false
+		Settingers.setFirebaser("RememberMe", false)
 		_GoHome()
 	pass
 
@@ -121,7 +121,7 @@ func _authenticateNow():
 	TimerFrameHourglass.start()
 	_hide_windows()
 	
-	Settingers.SettingData.Firebasers["RememberMe"] = RememberMeNow
+	Settingers.setFirebaser("RememberMe", RememberMeNow)
 	if RememberMeNow:
 		_saveSecretFile()
 		pass
@@ -167,7 +167,7 @@ func _authenticateNow():
 func _deAuthenticateNow():
 	
 	RememberMeNow = false
-	Settingers.SettingData.Firebasers["RememberMe"] = false
+	Settingers.setFirebaser("RememberMe", false)
 	_deleteSecretFile()
 	
 	_hide_windows()

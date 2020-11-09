@@ -61,7 +61,8 @@ func _on_HSlider_value_changed(value, valou):
 		
 		if InitiativelyControlVolumeBus:
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index(VolumeBus), value)
-			Settingers.SettingData.AudioSetting[VolumeBus + "Volume"] = value
+			#Settingers.SettingData.AudioSetting[VolumeBus + "Volume"] = value
+			Settingers.setVolume(VolumeBus + "Volume", value)
 			#Settingers.SettingSave()
 			pass
 		print("Slider: " + String(value) + ", Valou: " + String(valou))

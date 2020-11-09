@@ -28,7 +28,8 @@ func _ready():
 func _on_FullScreen_Statement(value1):
 	if DisplaySettingLoaded:
 		OS.set_window_fullscreen(value1)
-		Settingers.SettingData.DisplaySetting.FullScreen = value1
+		Settingers.setDisplay("FullScreen",value1)
+		#Settingers.SettingData.DisplaySetting.FullScreen = value1
 		#Settingers.SettingSave()
 		pass
 	# Configuration load delay needed to sync with config file if so.
@@ -38,6 +39,7 @@ func _on_FullScreen_Statement(value1):
 func _on_Vsync_Statement(value1):
 	if DisplaySettingLoaded:
 		OS.vsync_enabled = value1
+		Settingers.setDisplay("Vsync",value1)
 		Settingers.SettingData.DisplaySetting.Vsync = value1
 		#Settingers.SettingSave()
 		pass

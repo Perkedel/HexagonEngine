@@ -33,7 +33,7 @@ var tempAreYouSureDialog = preload("res://GameDVDCardtridge/TemplateHexagonEngin
 # YOINK! your coding is now mine! jk, it's still yours.
 onready var useJSON = true
 
-var DefaultSetting = {
+var _DefaultSetting = {
 	Version = 0,
 	Nama = "a Dasandimian",
 	ModsPCKs={
@@ -62,7 +62,10 @@ var DefaultSetting = {
 	PleaseResetMe = false,
 	Eggsellents = {},
 }
-onready var SettingData = {
+
+"Total SettingData must be private! so do your save data! use _ to private. For security reason in case a mod PCK has malicious intents"
+"SettingData total harus pribadi! juga dengan data simpanmu! gunakan _ untuk mempribadikan. Demi keamanan jika seandainya sebuah mod PCK memiliki niat jahat."
+onready var _SettingData = {
 	Version = 0,
 	Nama = "a Dasandimian",
 	ModsPCKs={
@@ -117,8 +120,12 @@ func _ready():
 	
 	SettingLoad()
 	pass # Replace with function body.
-func get_settings ():
-	return SettingData
+func get_settings () -> Dictionary:
+	return _SettingData
+	pass
+
+func get_setting(which:String):
+	return _SettingData[which]
 	pass
 
 func ApplySetting():
@@ -128,11 +135,11 @@ func ApplySetting():
 #	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Dummy"),SettingData.AudioSetting.DummyVolume)
 	
 	for manyAudioVol in AudioServer.get_bus_count():
-		AudioServer.set_bus_volume_db(manyAudioVol, SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"])
+		AudioServer.set_bus_volume_db(manyAudioVol, _SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"])
 		pass
 	
-	OS.set_window_fullscreen(SettingData.DisplaySetting.FullScreen)
-	OS.set_use_vsync(SettingData.DisplaySetting.Vsync)
+	OS.set_window_fullscreen(_SettingData.DisplaySetting.FullScreen)
+	OS.set_use_vsync(_SettingData.DisplaySetting.Vsync)
 	pass
 
 func SettingLoad():
@@ -142,7 +149,7 @@ func SettingLoad():
 		match(werror):
 			OK:
 				TheFirstTime = false
-				SettingData = SettingFile.get_var()
+				_SettingData = SettingFile.get_var()
 				
 				
 				ApplySetting()
@@ -159,7 +166,7 @@ func SettingLoad():
 		match(werror):
 			OK:
 				TheFirstTime = false
-				SettingData = parse_json(SettingFile.get_as_text())
+				_SettingData = parse_json(SettingFile.get_as_text())
 				
 				ApplySetting()
 				SettingFile.close()
@@ -181,7 +188,7 @@ func SettingLoad():
 
 var ResetSay = "Reset Factory DIP switch is on! Re"
 func checkForResetMe():
-	if SettingData["PleaseResetMe"]:
+	if _SettingData["PleaseResetMe"]:
 		SelectDialogReason = DialogReason.ResetMe
 		var theDialog = get_node("AreYouSureDialog")
 		theDialog.SpawnDialogWithText(ResetSay)
@@ -204,14 +211,14 @@ func ResetControllerMaps():
 	#SettingData.ControllerMappings = Actions
 	for everye in Actions:
 		EachActionContains = InputMap.get_action_list(everye)
-		SettingData.ControllerMappings[String(everye)] = EachActionContains
+		_SettingData.ControllerMappings[String(everye)] = EachActionContains
 	pass
 
 func ResetFirstTimer():
-	SettingData = DefaultSetting
+	_SettingData = _DefaultSetting
 	
 	for manyAudioVol in AudioServer.get_bus_count():
-			SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
+			_SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
 			pass
 	
 	ResetControllerMaps()
@@ -220,7 +227,7 @@ func ResetFirstTimer():
 	pass
 
 func RenameGlobally(nama:String):
-	SettingData.Nama = nama
+	_SettingData.Nama = nama
 	pass
 
 func SettingSave():
@@ -238,12 +245,12 @@ func SettingSave():
 	var werror = SettingFile.open(SettingPath, File.WRITE)
 	match(werror):
 		OK:
-			SettingFile.store_var(SettingData)
+			SettingFile.store_var(_SettingData)
 			SettingFile.close()
 			print("Setting Bin Saved")
 			pass
 		_:
-			print('Werror Saving File Bin code ' + werror)
+			print('Werror Saving File Bin code ', werror)
 			pass
 	SettingFile = File.new()
 	werror = SettingFile.open(SettingJson, File.WRITE)
@@ -251,13 +258,13 @@ func SettingSave():
 		OK:
 			# https://godotengine.org/asset-library/asset/157
 			# https://www.youtube.com/watch?v=L9Zekkb4ZXc
-			var SettingJsonBeautiful = JSONBeautifier.beautify_json(to_json(SettingData))
+			var SettingJsonBeautiful = JSONBeautifier.beautify_json(to_json(_SettingData))
 			SettingFile.store_string(SettingJsonBeautiful)
 			SettingFile.close()
 			print("Setting Json Saved")
 			pass
 		_:
-			print('Werror Saving File Json code ' + werror)
+			print('Werror Saving File Json code ', werror)
 			pass
 	pass
 
@@ -265,6 +272,57 @@ func SettingSave():
 #func _process(delta):
 #	pass
 
+func setModPCKs(entire:Dictionary):
+	_SettingData.ModPCKs = entire
+
+func getModPCKs() -> Dictionary:
+	return _SettingData.ModsPCKs
+
 func addEggsellent(name:String, value):
-	SettingData["Eggsellents"][name] = value
+	_SettingData["Eggsellents"][name] = value
 	pass
+
+func fetchEggsellent(which):
+	return _SettingData["Eggsellents"][which]
+
+func fetchEggsellentAll() -> Dictionary:
+	return _SettingData["Eggsellents"]
+
+func setVolume(VolName:String, value:float):
+	_SettingData["AudioSetting"][VolName] = value
+	pass
+
+func getVolume(VolName:String) -> float:
+	return _SettingData["AudioSetting"][VolName]
+
+func setDisplay(name:String, value):
+	_SettingData["DisplaySetting"][name] = value
+	pass
+
+func getDisplay(name:String):
+	return _SettingData["DisplaySetting"][name]
+
+func setNama(nama:String):
+	# Rename Globally function
+	_SettingData["Nama"] = nama
+	pass
+
+func getNama() -> String:
+	return _SettingData["Nama"]
+
+func cancelReset():
+	_SettingData["PleaseResetMe"] = false
+
+func checkReset() -> bool:
+	return _SettingData["PleaseResetMe"]
+
+func getControllerMap() -> Dictionary:
+	return _SettingData.ControllerMappings
+	pass
+
+func setFirebaser(name:String,value):
+	_SettingData.Firebasers[name] = value
+	pass
+
+func getFirebaser(name:String):
+	return _SettingData.Firebasers[name]

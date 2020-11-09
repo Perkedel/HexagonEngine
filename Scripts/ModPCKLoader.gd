@@ -8,7 +8,7 @@ var modLists : Dictionary
 signal modLoaded()
 
 func loadAllMods():
-	modLists = Settingers.SettingData["ModsPCKs"]
+	modLists = Settingers.getModPCKs()
 	print(String(modLists))
 	print("\n\nMods List:")
 	

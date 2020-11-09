@@ -4,7 +4,7 @@ extends WindowDialog
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var modPCKs:Dictionary = Settingers.SettingData.ModsPCKs
+onready var modPCKs:Dictionary = Settingers.getModPCKs()
 var textModList:String
 var loaded = false
 
@@ -27,8 +27,8 @@ func _ready():
 
 func _on_SaveClose_pressed():
 	modPCKs = parse_json(textModList)
-	Settingers.SettingData.ModsPCKs = modPCKs
-	print("Now ModsPCKs\n", JSONBeautifier.beautify_json(to_json(Settingers.SettingData.ModsPCKs)))
+	Settingers.setModPCKs(modPCKs)
+	print("Now ModsPCKs\n", JSONBeautifier.beautify_json(to_json(Settingers.getModPCKs())))
 	hide()
 	pass # Replace with function body.
 

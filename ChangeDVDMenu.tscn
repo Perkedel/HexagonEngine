@@ -34,7 +34,6 @@ __meta__ = {
 }
 
 [node name="JustWorkingSetting" parent="." instance=ExtResource( 4 )]
-visible = false
 popup_exclusive = true
 
 [node name="SelectFileLoadingMode" parent="." instance=ExtResource( 5 )]

@@ -73,7 +73,7 @@ func refreshDVDs():
 						deserve_addition = false
 					else:
 						# there is easter egg required for unhide
-						var current_eggs = Settingers.SettingData.Eggsellents # Dictionary
+						var current_eggs = Settingers.fetchEggsellentAll() # Dictionary
 						var wantede_eggs = DVDItemLists[aDVD].requiredEggsellents # Array has
 						if current_eggs.has_all(wantede_eggs):
 							print(aDVD, " eggsellent is met, show it!\n")
@@ -107,7 +107,7 @@ func refreshDVDs():
 	pass
 
 func reloadAccountName():
-	$TitleBar/AccountButton.text = Settingers.SettingData.Nama
+	$TitleBar/AccountButton.text = Settingers.getNama()
 	pass
 
 func InitMeSelf():

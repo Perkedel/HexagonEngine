@@ -190,7 +190,7 @@ enum DialogReason {Nothing, ResetMe}
 var SelectDialogReason
 var ResetSay = "Reset Factory DIP switch is on! Reset setting?"
 func checkForResetMe():
-	if Settingers.SettingData["PleaseResetMe"]:
+	if Settingers.checkForResetMe():
 		SelectDialogReason = DialogReason.ResetMe
 		var theDialog = $MetaMenu/AreYouSureDialog
 		theDialog.SpawnDialogWithText(ResetSay)
@@ -198,7 +198,8 @@ func checkForResetMe():
 		if whatAnswer:
 			Settingers.engageFactoryReset()
 		else:
-			Settingers.SettingData["PleaseResetMe"] = false
+			#Settingers.SettingData["PleaseResetMe"] = false
+			Settingers.cancelReset()
 		pass
 		
 	else:
