@@ -55,39 +55,42 @@ func DecideReturnTime(var forWhathowMuch):
 		ToggleSays = "Eik Serkat!"
 		returnTime = 0
 		pass
-	elif forWhathowMuch >= 1 and forWhathowMuch < 19:
+	elif forWhathowMuch >= 1 and forWhathowMuch < 20:
 		ToggleSays = "..."
 		returnTime = .75
 		pass
-	elif forWhathowMuch >= 20 and forWhathowMuch < 49:
+	elif forWhathowMuch >= 20 and forWhathowMuch < 50:
 		ToggleSays = "Looooooooww... heeeaarrt raaaaaate..."
 		returnTime = .5
 		pass
-	elif forWhathowMuch >= 50 and forWhathowMuch < 69:
-		ToggleSays = "Sleepie"
+	elif forWhathowMuch >= 50 and forWhathowMuch < 70:
+		if forWhathowMuch == 69:
+			ToggleSays = "nice"
+		else:
+			ToggleSays = "Sleepie"
 		returnTime = .3
 		pass
-	elif forWhathowMuch >= 70 and forWhathowMuch < 89:
+	elif forWhathowMuch >= 70 and forWhathowMuch < 90:
 		ToggleSays = "Heartbeat"
 		returnTime = .25
 		pass
-	elif forWhathowMuch >= 90 and forWhathowMuch < 99:
+	elif forWhathowMuch >= 90 and forWhathowMuch < 100:
 		ToggleSays = "Accelerated"
 		returnTime = .20
 		pass
-	elif forWhathowMuch >= 100 and forWhathowMuch < 149:
+	elif forWhathowMuch >= 100 and forWhathowMuch < 150:
 		ToggleSays = "FASS"
 		returnTime = .15
 		pass
-	elif forWhathowMuch >= 150 and forWhathowMuch < 199:
+	elif forWhathowMuch >= 150 and forWhathowMuch < 200:
 		ToggleSays = "VERY FASS"
 		returnTime = .1
 		pass
-	elif forWhathowMuch >= 200 and forWhathowMuch < 299:
+	elif forWhathowMuch >= 200 and forWhathowMuch < 300:
 		ToggleSays = "TOO FASS"
 		returnTime = .05
 		pass
-	elif forWhathowMuch >= 300 and forWhathowMuch < 399:
+	elif forWhathowMuch >= 300 and forWhathowMuch < 400:
 		ToggleSays = "EXTREMELY FASS"
 		returnTime = .025
 		pass

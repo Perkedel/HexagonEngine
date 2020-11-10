@@ -3,7 +3,6 @@
 [ext_resource path="res://Scenes/Zetrix/PortScreen.gd" type="Script" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
-flags_unshaded = true
 
 [sub_resource type="PlaneMesh" id=2]
 

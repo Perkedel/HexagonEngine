@@ -16,7 +16,6 @@
 [ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/AudioSetting.png" type="Texture" id=15]
 
-
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Monospace 48"
@@ -168,7 +167,7 @@ by [b][color=#00ffff]JOELwindows7[/color][/b]
 Heartbeat emulator. This DVD emulates human heartbeat for [b][i][rainbow freq=.1 sat=1 val=1]Cardiophillia[/rainbow][/i][/b] game
 
 Credit:
-- Pen and Paper from Discord
+- Pen and Paper from Discord,[url=https://www.furaffinity.net/user/pen-and-paper/ ] FurAffinity [/url]
 
 Refferences (useful):
 [url]https://www.quora.com/How-do-you-convert-Hertz-to-seconds [/url]
@@ -228,7 +227,7 @@ GNU GPL v3
 Heartbeat emulator. This DVD emulates human heartbeat for Cardiophillia game
 
 Credit:
-- Pen and Paper from Discord
+- Pen and Paper from Discord, FurAffinity 
 
 Refferences (useful):
 https://www.quora.com/How-do-you-convert-Hertz-to-seconds 
