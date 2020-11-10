@@ -117,6 +117,8 @@ func _on_ChangeDVDMenu_ItemClickEnterName(loadName):
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
 	# pls don't do this. bad code! use level card system!
+	### ANGLE GRINDER
+	### REMOVE THESE!
 	#print("Receive DVD Click Index No. " + String(Index))
 #	match Index:
 #		0:
@@ -168,6 +170,8 @@ func _on_ChangeDVDMenu_ItemClickEnter(Index):
 #			pass
 #	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	# deprecated
+	### PAIN IS TEMPORARY
+	### GLORY IS FOREVER
 	pass # Replace with function body.
 
 func _on_DVDCartridgeSlot_DVDTryLoad():

@@ -1,0 +1,11 @@
+{
+    "id": "downloadios",
+    "Title": "Query & Download URL",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/Downloadios/Downloadios.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "requiredEggsellents":[]
+}
