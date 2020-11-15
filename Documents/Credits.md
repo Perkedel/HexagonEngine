@@ -234,6 +234,23 @@ Used Assets and Tools!
 - https://stackoverflow.com/questions/9506671/why-do-i-keep-getting-a-failed-when-trying-to-make-a-cer-for-testing
 - https://docs.microsoft.com/id-id/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
 - https://github.com/PowerShell/PowerShell/releases/tag/v7.0.3
+- **here are the MIDI related stuffs**
+- http://xg-central.com/xgc-introduction-midi.php
+- They have
+- GM On F0 7E 7F 09 01 F7
+- XG On F0 43 10 4C 00 00 7E 00 F7
+- https://professionalcomposers.com/midi-cc-list/
+- https://studiocode.dev/resources/midi-pitch-bend/
+- https://www.recordingblogs.com/wiki/midi-registered-parameter-number-rpn
+- http://www.2writers.com/eddie/TutNrpn.htm#:~:text=The%20MIDI%20Specification%20currently%20defines,Coarse%20Tuning%20(0%2C2)
+- https://stackoverflow.com/questions/58622317/is-it-possible-to-change-android-built-in-midi-player-pitch-bend-range
+- https://quadrophone.com/synthesis/using-pitch-bend/
+- https://www.all8.com/tools/bpm.htm
+- http://www.beatsperminuteonline.com/
+- https://www.manualslib.com/manual/196284/Yamaha-Portable-Grand-Dgx-305.html?page=97#manual
+- https://www.tobias-erichsen.de/software/loopmidi.html
+- **ENd of MIDI articles**
+- https://www.youtube.com/watch?v=9iUUgTS-ndw
 - 
 
 
