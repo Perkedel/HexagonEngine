@@ -4,10 +4,14 @@ extends VBoxContainer
 # var a = 2
 # var b = "text"
 var DVDItemLists :Dictionary
+var shownDVDItemLists : Dictionary
 var DVDarrayPathLoad : PoolStringArray = []
 var DVDcounter : int = 0
+onready var preSelImag = preload("res://Sprites/ConsoleHoverEmpty.png")
+onready var preLauImag = preload("res://Sprites/ConsoleLaunchEmpty.png")
 signal openSetting()
 signal shareBootInfoJson(JsonOfIt, pathOfIt)
+signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,6 +29,7 @@ func refreshDVDs():
 	var GameDVDCardtridges = Directory.new()
 	var bootFile = File.new()
 	if GameDVDCardtridges.open("res://GameDVDCardtridge/") == OK:
+		# Basic DVD loading
 		GameDVDCardtridges.list_dir_begin()
 		var file_name = GameDVDCardtridges.get_next()
 		
@@ -48,6 +53,8 @@ func refreshDVDs():
 				pass
 			file_name = GameDVDCardtridges.get_next()
 			pass
+		
+		
 		# https://godotengine.org/asset-library/asset/157
 		print("\n\nDVDs now\n", String(JSONBeautifier.beautify_json(to_json(DVDItemLists))))
 		pass
@@ -101,6 +108,7 @@ func refreshDVDs():
 		if deserve_addition:
 			$ItemList.add_item(DVDItemLists[aDVD].Title, load(DVDItemLists[aDVD].IconUrl))
 			DVDarrayPathLoad.insert(DVDcounter, DVDItemLists[aDVD].BootThisTscene)
+			shownDVDItemLists[aDVD] = DVDItemLists[aDVD]
 			DVDcounter+=1
 		pass
 	
@@ -118,6 +126,25 @@ func InitMeSelf():
 	#$HBoxContainer/PowerOffButton.grab_focus()
 	pass
 
+func iHoverThisDVD():
+	var keying = shownDVDItemLists.keys()
+	var checkering : Dictionary = shownDVDItemLists[keying[WhichItemSelected]]
+	print("Hovered DVD ", keying[WhichItemSelected])
+	var selImag : Texture 
+	var lauImag : Texture
+	if checkering.has("HoveredImage"):
+		selImag = load(checkering["HoveredImage"])
+	else:
+		selImag = preSelImag
+	
+	if checkering.has("SelectedImage"):
+		lauImag = load(checkering["SelectedImage"])
+	else:
+		lauImag = preLauImag
+	
+	emit_signal("updateSelectionAssets",selImag,lauImag,"","")
+	pass
+
 signal PressShutDown
 func _on_PowerOffButton_pressed():
 	emit_signal("PressShutDown")
@@ -126,6 +153,7 @@ func _on_PowerOffButton_pressed():
 export var WhichItemSelected = 0
 func _on_ItemList_item_selected(index):
 	WhichItemSelected = index
+	iHoverThisDVD()
 	pass # Replace with function body.
 
 export var WhichItemClickEnter = 0

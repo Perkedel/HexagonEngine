@@ -36,7 +36,7 @@ onready var useJSON = true
 var _DefaultSetting = {
 	Version = 0,
 	Nama = "a Dasandimian",
-	ModsPCKs={
+	ModPCKs={ #ModPCK
 		Sample={
 			Patho="",
 			Replaceo=false
@@ -68,7 +68,7 @@ var _DefaultSetting = {
 onready var _SettingData = {
 	Version = 0,
 	Nama = "a Dasandimian",
-	ModsPCKs={
+	ModPCKs={
 		
 	},
 	PleaseResetMe = false,
@@ -276,7 +276,15 @@ func setModPCKs(entire:Dictionary):
 	_SettingData.ModPCKs = entire
 
 func getModPCKs() -> Dictionary:
-	return _SettingData.ModsPCKs
+	if not _SettingData.has("ModPCKs"):
+		#print("No Mod PCK dictionary")
+		_SettingData["ModPCKs"] = {
+			Sample={
+			Patho="",
+			Replaceo=false
+			},
+		}
+	return _SettingData.ModPCKs
 
 func addEggsellent(name:String, value):
 	_SettingData["Eggsellents"][name] = value
@@ -286,6 +294,8 @@ func fetchEggsellent(which):
 	return _SettingData["Eggsellents"][which]
 
 func fetchEggsellentAll() -> Dictionary:
+	if not _SettingData.has("Eggsellents"):
+		_SettingData["Eggsellents"] = {}
 	return _SettingData["Eggsellents"]
 
 func setVolume(VolName:String, value:float):

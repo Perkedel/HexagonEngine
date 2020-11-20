@@ -13,6 +13,12 @@ onready var zetrixViewport = $ZetrixViewport
 onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
 onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
 onready var dvdSlot = $DVDCartridgeSlot
+onready var dvdSelBg = $MetaMenu/DVDSelectBackground
+onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
+onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
+onready var tweens = $SystemGut/aTweens.get_children()
+onready var immediateTween = $SystemGut/aTweens/Tween1
+onready var immediateTween2 = $SystemGut/aTweens/Tween2
 var DVDCardtridgeLists
 onready var isRunningDVD = true
 onready var preloadDVD = 0
@@ -68,9 +74,27 @@ func JustRemoveDVDThatsIt():
 	$DVDCartridgeSlot.ExecuteRemoveAllDVDs()
 	pass
 
+func interceptFiftConsole():
+	yield(get_tree(),"idle_frame")
+	cenBgLaunch.show()
+	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3)
+	immediateTween.interpolate_property(dvdLauBg,"rect_scale",Vector2(.5,.5),Vector2(1,1),.3)
+	dvdSelBg.hide()
+	dvdLauBg.show()
+	immediateTween.start()
+	yield(get_tree().create_timer(1),"timeout")
+	dvdLauBg.hide()
+	dvdSelBg.hide()
+	cenBgLaunch.hide()
+	pass
 
 func DoChangeDVDNow():
 	print("Change DVD!")
+	cenBgLaunch.hide()
+	immediateTween.interpolate_property(dvdSelBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
+	dvdSelBg.show()
+	dvdLauBg.hide()
+	immediateTween.start()
 	Singletoner.ResumeGameNow()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
@@ -112,6 +136,8 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 func _on_ChangeDVDMenu_ItemClickEnterName(loadName):
 	print("Receive DVD Click Name " + loadName)
 	LoadDVD = load(loadName)
+	yield(interceptFiftConsole(),"completed")
+	
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass
 
@@ -220,5 +246,12 @@ func _on_AreYouSureDialog_YesOrNoo(which):
 func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 	print("Custom load this ", path, " right here")
 	LoadDVD = load(path)
+	yield(interceptFiftConsole(),"completed")
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio, launchAudio):
+	dvdSelBg.texture = hoverImage
+	dvdLauBg.texture = launchImage
 	pass # Replace with function body.

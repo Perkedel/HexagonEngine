@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
@@ -23,6 +23,9 @@
 [ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/MetererOver.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/DisplaySetting.png" type="Texture" id=23]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0313726, 0.0117647, 0.478431, 0.27451 )
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
 anchor_right = 1.0
@@ -61,6 +64,7 @@ margin_bottom = 976.0
 hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/bg = SubResource( 1 )
 custom_fonts/font = ExtResource( 3 )
 items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false, "Prosotipe Platformer 3D Miziziz", ExtResource( 15 ), false, "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788", ExtResource( 16 ), false, "An Transitioning like AHiT & SM64", ExtResource( 17 ), false, "Tost Leveling", ExtResource( 19 ), false, "Quine", ExtResource( 20 ), false, "Workaround Loading Bar Function", ExtResource( 22 ), false ]
 fixed_icon_size = Vector2( 128, 128 )

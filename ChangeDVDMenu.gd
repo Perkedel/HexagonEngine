@@ -9,6 +9,7 @@ var zetrixViewport
 # var b = "text"
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
+signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -175,4 +176,9 @@ func _on_JustWorkingMenu_viewVRImageNow():
 
 func _on_JustWorkingSetting_ShowModListMenuNow():
 	$JustModListToLoad.popup_centered()
+	pass # Replace with function body.
+
+
+func _on_JustWorkingMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio, launchAudio):
+	emit_signal("updateSelectionAssets",hoverImage,launchImage,hoverAudio,launchAudio)
 	pass # Replace with function body.
