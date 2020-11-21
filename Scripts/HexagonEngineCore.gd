@@ -252,6 +252,12 @@ func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 
 
 func _on_ChangeDVDMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio, launchAudio):
+	var prevSelBg = dvdSelBg.texture
+	var prevLauBg = dvdLauBg.texture
+#	immediateTween.interpolate_property(dvdSelBg,"texture",prevSelBg,hoverImage,.3)
+#	immediateTween.interpolate_property(dvdLauBg,"texture",prevLauBg,launchImage,.3)
+#	immediateTween.start()
+#	yield(immediateTween,"tween_all_completed")
 	dvdSelBg.texture = hoverImage
 	dvdLauBg.texture = launchImage
 	pass # Replace with function body.

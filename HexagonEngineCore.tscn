@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Scenes/JustZetrixVRViewer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/DefaultBackground.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture" id=9]
+
+[sub_resource type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
@@ -35,6 +40,15 @@ expand = true
 stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": true
+}
+
+[node name="DVDSelectTransitioner" type="ColorRect" parent="MetaMenu"]
+visible = false
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]

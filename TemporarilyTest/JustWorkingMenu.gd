@@ -130,15 +130,27 @@ func iHoverThisDVD():
 	var keying = shownDVDItemLists.keys()
 	var checkering : Dictionary = shownDVDItemLists[keying[WhichItemSelected]]
 	print("Hovered DVD ", keying[WhichItemSelected])
+	var selPath:String
+	var lauPath:String
 	var selImag : Texture 
 	var lauImag : Texture
 	if checkering.has("HoveredImage"):
-		selImag = load(checkering["HoveredImage"])
+		selPath = checkering["HoveredImage"] 
+		if(selPath == ""):
+			selImag = preSelImag
+			pass
+		else:
+			selImag = load(checkering["HoveredImage"])
 	else:
 		selImag = preSelImag
 	
 	if checkering.has("SelectedImage"):
-		lauImag = load(checkering["SelectedImage"])
+		lauPath = checkering["SelectedImage"]
+		if(lauPath == ""):
+			lauImag = preLauImag
+			pass
+		else:
+			lauImag = load(checkering["SelectedImage"])
 	else:
 		lauImag = preLauImag
 	

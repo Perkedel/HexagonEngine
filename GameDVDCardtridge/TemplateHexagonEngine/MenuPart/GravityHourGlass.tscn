@@ -1,8 +1,46 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/AnimatedTexture/GravityHourGlass-Animate.tres" type="Texture" id=1]
 
+[sub_resource type="Shader" id=1]
+code = "// https://godotengine.org/qa/41400/simple-texture-rotation-shader
+
+shader_type canvas_item;
+render_mode unshaded, blend_disabled;
+
+uniform float speed = 1.0;
+
+vec2 rotateUV(vec2 uv, vec2 pivot, float rotation) {
+    float cosa = cos(rotation);
+    float sina = sin(rotation);
+    uv -= pivot;
+    return vec2(
+        cosa * uv.x - sina * uv.y,
+        cosa * uv.y + sina * uv.x 
+    ) + pivot;
+}
+
+vec2 rotateUVmatrinx(vec2 uv, vec2 pivot, float rotation)
+{
+    mat2 rotation_matrix=mat2(  vec2(sin(rotation),-cos(rotation)),
+                                vec2(cos(rotation),sin(rotation))
+                                );
+    uv -= pivot;
+    uv= uv*rotation_matrix;
+    uv += pivot;
+    return uv;
+}
+
+void vertex() {
+    VERTEX = rotateUV(VERTEX, 3.14/TEXTURE_PIXEL_SIZE, TIME * speed);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/speed = 2.0
+
 [node name="GravityHourGlass" type="TextureRect"]
+material = SubResource( 2 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

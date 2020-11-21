@@ -249,6 +249,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/gdinv/GDInv_ItemStack.gd"
 }, {
+"base": "ColorRect",
+"class": "GDQTransitionColor",
+"language": "GDScript",
+"path": "res://modules/Reusables/GDQTransitionColor.gd"
+}, {
 "base": "InspectorGadgetBase",
 "class": "GadgetAABB",
 "language": "GDScript",
@@ -363,6 +368,11 @@ _global_script_classes=[ {
 "class": "GaussianRandom",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/GaussianRandom.gd"
+}, {
+"base": "TextureRect",
+"class": "GeneralistInfiniBGScroll",
+"language": "GDScript",
+"path": "res://modules/Reusables/InfiniBGScroll.gd"
 }, {
 "base": "CollisionShape2D",
 "class": "Geometry2D",
@@ -703,6 +713,7 @@ _global_script_class_icons={
 "GDInv_Inventory": "",
 "GDInv_ItemDefinition": "",
 "GDInv_ItemStack": "",
+"GDQTransitionColor": "res://modules/ShadeMask/GDQuestShadeMask/shards.png",
 "GadgetAABB": "",
 "GadgetBasis": "",
 "GadgetBool": "",
@@ -726,6 +737,7 @@ _global_script_class_icons={
 "GameSystem": "",
 "GameWorld": "",
 "GaussianRandom": "",
+"GeneralistInfiniBGScroll": "",
 "Geometry2D": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
