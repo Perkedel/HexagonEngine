@@ -148,6 +148,7 @@ align = 1
 valign = 1
 
 [node name="ImportModPackButton" type="Button" parent="HBoxContainer"]
+visible = false
 margin_left = 404.0
 margin_right = 904.0
 margin_bottom = 100.0
@@ -184,8 +185,8 @@ align = 1
 valign = 1
 
 [node name="RefreshDVDbutton" type="Button" parent="HBoxContainer"]
-margin_left = 908.0
-margin_right = 1408.0
+margin_left = 404.0
+margin_right = 904.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"
@@ -220,8 +221,8 @@ align = 1
 valign = 1
 
 [node name="ViewVRImage" type="Button" parent="HBoxContainer"]
-margin_left = 1412.0
-margin_right = 1912.0
+margin_left = 908.0
+margin_right = 1408.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"

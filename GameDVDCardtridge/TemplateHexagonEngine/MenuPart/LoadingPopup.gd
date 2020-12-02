@@ -14,7 +14,7 @@ export(float,0,360) var HourglassRotateDegree
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ProgressMeterValue = 98
-	$DotFramePerSec.start(.5)
+	#$DotFramePerSec.start(.5)
 	pass # Replace with function body.
 
 func SpawnLoading():
@@ -44,8 +44,9 @@ func DeCompleteTheLoadingNow():
 	LoadingCompleted = false
 	#$LoadingAnimates.play("GravityHourGlassRotate")
 	$Timerout.stop()
-	$DotFramePerSec.start()
-	$HourglassFramesPerSec.start()
+	$HBoxContainer/SpaceContain/GravityHourGlass.rotating = true;
+	#$DotFramePerSec.start()
+	#$HourglassFramesPerSec.start()
 	#ProgressWording = "Now Loading!"
 	pass
 
@@ -54,6 +55,7 @@ func CompleteTheLoadingNow():
 	LoadingCompleted = true
 	#$LoadingAnimates.play("GravityHourGlassStonp")
 	$Timerout.start()
+	$HBoxContainer/SpaceContain/GravityHourGlass.rotating = false;
 	$DotFramePerSec.stop()
 	$HourglassFramesPerSec.stop()
 	ProgressWording = "Loading Completed!"
@@ -95,7 +97,7 @@ func _process(delta):
 		$HBoxContainer/VBoxContainer/ProgressBar.self_modulate = IncompleteLoadingColor
 		pass
 	
-	$HBoxContainer/SpaceContain/GravityHourGlass.set_rotation_degrees(HourglassRotateDegree)
+	#$HBoxContainer/SpaceContain/GravityHourGlass.set_rotation_degrees(HourglassRotateDegree)
 	pass
 
 

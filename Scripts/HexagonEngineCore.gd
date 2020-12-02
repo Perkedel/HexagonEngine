@@ -14,17 +14,22 @@ onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
 onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
 onready var dvdSlot = $DVDCartridgeSlot
 onready var dvdSelBg = $MetaMenu/DVDSelectBackground
+onready var dvdSelTr= $MetaMenu/DVDSelectTransitioner
 onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
 onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
 onready var tweens = $SystemGut/aTweens.get_children()
 onready var immediateTween = $SystemGut/aTweens/Tween1
 onready var immediateTween2 = $SystemGut/aTweens/Tween2
+onready var timerer = $SystemGut/Timer
+onready var LoadingPopup = $MetaMenu/LoadingPopup
 var DVDCardtridgeLists
 onready var isRunningDVD = true
 onready var preloadDVD = 0
 onready var doPreloadDVD = false
+onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 export(PackedScene) var LoadDVD 
 #enum ListOfDVDsTemporarily {Template, AdmobTestoid}
+var LoadingProgressNum:float=0.0
 
 # demo of 3D in 2D official Godot
 func _zetrixInit():
@@ -37,6 +42,7 @@ func _zetrixInit():
 	pass
 
 func _sysInit():
+	resourceQueued.start()
 	_zetrixInit()
 	OS.request_permissions()
 	# Yield Modloader PCK to load mods
@@ -74,25 +80,62 @@ func JustRemoveDVDThatsIt():
 	$DVDCartridgeSlot.ExecuteRemoveAllDVDs()
 	pass
 
-func interceptFiftConsole():
+func interceptFiftConsole(path:String):
 	yield(get_tree(),"idle_frame")
 	cenBgLaunch.show()
 	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3)
 	immediateTween.interpolate_property(dvdLauBg,"rect_scale",Vector2(.5,.5),Vector2(1,1),.3)
+	LoadingPopup.SpawnLoading()
 	dvdSelBg.hide()
+	dvdSelTr.hide()
 	dvdLauBg.show()
 	immediateTween.start()
-	yield(get_tree().create_timer(1),"timeout")
-	dvdLauBg.hide()
+	resourceQueued.queue_resource(path)
+	timerer.one_shot = true
+	timerer.start(1.0)
+	while not resourceQueued.is_ready(path) or not timerer.is_stopped():
+		yield(get_tree(),"idle_frame")
+		#print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
+		#print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
+		LoadingPopup.ManageLoading(resourceQueued.get_progress(path) * 100, path, true if resourceQueued.get_progress(path) == 1.0 else false)
+#		if resourceQueued.is_ready(path) && timerer.is_stopped():
+#			break
+		if Input.is_action_just_pressed("ui_mouse_left"):
+			timerer.stop()
+			pass
+		pass
+#	while not timerer.is_stopped():
+#		print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
+#		print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
+#		pass
+	if resourceQueued.is_ready(path):
+		LoadDVD = resourceQueued.get_resource(path)
+		pass
+	#yield(get_tree().create_timer(1),"timeout")
+	#dvdLauBg.hide()
+	#dvdSelBg.hide()
+	#cenBgLaunch.hide()
+	pass
+
+func postInterception():
+	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,1),Color(1,1,1,0),.3)
+	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	dvdSelBg.hide()
+	immediateTween.start()
+	yield(immediateTween,"tween_all_completed")
+	LoadingPopup.DespawnLoading()
 	cenBgLaunch.hide()
+	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_STOP
+	dvdLauBg.hide()
 	pass
 
 func DoChangeDVDNow():
 	print("Change DVD!")
 	cenBgLaunch.hide()
 	immediateTween.interpolate_property(dvdSelBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
-	dvdSelBg.show()
+	immediateTween.interpolate_property(dvdSelTr,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
+	dvdSelBg.hide()
+	dvdSelTr.show()
 	dvdLauBg.hide()
 	immediateTween.start()
 	Singletoner.ResumeGameNow()
@@ -135,9 +178,9 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 func _on_ChangeDVDMenu_ItemClickEnterName(loadName):
 	print("Receive DVD Click Name " + loadName)
-	LoadDVD = load(loadName)
-	yield(interceptFiftConsole(),"completed")
-	
+	#LoadDVD = load(loadName)
+	yield(interceptFiftConsole(loadName),"completed")
+	postInterception()
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass
 
@@ -245,8 +288,9 @@ func _on_AreYouSureDialog_YesOrNoo(which):
 
 func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 	print("Custom load this ", path, " right here")
-	LoadDVD = load(path)
-	yield(interceptFiftConsole(),"completed")
+	#LoadDVD = load(path)
+	yield(interceptFiftConsole(path),"completed")
+	postInterception()
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass # Replace with function body.
 
@@ -259,5 +303,6 @@ func _on_ChangeDVDMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio
 #	immediateTween.start()
 #	yield(immediateTween,"tween_all_completed")
 	dvdSelBg.texture = hoverImage
+	dvdSelTr.transitionInto(hoverImage)
 	dvdLauBg.texture = launchImage
 	pass # Replace with function body.

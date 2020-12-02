@@ -4,9 +4,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
 
-
 [node name="LoadingPopup" type="Popup"]
-visible = true
 anchor_right = 1.0
 margin_top = 100.0
 margin_bottom = 300.0
@@ -56,6 +54,7 @@ size_flags_vertical = 6
 custom_fonts/font = ExtResource( 3 )
 text = "LoadingWord"
 valign = 1
+clip_text = true
 
 [node name="Timerout" type="Timer" parent="."]
 wait_time = 2.0

@@ -251,6 +251,11 @@ Used Assets and Tools!
 - https://www.tobias-erichsen.de/software/loopmidi.html
 - **ENd of MIDI articles**
 - https://www.youtube.com/watch?v=9iUUgTS-ndw
-- 
+- https://www.youtube.com/watch?v=Yiew9ru-6a0
+- https://youtu.be/Yiew9ru-6a0
+- https://reddit.com/r/Shantae3DModel (Not Suitable for Wumpus) (The harsh Chapter)
+- https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/unMixamoStick.blend (The harsh chapter)
+- https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/ZoblatosImprovement.blend
+
 
 
