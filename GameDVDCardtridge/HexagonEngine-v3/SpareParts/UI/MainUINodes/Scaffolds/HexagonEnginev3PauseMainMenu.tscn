@@ -2,9 +2,8 @@
 
 [ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/HexagonEngineSymbolVeryLarge.png" type="Texture" id=2]
-[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/HexagonEnginev3PauseMainMenu.gd" type="Script" id=3]
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd" type="Script" id=3]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=4]
-
 
 [node name="HexagonEnginev3PauseMainMenu" type="Control"]
 anchor_right = 1.0
@@ -77,5 +76,17 @@ __meta__ = {
 }
 
 [node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/GridContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 500.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 500, 0 )
+MenuName = "MenuButton add"
+ChooseOrientation = 2
+minHoriSize = 500.0
 
 [node name="aTween" type="Tween" parent="."]
+
+[node name="NextScaffold" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0

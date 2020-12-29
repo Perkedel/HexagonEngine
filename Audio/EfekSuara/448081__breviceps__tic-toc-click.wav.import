@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/448081__breviceps__tic-toc-click.wav-203467a15c855033fb2f39eb0db6aa0d.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav"
+dest_files=[ "res://.import/448081__breviceps__tic-toc-click.wav-203467a15c855033fb2f39eb0db6aa0d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

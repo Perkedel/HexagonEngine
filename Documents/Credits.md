@@ -256,6 +256,10 @@ Used Assets and Tools!
 - https://reddit.com/r/Shantae3DModel (Not Suitable for Wumpus) (The harsh Chapter)
 - https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/unMixamoStick.blend (The harsh chapter)
 - https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/ZoblatosImprovement.blend
-
+- https://godotengine.org/qa/76823/add-a-sound-to-all-the-buttons-in-a-project
+- https://github.com/godotengine/godot-proposals/issues/1472
+- https://github.com/godotengine/godot/issues/3608
+- https://gamedev.stackexchange.com/questions/184354/add-a-sound-to-all-the-buttons-in-a-project/184363#184363 
+- 
 
 
