@@ -137,6 +137,9 @@ Softwares: GNU GPL v3
 
 Assets and Documents: CC4.0-BY-SA
 
+## Addresses
+- Itch: https://joelwindows7.itch.io/hexagon-engine?secret=8DRej5vqw5nRRGnxZ6I04sNKo
+
 # Oh no! Our CI is problematic right now.
 Pardon us for this problem. the build keeps failing all time with weird inunderstandable problem like
 
