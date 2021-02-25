@@ -1,0 +1,11 @@
+{
+    "id": "wih-lemmeOut-legacy",
+    "Title": "Who is He: Let Me Out (Indienesia Featured shortcut winner)",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/WIH-LemmeOut-Legacy/WIH-LemmeOut-legacy.tscn",
+    "CatalogueBanner": "",
+    "DVDCover": "",
+    "isSelectable": true,
+    "hidden": false,
+    "requiredEggsellents": []
+}

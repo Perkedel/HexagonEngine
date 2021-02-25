@@ -10,14 +10,12 @@ buildscript {
     repositories {
         google()
         jcenter()
-		
 //CHUNK_BUILDSCRIPT_REPOSITORIES_BEGIN
 //CHUNK_BUILDSCRIPT_REPOSITORIES_END
     }
     dependencies {
         classpath libraries.androidGradlePlugin
         classpath libraries.kotlinGradlePlugin
-		classpath 'com.google.gms:google-services:4.3.3'
 //CHUNK_BUILDSCRIPT_DEPENDENCIES_BEGIN
 //CHUNK_BUILDSCRIPT_DEPENDENCIES_END
     }
@@ -119,7 +117,6 @@ android {
     buildTypes.all { buildType ->
         buildType.zipAlignEnabled false
         buildType.signingConfig null
-		resValue "string", "server_client_id", "project-HexagonEngine"
     }
 
     sourceSets {
@@ -128,6 +125,7 @@ android {
             java.srcDirs = [
                 'src'
 //DIR_SRC_BEGIN
+,'C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/android/vibration-plugin/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [
@@ -165,6 +163,5 @@ android {
     }
 }
 
-apply plugin: 'com.google.gms.google-services'
 //CHUNK_GLOBAL_BEGIN
 //CHUNK_GLOBAL_END

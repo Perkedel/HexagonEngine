@@ -4,12 +4,13 @@
     "IconUrl": "res://Sprites/MavrickleIcon.png",
     "BootThisTscene": "res://GameDVDCardtridge/ExtAppOpener/ExtAppOpener.tscn",
     "CatalogueBanner": "",
-    "DVDCover":"",
+    "DVDCover": "",
     "isSelectable": true,
-    "hidden":true,
-    "actuallyBootJsonPath" : "",
-    "args":["shellOpen","https://cointr.ee/joelwindows7","",""],
-    "appArgs":["",""],
-    "doBlocking":false,
-    "readStdErr":false
+    "hidden": true,
+    "actuallyBootJsonPath": "",
+    "requiredEggsellents": [],
+    "args": ["shellOpen", "https://cointr.ee/joelwindows7", "", ""],
+    "appArgs": ["", ""],
+    "doBlocking": false,
+    "readStdErr": false
 }
