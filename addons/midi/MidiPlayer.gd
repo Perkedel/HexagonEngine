@@ -20,7 +20,6 @@ const max_channel:int = 16
 const max_note_number:int = 128
 const max_program_number:int = 128
 const drum_track_channel:int = 0x09
-const drum_track_bank:int = 128
 
 const midi_master_bus_name:String = "arlez80_GMP_MASTER_BUS"
 const midi_channel_bus_name:String = "arlez80_GMP_CHANNEL_BUS%d"
@@ -40,7 +39,7 @@ class GodotMIDIPlayerSysEx:
 	func _init( ):
 		self.initialize( )
 
-	func initialize( ):
+	func initialize( ) -> void:
 		self.gs_reset = false
 		self.gm_system_on = false
 		self.xg_system_on = false
@@ -78,17 +77,22 @@ class GodotMIDIPlayerChannelStatus:
 
 	var rpn:GodotMIDIPlayerChannelStatusRPN
 
-	func _init( number:int, bank:int = 0, drum_track:bool = false ):
-		self.number = number
-		self.track_name = "Track %d" % number
-		self.instrument_name = "Track %d" % number
+	func _init( _number:int, _bank:int = 0, _drum_track:bool = false ):
+		self.number = _number
+		self.track_name = "Track %d" % _number
+		self.instrument_name = "Track %d" % _number
 		self.mute = false
-		self.bank = bank
-		self.drum_track = drum_track
+		self.bank = _bank
+		self.drum_track = _drum_track
 		self.rpn = GodotMIDIPlayerChannelStatusRPN.new( )
 		self.initialize( )
 
-	func initialize( ):
+
+	func _notification( what:int ):
+		if what == NOTIFICATION_PREDELETE:
+			self.note_on.clear( )
+
+	func initialize( ) -> void:
 		self.note_on = {}
 		self.program = 0
 
@@ -124,7 +128,7 @@ class GodotMIDIPlayerChannelStatusRPN:
 	func _init( ):
 		self.initialize( )
 
-	func initialize( ):
+	func initialize( ) -> void:
 		self.selected_msb = 0
 		self.selected_lsb = 0
 		
@@ -140,25 +144,23 @@ class GodotMIDIPlayerChannelStatusRPN:
 # Export
 
 # 最大発音数
-export (int, 0, 128) var max_polyphony:int = 96 setget set_max_polyphony
+export (int, 0, 256) var max_polyphony:int = 96 setget set_max_polyphony
 # ファイル
 export (String, FILE, "*.mid") var file:String = "" setget set_file
 # 再生中か？
 export (bool) var playing:bool = false
 # 再生速度
-export (float) var play_speed:float = 1.0
+export (float, 0.0, 100.0) var play_speed:float = 1.0
 # 音量
-export (float, -1000, 0) var volume_db:float = -20.0 setget set_volume_db
+export (float, -144.0, 0) var volume_db:float = -20.0 setget set_volume_db
 # キーシフト
 export (int) var key_shift:int = 0
 # ループフラグ
 export (bool) var loop:bool = false
 # ループ開始位置
-export (float) var loop_start:float = 0
+export (float) var loop_start:float = 0.0
 # 全ての音をサウンドフォントから読むか？
-export (bool) var load_all_voices_from_soundfont:bool = false
-# サウンドフォントの再読み込みを行わない
-export (bool) var no_reload_soundfont:bool = false
+export (bool) var load_all_voices_from_soundfont:bool = true
 # サウンドフォント
 export (String, FILE, "*.sf2") var soundfont:String = "" setget set_soundfont
 # mix_target same as AudioStreamPlayer's one
@@ -170,7 +172,7 @@ export (String) var bus:String = "Master"
 # 変数
 
 # MIDIデータ
-var smf_data = null setget set_smf_data
+var smf_data:SMF.SMFData = null setget set_smf_data
 # MIDIトラックデータ smf_dataを再生用に加工したデータが入る
 onready var track_status:GodotMIDIPlayerTrackStatus = GodotMIDIPlayerTrackStatus.new( )
 # 現在のテンポ
@@ -211,6 +213,10 @@ var pan_power:float = 1.0
 var reverb_power:float = 0.5
 # コーラスの強さを定義
 var chorus_power:float = 0.7
+# 再生準備ができているか？
+var prepared_to_play:bool = false
+# 
+var _previous_time:float
 
 # -----------------------------------------------------------------------------
 # シグナル
@@ -223,8 +229,12 @@ signal appeared_instrument_name( channel_number, name )
 signal appeared_lyric( lyric )
 signal appeared_marker( marker )
 signal appeared_cue_point( cue_point )
+signal appeared_gm_system_on
+signal appeared_gs_reset
+signal appeared_xg_system_on
 signal midi_event( channel, event )
 signal looped
+signal finished
 
 """
 	準備
@@ -258,9 +268,10 @@ func _ready( ):
 	self.channel_status = []
 	for i in range( max_channel ):
 		var drum_track:bool = ( i == drum_track_channel )
-		var bank:int = 0
-		if drum_track: bank = self.drum_track_bank
-		self.channel_status.append( GodotMIDIPlayerChannelStatus.new( i, bank, drum_track ) )
+		var _bank:int = 0
+		if drum_track:
+			_bank = Bank.drum_track_bank
+		self.channel_status.append( GodotMIDIPlayerChannelStatus.new( i, _bank, drum_track ) )
 
 	self.set_max_polyphony( self.max_polyphony )
 
@@ -281,34 +292,46 @@ func _notification( what:int ):
 """
 	再生前の初期化
 """
-func _prepare_to_play( ):
+func _prepare_to_play( ) -> bool:
 	# ファイル読み込み
 	if self.smf_data == null:
 		var smf_reader = SMF.new( )
 		self.smf_data = smf_reader.read_file( self.file )
+		self.playing = true
+		if self.smf_data == null:
+			self.playing = false
+			return false
 
+	self.sys_ex.initialize( )
 	self._init_track( )
 	self._analyse_smf( )
 	self._init_channel( )
 
+	# サウンドフォントの再読み込みをさせる
+	if not self.load_all_voices_from_soundfont:
+		self.set_soundfont( self.soundfont )
 	# 楽器
-	if self.bank == null:
-		push_error( "Sound voices not found. Please set soundfont path or set instrument data to bank." )
+	#if self.bank == null:
+		#push_error( "Sound voices does not found. Please set soundfont path or set instrument data to bank." )
+		#pass
+
+	return true
 
 """
 	トラック初期化
 """
-func _init_track( ):
+func _init_track( ) -> void:
 	var track_status_events:Array = []
-	self.sys_ex.initialize( )
 
 	if len( self.smf_data.tracks ) == 1:
 		track_status_events = self.smf_data.tracks[0].events
 	else:
 		# Mix multiple tracks to single track
 		var tracks:Array = []
+		var track_id:int = 0
 		for track in self.smf_data.tracks:
-			tracks.append({"pointer":0, "events":track.events, "length": len( track.events )})
+			tracks.append({"track_id": track_id, "pointer":0, "events":track.events, "length": len( track.events )})
+			track_id += 1
 
 		var time:int = 0
 		var finished:bool = false
@@ -321,8 +344,8 @@ func _init_track( ):
 				if track.length <= p: continue
 				finished = false
 				
-				var e = track.events[p]
-				var e_time = e.time
+				var e:SMF.MIDIEventChunk = track.events[p]
+				var e_time:int = e.time
 				if e_time == time:
 					track_status_events.append( e )
 					track.pointer += 1
@@ -338,12 +361,12 @@ func _init_track( ):
 """
 	SMF解析
 """
-func _analyse_smf( ):
+func _analyse_smf( ) -> void:
 	var channels:Array = []
 	for i in range( max_channel ):
 		channels.append({ "number": i, "bank": 0, })
 	self.loop_start = 0.0
-	self._used_program_numbers = [0, self.drum_track_bank << 7]	# GrandPiano and Standard Kit
+	self._used_program_numbers = [0, Bank.drum_track_bank << 7]	# GrandPiano and Standard Kit
 
 	for event_chunk in self.track_status.events:
 		var channel_number:int = event_chunk.channel_number
@@ -361,12 +384,12 @@ func _analyse_smf( ):
 				match event.number:
 					SMF.control_number_bank_select_msb:
 						if channel.number == drum_track_channel:
-							channel.bank = self.drum_track_bank
+							channel.bank = Bank.drum_track_bank
 						else:
 							channel.bank = ( channel.bank & 0x7F ) | ( event.value << 7 )
 					SMF.control_number_bank_select_lsb:
 						if channel.number == drum_track_channel:
-							channel.bank = self.drum_track_bank
+							channel.bank = Bank.drum_track_bank
 						else:
 							channel.bank = ( channel.bank & 0x3F80 ) | ( event.value & 0x7F )
 					SMF.control_number_tkool_loop_point:
@@ -377,7 +400,7 @@ func _analyse_smf( ):
 """
 	チャンネル初期化
 """
-func _init_channel( ):
+func _init_channel( ) -> void:
 	for channel in self.channel_status:
 		channel.initialize( )
 
@@ -386,7 +409,10 @@ func _init_channel( ):
 	@param	from_position
 """
 func play( from_position:float = 0.0 ):
-	self._prepare_to_play( )
+	self._previous_time = 0.0
+	if not self._prepare_to_play( ):
+		self.playing = false
+		return
 	self.playing = true
 	if from_position == 0.0:
 		self.position = 0.0
@@ -398,6 +424,7 @@ func play( from_position:float = 0.0 ):
 	シーク
 """
 func seek( to_position:float ):
+	self._previous_time = 0.0
 	self._stop_all_notes( )
 	self.position = to_position
 
@@ -409,17 +436,18 @@ func seek( to_position:float ):
 			break
 
 		var channel:GodotMIDIPlayerChannelStatus = self.channel_status[event_chunk.channel_number]
-		var event = event_chunk.event
+		var event:SMF.MIDIEvent = event_chunk.event
 
 		match event.type:
 			SMF.MIDIEventType.program_change:
-				channel.program = event.number
+				channel.program = ( event as SMF.MIDIEventProgramChange ).number
 			SMF.MIDIEventType.control_change:
-				self._process_track_event_control_change( channel, event.number, event.value )
+				var event_control_change:SMF.MIDIEventControlChange = event as SMF.MIDIEventControlChange
+				self._process_track_event_control_change( channel, event_control_change.number, event_control_change.value )
 			SMF.MIDIEventType.pitch_bend:
-				self._process_pitch_bend( channel, event.value )
+				self._process_pitch_bend( channel, ( event as SMF.MIDIEventPitchBend ).value )
 			SMF.MIDIEventType.system_event:
-				self._process_track_system_event( channel, event )
+				self._process_track_system_event( channel, event as SMF.MIDIEventSystemEvent )
 			_:
 				# 無視
 				pass
@@ -430,13 +458,14 @@ func seek( to_position:float ):
 	停止
 """
 func stop( ):
+	self._previous_time = 0.0
 	self._stop_all_notes( )
 	self.playing = false
 
 """
 	リセット命令を強制的に発行する
 """
-func send_reset( ):
+func send_reset( ) -> void:
 	self._process_track_sys_ex_reset_all_channels( )
 
 """
@@ -444,6 +473,7 @@ func send_reset( ):
 """
 func set_file( path:String ):
 	file = path
+	self.stop( )
 	self.smf_data = null
 
 """
@@ -471,21 +501,25 @@ func set_max_polyphony( mp:int ):
 func set_soundfont( path:String ):
 	soundfont = path
 
-	var sf_reader = SoundFont.new( )
-	var sf2 = sf_reader.read_file( self.soundfont )
-	var voices = null
-	if not self.load_all_voices_from_soundfont:
-		voices = self._used_program_numbers
+	if path == null or path == "":
+		self.bank = null
+		return
+
+	var sf_reader:SoundFont = SoundFont.new( )
+	var sf2:SoundFont.SoundFontData = sf_reader.read_file( soundfont )
 
 	self.bank = Bank.new( )
-	self.bank.read_soundfont( sf2, voices )
+	if self.load_all_voices_from_soundfont:
+		self.bank.read_soundfont( sf2 )
+	else:
+		self.bank.read_soundfont( sf2, self._used_program_numbers )
 
 """
 	SMFデータ更新
 """
-func set_smf_data( sd ):
+func set_smf_data( sd:SMF.SMFData ):
 	smf_data = sd
-	if not self.no_reload_soundfont: self.bank = null
+	self.stop( )
 
 """
 	テンポ設定
@@ -506,18 +540,40 @@ func set_volume_db( vdb:float ):
 """
 	全音を止める
 """
-func _stop_all_notes( ):
+func _stop_all_notes( ) -> void:
 	for audio_stream_player in self.audio_stream_players:
 		audio_stream_player.hold = false
 		audio_stream_player.stop( )
 
 	for channel in self.channel_status:
-		channel.note_on = {}
+		channel.note_on.clear( )
 
 """
-	毎フレーム処理
+	1フレームでシーケンス処理
 """
 func _process( delta:float ):
+	self._sequence( delta )
+	#var currently:float = OS.get_ticks_msec( )
+	#if 0.0 < self._previous_time:
+	#	self._sequence( ( currently - self._previous_time ) / 1000.0 )
+	#self._previous_time = currently
+
+"""
+	物理1フレームでシーケンス処理
+"""
+#func _physics_process( delta:float ):
+#	var currently:float = OS.get_ticks_msec( )
+#	if 0.0 < self._previous_time:
+#		self._sequence( ( currently - self._previous_time ) / 1000.0 )
+#	self._previous_time = currently
+
+"""
+	シーケンス処理を行う
+"""
+func _sequence( delta:float ) -> void:
+	if delta == 0.0:
+		return
+
 	if self.smf_data != null:
 		if self.playing:
 			self.position += float( self.smf_data.timebase ) * delta * self.seconds_to_timebase * self.play_speed
@@ -529,10 +585,10 @@ func _process( delta:float ):
 """
 	トラック処理
 """
-func _process_track( ):
-	var track = self.track_status
+func _process_track( ) -> int:
+	var track:GodotMIDIPlayerTrackStatus = self.track_status
 	if track.events == null:
-		return
+		return 0
 
 	var length:int = len( track.events )
 
@@ -544,43 +600,46 @@ func _process_track( ):
 			self.position += diff
 		else:
 			self.playing = false
-			return
+			self.emit_signal( "finished" )
+			return 0
 
 	var execute_event_count:int = 0
 	var current_position:int = int( ceil( self.position ) )
 
 	while track.event_pointer < length:
-		var event_chunk = track.events[track.event_pointer]
+		var event_chunk:SMF.MIDIEventChunk = track.events[track.event_pointer]
 		if current_position <= event_chunk.time:
 			break
 		track.event_pointer += 1
 		execute_event_count += 1
 
 		var channel:GodotMIDIPlayerChannelStatus = self.channel_status[event_chunk.channel_number]
-		var event = event_chunk.event
+		var event:SMF.MIDIEvent = event_chunk.event
 
 		self.emit_signal( "midi_event", channel, event )
 
 		match event.type:
 			SMF.MIDIEventType.note_off:
-				self._process_track_event_note_off( channel, event.note )
+				self._process_track_event_note_off( channel, ( event as SMF.MIDIEventNoteOff ).note )
 			SMF.MIDIEventType.note_on:
-				self._process_track_event_note_on( channel, event.note, event.velocity )
+				var event_note_on:SMF.MIDIEventNoteOn = event as SMF.MIDIEventNoteOn
+				self._process_track_event_note_on( channel, event_note_on.note, event_note_on.velocity )
 			SMF.MIDIEventType.program_change:
-				channel.program = event.number
+				channel.program = ( event as SMF.MIDIEventProgramChange ).number
 			SMF.MIDIEventType.control_change:
-				self._process_track_event_control_change( channel, event.number, event.value )
+				var event_control_change:SMF.MIDIEventControlChange = event as SMF.MIDIEventControlChange
+				self._process_track_event_control_change( channel, event_control_change.number, event_control_change.value )
 			SMF.MIDIEventType.pitch_bend:
-				self._process_pitch_bend( channel, event.value )
+				self._process_pitch_bend( channel, ( event as SMF.MIDIEventPitchBend ).value )
 			SMF.MIDIEventType.system_event:
-				self._process_track_system_event( channel, event )
+				self._process_track_system_event( channel, event as SMF.MIDIEventSystemEvent )
 			_:
 				# 無視
 				pass
 
 	return execute_event_count
 
-func receive_raw_midi_message( input_event:InputEventMIDI ):
+func receive_raw_midi_message( input_event:InputEventMIDI ) -> void:
 	var channel:GodotMIDIPlayerChannelStatus = self.channel_status[input_event.channel]
 
 	match input_event.message:
@@ -609,17 +668,17 @@ func receive_raw_midi_message( input_event:InputEventMIDI ):
 			print( "unknown message %x" % input_event.message )
 			breakpoint
 
-func _process_pitch_bend( channel:GodotMIDIPlayerChannelStatus, value:int ):
+func _process_pitch_bend( channel:GodotMIDIPlayerChannelStatus, value:int ) -> void:
 	var pb:float = float( value ) / 8192.0 - 1.0
 	var pbs:float = channel.rpn.pitch_bend_sensitivity
 	channel.pitch_bend = pb
 
 	self._apply_channel_pitch_bend( channel )
 
-func _process_track_event_note_off( channel:GodotMIDIPlayerChannelStatus, note:int, force_disable_hold:bool = false ):
+func _process_track_event_note_off( channel:GodotMIDIPlayerChannelStatus, note:int, force_disable_hold:bool = false ) -> void:
 	var key_number:int = note + self.key_shift
-	if channel.note_on.has( key_number ):
-		channel.note_on.erase( key_number )
+	if channel.note_on.erase( key_number ):
+		pass
 
 	if channel.drum_track: return
 
@@ -628,8 +687,9 @@ func _process_track_event_note_off( channel:GodotMIDIPlayerChannelStatus, note:i
 			if force_disable_hold: asp.hold = false
 			asp.start_release( )
 
-func _process_track_event_note_on( channel:GodotMIDIPlayerChannelStatus, note:int, velocity:int ):
+func _process_track_event_note_on( channel:GodotMIDIPlayerChannelStatus, note:int, velocity:int ) -> void:
 	if channel.mute: return
+	if self.bank == null: return
 
 	var key_number:int = note + self.key_shift
 	var preset:Bank.Preset = self.bank.get_preset( channel.program, channel.bank )
@@ -659,17 +719,18 @@ func _process_track_event_note_on( channel:GodotMIDIPlayerChannelStatus, note:in
 				note_player.velocity = velocity
 				note_player.pitch_bend = channel.pitch_bend
 				note_player.pitch_bend_sensitivity = channel.rpn.pitch_bend_sensitivity
-				note_player.hold = channel.hold
 				note_player.modulation = channel.modulation
 				note_player.modulation_sensitivity = channel.rpn.modulation_sensitivity
 				note_player.auto_release_mode = channel.drum_track
 				note_player.polyphony_count = float( polyphony_count )
+				note_player.stop( )
 				note_player.set_instrument( instrument )
+				note_player.hold = channel.hold
 				note_player.play( 0.0 )
 
 	channel.note_on[ assign_group ] = true
 
-func _process_track_event_control_change( channel:GodotMIDIPlayerChannelStatus, number:int, value:int ):
+func _process_track_event_control_change( channel:GodotMIDIPlayerChannelStatus, number:int, value:int ) -> void:
 	match number:
 		SMF.control_number_volume:
 			channel.volume = float( value ) / 127.0
@@ -706,12 +767,15 @@ func _process_track_event_control_change( channel:GodotMIDIPlayerChannelStatus, 
 			channel.freeze = float( value ) / 127.0
 		SMF.control_number_bank_select_msb:
 			if channel.drum_track:
-				channel.bank = self.drum_track_bank
+				channel.bank = Bank.drum_track_bank
 			else:
+				if value == 1:
+					# SoundFont的にMSB = 1はドラムトラックになっているので避ける
+					value = 0
 				channel.bank = ( channel.bank & 0x7F ) | ( value << 7 )
 		SMF.control_number_bank_select_lsb:
 			if channel.drum_track:
-				channel.bank = self.drum_track_bank
+				channel.bank = Bank.drum_track_bank
 			else:
 				channel.bank = ( channel.bank & 0x3F80 ) | ( value & 0x7F )
 		SMF.control_number_rpn_lsb:
@@ -729,12 +793,13 @@ func _process_track_event_control_change( channel:GodotMIDIPlayerChannelStatus, 
 				if asp.channel_number == channel.number:
 					asp.hold = false
 					asp.start_release( )
-					channel.note_on.erase( asp.key_number )
+					if channel.note_on.erase( asp.key_number ):
+						pass
 		_:
 			# 無視
 			pass
 
-func update_channel_status( channel:GodotMIDIPlayerChannelStatus ):
+func update_channel_status( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	self._apply_channel_volume( channel )
 	self._apply_channel_pitch_bend( channel )
 	self._apply_channel_modulation( channel )
@@ -743,41 +808,41 @@ func update_channel_status( channel:GodotMIDIPlayerChannelStatus ):
 	self._apply_channel_chorus( channel )
 	self._apply_channel_pan( channel )
 
-func _apply_channel_volume( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_volume( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	AudioServer.set_bus_volume_db( AudioServer.get_bus_index( self.midi_channel_bus_name % channel.number ), linear2db( channel.volume * channel.expression ) )
 
-func _apply_channel_pitch_bend( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_pitch_bend( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	var pbs:float = channel.rpn.pitch_bend_sensitivity
 	var pb:float = channel.pitch_bend
 	for asp in self.audio_stream_players:
-		if asp.channel_number == channel.number:
+		if asp.channel_number == channel.number and ( not asp.request_release ):
 			asp.pitch_bend_sensitivity = pbs
 			asp.pitch_bend = pb
 
-func _apply_channel_reverb( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_reverb( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	self.channel_audio_effects[channel.number].ae_reverb.wet = channel.reverb * self.reverb_power
 
-func _apply_channel_chorus( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_chorus( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	self.channel_audio_effects[channel.number].ae_chorus.wet = channel.chorus * self.chorus_power
 
 func _apply_channel_pan( channel:GodotMIDIPlayerChannelStatus ):
 	self.channel_audio_effects[channel.number].ae_panner.pan = ( ( channel.pan * 2 ) - 1.0 ) * self.pan_power
 
-func _apply_channel_modulation( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_modulation( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	var ms:float = channel.rpn.modulation_sensitivity
 	var m:float = channel.modulation
 	for asp in self.audio_stream_players:
-		if asp.channel_number == channel.number:
+		if asp.channel_number == channel.number and ( not asp.request_release ):
 			asp.modulation_sensitivity = ms
 			asp.modulation = m
 
-func _apply_channel_hold( channel:GodotMIDIPlayerChannelStatus ):
+func _apply_channel_hold( channel:GodotMIDIPlayerChannelStatus ) -> void:
 	var hold:bool = channel.hold
 	for asp in self.audio_stream_players:
 		if asp.channel_number == channel.number:
-			asp.hold = hold
+			asp.hold = hold and ( not asp.request_release )
 
-func _process_track_event_control_change_rpn_data_entry_msb( channel:GodotMIDIPlayerChannelStatus, value:int ):
+func _process_track_event_control_change_rpn_data_entry_msb( channel:GodotMIDIPlayerChannelStatus, value:int ) -> void:
 	match channel.rpn.selected_msb:
 		0:
 			match channel.rpn.selected_lsb:
@@ -785,24 +850,30 @@ func _process_track_event_control_change_rpn_data_entry_msb( channel:GodotMIDIPl
 					channel.rpn.pitch_bend_sensitivity_msb = float( value )
 					if 12 < channel.rpn.pitch_bend_sensitivity_msb: channel.rpn.pitch_bend_sensitivity_msb = 12
 					channel.rpn.pitch_bend_sensitivity = channel.rpn.pitch_bend_sensitivity_msb + channel.rpn.pitch_bend_sensitivity_lsb / 100.0
+				SMF.rpn_control_number_modulation_sensitivity:
+					channel.rpn.modulation_sensitivity_msb = float( value )
+					channel.rpn.modulation_sensitivity = channel.rpn.modulation_sensitivity_msb + channel.rpn.modulation_sensitivity_lsb / 100.0
 				_:
 					pass
 		_:
 			pass
 
-func _process_track_event_control_change_rpn_data_entry_lsb( channel:GodotMIDIPlayerChannelStatus, value:int ):
+func _process_track_event_control_change_rpn_data_entry_lsb( channel:GodotMIDIPlayerChannelStatus, value:int ) -> void:
 	match channel.rpn.selected_msb:
 		0:
 			match channel.rpn.selected_lsb:
 				SMF.rpn_control_number_pitch_bend_sensitivity:
 					channel.rpn.pitch_bend_sensitivity_lsb = float( value )
 					channel.rpn.pitch_bend_sensitivity = channel.rpn.pitch_bend_sensitivity_msb + channel.rpn.pitch_bend_sensitivity_lsb / 100.0
+				SMF.rpn_control_number_modulation_sensitivity:
+					channel.rpn.modulation_sensitivity_lsb = float( value )
+					channel.rpn.modulation_sensitivity = channel.rpn.modulation_sensitivity_msb + channel.rpn.modulation_sensitivity_lsb / 100.0
 				_:
 					pass
 		_:
 			pass
 
-func _process_track_system_event( channel:GodotMIDIPlayerChannelStatus, event ):
+func _process_track_system_event( channel:GodotMIDIPlayerChannelStatus, event:SMF.MIDIEventSystemEvent ) -> void:
 	match event.args.type:
 		SMF.MIDISystemEventType.set_tempo:
 			self.tempo = 60000000.0 / float( event.args.bpm )
@@ -832,22 +903,25 @@ func _process_track_system_event( channel:GodotMIDIPlayerChannelStatus, event ):
 			# 無視
 			pass
 
-func _process_track_sys_ex( channel:GodotMIDIPlayerChannelStatus, event_args ):
+func _process_track_sys_ex( channel:GodotMIDIPlayerChannelStatus, event_args ) -> void:
 	match event_args.manifacture_id:
 		SMF.manufacture_id_universal_nopn_realtime_sys_ex:
 			if self._is_same_data( event_args.data, [0x7f,0x09,0x01,0xf7] ):
 				self.sys_ex.gm_system_on = true
+				self.emit_signal( "appeared_gm_system_on" )
 				self._process_track_sys_ex_reset_all_channels( )
 		SMF.manufacture_id_roland_corporation:
 			if self._is_same_data( event_args.data, [-1,0x42,0x12,0x40,0x00,0x7f,0x00,0x41,0xf7] ):
 				self.sys_ex.gs_reset = true
+				self.emit_signal( "appeared_gs_reset" )
 				self._process_track_sys_ex_reset_all_channels( )
 		SMF.manufacture_id_yamaha_corporation:
 			if self._is_same_data( event_args.data, [-1,0x4c,0x00,0x00,0x7E,0x00,0xf7] ):
 				self.sys_ex.xg_system_on = true
+				self.emit_signal( "appeared_xg_system_on" )
 				self._process_track_sys_ex_reset_all_channels( )
 
-func _process_track_sys_ex_reset_all_channels( ):
+func _process_track_sys_ex_reset_all_channels( ) -> void:
 	for audio_stream_player in self.audio_stream_players:
 		audio_stream_player.hold = false
 		audio_stream_player.start_release( )
@@ -873,25 +947,25 @@ func _is_same_data( data_a:Array, data_b:Array ) -> bool:
 	return not incorrect
 
 func _get_idle_player( ) -> AudioStreamPlayerADSR:
-	var stopped_audio_stream_player:AudioStreamPlayerADSR = null
-	var minimum_volume_db:float = -100.0
+	var released_audio_stream_player:AudioStreamPlayerADSR = null
+	var minimum_volume_db:float = -70.0
+	var releasing_audio_stream_player:AudioStreamPlayerADSR = null
 	var oldest_audio_stream_player:AudioStreamPlayerADSR = null
 	var oldest:float = -1.0
 
 	for audio_stream_player in self.audio_stream_players:
 		if not audio_stream_player.playing:
 			return audio_stream_player
-		if audio_stream_player.releasing and audio_stream_player.current_volume_db < minimum_volume_db:
-			stopped_audio_stream_player = audio_stream_player
-			minimum_volume_db = audio_stream_player.current_volume_db
+		if audio_stream_player.releasing and audio_stream_player.volume_db < minimum_volume_db:
+			released_audio_stream_player = audio_stream_player
+			minimum_volume_db = audio_stream_player.volume_db
 		if oldest < audio_stream_player.using_timer:
 			oldest_audio_stream_player = audio_stream_player
 			oldest = audio_stream_player.using_timer
 
-	if stopped_audio_stream_player != null:
-		return stopped_audio_stream_player
+	if released_audio_stream_player != null:
+		return released_audio_stream_player
 
-	oldest_audio_stream_player.stop( )
 	return oldest_audio_stream_player
 
 """

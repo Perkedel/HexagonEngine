@@ -13,6 +13,14 @@ var color_picker:ColorPickerButton
 export var background_picker_dir:NodePath
 var background_picker:ColorPickerButton
 
+#PEN PRESSURE:
+export var pen_pressure_settings_dir:NodePath
+var pen_pressure_settings:VBoxContainer
+export var button_opacity_pressure_dir:NodePath
+var button_opacity_pressure:CheckBox
+export var button_size_pressure_dir:NodePath
+var button_size_pressure:CheckBox
+
 #TOOLS:
 export var button_paint_dir:NodePath
 var button_paint:ToolButton
@@ -22,6 +30,9 @@ var button_sample:ToolButton
 
 export var button_blur_dir:NodePath
 var button_blur:ToolButton
+
+export var button_displace_dir:NodePath
+var button_displace:ToolButton
 
 export var button_fill_dir:NodePath
 var button_fill:ToolButton
@@ -53,12 +64,26 @@ func _enter_tree():
 	background_picker = get_node(background_picker_dir)
 	background_picker.connect("color_changed", self, "_set_background_color")
 	
+	
+	pen_pressure_settings = get_node(pen_pressure_settings_dir)
+	
+	button_opacity_pressure = get_node(button_opacity_pressure_dir)
+	button_opacity_pressure.connect("toggled", self, "_set_opacity_pressure")
+	button_size_pressure = get_node(button_size_pressure_dir)
+	button_size_pressure.connect("toggled", self, "_set_size_pressure")
+	
 	button_paint = get_node(button_paint_dir)
 	button_paint.connect("toggled", self, "_set_paint_tool")
+	
 	button_sample = get_node(button_sample_dir)
 	button_sample.connect("toggled", self, "_set_sample_tool")
+	
 	button_blur = get_node(button_blur_dir)
 	button_blur.connect("toggled", self, "_set_blur_tool")
+	
+	button_displace = get_node(button_displace_dir)
+	button_displace.connect("toggled", self, "_set_displace_tool")
+	
 	button_fill = get_node(button_fill_dir)
 	button_fill.connect("toggled", self, "_set_fill_tool")
 
@@ -118,9 +143,11 @@ func _input(event):
 			_set_paint_tool(true)
 		if event.scancode == KEY_2:
 			_set_sample_tool(true)
-#		if event.scancode == KEY_3:
-#			_set_blur_tool(true)
+		if event.scancode == KEY_3:
+			_set_blur_tool(true)
 		if event.scancode == KEY_4:
+			_set_displace_tool(true)
+		if event.scancode == KEY_5:
 			_set_fill_tool(true)
 		
 		if event.scancode == KEY_BRACELEFT:
@@ -133,37 +160,71 @@ func _input(event):
 		if event.scancode == KEY_BACKSLASH :
 			_set_brush_opacity(brush_opacity_slider.value + 0.01)
 
+func _set_opacity_pressure(value):
+	vpainter.pressure_opacity = value
+
+func _set_size_pressure(value):
+	vpainter.pressure_size = value
+
 func _set_paint_tool(value):
 	if value:
-		vpainter.current_tool = vpainter.PAINT
+		vpainter.current_tool = "_paint_tool"
+		pen_pressure_settings.visible = true
+		blend_modes.visible = true
+
 		button_paint.set_pressed(true)
 		button_sample.set_pressed(false)
 		button_blur.set_pressed(false)
+		button_displace.set_pressed(false)
 		button_fill.set_pressed(false)
 
 func _set_sample_tool(value):
 	if value:
-		vpainter.current_tool = vpainter.SAMPLE
+		vpainter.current_tool = "_sample_tool"
+		pen_pressure_settings.visible = false
+		blend_modes.visible = false
+		
 		button_paint.set_pressed(false)
 		button_sample.set_pressed(true)
 		button_blur.set_pressed(false)
+		button_displace.set_pressed(false)
 		button_fill.set_pressed(false)
 
 func _set_blur_tool(value):
 	if value:
-		vpainter.current_tool = vpainter.BLUR
+		vpainter.current_tool = "_blur_tool"
+		pen_pressure_settings.visible = false
+		blend_modes.visible = false
+		
 		button_paint.set_pressed(false)
 		button_sample.set_pressed(false)
 		button_blur.set_pressed(true)
+		button_displace.set_pressed(false)
+		button_fill.set_pressed(false)
+
+func _set_displace_tool(value):
+	if value:
+		vpainter.current_tool = "_displace_tool"
+		pen_pressure_settings.visible = true
+		blend_modes.visible = false
+		
+		button_paint.set_pressed(false)
+		button_sample.set_pressed(false)
+		button_blur.set_pressed(false)
+		button_displace.set_pressed(true)
 		button_fill.set_pressed(false)
 
 
 func _set_fill_tool(value):
 	if value:
-		vpainter.current_tool = vpainter.FILL
+		vpainter.current_tool = "_fill_tool"
+		pen_pressure_settings.visible = false
+		blend_modes.visible = true
+
 		button_paint.set_pressed(false)
 		button_sample.set_pressed(false)
 		button_blur.set_pressed(false)
+		button_displace.set_pressed(false)
 		button_fill.set_pressed(true)
 
 

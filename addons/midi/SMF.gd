@@ -2,6 +2,8 @@
 	Standard MIDI File reader/writer by Yui Kinomoto @arlez80
 """
 
+class_name SMF
+
 # -----------------------------------------------------------------------------
 # 定数
 
@@ -72,6 +74,7 @@ const rpn_control_number_channel_fine_tune:int = 0x01
 const rpn_control_number_channel_cource_tune:int = 0x02
 const rpn_control_number_tune_program_change:int = 0x03
 const rpn_control_number_tune_bank_select:int = 0x04
+const rpn_control_number_modulation_sensitivity:int = 0x05
 # RPN Control Numbers: 0x3D
 const rpn_control_number_3D_azimuth_angle:int = 0x00
 const rpn_control_number_3D_elevation_angle:int = 0x01
@@ -142,35 +145,35 @@ class MIDIChunkData:
 	var size:int
 	var stream:StreamPeerBuffer
 
-class SMF:
+class SMFData:
 	var format_type:int
 	var track_count:int
 	var timebase:int
 	var tracks:Array
 
-	func _init( format_type:int = 0, track_count:int = 0, timebase:int = 480, tracks:Array = [] ):
-		self.format_type = format_type
-		self.track_count = track_count
-		self.timebase = timebase
-		self.tracks = tracks
+	func _init( _format_type:int = 0, _track_count:int = 0, _timebase:int = 480, _tracks:Array = [] ):
+		self.format_type = _format_type
+		self.track_count = _track_count
+		self.timebase = _timebase
+		self.tracks = _tracks
 
 class MIDITrack:
 	var track_number:int
 	var events:Array
 
-	func _init( track_number:int = 0, events:Array = [] ):
-		self.track_number = track_number
-		self.events = events
+	func _init( _track_number:int = 0, _events:Array = [] ):
+		self.track_number = _track_number
+		self.events = _events
 
 class MIDIEventChunk:
 	var time:int	# absolute time
 	var channel_number:int
 	var event:MIDIEvent
 
-	func _init( time:int = 0, channel_number:int = 0, event = null ):
-		self.time = time
-		self.channel_number = channel_number
-		self.event = event
+	func _init( _time:int = 0, _channel_number:int = 0, _event = null ):
+		self.time = _time
+		self.channel_number = _channel_number
+		self.event = _event
 
 class MIDIEvent:
 	var type:int
@@ -179,65 +182,65 @@ class MIDIEventNoteOff extends MIDIEvent:
 	var note:int
 	var velocity:int
 
-	func _init( note:int = 0, velocity:int = 0 ):
+	func _init( _note:int = 0, _velocity:int = 0 ):
 		self.type = MIDIEventType.note_off
-		self.note = note
-		self.velocity = velocity
+		self.note = _note
+		self.velocity = _velocity
 
 class MIDIEventNoteOn extends MIDIEvent:
 	var note:int
 	var velocity:int
 
-	func _init( note:int = 0, velocity:int = 0 ):
+	func _init( _note:int = 0, _velocity:int = 0 ):
 		self.type = MIDIEventType.note_on
-		self.note = note
-		self.velocity = velocity
+		self.note = _note
+		self.velocity = _velocity
 
 class MIDIEventPolyphonicKeyPressure extends MIDIEvent:
 	var note:int
 	var value:int
 
-	func _init( note:int = 0, value:int = 0 ):
+	func _init( _note:int = 0, _value:int = 0 ):
 		self.type = MIDIEventType.polyphonic_key_pressure
-		self.note = note
-		self.value = value
+		self.note = _note
+		self.value = _value
 
 class MIDIEventControlChange extends MIDIEvent:
 	var number:int
 	var value:int
 
-	func _init( number:int = 0, value:int = 0 ):
+	func _init( _number:int = 0, _value:int = 0 ):
 		self.type = MIDIEventType.control_change
-		self.number = number
-		self.value = value
+		self.number = _number
+		self.value = _value
 
 class MIDIEventProgramChange extends MIDIEvent:
 	var number:int
 
-	func _init( number:int = 0 ):
+	func _init( _number:int = 0 ):
 		self.type = MIDIEventType.program_change
-		self.number = number
+		self.number = _number
 
 class MIDIEventChannelPressure extends MIDIEvent:
 	var value:int
 
-	func _init( value:int = 0 ):
+	func _init( _value:int = 0 ):
 		self.type = MIDIEventType.channel_pressure
-		self.value = value
+		self.value = _value
 
 class MIDIEventPitchBend extends MIDIEvent:
 	var value:int
 
-	func _init( value:int = 0 ):
+	func _init( _value:int = 0 ):
 		self.type = MIDIEventType.pitch_bend
-		self.value = value
+		self.value = _value
 
 class MIDIEventSystemEvent extends MIDIEvent:
 	var args:Dictionary
 
-	func _init( args:Dictionary = {} ):
+	func _init( _args:Dictionary = {} ):
 		self.type = MIDIEventType.system_event
-		self.args = args
+		self.args = _args
 
 # -----------------------------------------------------------------------------
 # 読み込み : Reader
@@ -249,7 +252,7 @@ var last_event_type:int = 0
 	@param	path	File path
 	@return	smf or null(read error)
 """
-func read_file( path:String ) -> SMF:
+func read_file( path:String ) -> SMFData:
 	var f = File.new( )
 
 	if f.open( path, f.READ ) != OK:
@@ -267,7 +270,7 @@ func read_file( path:String ) -> SMF:
 	@param	data	PoolByteArray
 	@return	smf or null(read error)
 """
-func read_data( data:PoolByteArray ) -> SMF:
+func read_data( data:PoolByteArray ) -> SMFData:
 	var stream:StreamPeerBuffer = StreamPeerBuffer.new( )
 	stream.set_data_array( data )
 	stream.big_endian = true
@@ -278,13 +281,13 @@ func read_data( data:PoolByteArray ) -> SMF:
 	@param	input
 	@return	smf
 """
-func _read( input:StreamPeerBuffer ) -> SMF:
+func _read( input:StreamPeerBuffer ) -> SMFData:
 	var header:MIDIChunkData = self._read_chunk_data( input )
 	if header.id != "MThd" and header.size != 6:
 		print( "expected MThd header" )
 		return null
 
-	var smf:SMF = SMF.new( )
+	var smf:SMFData = SMFData.new( )
 
 	smf.format_type = header.stream.get_u16( )
 	smf.track_count = header.stream.get_u16( )
@@ -607,7 +610,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 	var buf:StreamPeerBuffer = StreamPeerBuffer.new( )
 	buf.big_endian = true
 	var time:int = 0
-	var last_event_type:int = -2
+	var last_event_type_seq:int = -2
 
 	for e in events:
 		var event_omit:bool = false
@@ -618,7 +621,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.note_off:
 				current_event_type = 0x80 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.note )
@@ -626,7 +629,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.note_on:
 				current_event_type = 0x90 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.note )
@@ -634,7 +637,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.polyphonic_key_pressure:
 				current_event_type = 0xA0 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.note )
@@ -642,7 +645,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.control_change:
 				current_event_type = 0xB0 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.number )
@@ -650,21 +653,21 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.program_change:
 				current_event_type = 0xC0 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.number )
 			MIDIEventType.channel_pressure:
 				current_event_type = 0xD0 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.value )
 			MIDIEventType.pitch_bend:
 				current_event_type = 0xE0 | e.channel_number
 				if running_status:
-					event_omit = current_event_type == last_event_type
+					event_omit = current_event_type == last_event_type_seq
 				if not event_omit:
 					buf.put_u8( current_event_type )
 				buf.put_u8( e.value & 0x7f )
@@ -672,7 +675,7 @@ func _write_track( stream:StreamPeerBuffer, track, running_status:bool ):
 			MIDIEventType.system_event:
 				self._write_system_event( buf, e )
 				current_event_type = -3
-		last_event_type = current_event_type
+		last_event_type_seq = current_event_type
 
 	var track_size:int = buf.get_available_bytes( )
 	stream.put_utf8_string( "MTrk" )

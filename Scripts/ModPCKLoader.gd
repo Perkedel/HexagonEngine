@@ -2,12 +2,62 @@ extends Node
 # Loads Mods of PCK files you guys created
 
 var modLists : Dictionary
+var modsFolder : Dictionary
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal modLoaded()
+signal modFolderLoaded()
+
+func loadAllModsFolder():
+	var locate = OS.get_executable_path() + "/ModPCK"
+	
+	var dirNow = Directory.new()
+	var modInFolder
+	
+	var try = dirNow.open(locate)
+	if try == OK:
+		dirNow.list_dir_begin(true,false)
+		modInFolder = dirNow.get_next()
+		while modInFolder != "":
+			if dirNow.current_is_dir():
+				print("Dir found")
+				pass
+			else:
+				modsFolder[modInFolder] = {
+					Patho=locate+modInFolder,
+					Replaceo=false,
+					#fromFolder=true
+				}
+				pass
+			modInFolder = dirNow.get_next()
+			pass
+		pass
+	else:
+		printerr("Werror "+ String(try) +" cannot open ModPCK file!\ndid you deleted it?")
+		pass
+	pass
+
+func wellLoadModsFolder():
+	loadAllModsFolder()
+	print(String(modsFolder))
+	print("\n\nMods Folder:")
+	
+	for modu in modsFolder:
+		print(String(modu))
+		#print(modu)
+		if ProjectSettings.load_resource_pack(modLists[modu].Patho,modLists[modu].Replaceo):
+			print(modLists[modu].Patho, " Success")
+		else:
+			print(modLists[modu].Patho, " Failed")
+		pass
+	#print("\n\n\n Warning! Godot FileDialog bug!\nIf you load mod PCK resource pack while a FileDialog instance is still there on a node somewhere, the FileDialog access res:// is unable to see those newly imported files! you must kill FileDialog instance and then readd fresh one again. the system however can found this file no problem.")
+	
+	emit_signal("modFolderLoaded")
+	pass
 
 func loadAllMods():
+	wellLoadModsFolder()
 	modLists = Settingers.getModPCKs()
 	print(String(modLists))
 	print("\n\nMods List:")

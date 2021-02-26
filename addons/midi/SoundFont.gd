@@ -2,6 +2,8 @@
 	SoundFont reader by Yui Kinomoto @arlez80
 """
 
+class_name SoundFont
+
 """
 	SampleLink
 """
@@ -90,7 +92,7 @@ const sample_mode_loop_ends_by_key_depression:int = 3
 """
 	Classes
 """
-class SoundFont:
+class SoundFontData:
 	var info:SoundFontInfo
 	var sdta:SoundFontSampleData
 	var pdta:SoundFontPresetData
@@ -193,7 +195,7 @@ class SoundFontSampleHeader:
 	@param	path	File path
 	@return	smf
 """
-func read_file( path:String ) -> SoundFont:
+func read_file( path:String ) -> SoundFontData:
 	var f:File = File.new( )
 
 	if f.open( path, f.READ ) != OK:
@@ -211,7 +213,7 @@ func read_file( path:String ) -> SoundFont:
 	@param	data	PoolByteArray
 	@return	smf
 """
-func read_data( data:PoolByteArray ) -> SoundFont:
+func read_data( data:PoolByteArray ) -> SoundFontData:
 	var stream:StreamPeerBuffer = StreamPeerBuffer.new( )
 	stream.set_data_array( data )
 	stream.big_endian = false
@@ -222,11 +224,11 @@ func read_data( data:PoolByteArray ) -> SoundFont:
 	@param	input
 	@return	SoundFont
 """
-func _read( input:StreamPeerBuffer ) -> SoundFont:
+func _read( input:StreamPeerBuffer ) -> SoundFontData:
 	self._check_chunk( input, "RIFF" )
 	self._check_header( input, "sfbk" )
 
-	var sf = SoundFont.new( )
+	var sf = SoundFontData.new( )
 
 	sf.info = self._read_info( input )
 	sf.sdta = self._read_sdta( input )

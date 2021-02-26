@@ -1,0 +1,11 @@
+[remap]
+
+importer="com.technohacker.pixelorama"
+type="StreamTexture"
+valid=false
+
+[deps]
+
+source_file="res://addons/Dialogbox/icon.pxo"
+[params]
+

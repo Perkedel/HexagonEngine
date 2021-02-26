@@ -39,9 +39,11 @@ var _DefaultSetting = {
 	ModPCKs={ #ModPCK
 		Sample={
 			Patho="",
-			Replaceo=false
+			Replaceo=false,
+			fromFolder=false
 		},
 	},
+	DVDListCache={},
 	AudioSetting = {
 		MasterVolume = 0,
 		MusicVolume = 0,
@@ -79,6 +81,7 @@ onready var _SettingData = {
 		DummyVolume = 0,
 		SpeechVolume = 0,
 	},
+	DVDListCache={},
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),
 		Vsync = OS.vsync_enabled,
@@ -272,6 +275,38 @@ func SettingSave():
 #func _process(delta):
 #	pass
 
+func setDVDListCache(entire:Dictionary):
+	_SettingData.DVDListCache = entire
+
+func getDVDListCache() -> Dictionary:
+	if not _SettingData.has("DVDListCache"):
+		_SettingData["DVDListCache"] = {
+			templateHexagon = {
+			id= "template-hexagon",
+			Title= "Template Hexagon Engine",
+			IconUrl= "res://Sprites/HexagonEngineSign.png",
+			BootThisTscene= "res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn",
+			CatalogueBanner= "",
+			DVDCover= "",
+			isSelectable= true,
+			hidden= false,
+			actuallyBootJsonPath= "",
+			requiredEggsellents= [],
+			args= ["", ""],
+			HoverEffect= true,
+			SelectedEffect= true,
+			HoveredImage= "res://Sprites/ConsoleHover.png",
+			HoveredAudio= "res://Audio/Musik/Floaters.ogg",
+			HoveredAudioStartSec= 12.08,
+			HoveredAudioVolume= -15.0,
+			SelectedImage= "res://Sprites/ConsoleLaunch.png",
+			SelectedAudio= "res://Audio/EfekSuara/425728__moogy73__click01.wav",
+			SelectedAudioVolume= 0.0
+			}
+		}
+		pass
+	return _SettingData.DVDListCache
+
 func setModPCKs(entire:Dictionary):
 	_SettingData.ModPCKs = entire
 
@@ -281,7 +316,8 @@ func getModPCKs() -> Dictionary:
 		_SettingData["ModPCKs"] = {
 			Sample={
 			Patho="",
-			Replaceo=false
+			Replaceo=false,
+			#fromFolder=false
 			},
 		}
 	return _SettingData.ModPCKs

@@ -133,7 +133,8 @@ func _on_SelectFileLoadingMode_FileAccessModeSelected(Which):
 
 
 func _on_FileDialog_file_selected(path):
-	aStoreg.upload(path,".","Spinning-crocodillo-oliveEdit-windows10Emoji.png") # it seems it's incomplete I think? idk
+	#aStoreg.upload(path,".","Spinning-crocodillo-oliveEdit-windows10Emoji.png") # it seems it's incomplete I think? idk
+	aStoreg.ref("Arok/Nar")
 	pass # Replace with function body.
 
 # https://firebasestorage.googleapis.com/v0/b/hexagon-engine.appspot.com/o/Spinning-crocodillo-oliveEdit-windows10Emoji.png?alt=media&token=fd446f96-1802-451d-bc6c-0410c737eba0

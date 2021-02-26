@@ -8,7 +8,7 @@ extends EditorPlugin
 #var sf2_import_plugin
 
 func _enter_tree( ):
-	self.add_custom_type( "GodotMIDIPlayer", "AudioStreamPlayer", preload("MidiPlayer.gd"), preload("icon.png") )
+	self.add_custom_type( "GodotMIDIPlayer", "Node", preload("MidiPlayer.gd"), preload("icon.png") )
 
 	#self.sf2_import_plugin = preload("import/SF2Import.gd").new( )
 	#self.add_import_plugin( self.sf2_import_plugin )

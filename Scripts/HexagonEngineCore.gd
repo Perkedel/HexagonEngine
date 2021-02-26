@@ -1,5 +1,14 @@
 extends Node
 
+"""
+PERHATIAN
+
+Seluruh skrip akan dikonversi ke format Godot 4.0
+harap istirahatkan tangan koding anda terlebih dahulu.
+
+serta plugin akan dirombak serentak.
+"""
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,6 +18,8 @@ extends Node
 #export var isPlayingTheGameNow = false
 #export var PauseTheGame = false
 #var ConThread
+
+#@onready # Godot 4.0
 onready var zetrixViewport = $ZetrixViewport
 onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
 onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
@@ -42,10 +53,13 @@ func _zetrixInit():
 	pass
 
 func _sysInit():
+	print("Welcome to Hexagon Engine")
+	print("Locate " + String(OS.get_executable_path()))
 	resourceQueued.start()
 	_zetrixInit()
 	OS.request_permissions()
 	# Yield Modloader PCK to load mods
+	#ModPckLoader.wellLoadModsFolder()
 	ModPckLoader.loadAllMods()
 	#yield(ModPckLoader,"modLoaded")
 	changeDVDMenu.RefreshDVDs()

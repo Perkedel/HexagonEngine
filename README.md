@@ -31,6 +31,12 @@ A Higher Level Application and Game Framework.
 Powered by Godot Engine.
  
 # Installing
+## Binary EXE, BIN, APK, etc.
+- Get them from [itch.io](https://joelwindows7.itch.io/hexagon-engine?secret=8DRej5vqw5nRRGnxZ6I04sNKo )
+- Download any of the binary for designated OS of yours
+- extract archive
+- execute `HexagoneEngine` file. `.exe` is Windows, `x86_64` is Linux/X11, `.apk` is Android, `.app` is macOS, and so on.
+
 ## Source Code, Modding, or Compiling yourselves
 - use https://desktop.github.com to easily clone with GUI Git. Install it!
 - Click Green download button.
@@ -114,6 +120,16 @@ you can even add Main Menu remix that inherits from original main menu, or make 
 Only 1 or some few sets of Java, which will only be used to render for platforms such as Android and platform that based of Java.
 
 and we do not made Java things ourselves. we downloaded some plugins. our scripts are mostly GDscript.
+
+## HTML5 version crash!
+Godot app cannot run in web if graphic framework is OpenGL ES 3, which is this game uses currently. It only works at ES 2 unfortunately. To work this around, have this project opened in Godot, set Graphic dropdown top right to `GLES2`. OK to restart. now render WebAssembly again. the game should be able to work fine.
+
+So, let us explain based on what it says on https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_for_web.html here.  
+So since this game uses `GLES3`, it will use `WebGL 2` which is that. problem is, **many browser do not support that**, and lazy to implement *whole another way too novel standard across the globe*. So yeah, your browsers likely won't support it this. if yours do however, you are very lucky. But still, **it's still not worth adopting WebGL 2 anyway**, because there is already `Vulkan`. and this brand new technology **works way better than before**, hence that's what browsers would adopt. Yeah, until then (Godot 4.0), you should stick with `GLES2` for now. wait until Godot 4.0 with Vulkan releases then you guys can forget about particularizations of graphic framework selection, i.e. forget *remember to render in `GLES2` for HTML version* yay!
+
+if you insist though, you can open this project with Web Godot editor https://godotengine.org/editor/latest/godot.tools.html . be warned, it will take sometimes.
+
+well, I hope one day in Godot 4.0, it fixes this incompatibility issue, with Vulkan on Web yeah.
 # Author
 ## Credit
 Godot, Godette-chan (c) Godot (<100%)(MIT): Base Home

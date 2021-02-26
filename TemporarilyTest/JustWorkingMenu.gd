@@ -3,6 +3,7 @@ extends VBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+#var DVDListCachePath = "user://Pengaturan/DaftarDVD.json"
 var DVDItemLists :Dictionary
 var shownDVDItemLists : Dictionary
 var DVDarrayPathLoad : PoolStringArray = []
@@ -15,6 +16,7 @@ signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	loadDVDListCache()
 	reloadAccountName()
 	refreshDVDs()
 	pass # Replace with function body.
@@ -22,6 +24,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func loadDVDListCache():
+	DVDItemLists = Settingers.getDVDListCache()
+	pass
+
+func saveDVDListCache():
+	Settingers.setDVDListCache(DVDItemLists)
+	Settingers.SettingSave()
+	pass
 
 func refreshDVDs():
 	# documentation of "Directory"
@@ -111,7 +122,7 @@ func refreshDVDs():
 			shownDVDItemLists[aDVD] = DVDItemLists[aDVD]
 			DVDcounter+=1
 		pass
-	
+	saveDVDListCache()
 	pass
 
 func reloadAccountName():
