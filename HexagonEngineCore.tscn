@@ -105,6 +105,7 @@ use_threads = true
 [connection signal="NoDisc" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_NoDisc"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
 [connection signal="CustomLoadMoreDVD" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_CustomLoadMoreDVD"]
+[connection signal="DVDListRefreshed" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_DVDListRefreshed"]
 [connection signal="ItemClickEnterName" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnterName"]
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]
 [connection signal="updateSelectionAssets" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_updateSelectionAssets"]

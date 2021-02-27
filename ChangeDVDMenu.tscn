@@ -50,6 +50,7 @@ show_hidden_files = true
 [node name="JustZetrixVRViewer" parent="." instance=ExtResource( 6 )]
 
 [node name="JustModListToLoad" parent="." instance=ExtResource( 7 )]
+[connection signal="DVDListRefreshed" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_DVDListRefreshed"]
 [connection signal="ItemClickEnter" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_ItemClickEnter"]
 [connection signal="PressShutDown" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_PressShutDown"]
 [connection signal="importModPCKnow" from="JustWorkingMenu" to="." method="_on_JustWorkingMenu_importModPCKnow"]

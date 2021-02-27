@@ -58,6 +58,9 @@ func _sysInit():
 	resourceQueued.start()
 	_zetrixInit()
 	OS.request_permissions()
+	changeDVDMenu.RefreshDVDs()
+	#yield(changeDVDMenu,"DVDListRefreshed")
+	# https://godotengine.org/qa/24281/godot-yield-there-wait-function-execution-ended-completely
 	# Yield Modloader PCK to load mods
 	#ModPckLoader.wellLoadModsFolder()
 	ModPckLoader.loadAllMods()
@@ -319,4 +322,8 @@ func _on_ChangeDVDMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio
 	dvdSelBg.texture = hoverImage
 	dvdSelTr.transitionInto(hoverImage)
 	dvdLauBg.texture = launchImage
+	pass # Replace with function body.
+
+
+func _on_ChangeDVDMenu_DVDListRefreshed():
 	pass # Replace with function body.

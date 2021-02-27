@@ -16,16 +16,16 @@ size = Vector3( 16, 0.32, 16 )
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.32549, 0.0705882, 0.333333, 1 )
 
-[sub_resource type="ProceduralSky" id=5]
+[sub_resource type="ProceduralSky" id=4]
 sky_top_color = Color( 0.0980392, 0.0627451, 0.701961, 1 )
 sky_horizon_color = Color( 0.439216, 0.517647, 0.498039, 1 )
 ground_bottom_color = Color( 0.262745, 0.133333, 0.270588, 1 )
 ground_horizon_color = Color( 0.415686, 0.313726, 0.227451, 1 )
 sun_color = Color( 0.831373, 0.890196, 0.129412, 1 )
 
-[sub_resource type="Environment" id=4]
+[sub_resource type="Environment" id=5]
 background_mode = 2
-background_sky = SubResource( 5 )
+background_sky = SubResource( 4 )
 ambient_light_color = Color( 0, 0.313726, 0.439216, 1 )
 
 [node name="JustAMellinda" type="Spatial"]
@@ -51,7 +51,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
 [node name="JatuhAAA" parent="." instance=ExtResource( 3 )]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 4 )
+environment = SubResource( 5 )
 
 [node name="LifePartnerWin" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 0 )

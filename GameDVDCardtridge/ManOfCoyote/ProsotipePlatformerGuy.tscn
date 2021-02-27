@@ -8,10 +8,12 @@
 radius = 0.530138
 height = 0.426055
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.25, 0.25, 0.25 )
 
-[node name="ProsotipePlatformerGuy" type="KinematicBody"]
+[node name="ProsotipePlatformerGuy" type="KinematicBody" groups=[
+"player",
+]]
 script = ExtResource( 2 )
 interaction_parent = NodePath(".")
 
@@ -33,6 +35,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -1 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Handteract"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
+[connection signal="area_entered" from="Handteract" to="." method="_on_Handteract_area_entered"]
+[connection signal="area_exited" from="Handteract" to="." method="_on_Handteract_area_exited"]
 [connection signal="body_entered" from="Handteract" to="." method="_on_Handteract_body_entered"]
 [connection signal="body_exited" from="Handteract" to="." method="_on_Handteract_body_exited"]

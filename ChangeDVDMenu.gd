@@ -10,6 +10,7 @@ var zetrixViewport
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
+signal DVDListRefreshed()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,6 +27,14 @@ func ReceiveZetrixViewport(getIt:Viewport):
 
 func RefreshDVDs():
 	$JustWorkingMenu.refreshDVDs()
+	pass
+
+func SaveDVDListCache():
+	$JustWorkingMenu.saveDVDListCache()
+	pass
+
+func LoadDVDListCache():
+	$JustWorkingMenu.loadDVDListCache()
 	pass
 
 signal ShutdownButton
@@ -181,4 +190,9 @@ func _on_JustWorkingSetting_ShowModListMenuNow():
 
 func _on_JustWorkingMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio, launchAudio):
 	emit_signal("updateSelectionAssets",hoverImage,launchImage,hoverAudio,launchAudio)
+	pass # Replace with function body.
+
+
+func _on_JustWorkingMenu_DVDListRefreshed():
+	emit_signal("DVDListRefreshed")
 	pass # Replace with function body.

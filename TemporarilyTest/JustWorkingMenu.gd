@@ -18,7 +18,7 @@ signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
 func _ready():
 	loadDVDListCache()
 	reloadAccountName()
-	refreshDVDs()
+	#refreshDVDs()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,6 +34,7 @@ func saveDVDListCache():
 	Settingers.SettingSave()
 	pass
 
+signal DVDListRefreshed()
 func refreshDVDs():
 	# documentation of "Directory"
 	print("DVD Cardtridges")
@@ -123,6 +124,7 @@ func refreshDVDs():
 			DVDcounter+=1
 		pass
 	saveDVDListCache()
+	emit_signal("DVDListRefreshed")
 	pass
 
 func reloadAccountName():

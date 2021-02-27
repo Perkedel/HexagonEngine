@@ -1,6 +1,6 @@
 {
     "id": "mystic-arts-brawl-legacy",
-    "Title": "Thaumaturgy: Cast and Clash",
+    "Title": "Thaumaturgy: Cast and Clash (itch)",
     "IconUrl": "res://Sprites/MavrickleIcon.png",
     "BootThisTscene": "res://GameDVDCardtridge/Thaumaturgy-legacy/Thaumaturgy-legacy.tscn",
     "CatalogueBanner": "",

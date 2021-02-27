@@ -1,0 +1,11 @@
+{
+    "id": "great-marble-adventure-legacy",
+    "Title": "Great Marble Adventure (itch)",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/Great Marble Adventure - legacy/GreatMarbleAdventureLegacy.tscn",
+    "CatalogueBanner": "",
+    "DVDCover": "",
+    "isSelectable": true,
+    "hidden": false,
+    "requiredEggsellents": []
+}

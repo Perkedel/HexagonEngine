@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ManOfCoyote/ProsotipePlatformerGuy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/ManOfCoyote/Mostifilend.gd" type="Script" id=2]
 [ext_resource path="res://GameDVDCardtridge/ManOfCoyote/JatuhAAA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/BolaGolf1.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -48,6 +49,61 @@ material/0 = SubResource( 2 )
 [node name="StaticBody" type="StaticBody" parent="Kubus5"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Kubus5/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="Kubus11" type="MeshInstance" parent="."]
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -2.82445, 6.93688 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Kubus11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Kubus11/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Kubus12" type="MeshInstance" parent="."]
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -12.8649, -1.9088, 6.93688 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Kubus12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Kubus12/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Kubus13" type="MeshInstance" parent="."]
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -1.9088, 24.9369 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Kubus13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Kubus13/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Kubus15" type="MeshInstance" parent="."]
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -38.8649, -1.9088, 6.93688 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Kubus15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Kubus15/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Kubus14" type="MeshInstance" parent="."]
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -1.9088, -11.0631 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Kubus14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Kubus14/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Kubus3" type="MeshInstance" parent="."]
@@ -111,7 +167,7 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="Kubus4" type="MeshInstance" parent="."]
-transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -0.910584, -1.33101, -17.2805 )
+transform = Transform( 6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -1.04243, -1.33101, -17.3003 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
@@ -121,4 +177,8 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="JatuhAAA" parent="." instance=ExtResource( 3 )]
+
+[node name="BolaGolf1" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 3 )
+is_ride = true
 [connection signal="body_entered" from="JatuhAAA" to="." method="_on_JatuhAAA_body_entered"]
