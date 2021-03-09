@@ -30,4 +30,5 @@ jobs:
         godot_template_version: 3.2.3.stable
         relative_project_path: ./
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

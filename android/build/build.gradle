@@ -125,7 +125,7 @@ android {
             java.srcDirs = [
                 'src'
 //DIR_SRC_BEGIN
-,'C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/android/vibration-plugin/src'
+,'/media/joelwindows7/OS/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/android/vibration-plugin/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [
