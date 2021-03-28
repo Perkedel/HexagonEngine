@@ -1,9 +1,7 @@
 # Credits
 Big Shoutout!
-
 ## Refferences
 Table of Refferences!
-
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	|Raw Credit	|
 |-------|--------|--------------|-------|:-----------------:|-----------|-----------|
 |adam-p	|Markdown cheatsheet	|List of syntax of Markdown| https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet	| <100%	|	CC-BY	|`-`|
@@ -48,13 +46,8 @@ Table of Refferences!
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
-
-
-
-
 ## Assets and Tools
 Used Assets and Tools!
-
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	| Raw Credit	|
 |-------|-------|---------------|-------|:-----------------:|-----------|---------------|
 |Juan Linietsky and Core Contributors|Godot Engine|Open Source, Gratis, Full, Libre, free beer and freedom game engine, AAA capable!!!|https://godotengine.org |<100%|MIT|`-` |
@@ -95,9 +88,6 @@ Used Assets and Tools!
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
-
-
-
 ## Unimplemented Credit, QUick And RAW reference
 - https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
 - https://www.youtube.com/watch?v=o77wFWau9Wc
@@ -260,6 +250,4 @@ Used Assets and Tools!
 - https://github.com/godotengine/godot-proposals/issues/1472
 - https://github.com/godotengine/godot/issues/3608
 - https://gamedev.stackexchange.com/questions/184354/add-a-sound-to-all-the-buttons-in-a-project/184363#184363 
-- 
-
-
+- https://shkspr.mobi/blog/2015/07/exporting-multitrack-surround-files-in-audacity/

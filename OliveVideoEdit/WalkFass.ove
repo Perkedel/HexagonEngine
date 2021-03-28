@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <version>190219</version>
-    <url>C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/WalkFass.ove</url>
+    <url>C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/WalkFass.ove</url>
     <folders>
         <folder name="WalkFass-Default" id="1" parent="0"/>
         <folder name="Dancing-Cockroach" id="2" parent="0"/>
         <folder name="DancingTriangleForce" id="3" parent="0"/>
+        <folder name="PupupSetak" id="4" parent="0"/>
     </folders>
     <media>
-        <footage id="1" folder="1" name="2019-10-16 15-40-24.mkv" url="../../../../../Videos/2019-10-16 15-40-24.mkv" duration="55834000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
-            <video id="0" width="1920" height="1080" framerate="60.0000000000" infinite="0"/>
-            <audio id="1" channels="2" layout="3" frequency="48000"/>
-        </footage>
-        <footage id="2" folder="1" name="FarmerGirl-aka-Mino-Walking-spriteSheeted.0000.png" url="../../../Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/walking/FarmerGirl-aka-Mino-Walking-spriteSheeted.%4d.png" duration="4840000" using_inout="0" in="0" out="0" speed="2.4" alphapremul="0" startnumber="0" proxy="1" proxypath="C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/../../../Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/walking/Proksi/FarmerGirl-aka-Mino-Walking-spriteSheeted.mov">
-            <video id="0" width="2048" height="2048" framerate="25.0000000000" infinite="0"/>
-        </footage>
+        <footage id="1" folder="1" name="2019-10-16 15-40-24.mkv" url="../../../../../Videos/2019-10-16 15-40-24.mkv" duration="55834000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath=""/>
+        <footage id="2" folder="1" name="FarmerGirl-aka-Mino-Walking-spriteSheeted.0000.png" url="../../../../../../ASUS/Documents/starring codes/Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/walking/FarmerGirl-aka-Mino-Walking-spriteSheeted.%4d.png" duration="4840000" using_inout="0" in="0" out="0" speed="2.4" alphapremul="0" startnumber="0" proxy="1" proxypath="C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/OliveVideoEdit/../../../Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/walking/Proksi/FarmerGirl-aka-Mino-Walking-spriteSheeted.mov"/>
         <footage id="3" folder="1" name="FarmerGirl-aka-Mino-Walking-spriteSheeted.avi" url="../../../Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/Videoed/FarmerGirl-aka-Mino-Walking-spriteSheeted.avi" duration="5041667" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="2048" height="2048" framerate="24.0000000000" infinite="0"/>
         </footage>
         <footage id="4" folder="1" name="FarmerGirl-aka-Mino-Walking-spriteSheeted.mkv" url="../../../Unity Projects/Qmoveph_for2DAnimation/Assets/Synfig/SpriteSheeted/Videoed/FarmerGirl-aka-Mino-Walking-spriteSheeted.mkv" duration="5042000" using_inout="0" in="0" out="0" speed="2.5" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="2048" height="2048" framerate="24.0000000000" infinite="0"/>
         </footage>
-        <footage id="5" folder="1" name="GurukuTersayang_BaWaMI.mov" url="../../../../../Videos/GurukuTersayang_BaWaMI.mov" duration="185967000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
-            <video id="0" width="1920" height="1080" framerate="60.0000000000" infinite="0"/>
-            <audio id="1" channels="2" layout="3" frequency="48000"/>
-        </footage>
+        <footage id="5" folder="1" name="GurukuTersayang_BaWaMI.mov" url="../../../../../Videos/GurukuTersayang_BaWaMI.mov" duration="185967000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath=""/>
         <footage id="6" folder="2" name="72b.gif" url="D:/kolmorotzzet (kolmorotshitt)/Artistic Setups/jjjjjohn/72b.gif" duration="4600000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="500" height="500" framerate="10.0000000000" infinite="0"/>
         </footage>
-        <footage id="7" folder="3" name="Dancing Triforce Official Video Part 1-8BPq3akHaGI.mkv" url="../../../../kolmorotzzet (kolmorotshitt)/Artistic Setups/DancingTriforce/Dancing Triforce Official Video Part 1-8BPq3akHaGI.mkv" duration="280101000" using_inout="0" in="0" out="0" speed="2" alphapremul="0" startnumber="0" proxy="0" proxypath="">
-            <video id="0" width="320" height="240" framerate="30.0000000000" infinite="0"/>
-            <audio id="1" channels="2" layout="3" frequency="48000"/>
+        <footage id="7" folder="3" name="Dancing Triforce Official Video Part 1-8BPq3akHaGI.mkv" url="../../../../kolmorotzzet (kolmorotshitt)/Artistic Setups/DancingTriforce/Dancing Triforce Official Video Part 1-8BPq3akHaGI.mkv" duration="280101000" using_inout="0" in="0" out="0" speed="2" alphapremul="0" startnumber="0" proxy="0" proxypath=""/>
+        <footage id="8" folder="4" name="Joel Robert Justiawa-6938665624872783105.mp4" url="../../../After Church/RAW files/TikTok/Joel Robert Justiawa-6938665624872783105.mp4" duration="16276000" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
+            <video id="0" width="576" height="1024" framerate="14.9170000000" infinite="0"/>
+            <audio id="1" channels="2" layout="3" frequency="44100"/>
         </footage>
-        <footage id="8" folder="0" name="Perkedel Logo Typeborder.png" url="../Inkscape/Logo Setup/Perkedel Logo Typeborder.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
+        <footage id="9" folder="0" name="Perkedel Logo Typeborder.png" url="../Inkscape/Logo Setup/Perkedel Logo Typeborder.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="3710" height="400" framerate="0.0000000000" infinite="1"/>
         </footage>
-        <footage id="9" folder="0" name="Perkedel Logo Darkborder.png" url="../Inkscape/Logo Setup/Perkedel Logo Darkborder.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
+        <footage id="10" folder="0" name="Perkedel Logo Darkborder.png" url="../Inkscape/Logo Setup/Perkedel Logo Darkborder.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="3709" height="400" framerate="0.0000000000" infinite="1"/>
         </footage>
-        <footage id="10" folder="0" name="Perkedel_Ended_4K.png" url="../Inkscape/Logo Setup/Perkedel_Ended_4K.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
+        <footage id="11" folder="0" name="Perkedel_Ended_4K.png" url="../Inkscape/Logo Setup/Perkedel_Ended_4K.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="4096" height="2160" framerate="0.0000000000" infinite="1"/>
         </footage>
-        <footage id="11" folder="0" name="by-sa.png" url="../../../../kolmorotzzet (kolmorotshitt)/Artistic Setups/CreativeCommons/by-sa.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
+        <footage id="12" folder="0" name="by-sa.png" url="../../../../kolmorotzzet (kolmorotshitt)/Artistic Setups/Creative Commons/by-sa.png" duration="0" using_inout="0" in="0" out="0" speed="1" alphapremul="0" startnumber="0" proxy="0" proxypath="">
             <video id="0" width="403" height="141" framerate="0.0000000000" infinite="1"/>
         </footage>
     </media>
     <sequences>
         <sequence id="1" folder="1" name="Crediteo" width="1920" height="1080" framerate="29.9700000000" afreq="48000" alayout="3" workarea="0" workareaIn="0" workareaOut="0">
-            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="100" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
+            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="100" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -5622,7 +5616,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="5" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+            <clip id="5" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -5651,7 +5645,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="6" enabled="1" name="by-sa.png" clipin="0" in="0" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
+            <clip id="6" enabled="1" name="by-sa.png" clipin="0" in="0" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="12" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -6461,7 +6455,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="3" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+            <clip id="3" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -6490,7 +6484,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="4" enabled="1" name="by-sa.png" clipin="0" in="0" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
+            <clip id="4" enabled="1" name="by-sa.png" clipin="0" in="0" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="12" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13186,7 +13180,7 @@
             </clip>
         </sequence>
         <sequence id="9" folder="2" name="Crediteo (Cockroach)" width="1920" height="1080" framerate="29.9700000000" afreq="48000" alayout="3" workarea="0" workareaIn="0" workareaOut="0">
-            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="100" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
+            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="100" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13348,8 +13342,8 @@
                 </effect>
             </clip>
         </sequence>
-        <sequence id="11" folder="3" name="Main (DancingTriforce)" width="4096" height="4096" framerate="60.0000000000" afreq="48000" alayout="3" open="1" workarea="0" workareaIn="0" workareaOut="0">
-            <clip id="0" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="73" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+        <sequence id="11" folder="3" name="Main (DancingTriforce)" width="4096" height="4096" framerate="60.0000000000" afreq="48000" alayout="3" workarea="0" workareaIn="0" workareaOut="0">
+            <clip id="0" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="0" out="73" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13378,7 +13372,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="1" enabled="1" name="by-sa.png" clipin="0" in="0" out="73" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
+            <clip id="1" enabled="1" name="by-sa.png" clipin="0" in="0" out="73" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="12" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13407,9 +13401,9 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="6" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="-3" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
+            <clip id="2" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="-3" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
                 <linked>
-                    <link id="7"/>
+                    <link id="3"/>
                 </linked>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13438,9 +13432,9 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="7" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="2" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
+            <clip id="3" enabled="1" name="YarobiTest (DancingTriforce)" clipin="0" in="0" out="1468" track="2" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="12">
                 <linked>
-                    <link id="6"/>
+                    <link id="2"/>
                 </linked>
                 <effect name="/Volume" enabled="1">
                     <row>
@@ -13453,9 +13447,9 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="8" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="-1" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
+            <clip id="4" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="-1" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
                 <linked>
-                    <link id="9"/>
+                    <link id="5"/>
                 </linked>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13484,9 +13478,9 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="9" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="0" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
+            <clip id="5" enabled="1" name="Crediteo (DancingTriforce)" clipin="0" in="1468" out="1655" track="0" r="192" g="128" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="1" sequence="13">
                 <linked>
-                    <link id="8"/>
+                    <link id="4"/>
                 </linked>
                 <effect name="/Volume" enabled="1">
                     <row>
@@ -13499,7 +13493,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="10" enabled="1" name="Judul" clipin="0" in="0" out="73" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+            <clip id="6" enabled="1" name="Judul" clipin="0" in="0" out="73" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13564,7 +13558,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="11" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="1349" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="9" stream="0">
+            <clip id="7" enabled="1" name="Perkedel Logo Darkborder.png" clipin="0" in="1349" out="1468" track="-5" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13593,7 +13587,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="12" enabled="1" name="by-sa.png" clipin="0" in="1349" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
+            <clip id="8" enabled="1" name="by-sa.png" clipin="0" in="1349" out="1468" track="-6" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="12" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13622,7 +13616,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="13" enabled="1" name="Judul" clipin="0" in="1349" out="1468" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+            <clip id="9" enabled="1" name="Judul" clipin="0" in="1349" out="1468" track="-7" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13765,7 +13759,7 @@
             </clip>
         </sequence>
         <sequence id="13" folder="3" name="Crediteo (DancingTriforce)" width="4096" height="4096" framerate="60.0000000000" afreq="48000" alayout="3" workarea="0" workareaIn="0" workareaOut="0">
-            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="187" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="10" stream="0">
+            <clip id="0" enabled="1" name="Perkedel_Ended_4K.png" clipin="0" in="0" out="187" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="11" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -13856,6 +13850,772 @@
                     </row>
                     <row>
                         <field id="shadowopacity" value="0"/>
+                    </row>
+                </effect>
+            </clip>
+        </sequence>
+        <sequence id="14" folder="4" name="PupupSetak" width="1024" height="1024" framerate="60.0000000000" afreq="48000" alayout="3" open="1" workarea="0" workareaIn="0" workareaOut="0">
+            <clip id="0" enabled="1" name="72b.gif" clipin="0" in="0" out="46" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="1" enabled="1" name="Joel Robert Justiawa-6938665624872783105.mp4" clipin="0" in="0" out="976" track="0" r="128" g="128" b="192" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="8" stream="1">
+                <linked/>
+                <effect name="/Volume" enabled="1">
+                    <row>
+                        <field id="volume" value="1"/>
+                    </row>
+                </effect>
+                <effect name="/Pan" enabled="1">
+                    <row>
+                        <field id="pan" value="0"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="2" enabled="1" name="72b.gif" clipin="0" in="46" out="92" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="3" enabled="1" name="72b.gif" clipin="0" in="92" out="138" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="4" enabled="1" name="72b.gif" clipin="0" in="138" out="184" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="5" enabled="1" name="72b.gif" clipin="0" in="184" out="230" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="6" enabled="1" name="72b.gif" clipin="0" in="230" out="276" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="7" enabled="1" name="72b.gif" clipin="0" in="276" out="322" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="8" enabled="1" name="72b.gif" clipin="0" in="322" out="368" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="9" enabled="1" name="72b.gif" clipin="0" in="368" out="414" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="10" enabled="1" name="72b.gif" clipin="0" in="414" out="460" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="11" enabled="1" name="72b.gif" clipin="0" in="460" out="506" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="12" enabled="1" name="72b.gif" clipin="0" in="506" out="552" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="13" enabled="1" name="72b.gif" clipin="0" in="552" out="598" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="14" enabled="1" name="72b.gif" clipin="0" in="598" out="644" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="15" enabled="1" name="72b.gif" clipin="0" in="644" out="690" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="16" enabled="1" name="72b.gif" clipin="0" in="690" out="736" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="17" enabled="1" name="72b.gif" clipin="0" in="736" out="782" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="18" enabled="1" name="72b.gif" clipin="0" in="782" out="828" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="19" enabled="1" name="72b.gif" clipin="0" in="828" out="874" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="20" enabled="1" name="72b.gif" clipin="0" in="874" out="920" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="21" enabled="1" name="72b.gif" clipin="0" in="920" out="966" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="22" enabled="1" name="72b.gif" clipin="0" in="966" out="1012" track="-2" r="192" g="160" b="128" autoscale="0" speed="6.0000000000" maintainpitch="0" reverse="0" type="0" media="6" stream="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="200"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="23" enabled="1" name="Solid Color" clipin="0" in="0" out="1012" track="-1" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+                <effect name="Render/Solid" enabled="1">
+                    <row>
+                        <field id="type" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="100"/>
+                    </row>
+                    <row>
+                        <field id="color" value="#ffffff"/>
+                    </row>
+                    <row>
+                        <field id="checker_size" value="10"/>
+                    </row>
+                </effect>
+            </clip>
+            <clip id="24" enabled="1" name="Title" clipin="-24" in="804" out="1012" track="-3" r="192" g="192" b="64" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0">
+                <linked/>
+                <effect name="Distort/Transform" enabled="1">
+                    <row>
+                        <field id="posx" value="512"/>
+                        <field id="posy" value="512"/>
+                    </row>
+                    <row>
+                        <field id="scalex" value="100"/>
+                        <field id="scaley" value="100"/>
+                    </row>
+                    <row>
+                        <field id="uniformscale" value="1"/>
+                    </row>
+                    <row>
+                        <field id="rotation" value="0"/>
+                    </row>
+                    <row>
+                        <field id="anchorx" value="0"/>
+                        <field id="anchory" value="0"/>
+                    </row>
+                    <row>
+                        <field id="opacity" value="2.17391">
+                            <key value="0" frame="-24" type="0" prehx="-40" prehy="0" posthx="40" posthy="0"/>
+                            <key value="100" frame="0" type="0" prehx="-40" prehy="0" posthx="40" posthy="0"/>
+                            <key value="100" frame="138" type="0" prehx="-40" prehy="0" posthx="40" posthy="0"/>
+                            <key value="0" frame="184" type="0" prehx="-40" prehy="0" posthx="40" posthy="0"/>
+                        </field>
+                    </row>
+                    <row>
+                        <field id="blendmode" value=""/>
+                    </row>
+                </effect>
+                <effect name="Render/Rich Text" enabled="1">
+                    <row>
+                        <field id="text" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;by JOELwindows7&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;Perkedel Technologies&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;CC4.0-BY-SA&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;https://www.tiktok.com/music/original-sound-valerie-mici-agatha%F0%9F%92%96-6937169271982590722?lang=id-ID&amp;amp;is_copy_url=1&amp;amp;is_from_webapp=v1&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;https://knowyourmeme.com/memes/dancing-cockroach&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:696; color:#000000;&quot;&gt;https://jjjjjjjjjjohn.tumblr.com/post/123956001300&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;PUPUP&lt;/span&gt;&lt;/p&gt;&#10;&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:696; color:#000000;&quot;&gt;SETAAAAK!!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+                    </row>
+                    <row>
+                        <field id="padding" value="0"/>
+                    </row>
+                    <row>
+                        <field id="posx" value="0"/>
+                        <field id="posy" value="0"/>
+                    </row>
+                    <row>
+                        <field id="valign" value="132"/>
+                    </row>
+                    <row>
+                        <field id="autoscroll" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadow" value="1"/>
+                    </row>
+                    <row>
+                        <field id="shadowcolor" value="#00aaff"/>
+                    </row>
+                    <row>
+                        <field id="shadowangle" value="0"/>
+                    </row>
+                    <row>
+                        <field id="shadowdistance" value="2"/>
+                    </row>
+                    <row>
+                        <field id="shadowsoftness" value="36"/>
+                    </row>
+                    <row>
+                        <field id="shadowopacity" value="6"/>
                     </row>
                 </effect>
             </clip>

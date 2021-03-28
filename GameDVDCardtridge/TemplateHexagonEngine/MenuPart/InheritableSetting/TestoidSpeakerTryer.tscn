@@ -1,0 +1,131 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=3]
+
+[node name="TestoidSpeakerTryer" type="HBoxContainer"]
+margin_top = 857.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 0, 500 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelContainer" type="HBoxContainer" parent="."]
+margin_right = 637.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="LabelContainer"]
+margin_top = 218.0
+margin_right = 318.0
+margin_bottom = 281.0
+custom_fonts/font = ExtResource( 2 )
+text = "Speaker Tests"
+
+[node name="MainSpeaker" type="Container" parent="."]
+margin_left = 641.0
+margin_right = 1278.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+arrange/force_squares = true
+arrange/force_expand = true
+arrange/start_angle = 0.0
+arrange/start_empty = false
+arrange/allow_node2d = false
+animate/percent_visible = 1.0
+animate/all_at_once = false
+
+[node name="SpeakerTryButton" type="Button" parent="MainSpeaker"]
+margin_left = 268.5
+margin_right = 368.5
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton2" type="Button" parent="MainSpeaker"]
+margin_left = 112.134
+margin_top = 75.3021
+margin_right = 212.134
+margin_bottom = 175.302
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton3" type="Button" parent="MainSpeaker"]
+margin_left = 73.5144
+margin_top = 244.504
+margin_right = 173.514
+margin_bottom = 344.504
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton4" type="Button" parent="MainSpeaker"]
+margin_left = 181.723
+margin_top = 380.194
+margin_right = 281.723
+margin_bottom = 480.194
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton5" type="Button" parent="MainSpeaker"]
+margin_left = 355.277
+margin_top = 380.194
+margin_right = 455.277
+margin_bottom = 480.194
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton6" type="Button" parent="MainSpeaker"]
+margin_left = 463.486
+margin_top = 244.504
+margin_right = 563.486
+margin_bottom = 344.504
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="SpeakerTryButton7" type="Button" parent="MainSpeaker"]
+margin_left = 424.866
+margin_top = 75.302
+margin_right = 524.866
+margin_bottom = 175.302
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="AnotherSpeaker" type="HBoxContainer" parent="."]
+margin_left = 1282.0
+margin_right = 1920.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+
+[node name="SpeakerTryButton8" type="Button" parent="AnotherSpeaker"]
+margin_right = 638.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Speaker"
+
+[node name="Speakerer" type="AudioStreamPlayer" parent="."]
+mix_target = 1
+bus = "Music"
