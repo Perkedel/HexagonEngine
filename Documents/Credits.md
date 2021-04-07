@@ -251,3 +251,4 @@ Used Assets and Tools!
 - https://github.com/godotengine/godot/issues/3608
 - https://gamedev.stackexchange.com/questions/184354/add-a-sound-to-all-the-buttons-in-a-project/184363#184363 
 - https://shkspr.mobi/blog/2015/07/exporting-multitrack-surround-files-in-audacity/
+- https://github.com/Arnklit/ShellFurGodot
