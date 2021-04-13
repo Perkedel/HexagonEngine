@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Alsa_themed_speaker_test-7dot1.ogg-62ee9679b55d060c1c119e9f80f1a41c.oggstr"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Alsa_themed_speaker_test-7dot1.ogg"
+dest_files=[ "res://.import/Alsa_themed_speaker_test-7dot1.ogg-62ee9679b55d060c1c119e9f80f1a41c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

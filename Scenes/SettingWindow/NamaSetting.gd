@@ -42,5 +42,6 @@ func _on_LineEdit_text_changed(new_text):
 
 func _on_NamaSetting_visibility_changed():
 	settingLoaded = false
+	yield(get_tree().create_timer(.01),"timeout")
 	reload()
 	pass # Replace with function body.

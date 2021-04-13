@@ -84,8 +84,8 @@ VU_counts = 16
 
 [node name="TestoidMusicPlayer" parent="." index="12"]
 visible = false
-margin_top = 510.0
-margin_bottom = 577.0
+margin_top = 201.0
+margin_bottom = 264.0
 
 [node name="AudioTestMeter" parent="." index="13" instance=ExtResource( 5 )]
 margin_top = 201.0
@@ -117,6 +117,10 @@ bus = "Music"
 stream = ExtResource( 4 )
 pitch_scale = 1.5
 bus = "SoundEffect"
+
+[node name="TestoidSpeakerTryer" parent="." index="19"]
+margin_top = 589.0
+margin_bottom = 1089.0
 [connection signal="HasChanged" from="MasterVolume" to="." method="_on_MasterVolume_HasChanged"]
 [connection signal="SliderReleased" from="MasterVolume" to="." method="_on_MasterVolume_SliderReleased"]
 [connection signal="ValueOfIt" from="MasterVolume" to="." method="_on_MasterVolume_ValueOfIt"]

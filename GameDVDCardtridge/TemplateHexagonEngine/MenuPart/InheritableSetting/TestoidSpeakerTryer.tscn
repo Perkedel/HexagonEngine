@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Side_Left.ogg" type="AudioStream" id=3]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/SubInheritable/SpeakerTryButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Left.ogg" type="AudioStream" id=5]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidSpeakerTryer.gd" type="Script" id=6]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Rear_Left.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Rear_Right.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Side_Right.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Right.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/LFE-Front_Center.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Alsa_themed_speaker_test-7dot1.ogg" type="AudioStream" id=12]
 
 [node name="TestoidSpeakerTryer" type="HBoxContainer"]
 margin_top = 857.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 500 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,74 +51,56 @@ arrange/allow_node2d = false
 animate/percent_visible = 1.0
 animate/all_at_once = false
 
-[node name="SpeakerTryButton" type="Button" parent="MainSpeaker"]
-margin_left = 268.5
-margin_right = 368.5
-margin_bottom = 100.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+[node name="SpeakerTryButtonFC" parent="MainSpeaker" instance=ExtResource( 4 )]
+text = "FC"
 
-[node name="SpeakerTryButton2" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonFL" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 112.134
-margin_top = 75.3021
+margin_top = 75.302
 margin_right = 212.134
 margin_bottom = 175.302
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "L"
+playThisPls = ExtResource( 5 )
 
-[node name="SpeakerTryButton3" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonSL" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 73.5144
 margin_top = 244.504
 margin_right = 173.514
 margin_bottom = 344.504
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "SL"
+playThisPls = ExtResource( 3 )
 
-[node name="SpeakerTryButton4" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonRL" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 181.723
 margin_top = 380.194
 margin_right = 281.723
 margin_bottom = 480.194
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "RL"
+playThisPls = ExtResource( 7 )
 
-[node name="SpeakerTryButton5" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonRR" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 355.277
 margin_top = 380.194
 margin_right = 455.277
 margin_bottom = 480.194
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "RR"
+playThisPls = ExtResource( 8 )
 
-[node name="SpeakerTryButton6" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonSR" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 463.486
 margin_top = 244.504
 margin_right = 563.486
 margin_bottom = 344.504
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "SL"
+playThisPls = ExtResource( 9 )
 
-[node name="SpeakerTryButton7" type="Button" parent="MainSpeaker"]
+[node name="SpeakerTryButtonFR" parent="MainSpeaker" instance=ExtResource( 4 )]
 margin_left = 424.866
 margin_top = 75.302
 margin_right = 524.866
 margin_bottom = 175.302
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "R"
+playThisPls = ExtResource( 10 )
 
 [node name="AnotherSpeaker" type="HBoxContainer" parent="."]
 margin_left = 1282.0
@@ -118,14 +110,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
-[node name="SpeakerTryButton8" type="Button" parent="AnotherSpeaker"]
+[node name="SpeakerTryButtonLFEFC" parent="AnotherSpeaker" instance=ExtResource( 4 )]
+margin_left = 0.0
 margin_right = 638.0
 margin_bottom = 500.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
-text = "Speaker"
+text = "LFE C"
+playThisPls = ExtResource( 11 )
 
 [node name="Speakerer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
 mix_target = 1
-bus = "Music"
+bus = "SoundEffect"

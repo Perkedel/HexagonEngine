@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Side_Right.ogg-c1f4d8b7b741aae18f8258472a1b39c4.oggstr"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Side_Right.ogg"
+dest_files=[ "res://.import/Side_Right.ogg-c1f4d8b7b741aae18f8258472a1b39c4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Side_Left.wav"
+dest_files=[ "res://.import/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
