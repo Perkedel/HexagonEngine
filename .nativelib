@@ -1,0 +1,34 @@
+{
+    "id": "2745846e-7415-4cbd-ad7c-b497187d9cd6",
+    "platforms": [
+        "all",
+        "android"
+    ],
+    "packages": {
+        "nativelib-export": {
+            "version": "0.1.0",
+            "platforms": [
+                "all"
+            ],
+            "dependencies": []
+        },
+        "multidex": {
+            "version": "0.1.0",
+            "platforms": [
+                "android"
+            ],
+            "dependencies": []
+        },
+        "network": {
+            "version": "0.1.0",
+            "platforms": [
+                "all",
+                "android"
+            ],
+            "dependencies": [],
+            "autoload": {
+                "Network": "*res://scripts/Network.gd"
+            }
+        }
+    }
+}

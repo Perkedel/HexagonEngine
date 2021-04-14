@@ -1,0 +1,11 @@
+[config]
+
+name="Network"
+binary_type="local"
+binary="Network.release.aar"
+
+[dependencies]
+
+local=[]
+remote=[]
+custom_maven_repos=["https://dl.bintray.com/mobilap/maven/"]

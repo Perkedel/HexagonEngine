@@ -255,3 +255,19 @@ Used Assets and Tools!
 - https://godotengine.org/asset-library/asset/916 & https://github.com/gilzoide/godot-dockable-container Godot dockable Container
 - https://godotengine.org/asset-library/asset/460 loading async brackey-like
 - https://www.git-tower.com/learn/git/faq/git-add-remote/ add git remote
+- https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes add remote git
+- https://godotengine.org/asset-library/asset/910 Hat selector menu
+- https://godotengine.org/asset-library/asset/909 Cube Bezier control yay
+- https://godotengine.org/asset-library/asset/912 make file launcher
+- https://godotengine.org/asset-library/asset/900 GUI in VR
+- https://godotengine.org/asset-library/asset/904 custom cursor speedy
+- https://godotengine.org/asset-library/asset/859 godot setting addon
+- https://godotengine.org/asset-library/asset/752 shell fur
+- https://godotengine.org/asset-library/asset/22 calendar button and Date datatype
+- https://github.com/GodotVR/godot-openvr-asset Godot OpenVR
+- https://godotengine.org/asset-library/asset/824 Native Lib for Android and iOS
+- https://godotengine.org/asset-library/asset/724 Json minifier
+- https://godotengine.org/asset-library/asset/157 Json beautifier
+- https://godotengine.org/asset-library/asset/622 wario ware Godot clone template
+- https://godotengine.org/asset-library/asset/446 Qodot. support quake map file in Godot engine
+- https://godotengine.org/asset-library/asset/587 Distraction Free Mode the Godot Engine editor. hide unecessary window on some part
