@@ -73,6 +73,9 @@ func PlayDVD(LoadDVD):
 	ConnectCartridge()
 	pass
 
+func BootExclusiveThis(LoadDVD):
+	pass
+
 func _exit_tree():
 	CheckDVD()
 	if InstanceDVD:

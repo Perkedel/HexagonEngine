@@ -252,3 +252,6 @@ Used Assets and Tools!
 - https://gamedev.stackexchange.com/questions/184354/add-a-sound-to-all-the-buttons-in-a-project/184363#184363 
 - https://shkspr.mobi/blog/2015/07/exporting-multitrack-surround-files-in-audacity/
 - https://github.com/Arnklit/ShellFurGodot
+- https://godotengine.org/asset-library/asset/916 & https://github.com/gilzoide/godot-dockable-container Godot dockable Container
+- https://godotengine.org/asset-library/asset/460 loading async brackey-like
+- https://www.git-tower.com/learn/git/faq/git-add-remote/ add git remote

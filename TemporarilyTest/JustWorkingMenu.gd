@@ -7,6 +7,7 @@ extends VBoxContainer
 var DVDItemLists :Dictionary
 var shownDVDItemLists : Dictionary
 var DVDarrayPathLoad : PoolStringArray = []
+var DVDExclusiveBootStatement : PoolIntArray = []
 var DVDcounter : int = 0
 onready var preSelImag = preload("res://Sprites/ConsoleHoverEmpty.png")
 onready var preLauImag = preload("res://Sprites/ConsoleLaunchEmpty.png")
@@ -118,7 +119,16 @@ func refreshDVDs():
 			deserve_addition = true
 		
 		if deserve_addition:
-			$ItemList.add_item(DVDItemLists[aDVD].Title, load(DVDItemLists[aDVD].IconUrl))
+			var TitleAppend = DVDItemLists[aDVD].Title
+			if DVDItemLists[aDVD].has("ExclusiveBoot"):
+				var checko = bool(DVDItemLists[aDVD].ExclusiveBoot)
+				if checko:
+					TitleAppend += " (Exclusive Boot)"
+				pass
+				DVDExclusiveBootStatement.insert(DVDcounter,int(checko))
+			else:
+				DVDExclusiveBootStatement.insert(DVDcounter,0)
+			$ItemList.add_item(TitleAppend, load(DVDItemLists[aDVD].IconUrl))
 			DVDarrayPathLoad.insert(DVDcounter, DVDItemLists[aDVD].BootThisTscene)
 			shownDVDItemLists[aDVD] = DVDItemLists[aDVD]
 			DVDcounter+=1
@@ -182,9 +192,9 @@ func _on_ItemList_item_selected(index):
 	pass # Replace with function body.
 
 export var WhichItemClickEnter = 0
-signal ItemClickEnter(Index, pathOfThis)
+signal ItemClickEnter(Index, pathOfThis, ExclusiveBootStatement)
 func _on_ItemList_item_activated(index):
-	emit_signal("ItemClickEnter",index, DVDarrayPathLoad[index])
+	emit_signal("ItemClickEnter",index,DVDarrayPathLoad[index], bool(DVDExclusiveBootStatement[index]))
 	pass # Replace with function body.
 
 

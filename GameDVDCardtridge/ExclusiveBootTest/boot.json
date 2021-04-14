@@ -1,8 +1,8 @@
 {
-    "id": "template-hexagon",
-    "Title": "Template Hexagon Engine",
-    "IconUrl": "res://Sprites/HexagonEngineSign.png",
-    "BootThisTscene": "res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn",
+    "id": "exclusive-boot-test",
+    "Title": "Exclusive Boot Test",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/ExclusiveBootTest/ExclusiveBootTest.tscn",
     "CatalogueBanner": "",
     "DVDCover": "",
     "isSelectable": true,
@@ -10,6 +10,9 @@
     "actuallyBootJsonPath": "",
     "requiredEggsellents": [],
     "args": ["", ""],
+    "appArgs": ["", ""],
+    "doBlocking": false,
+    "readStdErr": false,
     "HoverEffect": true,
     "SelectedEffect": true,
     "HoveredImage": "res://Sprites/ConsoleHover.png",
@@ -19,5 +22,5 @@
     "SelectedImage": "res://Sprites/ConsoleLaunch.png",
     "SelectedAudio": "res://Audio/EfekSuara/425728__moogy73__click01.wav",
     "SelectedAudioVolume": 0.0,
-    "ExclusiveBoot": false
+    "ExclusiveBoot": true
 }

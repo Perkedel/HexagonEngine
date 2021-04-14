@@ -7,5 +7,6 @@
     "DVDCover": "",
     "isSelectable": true,
     "hidden": false,
-    "requiredEggsellents": []
+    "requiredEggsellents": [],
+    "ExclusiveBoot": false
 }

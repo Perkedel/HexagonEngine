@@ -2,6 +2,8 @@ extends Node
 
 export (bool) var isPlayingGameNow
 export (bool) var isGamePaused
+var hereTakeThisLoadedResource
+var andScronchMe
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -10,6 +12,7 @@ export (bool) var isGamePaused
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SceneLoader.connect("on_scene_loaded", self, "_BiosLoaded")
 	AutoSpeaker.stream = preload("res://Audio/EfekSuara/425728__moogy73__click01.wav")
 	AutoSpeaker.play()
 	pass # Replace with function body.
@@ -41,4 +44,40 @@ func PauseGameNow():
 func ResumeGameNow():
 	get_tree().paused = false
 	isGamePaused = false
+	pass
+
+func change_scene_with_resource(thisOne):
+	var pleaseInstanceThis = thisOne.instance()
+	get_tree().current_scene.free()
+	get_tree().current_scene = null
+	get_tree().root.add_child(pleaseInstanceThis)
+	get_tree().current_scene = pleaseInstanceThis
+	pass
+
+func change_scene_with_instance(thisOne:Node):
+	get_tree().current_scene.free()
+	get_tree().current_scene = null
+	get_tree().root.add_child(thisOne)
+	get_tree().current_scene = thisOne
+
+func ExclusiveBoot(theResource):
+	if theResource != null:
+		hereTakeThisLoadedResource = theResource
+		#andScronchMe = hereTakeThisLoadedResource.instance()
+	if hereTakeThisLoadedResource:
+		change_scene_with_resource(theResource)
+	pass
+	
+
+func ReturnToBios():
+	SceneLoader.load_scene("res://HexagonEngineCore.tscn", {hii = "Cool and good"})
+	pass
+
+func _BiosLoaded(scene):
+	hereTakeThisLoadedResource = null
+	print(scene.path)
+	print(scene.instance.name)
+	print(scene.props.hii)
+	
+	change_scene_with_instance(scene.instance)
 	pass

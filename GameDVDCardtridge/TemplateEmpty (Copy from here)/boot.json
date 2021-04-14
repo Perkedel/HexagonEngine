@@ -21,5 +21,6 @@
     "HoveredAudioVolume": -15.0,
     "SelectedImage": "res://Sprites/ConsoleLaunch.png",
     "SelectedAudio": "res://Audio/EfekSuara/425728__moogy73__click01.wav",
-    "SelectedAudioVolume": 0.0
+    "SelectedAudioVolume": 0.0,
+    "ExclusiveBoot": false
 }

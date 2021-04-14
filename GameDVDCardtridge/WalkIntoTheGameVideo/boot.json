@@ -4,8 +4,9 @@
     "IconUrl": "res://Sprites/MavrickleIcon.png",
     "BootThisTscene": "res://GameDVDCardtridge/WalkIntoTheGameVideo/WalkIntoTheGameVideo.tscn",
     "CatalogueBanner": "",
-    "DVDCover":"",
+    "DVDCover": "",
     "isSelectable": true,
-    "hidden":true,
-    "requiredEggsellents":["WalkIntoTheGame"]
+    "hidden": true,
+    "requiredEggsellents": ["WalkIntoTheGame"],
+    "ExclusiveBoot": false
 }

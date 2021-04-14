@@ -193,12 +193,18 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 	DoShutdownNow()
 	pass # Replace with function body.
 
-func _on_ChangeDVDMenu_ItemClickEnterName(loadName):
-	print("Receive DVD Click Name " + loadName)
-	#LoadDVD = load(loadName)
+func _on_ChangeDVDMenu_ItemClickEnterName(loadName, ExclusiveBootStatement):
+	print("Receive DVD Click Name " + loadName," Which " + "Does" if ExclusiveBootStatement else "Doesn't", " Exclusive Boot.")
 	yield(interceptFiftConsole(loadName),"completed")
 	postInterception()
-	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	if ExclusiveBootStatement:
+		# Singletoner.hereTakeThisLoadedResource = LoadDVD
+		# and scronch me
+		Singletoner.ExclusiveBoot(LoadDVD)
+		pass
+	else:
+		#LoadDVD = load(loadName)
+		$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass
 
 func _on_ChangeDVDMenu_ItemClickEnter(Index):
