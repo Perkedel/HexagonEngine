@@ -24,10 +24,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-next/references/array_2d.gd"
 }, {
+"base": "Resource",
+"class": "ArrayMap",
+"language": "GDScript",
+"path": "res://addons/godot-next/resources/array_map.gd"
+}, {
 "base": "Reference",
 "class": "ArrayUtils",
 "language": "GDScript",
 "path": "res://addons/SIsilicon.3d.text/array_utils.gd"
+}, {
+"base": "Node",
+"class": "AudioManage",
+"language": "GDScript",
+"path": "res://addons/WebAudioExternal/AudioManager.gd"
+}, {
+"base": "Node2D",
+"class": "AudioSpacial2D",
+"language": "GDScript",
+"path": "res://addons/WebAudioExternal/AudioSpacial2D.gd"
 }, {
 "base": "AudioStreamPlayer",
 "class": "AudioStreamPlayerADSR",
@@ -68,6 +83,11 @@ _global_script_classes=[ {
 "class": "BitFlag",
 "language": "GDScript",
 "path": "res://addons/godot-next/references/bit_flag.gd"
+}, {
+"base": "Reference",
+"class": "Bitset",
+"language": "GDScript",
+"path": "res://addons/godot-next/references/bitset.gd"
 }, {
 "base": "Control",
 "class": "CSVEditor",
@@ -189,10 +209,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
-"base": "ImageTexture",
+"base": "",
+"class": "DijkstraMap",
+"language": "NativeScript",
+"path": "res://addons/dijkstra-map/Dijkstra_map_library/nativescript.gdns"
+}, {
+"base": "Reference",
 "class": "DiscreteGradientTexture",
 "language": "GDScript",
-"path": "res://addons/godot-next/resources/DiscreteGradientTexture.gd"
+"path": "res://addons/godot-next/resources/discrete_gradient_texture.gd"
 }, {
 "base": "Reference",
 "class": "DocExporter",
@@ -308,6 +333,11 @@ _global_script_classes=[ {
 "class": "FsmState",
 "language": "GDScript",
 "path": "res://addons/jm_game_template/jm_state.gd"
+}, {
+"base": "Reference",
+"class": "Funcy",
+"language": "GDScript",
+"path": "res://addons/funcy/Funcy.gd"
 }, {
 "base": "GDDlg_AttributeBase",
 "class": "GDDlg_AttributeArray",
@@ -634,6 +664,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/json_minifier/json_minifier.gd"
 }, {
+"base": "Node",
+"class": "JavascriptManage",
+"language": "GDScript",
+"path": "res://addons/WebAudioExternal/JavascriptManager.gd"
+}, {
 "base": "Control",
 "class": "Joystick",
 "language": "GDScript",
@@ -643,6 +678,21 @@ _global_script_classes=[ {
 "class": "LavaLayer",
 "language": "GDScript",
 "path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/lava.gd"
+}, {
+"base": "Reference",
+"class": "LayerGroup",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayerGroup.gd"
+}, {
+"base": "Reference",
+"class": "LayeredSprite",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayeredSprite.gd"
+}, {
+"base": "Reference",
+"class": "LayeredSpriteCloset",
+"language": "GDScript",
+"path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayeredSpriteCloset.gd"
 }, {
 "base": "VBoxContainer",
 "class": "LegendElement",
@@ -709,6 +759,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/modifiers/modifiers.gd"
 }, {
+"base": "Node",
+"class": "Network",
+"language": "GDScript",
+"path": "res://addons/godot-voip/demo/Network.gd"
+}, {
 "base": "Spatial",
 "class": "OrbitArm",
 "language": "GDScript",
@@ -773,6 +828,11 @@ _global_script_classes=[ {
 "class": "PropertyInfo",
 "language": "GDScript",
 "path": "res://addons/godot-next/references/property_info.gd"
+}, {
+"base": "Reference",
+"class": "PropertyInfoFactory",
+"language": "GDScript",
+"path": "res://addons/godot-next/references/property_info_factory.gd"
 }, {
 "base": "Reference",
 "class": "QodotDependencies",
@@ -949,6 +1009,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/easy_charts/Utilities/Scripts/scatter_chart_base.gd"
 }, {
+"base": "Spatial",
+"class": "SceneMap",
+"language": "GDScript",
+"path": "res://addons/scene_map/scene_map.gd"
+}, {
+"base": "Resource",
+"class": "ScenePalette",
+"language": "GDScript",
+"path": "res://addons/scene_map/scene_palette.gd"
+}, {
 "base": "Node",
 "class": "ServerAdvertiser",
 "language": "GDScript",
@@ -1077,7 +1147,12 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "TweenSequence",
 "language": "GDScript",
-"path": "res://addons/godot-next/references/tween_sequence.gd"
+"path": "res://addons/godot-next/references/tween_sequence/tween_sequence.gd"
+}, {
+"base": "Reference",
+"class": "Tweener",
+"language": "GDScript",
+"path": "res://addons/godot-next/references/tween_sequence/tweener.gd"
 }, {
 "base": "Object",
 "class": "TypeFormattingLogic",
@@ -1100,9 +1175,39 @@ _global_script_classes=[ {
 "path": "res://addons/godot-next/global/variant.gd"
 }, {
 "base": "Resource",
+"class": "Vec2",
+"language": "GDScript",
+"path": "res://addons/godot-next/2d/vec2.gd"
+}, {
+"base": "Resource",
+"class": "Vec3",
+"language": "GDScript",
+"path": "res://addons/godot-next/3d/vec3.gd"
+}, {
+"base": "Node",
+"class": "VectorDisplay2D",
+"language": "GDScript",
+"path": "res://addons/godot-next/2d/vector_display_2d.gd"
+}, {
+"base": "Node",
+"class": "VectorDisplay3D",
+"language": "GDScript",
+"path": "res://addons/godot-next/3d/vector_display_3d.gd"
+}, {
+"base": "Resource",
 "class": "VectorResource",
 "language": "GDScript",
 "path": "res://addons/vector_resource/vector_resource.gd"
+}, {
+"base": "Node",
+"class": "VoiceInstance",
+"language": "GDScript",
+"path": "res://addons/godot-voip/scripts/voice_instance.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "VoiceMic",
+"language": "GDScript",
+"path": "res://addons/godot-voip/scripts/voice_mic.gd"
 }, {
 "base": "Reference",
 "class": "WAT",
@@ -1128,7 +1233,10 @@ _global_script_class_icons={
 "AdMob": "res://admob-lib/icon.png",
 "ArgumentDocItem": "",
 "Array2D": "",
+"ArrayMap": "",
 "ArrayUtils": "",
+"AudioManage": "",
+"AudioSpacial2D": "",
 "AudioStreamPlayerADSR": "",
 "Bank": "",
 "BaseGameObject": "",
@@ -1137,6 +1245,7 @@ _global_script_class_icons={
 "BeatPlayer": "",
 "Behavior": "",
 "BitFlag": "",
+"Bitset": "",
 "CSVEditor": "",
 "CSVFile": "",
 "Calendar": "",
@@ -1161,6 +1270,7 @@ _global_script_class_icons={
 "DebugLabel": "",
 "Dialogic": "",
 "DialogicUtil": "",
+"DijkstraMap": "",
 "DiscreteGradientTexture": "",
 "DocExporter": "",
 "DocItem": "",
@@ -1185,6 +1295,7 @@ _global_script_class_icons={
 "FirestoreTask": "",
 "FpsLabel": "",
 "FsmState": "",
+"Funcy": "",
 "GDDlg_AttributeArray": "",
 "GDDlg_AttributeBase": "",
 "GDDlg_AttributeBool": "",
@@ -1227,7 +1338,7 @@ _global_script_class_icons={
 "GameWorld": "",
 "GaussianRandom": "",
 "GeneralistInfiniBGScroll": "",
-"Geometry2D": "",
+"Geometry2D": "res://addons/godot-next/icons/icon_geometry_2d.svg",
 "GistItem": "",
 "GoogleTranslateAPI": "",
 "HTerrainDataLoader": "",
@@ -1250,8 +1361,12 @@ _global_script_class_icons={
 "IsoCube": "",
 "JSONBeautifier": "",
 "JSONMinifier": "",
+"JavascriptManage": "",
 "Joystick": "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png",
 "LavaLayer": "",
+"LayerGroup": "",
+"LayeredSprite": "",
+"LayeredSpriteCloset": "",
 "LegendElement": "",
 "LineChart": "",
 "LineChart2D": "",
@@ -1265,6 +1380,7 @@ _global_script_class_icons={
 "MixMode": "res://addons/modifiers/icon_modifiers.svg",
 "MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
 "Modifiers": "res://addons/modifiers/icon_modifiers.svg",
+"Network": "",
 "OrbitArm": "",
 "PhysicsBall": "",
 "PhysicsEntity": "",
@@ -1278,6 +1394,7 @@ _global_script_class_icons={
 "ProjectTools": "",
 "PropertyDocItem": "",
 "PropertyInfo": "",
+"PropertyInfoFactory": "",
 "QodotDependencies": "",
 "QodotEntity": "",
 "QodotFGDBaseClass": "",
@@ -1313,6 +1430,8 @@ _global_script_class_icons={
 "ScatterChart2D": "",
 "ScatterChart3D": "",
 "ScatterChartBase": "",
+"SceneMap": "res://addons/scene_map/scene_map.svg",
+"ScenePalette": "res://addons/scene_map/scene_palette.svg",
 "ServerAdvertiser": "res://addons/LANServerBroadcast/server_advertiser/ServerAdvertiser.png",
 "ServerListener": "res://addons/LANServerBroadcast/server_listener/ServerListener.png",
 "SignalDocItem": "",
@@ -1339,11 +1458,18 @@ _global_script_class_icons={
 "TrenchBroomGameConfigFolder": "",
 "TrenchBroomTag": "",
 "TweenSequence": "",
+"Tweener": "",
 "TypeFormattingLogic": "",
 "VBoxItemList": "res://addons/godot-next/icons/icon_v_box_item_list.svg",
 "VMF": "",
 "Variant": "",
+"Vec2": "",
+"Vec3": "",
+"VectorDisplay2D": "",
+"VectorDisplay3D": "",
 "VectorResource": "",
+"VoiceInstance": "",
+"VoiceMic": "",
 "WAT": "",
 "WATTest": "",
 "WaterLayer": "",
@@ -1430,6 +1556,8 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 AdvancedBackgroundLoader="*res://addons/Advanced Background Loader/background_load.gd"
 Utilities="*res://addons/easy_charts/Utilities/Scripts/utilities.gd"
 Network="*res://scripts/Network.gd"
+JavascriptManager="*res://addons/WebAudioExternal/JavascriptManager.gd"
+AudioManager="*res://addons/WebAudioExternal/AudioManager.gd"
 
 [compression]
 
@@ -1459,7 +1587,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Advanced Background Loader", "AudioEffectInspector", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "NativeLib", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "arabic-text", "balloon", "beatplayer", "bone_gizmo", "calendar_button", "camera_limiter", "cubic_bezier_controls", "decals", "destruction", "dialogic", "dockable_container", "easy_charts", "editor_icon_previewer", "editor_physics", "explore-editor-theme", "extend", "file-editor", "folder_node", "gcode", "gddlg", "gdinv", "github-integration", "godot-firebase", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-openvr", "godot-plugin-refresher", "godot-sqlite", "godot-stopwatch-master", "godot_piskel_importer", "godot_pixelorama_importer", "godot_sheets", "google_sheet", "goutte.camera.trackball", "gui_in_vr", "http-sse-client", "inspector-gadget", "jm_game_template", "jm_pp_outlines", "joystick_control", "makefile_launcher", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "ni_mate_motion_capture", "notes_tab", "opus", "orbit_camera", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "plugin_maker", "qodot", "radial_menu", "radial_progress", "randomAudioStreamPlayer", "repl", "replicator", "rmsmartshape", "scale_importer", "shell_fur", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "terminal", "tile_spawner", "toast", "vector_resource", "voxel_factory", "vpainter", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.sdf_blender", "zylann.translation_editor" )
+enabled=PoolStringArray( "Advanced Background Loader", "AudioEffectInspector", "Extended Kinematic Body", "Flare", "FontAwesome5", "GDBehavior", "KOBUGE-games.CircularContainer", "LANServerBroadcast", "NativeLib", "QuickSceneRunner", "SIsilicon.3d.text", "SimpleSampler", "SyndiBox", "TelloDroneNode", "WAT", "WebAudioExternal", "alanscodelog.gimbalcontrol", "animated_grid_container_plugin", "arabic-text", "balloon", "beatplayer", "bone_gizmo", "calendar_button", "camera_limiter", "cubic_bezier_controls", "decals", "destruction", "dialogic", "dockable_container", "easy_charts", "editor_icon_previewer", "editor_physics", "explore-editor-theme", "extend", "file-editor", "folder_node", "funcy", "gcode", "gddlg", "gdinv", "github-integration", "godot-firebase", "godot-git-control.funabab", "godot-inheritance-dock", "godot-kra-psd-importer", "godot-next", "godot-openvr", "godot-plugin-refresher", "godot-sqlite", "godot-stopwatch-master", "godot-voip", "godot_piskel_importer", "godot_pixelorama_importer", "godot_sheets", "google_sheet", "goutte.camera.trackball", "gui_in_vr", "http-sse-client", "inspector-gadget", "jm_game_template", "jm_pp_outlines", "joystick_control", "makefile_launcher", "material_maker", "metadata_inspector", "midi", "mixing-desk", "modifiers", "nativelib-export", "ni_mate_motion_capture", "notes_tab", "opus", "orbit_camera", "paulloz.colorblindness", "perkedeltestmakeplugin", "pigmint_controls", "plugin_maker", "qodot", "radial_menu", "radial_progress", "randomAudioStreamPlayer", "repl", "replicator", "rmsmartshape", "scale_importer", "shell_fur", "sketchfab", "smart_audio_stream", "smoothing", "snippets_plugin", "sound_manager", "sprite-baker", "string_keys", "terminal", "tile_spawner", "toast", "tool_button", "vector_resource", "voxel_factory", "vpainter", "wakatime", "water2d", "zylann.editor_light", "zylann.hterrain", "zylann.sdf_blender", "zylann.translation_editor" )
 
 [firebase]
 

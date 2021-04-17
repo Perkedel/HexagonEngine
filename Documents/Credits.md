@@ -271,3 +271,29 @@ Used Assets and Tools!
 - https://godotengine.org/asset-library/asset/622 wario ware Godot clone template
 - https://godotengine.org/asset-library/asset/446 Qodot. support quake map file in Godot engine
 - https://godotengine.org/asset-library/asset/587 Distraction Free Mode the Godot Engine editor. hide unecessary window on some part
+- https://godotengine.org/asset-library/asset/729 Godot LOD
+- https://github.com/godot-extended-libraries Godot Extended Library project
+- https://godotengine.org/asset-library/asset/688 Godot Xunit
+- https://godotengine.org/asset-library/asset/702 Godot Emin Multimesh
+- https://godotengine.org/asset-library/asset/703 Node warning
+- https://godotengine.org/asset-library/asset/594 destruction rigid bodies
+- https://godotengine.org/asset-library/asset/711 scrolling bg
+- https://godotengine.org/asset-library/asset/732 Godot debug utility
+- https://godotengine.org/asset-library/asset/727 dynamic crosshair shader
+- https://godotengine.org/asset-library/asset/683 octahedral impostor sus
+- https://godotengine.org/asset-library/asset/637 metadaxdja inspect
+- https://godotengine.org/asset-library/asset/443 lanserver broadcast
+- https://godotengine.org/asset-library/asset/873 Godot Toon shader
+- https://godotengine.org/asset-library/asset/918 Godot tool button
+- https://godotengine.org/asset-library/asset/425 Godot VOIP
+- https://godotengine.org/asset-library/asset/474 funcy
+- https://godotengine.org/asset-library/asset/907 parrot diallougu
+- https://godotengine.org/asset-library/asset/634 Djikstra Map Pathfinding
+- https://godotengine.org/asset-library/asset/444 GDSQlite
+- https://godotengine.org/asset-library/asset/770 layered sprite tool
+- https://godotengine.org/asset-library/asset/878 Scene map
+- https://godotengine.org/asset-library/asset/754 Godot Immediate GUI
+- https://godotengine.org/asset-library/asset/871 Godot Folder Node
+- https://godotengine.org/asset-library/asset/741 transition
+- https://github.com/probrain-dev/godot_web_external_audio_motor Godot external audio
+- https://godotengine.org/asset-library/asset/719 transit scene
