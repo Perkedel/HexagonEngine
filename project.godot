@@ -214,7 +214,7 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/dijkstra-map/Dijkstra_map_library/nativescript.gdns"
 }, {
-"base": "Reference",
+"base": "ImageTexture",
 "class": "DiscreteGradientTexture",
 "language": "GDScript",
 "path": "res://addons/godot-next/resources/discrete_gradient_texture.gd"
@@ -289,12 +289,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-firebase/firestore/firestore.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "FirebaseResource",
 "language": "GDScript",
 "path": "res://addons/godot-firebase/database/resource.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "FirebaseStorage",
 "language": "GDScript",
 "path": "res://addons/godot-firebase/storage/storage.gd"
@@ -679,17 +679,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/lava.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "LayerGroup",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayerGroup.gd"
 }, {
-"base": "Reference",
+"base": "Node2D",
 "class": "LayeredSprite",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayeredSprite.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "LayeredSpriteCloset",
 "language": "GDScript",
 "path": "res://Scripts/ExtraImportAsset/Layered Sprite Tool/LayeredSpriteCloset.gd"
@@ -963,6 +963,11 @@ _global_script_classes=[ {
 "class": "RandomSound",
 "language": "GDScript",
 "path": "res://addons/RandomSound/RandomSound.gd"
+}, {
+"base": "PanelContainer",
+"class": "RepositoryItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
 }, {
 "base": "ResourceCollection",
 "class": "ResourceArray",
@@ -1421,6 +1426,7 @@ _global_script_class_icons={
 "RMSmartShapeMaterial": "",
 "RadarChart": "",
 "RandomSound": "res://addons/RandomSound/icon_random_sound.svg",
+"RepositoryItem": "",
 "ResourceArray": "",
 "ResourceCollection": "",
 "ResourceSet": "",
@@ -1604,8 +1610,8 @@ environment_variables/clientSecret="FY3272m2sEiUniJXT-y7LuRC"
 
 [gdnative]
 
-singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot-openxr/godot_openxr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
-singletons_disabled=[ "res://addons/godot-oculus/godot_oculus.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib", "res://addons/godot-openvr/godot_openvr.gdnlib" ]
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
+singletons_disabled=[  ]
 
 [gui]
 

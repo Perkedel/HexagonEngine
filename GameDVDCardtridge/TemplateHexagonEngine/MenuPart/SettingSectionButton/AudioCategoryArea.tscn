@@ -92,6 +92,7 @@ margin_top = 201.0
 margin_right = 1920.0
 margin_bottom = 264.0
 VariableName = "VU meter"
+minimum = 0.0
 maximum = 1.0
 stepp = 0.001
 
@@ -121,6 +122,11 @@ bus = "SoundEffect"
 [node name="TestoidSpeakerTryer" parent="." index="19"]
 margin_top = 589.0
 margin_bottom = 1089.0
+
+[node name="TestoidClock" parent="." index="20"]
+visible = false
+margin_top = 1093.0
+margin_bottom = 1363.0
 [connection signal="HasChanged" from="MasterVolume" to="." method="_on_MasterVolume_HasChanged"]
 [connection signal="SliderReleased" from="MasterVolume" to="." method="_on_MasterVolume_SliderReleased"]
 [connection signal="ValueOfIt" from="MasterVolume" to="." method="_on_MasterVolume_ValueOfIt"]

@@ -1,0 +1,314 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://modules/Reusables/JustClock.gd" type="Script" id=1]
+[ext_resource path="res://modules/Reusables/parts/ThoughFields.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" type="Script" id=3]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 5 )
+script = ExtResource( 3 )
+chooseMode = "14Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 48
+font_data = ExtResource( 6 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 128
+font_data = ExtResource( 4 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "BoldItalic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 7 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 32
+font_data = ExtResource( 8 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = true
+fontWeight = "Regular"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 5 )
+script = ExtResource( 3 )
+chooseMode = "14Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=7]
+resource_local_to_scene = true
+size = 48
+font_data = ExtResource( 6 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=8]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 128
+font_data = ExtResource( 4 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "BoldItalic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=9]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 7 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=10]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 32
+font_data = ExtResource( 8 )
+script = ExtResource( 3 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = true
+fontWeight = "Regular"
+Fonts = {
+
+}
+
+[node name="JustClock" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -135.0
+margin_right = 270.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 540, 270 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bekgron" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BehindFields" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -120.0
+margin_right = 270.0
+margin_bottom = 120.0
+
+[node name="topField" parent="BehindFields" index="0"]
+margin_top = 0.0
+margin_right = 540.0
+margin_bottom = 56.0
+
+[node name="Day" parent="BehindFields/topField" index="0"]
+margin_right = 138.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "~~~."
+fontColor = Color( 0, 0, 0, 1 )
+Fonts = {
+
+}
+
+[node name="Date" parent="BehindFields/topField" index="1"]
+margin_left = 142.0
+margin_right = 540.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "88-88-8888"
+fontColor = Color( 0, 0, 0, 1 )
+Fonts = {
+
+}
+
+[node name="bottomField" parent="BehindFields" index="1"]
+margin_top = 60.0
+margin_right = 540.0
+margin_bottom = 196.0
+
+[node name="HourMin" parent="BehindFields/bottomField" index="0"]
+margin_right = 450.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "88 88"
+fontColor = Color( 0, 0, 0, 1 )
+Fonts = {
+
+}
+
+[node name="Second" parent="BehindFields/bottomField" index="1"]
+margin_left = 454.0
+margin_right = 540.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "88"
+fontColor = Color( 0, 0, 0, 1 )
+Fonts = {
+
+}
+
+[node name="underField" parent="BehindFields" index="2"]
+margin_top = 200.0
+margin_right = 540.0
+margin_bottom = 240.0
+
+[node name="UnixTime" parent="BehindFields/underField" index="0"]
+margin_right = 540.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "88888888888888888888"
+fontColor = Color( 0, 0, 0, 1 )
+Fonts = {
+
+}
+
+[node name="ThoughFields" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -135.0
+margin_right = 270.0
+margin_bottom = 135.0
+
+[node name="topField" parent="ThoughFields" index="0"]
+margin_top = 15.0
+margin_right = 540.0
+margin_bottom = 71.0
+
+[node name="Day" parent="ThoughFields/topField" index="0"]
+margin_right = 138.0
+custom_fonts/font = SubResource( 6 )
+Fonts = {
+
+}
+
+[node name="Date" parent="ThoughFields/topField" index="1"]
+margin_left = 142.0
+margin_right = 540.0
+custom_fonts/font = SubResource( 7 )
+Fonts = {
+
+}
+
+[node name="bottomField" parent="ThoughFields" index="1"]
+margin_top = 75.0
+margin_right = 540.0
+margin_bottom = 211.0
+
+[node name="HourMin" parent="ThoughFields/bottomField" index="0"]
+margin_right = 450.0
+custom_fonts/font = SubResource( 8 )
+Fonts = {
+
+}
+
+[node name="Second" parent="ThoughFields/bottomField" index="1"]
+margin_left = 454.0
+margin_right = 540.0
+custom_fonts/font = SubResource( 9 )
+Fonts = {
+
+}
+
+[node name="underField" parent="ThoughFields" index="2"]
+margin_top = 215.0
+margin_right = 540.0
+margin_bottom = 255.0
+
+[node name="UnixTime" parent="ThoughFields/underField" index="0"]
+margin_right = 540.0
+custom_fonts/font = SubResource( 10 )
+text = "12345678901234567890"
+Fonts = {
+
+}
+
+[editable path="BehindFields"]
+
+[editable path="ThoughFields"]

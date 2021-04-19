@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Zetrix/ZetrixViewport.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Zetrix/DefaultZetrixPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Zetrix/PortScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Zetrix/ZetrixWorld.tres" type="World" id=4]
+[ext_resource path="res://addons/godot-openvr/scenes/ovr_right_hand.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/godot-openvr/scenes/ovr_left_hand.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -30,3 +32,7 @@ mesh = SubResource( 1 )
 transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -19, -2, 7 )
 layers = 2
 mesh = SubResource( 1 )
+
+[node name="ovr_left_hand" parent="." instance=ExtResource( 6 )]
+
+[node name="ovr_right_hand" parent="." instance=ExtResource( 5 )]

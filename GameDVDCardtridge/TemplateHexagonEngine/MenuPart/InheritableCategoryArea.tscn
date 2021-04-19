@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingVolume.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingEmpty.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidProgressBar.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidMusicPlayer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidSpeakerTryer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidClock.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ButtonGroup" id=1]
 
@@ -65,6 +66,10 @@ margin_bottom = 465.0
 margin_top = 469.0
 margin_right = 1920.0
 margin_bottom = 532.0
+VariableName = "Testoid Progress"
+minimum = 0.0
+maximum = 100.0
+stepp = 0.01
 
 [node name="TestoidSpectrumAnalyzer" parent="." instance=ExtResource( 8 )]
 margin_top = 536.0
@@ -76,3 +81,10 @@ margin_bottom = 853.0
 
 [node name="TestoidSpeakerTryer" parent="." instance=ExtResource( 11 )]
 margin_bottom = 1357.0
+
+[node name="TestoidClock" parent="." instance=ExtResource( 12 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1361.0
+margin_right = 1920.0
+margin_bottom = 1631.0

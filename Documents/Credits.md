@@ -297,3 +297,7 @@ Used Assets and Tools!
 - https://godotengine.org/asset-library/asset/741 transition
 - https://github.com/probrain-dev/godot_web_external_audio_motor Godot external audio
 - https://godotengine.org/asset-library/asset/719 transit scene
+- https://youtu.be/2wJY4BZhQzc mandlebrot sound, has DSEG
+- https://www.keshikan.net/fonts-e.html DSEG
+- https://github.com/keshikan/DSEG Source code DSEG Openfont SIL
+- https://godotengine.org/qa/42430/changing-font-size-of-theme-or-control-at-runtime?show=42430#q42430 change font size of Label

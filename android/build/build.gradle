@@ -74,6 +74,7 @@ dependencies {
     }
 
 //CHUNK_DEPENDENCIES_BEGIN
+implementation 'androidx.multidex:multidex:2.0.0'
 //CHUNK_DEPENDENCIES_END
 }
 
@@ -97,6 +98,7 @@ android {
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
 //CHUNK_ANDROID_DEFAULTCONFIG_BEGIN
+multiDexEnabled true
 //CHUNK_ANDROID_DEFAULTCONFIG_END
     }
 
