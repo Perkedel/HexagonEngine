@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=10]
 [ext_resource path="res://modules/Component/DVDSelectTransitioner.tscn" type="PackedScene" id=11]
+[ext_resource path="res://addons/gcode/GCode.gd" type="Script" id=12]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
@@ -100,6 +101,9 @@ use_threads = true
 [node name="Tween2" type="Tween" parent="SystemGut/aTweens"]
 
 [node name="ZetrixViewport" parent="." instance=ExtResource( 6 )]
+
+[node name="GCode" type="Node" parent="."]
+script = ExtResource( 12 )
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]
 [connection signal="NoDisc" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_NoDisc"]
@@ -110,3 +114,4 @@ use_threads = true
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]
 [connection signal="updateSelectionAssets" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_updateSelectionAssets"]
 [connection signal="YesOrNoo" from="MetaMenu/AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesOrNoo"]
+[connection signal="done" from="GCode" to="." method="_on_GCode_done"]

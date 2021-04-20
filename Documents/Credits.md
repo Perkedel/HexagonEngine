@@ -301,3 +301,15 @@ Used Assets and Tools!
 - https://www.keshikan.net/fonts-e.html DSEG
 - https://github.com/keshikan/DSEG Source code DSEG Openfont SIL
 - https://godotengine.org/qa/42430/changing-font-size-of-theme-or-control-at-runtime?show=42430#q42430 change font size of Label
+- https://scruss.com/blog/2016/05/21/twentyfoursixteen-a-17-segment-alpha-lcd-font/ 16 segment display font
+- https://en.wikipedia.org/wiki/Sixteen-segment_display
+- https://github.com/samdze/godot-modifiers-plugin ''
+- https://github.com/godotengine/godot/issues/27168 pck more than 2.1 gb error
+- https://github.com/godotengine/godot/issues/44363 manually put an export template in root folder of this project
+- https://godotengine.org/qa/75329/game-over-and-not-working-what-best-handle-this-godot-stable
+- https://github.com/godotengine/godot-proposals/issues/400 it seems that it will only fix in Godot 4.0
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_pcks.html
+- https://github.com/godotengine/godot/issues/44363
+- https://github.com/godotengine/godot/pull/47254 akien is fixing, but this PR here is still WIP for now unfortunately
+- https://en.wikipedia.org/wiki/Shell_script sh file 
+- https://youtu.be/WZzeIv7TayI Audio effect inspector. add more effects to your Audio mixing effect list

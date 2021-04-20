@@ -127,7 +127,7 @@ multiDexEnabled true
             java.srcDirs = [
                 'src'
 //DIR_SRC_BEGIN
-,'/media/joelwindows7/OS/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/android/vibration-plugin/src'
+,'C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/android/vibration-plugin/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [

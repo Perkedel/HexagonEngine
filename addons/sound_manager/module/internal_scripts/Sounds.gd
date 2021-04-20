@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 ####################################################################
-#SOUNDS SCRIPT FOR THE SOUND MANAGER MODULE FOR GODOT 3.1
+#SOUNDS SCRIPT FOR THE SOUND MANAGER MODULE FOR GODOT 3.2
 #			© Xecestel
 ####################################################################
 #
@@ -11,51 +11,50 @@ extends AudioStreamPlayer
 #
 #####################################
 
-#signals#
-signal finished_playing(sound_name);
-#########
+# Variables
 
-#constants#
-enum Type { BGS, SE, ME };
+var sound_type : String
+var sound_name : String;
+
+###########
+
+# Signals
+
+signal finished_playing(sound_name)
+
 ##########
 
-#variables#
-var type = Type.BGS;
-var sound_name;
-###########
 
 func _ready():
 	self.set_properties();
-#end
 
-func set_sound_name(sound_name : String) -> void:
-	self.sound_name = sound_name;
-#end
 
 func connect_signals(connect_to : Node) -> void:
-	self.connect("finished", self, "_on_self_finished");
-	if (self.type == Type.SE):
-		self.connect("finished_playing", connect_to, "_on_SE_finished" );
-	elif (self.type == Type.BGS):
-		self.connect("finished_playing", connect_to, "_on_BGS_finished" );
-	elif (self.type == Type.ME):
-		self.connect("finished_playing", connect_to, "_on_ME_finished" );
-#end
+	self.connect("finished", self, "_on_self_finished")
+	self.connect("finished_playing", connect_to, "_on_sound_finished");
+
 
 func set_properties(volume_db : float = 0.0, pitch_scale : float = 1.0) -> void:
 	self.set_volume_db(volume_db);
 	self.set_pitch_scale(pitch_scale);
-#end
 
-func set_type (type : String) -> void:
-	if (type == "BGS"):
-		self.type = Type.BGS;
-	elif (type == "SE"):
-		self.type = Type.SE;
-	elif (type == "ME"):
-		self.type = Type.ME;
-#end
+
+func set_sound_name(sound_name : String) -> void:
+	self.sound_name = sound_name;
+
+
+func set_sound_type(type : String) -> void:
+	self.sound_type = type
+
+
+func get_sound_type() -> String:
+	return self.sound_type
+
+
+func get_sound_name() -> String:
+	return sound_name
+
 
 func _on_self_finished() -> void:
-	emit_signal("finished_playing", self.sound_name);
-#end
+	emit_signal("finished_playing", self.get_sound_name());
+

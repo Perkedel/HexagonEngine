@@ -1,8 +1,8 @@
-class_name SoundManager_Pluggits
+class_name SoundManagerModule
 extends Node
 
 ####################################################################
-#CONFIGURATION FILE FOR THE SOUND MANAGER FOR GODOT 3.1
+#CONFIGURATION FILE FOR THE SOUND MANAGER FOR GODOT 3.2
 #			© Xecestel
 ####################################################################
 #

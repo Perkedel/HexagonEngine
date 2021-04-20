@@ -34,7 +34,7 @@ onready var immediateTween2 = $SystemGut/aTweens/Tween2
 onready var timerer = $SystemGut/Timer
 onready var LoadingPopup = $MetaMenu/LoadingPopup
 var DVDCardtridgeLists
-onready var isRunningDVD = true
+onready var isRunningDVD = false
 onready var preloadDVD = 0
 onready var doPreloadDVD = false
 onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
@@ -163,6 +163,7 @@ func DoChangeDVDNow():
 	$MetaMenu/ChangeDVDMenu.ShowMeSelf()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#$DVDCartridgeSlot.get_child(0).free()
+	isRunningDVD = false
 	pass
 
 func PatchedChangeDVDNow():
@@ -315,6 +316,7 @@ func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 	yield(interceptFiftConsole(path),"completed")
 	postInterception()
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
+	isRunningDVD = true
 	pass # Replace with function body.
 
 
@@ -332,4 +334,11 @@ func _on_ChangeDVDMenu_updateSelectionAssets(hoverImage, launchImage, hoverAudio
 
 
 func _on_ChangeDVDMenu_DVDListRefreshed():
+	pass # Replace with function body.
+
+
+func _on_GCode_done():
+	if not isRunningDVD:
+		print("CheatoCode done")
+		pass
 	pass # Replace with function body.

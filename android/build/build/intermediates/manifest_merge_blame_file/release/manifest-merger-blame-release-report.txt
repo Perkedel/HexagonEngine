@@ -1,0 +1,204 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.Perkedel.Hexagon"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="18"
+9-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml
+11
+12    <!-- Adding custom text to the manifest is fine, but do it outside the custom USER and APPLICATION BEGIN/END comments, -->
+13    <!-- as that gets rewritten. -->
+14
+15    <supports-screens
+15-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:12:5-16:40
+16        android:largeScreens="true"
+16-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:15:9-36
+17        android:normalScreens="true"
+17-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:14:9-37
+18        android:smallScreens="true"
+18-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:13:9-36
+19        android:xlargeScreens="true" />
+19-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:16:9-37
+20
+21    <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+22    <uses-feature
+22-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:19:5-21:35
+23        android:glEsVersion="0x00020000"
+23-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:20:9-41
+24        android:required="true" />
+24-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:21:9-32
+25
+26    <!-- Custom user permissions XML added by add-ons. It's recommended to add them from the export preset, though. -->
+27    <!-- CHUNK_USER_PERMISSIONS_BEGIN -->
+28    <uses-permission android:name="android.permission.VIBRATE" />
+28-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:25:1-62
+28-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:25:18-59
+29    <uses-permission android:name="android.permission.INTERNET" />
+29-->[GodotAdMob.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\127bbdc047a9cd1c3dac657b88ae58c9\GodotAdMob.release\AndroidManifest.xml:11:5-67
+29-->[GodotAdMob.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\127bbdc047a9cd1c3dac657b88ae58c9\GodotAdMob.release\AndroidManifest.xml:11:22-64
+30
+31    <instrumentation
+31-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:11:5-15:57
+32        android:name=".GodotInstrumentation"
+32-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:12:9-45
+33        android:icon="@mipmap/icon"
+33-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:13:9-36
+34        android:label="@string/godot_project_name_string"
+34-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:14:9-58
+35        android:targetPackage="org.godotengine.godot" />
+35-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:15:9-54
+36
+37    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+37-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:24:5-79
+37-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:24:22-76
+38    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- CHUNK_USER_PERMISSIONS_END -->
+38-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\97fe7eae467b7c543274f9b2f42d765e\play-services-measurement-sdk-api-17.1.0\AndroidManifest.xml:25:5-68
+38-->[com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\97fe7eae467b7c543274f9b2f42d765e\play-services-measurement-sdk-api-17.1.0\AndroidManifest.xml:25:22-65
+39    <!-- Any tag in this line after android:icon will be erased when doing custom builds. -->
+40    <!-- If you want to add tags manually, do before it. -->
+41    <!-- WARNING: This should stay on a single line until the parsing code is improved. See GH-32414. -->
+42    <application
+42-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:31:5-69:19
+43        android:name="androidx.multidex.MultiDexApplication"
+44        android:allowBackup="false"
+44-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:31:68-95
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.0.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\947833f03979c6d84fcd9a8feba7ce42\core-1.0.0\AndroidManifest.xml:22:18-86
+46        android:icon="@mipmap/icon"
+46-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:31:136-163
+47        android:label="@string/godot_project_name_string"
+47-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:31:18-67
+48        android:requestLegacyExternalStorage="true" >
+48-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:18:18-61
+49
+50        <!-- The following metadata values are replaced when Godot exports, modifying them here has no effect. -->
+51        <!-- Do these changes in the export preset. Adding new ones is fine. -->
+52
+53
+54        <!-- XR mode metadata. This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
+55        <meta-data
+55-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:37:9-39:54
+56            android:name="xr_mode_metadata_name"
+56-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:38:13-49
+57            android:value="xr_mode_metadata_value" />
+57-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:39:13-51
+58
+59        <!-- Metadata populated at export time and used by Godot to figure out which plugins must be enabled. -->
+60        <meta-data
+60-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:42:9-44:44
+61            android:name="plugins"
+61-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:43:13-35
+62            android:value="plugins_value" />
+62-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:44:13-42
+63
+64        <activity
+64-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:46:9-63:20
+65            android:name="com.godot.game.GodotApp"
+65-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:47:13-37
+66            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+66-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:52:13-141
+67            android:label="@string/godot_project_name_string"
+67-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:48:13-62
+68            android:launchMode="singleTask"
+68-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:50:13-44
+69            android:resizeableActivity="false"
+69-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:53:13-47
+70            android:screenOrientation="landscape"
+70-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:51:13-50
+71            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+71-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:49:13-77
+72
+73            <!-- Focus awareness metadata is updated at export time if the user enables it in the 'Xr Features' section. -->
+74            <meta-data
+74-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:57:13-88
+75                android:name="com.oculus.vr.focusaware"
+75-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:57:24-63
+76                android:value="false" />
+76-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:57:64-85
+77
+78            <intent-filter>
+78-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:59:13-62:29
+79                <action android:name="android.intent.action.MAIN" />
+79-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:60:17-69
+79-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:60:25-66
+80
+81                <category android:name="android.intent.category.LAUNCHER" />
+81-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:61:17-77
+81-->C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\AndroidManifest.xml:61:27-74
+82            </intent-filter>
+83        </activity>
+84
+85        <!-- Custom application XML added by add-ons. -->
+86        <!-- CHUNK_APPLICATION_BEGIN -->
+87        <!-- CHUNK_APPLICATION_END -->
+88
+89        <meta-data
+89-->[GodotAdMob.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\127bbdc047a9cd1c3dac657b88ae58c9\GodotAdMob.release\AndroidManifest.xml:14:9-16:82
+90            android:name="org.godotengine.plugin.v1.GodotAdMob"
+90-->[GodotAdMob.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\127bbdc047a9cd1c3dac657b88ae58c9\GodotAdMob.release\AndroidManifest.xml:15:13-64
+91            android:value="shinnil.godot.plugin.android.godotadmob.GodotAdMob" />
+91-->[GodotAdMob.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\127bbdc047a9cd1c3dac657b88ae58c9\GodotAdMob.release\AndroidManifest.xml:16:13-79
+92        <meta-data
+92-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:12:9-14:82
+93            android:name="org.godotengine.plugin.v1.GodotShare"
+93-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:13:13-64
+94            android:value="shinnil.godot.plugin.android.godotshare.GodotShare" />
+94-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:14:13-79
+95
+96        <provider
+96-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:16:9-24:20
+97            android:name="androidx.core.content.FileProvider"
+97-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:17:13-62
+98            android:authorities="com.Perkedel.Hexagon"
+98-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:18:13-51
+99            android:exported="false"
+99-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:19:13-37
+100            android:grantUriPermissions="true" >
+100-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:20:13-47
+101            <meta-data
+101-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:21:13-23:63
+102                android:name="android.support.FILE_PROVIDER_PATHS"
+102-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:22:17-67
+103                android:resource="@xml/file_provider_paths" />
+103-->[GodotShare.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\7f5032f4a71379a7c65d665b5cc0241e\GodotShare.release\AndroidManifest.xml:23:17-60
+104        </provider>
+105
+106        <service android:name="org.godotengine.godot.GodotDownloaderService" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+106-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:19:9-80
+106-->[godot-lib.release.aar] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\2f29423de5771cd0c2f475b364e10860\godot-lib.release\AndroidManifest.xml:19:18-77
+107        <activity
+107-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:29:9-33:64
+108            android:name="com.google.android.gms.ads.AdActivity"
+108-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:30:13-65
+109            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+109-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:31:13-122
+110            android:exported="false"
+110-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:32:13-37
+111            android:theme="@android:style/Theme.Translucent" />
+111-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:33:13-61
+112
+113        <provider
+113-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:35:9-39:39
+114            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+114-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:36:13-76
+115            android:authorities="com.Perkedel.Hexagon.mobileadsinitprovider"
+115-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:37:13-73
+116            android:exported="false"
+116-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:38:13-37
+117            android:initOrder="100" />
+117-->[com.google.android.gms:play-services-ads-lite:19.1.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\3c753941a76f4c279839d5cf29b50ade\play-services-ads-lite-19.1.0\AndroidManifest.xml:39:13-36
+118
+119        <meta-data
+119-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\4b33fe39b4bd70dbcdc496cdd6b30f72\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+120            android:name="com.google.android.gms.version"
+120-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\4b33fe39b4bd70dbcdc496cdd6b30f72\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+121            android:value="@integer/google_play_services_version" />
+121-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\joelr\.gradle\caches\transforms-2\files-2.1\4b33fe39b4bd70dbcdc496cdd6b30f72\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+122    </application>
+123
+124</manifest>
