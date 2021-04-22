@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/174_bpm.mp3-0421cac4f3cc6c62f0c042dfa8ebccd6.mp3str"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Sampling/Pen-and-paper (Discorded)/174_bpm.mp3"
+dest_files=[ "res://.import/174_bpm.mp3-0421cac4f3cc6c62f0c042dfa8ebccd6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

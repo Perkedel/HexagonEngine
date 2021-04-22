@@ -1,4 +1,4 @@
-extends SoundManagerModule
+extends SoundManagerModule 
 
 ####################################################################
 #	SOUND MANAGER MODULE FOR GODOT 3.2

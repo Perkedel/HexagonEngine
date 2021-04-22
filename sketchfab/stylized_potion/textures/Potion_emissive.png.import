@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.stex"
 path.etc2="res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc2.stex"
 path.etc="res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc.stex"
+path.pvrtc="res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/stylized_potion/textures/Potion_emissive.png"
-dest_files=[ "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.stex", "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc2.stex", "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc.stex" ]
+dest_files=[ "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.stex", "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc2.stex", "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc.stex", "res://.import/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.pvrtc.stex" ]
 
 [params]
 

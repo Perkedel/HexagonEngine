@@ -25,17 +25,17 @@ jobs:
     # Pls download Godot
     - name: Download Godot, Export Template, and Export now!
       run: |
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_linux_headless.64.zip
-        unzip Godot_v3.2.3-stable_linux_headless.64.zip
-        mv Godot_v3.2.3-stable_linux_headless.64 godot
+        wget -q https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_linux_headless.64.zip
+        unzip Godot_v3.3-stable_linux_headless.64.zip
+        mv Godot_v3.3-stable_linux_headless.64 godot
         chmod +x godot
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_export_templates.tpz
+        wget -q https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_export_templates.tpz
         mkdir -p ~/.local/share/godot/templates
-        unzip Godot_v3.2.3-stable_export_templates.tpz -d ~/.local/share/godot/templates
+        unzip Godot_v3.3-stable_export_templates.tpz -d ~/.local/share/godot/templates
         wget -q -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
         unzip butler.zip
         chmod +x butler
-        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.3.stable.
+        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.3.stable.
         mkdir -p linux64
         ./godot --export linux project.godot "linux64/hexagon-engine_Hexk-CI --quiet"
         mkdir -p win64

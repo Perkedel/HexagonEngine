@@ -31,6 +31,15 @@ A Higher Level Application and Game Framework.
 Powered by Godot Engine.
  
 # Installing
+## Peck this poop just download entire source code and run it immediately!!! EXE, BIN Linux
+- Download this source code by press green `Code` download button
+- it is recommended to use [`Github Dekstop`](https://desktop.github.com ) instead of `Download ZIP`. Follow section `Source Code, Modding, or Compiling yourself` from step 1 until step `Clone` button.
+- for Windows, run `HexagonEngine.bat`; for Linux, run `./HexagonEngine.sh`. oh make sure you have `chmod +x ./HexagonEngine.sh` beforehand if it had no executable privilege yet (a.k.a. access denied to execute this sh file).
+- both script will print `Hexagon Engine by Perkedel Technologies` and then execute respective export template each platform next to this script file. Windows will run `.\windows_64_debug.exe`, while Linux will run `linux_x11_64_debug`.
+- enjoy yay!
+
+why there is this? read reason on section `Export Trouble` down at the bottom bellow.
+
 ## Binary EXE, BIN, APK, etc.
 - Get them from [itch.io](https://joelwindows7.itch.io/hexagon-engine?secret=8DRej5vqw5nRRGnxZ6I04sNKo )
 - Download any of the binary for designated OS of yours
@@ -165,7 +174,16 @@ export template 'linux' appears to be missing
 
 sadd. But don't worry, we'll setup and upload the manual render build version anyway, **Which ironically works!**
 
+# Export Trouble
+our `./.import` folder finally reaches more than 2 GB. and as of now, this Godot version (3.2.3, 3.3) has buggy File system access. it uses 32-bit access. so, when the Godot attempted to pack more than 2 GB total into the `project.binary` it will corrupt and becomes unplayable. We are apologize for the inconviniences. until the Godot itself fixes this issue, please download entire source code and then run the `HexagonEngine.sh` (Linux) or `HexagonEngine.bat` (Windows) script, to just play Hexagon Engine without downloading Godot Engine first.
 
+- https://github.com/godotengine/godot/issues/27168 pck more than 2.1 gb error
+- https://github.com/godotengine/godot/issues/44363 manually put an export template in root folder of this project
+- https://godotengine.org/qa/75329/game-over-and-not-working-what-best-handle-this-godot-stable
+- https://github.com/godotengine/godot-proposals/issues/400 it seems that it will only fix in Godot 4.0
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_pcks.html
+- https://github.com/godotengine/godot/issues/44363
+- https://github.com/godotengine/godot/pull/47254 akien is fixing, but this PR here is still WIP for now unfortunately
 
 
 

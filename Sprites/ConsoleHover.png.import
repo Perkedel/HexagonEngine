@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.s3tc.stex"
 path.etc2="res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc2.stex"
 path.etc="res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc.stex"
+path.pvrtc="res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/ConsoleHover.png"
-dest_files=[ "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.s3tc.stex", "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc2.stex", "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc.stex" ]
+dest_files=[ "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.s3tc.stex", "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc2.stex", "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.etc.stex", "res://.import/ConsoleHover.png-4994cf2f94a12b8f2c1f591374aeb381.pvrtc.stex" ]
 
 [params]
 

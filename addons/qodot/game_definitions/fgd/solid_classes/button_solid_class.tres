@@ -126,10 +126,8 @@ class_properties = {
 "trigger_signal_delay": 0.0
 }
 class_property_descriptions = {
-
 }
 meta_properties = {
-
 }
 node_options = "----------------------------------------------------------------"
 node_class = "Area"

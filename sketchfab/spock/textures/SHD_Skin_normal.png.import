@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.s3tc.stex"
 path.etc2="res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc2.stex"
 path.etc="res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc.stex"
+path.pvrtc="res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/spock/textures/SHD_Skin_normal.png"
-dest_files=[ "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.s3tc.stex", "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc2.stex", "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc.stex" ]
+dest_files=[ "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.s3tc.stex", "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc2.stex", "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.etc.stex", "res://.import/SHD_Skin_normal.png-7f5a72edfe834fdd7cec44a37e0d14ae.pvrtc.stex" ]
 
 [params]
 

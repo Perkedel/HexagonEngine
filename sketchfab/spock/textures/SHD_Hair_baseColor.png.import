@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.stex"
 path.etc2="res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc2.stex"
 path.etc="res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc.stex"
+path.pvrtc="res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/spock/textures/SHD_Hair_baseColor.png"
-dest_files=[ "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.stex", "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc2.stex", "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc.stex" ]
+dest_files=[ "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.stex", "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc2.stex", "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc.stex", "res://.import/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.pvrtc.stex" ]
 
 [params]
 

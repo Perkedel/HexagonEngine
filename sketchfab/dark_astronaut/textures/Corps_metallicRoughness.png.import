@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.s3tc.stex"
 path.etc2="res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc2.stex"
 path.etc="res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc.stex"
+path.pvrtc="res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Corps_metallicRoughness.png"
-dest_files=[ "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.s3tc.stex", "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc2.stex", "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc.stex" ]
+dest_files=[ "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.s3tc.stex", "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc2.stex", "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.etc.stex", "res://.import/Corps_metallicRoughness.png-fb349dd499b342cb1caff37acd59c584.pvrtc.stex" ]
 
 [params]
 

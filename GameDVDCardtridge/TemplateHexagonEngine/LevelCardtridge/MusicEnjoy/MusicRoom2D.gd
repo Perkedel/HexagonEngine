@@ -239,9 +239,14 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 		# # https://github.com/godotengine/godot/issues/17748#issuecomment-376320424
 		streamSample = AudioStreamOGGVorbis.new()
 		pass
-	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m") or path.ends_with(".mp3") or path.ends_with(".XM") or path.ends_with(".MOD") or path.ends_with(".IT") or path.ends_with(".S3M") or path.ends_with(".MP3"):
+	elif path.capitalize().ends_with(".MP3"):
+		streamSample = AudioStreamMP3.new()
+		# NEW!!! Godot 3.3 Audio Stream now supports MP3 yay!
+		# it's similar way like OGG, just it's MP3
+		# https://godotengine.org/article/godot-3-3-has-arrived
+		pass
+	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m")or path.ends_with(".XM") or path.ends_with(".MOD") or path.ends_with(".IT") or path.ends_with(".S3M"):
 		useGME = true
-		
 		pass
 	elif path.ends_with(".mid") or path.ends_with(".midi") or path.ends_with(".MID") or path.ends_with(".MIDI"):
 		useArlezMidi = true

@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.s3tc.stex"
 path.etc2="res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc2.stex"
 path.etc="res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc.stex"
+path.pvrtc="res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/malik_do_kyanon/textures/lambert5_baseColor.png"
-dest_files=[ "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.s3tc.stex", "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc2.stex", "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc.stex" ]
+dest_files=[ "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.s3tc.stex", "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc2.stex", "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.etc.stex", "res://.import/lambert5_baseColor.png-4f1240fad7bcef763dee43471a6ac513.pvrtc.stex" ]
 
 [params]
 

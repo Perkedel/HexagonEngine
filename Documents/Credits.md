@@ -313,3 +313,10 @@ Used Assets and Tools!
 - https://github.com/godotengine/godot/pull/47254 akien is fixing, but this PR here is still WIP for now unfortunately
 - https://en.wikipedia.org/wiki/Shell_script sh file 
 - https://youtu.be/WZzeIv7TayI Audio effect inspector. add more effects to your Audio mixing effect list
+- https://www.newgrounds.com/portal/view/770371 Friday Night Funkin' has timed exclusive the Tankman (Newgrounds mascot guy)
+- https://ninja-muffin24.itch.io/funkin This is the itch of Funkin' and it is licensed Apache License 2.0 just like Android is
+- https://github.com/ninjamuffin99/Funkin source code here
+- https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game/ and yes, I fond something fishy here. they're going to build enchanced mastering version of this. and that one won't be $0. they fell too as well, they're just like them. don't worry guys, I buy it so if you hate that they're gonna do that, you don't have to buy it. I'll play it for you. no, *not pirate*. I'll stream the gameplay to you guys, like usual.
+- https://github.com/GDQuest/godot-2d-rhythm hayodosil pls sTile
+- https://godotengine.org/asset-library/asset/371 old change resolution debug editor
+- https://github.com/vinod8990/godot_plugins/tree/master/Resolution%20Switcher switch resolution old

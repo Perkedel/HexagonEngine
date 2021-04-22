@@ -104,6 +104,7 @@ use_threads = true
 
 [node name="GCode" type="Node" parent="."]
 script = ExtResource( 12 )
+
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]
 [connection signal="NoDisc" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_NoDisc"]

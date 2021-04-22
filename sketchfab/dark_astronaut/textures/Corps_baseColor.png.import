@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.s3tc.stex"
 path.etc2="res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc2.stex"
 path.etc="res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc.stex"
+path.pvrtc="res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Corps_baseColor.png"
-dest_files=[ "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.s3tc.stex", "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc2.stex", "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc.stex" ]
+dest_files=[ "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.s3tc.stex", "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc2.stex", "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.etc.stex", "res://.import/Corps_baseColor.png-25719079b13d0ba7a623e155f510ea25.pvrtc.stex" ]
 
 [params]
 

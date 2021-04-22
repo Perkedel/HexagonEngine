@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.s3tc.stex"
 path.etc2="res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc2.stex"
 path.etc="res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc.stex"
+path.pvrtc="res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/epson__wacom_laptop/textures/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png"
-dest_files=[ "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.s3tc.stex", "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc2.stex", "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc.stex" ]
+dest_files=[ "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.s3tc.stex", "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc2.stex", "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.etc.stex", "res://.import/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.pvrtc.stex" ]
 
 [params]
 

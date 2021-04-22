@@ -1,4 +1,4 @@
-class_name SoundManagerModule
+
 extends Node
 
 ####################################################################
@@ -11,6 +11,7 @@ extends Node
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 ############################################
+class_name SoundManagerModule
 
 export var Audio_Files_Dictionary : Dictionary = {
 	"SoundName1" : "sound_file_name.extension",

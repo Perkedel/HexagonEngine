@@ -5,15 +5,16 @@ type="StreamTexture"
 path.s3tc="res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.s3tc.stex"
 path.etc2="res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc2.stex"
 path.etc="res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc.stex"
+path.pvrtc="res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.pvrtc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc", "pvrtc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/GodotTan_Low_Clothes_Main_Normal_OGL.jpg"
-dest_files=[ "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.s3tc.stex", "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc2.stex", "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc.stex" ]
+dest_files=[ "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.s3tc.stex", "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc2.stex", "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.etc.stex", "res://.import/GodotTan_Low_Clothes_Main_Normal_OGL.jpg-f1ca7dd755582b20a044e10118c968aa.pvrtc.stex" ]
 
 [params]
 
