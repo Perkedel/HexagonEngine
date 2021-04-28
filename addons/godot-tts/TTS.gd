@@ -132,15 +132,15 @@ func speak(text, interrupt := true):
 	elif OS.has_feature('JavaScript'):
 		var code = (
 			"""
-            let utterance = new SpeechSynthesisUtterance("%s")
-            utterance.rate = %s
-        """
+			let utterance = new SpeechSynthesisUtterance("%s")
+			utterance.rate = %s
+		"""
 			% [text.replace("\n", " "), javascript_rate]
 		)
 		if interrupt:
 			code += """
-                window.speechSynthesis.cancel()
-            """
+				window.speechSynthesis.cancel()
+			"""
 		code += "window.speechSynthesis.speak(utterance)"
 		JavaScript.eval(code)
 	else:

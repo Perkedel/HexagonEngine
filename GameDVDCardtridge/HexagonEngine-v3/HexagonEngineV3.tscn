@@ -13,5 +13,6 @@ PauseMainMenuFile = ExtResource( 3 )
 [node name="UICanvas" type="CanvasLayer" parent="."]
 
 [node name="UIplace" parent="UICanvas" instance=ExtResource( 2 )]
+
 [connection signal="doChangeDVD" from="UICanvas/UIplace" to="." method="_on_UIplace_doChangeDVD"]
 [connection signal="doShutdown" from="UICanvas/UIplace" to="." method="_on_UIplace_doShutdown"]

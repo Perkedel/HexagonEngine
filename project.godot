@@ -1359,6 +1359,7 @@ Network="*res://scripts/Network.gd"
 JavascriptManager="*res://addons/WebAudioExternal/JavascriptManager.gd"
 AudioManager="*res://addons/WebAudioExternal/AudioManager.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+Tts="*res://addons/godot-tts/TTS.gd"
 
 [compression]
 

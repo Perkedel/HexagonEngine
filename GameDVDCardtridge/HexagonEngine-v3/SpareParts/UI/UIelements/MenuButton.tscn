@@ -74,7 +74,16 @@ text = "MenuButton"
 align = 1
 
 [node name="ButtonSpeaker" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 4 )
+bus = "SoundEffect"
+
+[node name="ButtonSpeaker2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+position = Vector2( 960, 540 )
+stream = ExtResource( 4 )
+bus = "SoundEffect"
+
 [connection signal="button_down" from="." to="." method="_on_MenuButton_button_down"]
 [connection signal="button_up" from="." to="." method="_on_MenuButton_button_up"]
 [connection signal="pressed" from="." to="." method="_on_MenuButton_pressed"]

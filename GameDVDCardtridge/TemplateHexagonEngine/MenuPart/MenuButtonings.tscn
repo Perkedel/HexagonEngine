@@ -14,8 +14,8 @@
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -350.0
-margin_bottom = -3.0
+margin_top = -1080.0
+margin_bottom = -755.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -47,16 +47,15 @@ margin_bottom = 121.0
 [node name="MoreMenu" type="CenterContainer" parent="."]
 margin_top = 125.0
 margin_right = 1920.0
-margin_bottom = 347.0
+margin_bottom = 325.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BoxMenuContainings" type="HBoxContainer" parent="MoreMenu"]
 margin_left = 202.0
-margin_top = 11.0
 margin_right = 1718.0
-margin_bottom = 211.0
+margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -108,6 +107,7 @@ margin_bottom = 200.0
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
 
 [node name="MenuButtonTweens" type="Tween" parent="."]
+
 [connection signal="Hover_MoreMenu_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_MoreMenu_Button"]
 [connection signal="Hover_Play_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Hover_Play_Button"]
 [connection signal="Press_Play_Button" from="FocusArea/SamPlayArea" to="." method="_on_SamPlayArea_Press_Play_Button"]
