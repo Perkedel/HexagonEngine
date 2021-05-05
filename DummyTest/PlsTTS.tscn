@@ -7,7 +7,7 @@
 [ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=5]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 size = 72
@@ -15,9 +15,8 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 resource_local_to_scene = true
-resource_name = "SuperLabel"
 size = 48
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -58,7 +57,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 958.0
 margin_bottom = 90.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Utu Ano"
 align = 1
 size = 72.0
@@ -79,7 +78,7 @@ anchor_bottom = 0.0
 margin_top = 990.0
 margin_right = 958.0
 margin_bottom = 1080.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "I ved Gro"
 align = 1
 size = 72.0
@@ -96,7 +95,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 958.0
 margin_bottom = 63.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Please Text to Speech Now!"
 align = 1
 size = 48.0

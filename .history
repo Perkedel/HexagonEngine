@@ -8,3 +8,4 @@ mkdir TermTestoid
 help
 ls
 sudo apt upgrade
+flite -t "Hello world" -voice rms

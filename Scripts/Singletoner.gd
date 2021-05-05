@@ -13,8 +13,9 @@ var andScronchMe
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SceneLoader.connect("on_scene_loaded", self, "_BiosLoaded")
-	AutoSpeaker.stream = preload("res://Audio/EfekSuara/425728__moogy73__click01.wav")
-	AutoSpeaker.play()
+	#AutoSpeaker.stream = preload("res://Audio/EfekSuara/425728__moogy73__click01.wav")
+	#AutoSpeaker.play()
+	AutoSpeaker.playSFXNow(load("res://Audio/EfekSuara/425728__moogy73__click01.wav"))
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

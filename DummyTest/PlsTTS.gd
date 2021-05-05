@@ -16,10 +16,33 @@ func DoSpeak():
 			Tts.speak(textContains)
 			pass
 		1:
-			OS.execute("flite",["-t {textToSay} -voice {VoiceName}".format({
-				textToSay = textContains,
-				VoiceName = chosenVoice,
-			})],false)
+			var Command = "flite "
+			var out = []
+			print(Command)
+			
+			OS.execute("flite",["'{textToSay}'".format({
+				textToSay = textContains
+			}),"-voice",chosenVoice],true,out)
+			
+#			OS.execute("flite",["-t '{textToSay}'".format({
+#				textToSay = textContains,
+#			})],true,out)
+			
+#			OS.execute("flite",["-t '{textToSay}'".format({
+#				textToSay = textContains,
+#			}),"-voice '{VoiceName}'".format({
+#				VoiceName = chosenVoice,
+#			})],true,out)
+#			OS.execute("flite",["-t '{textToSay}' ".format(
+#				{
+#					textToSay = textContains,
+#				}
+#			)],true,out)
+#			OS.execute("flite -t '{textToSay}'".format({
+#				textToSay = textContains,
+#				VoiceName = chosenVoice,
+#			}),[],true,out)
+			print(String(out))
 			pass
 		_:
 			Tts.speak(textContains)

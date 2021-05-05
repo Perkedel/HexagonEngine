@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://DummyTest/RhythmTestoid.gd" type="Script" id=1]
+[ext_resource path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" type="AudioStream" id=2]
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+resource_local_to_scene = true
+font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+resource_name = "SuperLabel"
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[node name="RhythmTestoid" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.49829
+margin_right = 1.49829
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+pitch_scale = 0.5
+
+[node name="Measure" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="PlaySong" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -898.597
+margin_top = -478.597
+margin_right = -246.597
+margin_bottom = -300.597
+MenuName = "Play"
+ChooseOrientation = 2
+
+[node name="StopSong" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.851
+margin_top = -471.106
+margin_right = 420.149
+margin_bottom = -293.106
+MenuName = "Stop"
+ChooseOrientation = 2
+
+[node name="SuperLabel" parent="." instance=ExtResource( 4 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -459.5
+margin_top = -129.5
+margin_right = 459.5
+margin_bottom = 129.5
+custom_fonts/font = SubResource( 2 )
+text = "Labelle"
+fontFile = SubResource( 1 )
+
+[connection signal="pressed" from="PlaySong" to="." method="_on_PlaySong_pressed"]
+[connection signal="pressed" from="StopSong" to="." method="_on_StopSong_pressed"]
