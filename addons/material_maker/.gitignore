@@ -1,0 +1,20 @@
+
+# Godot-specific ignores
+.import/
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# System/tool-specific ignores
+.directory
+*~
+
+# Compiled documentation
+_build/
+addons/material_maker/examples/*.ptex.import
+addons/material_maker/library/base/*.png.import

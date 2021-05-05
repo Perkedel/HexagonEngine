@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Rear_Right.wav-dfb8d597d417f8ad21a60388c649a243.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Rear_Right.wav"
+dest_files=[ "res://.import/Rear_Right.wav-dfb8d597d417f8ad21a60388c649a243.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -9,6 +9,8 @@ export (float) var MaxFrequency = 44100
 # var a = 2
 # var b = "text"
 
+export (bool) var AudioSettingLoaded = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Spectrum = AudioServer.get_bus_effect_instance(AudioServer.get_bus_index(AnalyzeBus), EffectAnalyze)

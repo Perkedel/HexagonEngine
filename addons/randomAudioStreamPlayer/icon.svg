@@ -1,0 +1,127 @@
+<!-- 
+    This SVG file is derived from the AudioStreamPlayer icon from Godot Engine:
+    https://github.com/godotengine/godot/blob/master/editor/icons/icon_audio_stream_player.svg
+    
+    Here's Godot Engine's license:
+
+		Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.
+		Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).
+
+		Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:
+
+		The above copyright notice and this permission notice shall be included in all
+		copies or substantial portions of the Software.
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+		SOFTWARE.
+
+	End of license
+-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg13"
+   version="1.1"
+   width="21.307255"
+   viewBox="0 0 21.307255 21.307253"
+   height="21.307253">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs17">
+    <linearGradient
+       y2="15"
+       y1="1"
+       x2="8"
+       x1="8"
+       gradientUnits="userSpaceOnUse"
+       id="a-3"
+       gradientTransform="translate(0.01697656,0.68979296)">
+      <stop
+         id="stop2-6"
+         stop-color="#ff7a7a"
+         offset="0" />
+      <stop
+         id="stop4-7"
+         stop-color="#e1dc7a"
+         offset=".5" />
+      <stop
+         id="stop6-5"
+         stop-color="#66ff9e"
+         offset="1" />
+    </linearGradient>
+    <filter
+       height="1.2720404"
+       y="-0.13602021"
+       width="1.2519313"
+       x="-0.12596567"
+       id="filter1596"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur1598"
+         stdDeviation="0.7650271" />
+    </filter>
+  </defs>
+  <linearGradient
+     gradientTransform="translate(2.3654884,2.6705727)"
+     y2="15"
+     y1="1"
+     x2="8"
+     x1="8"
+     gradientUnits="userSpaceOnUse"
+     id="a">
+    <stop
+       id="stop2"
+       stop-color="#ff7a7a"
+       offset="0" />
+    <stop
+       id="stop4"
+       stop-color="#e1dc7a"
+       offset=".5" />
+    <stop
+       id="stop6"
+       stop-color="#66ff9e"
+       offset="1" />
+  </linearGradient>
+  <path
+     style="fill:#4c537f;fill-opacity:1;stroke:#3d4265;stroke-width:1.03250158;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 10.653626,20.790998 c 4.442141,0 6.911587,0 8.524482,-1.612891 1.612891,-1.612895 1.612891,-4.082341 1.612891,-8.524481 0,-4.4421398 0,-6.9115858 -1.612891,-8.5244805 -1.612895,-1.61289093 -4.082341,-1.61289093 -8.524482,-1.61289093 -4.4421396,0 -6.9115858,0 -8.5244804,1.61289093 -1.61289103,1.6128947 -1.61289103,4.0823407 -1.61289103,8.5244805 0,4.44214 0,6.911586 1.61289103,8.524481 1.6128946,1.612891 4.0823408,1.612891 8.5244804,1.612891 z"
+     id="path830" />
+  <path
+     transform="matrix(0.99999555,0,0,0.999995,2.3655261,2.4708407)"
+     id="path9-3"
+     d="m 11.970703,1.4296875 a 1.0001,1.0001 0 0 0 -0.246094,0.037109 l -6.9999996,2 A 1.0001,1.0001 0 0 0 4,4.4277344 V 9.9785156 A 2.5,2.5 0 0 0 3.5,9.9277344 2.5,2.5 0 0 0 1,12.427734 a 2.5,2.5 0 0 0 2.5,2.5 A 2.5,2.5 0 0 0 5.9960938,12.515625 1.0001,1.0001 0 0 0 6,12.427734 V 5.1835938 l 5,-1.4277344 v 3.171875 l 2,-1 v -3.5 A 1.0001,1.0001 0 0 0 11.970703,1.4296875 Z m 1.527344,6.4941406 c -0.23426,-0.0054 -0.427775,0.178412 -0.427735,0.40625 v 0.1503907 c -1.575509,0 -2.902343,1.277646 -2.902343,2.9042972 0,0.605004 -0.4906977,1.095703 -1.0957034,1.095703 H 7.71875 v 1.808593 h 1.3535156 c 1.5755104,0 2.9042984,-1.277645 2.9042964,-2.904296 0,-0.605005 0.488747,-1.095704 1.09375,-1.095704 v 0.150391 c 2.9e-4,0.312212 0.34888,0.507627 0.626954,0.351563 l 1.669922,-1.0546879 c 0.278304,-0.15619 0.278304,-0.546935 0,-0.703125 L 13.697266,7.9785156 c -0.06053,-0.03422 -0.12927,-0.052977 -0.199219,-0.054687 z M 7.71875,8.4804688 v 1.8085932 h 1.3515625 c 0.2375402,0 0.4553843,0.07853 0.6347656,0.207032 C 9.8650998,9.8921307 10.180379,9.3547634 10.607422,8.9277344 10.158088,8.6459844 9.6308898,8.4804688 9.0703125,8.4804688 Z m 5.777344,3.4453122 c -0.234259,-0.0054 -0.425822,0.178412 -0.425782,0.40625 v 0.148438 c -0.23666,0 -0.453797,-0.07549 -0.632812,-0.203125 -0.160604,0.603476 -0.477048,1.141853 -0.904297,1.568359 0.449158,0.281431 0.976875,0.445313 1.537109,0.445313 v 0.148437 c 2.9e-4,0.312212 0.346926,0.507628 0.625,0.351563 l 1.669922,-1.054688 c 0.278305,-0.15619 0.278305,-0.544983 0,-0.701172 l -1.669922,-1.054687 c -0.06053,-0.03422 -0.129269,-0.05298 -0.199218,-0.05469 z"
+     style="opacity:0.40800003;fill:#2d304a;fill-opacity:0.81736528;filter:url(#filter1596)" />
+  <path
+     style="fill:url(#a)"
+     id="path9"
+     d="m 14.336488,3.6725727 a 1.0001,1.0001 0 0 0 -0.24609,0.037109 l -6.9999996,2 a 1.0001,1.0001 0 0 0 -0.72461,0.96094 v 5.5508003 a 2.5,2.5 0 0 0 -0.5,-0.05078 2.5,2.5 0 0 0 -2.5,2.5 2.5,2.5 0 0 0 2.5,2.5 2.5,2.5 0 0 0 2.4961,-2.4121 1.0001,1.0001 0 0 0 0.00391,-0.08789 V 7.4265507 l 4.9999996,-1.4277 v 3.1719 l 2,-1 v -3.5 a 1.0001,1.0001 0 0 0 -1.0293,-0.99805 z" />
+  <path
+     id="path11"
+     style="fill:#e0e0e0"
+     d="m 15.863535,10.166666 c -0.23426,-0.0054 -0.427776,0.178412 -0.427735,0.40625 v 0.150391 c -1.575509,0 -2.902343,1.277645 -2.902343,2.904297 0,0.605004 -0.490697,1.095703 -1.095703,1.095703 h -1.353516 v 1.808594 h 1.353516 c 1.57551,0 2.904297,-1.277646 2.904296,-2.904297 0,-0.605005 0.488746,-1.095703 1.09375,-1.095703 v 0.150391 c 2.9e-4,0.312212 0.34888,0.507626 0.626954,0.351562 l 1.669922,-1.054688 c 0.278304,-0.15619 0.278305,-0.546935 0,-0.703125 l -1.669922,-1.054687 c -0.06053,-0.03422 -0.12927,-0.05298 -0.199219,-0.05469 z m -5.779297,0.556641 v 1.808594 h 1.351563 c 0.23754,0 0.455384,0.07853 0.634765,0.207031 0.160022,-0.603964 0.475301,-1.141331 0.902344,-1.568359 -0.449334,-0.281751 -0.976532,-0.447266 -1.537109,-0.447266 z m 5.777344,3.445313 c -0.234259,-0.0054 -0.425823,0.178412 -0.425782,0.40625 v 0.148437 c -0.23666,0 -0.453797,-0.07549 -0.632812,-0.203125 -0.160604,0.603476 -0.477048,1.141854 -0.904297,1.56836 0.449158,0.281431 0.976875,0.445312 1.537109,0.445312 v 0.148438 c 2.9e-4,0.312212 0.346926,0.507627 0.625,0.351562 l 1.669922,-1.054687 c 0.278305,-0.15619 0.278305,-0.544983 0,-0.701172 L 16.0608,14.223307 c -0.06053,-0.03422 -0.129269,-0.05298 -0.199218,-0.05469 z" />
+</svg>

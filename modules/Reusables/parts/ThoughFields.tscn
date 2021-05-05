@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://modules/Reusables/DSEGLabel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" type="Script" id=2]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 7 )
+script = ExtResource( 2 )
+chooseMode = "14Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 48
+font_data = ExtResource( 8 )
+script = ExtResource( 2 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 128
+font_data = ExtResource( 4 )
+script = ExtResource( 2 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "BoldItalic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 48
+font_data = ExtResource( 5 )
+script = ExtResource( 2 )
+chooseMode = "7Seg"
+chooseForm = "Classic"
+miniForm = false
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[sub_resource type="DynamicFont" id=5]
+resource_local_to_scene = true
+resource_name = "kashikan-DSEG"
+size = 32
+font_data = ExtResource( 6 )
+script = ExtResource( 2 )
+chooseMode = "7Seg"
+chooseForm = "Modern"
+miniForm = true
+fontWeight = "Regular"
+Fonts = {
+
+}
+
+[node name="ThoughFields" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="topField" type="HBoxContainer" parent="."]
+margin_top = 420.0
+margin_right = 1920.0
+margin_bottom = 476.0
+size_flags_horizontal = 3
+
+[node name="Day" parent="topField" instance=ExtResource( 1 )]
+margin_top = 0.0
+margin_right = 958.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "SEN."
+size = 48.0
+chooseMode = "14Seg"
+chooseForm = "Modern"
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[node name="Date" parent="topField" instance=ExtResource( 1 )]
+margin_left = 962.0
+margin_top = 0.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "12-04-2021"
+size = 48.0
+chooseForm = "Modern"
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[node name="bottomField" type="HBoxContainer" parent="."]
+margin_top = 480.0
+margin_right = 1920.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="HourMin" parent="bottomField" instance=ExtResource( 1 )]
+margin_top = 0.0
+margin_right = 958.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "23:23"
+size = 128.0
+fontWeight = "BoldItalic"
+Fonts = {
+
+}
+
+[node name="Second" parent="bottomField" instance=ExtResource( 1 )]
+margin_left = 962.0
+margin_top = 0.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "23"
+valign = 2
+size = 48.0
+fontWeight = "Italic"
+Fonts = {
+
+}
+
+[node name="underField" type="HBoxContainer" parent="."]
+margin_top = 620.0
+margin_right = 1920.0
+margin_bottom = 660.0
+
+[node name="UnixTime" parent="underField" instance=ExtResource( 1 )]
+margin_top = 0.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
+text = "1234567890"
+align = 2
+size = 32.0
+chooseForm = "Modern"
+miniForm = true
+Fonts = {
+
+}

@@ -4,33 +4,6 @@
 constant = Color( 0.514196, 1, 0, 1 )
 
 [resource]
-code = "shader_type spatial;
-
-
-
-void vertex() {
-// Luaran:0
-
-}
-
-void fragment() {
-// Color:4
-	vec3 n_out4p0;
-	float n_out4p1;
-	n_out4p0 = vec3(0.514196,1.000000,0.000000);
-	n_out4p1 = 1.000000;
-
-// Luaran:0
-	ALBEDO = n_out4p0;
-	ALPHA = n_out4p1;
-
-}
-
-void light() {
-// Luaran:0
-
-}
-"
 graph_offset = Vector2( -341, 98.75 )
 nodes/fragment/0/position = Vector2( 620, 120 )
 nodes/fragment/4/node = SubResource( 1 )

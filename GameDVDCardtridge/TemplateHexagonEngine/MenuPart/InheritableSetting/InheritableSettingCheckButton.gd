@@ -1,3 +1,4 @@
+tool
 extends HBoxContainer
 
 export (String) var VariableName = "CheckButton"
@@ -18,7 +19,7 @@ func ForceValue(value: bool):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#$Label.text = VariableName
+	$Label.text = VariableName
 	pass
 
 signal Statement(value1)

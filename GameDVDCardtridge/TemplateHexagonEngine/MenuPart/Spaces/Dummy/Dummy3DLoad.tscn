@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[node name="Dummy3DLoad" type="Spatial"]
+
+[node name="TestCapsule" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestCapsule"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="TestCapsule"]
+mesh = SubResource( 2 )

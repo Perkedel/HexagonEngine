@@ -8,7 +8,7 @@ func _process(delta):
 	
 	var mat = get_surface_material(0)
 	var cam = get_parent()
-	assert cam is Camera
+	assert( cam is Camera)
 	
 	# Linear velocity is just difference in positions between two frames.
 	var velocity = cam.global_transform.origin - cam_pos_prev

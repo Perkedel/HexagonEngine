@@ -1,0 +1,303 @@
+{
+	"connections": [
+		{
+			"from": "switch",
+			"from_port": 0,
+			"to": "buffer_2",
+			"to_port": 0
+		},
+		{
+			"from": "gen_inputs",
+			"from_port": 0,
+			"to": "buffer",
+			"to_port": 0
+		},
+		{
+			"from": "switch_2",
+			"from_port": 0,
+			"to": "gen_outputs",
+			"to_port": 0
+		},
+		{
+			"from": "switch",
+			"from_port": 0,
+			"to": "switch_2",
+			"to_port": 1
+		},
+		{
+			"from": "gen_inputs",
+			"from_port": 0,
+			"to": "switch",
+			"to_port": 1
+		},
+		{
+			"from": "buffer",
+			"from_port": 0,
+			"to": "gaussian_blur_x",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur_x",
+			"from_port": 0,
+			"to": "switch",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur_y",
+			"from_port": 0,
+			"to": "switch_2",
+			"to_port": 0
+		},
+		{
+			"from": "buffer_2",
+			"from_port": 0,
+			"to": "gaussian_blur_y",
+			"to_port": 0
+		},
+		{
+			"from": "gen_inputs",
+			"from_port": 1,
+			"to": "gaussian_blur_x",
+			"to_port": 1
+		},
+		{
+			"from": "gen_inputs",
+			"from_port": 1,
+			"to": "gaussian_blur_y",
+			"to_port": 1
+		}
+	],
+	"label": "Gaussian Blur",
+	"name": "gaussian_blur",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"name": "buffer_2",
+			"node_position": {
+				"x": -399.875,
+				"y": -43.625
+			},
+			"parameters": {
+				"lod": 0,
+				"size": 9
+			},
+			"type": "buffer"
+		},
+		{
+			"name": "switch",
+			"node_position": {
+				"x": -496.452393,
+				"y": -130.166656
+			},
+			"parameters": {
+				"choices": 2,
+				"outputs": 1,
+				"source": 0
+			},
+			"type": "switch"
+		},
+		{
+			"name": "switch_2",
+			"node_position": {
+				"x": -298.452393,
+				"y": -131.666656
+			},
+			"parameters": {
+				"choices": 2,
+				"outputs": 1,
+				"source": 0
+			},
+			"type": "switch"
+		},
+		{
+			"name": "buffer",
+			"node_position": {
+				"x": -402.25,
+				"y": -315.75
+			},
+			"parameters": {
+				"lod": 0,
+				"size": 9
+			},
+			"type": "buffer"
+		},
+		{
+			"name": "gen_parameters",
+			"node_position": {
+				"x": -439.666626,
+				"y": -456.666656
+			},
+			"parameters": {
+				"param0": 9,
+				"param1": 50,
+				"param2": 0
+			},
+			"type": "remote",
+			"widgets": [
+				{
+					"label": "Grid size:",
+					"linked_widgets": [
+						{
+							"node": "buffer",
+							"widget": "size"
+						},
+						{
+							"node": "buffer_2",
+							"widget": "size"
+						},
+						{
+							"node": "gaussian_blur_x",
+							"widget": "size"
+						},
+						{
+							"node": "gaussian_blur_y",
+							"widget": "size"
+						}
+					],
+					"name": "param0",
+					"type": "linked_control"
+				},
+				{
+					"label": "Sigma:",
+					"linked_widgets": [
+						{
+							"node": "gaussian_blur_x",
+							"widget": "sigma"
+						},
+						{
+							"node": "gaussian_blur_y",
+							"widget": "sigma"
+						}
+					],
+					"name": "param1",
+					"type": "linked_control"
+				},
+				{
+					"configurations": {
+						"Both": [
+							{
+								"node": "switch",
+								"value": 0,
+								"widget": "source"
+							},
+							{
+								"node": "switch_2",
+								"value": 0,
+								"widget": "source"
+							}
+						],
+						"X": [
+							{
+								"node": "switch",
+								"value": 0,
+								"widget": "source"
+							},
+							{
+								"node": "switch_2",
+								"value": 1,
+								"widget": "source"
+							}
+						],
+						"Y": [
+							{
+								"node": "switch",
+								"value": 1,
+								"widget": "source"
+							},
+							{
+								"node": "switch_2",
+								"value": 0,
+								"widget": "source"
+							}
+						]
+					},
+					"label": "Direction:",
+					"linked_widgets": [
+						{
+							"node": "switch",
+							"widget": "source"
+						},
+						{
+							"node": "switch_2",
+							"widget": "source"
+						}
+					],
+					"name": "param2",
+					"type": "config_control"
+				}
+			]
+		},
+		{
+			"name": "gen_inputs",
+			"node_position": {
+				"x": -738.666626,
+				"y": -190.392853
+			},
+			"parameters": {
+
+			},
+			"ports": [
+				{
+					"name": "input",
+					"type": "rgba"
+				},
+				{
+					"name": "amount",
+					"type": "f"
+				}
+			],
+			"type": "ios"
+		},
+		{
+			"name": "gen_outputs",
+			"node_position": {
+				"x": -23.452393,
+				"y": -190.392853
+			},
+			"parameters": {
+
+			},
+			"ports": [
+				{
+					"name": "port0",
+					"type": "rgba"
+				}
+			],
+			"type": "ios"
+		},
+		{
+			"name": "gaussian_blur_x",
+			"node_position": {
+				"x": -412.993408,
+				"y": -221.281738
+			},
+			"parameters": {
+				"sigma": 50,
+				"size": 9
+			},
+			"type": "gaussian_blur_x"
+		},
+		{
+			"name": "gaussian_blur_y",
+			"node_position": {
+				"x": -405.993408,
+				"y": 38.718262
+			},
+			"parameters": {
+				"sigma": 50,
+				"size": 9
+			},
+			"seed_value": 12279,
+			"type": "gaussian_blur_y"
+		}
+	],
+	"parameters": {
+		"param0": 9,
+		"param1": 50,
+		"param2": 0
+	},
+	"type": "graph"
+}

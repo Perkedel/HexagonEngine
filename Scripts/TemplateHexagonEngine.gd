@@ -75,6 +75,22 @@ func _input(event):
 		pass
 	pass
 
+func LoadJustNow(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
+	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+	isPlayingTheGameNow = true
+	LoadingHasCompleted = false
+	ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
+	pass
+
+func AlsoConnectSignalJustNow(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore):
+	a2DSpaceReportHP = a2DSpaceHP
+	a3DSpaceReportHP = a3DSpaceHP
+	a2DSpaceReportScore = a2DSpaceScore
+	a3DSpaceReportScore = a3DSpaceScore
+	
+	print("Set Statuso Flag")
+	pass
+
 func SetPauseYes():
 	$MustFollowPersonCamera2D/UIspace.PauseMenu()
 	PauseTheGameNow()
@@ -165,7 +181,7 @@ func ManageHUD():
 		emitHP = clamp((See2DHP+See3DHP)/2, 0, 100)
 		pass
 	elif not a2DSpaceReportHP and a3DSpaceReportHP:
-		emitHP = clamp((See3DHP)/2, 0, 100)
+		emitHP = clamp((See3DHP), 0, 100)
 		pass
 	elif a2DSpaceReportHP and not a3DSpaceReportHP:
 		emitHP = clamp((See2DHP), 0, 100)
@@ -335,11 +351,7 @@ func ReceiveUnloadClick():
 
 # FInal chain! please save variable and do loading stuffs!
 func _on_UIspace_PleaseLoadThisLevelOf(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc):
-	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
-	isPlayingTheGameNow = true
-	LoadingHasCompleted = false
-	ReceiveLoadClick(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
-	#print("TemplateHexagonEngine Received SignalCLick %s %s", a3DScapePacked, a2DSpacePacked)
+	LoadJustNow(a3DScapePacked, a2DSpacePacked, LevelThumb, LevelTitle, LevelDesc)
 	pass # Replace with function body.
 
 func _on_3Dspace_IncludeMeForYourLoading(MayI):
@@ -400,12 +412,7 @@ func _on_UIspace_IPressedEscapeOnPlayingGame():
 
 #signal AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
 func _on_UIspace_AlsoPlsConnectThisReportStatus(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore):
-	a2DSpaceReportHP = a2DSpaceHP
-	a3DSpaceReportHP = a3DSpaceHP
-	a2DSpaceReportScore = a2DSpaceScore
-	a3DSpaceReportScore = a3DSpaceScore
-	
-	print("Set Statuso Flag")
+	AlsoConnectSignalJustNow(a3DSpaceHP, a2DSpaceHP, a3DSpaceScore, a2DSpaceScore)
 	pass # Replace with function body.
 
 
@@ -436,4 +443,24 @@ func _on_3Dspace_readyToPlayNow():
 
 func _on_2Dspace_readyToPlayNow():
 	$"2Dspace".ConnecStatusSignal()
+	pass # Replace with function body.
+
+var LevelCard = {
+	
+}
+
+func _on_3Dspace_TellLevelCard(path):
+#	ReceiveUnloadClick()
+#	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+#	isPlayingTheGameNow = true
+#	LoadingHasCompleted = false
+#
+	pass # Replace with function body.
+
+# artg sphaghetti code plns remake!
+func _on_2Dspace_TellLevelCard(path):
+#	ReceiveUnloadClick()
+#	$MustFollowPersonCamera2D/UIspace.SpawnLoadingBar()
+#	isPlayingTheGameNow = true
+#	LoadingHasCompleted = false
 	pass # Replace with function body.

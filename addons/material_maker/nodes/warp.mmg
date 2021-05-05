@@ -1,0 +1,78 @@
+{
+	"name": "warp",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"parameters": {
+		"amount": 0.1,
+		"eps": 0.1,
+		"mode": 0
+	},
+	"shader_model": {
+		"code": "vec2 $(name_uv)_slope = $(name)_slope($uv, $eps);\nvec2 $(name_uv)_warp = $mode;",
+		"global": "",
+		"inputs": [
+			{
+				"default": "vec4(sin($uv.x*20.0)*0.5+0.5, sin($uv.y*20.0)*0.5+0.5, 0, 1)",
+				"label": "",
+				"name": "in",
+				"type": "rgba"
+			},
+			{
+				"default": "0.0",
+				"function": true,
+				"label": "",
+				"name": "d",
+				"type": "f"
+			}
+		],
+		"instance": "vec2 $(name)_slope(vec2 uv, float epsilon) {\n\treturn vec2($d(fract(uv+vec2(epsilon, 0.0)))-$d(fract(uv-vec2(epsilon, 0.0))), $d(fract(uv+vec2(0.0, epsilon)))-$d(fract(uv-vec2(0.0, epsilon))));\n}",
+		"name": "Warp",
+		"outputs": [
+			{
+				"rgba": "$in($uv+$amount*$(name_uv)_warp)",
+				"type": "rgba"
+			}
+		],
+		"parameters": [
+			{
+				"default": 0,
+				"label": "",
+				"name": "mode",
+				"type": "enum",
+				"values": [
+					{
+						"name": "Slope",
+						"value": "$(name_uv)_slope"
+					},
+					{
+						"name": "Distance to top",
+						"value": "$(name_uv)_slope*(1.0-$d($uv))"
+					}
+				]
+			},
+			{
+				"control": "None",
+				"default": 0,
+				"label": "",
+				"max": 1,
+				"min": 0,
+				"name": "amount",
+				"step": 0.005,
+				"type": "float"
+			},
+			{
+				"control": "None",
+				"default": 0,
+				"label": "",
+				"max": 0.2,
+				"min": 0.005,
+				"name": "eps",
+				"step": 0.005,
+				"type": "float"
+			}
+		]
+	},
+	"type": "shader"
+}

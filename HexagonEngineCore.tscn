@@ -1,13 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DVDCartridgeSlot.gd" type="Script" id=3]
 [ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Zetrix/ZetrixViewport.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/JustZetrixVRViewer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture" id=9]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://modules/Component/DVDSelectTransitioner.tscn" type="PackedScene" id=11]
+[ext_resource path="res://addons/gcode/GCode.gd" type="Script" id=12]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
 script = ExtResource( 1 )
+__meta__ = {
+"GNU GPL v3": "Yess",
+"HexagonEngine": "Core",
+"by JOELwindows7": "Perkedel Technologies"
+}
 LoadDVD = ExtResource( 2 )
 
 [node name="DVDCartridgeSlot" type="Node" parent="."]
@@ -16,9 +29,56 @@ script = ExtResource( 3 )
 [node name="MetaMenu" type="CanvasLayer" parent="."]
 layer = 11
 
+[node name="DVDSelectBackground" type="TextureRect" parent="MetaMenu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DVDSelectTransitioner" parent="MetaMenu" instance=ExtResource( 11 )]
+nextBG = ExtResource( 8 )
+
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource( 4 )]
 visible = false
 mouse_filter = 1
+
+[node name="CenterBgLaunch" type="VBoxContainer" parent="MetaMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DVDLaunchBackground" type="TextureRect" parent="MetaMenu/CenterBgLaunch"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 960, 540 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingPopup" parent="MetaMenu" instance=ExtResource( 10 )]
+anchor_right = 0.0
+margin_top = 79.0
+margin_right = 1920.0
+margin_bottom = 79.0
+mouse_filter = 2
+
+[node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource( 5 )]
+
+[node name="JustZetrixVRViewer" parent="MetaMenu" instance=ExtResource( 7 )]
 
 [node name="SystemGut" type="Node" parent="."]
 pause_mode = 2
@@ -28,13 +88,31 @@ pause_mode = 2
 mix_target = 1
 
 [node name="Timer" type="Timer" parent="SystemGut"]
+one_shot = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
 pause_mode = 2
 use_threads = true
+
+[node name="aTweens" type="Node" parent="SystemGut"]
+
+[node name="Tween1" type="Tween" parent="SystemGut/aTweens"]
+
+[node name="Tween2" type="Tween" parent="SystemGut/aTweens"]
+
+[node name="ZetrixViewport" parent="." instance=ExtResource( 6 )]
+
+[node name="GCode" type="Node" parent="."]
+script = ExtResource( 12 )
+
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]
 [connection signal="NoDisc" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_NoDisc"]
 [connection signal="Shutdown_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_Shutdown_Exec"]
-[connection signal="ItemClickEnter" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnter"]
+[connection signal="CustomLoadMoreDVD" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_CustomLoadMoreDVD"]
+[connection signal="DVDListRefreshed" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_DVDListRefreshed"]
+[connection signal="ItemClickEnterName" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ItemClickEnterName"]
 [connection signal="ShutdownHexagonEngineNow" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_ShutdownHexagonEngineNow"]
+[connection signal="updateSelectionAssets" from="MetaMenu/ChangeDVDMenu" to="." method="_on_ChangeDVDMenu_updateSelectionAssets"]
+[connection signal="YesOrNoo" from="MetaMenu/AreYouSureDialog" to="." method="_on_AreYouSureDialog_YesOrNoo"]
+[connection signal="done" from="GCode" to="." method="_on_GCode_done"]

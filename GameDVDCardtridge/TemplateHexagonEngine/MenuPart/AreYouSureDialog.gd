@@ -38,6 +38,7 @@ signal YesImSure
 func YesConfirm():
 	print("Yes I'm sure!")
 	emit_signal("YesImSure")
+	YesOrNo(true)
 	set_visible(false)
 	pass
 
@@ -45,7 +46,13 @@ signal NoImNotSure
 func NoCancel():
 	print("No I'm not sure!")
 	emit_signal("NoImNotSure")
+	YesOrNo(false)
 	set_visible(false)
+	pass
+
+signal YesOrNoo(which)
+func YesOrNo(which:bool):
+	emit_signal("YesOrNoo",which)
 	pass
 
 

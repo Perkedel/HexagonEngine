@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Noise.wav"
+dest_files=[ "res://.import/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

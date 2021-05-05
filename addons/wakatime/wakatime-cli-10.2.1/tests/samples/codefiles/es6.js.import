@@ -1,0 +1,13 @@
+[remap]
+
+importer="pixijs_import_spritesheet"
+type="Resource"
+path="res://.import/es6.js-c3540bb02c05a103e738d0dbfe15d965.res"
+
+[deps]
+
+source_file="res://addons/wakatime/wakatime-cli-10.2.1/tests/samples/codefiles/es6.js"
+dest_files=[ "res://.import/es6.js-c3540bb02c05a103e738d0dbfe15d965.res" ]
+
+[params]
+

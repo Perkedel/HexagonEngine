@@ -1,11 +1,10 @@
-# FileSystemLink
-# author: willnationsdev
-# brief_description: A utility for creating links (file/directory, symbolic/hard).
-# API details:
-# - All methods' parameters are ordered in Unix fashion, {<target>,<linkpath>}
-# - Methods are aliased so that the parameters are implied by the method name.
-extends Reference
 class_name FileSystemLink
+extends Reference
+# author: willnationsdev
+# description: A utility for creating links (file/directory, symbolic/hard).
+# API details:
+#	- All methods' parameters are ordered in Unix fashion, {<target>,<linkpath>}
+#	- Methods are aliased so that the parameters are implied by the method name.
 
 enum LinkTypes {
 	SOFT,
@@ -21,17 +20,22 @@ enum TargetTypes {
 static func mk_hard_file(p_target: String, p_linkpath: String = "") -> int:
 	return _make_link(p_target, p_linkpath, TargetTypes.FILE, LinkTypes.HARD)
 
+
 static func mk_soft_file(p_target: String, p_linkpath: String = "") -> int:
 	return _make_link(p_target, p_linkpath, TargetTypes.FILE, LinkTypes.SOFT)
+
 
 static func mk_hard_dir(p_target: String, p_linkpath: String = "") -> int:
 	return _make_link(p_target, p_linkpath, TargetTypes.DIR, LinkTypes.HARD)
 
+
 static func mk_soft_dir(p_target: String, p_linkpath: String = "") -> int:
 	return _make_link(p_target, p_linkpath, TargetTypes.DIR, LinkTypes.SOFT)
 
+
 static func mk_windows_junction(p_target: String, p_linkpath: String = "") -> int:
 	return _make_link(p_target, p_linkpath, TargetTypes.WINDOWS_JUNCTION, LinkTypes.SOFT)
+
 
 static func _make_link(p_target: String, p_linkpath: String = "", p_target_type = TargetTypes.FILE, p_link_type: int = LinkTypes.SOFT) -> int:
 	var params := PoolStringArray()
@@ -46,6 +50,7 @@ static func _make_link(p_target: String, p_linkpath: String = "", p_target_type 
 		TargetTypes.DIR, TargetTypes.WINDOWS_JUNCTION:
 			if not dir.dir_exists(target):
 				return ERR_FILE_NOT_FOUND
+
 	match OS.get_name():
 		"Windows":
 			match p_link_type:
@@ -73,7 +78,7 @@ static func _make_link(p_target: String, p_linkpath: String = "", p_target_type 
 			#warning-ignore:return_value_discarded
 			OS.execute("mklink", params, true, output)
 			return OK
-		"X11", "OSX":
+		"X11", "OSX", "LinuxBSD":
 			match p_link_type:
 				LinkTypes.SOFT:
 					params.append("-s")
@@ -82,7 +87,7 @@ static func _make_link(p_target: String, p_linkpath: String = "", p_target_type 
 				_:
 					printerr("Unknown link type passed to FileSystemLink.make_link", p_link_type)
 					return ERR_INVALID_PARAMETER
-			
+
 			match p_target_type:
 				TargetTypes.FILE:
 					pass

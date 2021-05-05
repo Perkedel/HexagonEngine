@@ -1,0 +1,150 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/makefile_launcher/make_ui.gd" type="Script" id=1]
+[ext_resource path="res://addons/makefile_launcher/reload_icon.svg" type="Texture" id=2]
+[ext_resource path="res://addons/makefile_launcher/clear_icon.svg" type="Texture" id=3]
+[ext_resource path="res://addons/makefile_launcher/expand_icon.svg" type="Texture" id=4]
+
+[node name="MakeLauncher" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TargetsAndTools" type="VBoxContainer" parent="HSplitContainer"]
+margin_right = 634.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+
+[node name="Tools" type="HBoxContainer" parent="HSplitContainer/TargetsAndTools"]
+margin_right = 634.0
+margin_bottom = 24.0
+
+[node name="ReloadButton" type="ToolButton" parent="HSplitContainer/TargetsAndTools/Tools"]
+margin_right = 28.0
+margin_bottom = 24.0
+icon = ExtResource( 2 )
+
+[node name="ShowHideOutput" type="Control" parent="HSplitContainer/TargetsAndTools/Tools"]
+margin_left = 606.0
+margin_right = 634.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 28, 0 )
+rect_pivot_offset = Vector2( 14, 12 )
+size_flags_horizontal = 10
+
+[node name="ShowHideButton" type="ToolButton" parent="HSplitContainer/TargetsAndTools/Tools/ShowHideOutput"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 14, 12 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="HSplitContainer/TargetsAndTools"]
+margin_top = 28.0
+margin_right = 634.0
+margin_bottom = 720.0
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/TargetsAndTools/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TargetsContainer" type="ScrollContainer" parent="HSplitContainer/TargetsAndTools/Panel/MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 630.0
+margin_bottom = 688.0
+size_flags_vertical = 3
+
+[node name="Targets" type="VBoxContainer" parent="HSplitContainer/TargetsAndTools/Panel/MarginContainer/TargetsContainer"]
+margin_right = 626.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+
+[node name="OutputAndTools" type="VBoxContainer" parent="HSplitContainer"]
+margin_left = 646.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tools" type="HBoxContainer" parent="HSplitContainer/OutputAndTools"]
+margin_right = 634.0
+margin_bottom = 24.0
+
+[node name="Output" type="Label" parent="HSplitContainer/OutputAndTools/Tools"]
+margin_top = 5.0
+margin_right = 49.0
+margin_bottom = 19.0
+text = "Output:"
+
+[node name="ClearButton" type="ToolButton" parent="HSplitContainer/OutputAndTools/Tools"]
+margin_left = 606.0
+margin_right = 634.0
+margin_bottom = 24.0
+size_flags_horizontal = 10
+icon = ExtResource( 3 )
+
+[node name="Output" type="Panel" parent="HSplitContainer/OutputAndTools"]
+margin_top = 28.0
+margin_right = 634.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/OutputAndTools/Output"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="HSplitContainer/OutputAndTools/Output/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 626.0
+margin_bottom = 684.0
+focus_mode = 2
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HSplitContainer/TargetsAndTools/Tools/ReloadButton" to="." method="reload_makefile"]
+[connection signal="pressed" from="HSplitContainer/TargetsAndTools/Tools/ShowHideOutput/ShowHideButton" to="." method="toggle_output_visibility"]
+[connection signal="pressed" from="HSplitContainer/OutputAndTools/Tools/ClearButton" to="." method="clear_output"]
+[connection signal="popup_hide" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_hide" flags=3]

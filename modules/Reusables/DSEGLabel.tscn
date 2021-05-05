@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.tres" type="DynamicFont" id=1]
+[ext_resource path="res://modules/Reusables/DSEGLabel.gd" type="Script" id=2]
+[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf" type="DynamicFontData" id=3]
+
+[node name="DSEGLabel" type="Label"]
+margin_top = 528.0
+margin_right = 1920.0
+margin_bottom = 552.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1234567890!abcdefghijklmnopqrstuvwxyz"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+fellBackPleaseAssignCustom = ExtResource( 3 )
+Fonts = {
+
+}

@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.gd" type="Script" id=3]
+
 
 [node name="CoineCounter" type="HBoxContainer"]
 margin_right = 400.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LFE-Front_Center-raw.wav-44486cae4160e4998c27092f6d8fa8fb.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/LFE-Front_Center-raw.wav"
+dest_files=[ "res://.import/LFE-Front_Center-raw.wav-44486cae4160e4998c27092f6d8fa8fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

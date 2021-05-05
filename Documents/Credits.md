@@ -1,9 +1,7 @@
 # Credits
 Big Shoutout!
-
 ## Refferences
 Table of Refferences!
-
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	|Raw Credit	|
 |-------|--------|--------------|-------|:-----------------:|-----------|-----------|
 |adam-p	|Markdown cheatsheet	|List of syntax of Markdown| https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet	| <100%	|	CC-BY	|`-`|
@@ -48,13 +46,8 @@ Table of Refferences!
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
-
-
-
-
 ## Assets and Tools
 Used Assets and Tools!
-
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	| Raw Credit	|
 |-------|-------|---------------|-------|:-----------------:|-----------|---------------|
 |Juan Linietsky and Core Contributors|Godot Engine|Open Source, Gratis, Full, Libre, free beer and freedom game engine, AAA capable!!!|https://godotengine.org |<100%|MIT|`-` |
@@ -95,9 +88,6 @@ Used Assets and Tools!
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
-
-
-
 ## Unimplemented Credit, QUick And RAW reference
 - https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
 - https://www.youtube.com/watch?v=o77wFWau9Wc
@@ -194,3 +184,147 @@ Used Assets and Tools!
 - https://nakyle.com/godot-ci/
 - https://circleci.com/docs/2.0/docker-layer-caching/
 - https://circleci.com/docs/2.0/docker-layer-caching/
+- https://youtu.be/39_HhRkXDpQ Poop post explosion meme sound original
+- https://sketchfab.com/3d-models/cuphead-cb9d5b97130141f98e0daccd41e0deb7
+- https://sketchfab.com/3d-models/epson-wacom-laptop-c8b1de9e6b05449f9f01cc803cf70797
+- https://sketchfab.com/3d-models/godette-chan-5e5dd8978e21431f992dee953c11558d
+- https://github.com/vini-guerrero/Godot_Game_Tools **WHAT THE PECK?! WHERE IS THE ORIGINAL FBX & BLEND FILE?! WHY ONLY HERE THIS? HUH? AM i MISSING SOMETHING?!**
+- https://github.com/WolfgangSenff/GodotFirebase/
+- https://github.com/Shin-NiL/Godot-Android-Admob-Plugin
+- https://github.com/yalcin-ata/godot-android-plugin-firebase
+- https://docs.godotengine.org/en/stable/classes/class_file.html
+- https://skfb.ly/6SvpG
+- https://www.javatpoint.com/queue-free-and-reload-current-scene-functions-in-godot
+- https://ash-k.itch.io/textreme-2 **HOW DARE YOU?!**
+- https://itch.io/t/929224/code-editor-by-yafd **actually he's a nice guy?**
+- https://github.com/maksloboda/Godot-Tutorials **my apology**
+- https://github.com/jotson/ridiculous_coding **OH!!!**
+- a
+- https://godotengine.org/asset-library/asset/157
+- https://gamefromscratch.com/vpainter-for-godot/
+- https://github.com/tomankirilov/VPainter
+- https://github.com/godotengine?page=1
+- https://github.com/godotengine/godot
+- https://github.com/godotengine/awesome-godot
+- https://github.com/aBARICHELLO/godot-ci/blob/master/.github/workflows/godot-ci.yml#L8-99
+- https://github.com/utopia-rise/fmod-gdnative **FMOD plugin GDNative**
+- https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/
+- https://generalistprogrammer.com/godot/godot-dictionary-tutorial-with-examples/
+- https://www.fmod.com **PROPRIETARY AMBIGUOUS-GRATIS!!! DO NOT REDISTRIBUTE WITH SOURCE CODE; IMPLEMENTATION CANCELED, WILL LOOK AGAIN LATER**
+- https://github.com/marketplace/actions/build-godot 
+- https://godotengine.org/community
+- https://github.com/godotengine/awesome-godot
+- https://anti.itch.io/super-tux-party **Fork for DVD making!!!**
+- https://docs.godotengine.org/en/stable/classes/class_tree.html#class-tree
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_for_uwp.html
+- https://docs.microsoft.com/id-id/windows/win32/appxpkg/how-to-create-a-package-signing-certificate?redirectedfrom=MSDN
+- https://docs.microsoft.com/en-us/windows/msix/package/create-certificate-package-signing
+- https://docs.microsoft.com/en-us/powershell/module/pkiclient/New-SelfSignedCertificate?view=win10-ps
+- https://duckduckgo.com/?q=makecert+fail&t=brave&ia=web&iai=r1-0&page=1&adx=prdsdc&sexp=%7B%22prodexp%22%3A%22b%22%2C%22prdsdexp%22%3A%22c%22%2C%22biaexp%22%3A%22b%22%2C%22direxp%22%3A%22b%22%7D
+- https://stackoverflow.com/questions/9506671/why-do-i-keep-getting-a-failed-when-trying-to-make-a-cer-for-testing
+- https://docs.microsoft.com/id-id/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
+- https://github.com/PowerShell/PowerShell/releases/tag/v7.0.3
+- **here are the MIDI related stuffs**
+- http://xg-central.com/xgc-introduction-midi.php
+- They have
+- GM On F0 7E 7F 09 01 F7
+- XG On F0 43 10 4C 00 00 7E 00 F7
+- https://professionalcomposers.com/midi-cc-list/
+- https://studiocode.dev/resources/midi-pitch-bend/
+- https://www.recordingblogs.com/wiki/midi-registered-parameter-number-rpn
+- http://www.2writers.com/eddie/TutNrpn.htm#:~:text=The%20MIDI%20Specification%20currently%20defines,Coarse%20Tuning%20(0%2C2)
+- https://stackoverflow.com/questions/58622317/is-it-possible-to-change-android-built-in-midi-player-pitch-bend-range
+- https://quadrophone.com/synthesis/using-pitch-bend/
+- https://www.all8.com/tools/bpm.htm
+- http://www.beatsperminuteonline.com/
+- https://www.manualslib.com/manual/196284/Yamaha-Portable-Grand-Dgx-305.html?page=97#manual
+- https://www.tobias-erichsen.de/software/loopmidi.html
+- **ENd of MIDI articles**
+- https://www.youtube.com/watch?v=9iUUgTS-ndw
+- https://www.youtube.com/watch?v=Yiew9ru-6a0
+- https://youtu.be/Yiew9ru-6a0
+- https://reddit.com/r/Shantae3DModel (Not Suitable for Wumpus) (The harsh Chapter)
+- https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/unMixamoStick.blend (The harsh chapter)
+- https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/ZoblatosImprovement.blend
+- https://godotengine.org/qa/76823/add-a-sound-to-all-the-buttons-in-a-project
+- https://github.com/godotengine/godot-proposals/issues/1472
+- https://github.com/godotengine/godot/issues/3608
+- https://gamedev.stackexchange.com/questions/184354/add-a-sound-to-all-the-buttons-in-a-project/184363#184363 
+- https://shkspr.mobi/blog/2015/07/exporting-multitrack-surround-files-in-audacity/
+- https://github.com/Arnklit/ShellFurGodot
+- https://godotengine.org/asset-library/asset/916 & https://github.com/gilzoide/godot-dockable-container Godot dockable Container
+- https://godotengine.org/asset-library/asset/460 loading async brackey-like
+- https://www.git-tower.com/learn/git/faq/git-add-remote/ add git remote
+- https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes add remote git
+- https://godotengine.org/asset-library/asset/910 Hat selector menu
+- https://godotengine.org/asset-library/asset/909 Cube Bezier control yay
+- https://godotengine.org/asset-library/asset/912 make file launcher
+- https://godotengine.org/asset-library/asset/900 GUI in VR
+- https://godotengine.org/asset-library/asset/904 custom cursor speedy
+- https://godotengine.org/asset-library/asset/859 godot setting addon
+- https://godotengine.org/asset-library/asset/752 shell fur
+- https://godotengine.org/asset-library/asset/22 calendar button and Date datatype
+- https://github.com/GodotVR/godot-openvr-asset Godot OpenVR
+- https://godotengine.org/asset-library/asset/824 Native Lib for Android and iOS
+- https://godotengine.org/asset-library/asset/724 Json minifier
+- https://godotengine.org/asset-library/asset/157 Json beautifier
+- https://godotengine.org/asset-library/asset/622 wario ware Godot clone template
+- https://godotengine.org/asset-library/asset/446 Qodot. support quake map file in Godot engine
+- https://godotengine.org/asset-library/asset/587 Distraction Free Mode the Godot Engine editor. hide unecessary window on some part
+- https://godotengine.org/asset-library/asset/729 Godot LOD
+- https://github.com/godot-extended-libraries Godot Extended Library project
+- https://godotengine.org/asset-library/asset/688 Godot Xunit
+- https://godotengine.org/asset-library/asset/702 Godot Emin Multimesh
+- https://godotengine.org/asset-library/asset/703 Node warning
+- https://godotengine.org/asset-library/asset/594 destruction rigid bodies
+- https://godotengine.org/asset-library/asset/711 scrolling bg
+- https://godotengine.org/asset-library/asset/732 Godot debug utility
+- https://godotengine.org/asset-library/asset/727 dynamic crosshair shader
+- https://godotengine.org/asset-library/asset/683 octahedral impostor sus
+- https://godotengine.org/asset-library/asset/637 metadaxdja inspect
+- https://godotengine.org/asset-library/asset/443 lanserver broadcast
+- https://godotengine.org/asset-library/asset/873 Godot Toon shader
+- https://godotengine.org/asset-library/asset/918 Godot tool button
+- https://godotengine.org/asset-library/asset/425 Godot VOIP
+- https://godotengine.org/asset-library/asset/474 funcy
+- https://godotengine.org/asset-library/asset/907 parrot diallougu
+- https://godotengine.org/asset-library/asset/634 Djikstra Map Pathfinding
+- https://godotengine.org/asset-library/asset/444 GDSQlite
+- https://godotengine.org/asset-library/asset/770 layered sprite tool
+- https://godotengine.org/asset-library/asset/878 Scene map
+- https://godotengine.org/asset-library/asset/754 Godot Immediate GUI
+- https://godotengine.org/asset-library/asset/871 Godot Folder Node
+- https://godotengine.org/asset-library/asset/741 transition
+- https://github.com/probrain-dev/godot_web_external_audio_motor Godot external audio
+- https://godotengine.org/asset-library/asset/719 transit scene
+- https://youtu.be/2wJY4BZhQzc mandlebrot sound, has DSEG
+- https://www.keshikan.net/fonts-e.html DSEG
+- https://github.com/keshikan/DSEG Source code DSEG Openfont SIL
+- https://godotengine.org/qa/42430/changing-font-size-of-theme-or-control-at-runtime?show=42430#q42430 change font size of Label
+- https://scruss.com/blog/2016/05/21/twentyfoursixteen-a-17-segment-alpha-lcd-font/ 16 segment display font
+- https://en.wikipedia.org/wiki/Sixteen-segment_display
+- https://github.com/samdze/godot-modifiers-plugin ''
+- https://github.com/godotengine/godot/issues/27168 pck more than 2.1 gb error
+- https://github.com/godotengine/godot/issues/44363 manually put an export template in root folder of this project
+- https://godotengine.org/qa/75329/game-over-and-not-working-what-best-handle-this-godot-stable
+- https://github.com/godotengine/godot-proposals/issues/400 it seems that it will only fix in Godot 4.0
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_pcks.html
+- https://github.com/godotengine/godot/issues/44363
+- https://github.com/godotengine/godot/pull/47254 akien is fixing, but this PR here is still WIP for now unfortunately
+- https://en.wikipedia.org/wiki/Shell_script sh file 
+- https://youtu.be/WZzeIv7TayI Audio effect inspector. add more effects to your Audio mixing effect list
+- https://www.newgrounds.com/portal/view/770371 Friday Night Funkin' has timed exclusive the Tankman (Newgrounds mascot guy)
+- https://ninja-muffin24.itch.io/funkin This is the itch of Funkin' and it is licensed Apache License 2.0 just like Android is
+- https://github.com/ninjamuffin99/Funkin source code here
+- https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game/ and yes, I fond something fishy here. they're going to build enchanced mastering version of this. and that one won't be $0. they fell too as well, they're just like them. don't worry guys, I buy it so if you hate that they're gonna do that, you don't have to buy it. I'll play it for you. no, *not pirate*. I'll stream the gameplay to you guys, like usual.
+- https://github.com/GDQuest/godot-2d-rhythm hayodosil pls sTile
+- https://godotengine.org/asset-library/asset/371 old change resolution debug editor
+- https://github.com/vinod8990/godot_plugins/tree/master/Resolution%20Switcher switch resolution old
+- blind game. all 3d camera not active
+- https://github.com/lightsoutgames/godot-tts Godot Text to Speech
+- https://github.com/lightsoutgames/godot-accessibility Godot Accessibility
+- https://stackoverflow.com/questions/24649754/signtool-error-when-signing-appx-file-error-signersign-failed-214702469/26496625#26496625 CN=Perkedel Technologies
+- https://stackoverflow.com/questions/37473394/uwp-appx-package-signtool-error-signersign-failed-2147024885-0x8007000b
+- https://stackoverflow.com/questions/9506671/why-do-i-keep-getting-a-failed-when-trying-to-make-a-cer-for-testing
+- https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_for_uwp.html
+- https://docs.microsoft.com/en-us/windows/msix/package/create-app-package-with-makeappx-tool

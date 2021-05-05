@@ -1,0 +1,16 @@
+{
+    "id": "ext-app-opener",
+    "Title": "Launch app template",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/ExtAppOpener/ExtAppOpener.tscn",
+    "CatalogueBanner": "",
+    "DVDCover": "",
+    "isSelectable": true,
+    "hidden": true,
+    "actuallyBootJsonPath": "",
+    "requiredEggsellents": [],
+    "args": ["shellOpen", "https://cointr.ee/joelwindows7", "", ""],
+    "appArgs": ["", ""],
+    "doBlocking": false,
+    "readStdErr": false
+}

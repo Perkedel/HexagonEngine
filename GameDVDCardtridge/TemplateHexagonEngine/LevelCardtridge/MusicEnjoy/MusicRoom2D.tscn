@@ -1,15 +1,16 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
-[ext_resource path="res://font/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://font/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=10]
+[ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.7963, 816.715 )
@@ -95,6 +96,15 @@ __meta__ = {
 pause_mode = 1
 bus = "Music"
 
+[node name="GodotMIDIPlayer" type="AudioStreamPlayer" parent="MusicController/MusicUI"]
+pause_mode = 1
+bus = "Music"
+script = ExtResource( 11 )
+max_polyphony = 128
+file = "res://DummyTest/dataArlez80/fairyland_gm.mid"
+soundfont = "res://Soundfonts/Aspirin-Stereo.sf2"
+bus = "Music"
+
 [node name="MainContains" type="VBoxContainer" parent="MusicController/MusicUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -173,12 +183,13 @@ margin_right = 519.0
 margin_bottom = 303.5
 theme = ExtResource( 10 )
 window_title = "Buka sebuah File"
+resizable = true
 mode = 0
 access = 2
-filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis" )
+filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis", "*.mod; Music Module", "*.it; Impulse Tracker", "*.s3m; Scream Tracker", "*.xm; Extended Module Music", "*.mp3; MPEG Layer 3", "*.midi; Musical Digital Interface", "*.mid; Musical Digital Interface" )
 show_hidden_files = true
-current_dir = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine"
-current_path = "C:/Users/ASUS/Documents/starring codes/Godot Projects/HexagonEngine/"
+current_dir = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
+current_path = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -248,6 +259,7 @@ shape = SubResource( 5 )
 visible = false
 position = Vector2( -636.883, 1705.71 )
 zoom = Vector2( 2.559, 5.016 )
+
 [connection signal="body_entered" from="ScronchCracklesNowadays/Scroncher" to="." method="_on_Scroncher_body_entered"]
 [connection signal="finished" from="MusicController/MusicUI/MusicPlaySpeaker" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="pressed" from="MusicController/MusicUI/MainContains/ControllingMusic/Play" to="." method="_on_Play_pressed"]

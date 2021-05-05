@@ -21,6 +21,7 @@ var ConnectedSignal = false
 
 signal TellHP(Level)
 signal TellScore(value)
+signal TellLevelCard(path)
 
 # These are easiner from that Background Loading document https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
 
@@ -38,7 +39,7 @@ func _exit_tree():
 
 
 func spawnAScene(pathO):
-	$Dummy3DLoad.hide()
+	# $Dummy3DLoad.hide()
 	emit_signal("IncludeMeForYourLoading", true)
 	if LevelLoadRoot.get_child(0):
 		Prev3DSpaceLevel = LevelLoadRoot.get_child(0)
@@ -84,7 +85,7 @@ func despawnTheScene():
 		pass
 	SceneHasLoaded = false
 	StartLoadSceneL = false
-	$Dummy3DLoad.show()
+	# $Dummy3DLoad.show()
 	pass
 
 signal hasLoadingCompleted
@@ -172,8 +173,10 @@ func ConnecStatusSignal():
 #			if !Now3DSpaceLevel.is_connected("reportScore",self,"_EmitStatuso_Score"):
 #				Now3DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
 #				pass
+			var werrorSignal
 			Now3DSpaceLevel.connect("reportHP",self,"_EmitStatuso_HP")
 			Now3DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
+			werrorSignal = Now3DSpaceLevel.connect("reportNextLevel",self,"on_TellNextLevel")
 			ConnectedSignal = true
 			pass
 		else:
@@ -221,5 +224,9 @@ func _EmitStatuso_HP(HPleveli):
 	pass
 func _EmitStatuso_Score(ScoreLeveli):
 	emit_signal("TellScore",ScoreLeveli)
+	pass
+
+func _on_Tell_NextLevel(LevelCard):
+	emit_signal("TellLevelCard",LevelCard)
 	pass
 

@@ -10,10 +10,14 @@ var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Sett
 enum PositionsMenu {Init,Close,Open = 0}
 var PrevPosition
 var NowPosition
+onready var y_size_init = rect_size.y
+var y_pos_prev
+onready var y_pos_init = rect_position.y
+onready var y_compensate_close_drawer = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	y_pos_init = rect_position.y
 	pass # Replace with function body.
 
 func SetExitLabel(name:String):
@@ -47,6 +51,11 @@ func _process(delta):
 		if isDrawerOpen:
 			CloseMenuDrawer()
 			pass
+		pass
+	pass
+
+func _input(event):
+	if event is InputEventKey:
 		pass
 	pass
 
@@ -104,16 +113,21 @@ func ResetMoreMenuButtonAnimatione():
 
 func OpenMenuDrawer():
 	if not isDrawerOpen:
-		$MenuButtonAnimations.play("OpenMenu")
-		
-		
-		
+		y_pos_prev = rect_position.y
+		$MenuButtonTweens.interpolate_property(self,"rect_position",Vector2(0,y_pos_prev),Vector2(0,get_parent_control().rect_size.y-rect_size.y),.5,Tween.TRANS_LINEAR,Tween.EASE_IN)
+		$MenuButtonTweens.start()
+		#yield($MenuButtonTweens,"tween_completed")
+		#$MenuButtonAnimations.play("OpenMenu")
 		isDrawerOpen = true
 	pass
 
 func CloseMenuDrawer():
 	if isDrawerOpen:
-		$MenuButtonAnimations.play("CloseMenu")
+		y_pos_prev = rect_position.y
+		$MenuButtonTweens.interpolate_property(self,"rect_position",Vector2(0,y_pos_prev),Vector2(0,get_parent().rect_size.y-($FocusArea.rect_size.y+y_compensate_close_drawer)),.5,Tween.TRANS_LINEAR,Tween.EASE_IN)
+		$MenuButtonTweens.start()
+		#yield($MenuButtonTweens,"tween_completed")
+		#$MenuButtonAnimations.play("CloseMenu")
 		ResetMoreMenuButtonAnimatione()
 		isDrawerOpen = false
 	pass

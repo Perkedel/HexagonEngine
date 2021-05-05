@@ -29,10 +29,10 @@ export (bool) var TweenSetNow = false
 func immanageInputs():
 	WanalogX = clamp(Input.get_action_strength("AnalogKiri_x") - Input.get_action_strength("AnalogKiri_x-"), -1,1) 
 	WanalogY = clamp(Input.get_action_strength("AnalogKiri_y-") - Input.get_action_strength("AnalogKiri_y"), -1,1)
-	#print(String(WanalogX))
+	print(String(WanalogX))
 	#apply_central_impulse(Vector3(WanalogX,0,0))
 	
-	if Input.is_action_just_pressed("Loncat"):
+	if Input.is_action_just_pressed("Loncat") or Input.is_action_just_pressed("Keyboard_Space"):
 		#apply_central_impulse(Vector3(0,LoncatKuat,0))
 		GayaLoncat = LoncatKuat
 		pass

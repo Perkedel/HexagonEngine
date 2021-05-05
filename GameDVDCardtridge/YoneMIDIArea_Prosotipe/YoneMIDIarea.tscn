@@ -16,15 +16,6 @@ font_data = ExtResource( 4 )
 [node name="YoneMIDIarea" type="Node"]
 script = ExtResource( 2 )
 
-[node name="MidiPlayer" type="Node" parent="."]
-script = ExtResource( 1 )
-max_polyphony = 12
-file = "res://Blender/MostyMidiTest/test.mid"
-load_all_voices_from_soundfont = true
-no_reload_soundfont = true
-soundfont = "res://DummyTest/dataArlez80/Aspirin-Stereo.sf2"
-bus = "Music"
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
@@ -43,6 +34,15 @@ custom_fonts/font = SubResource( 1 )
 
 [node name="ExitGameButton" parent="CanvasLayer/VBoxContainer/Menu404" index="1"]
 custom_fonts/font = SubResource( 1 )
+
+[node name="GodotMIDIPlayer" type="AudioStreamPlayer" parent="."]
+bus = "Music"
+script = ExtResource( 1 )
+file = "res://DummyTest/dataArlez80/fairyland_gm.mid"
+load_all_voices_from_soundfont = true
+no_reload_soundfont = true
+soundfont = "res://Soundfonts/Aspirin-Stereo.sf2"
+bus = "Music"
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
 

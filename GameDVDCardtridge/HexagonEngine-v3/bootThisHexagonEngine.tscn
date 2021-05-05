@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.tscn" type="PackedScene" id=2]
+
+[node name="DVDbootHexagonEngine" instance=ExtResource( 1 )]
+bootTheDVD = ExtResource( 2 )
+bootTheDVDpath = "res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.tscn"
+fadeSplashIn = 0.3

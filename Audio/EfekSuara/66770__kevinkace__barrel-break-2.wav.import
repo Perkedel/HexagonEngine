@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/66770__kevinkace__barrel-break-2.wav-ace3b1d730633ff1e60f9504008c228a.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/66770__kevinkace__barrel-break-2.wav"
+dest_files=[ "res://.import/66770__kevinkace__barrel-break-2.wav-ace3b1d730633ff1e60f9504008c228a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

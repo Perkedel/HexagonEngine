@@ -1,14 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/UI.gd" type="Script" id=1]
-[ext_resource path="res://font/Built/Oswald_B_72.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/Built/Oswald_B_36.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/Built/Oswald_B_48.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Oswald_B_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Oswald_B_36.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Oswald_B_48.tres" type="DynamicFont" id=4]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlayUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" type="Texture" id=9]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustTitleParlor.png" type="Texture" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=12]
+
 
 [node name="UI" type="CanvasLayer"]
 pause_mode = 2

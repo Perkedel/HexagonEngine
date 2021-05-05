@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/ButtonGroup/CategoryButtonGroup.tres" type="ButtonGroup" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableCategoryButton.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
+
 
 [node name="InheritableCategoryButton" type="Button"]
 margin_right = 500.0

@@ -1,0 +1,12 @@
+{
+    "id": "404-werror",
+    "Title": "invalid_item",
+    "IconUrl": "res://Inkscape/PostingImage/May_I_Have_One_Please_3.png",
+    "BootThisTscene": "res://GameDVDCardtridge/404/404.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "actuallyBootJsonPath" : "",
+    "args":["",""]
+}

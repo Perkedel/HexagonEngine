@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TheFatRat+-+Unity.mp3-620532e38ce2515ee1663a23fb3b0300.mp3str"
+
+[deps]
+
+source_file="res://Audio/Sounds/Musics/TheFatRat+-+Unity.mp3"
+dest_files=[ "res://.import/TheFatRat+-+Unity.mp3-620532e38ce2515ee1663a23fb3b0300.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

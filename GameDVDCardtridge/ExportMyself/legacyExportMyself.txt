@@ -1,0 +1,16 @@
+#var ownScriptPath = "res://GameDVDCardtridge/ExportMyself/ExportMyself.gd"
+#var Filer
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+#func loadFileWay():
+#	Filer = File.new()
+#	var testFiler = Filer.open(ownScriptPath, File.READ)
+#	if testFiler == OK:
+#		ownSelfThisScript = Filer.get_as_text()
+#		Filer.close()
+#	else:
+#		# https://godotengine.org/qa/4605/invalid-operands-int-and-string-in-operator
+#		ownSelfThisScript = "Werror! Code: " + String(testFiler)
+#	$Sgond/CodeFillSelf.text = ownSelfThisScript

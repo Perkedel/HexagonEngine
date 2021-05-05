@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Audioing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray(  )
+tracks/1/type = "value"
+tracks/1/path = NodePath("Audioing:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ), Vector3( 0, 179, 0 ), Vector3( 0, -180, 0 ), Vector3( 0, -90, 0 ), Vector3( 0, 3.73387e-05, 0 ) ]
+}
+
+[node name="SpatialSpeakering" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="Audioing" type="Spatial" parent="."]
+transform = Transform( 0.999991, 0, 0, 0, 1, 0, 0, 0, 0.999991, 0, 0, 0 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Audioing"]
+transform = Transform( -1.00001, 0, -8.74236e-08, 0, 1, 0, 8.74236e-08, 0, -1.00001, 0, 0, -10 )
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Music"
+emission_angle_enabled = true
+emission_angle_degrees = 39.0
+
+[node name="MeshInstance" type="MeshInstance" parent="Audioing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Rotat" type="AnimationPlayer" parent="."]
+autoplay = "Rotat"
+anims/Rotat = SubResource( 2 )

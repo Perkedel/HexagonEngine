@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,66 +7,67 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1280"
-   height="720"
-   viewBox="0 0 1280 720"
-   version="1.1"
+   sodipodi:docname="JOELwindows7_Perkedel_Logo_make_again.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg902"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="JOELwindows7_Perkedel_Logo_make_again.svg">
+   version="1.1"
+   viewBox="0 0 1280 720"
+   height="720"
+   width="1280">
   <defs
      id="defs896" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="1173.0697"
-     inkscape:cy="640.39797"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     units="px"
-     inkscape:pagecheckerboard="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-nodes="true"
-     inkscape:bbox-paths="true"
+     inkscape:document-rotation="0"
+     showguides="false"
      inkscape:snap-bbox-edge-midpoints="true"
-     showguides="false">
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     inkscape:pagecheckerboard="false"
+     units="px"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="640.39797"
+     inkscape:cx="1173.0697"
+     inkscape:zoom="0.49497475"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
     <inkscape:grid
-       type="xygrid"
-       id="grid1447"
-       empspacing="8"
-       color="#ff0000"
-       opacity="0.2745098"
-       empcolor="#ff0000"
-       empopacity="0.14901961"
+       spacingy="8"
        spacingx="8"
-       spacingy="8" />
+       empopacity="0.14901961"
+       empcolor="#ff0000"
+       opacity="0.2745098"
+       color="#ff0000"
+       empspacing="8"
+       id="grid1447"
+       type="xygrid" />
     <inkscape:grid
-       type="xygrid"
-       id="grid1449"
-       empspacing="4"
-       color="#3f3fff"
-       opacity="0.56078431"
+       empopacity="0.18431373"
        empcolor="#3f3fff"
-       empopacity="0.18431373" />
+       opacity="0.56078431"
+       color="#3f3fff"
+       empspacing="4"
+       id="grid1449"
+       type="xygrid" />
     <inkscape:grid
-       type="xygrid"
-       id="grid1459"
-       color="#00ff00"
-       opacity="1"
-       empcolor="#00ff00"
+       empspacing="64"
        empopacity="1"
-       empspacing="64" />
+       empcolor="#00ff00"
+       opacity="1"
+       color="#00ff00"
+       id="grid1459"
+       type="xygrid" />
   </sodipodi:namedview>
   <metadata
      id="metadata899">
@@ -78,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
       </cc:Work>
@@ -100,285 +99,291 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:groupmode="layer"
-     id="layer2"
+     style="display:none"
      inkscape:label="Layer BG"
-     style="display:none">
+     id="layer2"
+     inkscape:groupmode="layer">
     <rect
-       transform="translate(0,-106.5)"
-       style="opacity:1;fill:#000000;fill-opacity:0.99421967;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect5761"
-       width="1600"
-       height="896"
+       y="1338.5"
        x="-128"
-       y="1338.5" />
+       height="896"
+       width="1600"
+       id="rect5761"
+       style="opacity:1;fill:#000000;fill-opacity:0.99421967;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="translate(0,-106.5)" />
   </g>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(0,-106.5)"
      id="layer1"
-     transform="translate(0,-106.5)">
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <g
-       id="g1536"
+       inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       id="g1536">
       <g
-         transform="translate(-128,64)"
-         id="g1492">
+         id="g1492"
+         transform="translate(-128,64)">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461"
            transform="translate(0,106.5)"
-           id="rect1461" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
-         transform="translate(-108.256,129.20475)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"
          id="flowRoot1482"
-         xml:space="preserve"><flowRegion
-           style="line-height:0"
-           id="flowRegion1484"><rect
-             style="line-height:0"
-             y="272"
-             x="384"
-             height="128"
-             width="1024"
-             id="rect1486" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
-           id="flowPara1488">Perkedel Technologies</flowPara></flowRoot>    </g>
-    <g
-       transform="translate(0,192)"
-       id="g1536-6"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <g
-         transform="translate(-128,64)"
-         id="g1492-8">
-        <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
-           d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-5" />
-        <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
-           transform="translate(0,106.5)"
-           id="rect1461-3" />
-      </g>
-      <flowRoot
-         transform="translate(-108.256,129.20475)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484"
+           style="line-height:0"><rect
+             id="rect1486"
+             width="1024"
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0" /></flowRegion><flowPara
+           id="flowPara1488"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">Perkedel Technologies</flowPara></flowRoot>
+    </g>
+    <g
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
+       id="g1536-6"
+       transform="translate(0,192)">
+      <g
+         id="g1492-8"
+         transform="translate(-128,64)">
+        <path
+           id="path1451-5"
+           transform="translate(0,106.5)"
+           d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="rect1461-3"
+           transform="translate(0,106.5)"
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+      </g>
+      <flowRoot
+         xml:space="preserve"
          id="flowRoot1482-6"
-         xml:space="preserve"><flowRegion
-           style="line-height:0"
-           id="flowRegion1484-4"><rect
-             style="line-height:0"
-             y="272"
-             x="384"
-             height="128"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484-4"
+           style="line-height:0"><rect
+             id="rect1486-8"
              width="1024"
-             id="rect1486-8" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
-           id="flowPara1488-6">Perkedel </flowPara></flowRoot>    </g>
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0" /></flowRegion><flowPara
+           id="flowPara1488-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">Perkedel </flowPara></flowRoot>
+    </g>
     <g
-       id="g1492-8-9"
+       inkscape:export-ydpi="20"
+       inkscape:export-xdpi="20"
        transform="translate(-128,-128)"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       id="g1492-8-9">
       <path
-         id="path1451-5-4"
-         transform="translate(0,106.5)"
-         d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
+         inkscape:connector-curvature="0"
          style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         id="rect1461-3-1"
+         d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
          transform="translate(0,106.5)"
-         d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+         id="path1451-5-4" />
+      <path
+         inkscape:connector-curvature="0"
          style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
+         d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+         transform="translate(0,106.5)"
+         id="rect1461-3-1" />
     </g>
     <g
-       transform="translate(0,576)"
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
        id="g1536-2"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       transform="translate(0,576)">
       <g
-         transform="translate(-128,64)"
-         id="g1492-1">
+         id="g1492-1"
+         transform="translate(-128,64)">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451-55"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-55" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-9"
            transform="translate(0,106.5)"
-           id="rect1461-9" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
-         transform="translate(-108.256,129.20475)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
+         xml:space="preserve"
          id="flowRoot1482-4"
-         xml:space="preserve"><flowRegion
-           style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-           id="flowRegion1484-7"><rect
-             style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-             y="272"
-             x="384"
-             height="128"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484-7"
+           style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"><rect
+             id="rect1486-9"
              width="1024"
-             id="rect1486-9" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-           id="flowPara1488-5">Perkedel Technologies</flowPara></flowRoot>    </g>
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;" /></flowRegion><flowPara
+           id="flowPara1488-5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1">Perkedel Technologies</flowPara></flowRoot>
+    </g>
     <g
-       transform="translate(0,768)"
-       id="g1536-6-4"
+       inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       id="g1536-6-4"
+       transform="translate(0,768)">
       <g
-         transform="translate(-128,64)"
-         id="g1492-8-7">
+         id="g1492-8-7"
+         transform="translate(-128,64)">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451-5-8"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-5-8" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-3-4"
            transform="translate(0,106.5)"
-           id="rect1461-3-4" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
-         transform="translate(-108.256,129.20475)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
+         xml:space="preserve"
          id="flowRoot1482-6-4"
-         xml:space="preserve"><flowRegion
-           style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-           id="flowRegion1484-4-7"><rect
-             style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-             y="272"
-             x="384"
-             height="128"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484-4-7"
+           style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1"><rect
+             id="rect1486-8-8"
              width="1024"
-             id="rect1486-8-8" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1;"
-           id="flowPara1488-6-3">Perkedel </flowPara></flowRoot>    </g>
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1;" /></flowRegion><flowPara
+           id="flowPara1488-6-3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fffff6;fill-opacity:1;stroke:#000000;stroke-opacity:1">Perkedel </flowPara></flowRoot>
+    </g>
     <g
-       id="g877"
+       inkscape:export-ydpi="747.08173"
        inkscape:export-xdpi="747.08173"
-       inkscape:export-ydpi="747.08173">
+       id="g877">
       <circle
-         r="128"
-         cy="-69.5"
-         cx="160"
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-opacity:1"
          id="path871"
-         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-opacity:1" />
+         cx="160"
+         cy="-69.5"
+         r="128" />
       <g
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
+         id="g1492-8-9-4"
          transform="translate(-128,-448)"
-         id="g1492-8-9-4">
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451-5-4-4"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-5-4-4" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-3-1-6"
            transform="translate(0,106.5)"
-           id="rect1461-3-1-6" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
     </g>
     <g
-       transform="translate(0,1216)"
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
        id="g1536-2-4"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       transform="translate(0,1216)">
       <g
-         transform="translate(-128,64)"
-         id="g1492-1-0">
+         id="g1492-1-0"
+         transform="translate(-128,64)">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451-55-4"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-55-4" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-9-9"
            transform="translate(0,106.5)"
-           id="rect1461-9-9" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
-         transform="translate(-108.256,129.20475)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1;"
+         xml:space="preserve"
          id="flowRoot1482-4-5"
-         xml:space="preserve"><flowRegion
-           style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1;"
-           id="flowRegion1484-7-8"><rect
-             style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1;"
-             y="272"
-             x="384"
-             height="128"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484-7-8"
+           style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+             id="rect1486-9-2"
              width="1024"
-             id="rect1486-9-2" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1;"
-           id="flowPara1488-5-2">Perkedel Technologies</flowPara></flowRoot>    </g>
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1;" /></flowRegion><flowPara
+           id="flowPara1488-5-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1">Perkedel Technologies</flowPara></flowRoot>
+    </g>
     <g
-       transform="translate(0,1408)"
-       id="g1536-6-4-0"
+       inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       id="g1536-6-4-0"
+       transform="translate(0,1408)">
       <g
-         transform="translate(-128,64)"
-         id="g1492-8-7-8">
+         id="g1492-8-7-8"
+         transform="translate(-128,64)">
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           id="path1451-5-8-0"
+           transform="translate(0,106.5)"
            d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
-           transform="translate(0,106.5)"
-           id="path1451-5-8-0" />
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
         <path
-           inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
-           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           id="rect1461-3-4-1"
            transform="translate(0,106.5)"
-           id="rect1461-3-4-1" />
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
-         transform="translate(-108.256,129.20475)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1;"
+         xml:space="preserve"
          id="flowRoot1482-6-4-6"
-         xml:space="preserve"><flowRegion
-           style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1;"
-           id="flowRegion1484-4-7-0"><rect
-             style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1;"
-             y="272"
-             x="384"
-             height="128"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion1484-4-7-0"
+           style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1"><rect
+             id="rect1486-8-8-8"
              width="1024"
-             id="rect1486-8-8-8" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1;"
-           id="flowPara1488-6-3-8">Perkedel </flowPara></flowRoot>    </g>
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1;" /></flowRegion><flowPara
+           id="flowPara1488-6-3-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#fffff6;fill-opacity:1;stroke:none;stroke-opacity:1">Perkedel </flowPara></flowRoot>
+    </g>
   </g>
 </svg>

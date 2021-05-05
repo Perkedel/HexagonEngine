@@ -19,6 +19,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TitleBox" parent="VBoxContainer" instance=ExtResource( 2 )]
 
@@ -34,6 +37,7 @@ margin_top = 755.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_vertical = 9
+
 [connection signal="PressChangeDVDButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressChangeDVDButton"]
 [connection signal="PressExitButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExitButton"]
 [connection signal="PressExtrasButton" from="VBoxContainer/MenuButtonings" to="." method="_on_MenuButtonings_PressExtrasButton"]

@@ -1,0 +1,180 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/unMixamoPosee.png" type="Texture" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/ubuntu-font-family-0.83/UbuntuMono-R.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://modules/Reusables/SuperRichTextLabel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-RI.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://fonts/Built/Ubuntu_R_128tred.tres" type="DynamicFont" id=9]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=10]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_128tred.tres" type="DynamicFont" id=11]
+[ext_resource path="res://fonts/Built/Ubuntu_RI_128tred.tres" type="DynamicFont" id=12]
+[ext_resource path="res://fonts/Built/Ubuntu_BI_128tred.tres" type="DynamicFont" id=13]
+[ext_resource path="res://fonts/Built/Ubuntu_B_128tred.tres" type="DynamicFont" id=14]
+[ext_resource path="res://Sprites/Star64x64.png" type="Texture" id=15]
+[ext_resource path="res://GameDVDCardtridge/FidgetQuest/LevelCardtridge/TestPacks/HarshChapter/HarshChapter.gd" type="Script" id=16]
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+resource_name = "Ubuntu Monospace 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.215686, 0.219608, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+resource_name = "Ubuntu Italic 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0.113725, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+resource_name = "Ubuntu Bold 48"
+size = 48
+outline_size = 1
+outline_color = Color( 0.168627, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="HarshChapter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="Label" parent="VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 1 )
+text = "Post to Internet"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+margin_top = 94.0
+margin_right = 1920.0
+margin_bottom = 544.0
+rect_min_size = Vector2( 0, 450 )
+split_offset = 450
+
+[node name="TitleDesc" type="VBoxContainer" parent="VBoxContainer/HSplitContainer"]
+margin_right = 1406.0
+margin_bottom = 450.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/HSplitContainer/TitleDesc"]
+margin_right = 1406.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 2 )
+text = "amazing 3d Model"
+
+[node name="SuperRichTextLabel" parent="VBoxContainer/HSplitContainer/TitleDesc" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 67.0
+margin_right = 1406.0
+margin_bottom = 450.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/bold_italics_font = SubResource( 2 )
+custom_fonts/italics_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 4 )
+bbcode_text = "This is amazing 3D model I have made
+
+download this on Yetroyo.aaa/AmaxingHoresemanWithFeatherHelmet"
+text = "This is amazing 3D model I have made
+
+download this on Yetroyo.aaa/AmaxingHoresemanWithFeatherHelmet"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HSplitContainer"]
+margin_left = 1414.0
+margin_right = 1920.0
+margin_bottom = 450.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="PriceTag" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 548.0
+margin_right = 1920.0
+margin_bottom = 986.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PriceTag"]
+margin_right = 1920.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 10 )
+text = "Price Adjustment"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/PriceTag"]
+margin_top = 67.0
+margin_right = 1920.0
+margin_bottom = 83.0
+min_value = -8.0
+max_value = 8.0
+ticks_on_borders = true
+
+[node name="Harga" parent="VBoxContainer/PriceTag" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 87.0
+margin_right = 1920.0
+margin_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 11 )
+custom_fonts/bold_italics_font = ExtResource( 13 )
+custom_fonts/italics_font = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 9 )
+bbcode_text = "$0 [color=#00ff00]Ideal[/color]"
+text = "$0 Ideal"
+
+[node name="Warning" type="Label" parent="VBoxContainer/PriceTag"]
+margin_top = 402.0
+margin_right = 1920.0
+margin_bottom = 438.0
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+
+[node name="ButtonDecide" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 990.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+alignment = 1
+
+[node name="Submit" type="Button" parent="VBoxContainer/ButtonDecide"]
+margin_left = 799.0
+margin_right = 1121.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 1 )
+text = "Submit"
+icon = ExtResource( 15 )
+[connection signal="value_changed" from="VBoxContainer/PriceTag/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/ButtonDecide/Submit" to="." method="_on_Submit_pressed"]

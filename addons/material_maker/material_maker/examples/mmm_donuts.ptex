@@ -1,0 +1,1754 @@
+{
+	"connections": [
+		{
+			"from": "graph",
+			"from_port": 0,
+			"to": "sdf3d_scale_2",
+			"to_port": 0
+		},
+		{
+			"from": "sdf3d_translate_3_2_2",
+			"from_port": 0,
+			"to": "sdf3d_boolean",
+			"to_port": 1
+		},
+		{
+			"from": "sdf3d_boolean",
+			"from_port": 0,
+			"to": "sdf3d_translate_3_2_2_2",
+			"to_port": 0
+		},
+		{
+			"from": "sdf3d_translate_3_2_2_2",
+			"from_port": 0,
+			"to": "raymarching",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_create_map",
+			"from_port": 0,
+			"to": "mwf_map",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_create_map_3",
+			"from_port": 0,
+			"to": "mwf_map_2",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_create_map_2",
+			"from_port": 0,
+			"to": "mwf_map_2_2",
+			"to_port": 0
+		},
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "mwf_map_2",
+			"to_port": 1
+		},
+		{
+			"from": "mwf_map_2",
+			"from_port": 0,
+			"to": "mwf_mix",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_map_2",
+			"from_port": 1,
+			"to": "mwf_mix",
+			"to_port": 1
+		},
+		{
+			"from": "mwf_map_2",
+			"from_port": 2,
+			"to": "mwf_mix",
+			"to_port": 2
+		},
+		{
+			"from": "mwf_map_2",
+			"from_port": 3,
+			"to": "mwf_mix",
+			"to_port": 3
+		},
+		{
+			"from": "mwf_map_2",
+			"from_port": 4,
+			"to": "mwf_mix",
+			"to_port": 4
+		},
+		{
+			"from": "mwf_map_2_2",
+			"from_port": 0,
+			"to": "mwf_mix",
+			"to_port": 5
+		},
+		{
+			"from": "mwf_map_2_2",
+			"from_port": 1,
+			"to": "mwf_mix",
+			"to_port": 6
+		},
+		{
+			"from": "mwf_map_2_2",
+			"from_port": 2,
+			"to": "mwf_mix",
+			"to_port": 7
+		},
+		{
+			"from": "mwf_map_2_2",
+			"from_port": 3,
+			"to": "mwf_mix",
+			"to_port": 8
+		},
+		{
+			"from": "mwf_map_2_2",
+			"from_port": 4,
+			"to": "mwf_mix",
+			"to_port": 9
+		},
+		{
+			"from": "mwf_mix",
+			"from_port": 4,
+			"to": "mwf_mix_2",
+			"to_port": 9
+		},
+		{
+			"from": "mwf_mix",
+			"from_port": 3,
+			"to": "mwf_mix_2",
+			"to_port": 8
+		},
+		{
+			"from": "mwf_mix",
+			"from_port": 2,
+			"to": "mwf_mix_2",
+			"to_port": 7
+		},
+		{
+			"from": "mwf_mix",
+			"from_port": 1,
+			"to": "mwf_mix_2",
+			"to_port": 6
+		},
+		{
+			"from": "mwf_mix",
+			"from_port": 0,
+			"to": "mwf_mix_2",
+			"to_port": 5
+		},
+		{
+			"from": "uniform_2",
+			"from_port": 0,
+			"to": "mwf_map_2",
+			"to_port": 2
+		},
+		{
+			"from": "uniform_3",
+			"from_port": 0,
+			"to": "mwf_map",
+			"to_port": 1
+		},
+		{
+			"from": "uniform_2_2",
+			"from_port": 0,
+			"to": "mwf_map",
+			"to_port": 2
+		},
+		{
+			"from": "uniform_2_3_2",
+			"from_port": 0,
+			"to": "mwf_map_2_2",
+			"to_port": 2
+		},
+		{
+			"from": "mwf_map",
+			"from_port": 4,
+			"to": "mwf_mix_3",
+			"to_port": 9
+		},
+		{
+			"from": "mwf_map",
+			"from_port": 3,
+			"to": "mwf_mix_3",
+			"to_port": 8
+		},
+		{
+			"from": "mwf_map",
+			"from_port": 2,
+			"to": "mwf_mix_3",
+			"to_port": 7
+		},
+		{
+			"from": "mwf_map",
+			"from_port": 1,
+			"to": "mwf_mix_3",
+			"to_port": 6
+		},
+		{
+			"from": "mwf_map",
+			"from_port": 0,
+			"to": "mwf_mix_3",
+			"to_port": 5
+		},
+		{
+			"from": "mwf_mix_3",
+			"from_port": 0,
+			"to": "mwf_mix_2",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_mix_3",
+			"from_port": 1,
+			"to": "mwf_mix_2",
+			"to_port": 1
+		},
+		{
+			"from": "mwf_mix_3",
+			"from_port": 2,
+			"to": "mwf_mix_2",
+			"to_port": 2
+		},
+		{
+			"from": "mwf_mix_3",
+			"from_port": 3,
+			"to": "mwf_mix_2",
+			"to_port": 3
+		},
+		{
+			"from": "mwf_mix_3",
+			"from_port": 4,
+			"to": "mwf_mix_2",
+			"to_port": 4
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "mwf_mix_3",
+			"to_port": 0
+		},
+		{
+			"from": "uniform_4",
+			"from_port": 0,
+			"to": "mwf_mix_3",
+			"to_port": 1
+		},
+		{
+			"from": "uniform_4_2",
+			"from_port": 0,
+			"to": "mwf_mix_3",
+			"to_port": 2
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "mwf_map_2_2",
+			"to_port": 1
+		},
+		{
+			"from": "perlin",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "raymarching",
+			"from_port": 0,
+			"to": "mul_detect",
+			"to_port": 0
+		},
+		{
+			"from": "raymarching",
+			"from_port": 2,
+			"to": "mul_detect",
+			"to_port": 1
+		},
+		{
+			"from": "mul_detect",
+			"from_port": 0,
+			"to": "mwf_create_map",
+			"to_port": 0
+		},
+		{
+			"from": "mul_detect_2",
+			"from_port": 0,
+			"to": "mwf_create_map_3",
+			"to_port": 0
+		},
+		{
+			"from": "raymarching",
+			"from_port": 0,
+			"to": "mul_detect_2",
+			"to_port": 0
+		},
+		{
+			"from": "raymarching",
+			"from_port": 2,
+			"to": "mul_detect_2",
+			"to_port": 1
+		},
+		{
+			"from": "raymarching",
+			"from_port": 0,
+			"to": "mul_detect_2_2",
+			"to_port": 0
+		},
+		{
+			"from": "mul_detect_2_2",
+			"from_port": 0,
+			"to": "mwf_create_map_2",
+			"to_port": 0
+		},
+		{
+			"from": "raymarching",
+			"from_port": 2,
+			"to": "mul_detect_2_2",
+			"to_port": 1
+		},
+		{
+			"from": "sdf3d_scale_2",
+			"from_port": 0,
+			"to": "sdf3d_repeat_3",
+			"to_port": 0
+		},
+		{
+			"from": "sdf3d_repeat_3",
+			"from_port": 0,
+			"to": "sdf3d_boolean",
+			"to_port": 0
+		},
+		{
+			"from": "sdf3d_scale_2",
+			"from_port": 0,
+			"to": "sdf3d_repeat_3_2",
+			"to_port": 0
+		},
+		{
+			"from": "sdf3d_repeat_3_2",
+			"from_port": 0,
+			"to": "sdf3d_translate_3_2_2",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_mix_2",
+			"from_port": 0,
+			"to": "mwf_output_2",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_mix_2",
+			"from_port": 1,
+			"to": "mwf_output_2",
+			"to_port": 1
+		},
+		{
+			"from": "mwf_mix_2",
+			"from_port": 2,
+			"to": "mwf_output_2",
+			"to_port": 2
+		},
+		{
+			"from": "mwf_mix_2",
+			"from_port": 3,
+			"to": "mwf_output_2",
+			"to_port": 3
+		},
+		{
+			"from": "mwf_mix_2",
+			"from_port": 4,
+			"to": "mwf_output_2",
+			"to_port": 4
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 1,
+			"to": "Material",
+			"to_port": 1
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 2,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 3,
+			"to": "Material",
+			"to_port": 3
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 5,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "mwf_output_2",
+			"from_port": 6,
+			"to": "Material",
+			"to_port": 6
+		},
+		{
+			"from": "raymarching",
+			"from_port": 1,
+			"to": "Material",
+			"to_port": 4
+		}
+	],
+	"label": "Graph",
+	"name": "53",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 1596.135986,
+				"y": -86.800011
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.3,
+				"emission_energy": 1,
+				"metallic": 1,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "raymarching",
+			"node_position": {
+				"x": -101.683472,
+				"y": 134.825012
+			},
+			"parameters": {
+
+			},
+			"seed_value": -20022,
+			"shader_model": {
+				"code": "vec2 $(name_uv)_d = raymarch_$name($uv);\n",
+				"global": "",
+				"inputs": [
+					{
+						"default": "0.0",
+						"function": true,
+						"label": "",
+						"name": "sdf",
+						"type": "sdf3dc"
+					}
+				],
+				"instance": "vec2 raymarch_$name(vec2 uv) {\n\tvec3 ro = vec3(uv-vec2(0.5), 1.0);\n\tvec3 rd = vec3(0.0, 0.0, -1.0);\n\tfloat dO = 0.0;\n\tfloat c = 0.0;\n    for (int i=0; i < 100; i++) {\n    \tvec3 p = ro + rd*dO;\n        vec2 dS = $sdf(p);\n        dO += dS.x;\n\n        if (dO >= 1.0) {\n\t\t\tbreak;\n\t\t} else if (dS.x < 0.0001) {\n\t\t\tc = dS.y;\n\t\t\tbreak;\n\t\t}\n    }\n    \n    return vec2(dO, c);\n}\n\nvec3 normal_$name(vec3 p) {\n\tif (p.z <= 0.0) {\n\t\treturn vec3(0.0, 0.0, 1.0);\n\t}\n\n\tfloat d = $sdf(p).x;\n    float e = .001;\n    \n    vec3 n = d - vec3(\n        $sdf(p-vec3(e, 0.0, 0.0)).x,\n        $sdf(p-vec3(0.0, e, 0.0)).x,\n        $sdf(p-vec3(0.0, 0.0, e)).x);\n    \n    return vec3(-1.0, -1.0, -1.0)*normalize(n);\n}\n\n",
+				"name": "Raymarching",
+				"outputs": [
+					{
+						"f": "1.0-$(name_uv)_d.x",
+						"type": "f"
+					},
+					{
+						"rgb": "vec3(0.5)+0.5*normal_$name(vec3($uv-vec2(0.5), 1.0-$(name_uv)_d.x))",
+						"type": "rgb"
+					},
+					{
+						"f": "$(name_uv)_d.y",
+						"type": "f"
+					}
+				],
+				"parameters": [
+
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"connections": [
+				{
+					"from": "sdf3d_translate_3_2_2",
+					"from_port": 0,
+					"to": "sdf3d_rounded_2",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_rounded_2_2",
+					"from_port": 0,
+					"to": "sdf3d_boolean",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_rounded_2",
+					"from_port": 0,
+					"to": "sdf3d_boolean",
+					"to_port": 1
+				},
+				{
+					"from": "sdf3d_torus",
+					"from_port": 0,
+					"to": "sdf3d_rounded_2_2",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_torus_2",
+					"from_port": 0,
+					"to": "sdf3d_translate_3_2_2",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_capsule",
+					"from_port": 0,
+					"to": "sdf3d_repeat",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_repeat",
+					"from_port": 0,
+					"to": "sdf3d_boolean_2",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_translate_3_2_2_2",
+					"from_port": 0,
+					"to": "sdf3d_boolean_2",
+					"to_port": 1
+				},
+				{
+					"from": "sdf3d_torus_2",
+					"from_port": 0,
+					"to": "sdf3d_translate_3_2_2_2",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_boolean_2",
+					"from_port": 0,
+					"to": "sdf3d_rounded_2_3",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_rounded_2_3",
+					"from_port": 0,
+					"to": "sdf3d_boolean_3",
+					"to_port": 1
+				},
+				{
+					"from": "sdf3d_boolean",
+					"from_port": 0,
+					"to": "sdf3d_boolean_3",
+					"to_port": 0
+				},
+				{
+					"from": "sdf3d_boolean_3",
+					"from_port": 0,
+					"to": "gen_outputs",
+					"to_port": 0
+				}
+			],
+			"label": "Donut",
+			"name": "graph",
+			"node_position": {
+				"x": -660.759155,
+				"y": 14.905704
+			},
+			"nodes": [
+				{
+					"name": "sdf3d_rounded_2_3",
+					"node_position": {
+						"x": -552.595459,
+						"y": 249.420105
+					},
+					"parameters": {
+						"c": 0.31
+					},
+					"shader_model": {
+						"code": "",
+						"global": "",
+						"inputs": [
+							{
+								"default": "0.0",
+								"label": "",
+								"name": "in",
+								"type": "sdf3d"
+							}
+						],
+						"instance": "",
+						"name": "Color",
+						"outputs": [
+							{
+								"sdf3dc": "vec2($in($uv), $c)",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"control": "None",
+								"default": 0,
+								"label": "",
+								"max": 1,
+								"min": 0,
+								"name": "c",
+								"step": 0.01,
+								"type": "float"
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_boolean_2",
+					"node_position": {
+						"x": -557.354126,
+						"y": 320.541656
+					},
+					"parameters": {
+						"op": 2
+					},
+					"shader_model": {
+						"code": "",
+						"global": "vec2 sdf3dc_union(vec2 a, vec2 b) {\n\treturn vec2(min(a.x, b.x), mix(b.y, a.y, step(a.x, b.x)));\n}\nvec2 sdf3dc_sub(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, -b.x), a.y);\n}\nvec2 sdf3dc_inter(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, b.x), mix(a.y, b.y, step(a.x, b.x)));\n}\n",
+						"inputs": [
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in1",
+								"type": "sdf3dc"
+							},
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in2",
+								"type": "sdf3dc"
+							}
+						],
+						"instance": "",
+						"name": "Boolean",
+						"outputs": [
+							{
+								"sdf3dc": "$op($in1($uv), $in2($uv))",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"default": 2,
+								"label": "",
+								"name": "op",
+								"type": "enum",
+								"values": [
+									{
+										"name": "Union",
+										"value": "sdf3dc_union"
+									},
+									{
+										"name": "Subtraction",
+										"value": "sdf3dc_sub"
+									},
+									{
+										"name": "Intersection",
+										"value": "sdf3dc_inter"
+									}
+								]
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_translate_3_2_2_2",
+					"node_position": {
+						"x": -768.354126,
+						"y": 429.041656
+					},
+					"parameters": {
+						"x": 0,
+						"y": 0,
+						"z": 0.05
+					},
+					"type": "sdf3d_translate"
+				},
+				{
+					"name": "sdf3d_repeat",
+					"node_position": {
+						"x": -768.854126,
+						"y": 281.291656
+					},
+					"parameters": {
+						"r": 0.51,
+						"rx": 16,
+						"ry": 16,
+						"rz": 16
+					},
+					"shader_model": {
+						"code": "",
+						"global": "vec3 sdf3d_repeat(vec3 p, vec3 r, float seed, float randomness) {\n\tvec3 i = floor(p/r+0.5);\n\tvec3 a = rand3(i.xy+i.yz+vec2(seed))*6.28*randomness;\n\tp = mod(p+0.5*r,r)-0.5*r;\n\tvec3 rv;\n\tfloat c;\n\tfloat s;\n\tc = cos(a.x);\n\ts = sin(a.x);\n\trv.x = p.x;\n\trv.y = p.y*c+p.z*s;\n\trv.z = -p.y*s+p.z*c;\n\tc = cos(a.y);\n\ts = sin(a.y);\n\tp.x = rv.x*c+rv.z*s;\n\tp.y = rv.y;\n\tp.z = -rv.x*s+rv.z*c;\n\tc = cos(a.z);\n\ts = sin(a.z);\n\trv.x = p.x*c+p.y*s;\n\trv.y = -p.x*s+p.y*c;\n\trv.z = p.z;\n\treturn rv;\n}\n",
+						"inputs": [
+							{
+								"default": "0.0",
+								"label": "",
+								"name": "in",
+								"type": "sdf3dc"
+							}
+						],
+						"instance": "",
+						"name": "Repeat",
+						"outputs": [
+							{
+								"sdf3dc": "$in(sdf3d_repeat($uv, vec3(1.0/$rx, 1.0/$ry, 1.0/$rz), float($seed), $r))",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"control": "None",
+								"default": 4,
+								"label": "X",
+								"max": 32,
+								"min": 1,
+								"name": "rx",
+								"step": 1,
+								"type": "float"
+							},
+							{
+								"control": "None",
+								"default": 4,
+								"label": "Y",
+								"max": 32,
+								"min": 1,
+								"name": "ry",
+								"step": 1,
+								"type": "float"
+							},
+							{
+								"control": "None",
+								"default": 1,
+								"label": "Z",
+								"max": 32,
+								"min": 1,
+								"name": "rz",
+								"step": 1,
+								"type": "float"
+							},
+							{
+								"control": "None",
+								"default": 0.5,
+								"label": "R",
+								"max": 1,
+								"min": 0,
+								"name": "r",
+								"step": 0.01,
+								"type": "float"
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_capsule",
+					"node_position": {
+						"x": -786.854126,
+						"y": 197.291656
+					},
+					"parameters": {
+						"axis": 1,
+						"l": 0.02,
+						"r": 0.01
+					},
+					"type": "sdf3d_capsule"
+				},
+				{
+					"name": "sdf3d_torus_2",
+					"node_position": {
+						"x": -768.354126,
+						"y": -82.208344
+					},
+					"parameters": {
+						"R": 0.3,
+						"axis": 2,
+						"r": 0.14
+					},
+					"type": "sdf3d_torus"
+				},
+				{
+					"name": "sdf3d_torus",
+					"node_position": {
+						"x": -759.854126,
+						"y": -236.708344
+					},
+					"parameters": {
+						"R": 0.3,
+						"axis": 2,
+						"r": 0.15
+					},
+					"type": "sdf3d_torus"
+				},
+				{
+					"name": "sdf3d_boolean",
+					"node_position": {
+						"x": -521.333313,
+						"y": -3.083344
+					},
+					"parameters": {
+						"op": 0
+					},
+					"shader_model": {
+						"code": "",
+						"global": "vec2 sdf3dc_union(vec2 a, vec2 b) {\n\treturn vec2(min(a.x, b.x), mix(b.y, a.y, step(a.x, b.x)));\n}\nvec2 sdf3dc_sub(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, -b.x), a.y);\n}\nvec2 sdf3dc_inter(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, b.x), mix(a.y, b.y, step(a.x, b.x)));\n}\n",
+						"inputs": [
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in1",
+								"type": "sdf3dc"
+							},
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in2",
+								"type": "sdf3dc"
+							}
+						],
+						"instance": "",
+						"name": "Boolean",
+						"outputs": [
+							{
+								"sdf3dc": "$op($in1($uv), $in2($uv))",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"default": 2,
+								"label": "",
+								"name": "op",
+								"type": "enum",
+								"values": [
+									{
+										"name": "Union",
+										"value": "sdf3dc_union"
+									},
+									{
+										"name": "Subtraction",
+										"value": "sdf3dc_sub"
+									},
+									{
+										"name": "Intersection",
+										"value": "sdf3dc_inter"
+									}
+								]
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_rounded_2_2",
+					"node_position": {
+						"x": -751.833313,
+						"y": -156.583344
+					},
+					"parameters": {
+						"c": 0.08
+					},
+					"shader_model": {
+						"code": "",
+						"global": "",
+						"inputs": [
+							{
+								"default": "0.0",
+								"label": "",
+								"name": "in",
+								"type": "sdf3d"
+							}
+						],
+						"instance": "",
+						"name": "Color",
+						"outputs": [
+							{
+								"sdf3dc": "vec2($in($uv), $c)",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"control": "None",
+								"default": 0,
+								"label": "",
+								"max": 1,
+								"min": 0,
+								"name": "c",
+								"step": 0.01,
+								"type": "float"
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_translate_3_2_2",
+					"node_position": {
+						"x": -774.833313,
+						"y": 16.666656
+					},
+					"parameters": {
+						"x": 0,
+						"y": 0,
+						"z": 0.03
+					},
+					"type": "sdf3d_translate"
+				},
+				{
+					"name": "sdf3d_rounded_2",
+					"node_position": {
+						"x": -763.333313,
+						"y": 130.166656
+					},
+					"parameters": {
+						"c": 0.87
+					},
+					"shader_model": {
+						"code": "",
+						"global": "",
+						"inputs": [
+							{
+								"default": "0.0",
+								"label": "",
+								"name": "in",
+								"type": "sdf3d"
+							}
+						],
+						"instance": "",
+						"name": "Color",
+						"outputs": [
+							{
+								"sdf3dc": "vec2($in($uv), $c)",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"control": "None",
+								"default": 0,
+								"label": "",
+								"max": 1,
+								"min": 0,
+								"name": "c",
+								"step": 0.01,
+								"type": "float"
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "sdf3d_boolean_3",
+					"node_position": {
+						"x": -526.595459,
+						"y": 127.920105
+					},
+					"parameters": {
+						"op": 0
+					},
+					"shader_model": {
+						"code": "",
+						"global": "vec2 sdf3dc_union(vec2 a, vec2 b) {\n\treturn vec2(min(a.x, b.x), mix(b.y, a.y, step(a.x, b.x)));\n}\nvec2 sdf3dc_sub(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, -b.x), a.y);\n}\nvec2 sdf3dc_inter(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, b.x), mix(a.y, b.y, step(a.x, b.x)));\n}\n",
+						"inputs": [
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in1",
+								"type": "sdf3dc"
+							},
+							{
+								"default": "vec2(0.0)",
+								"label": "",
+								"name": "in2",
+								"type": "sdf3dc"
+							}
+						],
+						"instance": "",
+						"name": "Boolean",
+						"outputs": [
+							{
+								"sdf3dc": "$op($in1($uv), $in2($uv))",
+								"type": "sdf3dc"
+							}
+						],
+						"parameters": [
+							{
+								"default": 2,
+								"label": "",
+								"name": "op",
+								"type": "enum",
+								"values": [
+									{
+										"name": "Union",
+										"value": "sdf3dc_union"
+									},
+									{
+										"name": "Subtraction",
+										"value": "sdf3dc_sub"
+									},
+									{
+										"name": "Intersection",
+										"value": "sdf3dc_inter"
+									}
+								]
+							}
+						]
+					},
+					"type": "shader"
+				},
+				{
+					"name": "gen_inputs",
+					"node_position": {
+						"x": -1086.854126,
+						"y": 105.729713
+					},
+					"parameters": {
+
+					},
+					"ports": [
+
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_outputs",
+					"node_position": {
+						"x": -221.333313,
+						"y": 105.729713
+					},
+					"parameters": {
+
+					},
+					"ports": [
+						{
+							"name": "port0",
+							"type": "sdf3dc"
+						}
+					],
+					"type": "ios"
+				},
+				{
+					"name": "gen_parameters",
+					"node_position": {
+						"x": -891.679138,
+						"y": -536.708374
+					},
+					"parameters": {
+
+					},
+					"type": "remote",
+					"widgets": [
+
+					]
+				}
+			],
+			"parameters": {
+
+			},
+			"type": "graph"
+		},
+		{
+			"name": "sdf3d_scale_2",
+			"node_position": {
+				"x": -670.842224,
+				"y": 66.030228
+			},
+			"parameters": {
+				"s": 0.37
+			},
+			"shader_model": {
+				"code": "vec2 $(name_uv)_in = $in(($uv)/$s);",
+				"global": "",
+				"inputs": [
+					{
+						"default": "0.0",
+						"label": "",
+						"name": "in",
+						"type": "sdf3dc"
+					}
+				],
+				"instance": "",
+				"name": "Scale",
+				"outputs": [
+					{
+						"sdf3dc": "vec2($(name_uv)_in.x*$s, $(name_uv)_in.y)",
+						"type": "sdf3dc"
+					}
+				],
+				"parameters": [
+					{
+						"control": "Scale1.x",
+						"default": 1,
+						"label": "",
+						"max": 5,
+						"min": 0,
+						"name": "s",
+						"step": 0.01,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "sdf3d_translate_3_2_2",
+			"node_position": {
+				"x": -478.952209,
+				"y": 207.034912
+			},
+			"parameters": {
+				"x": 0.18,
+				"y": 0.11,
+				"z": 0.14
+			},
+			"shader_model": {
+				"code": "",
+				"global": "",
+				"inputs": [
+					{
+						"default": "0.0",
+						"label": "",
+						"name": "in",
+						"type": "sdf3dc"
+					}
+				],
+				"instance": "",
+				"name": "Translate",
+				"outputs": [
+					{
+						"sdf3dc": "$in($uv-vec3($x, $y, $z))",
+						"type": "sdf3dc"
+					}
+				],
+				"parameters": [
+					{
+						"control": "P1.x",
+						"default": 0,
+						"label": "X",
+						"max": 1,
+						"min": -1,
+						"name": "x",
+						"step": 0.01,
+						"type": "float"
+					},
+					{
+						"control": "P1.y",
+						"default": 0,
+						"label": "Y",
+						"max": 1,
+						"min": -1,
+						"name": "y",
+						"step": 0.01,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 0,
+						"label": "Z",
+						"max": 1,
+						"min": -1,
+						"name": "z",
+						"step": 0.01,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "sdf3d_boolean",
+			"node_position": {
+				"x": -265.248779,
+				"y": 76.092621
+			},
+			"parameters": {
+				"op": 0
+			},
+			"shader_model": {
+				"code": "",
+				"global": "vec2 sdf3dc_union(vec2 a, vec2 b) {\n\treturn vec2(min(a.x, b.x), mix(b.y, a.y, step(a.x, b.x)));\n}\nvec2 sdf3dc_sub(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, -b.x), a.y);\n}\nvec2 sdf3dc_inter(vec2 a, vec2 b) {\n\treturn vec2(max(a.x, b.x), mix(a.y, b.y, step(a.x, b.x)));\n}\n",
+				"inputs": [
+					{
+						"default": "vec2(0.0)",
+						"label": "",
+						"name": "in1",
+						"type": "sdf3dc"
+					},
+					{
+						"default": "vec2(0.0)",
+						"label": "",
+						"name": "in2",
+						"type": "sdf3dc"
+					}
+				],
+				"instance": "",
+				"name": "Boolean",
+				"outputs": [
+					{
+						"sdf3dc": "$op($in1($uv), $in2($uv))",
+						"type": "sdf3dc"
+					}
+				],
+				"parameters": [
+					{
+						"default": 2,
+						"label": "",
+						"name": "op",
+						"type": "enum",
+						"values": [
+							{
+								"name": "Union",
+								"value": "sdf3dc_union"
+							},
+							{
+								"name": "Subtraction",
+								"value": "sdf3dc_sub"
+							},
+							{
+								"name": "Intersection",
+								"value": "sdf3dc_inter"
+							}
+						]
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"name": "sdf3d_translate_3_2_2_2",
+			"node_position": {
+				"x": -278.344788,
+				"y": 149.892624
+			},
+			"parameters": {
+				"x": 0,
+				"y": 0,
+				"z": 0.07
+			},
+			"shader_model": {
+				"code": "",
+				"global": "",
+				"inputs": [
+					{
+						"default": "0.0",
+						"label": "",
+						"name": "in",
+						"type": "sdf3dc"
+					}
+				],
+				"instance": "",
+				"name": "Translate",
+				"outputs": [
+					{
+						"sdf3dc": "$in($uv-vec3($x, $y, $z))",
+						"type": "sdf3dc"
+					}
+				],
+				"parameters": [
+					{
+						"control": "P1.x",
+						"default": 0,
+						"label": "X",
+						"max": 1,
+						"min": -1,
+						"name": "x",
+						"step": 0.01,
+						"type": "float"
+					},
+					{
+						"control": "P1.y",
+						"default": 0,
+						"label": "Y",
+						"max": 1,
+						"min": -1,
+						"name": "y",
+						"step": 0.01,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 0,
+						"label": "Z",
+						"max": 1,
+						"min": -1,
+						"name": "z",
+						"step": 0.01,
+						"type": "float"
+					}
+				]
+			},
+			"type": "shader"
+		},
+		{
+			"color": {
+				"a": 1,
+				"b": 1,
+				"g": 0.0625,
+				"r": 0,
+				"type": "Color"
+			},
+			"name": "comment",
+			"node_position": {
+				"x": -681.957275,
+				"y": -50.802036
+			},
+			"parameters": {
+
+			},
+			"size": {
+				"x": 757.167969,
+				"y": 382.903992
+			},
+			"text": "\n",
+			"title": "Render donuts with color indexes",
+			"type": "comment"
+		},
+		{
+			"name": "mwf_create_map",
+			"node_position": {
+				"x": 360.571991,
+				"y": -128.630447
+			},
+			"parameters": {
+				"angle": 0,
+				"height": 1
+			},
+			"type": "mwf_create_map"
+		},
+		{
+			"name": "mwf_create_map_2",
+			"node_position": {
+				"x": 369.417175,
+				"y": 399.369568
+			},
+			"parameters": {
+				"angle": 0,
+				"height": 1
+			},
+			"type": "mwf_create_map"
+		},
+		{
+			"name": "mwf_create_map_3",
+			"node_position": {
+				"x": 378.417175,
+				"y": 137.369568
+			},
+			"parameters": {
+				"angle": 0,
+				"height": 1
+			},
+			"type": "mwf_create_map"
+		},
+		{
+			"name": "mwf_map",
+			"node_position": {
+				"x": 652.417175,
+				"y": -128.630447
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_map"
+		},
+		{
+			"name": "mwf_map_2",
+			"node_position": {
+				"x": 647.693909,
+				"y": 136.369553
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_map"
+		},
+		{
+			"name": "mwf_map_2_2",
+			"node_position": {
+				"x": 651.693909,
+				"y": 406.119568
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_map"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": 415.193909,
+				"y": 217.119568
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0,
+					"g": 0.165865,
+					"r": 0.280273,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "mwf_mix",
+			"node_position": {
+				"x": 853.900879,
+				"y": 164.927567
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_mix"
+		},
+		{
+			"name": "mwf_mix_2",
+			"node_position": {
+				"x": 1083.009155,
+				"y": -87.618446
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_mix"
+		},
+		{
+			"name": "uniform_2",
+			"node_position": {
+				"x": 415.732727,
+				"y": 272.369568
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0,
+					"g": 0.105882,
+					"r": 1,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "uniform_2_2",
+			"node_position": {
+				"x": 408.002197,
+				"y": 17.994553
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "uniform_3",
+			"node_position": {
+				"x": 407.463379,
+				"y": -37.255447
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0.914063,
+					"g": 0,
+					"r": 1,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "uniform_2_3_2",
+			"node_position": {
+				"x": 413.800964,
+				"y": 708.119568
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0,
+					"g": 0.886275,
+					"r": 1,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "mwf_mix_3",
+			"node_position": {
+				"x": 845.760559,
+				"y": -242.048431
+			},
+			"parameters": {
+
+			},
+			"type": "mwf_mix"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": 398.856934,
+				"y": -337.380432
+			},
+			"parameters": {
+				"color": 0.05
+			},
+			"type": "uniform_greyscale"
+		},
+		{
+			"name": "uniform_4",
+			"node_position": {
+				"x": 400.856934,
+				"y": -273.880432
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 1,
+					"g": 0.415686,
+					"r": 0,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "uniform_4_2",
+			"node_position": {
+				"x": 399.718628,
+				"y": -217.130432
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0,
+					"g": 1,
+					"r": 0,
+					"type": "Color"
+				}
+			},
+			"type": "uniform"
+		},
+		{
+			"name": "perlin",
+			"node_position": {
+				"x": 363.92984,
+				"y": 499.119568
+			},
+			"parameters": {
+				"iterations": 8,
+				"persistence": 0.95,
+				"scale_x": 4,
+				"scale_y": 4
+			},
+			"type": "perlin"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": 378.92981,
+				"y": 637.119568
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 0,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.240099,
+							"g": 0.613979,
+							"pos": 0,
+							"r": 0.869792
+						},
+						{
+							"a": 1,
+							"b": 0.233941,
+							"g": 0.553521,
+							"pos": 1,
+							"r": 0.802083
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"type": "colorize"
+		},
+		{
+			"color": {
+				"a": 1,
+				"b": 0,
+				"g": 1,
+				"r": 0.9375,
+				"type": "Color"
+			},
+			"name": "comment_2",
+			"node_position": {
+				"x": 82.468719,
+				"y": -50.148132
+			},
+			"parameters": {
+
+			},
+			"size": {
+				"x": 255.271576,
+				"y": 432.232056
+			},
+			"text": "",
+			"title": "Separate colors",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1,
+				"b": 0,
+				"g": 1,
+				"r": 0.09375,
+				"type": "Color"
+			},
+			"name": "comment_2_2",
+			"node_position": {
+				"x": 346.962891,
+				"y": -373.398132
+			},
+			"parameters": {
+
+			},
+			"size": {
+				"x": 464,
+				"y": 1149
+			},
+			"text": "",
+			"title": "Create maps and materials and combine them",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1,
+				"b": 1,
+				"g": 0,
+				"r": 0.96875,
+				"type": "Color"
+			},
+			"name": "comment_2_2_2",
+			"node_position": {
+				"x": 828.579407,
+				"y": -289.750183
+			},
+			"parameters": {
+
+			},
+			"size": {
+				"x": 743.688171,
+				"y": 725.975952
+			},
+			"text": "",
+			"title": "Mix the result and generate output",
+			"type": "comment"
+		},
+		{
+			"name": "mul_detect",
+			"node_position": {
+				"x": 90.234436,
+				"y": -13.032837
+			},
+			"parameters": {
+				"t": 0.01,
+				"v": 0.31
+			},
+			"type": "mul_detect"
+		},
+		{
+			"name": "mul_detect_2",
+			"node_position": {
+				"x": 94.964081,
+				"y": 132.26152
+			},
+			"parameters": {
+				"t": 0.01,
+				"v": 0.87
+			},
+			"type": "mul_detect"
+		},
+		{
+			"name": "mul_detect_2_2",
+			"node_position": {
+				"x": 90.964081,
+				"y": 288.261536
+			},
+			"parameters": {
+				"t": 0.01,
+				"v": 0.08
+			},
+			"type": "mul_detect"
+		},
+		{
+			"name": "sdf3d_repeat_3",
+			"node_position": {
+				"x": -479.340515,
+				"y": 4.22731
+			},
+			"parameters": {
+				"r": 0.2,
+				"rx": 3,
+				"ry": 3
+			},
+			"type": "sdf3d_repeat"
+		},
+		{
+			"name": "sdf3d_repeat_3_2",
+			"node_position": {
+				"x": -479.107727,
+				"y": 105.348923
+			},
+			"parameters": {
+				"r": 0.2,
+				"rx": 3,
+				"ry": 3
+			},
+			"type": "sdf3d_repeat"
+		},
+		{
+			"name": "mwf_output_2",
+			"node_position": {
+				"x": 1286.272217,
+				"y": -79.138245
+			},
+			"parameters": {
+				"param0": 1,
+				"param2": 1
+			},
+			"type": "mwf_output"
+		}
+	],
+	"parameters": {
+
+	},
+	"type": "graph"
+}

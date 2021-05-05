@@ -18,12 +18,28 @@ var openFile
 export (AudioStream) var FileAudio
 enum FileAccessModes {Resourcer = 0, Userer = 1, FileSystemer = 2, Canceler = -1}
 export (int) var SelectedFileAccess
+onready var GMEPlayer = AutoSpeaker.FLMmusic
+var useGME = false
+var GMEplayed = false
+onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
+var useArlezMidi = false
+#var Dau = DauMainLooper
+
+# https://github.com/MightyPrinny/godot-FLMusicLib/blob/demo/MyScene.gd
+# GME specific variables
+var loopStart = 0;
+var loopEnd = 0;
+var loop = false;
+var trackNum = 0;
+var vol = "1";
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
 signal reportScoreIcon(Texturer)
+signal reportNextLevel(cardWhich)
 #todo: reportTexture for score icon
 
 func TestoidDummyFileMake():
@@ -36,12 +52,14 @@ func TestoidDummyFileMake():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().connect("files_dropped",self,"_drag_drop")
 	SetPath(FileAudio.get_path())
 	TestoidDummyFileMake()
 	#LoadFile(FileAudio)
 	SetAudioStream(FileAudio)
 	spectrum = AudioServer.get_bus_effect_instance(AudioServer.get_bus_index(AnalyzeBus), WhereIsSpectrumAnalyzerEffect)
-	
+	GMEPlayer.connect("track_ended",self,"_GMEtrack_ended")
+	ArlezMidi.connect("appeared_lyric",self, "_ArlezMIDI_lyric")
 	pass # Replace with function body.
 
 func Spectruder():
@@ -97,6 +115,7 @@ func CountCrackleCounts():
 func DeTogglePlay():
 	$MusicController/MusicUI/MainContains/ControllingMusic/Play.pressed = false
 	#$MusicUI/MainContains/ControllingMusic/Play.pressed = false
+	#GMEPlayer.stop_music()
 	pass
 
 func ReTogglePlay():
@@ -105,13 +124,28 @@ func ReTogglePlay():
 	pass
 
 func PlaySong():
-	$MusicController/MusicUI/MusicPlaySpeaker.play()
-	#$MusicUI/MusicPlaySpeaker.play()
+	if useGME:
+		GMEPlayer.play_music(FilePath,trackNum,loop,loopStart,loopEnd,0)
+		GMEPlayer.set_volume(vol.to_float())
+		GMEplayed = true
+	elif useArlezMidi:
+		ArlezMidi.play()
+	else:
+		$MusicController/MusicUI/MusicPlaySpeaker.play()
+		#$MusicUI/MusicPlaySpeaker.play()
 	pass
 
 func StopSong():
-	$MusicController/MusicUI/MusicPlaySpeaker.stop()
-	#$MusicUI/MusicPlaySpeaker.stop()
+	if useGME:
+		if GMEplayed:
+			GMEPlayer.stop_music()
+		GMEplayed = false
+	elif useArlezMidi:
+		ArlezMidi.stop()
+		return
+	else:
+		$MusicController/MusicUI/MusicPlaySpeaker.stop()
+		#$MusicUI/MusicPlaySpeaker.stop()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -180,7 +214,10 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 	var Buffering = openFile.get_buffer(openFile.get_len())
 	var streamSample
 	#streamSample.data = ProcessAudio(Buffering,path)
-	if path.ends_with(".wav"):
+	useGME = false
+	useArlezMidi = false
+	
+	if path.ends_with(".wav") or path.ends_with(".WAV"): #Oh no, elseifs!!!
 		streamSample = AudioStreamSample.new()
 		if cutNoise:
 			print("Cutting Noise...")
@@ -198,21 +235,45 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 			streamSample.stereo = ConvertStereo
 			pass
 		pass
-	elif path.ends_with(".ogg"):
+	elif path.ends_with(".ogg") or path.ends_with(".OGG"):
 		# # https://github.com/godotengine/godot/issues/17748#issuecomment-376320424
 		streamSample = AudioStreamOGGVorbis.new()
 		pass
-	else:
-		printerr("/!\\ UNSUPPORTED AUDIO FILE EXTENSION /!\\ Will use WAV Audio Stream Sampler")
-		streamSample = AudioStreamSample.new()
+	elif path.capitalize().ends_with(".MP3"):
+		streamSample = AudioStreamMP3.new()
+		# NEW!!! Godot 3.3 Audio Stream now supports MP3 yay!
+		# it's similar way like OGG, just it's MP3
+		# https://godotengine.org/article/godot-3-3-has-arrived
 		pass
+	elif path.ends_with(".xm") or path.ends_with(".mod") or path.ends_with(".it") or path.ends_with(".s3m")or path.ends_with(".XM") or path.ends_with(".MOD") or path.ends_with(".IT") or path.ends_with(".S3M"):
+		useGME = true
+		pass
+	elif path.ends_with(".mid") or path.ends_with(".midi") or path.ends_with(".MID") or path.ends_with(".MIDI"):
+		useArlezMidi = true
+		pass
+	else:
+		printerr("/!\\ UNSUPPORTED AUDIO FILE EXTENSION /!\\ Will use GME player")
+		print_stack()
+#		streamSample = AudioStreamSample.new()
+		useGME = true
+		pass
+	
 	pass
-	streamSample.data = Buffering
-	print("Audio Loaded = " + openFile.get_path())
+	
+	if useArlezMidi:
+		ArlezMidi.file = openFile.get_path()
+		print("Use Arlez80 MIDI player = " + openFile.get_path())
+		pass
+	elif useGME:
+		print("Use GME = " + openFile.get_path())
+	else:
+		streamSample.data = Buffering
+		print("Audio Loaded = " + openFile.get_path())
+		FileAudio = streamSample
+		$MusicController/MusicUI/MusicPlaySpeaker.stream = streamSample
+		pass
 	openFile.close()
 	#SetAudioStream(streamSample)
-	FileAudio = streamSample
-	$MusicController/MusicUI/MusicPlaySpeaker.stream = streamSample
 	pass
 
 func LoadFile(filer : String):
@@ -260,6 +321,16 @@ func _on_AudioStreamPlayer_finished():
 	DeTogglePlay()
 	pass # Replace with function body.
 
+func _GMEtrack_ended():
+	GMEplayed = false
+	DeTogglePlay()
+	print("GME end of track")
+	pass
+
+func _ArlezMIDI_lyric(var lyric):
+	##printraw(lyric)
+	print(lyric)
+	pass
 
 func _on_Play_pressed():
 	pass # Replace with function body.
@@ -315,3 +386,13 @@ func _on_Scroncher_body_entered(body):
 		print("\n\n(ATTENTION!!!) YOU ARE GOING TO LOSE ALL CRACKLES! LEFT "+ String(CrackleCounter) +" PCS!!! (ATTENTION!!!)\n\n")
 		pass
 	pass # Replace with function body.
+
+# https://docs.godotengine.org/en/stable/classes/class_mainloop.html#method-descriptions
+# https://github.com/godotengine/godot/issues/5625
+# https://www.reddit.com/r/godot/comments/46em5w/minimal_drag_and_drop_example/
+# https://godotforums.org/discussion/20252/drag-and-drop-files-to-game-at-runtime
+func _drag_drop(filePaths:PoolStringArray,screenOf:int):
+	print("Drag Drop the ", filePaths[0], " to screen ", String(screenOf))
+	SelectedFileAccess = FileAccessModes.FileSystemer
+	_on_FileDialog_file_selected(filePaths[0])
+	pass

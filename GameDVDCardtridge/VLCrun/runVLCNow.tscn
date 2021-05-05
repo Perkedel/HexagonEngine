@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ExtAppOpener/ExtAppOpener.tscn" type="PackedScene" id=1]
+
+[node name="runVLCNow" instance=ExtResource( 1 )]
+bootJsonPatho = "res://GameDVDCardtridge/VLCrun/boot.json"

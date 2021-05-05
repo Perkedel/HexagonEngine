@@ -1,3 +1,4 @@
+tool
 extends HBoxContainer
 
 export (String) var VariableName = "Testoid Progress"

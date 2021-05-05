@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tada.wav-4ec139d329f05044d8e9d523b0a22665.sample"
+
+[deps]
+
+source_file="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav"
+dest_files=[ "res://.import/tada.wav-4ec139d329f05044d8e9d523b0a22665.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

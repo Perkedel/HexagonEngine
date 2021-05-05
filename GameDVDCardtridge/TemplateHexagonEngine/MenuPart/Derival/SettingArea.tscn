@@ -6,12 +6,13 @@
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/AudioSection.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableCategoryArea.tscn" type="PackedScene" id=6]
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Sprites/SpecialButtoning.png" type="Texture" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/AudioCategoryArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/ButtonGroup/CategoryButtonGroup2.tres" type="ButtonGroup" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/DisplayCategoryArea.tscn" type="PackedScene" id=11]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingSectionButton/DisplayCategoryButton.tscn" type="PackedScene" id=12]
+
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true

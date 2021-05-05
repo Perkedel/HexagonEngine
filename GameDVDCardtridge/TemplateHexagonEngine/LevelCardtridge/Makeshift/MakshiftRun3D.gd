@@ -13,6 +13,7 @@ onready var y_deadzone = 0
 # var b = "text"
 signal reportHP(level)
 signal reportScore(number)
+signal reportNextLevel(cardWhich)
 
 # https://www.youtube.com/watch?v=LfbOOA3dmFo&t=209s
 # https://www.youtube.com/watch?v=Etpq-d5af6M&t=183s

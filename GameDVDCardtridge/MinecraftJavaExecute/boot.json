@@ -1,0 +1,11 @@
+{
+    "id": "minecraft-execute-win",
+    "Title": "(Windows / ReactOS) Run Minecraft Java Launcher",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/MinecraftJavaExecute/MinecraftJavaExecute.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "requiredEggsellents":[]
+}

@@ -1,0 +1,11 @@
+help
+echo aa
+help
+help --all
+ls
+dir
+mkdir TermTestoid
+help
+ls
+sudo apt upgrade
+flite -t "Hello world" -voice rms

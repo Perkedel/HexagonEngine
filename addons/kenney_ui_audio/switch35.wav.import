@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/switch35.wav-d841ce506c4462a1c2633bee4d15d14c.sample"
+
+[deps]
+
+source_file="res://addons/kenney_ui_audio/switch35.wav"
+dest_files=[ "res://.import/switch35.wav-d841ce506c4462a1c2633bee4d15d14c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

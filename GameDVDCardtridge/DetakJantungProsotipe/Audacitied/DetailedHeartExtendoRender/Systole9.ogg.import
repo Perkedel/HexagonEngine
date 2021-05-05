@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Systole9.ogg-0b48d422d1371e8f3934d7a30926baad.oggstr"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Systole9.ogg"
+dest_files=[ "res://.import/Systole9.ogg-0b48d422d1371e8f3934d7a30926baad.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

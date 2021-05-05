@@ -1,0 +1,11 @@
+{
+    "id": "phoa-legacy",
+    "Title": "Phoenotopia: Awakening",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/PhoenotopiaAwakeningLegacy/phoa-legacy.tscn",
+    "CatalogueBanner": "",
+    "DVDCover": "",
+    "isSelectable": true,
+    "hidden": false,
+    "requiredEggsellents": []
+}

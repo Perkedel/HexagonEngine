@@ -20,35 +20,42 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
+    # Pls download Godot
     - name: Download Godot
       run: |
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_linux_headless.64.zip
-        unzip Godot_v3.2.1-stable_linux_headless.64.zip
-        mv Godot_v3.2.1-stable_linux_headless.64 godot
+        wget -q https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_linux_headless.64.zip
+        unzip Godot_v3.3-stable_linux_headless.64.zip
+        mv Godot_v3.3-stable_linux_headless.64 godot
         chmod +x godot
 
-    # Runs a set of commands using the runners shell
+    # Pls download export Template
     - name: Download Godot Export Template
       run: |
-        wget -q https://downloads.tuxfamily.org/godotengine/3.2.1/Godot_v3.2.1-stable_export_templates.tpz
+        wget -q https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_export_templates.tpz
         mkdir -p ~/.local/share/godot/templates
-        unzip Godot_v3.2.1-stable_export_templates.tpz -d ~/.local/share/godot/templates
-        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.1.stable.
+        unzip Godot_v3.3-stable_export_templates.tpz -d ~/.local/share/godot/templates
+        mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.3.stable.
     
-    - name: Download Buttler
-      run: |
-        wget -q -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
-        unzip butler.zip
-        chmod +x butler
-    
+    #- name: Install Something Library First
+    #  run: |
+    #    sudo apt update; sudo apt upgrade -y
+    #    sudo apt install pulseaudio jackd2 paprefs ubuntu-sounds avahi-daemon -y
+    #    sudo apt install --fix-missing
     
     - name: Build Linux
       run: |
         mkdir -p linux64
-        ./godot --export linux project.godot "linux64/hexagon-engine_Circle-CI"
+        ./godot --export linux project.godot "linux64/hexagon-engine_GitHub-CI --quiet"
     
     - name: Build Windows
       run: |
         mkdir -p win64
-        ./godot --export win64 project.godot "win64/hexagon-engine_Circle-CI.exe"
+        ./godot --export win64 project.godot "win64/hexagon-engine_GitHub-CI.exe --quiet"
+    
+    - name: Build macOS
+      run: |
+        ./godot --export macOS project.godot "hexagon-engine-mac_GitHub-CI --quiet"
+        mv hexagon-engine-mac hexagon-engine-mac.zip
+    
+    
+

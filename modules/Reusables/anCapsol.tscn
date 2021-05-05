@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleShape" id=5]
+
+[sub_resource type="CapsuleMesh" id=6]
+
+[node name="anCapsol" type="RigidBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+mesh = SubResource( 6 )

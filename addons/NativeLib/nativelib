@@ -1,0 +1,1463 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+import sys, os, getopt, json, shutil, traceback, tarfile, time, uuid, base64, datetime
+if sys.version_info[0] >= 3:
+    from urllib.request import Request, urlopen, urlretrieve
+    from urllib.error import HTTPError
+    from urllib.parse import quote
+    import pathlib
+    import secrets
+else:
+    import urllib2
+    from urllib2 import urlopen
+    from urllib2 import HTTPError
+    from urllib2 import quote
+    from urllib import urlretrieve
+    import uuid
+
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    
+    class Request(urllib2.Request):
+        def __init__(self, *args, **kwargs):
+            if 'method' in kwargs:
+                self._method = kwargs['method']
+                del kwargs['method']
+            else:
+                self._method = None
+            return urllib2.Request.__init__(self, *args, **kwargs)
+
+        def get_method(self, *args, **kwargs):
+            if self._method is not None:
+                return self._method
+            return urllib2.Request.get_method(self, *args, **kwargs)
+import pprint
+
+def enum(**enums):
+    return type(str('Enum'), (), enums)
+
+Publish = enum(Bintray=0, GitHub=1)
+
+PLATFORMS = ['ios', 'android', 'html5']
+VERSION = "0.4.4"
+BINTRAY_API = "https://api.bintray.com"
+BINTRAY_SUBJECT = ""
+BINTRAY_REPO = ""
+BINTRAY_AUTH_HEADER = None
+FORCE = False
+OVERWRITE = False
+CLEANUP = True
+PROJECT = None
+PROJECT_META = None
+VERBOSE = False
+INDEX = {}
+PROJECT_PLATFORMS = []
+INTERACTIVE = sys.stdout.isatty()
+PUBLISHER_KEY = None
+PUBLISH_METHOD = Publish.Bintray
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    GRAY = '\033[90m'
+
+#################################
+#
+# Utilities
+#
+
+def print_error(e):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.FAIL, bcolors.ENDC, e))
+    else:
+        print(e)
+
+def print_warning(w):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.WARNING, bcolors.ENDC, w))
+    else:
+        print(w)
+
+def print_bold(s):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.BOLD, bcolors.ENDC, s))
+    else:
+        print(s)
+
+def print_debug(s):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.GRAY, bcolors.ENDC, s))
+    else:
+        print(s)
+
+def print_green(s):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.OKGREEN, bcolors.ENDC, s))
+    else:
+        print(s)
+
+def print_blue(s):
+    if INTERACTIVE:
+        print('{0}{2}{1}'.format(bcolors.OKBLUE, bcolors.ENDC, s))
+    else:
+        print(s)
+
+def show_custom_info(info):
+    pprint.pprint(info)
+
+def parse_version(ver):
+    sep = ver.find('-')
+    subver = None
+    if sep >= 0:
+        subver = ver[sep+1:]
+        ver = ver[:sep]
+    result = list(map(int, (ver.split("."))))
+    if subver != None:
+        result.append(subver)
+    return result
+
+def check_version(v1, v2):
+    pv1 = parse_version(v1)
+    pv2 = parse_version(v2)
+    l = min(len(pv1), len(pv2))
+    for i in range(l):
+        if pv1[i] < pv2[i]:
+            return False
+    if len(pv1) < len(pv2):
+        return False
+    return True
+
+def file_bytes(filepath):
+    if sys.version_info[0] >= 3:
+        return pathlib.Path(filepath).read_bytes()
+    else:
+        with open(filepath, 'rb') as f:
+            return f.read()
+
+def file_text(filepath):
+    if sys.version_info[0] >= 3:
+        return pathlib.Path(filepath).read_text()
+    else:
+        with open(filepath, 'r') as f:
+            return f.read()
+
+def home_path():
+    if sys.version_info[0] >= 3:
+        return str(pathlib.Path.home())
+    else:
+        return os.path.expanduser("~")
+
+def random_string():
+    if sys.version_info[0] >= 3:
+        return secrets.token_urlsafe()
+    else:
+        return uuid.uuid4().hex + uuid.uuid4().hex
+
+def copyfiles(src, dst, overwrite=False):
+    result = 0
+    if not os.path.isdir(src):
+        path = os.path.dirname(dst)
+        basename = os.path.basename(dst)
+        if basename == '':
+            basename = os.path.basename(src)
+        dst = os.path.join(path, basename)
+        try:
+            if os.path.exists(dst) and not overwrite:
+                if VERBOSE:
+                    print_debug('File exists {}'.format(dst))
+                return result
+            try:
+                os.makedirs(path)
+            except OSError:
+                pass
+            shutil.copy2(src, dst)
+            result += 1
+        except OSError as e:
+            print_error(e)
+            traceback.print_stack()
+        return result
+    # process directory
+    try:
+        os.makedirs(dst)
+    except OSError:
+        pass
+    for item in os.listdir(src):
+        try:
+            s = os.path.join(src, item)
+            d = os.path.join(dst, item)
+            result += copyfiles(s, d, overwrite)
+        except OSError as e:
+            print(e)
+            traceback.print_stack()
+    return result
+
+#################################
+#
+# Bintray API Methods
+#
+
+def bintray_get_packages():
+    try:
+        req = Request("{0}/repos/{1}/{2}/packages".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO))
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        contents = urlopen(req).read()
+        return json.loads(contents)
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_get_package_info(package_name):
+    try:
+        req = Request("{0}/packages/{1}/{2}/{3}".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, package_name))
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        contents = urlopen(req).read()
+        return json.loads(contents)
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_search_packages(name):
+    try:
+        req = Request("{0}/search/packages?name={3}&subject={1}&repo={2}".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, name))
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        contents = urlopen(req).read()
+        return json.loads(contents)
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_package_version_info(package_name, version = None):
+    if version == None or version == '':
+        version = '_latest'
+    try:
+        req = Request("{0}/packages/{1}/{2}/{3}/versions/{4}".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, package_name, version))
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        contents = urlopen(req).read()
+        return json.loads(contents)
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_upload_file(package_name, version, filepath):
+    fname = os.path.basename(filepath)
+    return_url = 'https://dl.bintray.com/{}/{}/{}'.format(BINTRAY_SUBJECT, BINTRAY_REPO, fname)
+    try:
+        data = file_bytes(filepath)
+        req = Request("{0}/content/{1}/{2}/{3}".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, fname), data=data, method='PUT')
+        if BINTRAY_AUTH_HEADER is None:
+            print_error('Uploading requires authenticated user')
+            return None
+        else:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+            req.add_header('X-Bintray-Package', package_name)
+            req.add_header('X-Bintray-Version', version)
+            req.add_header('X-Bintray-Publish', 1)
+            if OVERWRITE:
+                req.add_header('X-Bintray-Override', 1)
+        result = urlopen(req).read()
+        res = json.loads(result)
+        if 'message' in res and res['message'] == 'success':
+            return return_url
+        print_warning('Unknown response: {}'.format(result))
+        return None
+    except HTTPError as e:
+        print_error(e)
+        return return_url
+
+def bintray_package_files(package_name, version = None):
+    try:
+        url = ''
+        if version is None:
+            url = "{0}/packages/{1}/{2}/{3}/files".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, package_name)
+        else:
+            url = "{0}/packages/{1}/{2}/{3}/versions/{4}/files".format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, package_name, version)
+        req = Request(url)
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        contents = urlopen(req).read()
+        return json.loads(contents)
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_create_package(package_name, description, license, vcs_url):
+    try:
+        info = {
+            "name": package_name,
+            "desc": description,
+            "licenses": [license],
+            "vcs_url": vcs_url
+        }
+        data = json.dumps(info).encode('utf-8')
+        req = Request('{0}/packages/{1}/{2}'.format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO), data=data, method='POST')
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        req.add_header('Content-Type', 'application/json')
+        contents = urlopen(req).read()
+        return contents
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def bintray_create_version(package_name, version):
+    try:
+        info = {
+            "name": version,
+            "released": datetime.datetime.utcnow().isoformat()
+        }
+        data = json.dumps(info).encode('utf-8')
+        req = Request('{0}/packages/{1}/{2}/{3}/versions'.format(BINTRAY_API, BINTRAY_SUBJECT, BINTRAY_REPO, package_name), data=data, method='POST')
+        if not BINTRAY_AUTH_HEADER is None:
+            req.add_header('Authorization', BINTRAY_AUTH_HEADER)
+        req.add_header('Content-Type', 'application/json')
+        contents = urlopen(req).read()
+        return contents
+    except HTTPError as e:
+        print_error(e)
+        return None
+    
+def bintray_load_credentials():
+    filename = os.path.join(home_path(), ".nativelib", "local.properties")
+    if os.path.exists(filename):
+        user = None
+        apikey = None
+        content = file_text(filename)
+        for line in content.split('\n'):
+            if line.startswith('bintray.user'):
+                p = line.split('=')
+                user = p[1]
+            elif line.startswith('bintray.apikey'):
+                p = line.split('=')
+                apikey = p[1]
+            elif line.startswith('bintray.subject'):
+                p = line.split('=')
+                BINTRAY_SUBJECT = p[1]
+            elif line.startswith('bintray.repo'):
+                p = line.split('=')
+                BINTRAY_REPO = p[1]
+        if not user is None and not apikey is None:
+            key = '{}:{}'.format(user, apikey)
+            encoded = base64.b64encode(key.encode("utf-8"))
+            global BINTRAY_AUTH_HEADER
+            if sys.version_info[0] >= 3:
+                BINTRAY_AUTH_HEADER = 'Basic {}'.format(str(encoded, "utf-8"))
+            else:
+                BINTRAY_AUTH_HEADER = 'Basic {}'.format(str(encoded))
+            return True
+    return False
+
+def bintray_storage_update():
+    repo = bintray_get_packages()
+    num = 0
+    for p in repo:
+        package_name = p['name']
+        info = bintray_get_package_info(package_name)
+        ver = info['latest_version']
+        #for ver in info['versions']:
+        if VERBOSE:
+            print_debug('Found {} version {}'.format(package_name, ver))
+        if storage_has_meta(package_name, ver):
+            continue
+        files = bintray_package_files(package_name, ver)
+        for f in files:
+            if f['name'].endswith('_meta.json'):
+                url = "https://dl.bintray.com/{0}/{1}/{2}".format(BINTRAY_SUBJECT, BINTRAY_REPO, f['path'])
+                storage_save_meta(package_name, ver, url)
+        num += 1
+    return num
+
+def bintray_publish_package(package_name, version, meta):
+    home = package_home(package_name, version)
+    package_info = bintray_get_package_info(package_name)
+    errors = 0
+    if package_info is None:
+        # create package
+        print_bold('Create package {}'.format(package_name))
+        if not bintray_create_package(package_name, info['description'], info['license'], info['url']) is None:
+            print('OK')
+        else:
+            errors += 1
+    version_info = bintray_package_version_info(package_name, version)
+    if version_info is None:
+        # create version
+        print_bold('Create version {} for package {}'.format(version, package_name))
+        if not bintray_create_version(package_name, version) is None:
+            print('OK')
+        else:
+            errors += 1
+    if 'files' in meta:
+        for fn in meta['files']:
+            fname = fn['name']
+            print_bold('Upload {}'.format(fname))
+            fpath = os.path.join(home, fname)
+            url = bintray_upload_file(package_name, version, fpath)
+            if not url is None:
+                fn['url'] = url
+                print('OK')
+            else:
+                errors += 1
+    for pl in PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        if pl_name in meta and 'files' in meta[pl_name]:
+            for fn in meta[pl_name]['files']:
+                fname = fn['name']
+                print_bold('Upload {}'.format(fname))
+                fpath = os.path.join(home, fname)
+                url = bintray_upload_file(package_name, version, fpath)
+                if not url is None:
+                    fn['url'] = url
+                    print('OK')
+                else:
+                    errors += 1
+    meta_file = storage_meta_file(package_name, version)
+    with open(meta_file, 'w') as f:
+        json.dump(meta, f)
+    print_bold('Upload {}'.format(os.path.basename(meta_file)))
+    url = bintray_upload_file(package_name, version, meta_file)
+    if not url is None:
+        print('OK')
+    else:
+        errors += 1
+    return errors <= 0
+
+#################################
+#
+# GitHub Methods
+#
+
+def github_index_update():
+    url = "https://github.com/godot-asset/index/archive/master.tar.gz"
+    home = home_path()
+    path = os.path.join(home, '.nativelib')
+    if not os.path.exists(path):
+        os.makedirs(path)
+    download(url, 'master.tar.gz', path)
+    tarpath = os.path.join(path, 'master.tar.gz')
+    if os.path.exists(tarpath):
+        with tarfile.open(tarpath, mode="r:*") as tar:
+            tar.extractall(path)
+    new_meta = os.path.join(path, 'index-master', 'meta')
+    files_num = copyfiles(new_meta, os.path.join(path, 'meta'), OVERWRITE)
+    if CLEANUP:
+        try:
+            os.remove(tarpath)
+        except OSError as e:
+            print_error(e)
+        try:
+            shutil.rmtree(os.path.join(path, 'index-master'))
+        except OSError as e:
+            print_error(e)
+    return files_num
+
+def github_publish_package(package_name, version, meta):
+    release_name = 'v'+version
+    repo_url = os.popen('git config --get remote.origin.url').read()
+    repo_url = repo_url.replace('\n', '')
+    if repo_url.endswith('.git'):
+        repo_url = repo_url[0:-4]
+    if repo_url.startswith('git@github.com:'):
+        repo_url = repo_url.replace('git@github.com:', 'https://github.com/')
+    repo_url = repo_url + '/releases/download/' + release_name + '/'
+    home = package_home(package_name, version)
+    files = []
+    if 'files' in meta:
+        for fn in meta['files']:
+            fname = fn['name']
+            fpath = os.path.join(home, fname)
+            files.append(fpath)
+            fn['url'] = repo_url + fname
+    for pl in PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        if pl_name in meta and 'files' in meta[pl_name]:
+            for fn in meta[pl_name]['files']:
+                fname = fn['name']
+                fpath = os.path.join(home, fname)
+                files.append(fpath)
+                fn['url'] = repo_url + fname
+    meta_file = storage_meta_file(package_name, version)
+    with open(meta_file, 'w') as f:
+        json.dump(meta, f)
+    files.append(meta_file)
+    # checking if release already exists
+    err = os.system('gh release view {0}'.format(release_name))
+    if err != 0:
+        # make new release
+        err = os.system('gh release create {0} {1} -n "Version {2}"'.format(release_name, ' '.join(files), version))
+        if err != 0:
+            print_error('Making release failed')
+            return False
+    else:
+        # try to append files to existing release
+        err = os.system('gh release upload {0} {1}'.format(release_name, ' '.join(files)))
+        if err != 0:
+            print_error('Update release failed')
+            return False
+    return True
+
+#################################
+#
+# Public Methods
+#
+
+#################################
+# Work with local storage
+
+def storage_meta_home(package_name):
+    path = os.path.join(home_path(), ".nativelib", 'meta', package_name)
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
+
+def storage_meta_file(package_name, version):
+    path = os.path.join(home_path(), ".nativelib", 'meta', package_name, '{}_{}_meta.json'.format(package_name, version))
+    return path
+
+def storage_load_index():
+    global INDEX
+    try:
+        meta_dir = os.path.join(home_path(), ".nativelib", "meta")
+        ind = {}
+        for subdir, dirs, files in os.walk(meta_dir):
+            for dir in dirs:
+                ind[dir] = {}
+            for file in files:
+                if not file.endswith('.json'):
+                    continue
+                try:
+                    pp = file.split('_')
+                    ind[pp[0]][pp[1]] = {}
+                except KeyError as e:
+                    print_error('Invalid plugin\' meta file: {}'.format(file))
+        INDEX = ind
+    except IOError as e:
+        INDEX = {}
+
+def storage_update():
+    #num = bintray_storage_update()
+    num = github_index_update()
+    print_bold('Updated {} packages info'.format(num))
+
+def storage_has_meta(package_name, version):
+    fn = storage_meta_file(package_name, version)
+    return os.path.exists(fn)
+
+def storage_save_meta(package_name, version, meta_url):    
+    home = storage_meta_home(package_name)
+    fn = storage_meta_file(package_name, version)
+    if not os.path.exists(fn):
+        download(meta_url, os.path.basename(fn), home)
+    else:
+        # meta file already exists
+        return
+
+def storage_search(pattern):
+    for package_name in INDEX:
+        if pattern in package_name:
+            for ver in INDEX[package_name]:
+                print_bold('{}@{}'.format(package_name, ver))
+
+def storage_info(package_name, version=None):
+    if package_name in INDEX:
+        info = INDEX[package_name]
+        if version is None:
+            version = latest_version(package_name)
+        if not version in info:
+            print_error('Package "{0}" with version "{1}" not found'.format(package_name, version))
+            return
+        meta = get_package_meta(package_name, version)
+        print_bold('{}@{}'.format(package_name, version))
+        print('  description: {}'.format(meta['description']))
+        print('  updated: {}'.format(meta['updated']))
+        archs = []
+        if 'files' in meta:
+            archs.append('all')
+        for pl in PLATFORMS:
+            pl_name = 'platform_{}'.format(pl)
+            if pl_name in meta and 'files' in meta[pl_name]:
+                archs.append(pl)
+        print('  platforms: ' + ', '.join(archs))
+        # show dependencies
+        if 'dependencies' in meta:
+            print('  dependencies: ' + ', '.join(meta['dependencies']))
+        for pl in PLATFORMS:
+            pl_name = 'platform_{}'.format(pl)
+            if pl_name in meta:
+                meta_pl = meta[pl_name]
+                if 'dependencies' in meta_pl:
+                    print('  dependencies for {}: '.format(pl) + ', '.join(meta_pl['dependencies']))
+    else:
+        print_error('Package "{0}" not found'.format(package_name))
+
+def latest_version(package_name):
+    if package_name in INDEX:
+        info = INDEX[package_name]
+        vers = info.keys()
+        if len(vers) <= 0:
+            return None
+        vers = sorted(vers, key=lambda x: x.split('.'))
+        version = vers[-1]
+        return version
+    return None
+
+#################################
+# Work with packages
+        
+def package_home(package_name, version, create=False):
+    home = home_path()
+    path = os.path.join(home, ".nativelib", "packages", package_name, version)
+    if create and not os.path.exists(path):
+        try:
+            os.makedirs(path)
+        except OSError:
+            pass
+    return path
+
+def journal_home():
+    if PROJECT_META is None:
+        return None
+    home = home_path()
+    path = os.path.join(home, '.nativelib', 'projects', PROJECT_META['id'])
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
+
+def download(url, filename, path):
+    def _progress(count, block_size, total_size):
+        done = int(100*(count*block_size)/total_size)
+        if done > 100:
+            done = 100
+        d = int(done/10)
+        if INTERACTIVE:
+            sys.stdout.write('\r{}\t[{}{}] {}%'.format(filename, '=' * d, '.' * (10-d), done))
+            #sys.stdout.write('\r{}\t{}%'.format(filename, done))
+            sys.stdout.flush()
+    if INTERACTIVE:
+        sys.stdout.write('\r{}\t[{}] {}%'.format(filename, '.' * 10, 0))
+        sys.stdout.flush()
+    (filepath, headers) = urlretrieve(url, os.path.join(path, filename), reporthook=_progress)
+    if INTERACTIVE:
+        sys.stdout.write('\n')
+    else:
+        print('Downloaded {}'.format(filename))
+    return filepath
+
+def split_package_name(package_name):
+    p = package_name
+    v = None
+    if '@' in p:
+        pk = p.split('@')
+        p = pk[0]
+        v = pk[1]
+    return p, v
+
+def download_package(package_name, version, meta):
+    home = package_home(package_name, version, True)
+    if 'files' in meta:
+        for f in meta['files']:
+            fname = f['name']
+            if os.path.exists(os.path.join(home, fname)):
+                #print_warning('File exists {}'.format(fname))
+                pass
+            else:
+                path = download(f['url'], fname, home)
+    for pl in PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        if pl_name in meta and 'files' in meta[pl_name]:
+            for f in meta[pl_name]['files']:
+                fname = f['name']
+                if os.path.exists(os.path.join(home, fname)):
+                    #print_warning('File exists {}'.format(fname))
+                    pass
+                else:
+                    path = download(f['url'], fname, home)
+
+def get_package_meta(package_name, version):
+    meta_file = storage_meta_file(package_name, version)
+    if not os.path.exists(meta_file):
+        #print_error('Package "{}" not found'.format(package_name))
+        return None
+    meta_str = file_text(meta_file)
+    meta = json.loads(meta_str)
+    return meta
+            
+def prepare_arch(pname, pversion, meta, home, arch):
+    if 'dependencies' in meta:
+        newdeps = []
+        for d in meta['dependencies']:
+            p, v = split_package_name(d)
+            if not p in INDEX:
+                err = 'Dependency {} not found'.format(p)
+                if FORCE:
+                    print_warning(err)
+                else:
+                    print_error(err)
+                    exit()
+            if v is None:
+                v = latest_version(p)
+                print('Using version {} for dependency {}'.format(v, p))
+            else:
+                info = INDEX[p]
+                if not v in info:
+                    err = 'Dependency {}@{} not found'.format(p, v)
+                    if FORCE:
+                        print_warning(err)
+                    else:
+                        print_error(err)
+                        exit()
+            newdeps.append('{}@{}'.format(p, v))
+        meta['dependencies'] = newdeps
+    path = os.path.join(home, arch)
+    if 'files' in meta:
+        try:
+            os.makedirs(path)
+        except OSError:
+            pass
+        copy = meta.pop('files')
+        for key in copy:
+            dst = os.path.join(path, copy[key])
+            copyfiles(key, dst, OVERWRITE)
+
+        fname = '{}_{}_{}.tgz'.format(pname, pversion, arch)
+        pack_tarball(os.path.join(home, fname), path)
+        meta['files'] = [{'name': fname}]
+        if CLEANUP:
+            try:
+                shutil.rmtree(path)
+            except OSError as e:
+                print_error(e)
+        return True
+    return False
+
+def pack_tarball(tarname, path):
+    tar = tarfile.open(tarname, mode="w:gz")
+    for item in os.listdir(path):
+        it = os.path.join(path, item)
+        tar.add(it, item)
+    tar.close()
+    print('Packed {}'.format(tarname))
+
+def get_meta_from_path(ppath):
+    try:
+        path = os.path.dirname(ppath)
+        basename = os.path.basename(ppath)
+        if basename == '.' and path == '':
+            path = basename
+            basename = ''
+        if basename == None or basename == '':
+            basename = 'nativelib.json'
+        fn = os.path.join(path, basename)
+        meta_str = file_text(fn)
+        return json.loads(meta_str)
+    except IOError:
+        return None
+    except json.decoder.JSONDecodeError as e:
+        print_error('JSON Error: ' + str(e))
+        return None
+    return None
+
+def pack_plugin(ppath):
+    meta = get_meta_from_path(ppath)
+    if meta is None:
+        print_error('Plugin not found at path "{}"'.format(ppath))
+        return None, None
+    errs, warns = validate_plugin_meta(meta)
+    if errs > 0:
+        print_error('Abort operation because of validation errors!')
+        return None, None
+    cur_time = datetime.datetime.utcnow().isoformat() # time.strftime('%Y-%m-%dT%T%Z', time.gmtime())
+    package_name = meta['name']
+    package_version = meta['version']
+    home = package_home(package_name, package_version, True)
+    files = []
+    prepare_arch(package_name, package_version, meta, home, 'all')
+    for pl in PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        if pl_name in meta:
+            prepare_arch(package_name, package_version, meta[pl_name], home, pl)
+    meta['updated'] = cur_time
+    fname = '{}_{}_meta.json'.format(package_name, package_version)
+    with open(os.path.join(storage_meta_home(package_name), fname), 'w') as f:
+        json.dump(meta, f)
+    return package_name, package_version
+
+def get_publisher_key():
+    global PUBLISHER_KEY
+    key_file = os.path.join(home_path(), ".nativelib", "publisher.key")
+    if os.path.exists(key_file):
+        PUBLISHER_KEY = file_text(key_file)
+    else:
+        PUBLISHER_KEY = random_string()
+        with open(key_file, 'w') as f:
+            f.write(PUBLISHER_KEY)
+        print_bold('!!! IMPORTANT !!!\nYour publisher key was stored at {}\nKeep it secure!'.format(key_file))
+
+def publish_plugin(path):
+    get_publisher_key()
+    package_name, version = pack_plugin(path)
+    if package_name is None or version is None:
+        return
+    meta = get_package_meta(package_name, version)
+    if meta is None:
+        print_error('Package "{}" with version {} not found!'.format(package_name, version))
+        return
+    publish_result = False
+    if PUBLISH_METHOD == Publish.Bintray:
+        publish_result = bintray_publish_package(package_name, version, meta)
+    elif PUBLISH_METHOD == Publish.GitHub:
+        publish_result = github_publish_package(package_name, version, meta)
+    if publish_result != True and not FORCE:
+        print_error('Package meta didn\'t uploaded. See errors above.')
+        return
+    elif publish_result != True and FORCE:
+        print_warning('Publish can be broken. Nevertheless uploading meta...')
+    upload_meta_to_index(package_name, version, meta)
+
+def upload_meta_to_index(package_name, version, meta):
+    try:
+        url = "https://godotassetindex.web.app/new_package"
+        meta_json = json.dumps({"key": PUBLISHER_KEY, "meta": meta}).encode('utf-8')
+        req = Request(url, data=meta_json, method='POST')
+        req.add_header('Content-Type', 'application/json')
+        contents = urlopen(req).read()
+        if VERBOSE:
+            print_debug('Committed meta file to index: ' + str(contents))
+        return contents
+    except HTTPError as e:
+        print_error(e)
+        return None
+
+def gen_md_info(package_name):
+    if package_name == '*':
+        for pn in INDEX:
+            gen_md_info(pn)
+        return
+    elif not package_name in INDEX:
+        return
+    ver = latest_version(package_name)
+    meta = get_package_meta(package_name, ver)
+    with open('{}.md'.format(package_name), 'w') as f:
+        f.write('---\n')
+        f.write('meta:\n')
+        f.write('    - name: description\n')
+        f.write('      content: {}\n'.format(meta['description']))
+        f.write('---\n')
+        f.write('# {}\n\n'.format(package_name))
+        f.write('{}\n\n'.format(meta['description']))
+        f.write('Latest version: `{}`\n\n'.format(ver))
+        if 'updated' in meta:
+            f.write('Released: `{}`\n\n'.format(datetime.datetime.fromisoformat(meta['updated']).ctime()))
+        platforms = []
+        if 'files' in meta:
+            platforms.append('all')
+        for pl in PLATFORMS:
+            pl_name = 'platform_{}'.format(pl)
+            if pl_name in meta and 'files' in meta[pl_name]:
+                platforms.append(pl)
+        f.write('Platforms: ' + ', '.join(platforms) + '\n\n')
+        f.write('License: `{}`\n\n'.format(meta['license']))
+        f.write('Homepage: [{0}]({0})\n\n'.format(meta['url']))
+        if 'author' in meta:
+            if 'url' in meta['author']:
+                f.write('Author: [{}]({})\n\n'.format(meta['author']['name'], meta['author']['url']))
+            else:
+                f.write('Author: {}\n\n'.format(meta['author']['name']))
+
+def validate_get_param(meta, params):
+    m = meta
+    for par in params:
+        if par in m:
+            m = m[par]
+        else:
+            return None
+    return m
+
+def validate_unacceptable_symbols(meta, params, valids):
+    m = validate_get_param(meta, params)
+    if not m is None and type(m) == str:
+        for l in m:
+            if valids.find(l) < 0:
+                print_error('- Parameter {} should not contain symbol "{}"'.format('/'.join(params), l))
+                return 1
+    return 0
+
+def validate_required(meta, params):
+    m = validate_get_param(meta, params)
+    if m is None:
+        print_error('- Required parameter {} not found'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_recommended(meta, params):
+    m = validate_get_param(meta, params)
+    if m is None:
+        print_warning('- Recommended parameter {} not found'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_array(meta, params):
+    m = validate_get_param(meta, params)
+    if not m is None and type(m) != list:
+        print_error('- {} must be an array'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_not_empty_array(meta, params):
+    m = validate_get_param(meta, params)
+    if not m is None and type(m) == list and len(m) <= 0:
+        print_warning('- Array {} should not be empty'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_dictionary(meta, params):
+    m = validate_get_param(meta, params)
+    if not m is None and type(m) != dict:
+        print_error('- {} must be a Dictionary'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_not_empty_dictionary(meta, params):
+    m = validate_get_param(meta, params)
+    if not m is None and type(m) == dict and len(m.keys()) <= 0:
+        print_warning('- Dictionary {} should not be empty'.format('/'.join(params)))
+        return 1
+    return 0
+
+def validate_plugin(ppath):
+    meta = get_meta_from_path(ppath)
+    if meta is None:
+        print_error('Plugin not found at path "{}"'.format(ppath))
+        return
+    errors, warnings = validate_plugin_meta(meta)
+    if errors > 0:
+        print_error('Validation failed. There are {} error(s) and {} warning(s).'.format(errors, warnings))
+    elif warnings > 0:
+        print_warning('Validation passed. There are {} warning(s).'.format(warnings))
+    else:
+        print_green('Validation passed.')
+
+def validate_plugin_meta(meta):
+    errors = 0
+    warnings = 0
+    errors += validate_required(meta, ['name'])
+    errors += validate_unacceptable_symbols(meta, ['name'], 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-.')
+    warnings += validate_recommended(meta, ['display_name'])
+    errors += validate_required(meta, ['description'])
+    warnings += validate_recommended(meta, ['readme_url'])
+    errors += validate_required(meta, ['version'])
+    errors += validate_required(meta, ['license'])
+    errors += validate_required(meta, ['url'])
+    warnings += validate_recommended(meta, ['godot_version'])
+    errors += validate_required(meta, ['category'])
+    warnings += validate_recommended(meta, ['tags'])
+    errors += validate_array(meta, ['tags'])
+    warnings += validate_not_empty_array(meta, ['tags'])
+    errors += validate_required(meta, ['author'])
+    errors += validate_required(meta, ['author', 'name'])
+    warnings += validate_recommended(meta, ['author', 'url'])
+    errors += validate_array(meta, ['dependencies'])
+    warnings += validate_not_empty_array(meta, ['dependencies'])
+    errors += validate_dictionary(meta, ['files'])
+    warnings += validate_not_empty_dictionary(meta, ['files'])
+    errors += validate_dictionary(meta, ['variables'])
+    warnings += validate_not_empty_dictionary(meta, ['variables'])
+    errors += validate_dictionary(meta, ['autoload'])
+    warnings += validate_not_empty_dictionary(meta, ['autoload'])
+    warnings += validate_recommended(meta, ['icon_url'])
+    errors += validate_array(meta, ['screenshots'])
+    warnings += validate_not_empty_array(meta, ['screenshots'])
+    for pl in PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        if pl_name in meta:
+            err = validate_required(meta, [pl_name, 'files'])
+            errors += err
+            if err > 0:
+                print_warning('You should remove {} if there are no files for it'.format(pl_name))
+            warnings += validate_not_empty_dictionary(meta, [pl_name, 'files'])
+    return errors, warnings
+
+#################################
+# Work with project
+
+def prepare_project():
+    if not os.path.exists('project.godot'):
+        print_error('Godot project not found in current directory')
+        exit()
+    load_project()
+    load_project_meta()
+
+def load_project():
+    global PROJECT
+    try:
+        pr_str = file_text('project.godot')
+        PROJECT = pr_str.split('\n')
+    except IOError as e:
+        PROJECT = []
+
+def save_project():
+    with open('project.godot', 'w') as f:
+        f.write('\n'.join(PROJECT))
+
+def project_section(section):
+    sec = []
+    found = False
+    key = '[{}]'.format(section)
+    for line in PROJECT:
+        if line == key:
+            found = True
+        elif line.startswith('['):
+            found = False
+        elif found and line != '':
+            sec.append(line)
+    return sec
+
+def project_set(section, key, value):
+    found = False
+    sk = '[{}]'.format(section)
+    kk = '{}='.format(key)
+    for idx, line in enumerate(PROJECT):
+        if line == sk:
+            found = True
+        elif line.startswith('['):
+            if found:
+                # append key to section
+                PROJECT.insert(idx-1, '{}={}'.format(key, value))
+                save_project()
+                return
+        elif found and line.startswith(kk):
+            # change value for existing key
+            PROJECT[idx] = '{}={}'.format(key, value)
+            return
+    # append section and key
+    if not found:
+        PROJECT.append('')
+        PROJECT.append(sk)
+        PROJECT.append('')
+    PROJECT.append('{}={}'.format(key, value))
+    save_project()
+
+def project_get(section, key):
+    found = False
+    sk = '[{}]'.format(section)
+    kk = '{}='.format(key)
+    for line in PROJECT:
+        if line == sk:
+            found = True
+        elif line.startswith('['):
+            if found:
+                return None
+        elif found and line.startswith(kk):
+            pp = line.split('=')
+            return pp[1]
+    return None
+
+def project_del(section, key):
+    found = False
+    sk = '[{}]'.format(section)
+    kk = '{}='.format(key)
+    for idx, line in enumerate(PROJECT):
+        if line == sk:
+            found = True
+        elif line.startswith('['):
+            if found:
+                return False
+        elif found and line.startswith(kk):
+            PROJECT.pop(idx)
+            save_project()
+            return True
+    return False
+
+def project_list_add(section, key, value):
+    vals = project_get(section, key)
+    if not vals is None:
+        vals = json.loads(vals)
+        if vals == '':
+            vals = []
+        else:
+            vals = vals.split(',')
+    else:
+        vals = []
+    if value in vals:
+        return
+    vals.append(value)
+    vals = ','.join(vals)
+    project_set(section, key, '"{}"'.format(vals))
+    save_project()
+
+def project_list_rm(section, key, value):
+    vals = project_get(section, key)
+    if not vals is None:
+        vals = json.loads(vals)
+        vals = vals.split(',')
+    else:
+        return
+    vals.remove(value)
+    vals = ','.join(vals)
+    project_set(section, key, '"{}"'.format(vals))
+    save_project()
+
+def load_project_meta():
+    global PROJECT_META
+    global PROJECT_PLATFORMS
+    try:
+        meta_str = file_text('.nativelib')
+        meta = json.loads(meta_str)
+        PROJECT_META = meta
+    except IOError as e:
+        PROJECT_META = {
+            'id': str(uuid.uuid4()),
+            'platforms': ['all'],
+            'packages': {}
+        }
+        save_project_meta()
+    PROJECT_PLATFORMS = PROJECT_META['platforms']
+
+def save_project_meta():
+    with open('.nativelib', 'w') as f:
+        json.dump(PROJECT_META, f, indent = 4)
+
+def is_package_installed(package_name, version):
+    if package_name in PROJECT_META['packages']:
+        ver = PROJECT_META['packages'][package_name]['version']
+        if check_version(ver, version):
+            return True
+    return False
+
+def installed_packages():
+    ip = []
+    for package_name in PROJECT_META['packages']:
+        ip.append(package_name)
+    return ip
+
+def list_installed_packages():
+    print_bold('Default platforms: ' + ', '.join(PROJECT_PLATFORMS))
+    print('')
+    for p in installed_packages():
+        info = PROJECT_META['packages'][p]
+        print_bold('{}@{}'.format(p, info['version']))
+        print('  platforms: ' + ', '.join(info['platforms']))
+        print('')
+
+def install_package(package_name, version = None):
+    if version == None or version == '':
+        version = latest_version(package_name)
+        if version is None:
+            print_error('Not found latest version for package "{0}"'.format(package_name))
+            return False
+    if is_package_installed(package_name, version) and not FORCE:
+        print_bold('Found installed {}@{}'.format(package_name, version))
+        return True
+    home = package_home(package_name, version)
+    package_meta = get_package_meta(package_name, version)
+    if package_meta is None:
+        print_error('Package "{}" with version {} not found!'.format(package_name, version))
+        return False
+    deps = []
+    if 'dependencies' in package_meta:
+        deps.extend(package_meta['dependencies'])
+    for platform in PROJECT_PLATFORMS:
+        if platform == 'all':
+            continue
+        pl_name = 'platform_{}'.format(platform)
+        if pl_name in package_meta:
+            pl_m = package_meta[pl_name]
+            if 'dependencies' in pl_m:
+                deps.extend(pl_m['dependencies'])
+    if len(deps) > 0:
+        print('Checking project dependencies: ' + ', '.join(deps))
+    for dep in deps:
+        p, v = split_package_name(dep)
+        if not install_package(p, v):
+            print_error('Can not install dependency: {}'.format(dep))
+            if not FORCE:
+                return False
+    print_bold('Installing {}@{}'.format(package_name, version))
+    download_package(package_name, version, package_meta)
+    processed_platforms = []
+    all_files = []
+    for pl in PROJECT_PLATFORMS:
+        pl_name = 'platform_{}'.format(pl)
+        files = []
+        counter = 0
+        if pl == 'all' and 'files' in package_meta:
+            files = package_meta['files']
+        elif pl_name in package_meta and 'files' in package_meta[pl_name]:
+            files = package_meta[pl_name]['files']
+        for f in files:
+            fname = f['name']
+            tarpath = os.path.join(home, fname)
+            if os.path.exists(tarpath):
+                counter += 1
+                print('  Unpack {}'.format(fname))
+                with tarfile.open(tarpath, mode="r:*") as tar:
+                    #tar.extractall()
+                    tarinfo = tar.next()
+                    while not tarinfo is None:
+                        fn = str(tarinfo.name)
+                        if not fn in all_files:
+                            all_files.append(fn)
+                        if tarinfo.isfile() and os.path.exists(fn) and not OVERWRITE:
+                            print_warning('{} already exists'.format(tarinfo.name))
+                        else:
+                            tar.extract(tarinfo)
+                        tarinfo = tar.next()
+        if counter > 0:
+            processed_platforms.append(pl)
+    meta = {
+        "version": version,
+        "platforms": processed_platforms,
+        "dependencies": deps
+    }
+    if 'variables' in package_meta:
+        variables = package_meta['variables']
+        meta['variables'] = variables
+        for vn in variables:
+            vinfo = variables[vn]
+            if 'default' in vinfo:
+                default_value = vinfo['default']
+                sep = vn.find('/')
+                if sep >= 0:
+                    section = vn[:sep]
+                    key = vn[sep+1:]
+                    project_set(section, key, '"{}"'.format(default_value))
+                else:
+                    # wrong variable name
+                    pass
+    if 'android' in PROJECT_PLATFORMS and 'platform_android' in package_meta and 'android_module' in package_meta['platform_android']:
+        android_module = package_meta['platform_android']['android_module']
+        meta['android_module'] = android_module
+        project_list_add('android', 'modules', android_module)
+    if 'autoload' in package_meta:
+        for key in package_meta['autoload']:
+            project_set('autoload', key, '"{}"'.format(package_meta['autoload'][key]))
+        meta['autoload'] = package_meta['autoload']
+    PROJECT_META['packages'][package_name] = meta
+    save_project_meta()
+    # save install journal
+    j_home = journal_home()
+    with open(os.path.join(j_home, '{}@{}'.format(package_name, version)), 'w') as f:
+        json.dump(all_files, f)
+    return True
+
+def uninstall_package(package_name):
+    if not package_name in PROJECT_META['packages']:
+        print_warning('{} not installed'.format(package_name))
+        return
+    info = PROJECT_META['packages'].pop(package_name)
+    version = info['version']
+    for pack in installed_packages():
+        if pack == package_name:
+            continue
+        deps = PROJECT_META['packages'][pack]['dependencies']
+        for d in deps:
+            p, v = split_package_name(d)
+            if p == package_name:
+                err = '{} depends on {}'.format(pack, package_name)
+                if FORCE:
+                    print_warning(err)
+                else:
+                    print_error(err)
+                    return
+    if 'android_module' in info:
+        project_list_rm('android', 'modules', info['android_module'])
+    if 'autoload' in info:
+        for key in info['autoload']:
+            project_del('autoload', key)
+    j_home = journal_home()
+    journal = os.path.join(j_home, '{}@{}'.format(package_name, version))
+    J = []
+    try:
+        _str = file_text(journal)
+        J = json.loads(_str)
+    except IOError as e:
+        print_error('Can not find installation journal for {}@{}'.format(package_name, version))
+        exit()
+    dirs = []
+    for fn in J:
+        if os.path.isdir(fn):
+            dirs.append(fn)
+        elif os.path.exists(fn):
+            os.remove(fn)
+    for d in reversed(dirs):
+        try:
+            os.rmdir(d)
+        except OSError:
+            pass
+    save_project_meta()
+    os.remove(journal)
+    print_bold('{} uninstalled'.format(package_name))
+
+def install_required_packages():
+    global FORCE
+    force = FORCE
+    FORCE = True
+    for package_name in installed_packages():
+        info = PROJECT_META['packages'][package_name]
+        deps = info['dependencies']
+        for d in deps:
+            p, v = split_package_name(d)
+            if not is_package_installed(p, v):
+                install_package(p, v)
+        ver = info['version']
+        j_home = journal_home()
+        journal = os.path.join(j_home, '{}@{}'.format(package_name, ver))
+        if not os.path.exists(journal):
+            install_package(package_name, ver)
+    FORCE = force
+
+def print_help():
+    print("""
+Usage: nativelib [options] [command]
+
+Repository related commands:
+    -s|--search <pattern>\tSearch packages in repository
+    -I|--info <package>\t\tShow details about specific package
+    -U|--update\t\t\tUpdate repository info
+    -P|--pack <path>\t\tPack the plugin in the specific path into local repository
+    --publish <path>\t\tPack and publish plugin in the specific path into remote repository
+    -M <package>\t\tGenerate package description in MD format
+    -V|--validate <path>\tValidate package information
+
+Repository related options:
+    -C|--no-cleanup\t\tDon't remove temporary files
+    --bintray\t\t\tPublish package to Bintray (default method)
+    --github\t\t\tPublish package to GitHub
+
+Project related commands:
+    -i|--install <package>\tInstall package
+    -u|--uninstall <package>\tUninstall package
+    -l|--list\t\t\tList installed packages
+    -p|--prepare\t\tPrepare project on new machine (install all required packages)
+
+Project related options:
+    --ios\t\t\tProcess iOS platform (also add iOS to project's platform list)
+    --android\t\t\tProcess Android platform (also add Android to project's platform list)
+    -o|--overwrite\t\tOverwrite files during installation
+
+Other commands:
+    -h|--help\t\t\tPrints this page
+    --version\t\t\tPrints NativeLib version
+
+Other options:
+    -f|--force\t\t\tIgnore errors and warnings if possible
+    -v|--verbose\t\tMore debug output
+""")
+    
+try:
+    args = sys.argv[1:]
+    options, tail = getopt.getopt(args, "s:I:UP:M:V:Ci:u:lpohfv", [
+        "search=", "info=", "update", "pack=", "publish=", "validate="
+        "no-cleanup", "bintray", "github",
+
+        "install=", "uninstall=", "list", "prepare",
+        "ios", "android", "overwrite",
+
+        "help", "version",
+        "force", "verbose"])
+
+    if len(tail) > 0:
+        for p in tail:
+            print_error('Unrecognized parameter: {0}'.format(p))
+
+    storage_load_index()
+    bintray_load_credentials()
+
+    for op in options:
+        par = op[0]
+        arg = op[1]
+        # Repository commands
+        if par == '-s' or par == '--search':
+            storage_search(arg)
+            exit()
+        elif par == '-I' or par == '--info':
+            p, v = split_package_name(arg)
+            storage_info(p, v)
+            exit()
+        elif par == '-U' or par == '--update':
+            storage_update()
+            exit()
+        elif par == '-P' or par == '--pack':
+            pack_plugin(arg)
+            exit()
+        elif par == '--publish':
+            publish_plugin(arg)
+            exit()
+        elif par == '-M':
+            gen_md_info(arg)
+            exit()
+        elif par == '-V' or par == '--validate':
+            validate_plugin(arg)
+            exit()
+
+        # Repository options
+        elif par == '-C' or par == '--no-cleanup':
+            CLEANUP = False
+        elif par == '--bintray':
+            PUBLISH_METHOD = Publish.Bintray
+        elif par == '--github':
+            PUBLISH_METHOD = Publish.GitHub
+
+        # Project commands
+        elif par == '-i' or par == '--install':
+            if PROJECT_META is None:
+                prepare_project()
+            p, v = split_package_name(arg)
+            install_package(p, v)
+            exit()
+        elif par == '-u' or par == '--uninstall':
+            if PROJECT_META is None:
+                prepare_project()
+            uninstall_package(arg)
+            exit()
+        elif par == '-l' or par == '--list':
+            if PROJECT_META is None:
+                prepare_project()
+            list_installed_packages()
+            exit()
+        elif par == '-p' or par == '--prepare':
+            if PROJECT_META is None:
+                prepare_project()
+            install_required_packages()
+
+        # Project options
+        elif par == '--ios':
+            if PROJECT_META is None:
+                prepare_project()
+            if not 'ios' in PROJECT_PLATFORMS:
+                PROJECT_PLATFORMS.append('ios')
+                save_project_meta()
+        elif par == '--android':
+            if PROJECT_META is None:
+                prepare_project()
+            if not 'android' in PROJECT_PLATFORMS:
+                PROJECT_PLATFORMS.append('android')
+                save_project_meta()
+        elif par == '-o' or par == '--overwrite':
+            OVERWRITE = True
+
+        # Other commands
+        elif par == '-h' or par == '--help':
+            print_help()
+            exit()
+        elif par == '--version':
+            print(VERSION)
+
+        # Other options
+        elif par == '-f' or par == '--force':
+            FORCE = True
+        elif par == '-v' or par == '--verbose':
+            VERBOSE = True
+
+except getopt.GetoptError as ex:
+    print_error(ex)

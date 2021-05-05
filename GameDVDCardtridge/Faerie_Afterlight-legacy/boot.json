@@ -1,0 +1,11 @@
+{
+    "id": "faerie_afterlight-legacy",
+    "Title": "Faerie Afterlight",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/Faerie_Afterlight-legacy/Faery_Afterlight-legacy.tscn",
+    "CatalogueBanner": "",
+    "DVDCover": "",
+    "isSelectable": true,
+    "hidden": false,
+    "requiredEggsellents": []
+}

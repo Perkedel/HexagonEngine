@@ -1,0 +1,6 @@
+# Referenced at C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\build\intermediates\merged_manifests\debug\AndroidManifest.xml:42
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\build\intermediates\merged_manifests\debug\AndroidManifest.xml:42
+-keep class androidx.multidex.MultiDexApplication { <init>(); }
+# Referenced at C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\android\build\build\intermediates\merged_manifests\debug\AndroidManifest.xml:30
+-keep class com.Perkedel.Hexagon.GodotInstrumentation { <init>(); }

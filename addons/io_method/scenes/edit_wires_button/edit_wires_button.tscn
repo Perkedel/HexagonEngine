@@ -1,7 +1,0 @@
-[gd_scene format=2]
-
-[node name="ToolButton" type="ToolButton"]
-margin_right = 12.0
-margin_bottom = 22.0
-toggle_mode = true
-text = "Edit Wires"

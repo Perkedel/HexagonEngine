@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://font/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/MetererBekgron.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/MetererOver.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/MetererProgress.png" type="Texture" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidSpectrumAnalyzer.gd" type="Script" id=5]
+
 
 [node name="TestoidSpectrumAnalyzer" type="HBoxContainer"]
 margin_top = 586.0

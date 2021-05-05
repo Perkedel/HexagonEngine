@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/toast/style_resource/toast_style.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+position = 1
+toastType = 0
+backgroundColor = Color( 1, 1, 1, 0.8 )
+fontColor = Color( 0.01, 0.01, 0.01, 1 )
+cornerRadius = 20
+contentMarginLeft = 20.0
+contentMarginRight = 20.0
+contentMarginTop = 10.0
+contentMarginBottom = 10.0
+textAlign = 1

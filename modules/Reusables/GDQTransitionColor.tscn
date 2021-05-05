@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://modules/ShadeMaterials/GDQTransitionColorMaterial.tres" type="Material" id=1]
+[ext_resource path="res://modules/Reusables/GDQTransitionColor.gd" type="Script" id=2]
+[ext_resource path="res://modules/ShadeMask/GDQuestShadeMask/shards.png" type="Texture" id=3]
+
+[node name="GDQTransitionColor" type="ColorRect"]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+mask = ExtResource( 3 )

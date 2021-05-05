@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Audio/MusicCardtridge/MusicCardtridge.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Media Cartridge"
+script = ExtResource( 1 )
+albumPic = ExtResource( 2 )
+title = "MediaCardtridge"
+artist = "JOELwindows7"
+license = "CC4.0-BY-SA"
+tempo = 120.0
+timeMeasures = 4
+source = [ "https://cointr.ee/joelwindows7", "https://odysee.com/@JOELwindows7" ]
+Audios = [ null ]
+Videos = [  ]
+MIDIfiles = [  ]
+sTILEStepsFile = [  ]
+coreEvents = {
+}

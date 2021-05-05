@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Diastole5.ogg-43b0cba81e33aeb00072f1d8cd0894f8.oggstr"
+
+[deps]
+
+source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Diastole5.ogg"
+dest_files=[ "res://.import/Diastole5.ogg-43b0cba81e33aeb00072f1d8cd0894f8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

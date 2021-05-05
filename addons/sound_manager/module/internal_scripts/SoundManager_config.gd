@@ -1,8 +1,8 @@
-class_name SoundManager_Pluggits
+
 extends Node
 
 ####################################################################
-#CONFIGURATION FILE FOR THE SOUND MANAGER FOR GODOT 3.1
+#CONFIGURATION FILE FOR THE SOUND MANAGER FOR GODOT 3.2
 #			© Xecestel
 ####################################################################
 #
@@ -11,6 +11,7 @@ extends Node
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 ############################################
+class_name SoundManagerModule
 
 export var Audio_Files_Dictionary : Dictionary = {
 	"SoundName1" : "sound_file_name.extension",

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameDVDCardtridge/ManOfCoyote/ManOfCoyote.gd" type="Script" id=1]
+[ext_resource path="res://GameDVDCardtridge/ManOfCoyote/PauseMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameDVDCardtridge/ManOfCoyote/Mostifilend.tscn" type="PackedScene" id=3]
+
+[node name="ManOfCoyote" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Field" type="Spatial" parent="."]
+pause_mode = 1
+
+[node name="Level" type="Spatial" parent="Field"]
+
+[node name="Mostifilend" parent="Field/Level" instance=ExtResource( 3 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="UIsoWe" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" parent="CanvasLayer/UIsoWe" instance=ExtResource( 2 )]
+[connection signal="ChangeDVDNow" from="CanvasLayer/UIsoWe/PauseMenu" to="." method="_on_PauseMenu_ChangeDVDNow"]
+[connection signal="OkButton" from="CanvasLayer/UIsoWe/PauseMenu" to="." method="_on_PauseMenu_OkButton"]
+[connection signal="ShutdownNow" from="CanvasLayer/UIsoWe/PauseMenu" to="." method="_on_PauseMenu_ShutdownNow"]
+[connection signal="popup_hide" from="CanvasLayer/UIsoWe/PauseMenu" to="." method="_on_PauseMenu_popup_hide"]

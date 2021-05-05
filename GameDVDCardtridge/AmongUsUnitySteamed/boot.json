@@ -1,0 +1,12 @@
+{
+    "id": "spacemafia-unity",
+    "Title": "Among Us Unity. Unity sus! vote!",
+    "IconUrl": "res://Sprites/MavrickleIcon.png",
+    "BootThisTscene": "res://GameDVDCardtridge/AmongUsUnitySteamed/AmongUsUnitySteamer.tscn",
+    "CatalogueBanner": "",
+    "DVDCover":"",
+    "isSelectable": true,
+    "hidden":false,
+    "actuallyBootJsonPath" : "",
+    "args":["",""]
+}
