@@ -14,6 +14,7 @@ func _init():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#yield(get_tree().create_timer(1),"timeout")
 	AutoSpeaker.inserMediaCardtridge(insertTheCardtridge)
 	pass # Replace with function body.
 
@@ -34,7 +35,9 @@ func _on_AutoSpeaker_measure(position):
 	pass
 
 func _on_PlaySong_pressed():
-	AutoSpeaker.playTheMusic(8)
+	AutoSpeaker.playTheMusic(0)
+	$MusicNamePop.receiveDictionaryOfMusicName(AutoSpeaker.get_musicName())
+	$MusicNamePop.popTheName()
 	pass # Replace with function body.
 
 

@@ -1,9 +1,12 @@
 extends AudioStreamPlayer
 
+var externalMusicPopName
+
 var _insertMediaHere:MediaCardtridge
 var FLMmusic = FLMusicLib.new()
 var MusicNamePopup = MusicNamePop.new()
 var AutoSFX = AudioStreamPlayer.new()
+var AutoMusic = AudioStreamPlayer.new()
 var startTimer = Timer.new()
 #var ButtonSound = AudioStreamPlayer.new()
 var ButtonSoundFX : String = "res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav"
@@ -66,7 +69,7 @@ func closest_beat(nth):
 	return Vector2(closest, time_off_beat)
 
 func play_from_beat(beat, offset):
-	play()
+	AutoMusic.play()
 	seek(beat * sec_per_beat)
 	beats_before_start = offset
 	measure = beat % timeMeasures
@@ -95,10 +98,11 @@ func _on_StartTimer_timeout():
 		startTimer.wait_time = startTimer.wait_time - (AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency())
 		startTimer.start()
 	else:
-		play()
+		AutoMusic.play()
 		startTimer.stop()
 	_report_beat()
 # https://youtu.be/_FRiPPbJsFQ https://github.com/LegionGames/Conductor-Example/ Rhythm sTILEr conductor
+# https://docs.godotengine.org/en/stable/tutorials/audio/sync_with_audio.html
 
 func inserMediaCardtridge(thisCardtridge:MediaCardtridge):
 	if thisCardtridge is MediaCardtridge:
@@ -108,19 +112,28 @@ func inserMediaCardtridge(thisCardtridge:MediaCardtridge):
 		return
 	
 	#MusicNamePopup.processTheName(_insertMediaHere.title,_insertMediaHere.artist,_insertMediaHere.license,_insertMediaHere.source[0],_insertMediaHere.albumPic)
-	stream = _insertMediaHere.Audios[0]
+	if externalMusicPopName && externalMusicPopName.has_method("processTheName"):
+		externalMusicPopName.processTheName(_insertMediaHere.title,_insertMediaHere.artist,_insertMediaHere.license,_insertMediaHere.source[0],_insertMediaHere.albumPic)
+		pass
+	AutoMusic.stream = _insertMediaHere.Audios[0]
 	changeBPM(_insertMediaHere.tempo)
 	changeTimeMeasure(_insertMediaHere.timeMeasures)
 	setInitBPMMeasure(BPM,timeMeasures)
 	pass
 
 func playTheMusic(offset = 0):
-	#play_with_beat_offset(offset)
-	play_from_beat(1,offset)
+	_reset_rhythm()
+	if not AutoMusic.playing:
+		#play_with_beat_offset(offset)
+		play_from_beat(1,offset)
+		#MusicNamePopup.popTheName()
+	MusicNamePopup.show()
+	if externalMusicPopName:
+		externalMusicPopName.show()
 	pass
 
 func stopTheMusic():
-	stop()
+	AutoMusic.stop()
 	startTimer.stop()
 	_reset_rhythm()
 	
@@ -131,12 +144,22 @@ func playSFXNow(stream:AudioStream):
 	AutoSFX.play()
 	pass
 
+func get_musicName():
+	return {
+		title = String(_insertMediaHere.title),
+		artist = String(_insertMediaHere.artist),
+		license = String(_insertMediaHere.license),
+		source = String(_insertMediaHere.source),
+		albumPic = _insertMediaHere.albumPic
+	}
+
 func _init():
-	set_bus("Music")
-	
 	# add auxilary audiostreamplayers for different busses
 	add_child(AutoSFX)
 	AutoSFX.set_bus("SoundEffect")
+	
+	add_child(AutoMusic)
+	AutoMusic.set_bus("Music")
 	
 	# add timer
 	add_child(startTimer)
@@ -149,7 +172,11 @@ func _init():
 	
 	# add Music Name Popup
 	add_child(MusicNamePopup)
+	MusicNamePopup.show()
 	pass
+
+func giveMe_MusicPopName(theThing):
+	externalMusicPopName = theThing
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -194,8 +221,8 @@ func connect_to_button(button):
 
 # Rhythm sTILEr
 func _physics_process(delta):
-	if playing:
-		song_position = get_playback_position() + AudioServer.get_time_since_last_mix()
+	if AutoMusic.playing:
+		song_position = AutoMusic.get_playback_position() + AudioServer.get_time_since_last_mix()
 		song_position -= AudioServer.get_output_latency()
 		song_position_in_beats = int(floor(song_position / sec_per_beat)) + beats_before_start
 		_report_beat()

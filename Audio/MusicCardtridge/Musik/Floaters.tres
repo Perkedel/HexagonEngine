@@ -1,10 +1,11 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://Audio/MusicCardtridge/MusicCardtridge.gd" type="Script" id=1]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=2]
 [ext_resource path="res://Audio/Musik/Floaters.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Audio/Musik/Floaters.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/HexagonEngineSign.png" type="Texture" id=5]
+[ext_resource path="res://Audio/Musik/Floaters-NoSilence.ogg" type="AudioStream" id=6]
 
 [resource]
 script = ExtResource( 1 )
@@ -12,10 +13,10 @@ albumPic = ExtResource( 5 )
 title = "Floaters"
 artist = "Jimmy Fontanez"
 license = "Free to use"
-tempo = 144.0
+tempo = 70.0
 timeMeasures = 4
 source = [ "YouTube Audio Library" ]
-Audios = [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ) ]
+Audios = [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ]
 Videos = [  ]
 MIDIfiles = [  ]
 sTILEStepsFile = ""

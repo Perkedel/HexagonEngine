@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://DummyTest/RhythmTestoid.gd" type="Script" id=1]
 [ext_resource path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" type="AudioStream" id=2]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://modules/Component/MusicNamePop.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFontData" id=1]
 resource_local_to_scene = true
@@ -70,6 +71,8 @@ margin_bottom = 129.5
 custom_fonts/font = SubResource( 2 )
 text = "Labelle"
 fontFile = SubResource( 1 )
+
+[node name="MusicNamePop" parent="." instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="PlaySong" to="." method="_on_PlaySong_pressed"]
 [connection signal="pressed" from="StopSong" to="." method="_on_StopSong_pressed"]

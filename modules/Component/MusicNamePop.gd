@@ -31,22 +31,38 @@ func processTheName(theTitle:String="Untitled",theArtist:String="Unknown",theLic
 	source = theSource
 	albumPic = theImage
 	
-	#AlbumPic.texture = albumPic
+	# https://godotengine.org/qa/23713/how-to-convert-image-to-texture
+	# https://docs.godotengine.org/en/stable/classes/class_imagetexture.html#class-imagetexture-method-create-from-image
+	# 
+	var itex = ImageTexture.new()
+	var img = Image.new()
+	img.load(albumPic.get_path())
+	itex.create_from_image(img)
+	
+	AlbumPic.texture = albumPic
 	Title.text = title
 	Artist.text = artist
 	License.text = license
 	Source.text = source
 	pass
 
-func popTheName():
+func popTheName(forHowLong:float = 5.0,NoAnimation:bool = false):
+	hideAfterIn = forHowLong
 	show()
-	tween.interpolate_property(self,"rect_position",Vector2(-rect_size.x,rect_position.y),Vector2(0,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
-	tween.start()
+	if not NoAnimation:
+		tween.interpolate_property(self,"rect_position",Vector2(-rect_size.x,rect_position.y),Vector2(0,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
+		tween.start()
+		yield(tween,"tween_completed")
 	yield(get_tree().create_timer(hideAfterIn),"timeout")
-	tween.interpolate_property(self,"rect_position",Vector2(0,rect_position.y),Vector2(-rect_size.x,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
-	tween.start()
-	yield(tween,"tween_completed")
+	if not NoAnimation:
+		tween.interpolate_property(self,"rect_position",Vector2(0,rect_position.y),Vector2(-rect_size.x,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
+		tween.start()
+		yield(tween,"tween_completed")
 	hide()
+	pass
+
+func receiveDictionaryOfMusicName(thisOne:Dictionary):
+	processTheName(thisOne["title"],thisOne["artist"],thisOne["license"],thisOne["source"],thisOne["albumPic"])
 	pass
 
 func forceHide():

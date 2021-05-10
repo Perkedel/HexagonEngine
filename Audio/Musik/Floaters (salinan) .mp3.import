@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Floaters (salinan) .mp3-c05da6017b5892e38500d7f48d8b8ec4.mp3str"
+
+[deps]
+
+source_file="res://Audio/Musik/Floaters (salinan) .mp3"
+dest_files=[ "res://.import/Floaters (salinan) .mp3-c05da6017b5892e38500d7f48d8b8ec4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

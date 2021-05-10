@@ -4,7 +4,7 @@ class_name MediaCardtridge
 # Damn it is was supposed to be named Media Cardtridge
 
 #resource_name = "Music Cardtridge"
-export(String) var albumPic = load("res://Sprites/MavrickleIcon.png")
+export(Texture) var albumPic = load("res://Sprites/MavrickleIcon.png")
 export(String) var title = "MediaCardtridge"
 export(String) var artist = "JOELwindows7"
 export(String) var license = "CC4.0-BY-SA"

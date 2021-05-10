@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/HexagonEngineCore.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=10]
 [ext_resource path="res://modules/Component/DVDSelectTransitioner.tscn" type="PackedScene" id=11]
 [ext_resource path="res://addons/gcode/GCode.gd" type="Script" id=12]
+[ext_resource path="res://modules/Component/MusicNamePop.tscn" type="PackedScene" id=13]
 
 [node name="HexagonEngineCore" type="Node"]
 pause_mode = 2
@@ -79,6 +80,8 @@ mouse_filter = 2
 [node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource( 5 )]
 
 [node name="JustZetrixVRViewer" parent="MetaMenu" instance=ExtResource( 7 )]
+
+[node name="MusicNamePop" parent="MetaMenu" instance=ExtResource( 13 )]
 
 [node name="SystemGut" type="Node" parent="."]
 pause_mode = 2
