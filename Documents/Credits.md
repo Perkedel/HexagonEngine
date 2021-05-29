@@ -328,3 +328,10 @@ Used Assets and Tools!
 - https://stackoverflow.com/questions/9506671/why-do-i-keep-getting-a-failed-when-trying-to-make-a-cer-for-testing
 - https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_for_uwp.html
 - https://docs.microsoft.com/en-us/windows/msix/package/create-app-package-with-makeappx-tool
+- https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html types of input handlings
+- https://godotengine.org/qa/12831/can-anyone-explain-to-me-unhandled-input-and-handled-input
+- https://godotengine.org/qa/37723/how-to-use-setget-keyword
+- https://godotengine.org/qa/39741/what-is-the-purpose-of-setget
+- https://godotengine.org/qa/12831/can-anyone-explain-to-me-unhandled-input-and-handled-input
+- https://godotengine.org/qa/39741/what-is-the-purpose-of-setget
+- 
