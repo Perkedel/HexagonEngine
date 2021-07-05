@@ -36,7 +36,7 @@ jobs:
           command: |
               wget -q -O butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
               unzip butler.zip
-              chmod +x butler
+              chmod +x ./butler
       
       - run:
           name: Export linux64 build
