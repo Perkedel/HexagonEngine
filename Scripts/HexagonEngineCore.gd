@@ -44,6 +44,7 @@ var LoadingProgressNum:float=0.0
 
 # demo of 3D in 2D official Godot
 func _zetrixInit():
+	ARVRServer.find_interface("OpenXR")
 	#zetrixViewport.hdr = false
 	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
 	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)
