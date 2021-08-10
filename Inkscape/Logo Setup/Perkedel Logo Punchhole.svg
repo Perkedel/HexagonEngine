@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="Perkedel Logo Punchhole.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg925"
+   version="1.1"
+   viewBox="0 0 2048 2048.0001"
+   height="2048"
+   width="2048">
+  <defs
+     id="defs919" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox="true"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="1100.5183"
+     inkscape:cx="1087.7075"
+     inkscape:zoom="0.35"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid1497"
+       type="xygrid" />
+    <inkscape:grid
+       empspacing="256"
+       id="grid1499"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata922">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Lapis 1">
+    <path
+       d="M 682.66602,341.333 A 682.66669,682.66669 0 0 0 0,1023.999 682.66669,682.66669 0 0 0 682.66602,1706.667 H 1365.334 A 682.66669,682.66669 0 0 0 2048,1023.999 682.66669,682.66669 0 0 0 1365.334,341.333 Z M 1024,511.99902 a 42.666668,42.666668 0 0 1 42.666,42.66796 V 981.333 h 426.668 a 42.666668,42.666668 0 0 1 42.666,42.666 42.666668,42.666668 0 0 1 -42.666,42.668 h -426.668 v 426.666 A 42.666668,42.666668 0 0 1 1024,1535.999 42.666668,42.666668 0 0 1 981.33398,1493.333 V 1066.667 H 554.66602 A 42.666668,42.666668 0 0 1 512,1023.999 42.666668,42.666668 0 0 1 554.66602,981.333 H 981.33398 V 554.66698 A 42.666668,42.666668 0 0 1 1024,511.99902 Z"
+       style="fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.6667;stroke-opacity:1"
+       id="path1451-5-4" />
+  </g>
+</svg>
