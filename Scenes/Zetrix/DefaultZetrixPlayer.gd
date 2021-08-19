@@ -18,6 +18,7 @@ func initialize() -> bool:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#var interface = ARVRServer.find_interface("OpenXR")
+	print("GO the VR now: " + String(initialize()))
 	pass # Replace with function body.
 
 

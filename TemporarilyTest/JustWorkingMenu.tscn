@@ -255,6 +255,7 @@ custom_fonts/font = ExtResource( 7 )
 text = "View VR Image"
 align = 1
 valign = 1
+
 [connection signal="pressed" from="TitleBar/AccountButton" to="." method="_on_AccountButton_pressed"]
 [connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]

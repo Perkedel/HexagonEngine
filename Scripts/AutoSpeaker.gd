@@ -10,6 +10,7 @@ var AutoMusic = AudioStreamPlayer.new()
 var startTimer = Timer.new()
 #var ButtonSound = AudioStreamPlayer.new()
 var ButtonSoundFX : String = "res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav"
+var ButtonHoverFX : String = "res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav"
 #var ArlezMIDI = MidiPlayer.new()
 # Declare member variables here. Examples:
 # var a = 2
@@ -139,9 +140,25 @@ func stopTheMusic():
 	
 	pass
 
-func playSFXNow(stream:AudioStream):
-	AutoSFX.stream = stream
-	AutoSFX.play()
+func playSFXNow(stream:AudioStream, volume:float = 0, pitch:float = 1, mix:int = MIX_TARGET_STEREO, busTo = "SoundEffect", destroyAfter:bool = true):
+#	AutoSFX.stream = stream
+#	AutoSFX.play()
+	var addOneShot:OneShotSpeaker = OneShotSpeaker.new()
+	AutoSFX.add_child(addOneShot)
+	addOneShot.playThis(stream, volume, pitch, mix, busTo, destroyAfter)
+	pass
+
+func playSFXPath(path:String, volume:float = 0, pitch:float = 1, mix:int = MIX_TARGET_STEREO, busTo = "SoundEffect", destroyAfter:bool = true):
+	var addAudioStream:AudioStream = load(path)
+	playSFXNow(addAudioStream, volume, pitch, mix, busTo, destroyAfter)
+	pass
+
+func playButtonClick():
+	playSFXPath(ButtonSoundFX)
+	pass
+
+func playButtonHover():
+	playSFXPath(ButtonHoverFX)
 	pass
 
 func get_musicName():

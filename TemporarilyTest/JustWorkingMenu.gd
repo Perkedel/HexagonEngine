@@ -150,6 +150,7 @@ func InitMeSelf():
 	pass
 
 func iHoverThisDVD():
+	AutoSpeaker.playButtonHover()
 	var keying = shownDVDItemLists.keys()
 	var checkering : Dictionary = shownDVDItemLists[keying[WhichItemSelected]]
 	print("Hovered DVD ", keying[WhichItemSelected])
@@ -187,6 +188,7 @@ func _on_PowerOffButton_pressed():
 
 export var WhichItemSelected = 0
 func _on_ItemList_item_selected(index):
+	
 	WhichItemSelected = index
 	iHoverThisDVD()
 	pass # Replace with function body.
@@ -194,6 +196,7 @@ func _on_ItemList_item_selected(index):
 export var WhichItemClickEnter = 0
 signal ItemClickEnter(Index, pathOfThis, ExclusiveBootStatement)
 func _on_ItemList_item_activated(index):
+	AutoSpeaker.playButtonClick()
 	emit_signal("ItemClickEnter",index,DVDarrayPathLoad[index], bool(DVDExclusiveBootStatement[index]))
 	pass # Replace with function body.
 

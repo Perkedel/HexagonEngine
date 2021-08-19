@@ -20,6 +20,7 @@ onready var HoriNamer = $HoriImaging/Label
 
 export(bool) var SoundsSpatially = true
 export(AudioStream) var buttonSounded = load("res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav")
+export(AudioStream) var buttonHovered = load("res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav")
 onready var buttonSpk = $ButtonSpeaker
 onready var buttonSpk2d = $ButtonSpeaker2D
 # Declare member variables here. Examples:
@@ -83,9 +84,13 @@ func _process(delta):
 
 func _on_MenuButton_pressed():
 	if SoundsSpatially:
-		buttonSpk2d.play()
+#		buttonSpk2d.play()
+		AutoSpeaker.playSFXNow(buttonSounded)
+		pass
 	else:
-		buttonSpk.play()
+#		buttonSpk.play()
+		AutoSpeaker.playSFXNow(buttonSounded)
+		pass
 	pass # Replace with function body.
 
 
@@ -98,4 +103,14 @@ func _on_MenuButton_button_up():
 
 
 func _on_MenuButton_toggled(button_pressed):
+	pass # Replace with function body.
+
+
+func _on_MenuButton_mouse_entered():
+	if SoundsSpatially:
+		AutoSpeaker.playSFXNow(buttonHovered)
+		pass
+	else:
+		AutoSpeaker.playSFXNow(buttonHovered)
+		pass
 	pass # Replace with function body.

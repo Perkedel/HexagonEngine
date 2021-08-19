@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
 [ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav" type="AudioStream" id=5]
 
 [node name="MenuButton" type="Button"]
 anchor_right = 1.0
@@ -19,6 +20,7 @@ __meta__ = {
 MenuIcons = ExtResource( 2 )
 MenuName = "MenuButton"
 buttonSounded = ExtResource( 4 )
+buttonHovered = ExtResource( 5 )
 
 [node name="VertImaging" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -86,5 +88,6 @@ bus = "SoundEffect"
 
 [connection signal="button_down" from="." to="." method="_on_MenuButton_button_down"]
 [connection signal="button_up" from="." to="." method="_on_MenuButton_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_MenuButton_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_MenuButton_pressed"]
 [connection signal="toggled" from="." to="." method="_on_MenuButton_toggled"]
