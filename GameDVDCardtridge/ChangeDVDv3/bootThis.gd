@@ -9,6 +9,7 @@ export(float) var TimeDelay
 export(PackedScene) var bootTheDVD = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
 export(String) var bootTheDVDpath = "res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn"
 # onready var loadingResource = ResourceLoader()
+export(bool) var disableSplash = false
 export(PoolStringArray) var bootBannerLocations = [
 	"res://GameDVDCardtridge/ChangeDVDv3/Shared/bootBanner/RowCellPerkedel.tscn",
 	"res://GameDVDCardtridge/ChangeDVDv3/Shared/bootBanner/RowCellA.tscn",
@@ -62,8 +63,14 @@ func loadTray(whatDVD):
 	print("\n\n\nWOW DVD Finish now load\n\n\n")
 	ContainsDVDInstance = whatDVD.instance()
 	$Tray.add_child(ContainsDVDInstance)
-	$Tray.get_child(0).connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
-	$Tray.get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+	if $Tray.get_child(0).has_signal("ChangeDVD_Exec"):
+		$Tray.get_child(0).connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
+	else:
+		print("Hmm, looks like this DVD missing the ChangeDVD_Exec")
+	if $Tray.get_child(0).has_signal("Shutdown_Exec"):
+		$Tray.get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+	else:
+		print("Hmm, looks like this DVD missing the Shutdown_Exec")
 	pass
 
 func _splashing():
@@ -75,17 +82,18 @@ func _splashing():
 	# bootTheDVDpath = bootTheDVD
 	resourcering.start()
 	resourcering.queue_resource(bootTheDVDpath)
-	for bootBannersHere in bootBannerLocations:
-		howManyBootBanners = $Splash/SplashMan/SplashControl/ColumnStack.get_child_count()
-		print("Load " + bootBannersHere)
-		loadBootBanner(bootBannersHere)
-		yield($Splash/SplashMan/SplashControl/ColumnStack, "ImDone")
-		print("Done the " + bootBannersHere)
-		# $Splash/SplashMan/SplashControl/ColumnStack.get_child(0).queue_free()
-		if pleaseJustSkip:
-			ContainsBootBannerInstance.justSkipAlready()
-			break
-		pass
+	if not disableSplash:
+		for bootBannersHere in bootBannerLocations:
+			howManyBootBanners = $Splash/SplashMan/SplashControl/ColumnStack.get_child_count()
+			print("Load " + bootBannersHere)
+			loadBootBanner(bootBannersHere)
+			yield($Splash/SplashMan/SplashControl/ColumnStack, "ImDone")
+			print("Done the " + bootBannersHere)
+			# $Splash/SplashMan/SplashControl/ColumnStack.get_child(0).queue_free()
+			if pleaseJustSkip:
+				ContainsBootBannerInstance.justSkipAlready()
+				break
+			pass
 	finishedBootBanner = true
 	# yield(resourcering,"iAmReady")
 	while not finishedDVDLoading:
@@ -94,12 +102,20 @@ func _splashing():
 			finishedDVDLoading = true
 			print("\n\nFinished DVD Loading\n\n")
 			pass
+		else:
+			pass
 		pass
-	tween.interpolate_property($Splash/SplashMan/SplashControl, "modulate", Color(1,1,1,1), Color(1,1,1,0), fadeSplashIn, Tween.TRANS_LINEAR,Tween.EASE_OUT, 0)
-	tween.interpolate_property($Splash/BekgronMan/BekgronControl, "modulate", Color(1,1,1,1), Color(1,1,1,0), fadeSplashIn, Tween.TRANS_LINEAR,Tween.EASE_OUT, 0)
-	tween.start()
+	if not disableSplash:
+		tween.interpolate_property($Splash/SplashMan/SplashControl, "modulate", Color(1,1,1,1), Color(1,1,1,0), fadeSplashIn, Tween.TRANS_LINEAR,Tween.EASE_OUT, 0)
+		tween.interpolate_property($Splash/BekgronMan/BekgronControl, "modulate", Color(1,1,1,1), Color(1,1,1,0), fadeSplashIn, Tween.TRANS_LINEAR,Tween.EASE_OUT, 0)
+		tween.start()
+	_kickTheBootDVD()
+	pass
+
+func _kickTheBootDVD():
 	loadTray(resourcering.get_resource(bootTheDVDpath))
-	yield(tween, "tween_all_completed")
+	if not disableSplash:
+		yield(tween, "tween_all_completed")
 	$Splash/SplashMan/SplashControl.hide()
 	$Splash/BekgronMan/BekgronControl.hide()
 	pass

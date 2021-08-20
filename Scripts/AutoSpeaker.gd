@@ -33,6 +33,13 @@ var measure:int = 1
 var closest:int = 0
 var time_off_beat:float = 0.0
 
+# Friday Night Funkin Rhythmers
+var curStep:int = 0
+var curBeat:int = 0
+var curDecimalBeat:int = 0
+var lastStep:float = 0
+var lastBeat:float = 0
+
 signal beat(position)
 signal measure(position)
 
@@ -247,5 +254,11 @@ func _physics_process(delta):
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	# Friday night Funkin thingifier
+	# from MusicBeatState.hx of that
+	if AutoConductor.songPosition < 0:
+		curDecimalBeat = 0
+	else:
+		pass
+	pass

@@ -7,6 +7,7 @@ var andScronchMe
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+export (NodePath) var daLoadedDVD
 
 # Singleton. Ahlinya Intinya inti, Core of the core. 
 
@@ -21,6 +22,23 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func assignLoadedDVD(thisThingRightHere:NodePath):
+	daLoadedDVD = thisThingRightHere
+
+func changeDVD():
+	if daLoadedDVD:
+		if daLoadedDVD.has_signal("ChangeDVD_Exec"):
+			daLoadedDVD.emit_signal("ChangeDVD_Exec")
+			pass
+		pass
+
+func shutdownNowDVD():
+	if daLoadedDVD:
+		if daLoadedDVD.has_signal("Shutdown_Exec"):
+			daLoadedDVD.emit_signal("Shutdown_Exec")
+			pass
+		pass
 
 func Nonaktifkan_Sistem():
 	#AutoSpeaker.stream = preload("res://GameDVDCardtridge/GeogonPolymetryHaventDoneYetSalvage/Audio/Explosion bin cropped.wav")

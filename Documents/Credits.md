@@ -334,4 +334,6 @@ Used Assets and Tools!
 - https://godotengine.org/qa/39741/what-is-the-purpose-of-setget
 - https://godotengine.org/qa/12831/can-anyone-explain-to-me-unhandled-input-and-handled-input
 - https://godotengine.org/qa/39741/what-is-the-purpose-of-setget
-- 
+- https://www.reddit.com/r/godot/comments/3oulh6/check_if_a_nodescript_has_a_function/
+- https://docs.godotengine.org/en/stable/classes/class_array.html
+- https://stackoverflow.com/a/56028738/9079640
