@@ -969,6 +969,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/texture-layered-mesh/src/texture_layered_mesh.gd"
 }, {
+"base": "Node",
+"class": "TimingStruct",
+"language": "GDScript",
+"path": "res://Scripts/AutoKadeTimingStruct.gd"
+}, {
 "base": "Control",
 "class": "Toast",
 "language": "GDScript",
@@ -1272,6 +1277,7 @@ _global_script_class_icons={
 "SubscriptionList": "",
 "Tello": "res://addons/TelloDroneNode/drone_icon.png",
 "TextureLayeredMesh": "res://addons/texture-layered-mesh/icons/texture_layered_mesh.svg",
+"TimingStruct": "",
 "Toast": "",
 "ToastStyle": "",
 "Trail2D": "res://addons/godot-next/icons/icon_trail_2d.svg",
@@ -1366,6 +1372,7 @@ IconLoader="*res://addons/file-editor/scripts/IconLoader.gd"
 LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
 AutoSpeaker="*res://Scripts/AutoSpeaker.gd"
 AutoConductor="*res://Scripts/AutoConductor.gd"
+AutoKadeTimingStruct="*res://Scripts/AutoKadeTimingStruct.gd"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 FirebaseQuest="*res://Scripts/GDquest-Firebase.gd"
 ModPckLoader="*res://Scripts/ModPCKLoader.gd"
