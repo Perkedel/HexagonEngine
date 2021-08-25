@@ -35,6 +35,10 @@ func saveDVDListCache():
 	Settingers.SettingSave()
 	pass
 
+func destroyDVDListCache():
+	Settingers.setDVDListCache({})
+	Settingers.SettingSave()
+
 signal DVDListRefreshed()
 func refreshDVDs():
 	# documentation of "Directory"
@@ -137,6 +141,11 @@ func refreshDVDs():
 	emit_signal("DVDListRefreshed")
 	pass
 
+func cleanRefreshDVDs():
+	destroyDVDListCache()
+	refreshDVDs()
+	pass
+
 func reloadAccountName():
 	$TitleBar/AccountButton.text = Settingers.getNama()
 	pass
@@ -227,4 +236,9 @@ func _on_RefreshDVDbutton_pressed():
 signal viewVRImageNow()
 func _on_ViewVRImage_pressed():
 	emit_signal("viewVRImageNow")
+	pass # Replace with function body.
+
+
+func _on_RefreshDVDbuttonClean_pressed():
+	cleanRefreshDVDs()
 	pass # Replace with function body.

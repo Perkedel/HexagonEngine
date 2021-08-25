@@ -220,9 +220,45 @@ text = "Refresh DVD list"
 align = 1
 valign = 1
 
-[node name="ViewVRImage" type="Button" parent="HBoxContainer"]
+[node name="RefreshDVDbuttonClean" type="Button" parent="HBoxContainer"]
 margin_left = 908.0
 margin_right = 1408.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 0 )
+hint_tooltip = "Terminate Hexagon Engine"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RefreshDVDbuttonClean"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
+margin_right = 178.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
+margin_left = 182.0
+margin_right = 500.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 7 )
+text = "Clean Refresh"
+align = 1
+valign = 1
+
+[node name="ViewVRImage" type="Button" parent="HBoxContainer"]
+margin_left = 1412.0
+margin_right = 1912.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"
@@ -264,4 +300,5 @@ valign = 1
 [connection signal="pressed" from="HBoxContainer/LoadMoreDVDsButton" to="." method="_on_LoadMoreDVDsButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/ImportModPackButton" to="." method="_on_ImportModPackButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/RefreshDVDbutton" to="." method="_on_RefreshDVDbutton_pressed"]
+[connection signal="pressed" from="HBoxContainer/RefreshDVDbuttonClean" to="." method="_on_RefreshDVDbuttonClean_pressed"]
 [connection signal="pressed" from="HBoxContainer/ViewVRImage" to="." method="_on_ViewVRImage_pressed"]

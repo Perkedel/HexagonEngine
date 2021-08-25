@@ -337,3 +337,5 @@ Used Assets and Tools!
 - https://www.reddit.com/r/godot/comments/3oulh6/check_if_a_nodescript_has_a_function/
 - https://docs.godotengine.org/en/stable/classes/class_array.html
 - https://stackoverflow.com/a/56028738/9079640
+- https://docs.godotengine.org/en/stable/classes/class_array.html array class oid
+- https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/ array tips and tricks

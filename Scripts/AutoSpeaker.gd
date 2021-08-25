@@ -260,7 +260,7 @@ func _process(delta):
 	if AutoConductor.songPosition < 0:
 		curDecimalBeat = 0
 	else:
-		if AutoKadeTimingStruct.allTimings.length > 1:
+		if AutoKadeTimingStruct.allTimings.size() > 1:
 			var data = AutoKadeTimingStruct.getTimingAtTimestamp(AutoConductor.songPosition)
 			
 			# add Hexagon watch FlxG watch current conductor timing seg

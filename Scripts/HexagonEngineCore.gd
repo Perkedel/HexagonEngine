@@ -81,9 +81,12 @@ func _ready():
 
 func _input(event):
 	if Input.is_action_just_pressed("debug_showZetrixView"):
-		# Press Ctrl + Alt + Shift + T, for Tari
+		# Press Ctrl + Shift + T, for Tari
 		# https://www.youtube.com/watch?v=HmKcvlLxGqo
-		zetrixPreview.show()
+		if zetrixPreview.visible:
+			zetrixPreview.hide()
+		else:
+			zetrixPreview.show()
 		pass
 	pass
 
