@@ -7,55 +7,55 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2048"
-   height="2048"
-   viewBox="0 0 2048 2048"
-   version="1.1"
-   id="svg4904"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="11.72"
+   inkscape:export-xdpi="11.72"
+   inkscape:export-filename="C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\Sprites\HexagonEngineSign_Square250.png"
    sodipodi:docname="HexagonEngineSign_2048x2048.svg"
-   inkscape:export-filename="C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\Sprites\HexagonEngineSign_Square310.png"
-   inkscape:export-xdpi="14.53"
-   inkscape:export-ydpi="14.53">
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg4904"
+   version="1.1"
+   viewBox="0 0 2048 2048"
+   height="2048"
+   width="2048">
   <defs
      id="defs4898" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="628.00347"
-     inkscape:cy="1049.8836"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     units="px"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-paths="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:document-rotation="0"
      inkscape:window-maximized="1"
-     inkscape:document-rotation="0">
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox="true"
+     units="px"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="1049.8836"
+     inkscape:cx="628.00347"
+     inkscape:zoom="0.35"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
     <inkscape:grid
-       type="xygrid"
+       empspacing="4"
        id="grid9381"
-       empspacing="4" />
+       type="xygrid" />
     <inkscape:grid
-       type="xygrid"
-       id="grid9383"
-       empspacing="512"
-       color="#ff3f00"
-       opacity="0.1254902"
+       empopacity="0.25098039"
        empcolor="#ff3f00"
-       empopacity="0.25098039" />
+       opacity="0.1254902"
+       color="#ff3f00"
+       empspacing="512"
+       id="grid9383"
+       type="xygrid" />
   </sodipodi:namedview>
   <metadata
      id="metadata4901">
@@ -87,92 +87,92 @@
     </rdf:RDF>
   </metadata>
   <g
-     sodipodi:insensitive="true"
-     inkscape:label="Bekgrond"
-     inkscape:groupmode="layer"
-     id="layer1"
+     style="display:inline"
      transform="translate(0,244.86668)"
-     style="display:inline">
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Bekgrond"
+     sodipodi:insensitive="true">
     <rect
-       inkscape:export-ydpi="300"
-       inkscape:export-xdpi="300"
-       style="fill:#ffa400;fill-opacity:1;stroke:#ff3e00;stroke-width:58.1818;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
-       id="rect1504"
-       width="1861.8181"
-       height="1861.8181"
-       x="93.090942"
+       ry="186.18181"
        y="-151.77568"
-       ry="186.18181" />
+       x="93.090942"
+       height="1861.8181"
+       width="1861.8181"
+       id="rect1504"
+       style="fill:#ffa400;fill-opacity:1;stroke:#ff3e00;stroke-width:58.1818;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:25;stroke-opacity:1"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
   <g
-     sodipodi:insensitive="true"
-     inkscape:groupmode="layer"
-     id="layer2"
+     style="display:inline"
      inkscape:label="Forgrond"
-     style="display:inline">
+     id="layer2"
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
     <g
-       inkscape:export-ydpi="300"
-       inkscape:export-xdpi="300"
+       transform="matrix(43.979956,0,0,43.979956,-465.4544,-2356.5926)"
        id="g1502"
-       transform="matrix(43.979956,0,0,43.979956,-465.4544,-2356.5926)">
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
       <path
-         d="M 50.799997,76.866669 42.333331,91.531365 H 25.399999 l -8.466667,-14.664696 8.466667,-14.664696 16.933332,0 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="0.52359878"
-         sodipodi:arg1="0"
-         sodipodi:r2="14.664696"
-         sodipodi:r1="16.933332"
-         sodipodi:cy="76.866669"
-         sodipodi:cx="33.866665"
-         sodipodi:sides="6"
-         id="path1482"
+         sodipodi:type="star"
          style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
-         sodipodi:type="star" />
+         id="path1482"
+         sodipodi:sides="6"
+         sodipodi:cx="33.866665"
+         sodipodi:cy="76.866669"
+         sodipodi:r1="16.933332"
+         sodipodi:r2="14.664696"
+         sodipodi:arg1="0"
+         sodipodi:arg2="0.52359878"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 50.799997,76.866669 42.333331,91.531365 H 25.399999 l -8.466667,-14.664696 8.466667,-14.664696 16.933332,0 z" />
       <g
          id="g1500">
         <g
            id="g1490">
           <circle
-             r="3.175"
-             cy="71.574997"
-             cx="26.458334"
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1484"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
-          <circle
-             r="3.175"
+             cx="26.458334"
              cy="71.574997"
-             cx="33.866665"
+             r="3.175" />
+          <circle
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1486"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
-          <circle
-             r="3.175"
+             cx="33.866665"
              cy="71.574997"
-             cx="41.275002"
+             r="3.175" />
+          <circle
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1488"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+             cx="41.275002"
+             cy="71.574997"
+             r="3.175" />
         </g>
         <g
            id="g1498">
           <circle
-             r="3.175"
-             cy="82.158333"
-             cx="26.458334"
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1492"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
-          <circle
-             r="3.175"
+             cx="26.458334"
              cy="82.158333"
-             cx="33.866665"
+             r="3.175" />
+          <circle
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1494"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
-          <circle
-             r="3.175"
+             cx="33.866665"
              cy="82.158333"
-             cx="41.275002"
+             r="3.175" />
+          <circle
+             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
              id="circle1496"
-             style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+             cx="41.275002"
+             cy="82.158333"
+             r="3.175" />
         </g>
       </g>
     </g>
