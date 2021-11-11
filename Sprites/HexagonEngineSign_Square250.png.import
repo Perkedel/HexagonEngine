@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HexagonEngineSign_2048x2048.svg-9154b62cd3d564843d0108a89166699d.stex"
+path="res://.import/HexagonEngineSign_Square250.png-4f013f75b6f353ced90cdb598effc4d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Inkscape/Logo Setup/HexagonEngineSign_2048x2048.svg"
-dest_files=[ "res://.import/HexagonEngineSign_2048x2048.svg-9154b62cd3d564843d0108a89166699d.stex" ]
+source_file="res://Sprites/HexagonEngineSign_Square250.png"
+dest_files=[ "res://.import/HexagonEngineSign_Square250.png-4f013f75b6f353ced90cdb598effc4d7.stex" ]
 
 [params]
 

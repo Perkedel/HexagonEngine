@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HexagonEngineSign_2048x2048.svg-9154b62cd3d564843d0108a89166699d.stex"
+path="res://.import/Perkedel_Ended_720p.svg-e608c277a606bb4c1dab9b8ad006d7ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Inkscape/Logo Setup/HexagonEngineSign_2048x2048.svg"
-dest_files=[ "res://.import/HexagonEngineSign_2048x2048.svg-9154b62cd3d564843d0108a89166699d.stex" ]
+source_file="res://Inkscape/Logo Setup/Perkedel_Ended_720p.svg"
+dest_files=[ "res://.import/Perkedel_Ended_720p.svg-e608c277a606bb4c1dab9b8ad006d7ed.stex" ]
 
 [params]
 
