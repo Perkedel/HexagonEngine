@@ -12,7 +12,10 @@ var margin = 10
 
 
 func _ready():
-	rect_size.y = 0
+	set_deferred('rect_size.y', 0)
+	nodes['title'].bbcode_enabled = true
+	nodes['body'].bbcode_enabled = true
+	nodes['extra'].bbcode_enabled = true
 
 
 func _process(_delta):
@@ -23,11 +26,7 @@ func _process(_delta):
 			else:
 				rect_global_position = get_global_mouse_position() - rect_size - Vector2(0, (margin * 2))
 			rect_size.y = 0
-			$ColorRect.margin_top = - margin
-			$ColorRect.margin_left = - margin * 1.25
-			$ColorRect.margin_right = rect_size.x + margin * 1.25
-			$ColorRect.margin_bottom = rect_size.y + margin
-
+#			
 
 func load_preview(info):
 	nodes['title'].visible = false
@@ -35,14 +34,33 @@ func load_preview(info):
 	nodes['extra'].visible = false
 	
 	if info['title'] != '':
-		nodes['title'].text = info['title']
+		nodes['title'].bbcode_text = info['title']
 		nodes['title'].visible = true
-		nodes['title'].set('custom_colors/default_color', get_parent().settings['glossary_color'])
-	
+
 	if info['body'] != '':
-		nodes['body'].text = info['body']
+		nodes['body'].bbcode_text = info['body']
 		nodes['body'].visible = true
 	
 	if info['extra'] != '':
-		nodes['extra'].text = info['extra']
+		nodes['extra'].bbcode_text = info['extra']
 		nodes['extra'].visible = true
+
+
+func load_theme(theme):
+	# Fonts
+	$VBoxContainer/Title.set(
+		'custom_fonts/normal_font', 
+		DialogicUtil.path_fixer_load(theme.get_value('definitions', 'font', "res://addons/dialogic/Example Assets/Fonts/GlossaryFont.tres")))
+	$VBoxContainer/Title.set('custom_colors/default_color', theme.get_value('definitions', 'title_color', "#ffffffff"))
+	
+	$VBoxContainer/Content.set(
+		'custom_fonts/normal_font', 
+		DialogicUtil.path_fixer_load(theme.get_value('definitions', 'text_font', "res://addons/dialogic/Example Assets/Fonts/GlossaryFont.tres")))
+	$VBoxContainer/Content.set('custom_colors/default_color', theme.get_value('definitions', 'text_color', "#c1c1c1"))
+	
+	$VBoxContainer/Extra.set(
+		'custom_fonts/normal_font', 
+		DialogicUtil.path_fixer_load(theme.get_value('definitions', 'extra_font', "res://addons/dialogic/Example Assets/Fonts/GlossaryFont.tres")))
+	$VBoxContainer/Extra.set('custom_colors/default_color', theme.get_value('definitions', 'extra_color', "#c1c1c1"))
+	
+	set("custom_styles/panel", load(theme.get_value('definitions', 'background_panel', "res://addons/dialogic/Example Assets/backgrounds/GlossaryBackground.tres")))

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://modules/Reusables/JustKinematic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RigidBodi/Lantai.tscn" type="PackedScene" id=2]
+[ext_resource path="res://modules/Reusables/TembokExample.tscn" type="PackedScene" id=3]
+
+[node name="YOTestJustChar" type="Spatial"]
+
+[node name="Lantai" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27693, 0 )
+
+[node name="TembokExample" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0 )
+
+[node name="TembokExample2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -20 )
+
+[node name="TembokExample3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21, 0, 0 )
+
+[node name="TembokExample4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 20 )
+
+[node name="JustKinematic" parent="." instance=ExtResource( 1 )]
+rotateOnFloorOnly = true
