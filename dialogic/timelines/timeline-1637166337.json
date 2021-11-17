@@ -1,0 +1,133 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "aadfasdf"
+		},
+		{
+			"action": "join",
+			"character": "character-1614356647.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1614356647.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Hi, I'm testoid"
+		},
+		{
+			"choice": "Yeah",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1637165720-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Chosen Yeah"
+		},
+		{
+			"choice": "Nough",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1637165720-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "-1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Chosen Nough"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1637165720-648",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1614356647.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeahu!"
+		},
+		{
+			"event_id": "dialogic_025",
+			"extra": "",
+			"glossary_id": "1637166495-787",
+			"text": "Plububububububub",
+			"title": "[No Change]"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1637165720-648",
+			"event_id": "dialogic_012",
+			"value": "-1"
+		},
+		{
+			"character": "character-1614356647.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ahw.. :'("
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "Testoiding",
+			"my_text_key": "Haiex"
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1637166337.json",
+		"name": "a"
+	}
+}
