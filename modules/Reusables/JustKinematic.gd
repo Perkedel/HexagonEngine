@@ -5,6 +5,7 @@ extends KinematicBody
 # https://godotengine.org/article/godot-3-4-is-released#input
 # https://youtu.be/UpF7wm0186Q GDQuest how to 3D kinematic character
 
+export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
 export(NodePath) var catchCamera:NodePath
 export(float) var WALK_SPEED:float = 5
 export(float) var SPRINT_SPEED:float = 10
@@ -54,9 +55,23 @@ onready var _springArm:SpringArm = $SpringCamArm
 onready var _form:Spatial = $FormSlot 
 onready var _frontRef = $FrontRef
 
+func set_current(value:bool):
+	current = value
+#	_springArm.current = value
+	_springArm.set_current(value)
+	pass
+
+func get_current():
+	current = _springArm.current
+	return current
+	pass
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+
+func activate_current():
+	current = true
 
 func catchTheCamera():
 	if catchCamera:
@@ -64,8 +79,15 @@ func catchTheCamera():
 		pass
 	pass
 
+func checkCurrent():
+	if current != _springArm.current:
+		_springArm.current = current
+		pass
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	checkCurrent()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -82,8 +104,9 @@ func _physics_process(delta):
 	
 	# move direction based on cam rotation
 	var arah_gerak = Vector3.ZERO
-	arah_gerak.x = Input.get_axis("Jalan_Kiri", "Jalan_Kanan")
-	arah_gerak.z = Input.get_axis("Jalan_Depan", "Jalan_Belakang")
+	if current:
+		arah_gerak.x = Input.get_axis("Jalan_Kiri", "Jalan_Kanan")
+		arah_gerak.z = Input.get_axis("Jalan_Depan", "Jalan_Belakang")
 	arah_gerak = arah_gerak.rotated(Vector3.UP,_springArm.rotation.y).normalized()
 	
 	# record last direction before zero magnitude
@@ -109,8 +132,8 @@ func _physics_process(delta):
 	
 	# handle jump
 	floored = is_on_floor() and _snap_vector == Vector3.ZERO
-	is_jumping = (is_on_floor() or shouldCoyoteJump) and Input.is_action_just_pressed("Melompat")
-	var extraJumping:bool = Input.is_action_just_pressed("Melompat") and loncatRightNow > 0 and not (is_on_floor() or shouldCoyoteJump)
+	is_jumping = (is_on_floor() or shouldCoyoteJump) and Input.is_action_just_pressed("Melompat") and current
+	var extraJumping:bool = Input.is_action_just_pressed("Melompat") and loncatRightNow > 0 and not (is_on_floor() or shouldCoyoteJump) and current
 	if is_jumping:
 		_velocity.y = JUMP_STRENGTH
 		_snap_vector = Vector3.ZERO
@@ -137,8 +160,8 @@ func _physics_process(delta):
 		pass
 	
 	# Hat Kid dive whoosh & Crouch
-	_press_crouch = Input.is_action_pressed("Menyelam_Whoosh")
-	_just_press_crouch = Input.is_action_just_pressed("Menyelam_Whoosh")
+	_press_crouch = Input.is_action_pressed("Menyelam_Whoosh") and current
+	_just_press_crouch = Input.is_action_just_pressed("Menyelam_Whoosh") and current
 	if _press_crouch:
 		_collider.rotation_degrees.x = 0
 		if _startDiving:
@@ -216,3 +239,9 @@ func coyoteTime():
 func _input(event):
 	
 	pass
+
+
+func _on_SpringCamArm_on_camCurrent(value):
+#	current = value
+	set_current(value)
+	pass # Replace with function body.

@@ -18,3 +18,5 @@ shape = SubResource( 1 )
 [node name="FrontRef" parent="." instance=ExtResource( 2 )]
 
 [node name="SpringCamArm" parent="." instance=ExtResource( 3 )]
+
+[connection signal="on_camCurrent" from="SpringCamArm" to="." method="_on_SpringCamArm_on_camCurrent"]

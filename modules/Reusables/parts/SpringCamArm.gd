@@ -3,6 +3,7 @@ extends SpringArm
 # 3rd person camera arm joint
 # https://youtu.be/UpF7wm0186Q
 
+export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
 export(float) var mouseSensitivity = 0.05
 export(float) var analogSensitivity = 1
 export(float) var maxTop = 30
@@ -14,14 +15,53 @@ export(float) var deadzoning = .15
 
 var _joyMoveX:float
 var _joyMoveY:float
+var _camCurrent:bool setget set_camCurrent, get_camCurrent
+var _lastCamCurrent:bool = false
+onready var theCam = $Camera
+
+signal on_camCurrent(value)
+
+func set_current(value:bool):
+	current = value
+	if current != theCam.current:
+		_camCurrent = current
+	pass
+
+func get_current():
+	return current
+	pass
+
+func set_camCurrent(value:bool):
+	_camCurrent = value
+	# emit signal that the value has changed
+	if _lastCamCurrent == _camCurrent:
+		pass
+	else:
+		_lastCamCurrent = _camCurrent
+		if theCam.current != _camCurrent:
+			theCam.current = _camCurrent
+		emit_signal("on_CamCurrent", _camCurrent)
+		pass
+	pass
+
+func get_camCurrent():
+	if _camCurrent != theCam.current:
+		emit_signal("on_CamCurrent", theCam.current)
+	_camCurrent = theCam.current
+	return _camCurrent
+	pass
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
+func activate_current():
+	theCam.current = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	_lastCamCurrent = theCam.current
+	_camCurrent = theCam.current
 	set_as_toplevel(true)
 	#TODO: enable only if focused
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -67,5 +107,5 @@ func _physics_process(delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	get_camCurrent()
 	pass
