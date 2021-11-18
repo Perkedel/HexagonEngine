@@ -16,10 +16,16 @@ func _input(event):
 	if event is InputEventKey:
 		if event.pressed:
 			if event.scancode == KEY_1:
-				Char1.current = true
+				Char1.activate_current()
+				Char2.deactivate_current()
+#				Char1.current = true
+#				Char2.current = false
 				pass
 			if event.scancode == KEY_2:
-				Char2.current = true
+				Char2.activate_current()
+				Char1.deactivate_current()
+#				Char2.current = true
+#				Char1.current = false
 				pass
 		pass
 

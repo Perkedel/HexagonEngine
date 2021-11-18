@@ -4,6 +4,7 @@ extends SpringArm
 # https://youtu.be/UpF7wm0186Q
 
 export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
+export(bool) var autoCheckCam:bool = false
 export(float) var mouseSensitivity = 0.05
 export(float) var analogSensitivity = 1
 export(float) var maxTop = 30
@@ -17,14 +18,16 @@ var _joyMoveX:float
 var _joyMoveY:float
 var _camCurrent:bool setget set_camCurrent, get_camCurrent
 var _lastCamCurrent:bool = false
+var _lastCurrent:bool = false
 onready var theCam = $Camera
 
 signal on_camCurrent(value)
 
 func set_current(value:bool):
 	current = value
-	if current != theCam.current:
-		_camCurrent = current
+#	if _lastCurrent != value:
+#		_lastCurrent = value
+#	theCam.current = value
 	pass
 
 func get_current():
@@ -33,22 +36,21 @@ func get_current():
 
 func set_camCurrent(value:bool):
 	_camCurrent = value
-	# emit signal that the value has changed
-	if _lastCamCurrent == _camCurrent:
-		pass
-	else:
-		_lastCamCurrent = _camCurrent
-		if theCam.current != _camCurrent:
-			theCam.current = _camCurrent
-		emit_signal("on_CamCurrent", _camCurrent)
-		pass
+#	if theCam.current != _lastCamCurrent:
+#		current = value
+#		_lastCamCurrent = value
+#		emit_signal("on_camCurrent", value)
 	pass
 
 func get_camCurrent():
-	if _camCurrent != theCam.current:
-		emit_signal("on_CamCurrent", theCam.current)
-	_camCurrent = theCam.current
 	return _camCurrent
+	pass
+
+func checkCamCurrent():
+	if _lastCamCurrent != theCam.current:
+		_camCurrent = theCam.current
+		_lastCamCurrent = _camCurrent
+		emit_signal("on_camCurrent",_camCurrent)
 	pass
 
 # Declare member variables here. Examples:
@@ -56,12 +58,20 @@ func get_camCurrent():
 # var b = "text"
 
 func activate_current():
+	current = true
 	theCam.current = true
+	checkCamCurrent()
+
+func deactivate_current():
+	current = false
+	theCam.current = false
+	checkCamCurrent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_lastCamCurrent = theCam.current
-	_camCurrent = theCam.current
+	_lastCurrent = current
+	checkCamCurrent()
 	set_as_toplevel(true)
 	#TODO: enable only if focused
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -69,43 +79,48 @@ func _ready():
 	pass # Replace with function body.
 
 func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		# Up & down
-		rotation_degrees.x -= event.relative.y * mouseSensitivity
-		# then clamp the x
-		rotation_degrees.x = clamp(rotation_degrees.x, minBottom, maxTop)
+	if current:
+		if event is InputEventMouseMotion:
+			# Up & down
+			rotation_degrees.x -= event.relative.y * mouseSensitivity
+			# then clamp the x
+			rotation_degrees.x = clamp(rotation_degrees.x, minBottom, maxTop)
+			
+			# left & right
+			rotation_degrees.y -= event.relative.x * mouseSensitivity
+			# then wrapf the y
+			rotation_degrees.y = wrapf(
+				clamp(rotation_degrees.y,minLeft,maxRight) if limitLeftRight
+				else rotation_degrees.y
+				, 0.0, 360.0)
+			pass
 		
-		# left & right
-		rotation_degrees.y -= event.relative.x * mouseSensitivity
-		# then wrapf the y
-		rotation_degrees.y = wrapf(
-			clamp(rotation_degrees.y,minLeft,maxRight) if limitLeftRight
-			else rotation_degrees.y
-			, 0.0, 360.0)
-		pass
+		if event is InputEventJoypadMotion:
+			if event.get_axis() == JOY_ANALOG_RX:
+				var value = event.get_axis_value() if event.get_axis_value() > deadzoning or event.get_axis_value() < -deadzoning else 0
+				_joyMoveY = value * analogSensitivity
+			if event.get_axis() == JOY_ANALOG_RY:
+				var value = event.get_axis_value() if event.get_axis_value() > deadzoning or event.get_axis_value() < -deadzoning else 0
+				_joyMoveX = value * analogSensitivity
+			pass
 	
-	if event is InputEventJoypadMotion:
-		if event.get_axis() == JOY_ANALOG_RX:
-			var value = event.get_axis_value() if event.get_axis_value() > deadzoning or event.get_axis_value() < -deadzoning else 0
-			_joyMoveY = value * analogSensitivity
-		if event.get_axis() == JOY_ANALOG_RY:
-			var value = event.get_axis_value() if event.get_axis_value() > deadzoning or event.get_axis_value() < -deadzoning else 0
-			_joyMoveX = value * analogSensitivity
+	#	if event is InputEventAction:
+	#		_joyMoveX = (event.get_action_strength("AnalogKanan_x") - event.get_action_strength("AnalogKanan_x-")) * analogSensitivity
+	#
+	#		_joyMoveY = (event.get_action_strength("AnalogKanan_y") - event.get_action_strength("AnalogKanan_y-")) * analogSensitivity
 		pass
-	
-#	if event is InputEventAction:
-#		_joyMoveX = (event.get_action_strength("AnalogKanan_x") - event.get_action_strength("AnalogKanan_x-")) * analogSensitivity
-#
-#		_joyMoveY = (event.get_action_strength("AnalogKanan_y") - event.get_action_strength("AnalogKanan_y-")) * analogSensitivity
+	pass
 
 func _physics_process(delta):
 	rotation_degrees.x -= _joyMoveX
 	rotation_degrees.x = clamp(rotation_degrees.x, minBottom, maxTop)
 	rotation_degrees.y -= _joyMoveY
 	rotation_degrees.y = wrapf(clamp(rotation_degrees.y,minLeft,maxRight) if limitLeftRight else rotation_degrees.y, 0.0, 360.0)
+#	checkCamCurrent()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_camCurrent()
+#	if autoCheckCam:
+#		checkCamCurrent()
 	pass

@@ -6,6 +6,7 @@ extends KinematicBody
 # https://youtu.be/UpF7wm0186Q GDQuest how to 3D kinematic character
 
 export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
+export(bool) var autoCheckCam:bool = false
 export(NodePath) var catchCamera:NodePath
 export(float) var WALK_SPEED:float = 5
 export(float) var SPRINT_SPEED:float = 10
@@ -18,6 +19,8 @@ export(float) var WALK_DEADZONE:float = .25
 export(float) var JUMP_STRENGTH:float = 20.0
 export(float) var JUMP_TOKEN:int = 1
 export(float) var GRAVITATION:float = 50
+export(float) var FALL_DAMAGE_VELOCITY:float = 1000
+export(float) var PUSH_STRENGTH:float = 10 # inertia for pushing rigidbody or whatever
 export(bool) var smoothCharRotate:bool = true
 export(float) var smoothRotateSpeed:float = 10
 export(bool) var rotateOnFloorOnly:bool = false #if true the form rotates only if on floor
@@ -48,7 +51,15 @@ var _snap_vector:Vector3 = Vector3.DOWN
 var _lookAtDirection:Vector2 = Vector2.UP
 var _smoothDirection:Vector3 = Vector3.FORWARD
 var _startDiving:bool = false
+var _divingNow:bool = false
 var _divenCollided:bool = false
+var _divePhase:int = 0
+# 0 = off
+# 1 = start diving
+# 2 = touch floor / wall
+# 3 = at right time undive to bonus speed
+# 4 = finished
+var _airborne_for:float = 0
 
 onready var _collider:CollisionShape = $CollideMe
 onready var _springArm:SpringArm = $SpringCamArm
@@ -57,12 +68,9 @@ onready var _frontRef = $FrontRef
 
 func set_current(value:bool):
 	current = value
-#	_springArm.current = value
-	_springArm.set_current(value)
 	pass
 
 func get_current():
-	current = _springArm.current
 	return current
 	pass
 
@@ -72,6 +80,13 @@ func get_current():
 
 func activate_current():
 	current = true
+	_springArm.activate_current()
+	checkCurrent()
+
+func deactivate_current():
+	current = false
+	_springArm.deactivate_current()
+	checkCurrent()
 
 func catchTheCamera():
 	if catchCamera:
@@ -85,9 +100,13 @@ func checkCurrent():
 		pass
 	pass
 
+func checkAutoCheckCam():
+	_springArm.autoCheckCam = autoCheckCam
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	checkCurrent()
+	checkAutoCheckCam()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -138,6 +157,8 @@ func _physics_process(delta):
 		_velocity.y = JUMP_STRENGTH
 		_snap_vector = Vector3.ZERO
 		shouldCoyoteJump = false
+		
+		_divingNow = false
 	elif floored:
 		_snap_vector = Vector3.DOWN
 		loncatRightNow = JUMP_TOKEN
@@ -152,10 +173,21 @@ func _physics_process(delta):
 		shouldCoyoteJump = false
 	
 	# rest of the ground check
+	_airborne_for += delta
 	if is_on_floor():
+		if _startDiving:
+			_divenCollided = true
+			_mode = 1
 		_startDiving = false
+		if _airborne_for > .5:
+			pass
+		if _velocity.y > FALL_DAMAGE_VELOCITY:
+			print("Fall damange oof")
+			pass
+		_airborne_for = 0
 		pass
 	else:
+		_divenCollided = false
 		coyoteTime()
 		pass
 	
@@ -170,11 +202,17 @@ func _physics_process(delta):
 			_mode = 1
 		pass
 	else:
-		_mode = 0
-		_collider.rotation_degrees.x = -90
+		if _startDiving or _divenCollided:
+			
+			pass
+		elif _divingNow and not (_startDiving):
+			_mode = 1
+		else:
+			_mode = 0
+			_collider.rotation_degrees.x = -90
 		pass
 	
-	if (not is_on_floor() or arah_gerak.length() > 0.01) and _just_press_crouch:
+	if (not is_on_floor() or arah_gerak.length() > 0) and _just_press_crouch and not _divingNow:
 		_lookAtDirection = Vector2(arah_gerak.z, arah_gerak.x).rotated(-rotation.y).normalized() if arah_gerak.length() > 0 else _lookAtDirection
 		dive_now(_last_arah_gerak)
 		
@@ -183,12 +221,24 @@ func _physics_process(delta):
 		_frontRef.rotation.y = _lookAtDirection.angle()
 		pass
 	elif _just_press_crouch:
+		if _divingNow:
+			reset_dive()
+			_mode = 1
+			pass
+		else:
+			pass
 		pass
 	
-	_velocity = move_and_slide_with_snap(_velocity, _snap_vector, Vector3.UP, true)
+	_velocity = move_and_slide_with_snap(_velocity, _snap_vector, Vector3.UP, true, 4, PI/4, false)
+	# KidsCanCode. infinite inertia false it!
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("pushening"):
+			collision.collider.apply_central_impulse(-collision.normal * PUSH_STRENGTH)
+			pass
 	
 	# rotate form model towards where it moves
-	if arah_gerak.length() > .3 and ((rotateOnFloorOnly and is_on_floor()) or (not rotateOnFloorOnly)):
+	if arah_gerak.length() > .3 and ((rotateOnFloorOnly and is_on_floor()) or (not rotateOnFloorOnly)) and current:
 		_lookAtDirection = Vector2(arah_gerak.z, arah_gerak.x).rotated(-rotation.y).normalized()
 		# with smooth rotate simplificed by Konstantin Glubev replying NovemberDev
 		_collider.rotation.y = lerp_angle(_collider.rotation.y, _lookAtDirection.angle(), delta * smoothRotateSpeed) if smoothCharRotate else _lookAtDirection.angle()
@@ -209,8 +259,10 @@ func dive_now(handoverArahGerak:Vector3):
 		dive_towards.x = DIVE_SPEED * handoverArahGerak.x
 		dive_towards.z = DIVE_SPEED * handoverArahGerak.z
 		_dive_towards = dive_towards
+		_velocity.y = JUMP_STRENGTH * .5
 		
 		_startDiving = true
+		_divingNow = true
 		pass
 	else:
 		return
@@ -227,6 +279,12 @@ func dive_now(handoverArahGerak:Vector3):
 #		pass
 #	pass
 
+func reset_dive():
+	_startDiving = false
+	_divenCollided = false
+	_divingNow = false
+	pass
+
 # Artindi's coyote time measurement
 func coyoteTime():
 	if shouldCoyoteJump and not _sparseCoyoteTimed:
@@ -242,6 +300,6 @@ func _input(event):
 
 
 func _on_SpringCamArm_on_camCurrent(value):
-#	current = value
-	set_current(value)
+	current = value
+	checkCurrent()
 	pass # Replace with function body.

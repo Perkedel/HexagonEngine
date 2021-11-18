@@ -189,11 +189,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
-"base": "",
-"class": "DijkstraMap",
-"language": "NativeScript",
-"path": "res://addons/dijkstra-map/Dijkstra_map_library/nativescript.gdns"
-}, {
 "base": "Reference",
 "class": "DiscreteGradientTexture",
 "language": "GDScript",
@@ -433,16 +428,6 @@ _global_script_classes=[ {
 "class": "GoogleTranslateAPI",
 "language": "GDScript",
 "path": "res://addons/file-editor/scripts/GoogleTranslatorAPI.gd"
-}, {
-"base": "ResourceFormatLoader",
-"class": "HTerrainDataLoader",
-"language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_loader.gd"
-}, {
-"base": "ResourceFormatSaver",
-"class": "HTerrainDataSaver",
-"language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
 }, {
 "base": "KinematicBody",
 "class": "HeroicPlayer",
@@ -1031,7 +1016,6 @@ _global_script_class_icons={
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
 "DialogicUtil": "",
-"DijkstraMap": "",
 "DiscreteGradientTexture": "",
 "EditorTools": "",
 "FLMusicLib": "",
@@ -1080,8 +1064,6 @@ _global_script_class_icons={
 "Geometry2D": "res://addons/godot-next/icons/icon_geometry_2d.svg",
 "GistItem": "",
 "GoogleTranslateAPI": "",
-"HTerrainDataLoader": "",
-"HTerrainDataSaver": "",
 "HeroicPlayer": "",
 "Icons": "",
 "Inflector": "",
@@ -1247,6 +1229,10 @@ config/windows_native_icon="res://Sprites/HexagonEngineSign.ico"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
 
+[audio]
+
+mix_rate=48000
+
 [autoload]
 
 Singletoner="*res://Scripts/Singletoner.gd"
@@ -1288,7 +1274,6 @@ formats/gzip/compression_level=9
 [debug]
 
 settings/crash_handler/message="OH PECK!!! WHY?! OH.. we're sorry this happened. Not what we expect. Please include this when reporting the bug on https://github.com/Perkedel/HexagonEngine/issues"
-settings/stdout/verbose_stdout=true
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
@@ -1305,7 +1290,7 @@ window/per_pixel_transparency/splash=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AudioEffectInspector/plugin.cfg", "res://addons/GDBehavior/plugin.cfg", "res://addons/WebAudioExternal/plugin.cfg", "res://addons/arabic-text/plugin.cfg", "res://addons/cubic_bezier_controls/plugin.cfg", "res://addons/destruction/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/dockable_container/plugin.cfg", "res://addons/editor_physics/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/extend/plugin.cfg", "res://addons/file-editor/plugin.cfg", "res://addons/funcy/plugin.cfg", "res://addons/gddlg/plugin.cfg", "res://addons/gdinv/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/godot-firebase/plugin.cfg", "res://addons/godot-inheritance-dock/plugin.cfg", "res://addons/godot-kra-psd-importer/plugin.cfg", "res://addons/godot-next/plugin.cfg", "res://addons/godot-openxr/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/godot_piskel_importer/plugin.cfg", "res://addons/godot_pixelorama_importer/plugin.cfg", "res://addons/godot_sheets/plugin.cfg", "res://addons/gui_in_vr/plugin.cfg", "res://addons/makefile_launcher/plugin.cfg", "res://addons/material_maker/plugin.cfg", "res://addons/metadata_inspector/plugin.cfg", "res://addons/modifiers/plugin.cfg", "res://addons/nativelib-export/plugin.cfg", "res://addons/notes_tab/plugin.cfg", "res://addons/opus/plugin.cfg", "res://addons/paulloz.colorblindness/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_maker/plugin.cfg", "res://addons/randomAudioStreamPlayer/plugin.cfg", "res://addons/scale_importer/plugin.cfg", "res://addons/scene_map/plugin.cfg", "res://addons/sketchfab/plugin.cfg", "res://addons/smart_audio_stream/plugin.cfg", "res://addons/snippets_plugin/plugin.cfg", "res://addons/string_keys/plugin.cfg", "res://addons/terminal/plugin.cfg", "res://addons/tile_spawner/plugin.cfg", "res://addons/tool_button/plugin.cfg", "res://addons/transitions/plugin.cfg", "res://addons/vector_resource/plugin.cfg", "res://addons/vpainter/plugin.cfg", "res://addons/wakatime/plugin.cfg", "res://addons/zylann.editor_light/plugin.cfg", "res://addons/zylann.sdf_blender/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/AudioEffectInspector/plugin.cfg", "res://addons/Extended Kinematic Body/plugin.cfg", "res://addons/Flare/plugin.cfg", "res://addons/FontAwesome5/plugin.cfg", "res://addons/GDBehavior/plugin.cfg", "res://addons/KOBUGE-games.CircularContainer/plugin.cfg", "res://addons/SIsilicon.3d.text/plugin.cfg", "res://addons/WebAudioExternal/plugin.cfg", "res://addons/arabic-text/plugin.cfg", "res://addons/balloon/plugin.cfg", "res://addons/beatplayer/plugin.cfg", "res://addons/bone_gizmo/plugin.cfg", "res://addons/cubic_bezier_controls/plugin.cfg", "res://addons/destruction/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/dockable_container/plugin.cfg", "res://addons/editor_physics/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/extend/plugin.cfg", "res://addons/file-editor/plugin.cfg", "res://addons/funcy/plugin.cfg", "res://addons/gddlg/plugin.cfg", "res://addons/gdinv/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/godot-firebase/plugin.cfg", "res://addons/godot-inheritance-dock/plugin.cfg", "res://addons/godot-kra-psd-importer/plugin.cfg", "res://addons/godot-next/plugin.cfg", "res://addons/godot-openxr/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/godot_piskel_importer/plugin.cfg", "res://addons/godot_pixelorama_importer/plugin.cfg", "res://addons/godot_sheets/plugin.cfg", "res://addons/gui_in_vr/plugin.cfg", "res://addons/makefile_launcher/plugin.cfg", "res://addons/material_maker/plugin.cfg", "res://addons/metadata_inspector/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/modifiers/plugin.cfg", "res://addons/nativelib-export/plugin.cfg", "res://addons/notes_tab/plugin.cfg", "res://addons/opus/plugin.cfg", "res://addons/paulloz.colorblindness/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_maker/plugin.cfg", "res://addons/randomAudioStreamPlayer/plugin.cfg", "res://addons/scale_importer/plugin.cfg", "res://addons/scene_map/plugin.cfg", "res://addons/sketchfab/plugin.cfg", "res://addons/smart_audio_stream/plugin.cfg", "res://addons/snippets_plugin/plugin.cfg", "res://addons/string_keys/plugin.cfg", "res://addons/terminal/plugin.cfg", "res://addons/tile_spawner/plugin.cfg", "res://addons/tool_button/plugin.cfg", "res://addons/transitions/plugin.cfg", "res://addons/vector_resource/plugin.cfg", "res://addons/vpainter/plugin.cfg", "res://addons/wakatime/plugin.cfg", "res://addons/zylann.editor_light/plugin.cfg", "res://addons/zylann.sdf_blender/plugin.cfg" )
 
 [firebase]
 
@@ -1532,7 +1517,6 @@ common/physics_fps=500
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 quality/intended_usage/framebuffer_allocation.mobile=2
 threads/thread_model=2

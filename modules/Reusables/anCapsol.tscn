@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleMesh" id=6]
 
-[node name="anCapsol" type="RigidBody"]
+[node name="anCapsol" type="RigidBody" groups=["pushening"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 5 )
