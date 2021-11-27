@@ -351,3 +351,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://stackoverflow.com/a/56028738/9079640
 - https://docs.godotengine.org/en/stable/classes/class_array.html array class oid
 - https://generalistprogrammer.com/godot/godot-for-loop-tutorial-definitive-guide-with-examples/ array tips and tricks
+- https://godotengine.org/qa/37723/how-to-use-setget-keyword
+- https://godotengine.org/qa/39741/what-is-the-purpose-of-setget
+- https://godotengine.org/qa/98840/godot-engine-crashes-is-there-a-log-file?show=98859
+- https://docs.godotengine.org/en/latest/tutorials/io/data_paths.html#editor-data-paths
+- Pls update & add new now 2021.11
+- https://rodzilla.itch.io/material-maker https://github.com/RodZill4/material-maker
+- https://github.com/fenix-hub/godot-engine.github-integration
+- https://github.com/fenix-hub/godot-engine.easy-charts
+- https://www.youtube.com/watch?v=wDD7c7IEFTQ
+- https://github.com/QMaury/QAlphabet
+- https://github.com/QodotPlugin/qodot-plugin
+- https://godotengine.org/asset-library/asset

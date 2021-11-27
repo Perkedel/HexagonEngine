@@ -1,7 +1,7 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
+type="Image"
 path="res://.import/graberdisable.png-a668b74c9bb1993f65b4adf8c129a68c.stex"
 metadata={
 "vram_texture": false

@@ -36,21 +36,21 @@ __meta__ = {
 }
 
 [node name="TitleBar" type="HBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 90.0
+margin_right = 1924.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="TitleBar"]
 margin_right = 1416.0
-margin_bottom = 90.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Hexagon DVD Select"
 
 [node name="AccountButton" type="Button" parent="TitleBar"]
-margin_left = 1420.0
-margin_right = 1920.0
-margin_bottom = 90.0
+margin_left = 1424.0
+margin_right = 1924.0
+margin_bottom = 82.0
 rect_min_size = Vector2( 500, 0 )
 custom_fonts/font = ExtResource( 18 )
 text = "Nama On it"
@@ -58,20 +58,20 @@ icon = ExtResource( 4 )
 expand_icon = true
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_top = 94.0
-margin_right = 1920.0
-margin_bottom = 976.0
+margin_top = 90.0
+margin_right = 1924.0
+margin_bottom = 972.0
 hint_tooltip = "Select Game"
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/bg = SubResource( 1 )
 custom_fonts/font = ExtResource( 3 )
+custom_styles/bg = SubResource( 1 )
 items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false, "Prosotipe Platformer 3D Miziziz", ExtResource( 15 ), false, "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788", ExtResource( 16 ), false, "An Transitioning like AHiT & SM64", ExtResource( 17 ), false, "Tost Leveling", ExtResource( 19 ), false, "Quine", ExtResource( 20 ), false, "Workaround Loading Bar Function", ExtResource( 22 ), false ]
 fixed_icon_size = Vector2( 128, 128 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_top = 980.0
-margin_right = 1920.0
+margin_right = 1924.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 100 )
 
@@ -91,7 +91,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-margin_right = 163.0
+margin_right = 169.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -100,7 +100,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-margin_left = 167.0
+margin_left = 177.0
 margin_right = 400.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
@@ -185,8 +185,8 @@ align = 1
 valign = 1
 
 [node name="RefreshDVDbutton" type="Button" parent="HBoxContainer"]
-margin_left = 404.0
-margin_right = 904.0
+margin_left = 408.0
+margin_right = 908.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"
@@ -201,7 +201,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
-margin_right = 121.0
+margin_right = 126.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -210,7 +210,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
-margin_left = 125.0
+margin_left = 134.0
 margin_right = 500.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
@@ -221,8 +221,8 @@ align = 1
 valign = 1
 
 [node name="RefreshDVDbuttonClean" type="Button" parent="HBoxContainer"]
-margin_left = 908.0
-margin_right = 1408.0
+margin_left = 916.0
+margin_right = 1416.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"
@@ -237,7 +237,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
-margin_right = 178.0
+margin_right = 182.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -246,7 +246,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
-margin_left = 182.0
+margin_left = 190.0
 margin_right = 500.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
@@ -257,8 +257,8 @@ align = 1
 valign = 1
 
 [node name="ViewVRImage" type="Button" parent="HBoxContainer"]
-margin_left = 1412.0
-margin_right = 1912.0
+margin_left = 1424.0
+margin_right = 1924.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 500, 0 )
 hint_tooltip = "Terminate Hexagon Engine"
@@ -273,7 +273,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ViewVRImage/HBoxContainer"]
-margin_right = 155.0
+margin_right = 159.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -282,7 +282,7 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer/ViewVRImage/HBoxContainer"]
-margin_left = 159.0
+margin_left = 167.0
 margin_right = 500.0
 margin_bottom = 100.0
 size_flags_horizontal = 3

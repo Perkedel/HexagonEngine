@@ -2,16 +2,15 @@
 
 [ext_resource path="res://GameDVDCardtridge/404/404.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
 [ext_resource path="res://fonts/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=5]
-[ext_resource path="res://fonts/Built/Ubuntu_MI_48tred.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_RI_48tred.tres" type="DynamicFont" id=6]
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
-[ext_resource path="res://GameDVDCardtridge/404/videos/Sonne_Zeitraffer_-_Sun_Time_Lapse_3840x2160p_24FPS_CC_(Royalty_Free)_(Kostenlos)_10bit.webm" type="VideoStream" id=8]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=9]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=10]
 [ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=11]
-
+[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
@@ -30,6 +29,7 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+theme = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,10 +64,37 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer"]
-visible = false
+[node name="Label" type="Label" parent="404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer"]
 margin_right = 1920.0
 margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = ExtResource( 7 )
+text = "WERROR 404 NOT FOUND"
+align = 1
+valign = 1
+
+[node name="UpTween" type="Tween" parent="404ui/Control404/404Contains/Panel404"]
+
+[node name="404Space" type="CenterContainer" parent="404ui/Control404/404Contains"]
+margin_top = 104.0
+margin_right = 1920.0
+margin_bottom = 538.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DebugMessage" type="HBoxContainer" parent="404ui/Control404/404Contains"]
+margin_top = 542.0
+margin_right = 1920.0
+margin_bottom = 976.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="404ui/Control404/404Contains/DebugMessage"]
+margin_right = 1920.0
+margin_bottom = 434.0
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/mono_font = ExtResource( 4 )
@@ -86,7 +113,7 @@ w
 w
 w
 w
-"
+Your [b]error[/b] [i]message[/i] [rainbow]here[/rainbow]"
 text = "wwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ww
 w
@@ -97,39 +124,18 @@ w
 w
 w
 w
-"
-scroll_active = false
+Your error message here"
+scroll_following = true
+selection_enabled = true
 
-[node name="Label" type="Label" parent="404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 100.0
-size_flags_horizontal = 3
-size_flags_vertical = 7
-custom_fonts/font = ExtResource( 7 )
-text = "WERROR 404 NOT FOUND"
-align = 1
-valign = 1
-
-[node name="UpTween" type="Tween" parent="404ui/Control404/404Contains/Panel404"]
-
-[node name="404Space" type="CenterContainer" parent="404ui/Control404/404Contains"]
-margin_top = 104.0
-margin_right = 1920.0
-margin_bottom = 976.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="MessTween" type="Tween" parent="404ui/Control404/404Contains/DebugMessage"]
 
 [node name="Menu404" parent="404ui/Control404/404Contains" instance=ExtResource( 10 )]
 
 [node name="ChangeDVDButton" parent="404ui/Control404/404Contains/Menu404" index="0"]
-margin_left = 631.0
-margin_right = 931.0
 custom_fonts/font = SubResource( 1 )
 
 [node name="ExitGameButton" parent="404ui/Control404/404Contains/Menu404" index="1"]
-margin_left = 935.0
-margin_right = 1289.0
 custom_fonts/font = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -141,11 +147,12 @@ layer = -2
 [node name="VideoPlayer" type="VideoPlayer" parent="VideoCanvas"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-stream = ExtResource( 8 )
+theme = ExtResource( 12 )
 volume_db = -80.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="404ui/Control404/404Contains/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]
 [connection signal="pressed" from="404ui/Control404/404Contains/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

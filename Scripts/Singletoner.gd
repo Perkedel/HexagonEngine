@@ -8,8 +8,14 @@ var andScronchMe
 # var a = 2
 # var b = "text"
 export (NodePath) var daLoadedDVD
+export (NodePath) var mainNode
 
 # Singleton. Ahlinya Intinya inti, Core of the core. 
+
+# Set main Node. Therefore softwares can refer through this singletoner if they want to call Hexagon Engine Core stuffs
+func iAmTheMainNode(theThing:Node):
+	mainNode = theThing
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

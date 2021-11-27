@@ -38,6 +38,14 @@ func _process(delta):
 		pass
 	pass
 
+func _input(event):
+	match(event):
+		InputEventKey:
+			match(event.is_pressed()):
+				KEY_A:
+					if not visible:
+						$ZetrixCheatCode.show()
+						pass
 
 func _on_ZetrixCheatCode_text_entered(new_text):
 	print("Attempt Zetrix cheatcode ",new_text)

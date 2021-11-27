@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=1]
 [ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://modules/Component/MusicNamePop.gd" type="Script" id=3]
+[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 resource_local_to_scene = true
@@ -53,6 +54,7 @@ anchor_bottom = 0.5
 margin_top = -103.5
 margin_right = 712.0
 margin_bottom = 103.5
+theme = ExtResource( 4 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

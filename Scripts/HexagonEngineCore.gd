@@ -20,7 +20,7 @@ serta plugin akan dirombak serentak.
 #var ConThread
 
 #@onready # Godot 4.0
-onready var zetrixViewport = $ZetrixViewport
+#onready var zetrixViewport = $ZetrixViewport
 onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
 onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
 onready var dvdSlot = $DVDCartridgeSlot
@@ -46,15 +46,16 @@ var LoadingProgressNum:float=0.0
 func _zetrixInit():
 	ARVRServer.find_interface("OpenXR")
 	#zetrixViewport.hdr = false
-	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
-	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)
-	zetrixViewport.ReceiveRootViewport(get_viewport())
-	zetrixViewport.ReinstallOwnWorld()
+#	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
+#	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)
+#	zetrixViewport.ReceiveRootViewport(get_viewport())
+#	zetrixViewport.ReinstallOwnWorld()
 	# https://godotengine.org/qa/23713/how-to-convert-image-to-texture
 	pass
 
 func _sysInit():
 	print("Welcome to Hexagon Engine")
+	Singletoner.iAmTheMainNode(self)
 	print("Locate " + String(OS.get_executable_path()))
 	resourceQueued.start()
 	_zetrixInit()

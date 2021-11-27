@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=4]
 
 [node name="LoadingPopup" type="Popup"]
+visible = true
 anchor_right = 1.0
 margin_top = 100.0
 margin_bottom = 300.0
+theme = ExtResource( 4 )
 popup_exclusive = true
 script = ExtResource( 1 )
 ProgressMeterValue = 15.0
@@ -65,6 +68,7 @@ wait_time = 0.5
 
 [node name="HourglassFramesPerSec" type="Timer" parent="."]
 wait_time = 0.01
+
 [connection signal="timeout" from="Timerout" to="." method="_on_Timerout_timeout"]
 [connection signal="timeout" from="DotFramePerSec" to="." method="_on_DotFramePerSec_timeout"]
 [connection signal="timeout" from="HourglassFramesPerSec" to="." method="_on_HourglassFramesPerSec_timeout"]

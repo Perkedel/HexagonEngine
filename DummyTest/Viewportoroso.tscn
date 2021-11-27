@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Zetrix/ZetrixWorld.tres" type="World" id=1]
+
+[node name="Viewport" type="Viewport"]
+arvr = true
+size = Vector2( 1920, 1080 )
+own_world = true
+world = ExtResource( 1 )
+render_direct_to_screen = true
