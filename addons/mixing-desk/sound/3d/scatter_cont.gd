@@ -22,7 +22,7 @@ func _ready():
 	for i in get_children():
 		dvols.append(i.unit_db)
 		dpitches.append(i.pitch_scale)
-		dlocs.append(i.translation)
+		dlocs.append(i.global_transform.origin)
 		soundlist.append(i)
 	if spawn_node:
 		if typeof(spawn_node) == TYPE_NODE_PATH:
@@ -30,7 +30,7 @@ func _ready():
 		elif typeof(spawn_node) == TYPE_OBJECT:
 			root = spawn_node
 	else:
-		root = Node2D.new()
+		root = Spatial.new()
 		add_child(root)
 		root.name = "root"
 	if autostart:
@@ -38,9 +38,9 @@ func _ready():
 	
 func _iplay(sound):
 	var snd = sound.duplicate()
-	if spawn_node:
-		snd.translation = global_transform.origin
 	root.add_child(snd)
+	if spawn_node:
+		snd.global_transform.origin = sound.global_transform.origin
 	snd.play()
 	snd.set_script(preload("res://addons/mixing-desk/sound/3d/spawn_sound.gd"))
 	snd.setup()
@@ -49,7 +49,7 @@ func play():
 	if scattering:
 		return
 	scattering = true
-	var timeroot = Node.new()
+	timeroot = Node.new()
 	timeroot.name = 'timeroot' + str(get_index())
 	add_child(timeroot)
 	for i in voices:
@@ -63,18 +63,19 @@ func play():
 	if timeout != 0:
 		var timeouttimer = Timer.new()
 		timeouttimer.wait_time= timeout
+		timeouttimer.name = "Timeout"
 		add_child(timeouttimer)
 		timeouttimer.start()
 		timeouttimer.connect("timeout", self, "stop")
-		
+
 func _scatter_timeout(timer, min_time, max_time):
 	_scatter()
 	timer.start(rand_range(min_time, max_time))
 	
 func stop():
-	scattering = false
-	if has_node("timeroot"):
-		$timeroot.queue_free()
+	if scattering:
+		scattering = false
+		timeroot.call_deferred("queue_free")
 	
 func _scatter():
 	var ransnd = _get_ransnd()
@@ -90,13 +91,16 @@ func _get_ransnd(ran=true):
 func _randomise(sound):
 	var dvol = dvols[sound.get_index()]
 	var dpitch = dpitches[sound.get_index()]
-	var dloc = dlocs[sound.get_index()]
+	var dloc
+	if dlocs[sound.get_index()] != sound.global_transform.origin:
+		dlocs[sound.get_index()] = sound.global_transform.origin
+	dloc = dlocs[sound.get_index()]
 	var newvol = (dvol + _range(volume_range))
 	var newpitch = (dpitch + _range(pitch_range))
 	var newloc = (dloc + Vector3(_range(scatter_range), _range(scatter_range),_range(scatter_range)))
 	sound.unit_db = newvol
 	sound.pitch_scale = newpitch
-	sound.translation = newloc
+	sound.global_transform.origin = newloc
 	
 func _range(item : float) -> float:
 	return rand_range(-item,item)

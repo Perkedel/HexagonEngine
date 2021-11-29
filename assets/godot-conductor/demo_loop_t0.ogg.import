@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/demo_loop_t0.ogg-04453a97702da51343d8e83d0faa215b.oggstr"
+
+[deps]
+
+source_file="res://assets/godot-conductor/demo_loop_t0.ogg"
+dest_files=[ "res://.import/demo_loop_t0.ogg-04453a97702da51343d8e83d0faa215b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

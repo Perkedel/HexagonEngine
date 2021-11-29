@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/GhodBase.RunInstance/NewInstanceDocker.gd" type="Script" id=1]
+
+[node name="RunScenes" type="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 104.0
+script = ExtResource( 1 )
+
+[node name="Start" type="Button" parent="."]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "Start scene"
+
+[node name="Clear" type="Button" parent="."]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+text = "Clear scenes"
+
+[node name="RestartAll" type="Button" parent="."]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+text = "Restart all scenes"
+
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_Clear_pressed"]
+[connection signal="pressed" from="RestartAll" to="." method="_on_RestartAll_pressed"]

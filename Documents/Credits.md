@@ -44,7 +44,6 @@ Table of Refferences!
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 |<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
-|<*Author name*> u|<*Title*> h|<*Description*> h|https://example.com |0%|CC0|`-`|
 ## Assets and Tools
 Used Assets and Tools!
 |Author	|Title	|Description	|Source	|Rights Reserved	|License	| Raw Credit	|
@@ -58,6 +57,8 @@ Used Assets and Tools!
 |badges | Badge on GitHub Custom | Make Own Badge for GitHub | https://www.shields.io/ | 0% | CC0-1.0 | `-` |
 |dwyl | Hits | Track Hit view count of your GitHub Git | https://hits.dwyl.com/ | <100% | ??? | `-` |
 |Dr. Minky u| Menu screen mouse over | Mouse or selection hover on a menu item / button sound |https://freesound.org/people/DrMinky/sounds/166186/ |<100%|CC3.0-BY|`This work is licensed under the Attribution License.`|
+|breviceps	|Tic Toc Click	|A tic-toc click for menu/UI/button clicks	|https://freesound.org/people/Breviceps/sounds/448081/	|0%	|CC0	|`This work is licensed under the Creative Commons 0 License.`	|
+|Xelu & *Those Awesome Guys* |Free Controller & Key Prompts|Controller buttons glyphs|https://thoseawesomeguys.com/prompts/ |0%|CC0|`-`|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
@@ -88,18 +89,12 @@ Used Assets and Tools!
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
 |<*Author name*>	|<*Title*>	|<*Description*>	|<*Source*>	|<*Rights Reserved*>	|<*License*>	| <*Raw Credit*>	|
-
 ## Godot Attribution
 This game uses Godot Engine, available under the following license:
-
 Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ## Unimplemented Credit, QUick And RAW reference
 - https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
 - https://www.youtube.com/watch?v=o77wFWau9Wc
@@ -363,3 +358,122 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://github.com/QMaury/QAlphabet
 - https://github.com/QodotPlugin/qodot-plugin
 - https://godotengine.org/asset-library/asset
+- Added / updated / explored these new
+- https://youtu.be/wDD7c7IEFTQ
+- https://github.com/Arnklit/Waterways
+- https://github.com/SIsilicon/Godot-Volumetrics-Plugin
+- https://github.com/Zylann/godot_tree_generator_plugin
+- https://github.com/kyzfrintin/Godot-Mixing-Desk
+- https://github.com/Larpon/ingrid Submoduleable!
+- https://git-scm.com/book/en/v2/Git-Tools-Submodules
+- https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot
+- https://github.com/SirQuartz/debugconsole/releases/tag/v1.2.3
+- https://github.com/SirQuartz/debugconsole
+- https://godotengine.org/article/multiplayer-changes-godot-4-0-report-4
+- https://studio.blender.org/training/animation-fundamentals/5d69ab4dea6789db11ee65d1/
+- https://godotengine.org/asset-library/asset/1119
+- https://godotengine.org/asset-library/asset/1115
+- https://github.com/cthonianmessiah/godot-conductor
+- https://godotengine.org/asset-library/asset/1126
+- https://godotengine.org/asset-library/asset/446
+- https://github.com/AnidemDex/Godot-DialogPlugin
+- https://github.com/QodotPlugin/qodot-plugin/releases/tag/v1.7.3
+- https://github.com/AnidemDex/Godot-DialogPlugin/releases/tag/v1.0
+- https://github.com/QodotPlugin/qodot-plugin
+- https://godotengine.org/asset-library/asset/425
+- https://github.com/c-as/godot-voip
+- https://godotengine.org/asset-library/asset/22
+- https://github.com/ivanskodje-godotengine/godot-plugin-calendar-button
+- https://godotengine.org/asset-library/asset/856
+- https://github.com/tomankirilov/VPainter/
+- https://gamefromscratch.com/vpainter-for-godot/
+- https://github.com/AnidemDex/Godot-DialogPlugin
+- https://godotengine.org/asset-library/asset/267
+- https://rodzill4.github.io/material-maker/doc/intro.html
+- https://github.com/RodZill4/material-maker
+- https://rodzilla.itch.io/material-maker
+- https://www.materialmaker.org/
+- https://github.com/dueddel/godot-screencast-keys-node
+- https://godotengine.org/asset-library/asset/1034
+- https://godotengine.org/asset-library/asset/980
+- https://godotengine.org/asset-library/asset/852
+- https://godotengine.org/asset-library/asset/1112
+- https://godotengine.org/asset-library/asset/841
+- https://bitbucket.org/arlez80/godot-mod-player
+- https://github.com/rcorre/godot_blender_importer
+- https://github.com/V-Sekai/godot-blender
+- https://sketchfab.com/3d-models/witchy-stylizedbustchallenge-0bcfa5fa15894f74a7d58eb3250a4b09
+- https://github.com/ceceppa/anima/tree/player
+- https://github.com/ElectronicBlueberry/Texture-Fonts
+- https://godotengine.org/asset-library/asset/1103
+- https://github.com/uberfig/godot-build-and-deploy-plugin
+- https://godotengine.org/asset-library/asset/1098
+- https://groups.google.com/g/mpf-users
+- https://missionpinball.org/
+- https://github.com/missionpinball/
+- https://github.com/missionpinball/mpf
+- https://github.com/missionpinball/godot-bcp-server/tree/main/addons/godot_bcp_server
+- https://github.com/missionpinball/godot-bcp-server
+- https://godotengine.org/asset-library/asset/1092
+- https://github.com/kuhnchris/gd-hexagondisplay2d
+- https://codeberg.org/Yeldham/json-beautifier-for-godot
+- https://godotengine.org/asset-library/asset/157
+- https://godotengine.org/asset-library/asset/1020
+- https://godotengine.org/asset-library/asset/398
+- https://godotengine.org/asset-library/asset/1120
+- https://github.com/timothyqiu/godot-csv-data-importer
+- https://github.com/samsface/godot-steam-api
+- https://godotengine.org/asset-library/asset/1114
+- https://github.com/AndresGamboaA/JamCountdown
+- https://godotengine.org/asset-library/asset/768
+- https://godotengine.org/asset-library/asset/747
+- https://github.com/OrigamiDev-Pete/TODO_Manager
+- https://github.com/kyperbelt/GDYarn
+- https://godotengine.org/asset-library/asset/960
+- https://github.com/VP-GAMES/QuestEditor
+- https://godotengine.org/asset-library/asset/1113
+- https://github.com/creadicted/godot-branch
+- https://github.com/PKGaspi/godot-ScrollingBackgrounds
+- https://godotengine.org/asset-library/asset/1045
+- https://godotengine.org/asset-library/asset/1104
+- https://github.com/PKGaspi/godot-LayeredSprite
+- https://github.com/Gramps/GodotSteam
+- https://github.com/fenix-hub/godot-engine.jwt
+- https://godotengine.org/asset-library/asset/240
+- https://godotengine.org/asset-library/asset/984
+- https://github.com/SirQuartz/debugconsole
+- https://bitbucket.org/arlez80/godot-midi-player
+- https://godotengine.org/asset-library/asset/1086
+- https://gitlab.com/MrMinimal/godot-kenney-prototype-tools
+- https://github.com/mrachinskiy/commotion
+- https://godotengine.org/asset-library/asset/770
+- https://godotengine.org/asset-library/asset/711
+- https://godotengine.org/asset-library/asset/1110
+- https://github.com/synthetic-borealis/Godot-CSGStairs
+- https://godotengine.org/asset-library/asset/269
+- https://gitlab.com/GhodBase/runscene
+- https://godotengine.org/asset-library/asset/1096
+- https://github.com/GodotNuts/appwrite-sdk
+- https://godotengine.org/asset-library/asset/992
+- https://godotengine.org/asset-library/asset/1093
+- https://github.com/rainlizard/GDScriptMacros
+- https://github.com/night-glider/Godot-healthbar3D/tree/main/HealthBar3D
+- https://godotengine.org/asset-library/asset/1050 FNF sprite importer
+- https://godotengine.org/asset-library/asset/103
+- https://godotengine.org/asset-library/asset/1049
+- https://github.com/quentincaffeino/godot-console
+- https://github.com/Pocku/godot-sparrowatlas-editor FNF sprite importer
+- https://github.com/ShatReal/control-plus
+- https://godotengine.org/asset-library/asset/1016
+- https://github.com/ImageParSeconde/Animated-LowPoly-Skeleton
+- https://godotengine.org/asset-library/asset/964
+- https://godotengine.org/asset-library/asset/950
+- https://godotengine.org/asset-library/asset/944
+- https://github.com/V-Sekai/godot-vrm
+- https://github.com/SLGamesCregg/GodotXbox
+- https://github.com/Kaoruha/Label3D
+- https://godotengine.org/asset-library/asset/752
+- https://github.com/Arnklit/ShellFurGodot
+- https://github.com/coppolaemilio/dialogic
+- https://github.com/Zylann/godot_heightmap_plugin
+- https://github.com/matrixant/Godot-FontAwesome5

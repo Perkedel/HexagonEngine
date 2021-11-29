@@ -8,12 +8,15 @@ var can_shuffle = true
 
 enum play_style {play_once, loop_one, shuffle, endless_shuffle, endless_loop}
 export(play_style) var play_mode
-export(NodePath) var autoplay
+export(bool) var autoplay = false
+export(NodePath) var autoplay_song
 
 onready var songs = get_children()
 
 const default_vol = 0
 
+var ref_track : Object
+var playing_tracks = []
 var time = 0.0
 var beat = 1.0
 var last_beat = -1
@@ -41,6 +44,9 @@ signal shuffle
 signal song_changed
 
 func _ready():
+	for i in songs:
+		if i.ignore:
+			songs.remove(songs.find(i))
 	var shuff = Timer.new()
 	shuff.name = 'shuffle_timer'
 	add_child(shuff)
@@ -56,22 +62,23 @@ func _ready():
 					var tween = Tween.new()
 					tween.name = 'Tween'
 					o.add_child(tween)
-	if get_node(autoplay) != self:
-		autoplay = str(autoplay)
+	if autoplay:
 		if !playing:
-			quickplay(autoplay)
+			quickplay(str(autoplay_song))
 	if AudioServer.get_bus_index("Music") == -1:
 		AudioServer.add_bus(AudioServer.bus_count)
 		AudioServer.set_bus_name(AudioServer.bus_count - 1, "Music")
 				
 #loads a song and gets ready to play
 func init_song(track):
+	if playing:
+		get_child(current_song_num).playing = false
+	playing_tracks.clear()
 	track = _songname_to_int(track)
 	var song = songs[track]
 	var root = song._get_core()
 	current_song_num = track
 	current_song = songs[track]._get_core()
-	current_song.get_child(0).connect("finished", self, "_core_finished")
 	repeats= 0
 	for i in root.get_children():
 		if song.fading_out:
@@ -100,7 +107,7 @@ func _process(delta):
 		suppress_beat -= delta
 		return
 	if playing:
-		time = current_song.get_child(0).get_playback_position()
+		time = ref_track.get_playback_position()
 		beat = int(floor(((time/beats_in_sec) * 1000.0) + 1.0))
 		if beat != last_beat && (beat - 1) % int(bars * beats_in_bar) + 1 != last_beat:
 			_beat()
@@ -125,10 +132,11 @@ func _iplay(track):
 	twe.name = "Tween"
 	trk.add_child(twe)
 	trk.play()
-	trk.connect("finished", self, "_overlay_finished", [trk])
+	trk.connect("finished", self, "_track_finished", [trk])
+	return trk
 
 #kills overlays when finished
-func _overlay_finished(trk):
+func _track_finished(trk):
 	trk.queue_free()
 
 #fade out overlays
@@ -162,20 +170,26 @@ func _trackname_to_int(song, ref):
 #play a song
 func play(song):
 	song = _songname_to_int(song)
+	get_child(song).playing = true
 	time = 0
 	bar = 1
 	beat = 1
 	last_beat = -1
 	suppress_beat = beats_in_sec / 1000.0 * 0.5
+	for i in songs[song].get_children():
+		if i.cont == "core":
+			var first = true
+			for o in i.get_children():
+				var newtrk = _iplay(o)
+				playing_tracks.append(newtrk)
+				if first:
+					ref_track = newtrk
+					first = false
 	if !playing:
 		last_beat = 1
 		emit_signal("bar", bar)
 		_beat()
 		playing = true
-	for i in songs[song].get_children():
-		if i.cont == "core":
-			for o in i.get_children():
-				o.play()
 	_play_overlays(song)
 
 func _play_overlays(song):
@@ -198,7 +212,7 @@ func _play_overlays(song):
 		if i.cont == "autofade":
 			match i.play_style:
 				0:
-					var chance = i.get_child_count()
+					var chance = randi() % i.get_child_count()
 					i.get_child(chance).play()
 				1:
 					for o in i.get_children():
@@ -264,7 +278,8 @@ func solo(song, layer):
 func mute(song, layer):
 	song = _songname_to_int(song)
 	layer = _trackname_to_int(song, layer)
-	var target = songs[song]._get_core().get_child(layer)
+	songs[song]._get_core().get_child(layer).volume_db = -65.0
+	var target = playing_tracks[layer]
 	target.set_volume_db(-60.0)
 	var pos = songs[song].muted_tracks.find(layer)
 	if pos == null:
@@ -274,13 +289,14 @@ func mute(song, layer):
 func unmute(song, layer):
 	song = _songname_to_int(song)
 	layer = _trackname_to_int(song, layer)
-	var target = songs[song]._get_core().get_child(layer)
+	songs[song]._get_core().get_child(layer).volume_db = 0
+	var target = playing_tracks[layer]
 	target.set_volume_db(default_vol)
 	var pos = songs[song].muted_tracks.find(layer)
 	if pos != -1:
 		songs[song].muted_tracks.remove(pos)
 
-#mutes a track if not mutes, or vice versa
+#mutes a track if not muted, or vice versa
 func toggle_mute(song, layer):
 	song = _songname_to_int(song)
 	layer = _trackname_to_int(song, layer)
@@ -294,7 +310,8 @@ func toggle_mute(song, layer):
 func fade_in(song, layer):
 	song = _songname_to_int(song)
 	layer = _trackname_to_int(song, layer)
-	var target = songs[song]._get_core().get_child(layer)
+	songs[song]._get_core().get_child(layer).volume_db = default_vol
+	var target = playing_tracks[layer]
 	var tween = target.get_node("Tween")
 	var in_from = target.get_volume_db()
 	tween.interpolate_property(target, 'volume_db', in_from, default_vol, transition_beats, Tween.TRANS_QUAD, Tween.EASE_OUT)
@@ -307,10 +324,11 @@ func fade_in(song, layer):
 func fade_out(song, layer):
 	song = _songname_to_int(song)
 	layer = _trackname_to_int(song, layer)
-	var target = songs[song]._get_core().get_child(layer)
+	songs[song]._get_core().get_child(layer).volume_db = -65.0
+	var target = playing_tracks[layer]
 	var tween = target.get_node("Tween")
 	var in_from = target.get_volume_db()
-	tween.interpolate_property(target, 'volume_db', in_from, -60.0, transition_beats, Tween.TRANS_SINE, Tween.EASE_OUT)
+	tween.interpolate_property(target, 'volume_db', in_from, -65.0, transition_beats, Tween.TRANS_SINE, Tween.EASE_OUT)
 	tween.start()
 
 #fades a track in if silent, fades out if not
@@ -365,7 +383,6 @@ func queue_sequence(sequence : Array, type : String, on_end : String):
 func _change_song(song):
 	old_song = current_song_num
 	song = _songname_to_int(song)
-	current_song.get_child(0).disconnect("finished", self, "_core_finished")
 	if song != current_song_num:
 		emit_signal("song_changed", [old_song, song])
 		init_song(song)
@@ -384,7 +401,7 @@ func _change_song(song):
 #stops playing
 func stop(song):
 	song = _songname_to_int(song)
-	current_song.get_child(0).disconnect("finished", self, "_core_finished")
+	get_child(song).playing = false
 	if playing:
 		playing = false
 		for i in songs[song]._get_core().get_children():
@@ -396,24 +413,34 @@ func stop(song):
 func _core_finished():
 	songs[current_song_num].concats.clear()
 	emit_signal("end", current_song_num)
-	match play_mode:
-		1:
-			bar = 1
-			beat = 1
-			last_beat = -1
-			repeats += 1
-			play(current_song_num)
-		2:
-			$shuffle_timer.start(rand_range(2,4))
-		3:
-			shuffle_songs()
-		4:
-			var new_song
-			if current_song_num == (get_child_count() - 3):
-				new_song = 0
+	match get_current_song().song_type:
+		"standard":
+			match play_mode:
+				1:
+					bar = 1
+					beat = 1
+					last_beat = -1
+					repeats += 1
+					play(current_song_num)
+				2:
+					$shuffle_timer.start(rand_range(2,4))
+				3:
+					shuffle_songs()
+				4:
+					var new_song
+					if current_song_num == (get_child_count() - 3):
+						new_song = 0
+					else:
+						new_song = current_song_num + 1
+					_change_song(new_song)
+		"transition":
+			var t = get_current_song().target_song
+			var desk = t.get_parent()
+			if desk == self:
+				_change_song(t.name)
 			else:
-				new_song = current_song_num + 1
-			_change_song(new_song)
+				stop(current_song_num)
+				desk.quickplay(t.name)
 
 #called every bar
 func _bar():
@@ -448,7 +475,12 @@ func _beat():
 				roll.play()
 			else:
 				rollover.get_child(0).play()
+	if beat == (bars*beats_in_bar + 1):
+		_core_finished()
 	emit_signal("beat", (beat - 1) % int(bars * beats_in_bar) + 1)
+
+func get_current_song():
+	return get_child(current_song_num)
 
 #gets a random track from a song and returns it
 func _get_rantrk(song):
@@ -460,12 +492,10 @@ func _get_rantrk(song):
 #choose new song randomly
 func shuffle_songs():
 	randomize()
-	var song = randi() % (songs.size())
-	if song == current_song_num:
-		if song == 0:
-			song += 1
-		elif song == songs.size() - 1:
-			song -= 1
-	emit_signal("shuffle", [current_song_num, song])
-	new_song = song
+	var list = songs
+	list.remove(list.find(get_child(current_song_num)))
+	var song_num = randi() % (list.size() - 1)
+	var song = get_child(song_num).name
+	emit_signal("shuffle", [current_song_num, get_node(song).get_index()])
+	new_song = get_node(song).get_index()
 	_change_song(song)

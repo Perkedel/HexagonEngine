@@ -1,7 +1,7 @@
 extends Node
 
 """
-	pure GDScript MIDI Player [Godot MIDI Player] by Yui Kinomoto @arlez80
+	100% pure GDScript MIDI Player [Godot MIDI Player] by Yui Kinomoto @arlez80
 """
 
 class_name MidiPlayer
@@ -197,6 +197,15 @@ var drum_assign_groups:Dictionary = {
 	42: 42,	# Closed Hi-Hat
 	44: 42,	# Pedal Hi-Hat
 	46: 42,	# Pedal Hi-Hat
+	# Whistle
+	71: 71,	# Short Whistle
+	72: 71,	# Long Whistle
+	# Guiro
+	73: 73,	# Short Guiro
+	74: 73,	# Long Guiro
+	# Cuica
+	78: 78,	# Mute Cuica
+	79: 78,	# Open Cuica
 }
 # SysEx
 onready var sys_ex:GodotMIDIPlayerSysEx = GodotMIDIPlayerSysEx.new( )
@@ -289,6 +298,7 @@ func _notification( what:int ):
 	# 破棄時
 	if what == NOTIFICATION_PREDELETE:
 		pass
+		#再利用するので削除しないことにした
 		#AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_master_bus_name ) )
 		#for i in range( 0, 16 ):
 		#	AudioServer.remove_bus( AudioServer.get_bus_index( self.midi_channel_bus_name % i ) )
@@ -314,10 +324,6 @@ func _prepare_to_play( ) -> bool:
 	# サウンドフォントの再読み込みをさせる
 	if not self.load_all_voices_from_soundfont:
 		self.set_soundfont( self.soundfont )
-	# 楽器
-	#if self.bank == null:
-		#push_error( "Sound voices does not found. Please set soundfont path or set instrument data to bank." )
-		#pass
 
 	return true
 
@@ -559,19 +565,6 @@ func _stop_all_notes( ) -> void:
 """
 func _process( delta:float ):
 	self._sequence( delta )
-	#var currently:float = OS.get_ticks_msec( )
-	#if 0.0 < self._previous_time:
-	#	self._sequence( ( currently - self._previous_time ) / 1000.0 )
-	#self._previous_time = currently
-
-"""
-	物理1フレームでシーケンス処理
-"""
-#func _physics_process( delta:float ):
-#	var currently:float = OS.get_ticks_msec( )
-#	if 0.0 < self._previous_time:
-#		self._sequence( ( currently - self._previous_time ) / 1000.0 )
-#	self._previous_time = currently
 
 """
 	シーケンス処理を行う
@@ -712,11 +705,11 @@ func _process_track_event_note_on( channel:GodotMIDIPlayerChannelStatus, note:in
 
 	var polyphony_count:int = 0
 	for instrument in instruments:
-		if instrument.vel_range_min <= key_number and key_number <= instrument.vel_range_max:
+		if instrument.vel_range_min <= velocity and velocity <= instrument.vel_range_max:
 			polyphony_count += 1
 
 	for instrument in instruments:
-		if instrument.vel_range_min <= key_number and key_number <= instrument.vel_range_max:
+		if instrument.vel_range_min <= velocity and velocity <= instrument.vel_range_max:
 			var note_player:AudioStreamPlayerADSR = self._get_idle_player( )
 			if note_player != null:
 				note_player.channel_number = channel.number

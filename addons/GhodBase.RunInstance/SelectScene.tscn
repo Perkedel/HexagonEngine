@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/GhodBase.RunInstance/SelectScene.gd" type="Script" id=1]
+
+[node name="SelectScene" type="FileDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -143.0
+margin_right = 239.0
+margin_bottom = 143.0
+rect_min_size = Vector2( 300, 105 )
+window_title = "Open a File"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.tscn" )
+current_dir = "/home/ghostnr1/godot/runscene"
+current_path = "/home/ghostnr1/godot/runscene/"
+script = ExtResource( 1 )
+
+[connection signal="confirmed" from="." to="." method="_on_SelectScene_confirmed"]
+[connection signal="file_selected" from="." to="." method="_on_SelectScene_file_selected"]

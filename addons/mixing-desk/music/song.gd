@@ -1,16 +1,20 @@
 extends Node
 
 #internal vars
+
+var song_type = "standard"
 var fading_out : bool = false
 var fading_in : bool = false
 var muted_tracks = []
 var concats : Array
+var playing = false
 
 #external properties
 export(int) var tempo
 export(int) var bars
 export(int) var beats_in_bar
 export(float) var transition_beats
+export(bool) var ignore = false
 export(bool) var auto_transition
 export(NodePath) var auto_signal_node
 export(String) var auto_signal

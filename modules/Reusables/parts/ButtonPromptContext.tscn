@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/PS5/PS5_Circle.png" type="Texture" id=2]
+[ext_resource path="res://modules/Reusables/parts/ButtonPromptContext.gd" type="Script" id=3]
+
+[node name="ButtonPromptContext" type="Button"]
+margin_right = 200.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 200, 0 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+enabled_focus_mode = 0
+text = "Back"
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
