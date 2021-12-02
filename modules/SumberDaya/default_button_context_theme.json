@@ -1,0 +1,55 @@
+{
+    "name": "Dasandimian choice",
+    "description": "Default Dasandimian button theme used in A Hat in Time using Xelu's prompt pack",
+    "folderPath": "res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/",
+    "theme": {
+        "keyboardMouse": {
+
+        },
+        "gamepad": {
+            "PS5": {
+
+            },
+            "PS4": {
+
+            },
+            "PSVita": {
+
+            },
+            "PSMove": {
+
+            },
+            "Switch": {
+
+            },
+            "Wii": {},
+            "WiiU": {},
+            "Xbox360": {
+
+            },
+            "XboxOne": {
+
+            },
+            "XboxSeries": {
+
+            },
+            "Amazon": {
+
+            },
+            "Ouya": {
+
+            },
+            "SteamClassic": {},
+            "SteamDeck": {},
+            "Oculus": {},
+            "Vive": {},
+            "Stadia": {}
+        },
+        "touchScreen": {
+
+        }
+    },
+    "instructions": {
+
+    }
+}

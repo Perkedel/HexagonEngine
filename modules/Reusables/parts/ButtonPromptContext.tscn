@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/PS5/PS5_Circle.png" type="Texture" id=2]
 [ext_resource path="res://modules/Reusables/parts/ButtonPromptContext.gd" type="Script" id=3]
+[ext_resource path="res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/Others/Arrows/Directional_Arrow_Horizontal.png" type="Texture" id=4]
 
 [node name="ButtonPromptContext" type="Button"]
 margin_right = 200.0
@@ -19,3 +20,19 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="OverTop" type="TextureRect" parent="."]
+anchor_bottom = 1.0
+margin_right = 75.0
+rect_min_size = Vector2( 75, 0 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

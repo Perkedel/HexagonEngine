@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://modules/SumberDaya/default_button_context_theme.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+themeName = "Dasandimian choice"
+themeDescription = "Default Dasandimian button theme used in A Hat in Time"
+pathToJSON = "res://modules/SumberDaya/default_button_context_theme.json"
+buttonImages = {
+}

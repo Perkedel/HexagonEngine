@@ -92,11 +92,11 @@ onready var _SettingData = {
 	},
 	Eggsellents = {},
 }
-var SettingFile
-var SettingFolder
-const SettingDirectory = "user://Pengaturan/"
-var SettingPath = SettingDirectory + "Setelan.simpan"
-var SettingJson = SettingDirectory + "Setelan.json"
+var SettingFile:File
+var SettingFolder:Directory
+const SettingDirectory:String = "user://Pengaturan/"
+var SettingPath:String = SettingDirectory + "Setelan.simpan"
+var SettingJson:String = SettingDirectory + "Setelan.json"
 
 var TheFirstTime : bool = false
 # Declare member variables here. Examples:

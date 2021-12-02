@@ -1,20 +1,73 @@
 extends Button
 
-export(String) var contextInputMapName = "ui_cancel"
+export(PoolStringArray) var contextInputMapName:PoolStringArray = ["ui_cancel"]
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-enum ControllerType{KeyboardMouse,Gamepad, Touchscreen}
+enum ControllerType{KeyboardMouse,Keyboard,Mouse,Gamepad, Touchscreen}
 enum ControllerBrand{Sony, Microsoft, Nintendo, Oculus, OpenVR}
+enum DirectionArrow{Cross,Horizonal,Vertical,Diagonal,Rotate,Half_Rotate,Quarter_Rotate,One_Way}
 var lastControllerType = ControllerType.KeyboardMouse
+var lastControllerBetween = ControllerType.KeyboardMouse
+var isInGamePad = false
+var isAMouse = false # is the context being observed a mouse?
+var isGamepadButton = false # is the gamepad context being a button?
 var actionList:Array
+onready var filteredActionList:Dictionary = {
+	counts = {
+		type_InputEventKey = 0,
+		type_InputEventJoypadButton = 0,
+		type_InputEventJoypadMotion = 0,
+		type_InputEventMouseButton = 0
+	},
+	Listing = {
+		type_InputEventKey = {},
+		type_InputEventJoypadButton = {},
+		type_InputEventJoypadMotion = {},
+		type_InputEventMouseButton = {}
+	}
+}
+onready var filter_InputEventKey:Array
+onready var filter_InputEventJoypadButton:Array
+onready var filter_InputEventJoypadMotion:Array
+onready var filter_InputEventMouseButton:Array
+onready var texture_InputEventKey:Array
+onready var texture_InputEventMouseButton:Array
+onready var texture_InputEventKeyboardMouse:Array
+onready var texture_InputEventJoypad:Array
+onready var texture_InputEventJoypadButton:Array
+onready var texture_InputEventJoypadMotion:Array
+onready var texture_InputEventNeither:Array
+onready var counter_InputEventKey:int = 0
+onready var counter_InputEventMouseButton:int = 0
+onready var counter_InputEventKeyboardMouse:int = 0
+onready var counter_InputEventJoypadButton:int = 0
+onready var counter_InputEventJoypadMotion:int = 0
+onready var counter_InputEventJoypad:int = 0
 var theActionEventOfIt # is dynamic, supposedly any InputEvent based such as InputEventKey, InputEventJoypadButton, etc. etc.
+var gamepadName:String
+var gamepadGuid:String
+var isDirection:bool = false
+var contains_InputEventKey:bool = false
+var contains_InputEventMouseButton:bool = false
+var contains_InputEventJoypadButton:bool = false
+var contains_InputEventJoypadMotion:bool = false
 
+onready var overTopImager = $OverTop
+
+export(int) var whichGamepad = 0
 export(String) var tempThemePathment = "res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/"
 
 export(Texture) var tempGamepadImage = load(tempThemePathment + "PS5/PS5_Circle.png")
+export(Texture) var tempGamepadButtonImage = load(tempThemePathment + "PS5/PS5_Circle.png")
+export(Texture) var tempGamepadMotionImage = load(tempThemePathment + "PS5/PS5_Left_Stick.png")
+export(Texture) var tempOverTopImage
 export(Texture) var tempKeyboardMouseImage = load(tempThemePathment + "Keyboard & Mouse/Light/Esc_Key_Light.png")
+export(Texture) var tempKeyboardImage = load(tempThemePathment + "Keyboard & Mouse/Light/Esc_Key_Light.png")
+export(Texture) var tempMouseImage = load(tempThemePathment + "Keyboard & Mouse/Light/Mouse_Simple_Key_Light.png")
 export(Texture) var tempTouchscreenImage = load("res://Sprites/KembaliButton.png")
+export(Texture) var tempNeitherImage = load("res://Sprites/MavrickleIcon.png")
+export(bool) var _debug_printNow:bool = false
 
 func _returnJoyPadButton(button_index:int)->String:
 	# TODO: wrap by different brand of console
@@ -37,9 +90,71 @@ func _returnJoyPadButton(button_index:int)->String:
 	return "res://Sprites/MavrickleIcon.png"
 	pass
 
-func _checkJoyPadButton(button_index:int):
-	print("Joypad Button of " + String(button_index)) 
+func _checkJoyPadButton(button_index:int) -> Texture:
+	if _debug_printNow:
+		print("Joypad Button of " + String(button_index)) 
 	tempGamepadImage = load(_returnJoyPadButton(button_index))
+	return tempGamepadImage
+	pass
+
+func _returnJoypadAxis(axis_index:int)->String:
+	match(axis_index):
+		JOY_ANALOG_LX: #L horizontal
+			_checkDirection(DirectionArrow.Horizonal)
+			return tempThemePathment + "PS5/PS5_Left_Stick.png"
+			pass
+		JOY_ANALOG_LY: #L Vertical
+			_checkDirection(DirectionArrow.Vertical)
+			return tempThemePathment + "PS5/PS5_Left_Stick.png"
+			pass
+		JOY_ANALOG_RX: #R Horizonal
+			_checkDirection(DirectionArrow.Horizonal)
+			return tempThemePathment + "PS5/PS5_Right_Stick.png"
+			pass
+		JOY_ANALOG_RY: #R Vertical
+			_checkDirection(DirectionArrow.Vertical)
+			return tempThemePathment + "PS5/PS5_Right_Stick.png"
+			pass
+		JOY_ANALOG_L2:
+			return tempThemePathment + "PS5/PS5_L2.png"
+			pass
+		JOY_ANALOG_R2:
+			return tempThemePathment + "PS5/PS5_R2.png"
+			pass
+		_:
+			pass
+	
+	return "res://Sprites/MavrickleIcon.png"
+	pass
+
+func _checkJoyPadAxis(axis_index:int) -> Texture:
+	if _debug_printNow:
+		print("Joypad Axis of " + String(axis_index)) 
+	tempGamepadImage = load(_returnJoypadAxis(axis_index))
+	tempGamepadMotionImage = load(_returnJoypadAxis(axis_index))
+	isDirection = true
+	return tempGamepadMotionImage
+	pass
+
+func _returnDirection(chooseEnum)->String:
+	match(chooseEnum):
+		DirectionArrow.Cross:
+			return tempThemePathment + "Others/Arrows/Directional_Arrow_Cross.png"
+			pass
+		DirectionArrow.Horizonal:
+			return tempThemePathment + "Others/Arrows/Directional_Arrow_Horizontal.png"
+			pass
+		DirectionArrow.Vertical:
+			return tempThemePathment + "Others/Arrows/Directional_Arrow_Vertical.png"
+			pass
+		_:
+			pass
+	
+	return "res://Sprites/MavrickleIcon.png"
+
+func _checkDirection(chooseEnum):
+	overTopImager.texture = load(_returnDirection(chooseEnum))
+	overTopImager.visible = true
 	pass
 
 func _calculateFunctionKey(button_index:int)->String:
@@ -72,7 +187,7 @@ func _returnKeyboardButton(button_index:int)->String:
 			return tempThemePathment + "Keyboard & Mouse/Light/Enter_Alt_Key_Light.png"
 			pass
 		KEY_KP_ENTER:
-			tempThemePathment + "Keyboard & Mouse/Light/Enter_Tall_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light/Enter_Tall_Key_Light.png"
 		KEY_SPACE:
 			return tempThemePathment + "Keyboard & Mouse/Light/Space_Key_Light.png"
 		_:
@@ -85,9 +200,13 @@ func _returnKeyboardButton(button_index:int)->String:
 	return "res://Sprites/MavrickleIcon.png"
 	pass
 
-func _checkKeyboardButton(button_index:int):
-	print("Keyboard Scancode of " + String(button_index))
+func _checkKeyboardButton(button_index:int) -> Texture:
+	overTopImager.visible = false
+	if _debug_printNow:
+		print("Keyboard Scancode of " + String(button_index))
 	tempKeyboardMouseImage = load(_returnKeyboardButton(button_index))
+	tempKeyboardImage = load(_returnKeyboardButton(button_index))
+	return tempKeyboardImage
 	pass
 
 func _returnMouseButton(button_index:int)->String:
@@ -104,24 +223,59 @@ func _returnMouseButton(button_index:int)->String:
 			pass
 	return "res://Sprites/MavrickleIcon.png"
 
-func _checkMouseButton(button_index:int):
-	print("Mouse Index of " + String(button_index))
+func _checkMouseButton(button_index:int) -> Texture:
+	if _debug_printNow:
+		print("Mouse Index of " + String(button_index))
 	tempKeyboardMouseImage = load(_returnMouseButton(button_index))
+	tempMouseImage = load(_returnMouseButton(button_index))
+	return tempMouseImage
+	pass
+
+func _checkKeyboardMouseButton():
 	pass
 
 func _retrieveActionContext():
-	actionList = InputMap.get_action_list(contextInputMapName)
-	print(String(actionList))
+	#TODO reset contains
+	
+	isDirection = false # reset the flag first
+	actionList = InputMap.get_action_list(contextInputMapName[0])
+	if _debug_printNow:
+		print(String(actionList))
 	# TODO: watch for copy of InputEvent as there may be one another with same datatype. e.g. ui_accept has ENTER & SPACE, both are InputEventKey. it indexes last scanned of them.
 	for things in actionList:
+#		if _debug_printNow:
+#			print(""+String(things))
 		if things is InputEventKey:
-			_checkKeyboardButton(things.scancode)
+			filteredActionList["Listing"]["type_InputEventKey"][things.scancode] = things
+			filter_InputEventKey.append(things)
+			texture_InputEventKey.append(_checkKeyboardButton(things.scancode))
+			texture_InputEventKeyboardMouse.append(_checkKeyboardButton(things.scancode))
+			isAMouse = false
+			contains_InputEventKey = true
 			pass
 		elif things is InputEventJoypadButton:
-			_checkJoyPadButton(things.button_index)
+			filteredActionList["Listing"]["type_InputEventJoypadButton"][things.button_index] = things
+			filter_InputEventJoypadButton.append(things)
+			texture_InputEventJoypadButton.append(_checkJoyPadButton(things.button_index))
+			texture_InputEventJoypad.append(_checkJoyPadButton(things.button_index))
+			isGamepadButton = true
+			contains_InputEventJoypadButton = true
+			pass
+		elif things is InputEventJoypadMotion:
+			filteredActionList["Listing"]["type_InputEventJoypadButton"][things.axis] = things
+			filter_InputEventJoypadMotion.append(things)
+			texture_InputEventJoypadMotion.append(_checkJoyPadAxis(things.axis))
+			texture_InputEventJoypad.append(_checkJoyPadAxis(things.axis))
+			isGamepadButton = false
+			contains_InputEventJoypadMotion = true
 			pass
 		elif things is InputEventMouseButton:
-			_checkMouseButton(things.button_index)
+			filteredActionList["Listing"]["type_InputEventMouseButton"][things.button_index] = things
+			filter_InputEventMouseButton.append(things)
+			texture_InputEventMouseButton.append(_checkMouseButton(things.button_index))
+			texture_InputEventKeyboardMouse.append(_checkMouseButton(things.button_index))
+			isAMouse = true
+			contains_InputEventJoypadMotion = true
 			pass
 		
 		# wtf, using switch case doesn't work?!??!??!
@@ -159,79 +313,244 @@ func _retrieveActionContext():
 				pass
 		pass
 
+func _retrieveGamePadName(which:int = 0):
+	# Yoink from Godot Demo named "Joypads"
+	gamepadName = Input.get_joy_name(which) if which>=0 else "Empty"
+	gamepadGuid = Input.get_joy_guid(which) if which>=0 else "GUIDnull"
+	if _debug_printNow:
+		print("Gamepad Name = " + gamepadName + "\nGamepad GUID = " + gamepadGuid)
+	pass
+
+func _cycleImages():
+	if not texture_InputEventKey.empty():
+	#	var theKeyboardThing:int = filteredActionList["Listing"]["type_InputEventKey"].values()[ int(filteredActionList["counts"]["type_InputEventKey"])]
+		if _debug_printNow:
+			print(String(counter_InputEventKey) + " indexd")
+#		var theniq:Array 
+#		theniq.resize(10)
+#		theniq.append_array(filter_InputEventKey)
+#		theniq.invert()
+#		print(String(theniq))
+#		var thonig:InputEventKey = theniq[counter_InputEventKey]
+#		var theKeyboardThing:int = thonig.scancode
+#		var theKeyboardThing:int = filter_InputEventKey[counter_InputEventKey].scancode
+		if _debug_printNow:
+#			print(String(filter_InputEventKey[counter_InputEventKey].scancode))
+			print(String(counter_InputEventKey))
+#			print("Cycle " + String(theKeyboardThing))
+			pass
+#		_checkKeyboardButton(theKeyboardThing)
+		tempKeyboardImage = texture_InputEventKey[counter_InputEventKey]
+		counter_InputEventKey += 1
+		if counter_InputEventKey > texture_InputEventKey.size()-1:
+			counter_InputEventKey = 0
+	else:
+		tempKeyboardImage = tempNeitherImage
+	
+	if not texture_InputEventMouseButton.empty():
+		tempMouseImage = texture_InputEventMouseButton[counter_InputEventMouseButton]
+		counter_InputEventMouseButton += 1
+		if counter_InputEventMouseButton > texture_InputEventMouseButton.size()-1:
+			counter_InputEventMouseButton = 0
+		pass
+	else:
+		tempMouseImage = tempNeitherImage
+	
+	if not texture_InputEventKeyboardMouse.empty():
+		tempKeyboardMouseImage = texture_InputEventKeyboardMouse[counter_InputEventKeyboardMouse]
+		counter_InputEventKeyboardMouse += 1
+		if counter_InputEventKeyboardMouse > texture_InputEventKeyboardMouse.size()-1:
+			counter_InputEventKeyboardMouse = 0
+		pass
+	else:
+		tempKeyboardMouseImage = tempNeitherImage
+	
+	if not texture_InputEventJoypadButton.empty():
+		tempGamepadButtonImage = texture_InputEventJoypadButton[counter_InputEventJoypadButton]
+		counter_InputEventJoypadButton += 1
+		if counter_InputEventJoypadButton > texture_InputEventJoypadButton.size()-1:
+			counter_InputEventJoypadButton = 0
+		pass
+	else:
+		tempGamepadButtonImage = tempNeitherImage
+	
+	if not texture_InputEventJoypadMotion.empty():
+		tempGamepadMotionImage = texture_InputEventJoypadMotion[counter_InputEventJoypadMotion]
+		counter_InputEventJoypadMotion += 1
+		if counter_InputEventJoypadMotion > texture_InputEventJoypadMotion.size()-1:
+			counter_InputEventJoypadMotion = 0
+		pass
+	else:
+		tempGamepadMotionImage = tempNeitherImage
+	
+	if not texture_InputEventJoypad.empty():
+		tempGamepadImage = texture_InputEventJoypad[counter_InputEventJoypad]
+		counter_InputEventJoypad += 1
+		if counter_InputEventJoypad > texture_InputEventJoypad.size()-1:
+			counter_InputEventJoypad = 0
+		pass
+	else:
+		tempGamepadImage = tempNeitherImage
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# from Godot demo "Joypads", connect signals
+	Input.connect("joy_connection_changed", self, "_on_joy_connection_changed")
+	# then get name & the context
+	_retrieveGamePadName(whichGamepad)
 	_retrieveActionContext()
+	_cycleImages()
 	pass # Replace with function body.
 
 func _input(event):
 	theActionEventOfIt = event
-	
-	
-	# wtf, using switch case doesn't work?!??!??!
-	match(event):
-		InputEventKey:
+	if event.device == whichGamepad:
+		# wtf, using switch case doesn't work?!??!??!
+		match(event):
+			InputEventKey:
+				pass
+			InputEventMouse:
+				pass
+			InputEventMouseButton:
+				pass
+			InputEventMouseMotion:
+				pass
+			InputEventJoypadButton:
+				pass
+			InputEventJoypadMotion:
+				pass
+			InputEventMIDI:
+				pass
+			InputEventScreenTouch:
+				pass
+			InputEventMagnifyGesture:
+				pass
+			InputEventMultiScreenDrag:
+				pass
+			InputEventPanGesture:
+				pass
+			InputEventScreenPinch:
+				pass
+			InputEventScreenTwist:
+				pass
+			InputEvent:
+				pass
+			_:
+				pass
+		
+		if event is InputEventKey or event is InputEventMouse:
+			overTopImager.visible = false
+			lastControllerType = ControllerType.Keyboard
+			lastControllerBetween = ControllerType.KeyboardMouse
+			isInGamePad = false
 			pass
-		InputEventMouse:
+		elif event is InputEventMouse or event is InputEventMouseButton or event is InputEventMouseMotion:
+			overTopImager.visible = false
+			lastControllerType = ControllerType.Mouse
+			lastControllerBetween = ControllerType.KeyboardMouse
+			isInGamePad = false
 			pass
-		InputEventMouseButton:
+		elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
+			lastControllerType = ControllerType.Gamepad
+			lastControllerBetween = ControllerType.Gamepad
+			overTopImager.visible = isDirection
+			isInGamePad = true
 			pass
-		InputEventMouseMotion:
+		elif event is InputEventScreenTouch or event is InputEventScreenDrag or event is InputEventScreenPinch or event is InputEventScreenTwist:
+			lastControllerType = ControllerType.Touchscreen
+			lastControllerBetween = ControllerType.Touchscreen
+			isInGamePad = true
 			pass
-		InputEventJoypadButton:
+		
+#		match(lastControllerType):
+#			ControllerType.Keyboard:
+#				icon = tempKeyboardImage if contains_InputEventKey and not contains_InputEventMouseButton else tempKeyboardMouseImage if not contains_InputEventKey and contains_InputEventMouseButton else tempKeyboardMouseImage if contains_InputEventKey and contains_InputEventMouseButton else tempNeitherImage
+##				icon = tempKeyboardImage
+#				pass
+#			ControllerType.Mouse:
+##				icon = tempMouseImage if not contains_InputEventKey and contains_InputEventMouseButton else tempKeyboardImage if contains_InputEventKey and not contains_InputEventMouseButton else tempKeyboardMouseImage if contains_InputEventKey and contains_InputEventMouseButton else tempNeitherImage
+#				icon = tempMouseImage
+#				pass
+#			ControllerType.KeyboardMouse:
+#				icon = tempKeyboardImage if contains_InputEventKey and contains_InputEventMouseButton else tempMouseImage if not contains_InputEventKey and contains_InputEventMouseButton else tempKeyboardImage if contains_InputEventKey and not contains_InputEventMouseButton else tempNeitherImage
+#				pass
+#			ControllerType.Gamepad:
+#				icon = tempGamepadButtonImage if not contains_InputEventJoypadMotion and contains_InputEventJoypadButton else tempGamepadMotionImage if contains_InputEventJoypadMotion and not contains_InputEventJoypadButton else tempGamepadImage if contains_InputEventJoypadMotion and contains_InputEventJoypadButton else tempNeitherImage
+#				pass
+#			ControllerType.Touchscreen:
+#				icon = tempTouchscreenImage
+#				pass
+#			_:
+#				pass
+			
+		# switch case lastControllerBetween in _physics_process
+#		if _debug_printNow:
+#			print("ararararar " + String(lastControllerBetween))
+		
+		if event.is_action_pressed(contextInputMapName[0]):
+			flat = false
 			pass
-		InputEventJoypadMotion:
+		elif event.is_action_released(contextInputMapName[0]):
+			flat = true
 			pass
-		InputEventMIDI:
-			pass
-		InputEventScreenTouch:
-			pass
-		InputEventMagnifyGesture:
-			pass
-		InputEventMultiScreenDrag:
-			pass
-		InputEventPanGesture:
-			pass
-		InputEventScreenPinch:
-			pass
-		InputEventScreenTwist:
-			pass
-		InputEvent:
-			pass
-		_:
-			pass
-	
-	if event is InputEventKey or event is InputEventMouse or event is InputEventMouseButton or event is InputEventMouseMotion:
-		lastControllerType = ControllerType.KeyboardMouse
-		pass
-	elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
-		lastControllerType = ControllerType.Gamepad
-		pass
-	elif event is InputEventScreenTouch or event is InputEventScreenDrag or event is InputEventScreenPinch or event is InputEventScreenTwist:
-		lastControllerType = ControllerType.Touchscreen
-		pass
-	
-	match(lastControllerType):
-		ControllerType.KeyboardMouse:
-			icon = tempKeyboardMouseImage
-			pass
-		ControllerType.Gamepad:
-			icon = tempGamepadImage
-			pass
-		ControllerType.Touchscreen:
-			icon = tempTouchscreenImage
-			pass
-		_:
-			pass
-	
-	if event.is_action_pressed(contextInputMapName):
-		flat = false
-		pass
-	elif event.is_action_released(contextInputMapName):
-		flat = true
 		pass
 	pass
 
+func _physics_process(delta):
+	match(lastControllerBetween):
+			ControllerType.KeyboardMouse:
+#				icon = tempKeyboardImage if contains_InputEventKey and not contains_InputEventMouseButton else tempMouseImage if not contains_InputEventKey and contains_InputEventMouseButton else tempKeyboardMouseImage if contains_InputEventKey and contains_InputEventMouseButton else tempNeitherImage
+#				if contains_InputEventKey and !contains_InputEventMouseButton:
+#					print("a1")
+#					icon = tempKeyboardImage
+#				elif !contains_InputEventKey and contains_InputEventMouseButton:
+#					print("a2")
+#					icon = tempMouseImage
+#				elif contains_InputEventKey and contains_InputEventMouseButton:
+#					print("a3")
+#					icon = tempKeyboardMouseImage
+#				else:
+#					print("a1")
+#					icon = tempNeitherImage
+				icon = tempKeyboardMouseImage
+				pass
+			ControllerType.Gamepad:
+#				icon = tempGamepadButtonImage if not contains_InputEventJoypadMotion and contains_InputEventJoypadButton else tempGamepadMotionImage if contains_InputEventJoypadMotion and not contains_InputEventJoypadButton else tempGamepadImage if contains_InputEventJoypadMotion and contains_InputEventJoypadButton else tempNeitherImage
+#				if contains_InputEventJoypadMotion and !contains_InputEventJoypadButton:
+#					icon = tempGamepadMotionImage
+#				elif !contains_InputEventJoypadMotion and contains_InputEventJoypadButton:
+#					icon = tempGamepadButtonImage
+#				elif contains_InputEventJoypadMotion and contains_InputEventJoypadButton:
+#					icon = tempGamepadImage
+#				else:
+#					icon = tempNeitherImage
+				icon = tempGamepadImage
+				pass
+			ControllerType.Touchscreen:
+				icon = tempTouchscreenImage
+				pass
+			_:
+				pass
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+#	yield(get_tree().create_timer(5),"timeout")
+#	_cycleImages()
+	pass
+
+# copy from Godot's demo "Joypads"
+# Called whenever a joypad has been connected or disconnected.
+func _on_joy_connection_changed(device_id, connected):
+	if device_id == whichGamepad:
+		if connected:
+			_retrieveGamePadName(whichGamepad)
+		else:
+			_retrieveGamePadName(-1)
+	if _debug_printNow:
+		print("Change of Gamepad connection No." + device_id + ": \nName = " + gamepadName + "\nGUID = " + gamepadGuid)
+
+func _on_Timer_timeout():
+	_cycleImages()
+	pass # Replace with function body.
