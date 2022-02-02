@@ -477,3 +477,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://github.com/coppolaemilio/dialogic
 - https://github.com/Zylann/godot_heightmap_plugin
 - https://github.com/matrixant/Godot-FontAwesome5
+- https://github.com/tomeyro/godot-sfxr Godot SFX generator
+- https://gamefromscratch.com/godotsfxr-add-on-released/ Games From Scratch article of it Godot SFXR
+- https://tomeyro.itch.io/godot-sfxr itch io page of it Godot SFXR
