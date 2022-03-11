@@ -19,13 +19,14 @@ signal rewarded_video_started
 # properties
 export var is_real:bool setget is_real_set
 export var banner_on_top:bool = true
+export(String, "ADAPTIVE_BANNER", "SMART_BANNER", "BANNER", "LARGE_BANNER", "MEDIUM_RECTANGLE", "FULL_BANNER", "LEADERBOARD") var banner_size = "ADAPTIVE_BANNER"
 export var banner_id:String
 export var interstitial_id:String
 export var rewarded_id:String
-export var child_directed:bool = false
-export var is_personalized:bool = true
-export(String, "G", "PG", "T", "MA") var max_ad_content_rate
-
+export var child_directed:bool = false setget child_directed_set
+export var is_personalized:bool = true setget is_personalized_set
+export(String, "G", "PG", "T", "MA") var max_ad_content_rate = "G" setget max_ad_content_rate_set
+ 
 # "private" properties
 var _admob_singleton = null
 var _is_interstitial_loaded:bool = false
@@ -34,7 +35,7 @@ var _is_rewarded_video_loaded:bool = false
 
 func _enter_tree():
 	if not init():
-		print("AdMob Java Singleton not found")
+		print("AdMob Java Singleton not found. This plugin will only work on Android")
 
 # setters
 func is_real_set(new_val) -> void:
@@ -58,27 +59,49 @@ func max_ad_content_rate_set(new_val) -> void:
 			
 		max_ad_content_rate = "G"
 		print("Invalid max_ad_content_rate, using 'G'")
+	else:
+		max_ad_content_rate = new_val
+	init()
 
 
 # initialization
 func init() -> bool:
 	if(Engine.has_singleton("GodotAdMob")):
 		_admob_singleton = Engine.get_singleton("GodotAdMob")
+
+		# check if one signal is already connected
+		if not _admob_singleton.is_connected("on_admob_ad_loaded", self, "_on_admob_ad_loaded"):
+			connect_signals()
+
 		_admob_singleton.initWithContentRating(
 			is_real,
-			get_instance_id(),
 			child_directed,
 			is_personalized,
 			max_ad_content_rate
 		)
 		return true
 	return false
+
+# connect the AdMob Java signals
+func connect_signals() -> void:
+	_admob_singleton.connect("on_admob_ad_loaded", self, "_on_admob_ad_loaded")
+	_admob_singleton.connect("on_admob_banner_failed_to_load", self, "_on_admob_banner_failed_to_load")
+	_admob_singleton.connect("on_interstitial_failed_to_load", self, "_on_interstitial_failed_to_load")
+	_admob_singleton.connect("on_interstitial_loaded", self, "_on_interstitial_loaded")
+	_admob_singleton.connect("on_interstitial_close", self, "_on_interstitial_close")
+	_admob_singleton.connect("on_rewarded_video_ad_loaded", self, "_on_rewarded_video_ad_loaded")
+	_admob_singleton.connect("on_rewarded_video_ad_closed", self, "_on_rewarded_video_ad_closed")
+	_admob_singleton.connect("on_rewarded", self, "_on_rewarded")
+	_admob_singleton.connect("on_rewarded_video_ad_left_application", self, "_on_rewarded_video_ad_left_application")
+	_admob_singleton.connect("on_rewarded_video_ad_failed_to_load", self, "_on_rewarded_video_ad_failed_to_load")
+	_admob_singleton.connect("on_rewarded_video_ad_opened", self, "_on_rewarded_video_ad_opened")
+	_admob_singleton.connect("on_rewarded_video_started", self, "_on_rewarded_video_started")
 	
 # load
 
 func load_banner() -> void:
 	if _admob_singleton != null:
-		_admob_singleton.loadBanner(banner_id, banner_on_top)
+		_admob_singleton.loadBanner(banner_id, banner_on_top, banner_size)
 
 func load_interstitial() -> void:
 	if _admob_singleton != null:
@@ -107,6 +130,11 @@ func show_banner() -> void:
 func hide_banner() -> void:
 	if _admob_singleton != null:
 		_admob_singleton.hideBanner()
+
+func move_banner(on_top: bool) -> void:
+	if _admob_singleton != null:
+		banner_on_top = on_top
+		_admob_singleton.move(banner_on_top)
 
 func show_interstitial() -> void:
 	if _admob_singleton != null:

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-5ef3e134ec6fe7e9789c413d742d731b.stex"
+path="res://.import/Taviar-logo.png-f2a98950e680cdb4068a91a6e665807f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://admob-lib/icon.png"
-dest_files=[ "res://.import/icon.png-5ef3e134ec6fe7e9789c413d742d731b.stex" ]
+source_file="res://Inkscape/Logo Setup/Taviar-logo.png"
+dest_files=[ "res://.import/Taviar-logo.png-f2a98950e680cdb4068a91a6e665807f.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

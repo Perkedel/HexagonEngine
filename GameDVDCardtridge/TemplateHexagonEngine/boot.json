@@ -1,6 +1,7 @@
 {
     "id": "template-hexagon",
     "Title": "Template Hexagon Engine",
+    "Description": "Template Hexagon Engine",
     "IconUrl": "res://Sprites/HexagonEngineSign.png",
     "BootThisTscene": "res://GameDVDCardtridge/TemplateHexagonEngine/bootThisLegacyHexagonEngine.tscn",
     "CatalogueBanner": "",
