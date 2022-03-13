@@ -1,7 +1,8 @@
 extends Node
 
-export (bool) var isPlayingGameNow
-export (bool) var isGamePaused
+export (bool) var isPlayingGameNow:bool = false
+export (bool) var isGamePaused:bool = false
+export (bool) var activateBackButton:bool = true
 var hereTakeThisLoadedResource
 var andScronchMe
 # Declare member variables here. Examples:
@@ -105,4 +106,15 @@ func _BiosLoaded(scene):
 	print(scene.props.hii)
 	
 	change_scene_with_instance(scene.instance)
+	pass
+
+func _notification(what: int) -> void:
+	if NOTIFICATION_WM_GO_BACK_REQUEST:
+		# PECKING FINALLY BACK BUTTON!!!
+		if activateBackButton:
+			var a = InputEventAction.new()
+			a.action = "ui_cancel"
+			a.pressed = true
+			Input.parse_input_event(a)
+		pass
 	pass

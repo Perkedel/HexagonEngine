@@ -144,9 +144,11 @@ func _update_adsr( delta:float ) -> void:
 			var state:Bank.VolumeState = use_state[state_number]
 			if self.timer < state.time:
 				var pre_state:Bank.VolumeState = use_state[state_number-1]
-				var s:float = ( state.time - self.timer ) / ( state.time - pre_state.time )
-				var t:float = 1.0 - s
-				self.current_volume_db = pre_state.volume_db * s + state.volume_db * t
+				var t:float = 1.0 - ( state.time - self.timer ) / ( state.time - pre_state.time )
+				if not self.releasing and all_states > 2 and ( state_number == 1 or state_number == 2 ):
+					self.current_volume_db = linear2db( lerp( db2linear( pre_state.volume_db ), db2linear( state.volume_db ), t ) )
+				else:
+					self.current_volume_db = lerp( pre_state.volume_db, state.volume_db, t )
 				break
 
 	var synthed_pitch_bend:float = self.pitch_bend * self.pitch_bend_sensitivity / 12.0

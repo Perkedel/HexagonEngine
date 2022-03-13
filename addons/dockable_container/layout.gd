@@ -1,21 +1,23 @@
 tool
 extends Resource
-"""
-Layout Resources definition.
+# Layout Resource definition, holding the root LayoutNode and hidden tabs.
+#
+# LayoutSplit are binary trees with nested LayoutSplit subtrees and LayoutPanel
+# leaves. Both of them inherit from LayoutNode to help with type annotation and
+# define common funcionality.
+#
+# Hidden tabs are marked in the `hidden_tabs` Dictionary by name.
 
-LayoutSplit are binary trees with nested LayoutSplit subtrees and LayoutPanel
-leaves. Both of them inherit from LayoutNode to help with type annotation and
-define common funcionality.
-"""
-
-const LayoutNode = preload("res://addons/dockable_container/layout_node.gd")
-const LayoutPanel = preload("res://addons/dockable_container/layout_panel.gd")
-const LayoutSplit = preload("res://addons/dockable_container/layout_split.gd")
+const LayoutNode = preload("layout_node.gd")
+const LayoutPanel = preload("layout_panel.gd")
+const LayoutSplit = preload("layout_split.gd")
 
 export(Resource) var root = LayoutPanel.new() setget set_root, get_root
+export(Dictionary) var hidden_tabs = {} setget set_hidden_tabs, get_hidden_tabs
 
 var _changed_signal_queued = false
 var _first_leaf: LayoutPanel
+var _hidden_tabs: Dictionary
 var _leaf_by_node_name: Dictionary
 var _root: LayoutNode = LayoutPanel.new()
 
@@ -42,9 +44,20 @@ func get_root() -> LayoutNode:
 	return _root
 
 
+func set_hidden_tabs(value: Dictionary) -> void:
+	if value != _hidden_tabs:
+		_hidden_tabs = value
+		emit_signal("changed")
+
+
+func get_hidden_tabs() -> Dictionary:
+	return _hidden_tabs
+
+
 func clone():
 	var new_layout = get_script().new()
 	new_layout.root = _root.clone()
+	new_layout._hidden_tabs = _hidden_tabs.duplicate()
 	return new_layout
 
 
@@ -52,14 +65,12 @@ func get_names() -> PoolStringArray:
 	return _root.get_names()
 
 
+# Add missing nodes on first leaf and remove nodes outside indices from leaves.
+#
+# _leaf_by_node_name = {
+#     (string keys) = respective Leaf that holds the node name,
+# }
 func update_nodes(names: PoolStringArray) -> void:
-	"""
-	Add missing nodes on first leaf and remove nodes outside indices from leaves.
-	
-	_leaf_by_node_name = {
-		(string keys) = respective Leaf that holds the node name,
-	}
-	"""
 	_leaf_by_node_name.clear()
 	_first_leaf = null
 	var empty_leaves = []
@@ -84,7 +95,7 @@ func move_node_to_leaf(node: Node, leaf: LayoutPanel, relative_position: int) ->
 	previous_leaf.remove_node(node)
 	if previous_leaf.empty():
 		_remove_leaf(previous_leaf)
-	
+
 	leaf.insert_node(relative_position, node)
 	_leaf_by_node_name[node_name] = leaf
 	_on_root_changed()
@@ -115,7 +126,7 @@ func split_leaf_with_node(leaf, node: Node, margin: int) -> void:
 			root_branch.first = new_branch
 		else:
 			root_branch.second = new_branch
-	
+
 	move_node_to_leaf(node, new_leaf, 0)
 
 
@@ -150,6 +161,28 @@ func rename_node(previous_name: String, new_name: String) -> void:
 	_on_root_changed()
 
 
+func set_tab_hidden(name: String, hidden: bool) -> void:
+	if not _leaf_by_node_name.has(name):
+		return
+	if hidden:
+		_hidden_tabs[name] = true
+	else:
+		_hidden_tabs.erase(name)
+	_on_root_changed()
+
+
+func is_tab_hidden(name: String) -> bool:
+	return _hidden_tabs.get(name, false)
+
+
+func set_node_hidden(node: Node, hidden: bool) -> void:
+	set_tab_hidden(node.name, hidden)
+
+
+func is_node_hidden(node: Node) -> bool:
+	return is_tab_hidden(node.name)
+
+
 func _on_root_changed() -> void:
 	if _changed_signal_queued:
 		return
@@ -178,7 +211,11 @@ func _remove_leaf(leaf: LayoutPanel) -> void:
 		return
 	var collapsed_branch = leaf.parent
 	assert(collapsed_branch is LayoutSplit, "FIXME: leaf is not a child of branch")
-	var kept_branch = collapsed_branch.first if leaf == collapsed_branch.second else collapsed_branch.second
+	var kept_branch = (
+		collapsed_branch.first
+		if leaf == collapsed_branch.second
+		else collapsed_branch.second
+	)
 	var root_branch = collapsed_branch.parent
 	if collapsed_branch == _root:
 		set_root(kept_branch, true)
@@ -199,6 +236,12 @@ func _print_tree_step(tree_or_leaf, level, idx) -> void:
 	if tree_or_leaf is LayoutPanel:
 		print(" |".repeat(level), "- (%d) = " % idx, tree_or_leaf.names)
 	else:
-		print(" |".repeat(level), "-+ (%d) = " % idx, tree_or_leaf.direction, " ", tree_or_leaf.percent)
+		print(
+			" |".repeat(level),
+			"-+ (%d) = " % idx,
+			tree_or_leaf.direction,
+			" ",
+			tree_or_leaf.percent
+		)
 		_print_tree_step(tree_or_leaf.first, level + 1, 1)
 		_print_tree_step(tree_or_leaf.second, level + 1, 2)

@@ -3,8 +3,8 @@ extends TabContainer
 
 signal tab_layout_changed(tab)
 
-const ReferenceControl = preload("res://addons/dockable_container/dockable_panel_reference_control.gd")
-const Layout = preload("res://addons/dockable_container/layout.gd")
+const ReferenceControl = preload("dockable_panel_reference_control.gd")
+const Layout = preload("layout.gd")
 
 var leaf: Layout.LayoutPanel setget set_leaf, get_leaf
 
@@ -54,7 +54,7 @@ func get_child_rect() -> Rect2:
 
 func set_leaf(value: Layout.LayoutPanel) -> void:
 	if get_tab_count() > 0 and value:
-		current_tab = value.current_tab
+		current_tab = clamp(value.current_tab, 0, get_tab_count() - 1)
 	_leaf = value
 
 

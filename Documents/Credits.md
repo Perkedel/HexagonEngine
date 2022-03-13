@@ -480,3 +480,54 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://github.com/tomeyro/godot-sfxr Godot SFX generator
 - https://gamefromscratch.com/godotsfxr-add-on-released/ Games From Scratch article of it Godot SFXR
 - https://tomeyro.itch.io/godot-sfxr itch io page of it Godot SFXR
+- https://github.com/boukew99/gui_calculator
+- https://godotengine.org/asset-library/asset/1250 calculator
+- https://bitbucket.org/arlez80/godot-midi-player/issues track issue for Godot MIDI player arlex80
+- https://godotengine.org/asset-library/asset/1261
+- https://godotengine.org/asset-library/asset/1195
+- https://godotengine.org/asset-library/asset/1243
+- https://godotengine.org/asset-library/asset/1236
+- https://godotengine.org/asset-library/asset/986
+- https://godotengine.org/asset-library/asset/1245
+- https://godotengine.org/asset-library/asset/1168
+- https://godotengine.org/asset-library/asset/1227
+- https://godotengine.org/asset-library/asset/1207
+- https://godotengine.org/asset-library/asset/1222
+- https://godotengine.org/asset-library/asset/1214
+- https://godotengine.org/asset-library/asset/1218
+- https://godotengine.org/asset-library/asset/699
+- https://godotengine.org/asset-library/asset/929
+- https://godotengine.org/asset-library/asset/1194
+- https://godotengine.org/asset-library/asset/1191
+- https://godotengine.org/asset-library/asset/916
+- https://godotengine.org/asset-library/asset/1148
+- https://godotengine.org/asset-library/asset/1189
+- https://godotengine.org/asset-library/asset/1182
+- https://godotengine.org/asset-library/asset/1181
+- https://godotengine.org/asset-library/asset/1178
+- https://godotengine.org/asset-library/asset/840
+- https://godotengine.org/asset-library/asset/1172
+- https://godotengine.org/asset-library/asset/1170
+- https://godotengine.org/asset-library/asset/1164
+- https://godotengine.org/asset-library/asset/1162
+- https://godotengine.org/asset-library/asset/964
+- https://godotengine.org/asset-library/asset/1108
+- https://godotengine.org/asset-library/asset/1149
+- https://godotengine.org/asset-library/asset/1144
+- https://godotengine.org/asset-library/asset/1150
+- https://godotengine.org/asset-library/asset/1136
+- https://godotengine.org/asset-library/asset/1147
+- https://godotengine.org/asset-library/asset/1143
+- https://godotengine.org/asset-library/asset/398
+- https://godotengine.org/asset-library/asset/1098
+- https://godotengine.org/asset-library/asset/660
+- https://godotengine.org/asset-library/asset/1132
+- https://godotengine.org/asset-library/asset/1078
+- https://godotengine.org/asset-library/asset/972
+- https://godotengine.org/asset-library/asset/1128
+- https://godotengine.org/asset-library/asset/651
+- https://godotengine.org/asset-library/asset/1115
+- https://godotengine.org/asset-library/asset/1158
+- https://godotengine.org/asset-library/asset/1193
+- https://godotengine.org/asset-library/asset/1196
+- https://godotengine.org/asset-library/asset/1203
