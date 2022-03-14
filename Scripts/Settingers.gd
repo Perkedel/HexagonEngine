@@ -49,7 +49,8 @@ var _DefaultSetting = {
 		MusicVolume = 0,
 		SoundEffectVolume = 0,
 		DummyVolume = 0,
-		SpeechVolume = 0
+		SpeechVolume = 0,
+		RecordingVolume = 0,
 	},
 	DisplaySetting = {
 		FullScreen = OS.is_window_fullscreen(),
@@ -138,7 +139,8 @@ func ApplySetting():
 #	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Dummy"),SettingData.AudioSetting.DummyVolume)
 	
 	for manyAudioVol in AudioServer.get_bus_count():
-		AudioServer.set_bus_volume_db(manyAudioVol, _SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"])
+		if _SettingData.AudioSetting.has(AudioServer.get_bus_name(manyAudioVol) + "Volume"):
+			AudioServer.set_bus_volume_db(manyAudioVol, _SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"])
 		pass
 	
 	OS.set_window_fullscreen(_SettingData.DisplaySetting.FullScreen)

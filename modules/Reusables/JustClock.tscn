@@ -148,9 +148,6 @@ margin_right = 270.0
 margin_bottom = 135.0
 rect_min_size = Vector2( 540, 270 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Bekgron" type="Panel" parent="."]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -251,6 +248,7 @@ margin_bottom = 71.0
 margin_right = 138.0
 custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 6 )
+text = "SEL."
 fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
 }
@@ -260,7 +258,7 @@ margin_left = 142.0
 margin_right = 540.0
 custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "14-03-2022"
+text = "15-03-2022"
 fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
 }
@@ -274,7 +272,7 @@ margin_bottom = 211.0
 margin_right = 450.0
 custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "15:59"
+text = "03:05"
 fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
 }
@@ -284,7 +282,7 @@ margin_left = 454.0
 margin_right = 540.0
 custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 9 )
-text = "48"
+text = "11"
 fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
 }
@@ -298,7 +296,7 @@ margin_bottom = 255.0
 margin_right = 540.0
 custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 10 )
-text = "00000000001647248388"
+text = "00000000001647288311"
 fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
 }

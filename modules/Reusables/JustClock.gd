@@ -65,8 +65,9 @@ func _syncParameter():
 func _updateClock():
 	datetime = OS.get_datetime()
 	unixtime = OS.get_unix_time()
-	bekgron.self_modulate = bekgronColor
-#	bekgron.set_deferred("self_modulate", bekgron)
+	if bekgron != null:
+		bekgron.self_modulate = bekgronColor
+#		bekgron.set_deferred("self_modulate", bekgron)
 	
 	match(datetime["weekday"]):
 		0:
@@ -89,24 +90,31 @@ func _updateClock():
 			weekdayName = "~~~"
 			pass
 	
-	dayText.text = "{hari}.".format({
-		hari = weekdayName
-	})
-	dateText.text = "{tanggal}-{bulan}-{tahun}".format({
-		tanggal = String(datetime.day).pad_zeros(2),
-		bulan = String(datetime.month).pad_zeros(2),
-		tahun = String(datetime.year).pad_zeros(4)
-	})
-	hourMinText.text = "{jam}:{menit}".format({
-		jam = String(datetime.hour).pad_zeros(2),
-		menit = String(datetime.minute).pad_zeros(2)
-	})
-	secondText.text = "{detik}".format({
-		detik = String(datetime.second).pad_zeros(2)
-	})
-	unixTimeText.text = "{waktuUnix}".format({
-		waktuUnix = String(unixtime).pad_zeros(20)
-	})
+	if dayText != null:
+		dayText.text = "{hari}.".format({
+			hari = weekdayName
+		})
+		dateText.text = "{tanggal}-{bulan}-{tahun}".format({
+			tanggal = String(datetime.day).pad_zeros(2),
+			bulan = String(datetime.month).pad_zeros(2),
+			tahun = String(datetime.year).pad_zeros(4)
+		})
+	
+	if hourMinText != null:
+		hourMinText.text = "{jam}:{menit}".format({
+			jam = String(datetime.hour).pad_zeros(2),
+			menit = String(datetime.minute).pad_zeros(2)
+		})
+	
+	if secondText != null:
+		secondText.text = "{detik}".format({
+			detik = String(datetime.second).pad_zeros(2)
+		})
+	
+	if unixTimeText != null:
+		unixTimeText.text = "{waktuUnix}".format({
+			waktuUnix = String(unixtime).pad_zeros(20)
+		})
 	pass
 
 # Called when the node enters the scene tree for the first time.
