@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://DummyTest/NOTIFUCUT.tscn" type="PackedScene" id=1]
+
+[node name="NotificationWTF" type="Node"]
+
+[node name="NOTIFUCUT" parent="." instance=ExtResource( 1 )]

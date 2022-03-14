@@ -4,15 +4,10 @@
 [ext_resource path="res://modules/UI/SparePart/TitleBarMini.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/KembaliButton.png" type="Texture" id=3]
 
-
 [node name="TitleBarMini" type="HBoxContainer"]
 anchor_right = 1.0
 margin_bottom = 90.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-BackButtonIcon = ExtResource( 3 )
 
 [node name="BackBacking" type="Button" parent="."]
 visible = false
@@ -30,4 +25,5 @@ size_flags_vertical = 7
 custom_fonts/font = ExtResource( 1 )
 text = "Darn Label"
 valign = 1
+
 [connection signal="pressed" from="BackBacking" to="." method="_on_BackBacking_pressed"]

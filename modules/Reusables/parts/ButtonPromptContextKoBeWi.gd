@@ -9,8 +9,10 @@ enum JoypadMode {ADAPTIVE, FORCE_KEYBOARD, FORCE_JOYPAD}
 enum FitMode {NONE, MATCH_WIDTH, MATCH_HEIGHT}
 enum JoypadModel {AUTO, XBOX, DUALSHOCK, JOY_CON}
 
-export var action_title: String setget set_action_title
-export var action_name: String setget set_action_name
+onready var actionIcon = $ContainsThese/ActionIcon
+onready var actionLabel = $ContainsThese/ActionLabel
+export var action_title: String = "" setget set_action_title
+export var action_name: String = "" setget set_action_name
 export(JoypadMode) var joypad_mode: int = 0 setget set_joypad_mode
 export(JoypadModel) var joypad_model setget set_joypad_model
 export var favor_mouse: bool = true setget set_favor_mouse
@@ -18,14 +20,12 @@ export(FitMode) var fit_mode: int = 1 setget set_fit_mode
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
-var cached_model:String setget ,get_cached_model
-var base_path: String setget ,get_base_path
-var use_joypad:bool setget ,get_use_joypad
-var pending_refresh: bool setget ,get_pending_refresh
+#var cached_model:String setget ,get_cached_model
+#var base_path: String setget ,get_base_path
+#var use_joypad:bool setget ,get_use_joypad
+#var pending_refresh: bool setget ,get_pending_refresh
 var debug_deviceName = "Entahlah"
 var own_pending_refresh: bool
-onready var actionIcon = $ContainsThese/ActionIcon
-onready var actionLabel = $ContainsThese/ActionLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,11 +37,13 @@ func _ready() -> void:
 
 func set_action_title(title:String) -> void:
 	action_title = title
-	actionLabel.text = action_title
+#	actionLabel.text = title
+	$ContainsThese/ActionLabel.text = title
 
 func set_action_name(name:String) -> void:
 	action_name = name
-	actionIcon.action_name = actionIcon
+#	actionIcon.action_name = actionIcon
+	$ContainsThese/ActionIcon.action_name = name
 
 func set_joypad_mode(mode:int) -> void:
 	joypad_mode = mode
@@ -97,14 +99,20 @@ func get_image(type: int, image: String) -> Texture:
 func get_use_joypad():
 	return actionIcon.use_joypad
 
-func get_cached_model():
-	return actionIcon.cached_model
+#func get_cached_model():
+#	return actionIcon.cached_model
 
-func get_base_path():
-	return actionIcon.base_path
+# error nil
+#func get_base_path():
+#	return actionIcon.base_path if actionIcon.base_path != null else ""
+#	if actionIcon.base_path != null:
+#		return actionIcon.base_path
+#		pass
+#	else:
+#		return ""
 
-func get_pending_refresh():
-	return actionIcon.pending_refresh
+#func get_pending_refresh():
+#	return actionIcon.pending_refresh
 
 func _init() -> void:
 	pass
@@ -145,16 +153,23 @@ func _input(event: InputEvent) -> void:
 	if not is_visible_in_tree():
 		return
 	
-	if use_joypad and (event is InputEventKey or event is InputEventMouseButton or event is InputEventMouseMotion):
+	if actionIcon.use_joypad and (event is InputEventKey or event is InputEventMouseButton or event is InputEventMouseMotion):
 #		use_joypad = false
 		refresh()
 		pass
-	elif not use_joypad and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
+	elif not actionIcon.use_joypad and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
 #		use_joypad = true
 		refresh()
 		pass
 	
 #	debug_deviceName = event.get_device()
+	
+	if event.is_action_pressed(action_name):
+		flat = false
+		pass
+	elif event.is_action_released(action_name):
+		flat = true
+		pass
 	pass
 
 func on_joy_connection_changed(device: int, connected: bool):

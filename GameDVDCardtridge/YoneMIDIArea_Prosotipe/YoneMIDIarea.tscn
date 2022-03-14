@@ -39,10 +39,10 @@ custom_fonts/font = SubResource( 1 )
 bus = "Music"
 script = ExtResource( 1 )
 file = "res://DummyTest/dataArlez80/fairyland_gm.mid"
-load_all_voices_from_soundfont = true
-no_reload_soundfont = true
+load_all_voices_from_soundfont = false
 soundfont = "res://Soundfonts/Aspirin-Stereo.sf2"
 bus = "Music"
+
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Menu404/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
 

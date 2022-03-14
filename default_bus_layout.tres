@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=5 format=2]
+[gd_resource type="AudioBusLayout" load_steps=8 format=2]
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id=1]
 resource_name = "SpectrumAnalyzer"
@@ -10,6 +10,15 @@ resource_name = "SpectrumAnalyzer"
 resource_name = "SpectrumAnalyzer"
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id=4]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id=5]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectRecord" id=6]
+resource_name = "Record"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id=7]
 resource_name = "SpectrumAnalyzer"
 
 [resource]
@@ -45,3 +54,15 @@ bus/4/mute = false
 bus/4/bypass_fx = false
 bus/4/volume_db = 0.0
 bus/4/send = "SoundEffect"
+bus/4/effect/0/effect = SubResource( 5 )
+bus/4/effect/0/enabled = true
+bus/5/name = "Recording"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = "Master"
+bus/5/effect/0/effect = SubResource( 6 )
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource( 7 )
+bus/5/effect/1/enabled = true

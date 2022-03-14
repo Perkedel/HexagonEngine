@@ -3,13 +3,19 @@ extends Label
 
 # fonts by https://www.keshikan.net/fonts-e.html, OpenFont SIL 1.1
 # built the Label for Godot by JOELwindows7, GNU GPL v3
+const fellbackChooseMode:String = "7Seg"
+const fellbackChooseForm:String = "Classic"
+const fellbackFont:DynamicFont = preload("res://fonts/kashikan-DSEG/kashikan-DSEG.tres")
 
 export(float) var size = 16.0
-onready var fonto = get_font("font")
-export(String,"7Seg","14Seg","Weather") var chooseMode = "7Seg"
-export(String,"Classic","Modern","Egg") var chooseForm = "Classic"
-export(bool) var miniForm = false
-export(String,"Regular","Italic","Bold","BoldItalic", "Light", "LightItalic") var fontWeight = "Regular"
+onready var fonto:DynamicFont = get_font("font")
+export(String,"7Seg","14Seg","Weather") var chooseMode = fellbackChooseMode setget set_choose_mode
+export(String,"Classic","Modern","Egg") var chooseForm = fellbackChooseForm setget set_choose_form
+export(bool) var miniForm = false setget set_mini_form
+export(String,"Regular","Italic","Bold","BoldItalic", "Light", "LightItalic") var fontWeight = "Regular" setget set_font_weight
+export(Color) var fontColor = Color.white setget set_font_color
+export(Dictionary) var Fonts = _defaultFont setget set_fonts_dictionary
+
 const fellBackClassic:DynamicFontData = preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf")
 const fellBackModern:DynamicFontData = preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
 onready var fellBackClassic7:DynamicFontData = preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf")
@@ -17,7 +23,7 @@ const fellBackModern7:DynamicFontData = preload("res://font/fonts-DSEG/DSEG7-Mod
 const fellBackWeather:DynamicFontData = preload("res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf")
 export(bool) var justUseFellBackCustomInstead = false
 export(DynamicFontData) var fellBackPleaseAssignCustom = load("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
-export(Color) var fontColor = Color.white
+
 const _defaultFont:Dictionary = {
 	"7Seg":{
 		"Classic":{
@@ -121,13 +127,19 @@ const _defaultFont:Dictionary = {
 		}
 	}
 }
-export(Dictionary) var Fonts = _defaultFont
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 func _updateFont():
+	# safety check! without this, it could error invalid set index base Nil.
+	if fonto == null:
+		return
+	
 	fonto.chooseMode = chooseMode
+#	fonto.set_deferred("chooseMode", chooseMode)
+#	fonto.get_script().chooseMode = chooseMode
 	fonto.chooseForm = chooseForm
 	fonto.miniForm = miniForm
 	fonto.fontWeight = fontWeight
@@ -167,10 +179,34 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	_updateFont()
+#	_updateFont()
 	pass
 
 func set_font_size(value):
 	# https://godotengine.org/qa/42430/changing-font-size-of-theme-or-control-at-runtime?show=42430#q42430
 	#fonto.size = value
 	pass
+
+func set_font_color(whichColor:Color):
+	fontColor = whichColor
+	_updateFont()
+
+func set_choose_mode(whichIs:String = fellbackChooseMode):
+	chooseMode = whichIs
+	_updateFont()
+
+func set_choose_form(whichIs:String = fellbackChooseForm):
+	chooseForm = whichIs
+	_updateFont()
+
+func set_mini_form(with:bool = false):
+	miniForm = with
+	_updateFont()
+
+func set_font_weight(howThicc:String = "Regular"):
+	fontWeight = howThicc
+	_updateFont()
+
+func set_fonts_dictionary(with:Dictionary = _defaultFont):
+	Fonts = with
+	_updateFont()

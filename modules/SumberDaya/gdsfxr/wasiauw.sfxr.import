@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamSample"
+path="res://.import/wasiauw.sfxr-0a59e067e350696bc587fa2cc2ba9bb4.sample"
+
+[deps]
+
+source_file="res://modules/SumberDaya/gdsfxr/wasiauw.sfxr"
+dest_files=[ "res://.import/wasiauw.sfxr-0a59e067e350696bc587fa2cc2ba9bb4.sample" ]
+
+[params]
+
+loop=false

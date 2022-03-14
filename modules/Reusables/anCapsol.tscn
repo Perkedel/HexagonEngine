@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://modules/ShadeMaterials/Energie.tres" type="Material" id=1]
 
 [sub_resource type="CapsuleShape" id=5]
 
@@ -11,3 +13,7 @@ shape = SubResource( 5 )
 
 [node name="CSGMesh" type="CSGMesh" parent="."]
 mesh = SubResource( 6 )
+material = ExtResource( 1 )
+__meta__ = {
+"apply_volumetrics": false
+}

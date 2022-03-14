@@ -17,6 +17,3 @@ custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
 bbcode_text = "Super Rich Text Label"
 text = "Super Rich Text Label"
-__meta__ = {
-"_edit_use_anchors_": false
-}

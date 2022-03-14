@@ -20,7 +20,6 @@ chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=2]
@@ -33,7 +32,6 @@ chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=3]
@@ -47,7 +45,6 @@ chooseForm = "Classic"
 miniForm = false
 fontWeight = "BoldItalic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=4]
@@ -61,7 +58,6 @@ chooseForm = "Classic"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=5]
@@ -75,7 +71,6 @@ chooseForm = "Modern"
 miniForm = true
 fontWeight = "Regular"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -89,7 +84,6 @@ chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=7]
@@ -102,7 +96,6 @@ chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=8]
@@ -116,7 +109,6 @@ chooseForm = "Classic"
 miniForm = false
 fontWeight = "BoldItalic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=9]
@@ -130,7 +122,6 @@ chooseForm = "Classic"
 miniForm = false
 fontWeight = "Italic"
 Fonts = {
-
 }
 
 [sub_resource type="DynamicFont" id=10]
@@ -144,7 +135,6 @@ chooseForm = "Modern"
 miniForm = true
 fontWeight = "Regular"
 Fonts = {
-
 }
 
 [node name="JustClock" type="Control"]
@@ -163,6 +153,7 @@ __meta__ = {
 }
 
 [node name="Bekgron" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -186,23 +177,21 @@ margin_bottom = 56.0
 
 [node name="Day" parent="BehindFields/topField" index="0"]
 margin_right = 138.0
+custom_colors/font_color = Color( 0.1, 0.1, 0.1, 1 )
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "~~~."
-fontColor = Color( 0, 0, 0, 1 )
+fontColor = Color( 0.1, 0.1, 0.1, 1 )
 Fonts = {
-
 }
 
 [node name="Date" parent="BehindFields/topField" index="1"]
 margin_left = 142.0
 margin_right = 540.0
+custom_colors/font_color = Color( 0.1, 0.1, 0.1, 1 )
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "88-88-8888"
-fontColor = Color( 0, 0, 0, 1 )
+fontColor = Color( 0.1, 0.1, 0.1, 1 )
 Fonts = {
-
 }
 
 [node name="bottomField" parent="BehindFields" index="1"]
@@ -212,23 +201,21 @@ margin_bottom = 196.0
 
 [node name="HourMin" parent="BehindFields/bottomField" index="0"]
 margin_right = 450.0
+custom_colors/font_color = Color( 0.1, 0.1, 0.1, 1 )
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "88 88"
-fontColor = Color( 0, 0, 0, 1 )
+fontColor = Color( 0.1, 0.1, 0.1, 1 )
 Fonts = {
-
 }
 
 [node name="Second" parent="BehindFields/bottomField" index="1"]
 margin_left = 454.0
 margin_right = 540.0
+custom_colors/font_color = Color( 0.1, 0.1, 0.1, 1 )
 custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "88"
-fontColor = Color( 0, 0, 0, 1 )
+fontColor = Color( 0.1, 0.1, 0.1, 1 )
 Fonts = {
-
 }
 
 [node name="underField" parent="BehindFields" index="2"]
@@ -238,12 +225,11 @@ margin_bottom = 240.0
 
 [node name="UnixTime" parent="BehindFields/underField" index="0"]
 margin_right = 540.0
+custom_colors/font_color = Color( 0.1, 0.1, 0.1, 1 )
 custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "88888888888888888888"
-fontColor = Color( 0, 0, 0, 1 )
+fontColor = Color( 0.1, 0.1, 0.1, 1 )
 Fonts = {
-
 }
 
 [node name="ThoughFields" parent="." instance=ExtResource( 2 )]
@@ -263,17 +249,20 @@ margin_bottom = 71.0
 
 [node name="Day" parent="ThoughFields/topField" index="0"]
 margin_right = 138.0
+custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 6 )
+fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
-
 }
 
 [node name="Date" parent="ThoughFields/topField" index="1"]
 margin_left = 142.0
 margin_right = 540.0
+custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 7 )
+text = "14-03-2022"
+fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
-
 }
 
 [node name="bottomField" parent="ThoughFields" index="1"]
@@ -283,17 +272,21 @@ margin_bottom = 211.0
 
 [node name="HourMin" parent="ThoughFields/bottomField" index="0"]
 margin_right = 450.0
+custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 8 )
+text = "15:59"
+fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
-
 }
 
 [node name="Second" parent="ThoughFields/bottomField" index="1"]
 margin_left = 454.0
 margin_right = 540.0
+custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 9 )
+text = "48"
+fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
-
 }
 
 [node name="underField" parent="ThoughFields" index="2"]
@@ -303,12 +296,12 @@ margin_bottom = 255.0
 
 [node name="UnixTime" parent="ThoughFields/underField" index="0"]
 margin_right = 540.0
+custom_colors/font_color = Color( 0.68, 1, 0.18, 1 )
 custom_fonts/font = SubResource( 10 )
-text = "12345678901234567890"
+text = "00000000001647248388"
+fontColor = Color( 0.68, 1, 0.18, 1 )
 Fonts = {
-
 }
 
 [editable path="BehindFields"]
-
 [editable path="ThoughFields"]

@@ -3,9 +3,9 @@ extends Control
 # https://www.keshikan.net/fonts-e.html
 # JOELwindows7 remake the clock again in Godot, add Unix time too!
 
-export(Color) var textColor = Color.greenyellow
-export(Color) var offColor = Color(0.1,0.1,0.1)
-export(Color) var bekgronColor = Color.black
+export(Color) var textColor = Color.greenyellow setget set_text_color
+export(Color) var offColor = Color(0.1,0.1,0.1) setget set_off_color
+export(Color) var bekgronColor = Color.black setget set_bekgron_color
 onready var bekgron = $Bekgron
 onready var dayText = $ThoughFields/topField/Day
 onready var dateText = $ThoughFields/topField/Date
@@ -27,6 +27,18 @@ var unixtime = OS.get_unix_time()
 # var a = 2
 # var b = "text"
 
+func set_text_color(with:Color = Color.greenyellow):
+	textColor = with
+	_syncParameter()
+
+func set_off_color(with:Color = Color(0.1,0.1,0.1)):
+	offColor = with
+	_syncParameter()
+
+func set_bekgron_color(with:Color = Color.black):
+	bekgronColor = with
+	_syncParameter()
+
 func _startClock():
 	bekgron.self_modulate = bekgronColor
 	
@@ -46,10 +58,15 @@ func _startClock():
 	_updateClock()
 	pass
 
+func _syncParameter():
+	_startClock()
+	pass
+
 func _updateClock():
 	datetime = OS.get_datetime()
 	unixtime = OS.get_unix_time()
 	bekgron.self_modulate = bekgronColor
+#	bekgron.set_deferred("self_modulate", bekgron)
 	
 	match(datetime["weekday"]):
 		0:
@@ -97,6 +114,9 @@ func _ready():
 	_startClock()
 	pass # Replace with function body.
 
+func _init():
+#	call_deferred("_syncParameter")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

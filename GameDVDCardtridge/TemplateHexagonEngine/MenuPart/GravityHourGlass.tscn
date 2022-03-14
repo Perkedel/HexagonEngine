@@ -42,7 +42,7 @@ void vertex() {
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
 shader_param/speed = 2.0
-shader_param/rotating = true
+shader_param/rotating = false
 
 [node name="GravityHourGlass" type="TextureRect"]
 material = SubResource( 2 )

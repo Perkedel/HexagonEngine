@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot_sfxr/SfxrStreamPlayer.gd" type="Script" id=1]
+
+[sub_resource type="AudioStreamGenerator" id=1]
+buffer_length = 0.171293
+
+[node name="SfxrStreamPlayer" type="AudioStreamPlayer"]
+stream = SubResource( 1 )
+script = ExtResource( 1 )
+wave/type = 3
+sample_params/sound_vol = 0.5
+sample_params/sample_rate = 44100.0
+envelope/attack_time = 0.0
+envelope/sustain_time = 0.269092
+envelope/punch_time = 0.557105
+envelope/decay_time = 0.0557996
+frequency/start_frequency = 0.386293
+frequency/min_freq_cutoff = 0.0
+frequency/slide = -0.372928
+frequency/delta_slide = 0.0
+vibrato/depth = 0.397346
+vibrato/speed = 0.223747
+arpeggiation/frequency_mult = 0.0
+arpeggiation/change_speed = 0.0
+duty_cycle/duty_cycle = 0.0
+duty_cycle/sweep = 0.0
+retrigger/rate = 0.0
+flanger/offset = 0.0
+flanger/sweep = 0.0
+low_pass_filter/cutoff_frequency = 1.0
+low_pass_filter/cutoff_sweep = 0.0
+low_pass_filter/resonance = 0.0
+high_pass_filter/cutoff_frequency = 0.0
+high_pass_filter/cutoff_sweep = 0.0
+actions/generator = null
+actions/play = null

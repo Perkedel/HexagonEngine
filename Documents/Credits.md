@@ -531,3 +531,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://godotengine.org/asset-library/asset/1193
 - https://godotengine.org/asset-library/asset/1196
 - https://godotengine.org/asset-library/asset/1203
+- https://godotengine.org/qa/91750/invalid-get-index-bought-on-base-nil-why

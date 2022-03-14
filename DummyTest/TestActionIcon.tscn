@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://modules/Reusables/parts/KoBeWiActionIcon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/ActionIcon/ActionIcon.gd" type="Script" id=2]
 [ext_resource path="res://addons/ActionIcon/Keyboard/Blank.png" type="Texture" id=3]
 [ext_resource path="res://modules/Reusables/parts/ButtonPromptContextKoBeWi.tscn" type="PackedScene" id=4]
+[ext_resource path="res://modules/Reusables/parts/ButtonPromptContext.tscn" type="PackedScene" id=5]
+[ext_resource path="res://modules/Reusables/SFXRStreamPlayer/Dedd ciaut.tscn" type="PackedScene" id=6]
 
 [node name="TestActionIcon" type="Control"]
 anchor_right = 1.0
@@ -80,8 +82,33 @@ anchor_bottom = 1.0
 margin_top = -80.0
 alignment = 2
 
-[node name="ButtonPromptContextKoBeWi" parent="HBoxContainer" instance=ExtResource( 4 )]
-margin_left = 1720.0
-margin_right = 1920.0
+[node name="AcceptContext" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 904.0
+margin_right = 1104.0
 action_title = "Accept"
 action_name = "ui_accept"
+
+[node name="CancelContext" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 1108.0
+margin_right = 1308.0
+action_title = "Cancel"
+action_name = "ui_cancel"
+
+[node name="MoveContext" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 1312.0
+margin_right = 1512.0
+action_title = "Move"
+action_name = "move"
+
+[node name="AnalogContext" parent="HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 1516.0
+margin_right = 1716.0
+action_title = "Tilt Front"
+action_name = "pinball_miringDepan"
+
+[node name="ButtonPromptContext" parent="HBoxContainer" instance=ExtResource( 5 )]
+margin_left = 1720.0
+margin_right = 1920.0
+margin_bottom = 80.0
+
+[node name="SfxrStreamPlayer" parent="." instance=ExtResource( 6 )]

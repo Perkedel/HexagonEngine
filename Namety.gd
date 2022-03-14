@@ -1,3 +1,4 @@
+tool
 extends Node
 
 # JOELwindows7: this is empty node just to make sure everything loads first
@@ -22,3 +23,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_FOCUS_IN:
+		print("refocused")
+		pass
+	pass

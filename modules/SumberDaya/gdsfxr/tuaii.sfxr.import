@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamSample"
+path="res://.import/tuaii.sfxr-fca27abcf36a42d4a1ad2ab196247229.sample"
+
+[deps]
+
+source_file="res://modules/SumberDaya/gdsfxr/tuaii.sfxr"
+dest_files=[ "res://.import/tuaii.sfxr-fca27abcf36a42d4a1ad2ab196247229.sample" ]
+
+[params]
+
+loop=false

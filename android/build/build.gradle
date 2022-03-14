@@ -9,7 +9,7 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
 //CHUNK_BUILDSCRIPT_REPOSITORIES_BEGIN
 //CHUNK_BUILDSCRIPT_REPOSITORIES_END
     }
@@ -25,9 +25,8 @@ apply plugin: 'com.android.application'
 
 allprojects {
     repositories {
-        mavenCentral()
         google()
-        jcenter()
+        mavenCentral()
 //CHUNK_ALLPROJECTS_REPOSITORIES_BEGIN
 //CHUNK_ALLPROJECTS_REPOSITORIES_END
 
@@ -44,9 +43,8 @@ allprojects {
 }
 
 dependencies {
-    implementation libraries.supportCoreUtils
     implementation libraries.kotlinStdLib
-    implementation libraries.v4Support
+    implementation libraries.androidxFragment
 
     if (rootProject.findProject(":lib")) {
         implementation project(":lib")
@@ -86,6 +84,8 @@ android {
         targetCompatibility versions.javaVersion
     }
 
+    assetPacks = [":assetPacks:installTime"]
+
     defaultConfig {
         // The default ignore pattern for the 'assets' directory includes hidden files and directories which are used by Godot projects.
         aaptOptions {
@@ -103,8 +103,8 @@ android {
         applicationId getExportPackageName()
         versionCode getExportVersionCode()
         versionName getExportVersionName()
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
+        minSdkVersion getExportMinSdkVersion()
+        targetSdkVersion getExportTargetSdkVersion()
 //CHUNK_ANDROID_DEFAULTCONFIG_BEGIN
 //CHUNK_ANDROID_DEFAULTCONFIG_END
     }
@@ -127,6 +127,15 @@ android {
     }
 
     signingConfigs {
+        debug {
+            if (hasCustomDebugKeystore()) {
+                storeFile new File(getDebugKeystoreFile())
+                storePassword getDebugKeystorePassword()
+                keyAlias getDebugKeyAlias()
+                keyPassword getDebugKeystorePassword()
+            }
+        }
+
         release {
             File keystoreFile = new File(getReleaseKeystoreFile())
             if (keystoreFile.isFile()) {

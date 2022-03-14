@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamSample"
+path="res://.import/Duar_brrrtd.sfxr-b957e0e02724a7c00556b906995aa427.sample"
+
+[deps]
+
+source_file="res://modules/SumberDaya/gdsfxr/Duar_brrrtd.sfxr"
+dest_files=[ "res://.import/Duar_brrrtd.sfxr-b957e0e02724a7c00556b906995aa427.sample" ]
+
+[params]
+
+loop=false
