@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,25 +12,25 @@
    viewBox="0 0 1920 1080"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="HexagonEngineBootSplash.svg"
-   inkscape:export-filename="C:\Users\ASUS\Documents\starring codes\Godot Projects\HexagonEngine\Sprites\HexagonEngineBootSplash.png"
+   inkscape:export-filename="C:\Users\joelr\Documents\starring codes\Godot Projects\HexagonEngine\Sprites\HexagonEngineBootSplash-PoliticalManeuver.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#202929"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="860.1587"
-     inkscape:cy="514.38842"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="885.65491"
+     inkscape:cy="497.70381"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -44,7 +42,8 @@
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true">
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid815" />
@@ -79,10 +78,12 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="OG"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-11.249992)">
+     transform="translate(0,-11.249992)"
+     style="display:none"
+     sodipodi:insensitive="true">
     <g
        transform="matrix(3.7795276,0,0,3.7795276,496,240.7303)"
        id="g956">
@@ -90,7 +91,7 @@
          id="g3553">
         <path
            sodipodi:type="star"
-           style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+           style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
            id="path3440"
            sodipodi:sides="6"
            sodipodi:cx="33.866665"
@@ -108,19 +109,19 @@
           <g
              id="g3526">
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452"
                cx="26.458334"
                cy="71.574997"
                r="3.175" />
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452-6"
                cx="33.866665"
                cy="71.574997"
                r="3.175" />
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452-4"
                cx="41.275002"
                cy="71.574997"
@@ -129,19 +130,19 @@
           <g
              id="g3531">
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452-9"
                cx="26.458334"
                cy="82.158333"
                r="3.175" />
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452-69"
                cx="33.866665"
                cy="82.158333"
                r="3.175" />
             <circle
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
                id="path3452-60"
                cx="41.275002"
                cy="82.158333"
@@ -162,10 +163,11 @@
              height="127.99999"
              width="768"
              id="rect3497" /></flowRegion><flowPara
-           id="flowPara3499">Hexagon Engine</flowPara></flowRoot>    </g>
+           id="flowPara3499">Hexagon Engine</flowPara></flowRoot>
+    </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:25.89477921px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.64736944"
+       style="font-style:normal;font-weight:normal;font-size:25.8948px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.647369"
        x="974.58044"
        y="1058.863"
        id="text2269"><tspan
@@ -173,7 +175,7 @@
          id="tspan2267"
          x="974.58044"
          y="1058.863"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.64736944">Based on Godot Engine</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.647369">Based on Godot Engine</tspan></text>
     <g
        id="g2301"
        transform="matrix(3.7795276,0,0,3.7795276,496,680.7303)">
@@ -192,7 +194,7 @@
            sodipodi:cx="33.866665"
            sodipodi:sides="6"
            id="path2271"
-           style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+           style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
            sodipodi:type="star" />
         <g
            id="g2289">
@@ -203,19 +205,19 @@
                cy="71.574997"
                cx="26.458334"
                id="circle2273"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
             <circle
                r="3.175"
                cy="71.574997"
                cx="33.866665"
                id="circle2275"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
             <circle
                r="3.175"
                cy="71.574997"
                cx="41.275002"
                id="circle2277"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
           </g>
           <g
              id="g2287">
@@ -224,19 +226,19 @@
                cy="82.158333"
                cx="26.458334"
                id="circle2281"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
             <circle
                r="3.175"
                cy="82.158333"
                cx="33.866665"
                id="circle2283"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
             <circle
                r="3.175"
                cy="82.158333"
                cx="41.275002"
                id="circle2285"
-               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79374999;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+               style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
           </g>
         </g>
       </g>
@@ -253,7 +255,8 @@
              x="192"
              y="226.51968"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu" /></flowRegion><flowPara
-           id="flowPara2297">Hexagon Engine</flowPara></flowRoot>    </g>
+           id="flowPara2297">Hexagon Engine</flowPara></flowRoot>
+    </g>
     <text
        id="text2305"
        y="903.01001"
@@ -281,7 +284,7 @@
            id="path1451" />
         <path
            inkscape:connector-curvature="0"
-           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.0444659;stroke-opacity:1"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04447;stroke-opacity:1"
            d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
            transform="translate(0,106.5)"
            id="rect1461" />
@@ -300,6 +303,147 @@
              width="1024"
              id="rect1486" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
-           id="flowPara1488">Perkedel Technologies</flowPara></flowRoot>    </g>
+           id="flowPara1488">Perkedel Technologies</flowPara></flowRoot>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Political Maneuver">
+    <g
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
+       id="g2602"
+       transform="matrix(0.44854884,0,0,0.44854884,708.72365,442.66306)">
+      <g
+         id="g2592"
+         transform="translate(-128,64)">
+        <path
+           id="path2588"
+           transform="translate(0,106.5)"
+           d="m 256,208 a 64,64 0 0 0 -64,64 64,64 0 0 0 64,64 h 64 a 64,64 0 0 0 64,-64 64,64 0 0 0 -64,-64 z"
+           style="opacity:1;fill:#ffc800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path2590"
+           transform="translate(0,106.5)"
+           d="m 288,224 a 4,4 0 0 0 -4,4 v 40 h -40 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 h 40 v 40 a 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 v -40 h 40 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 h -40 v -40 a 4,4 0 0 0 -4,-4 z"
+           style="opacity:1;fill:#fffe00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04447;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+      </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot2600"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.11470581;stroke-miterlimit:4;stroke-dasharray:none;"
+         transform="translate(-108.256,129.20475)"><flowRegion
+           id="flowRegion2596"
+           style="line-height:0;stroke:#000000;stroke-width:1.11470581;stroke-miterlimit:4;stroke-dasharray:none;fill:#ffffff;"><rect
+             id="rect2594"
+             width="1024"
+             height="128"
+             x="384"
+             y="272"
+             style="line-height:0;stroke:#000000;stroke-width:1.11470581;stroke-miterlimit:4;stroke-dasharray:none;fill:#ffffff;" /></flowRegion><flowPara
+           id="flowPara2598"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke:#000000;stroke-width:1.11470581;stroke-miterlimit:4;stroke-dasharray:none;fill:#ffffff;">Perkedel Technologies</flowPara></flowRoot>
+    </g>
+    <text
+       transform="translate(0,-11.249992)"
+       xml:space="preserve"
+       style="display:inline;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;"
+       x="968.20062"
+       y="903.01001"
+       id="text2614"><tspan
+         sodipodi:role="line"
+         id="tspan2612"
+         x="968.20062"
+         y="903.01001"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;">Powered by:</tspan></text>
+    <g
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
+       id="g3618"
+       transform="matrix(3.7795276,0,0,3.7795276,573.216,42.480327)">
+      <g
+         id="g3606">
+        <rect
+           y="110.73333"
+           x="118.53333"
+           height="33.866665"
+           width="50.799999"
+           id="rect3501"
+           style="opacity:1;fill:#0082ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79375;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
+        <flowRoot
+           transform="matrix(0.3744524,0,0,0.3744524,-60.181255,-48.777103)"
+           style="font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+           id="flowRoot3507"
+           xml:space="preserve"><flowRegion
+             style="font-size:96px;text-align:center;text-anchor:middle"
+             id="flowRegion3509"><rect
+               style="font-size:96px;text-align:center;text-anchor:middle"
+               y="418.51968"
+               x="448"
+               height="128"
+               width="192"
+               id="rect3511" /></flowRegion><flowPara
+             id="flowPara3513">CX</flowPara></flowRoot>
+      </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3515"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(0.26458333)"><flowRegion
+           id="flowRegion3517"
+           style="text-align:end;text-anchor:end;stroke:#ffffff;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"><rect
+             id="rect3519"
+             width="264"
+             height="128.00002"
+             x="184"
+             y="418.51968"
+             style="text-align:end;text-anchor:end;stroke:#ffffff;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
+           id="flowPara3521"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:ubuntu;-inkscape-font-specification:ubuntu;stroke:#ffffff;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">Open</flowPara></flowRoot>
+    </g>
+    <text
+       id="text4116"
+       y="1169.1494"
+       x="959.93146"
+       style="font-size:31.1204px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.162085"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.162085"
+         y="1169.1494"
+         x="959.93146"
+         id="tspan4114"
+         sodipodi:role="line">Godot Engine</tspan></text>
+    <text
+       transform="translate(0,-11.249992)"
+       id="text4120"
+       y="1058.863"
+       x="974.58044"
+       style="display:inline;font-style:normal;font-weight:normal;font-size:25.8948px;line-height:1.25;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.647369;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.647369;fill:#ffffff;stroke:#000000;"
+         y="1058.863"
+         x="974.58044"
+         id="tspan4118"
+         sodipodi:role="line">Based on Godot Engine</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="scrap"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <text
+       id="text4109"
+       y="1044.1494"
+       x="959.93146"
+       style="font-size:31.1204px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.162085"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.162085"
+         y="1044.1494"
+         x="959.93146"
+         id="tspan4107"
+         sodipodi:role="line">Godot Engine</tspan></text>
   </g>
 </svg>

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Namety.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/HexagonEngineBootSplash - Whait.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png" type="Texture" id=2]
 [ext_resource path="res://HexagonEngineCore.tscn" type="PackedScene" id=3]
 
 [node name="Namety" type="Node"]
@@ -11,9 +11,6 @@ LoadThis = ExtResource( 3 )
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer"]
 margin_right = 1920.0

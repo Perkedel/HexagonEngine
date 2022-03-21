@@ -1432,7 +1432,7 @@ config/description="Cinema enters game console"
 run/main_scene="res://Namety.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Perkedel Technologies/Hexagon Engine"
-boot_splash/image="res://Sprites/HexagonEngineBootSplash - Whait.png"
+boot_splash/image="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png"
 boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
 config/icon="res://Sprites/HexagonEngineSign.png"
 config/windows_native_icon="res://Sprites/HexagonEngineSign.ico"
@@ -1500,6 +1500,10 @@ mouse_cursor/tooltip_position_offset=Vector2( 30, 30 )
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 window/per_pixel_transparency/splash=true
+
+[editor]
+
+search_in_file_extensions=PoolStringArray( "gd", "gdshader", "shader", "json" )
 
 [editor_plugins]
 
