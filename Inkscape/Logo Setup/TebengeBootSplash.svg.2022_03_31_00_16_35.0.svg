@@ -8,9 +8,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:export-ydpi="96"
-   inkscape:export-xdpi="96"
-   inkscape:export-filename="C:\Users\joelr\Documents\starring codes\Godot Projects\Tebenge\GameDVDCardtridge\Tebenge\Assets\images\TebengeBootSplash.png"
+   inkscape:export-ydpi="64"
+   inkscape:export-xdpi="64"
+   inkscape:export-filename="C:\Users\joelr\Documents\starring codes\Godot Projects\Tebenge\GameDVDCardtridge\Tebenge\Assets\images\TebengeTVBanner.png"
    sodipodi:docname="TebengeBootSplash.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg935"
@@ -20,23 +20,6 @@
    width="1920">
   <defs
      id="defs929">
-    <inkscape:path-effect
-       hide_knots="false"
-       only_selected="false"
-       apply_with_radius="true"
-       apply_no_radius="true"
-       use_knot_distance="true"
-       flexible="false"
-       chamfer_steps="1"
-       radius="25"
-       mode="F"
-       method="auto"
-       unit="px"
-       satellites_param="F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1 @ F,0,0,1,0,25,0,1"
-       lpeversion="1"
-       is_visible="true"
-       id="path-effect1081"
-       effect="fillet_chamfer" />
     <inkscape:path-effect
        hide_knots="false"
        only_selected="false"
@@ -707,8 +690,8 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="301.59195"
-     inkscape:cx="944.27829"
+     inkscape:cy="252.03123"
+     inkscape:cx="954.13655"
      inkscape:zoom="0.49497475"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -1373,91 +1356,15 @@
        x="0"
        y="0" />
     <text
-       transform="skewX(-43.031646)"
-       id="text1073"
-       y="140"
-       x="982.31622"
+       xml:space="preserve"
        style="font-size:192px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
-       xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Light Italic'"
-         y="140"
-         x="982.31622"
-         id="tspan1071"
-         sodipodi:role="line">badvertisement</tspan></text>
-    <g
-       id="g1079"
-       style="display:inline"
-       transform="matrix(0.20565552,0,0,0.20565552,187.35219,137.35219)">
-      <circle
-         r="192"
-         cy="256"
-         cx="256"
-         id="circle1075"
-         style="fill:#00ff00;stroke:#ff0000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke" />
-      <path
-         sodipodi:type="star"
-         style="fill:#0000ff;stroke:#008000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-         id="path1077"
-         sodipodi:sides="8"
-         sodipodi:cx="256"
-         sodipodi:cy="256"
-         sodipodi:r1="152"
-         sodipodi:r2="115.32402"
-         sodipodi:arg1="-1.5707963"
-         sodipodi:arg2="-1.1780972"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         inkscape:transform-center-y="-6.3379927"
-         inkscape:path-effect="#path-effect1081"
-         d="m 279.09699,113.56709 61.28626,25.3856 a 60.355339,60.355339 45.000002 0 1 32.66407,32.66407 l 25.38559,61.28626 a 60.355339,60.355339 90.000002 0 1 0,46.19397 l -25.3856,61.28626 a 60.355339,60.355339 135 0 1 -32.66407,32.66407 l -61.28626,25.38559 a 60.355339,60.355339 1.5352345e-6 0 1 -46.19397,0 l -61.28626,-25.3856 a 60.355339,60.355339 45.000002 0 1 -32.66407,-32.66407 l -25.38559,-61.28626 a 60.355339,60.355339 90.000002 0 1 0,-46.19397 l 25.3856,-61.28626 a 60.355339,60.355339 135 0 1 32.66407,-32.66407 l 61.28626,-25.38559 a 60.355339,60.355339 1.5352345e-6 0 1 46.19397,0 z" />
-    </g>
-    <text
-       id="text1085"
-       y="272.86237"
-       x="346.93631"
-       style="font-size:65.8858px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;stroke-width:0.343155"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.343155"
-         y="272.86237"
-         x="354.52863"
-         id="tspan1083"
-         sodipodi:role="line">10 X = </tspan></text>
-    <g
-       transform="matrix(0.14498963,0,0,0.14498963,442.88265,222.88265)"
-       style="display:inline"
-       id="g1730-1">
-      <path
-         sodipodi:type="star"
-         style="fill:#ff6600;stroke:#ff0000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-         id="path890-1"
-         sodipodi:sides="20"
-         sodipodi:cx="256"
-         sodipodi:cy="256"
-         sodipodi:r1="232"
-         sodipodi:r2="164.04881"
-         sodipodi:arg1="-1.5707963"
-         sodipodi:arg2="-1.4137167"
-         inkscape:flatsided="false"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 256.00001,24 25.66288,69.9709 46.02906,-58.61601 2.78465,74.47655 61.88958,-41.523379 -20.36615,71.691909 71.69192,-20.36614 -41.52339,61.88957 74.47655,2.78466 -58.61601,46.02905 69.9709,25.6629 -69.9709,25.66288 58.61601,46.02906 -74.47655,2.78465 41.52338,61.88958 -71.69191,-20.36615 20.36614,71.69192 -61.88957,-41.52339 -2.78466,74.47655 L 281.66289,418.0291 255.99999,488 230.33711,418.0291 184.30805,476.64511 181.5234,402.16856 119.63382,443.69194 139.99997,372.00003 68.308054,392.36617 109.83144,330.4766 35.354886,327.69194 93.9709,281.66289 24,255.99999 93.9709,230.33711 35.35489,184.30805 109.83144,181.5234 68.308061,119.63382 139.99997,139.99997 119.63383,68.308054 181.5234,109.83144 184.30806,35.354886 230.33711,93.9709 Z" />
-      <path
-         sodipodi:type="star"
-         style="fill:#ffff00;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-         id="path892-1"
-         sodipodi:sides="20"
-         sodipodi:cx="256"
-         sodipodi:cy="256"
-         sodipodi:r1="160"
-         sodipodi:r2="113.13712"
-         sodipodi:arg1="-1.5707963"
-         sodipodi:arg2="-1.4137167"
-         inkscape:flatsided="false"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 256,96 17.69854,48.25578 31.74418,-40.42482 1.92046,51.36312 42.68246,-28.6368 -14.04561,49.44269 49.44269,-14.04561 -28.63681,42.68246 51.36313,1.92046 -40.42482,31.74417 L 416,256 l -48.25578,17.69854 40.42482,31.74418 -51.36312,1.92046 28.6368,42.68246 -49.44269,-14.04561 14.04561,49.44269 -42.68246,-28.63681 -1.92046,51.36313 L 273.69855,367.74422 256,416 l -17.69854,-48.25578 -31.74418,40.42482 -1.92046,-51.36312 -42.68246,28.6368 14.04561,-49.44269 -49.44269,14.04561 28.63681,-42.68246 -51.36313,-1.92046 40.42482,-31.74417 L 96,256 l 48.25578,-17.69854 -40.42482,-31.74418 51.36312,-1.92046 -28.6368,-42.68246 49.44269,14.04561 -14.04561,-49.44269 42.68246,28.63681 1.92046,-51.36313 31.74417,40.42482 z" />
-    </g>
+       x="960"
+       y="140"
+       id="text7650"><tspan
+         sodipodi:role="line"
+         id="tspan7648"
+         x="960"
+         y="140">b</tspan></text>
   </g>
   <g
      inkscape:label="TVbanner"
