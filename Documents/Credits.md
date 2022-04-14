@@ -532,3 +532,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://godotengine.org/asset-library/asset/1196
 - https://godotengine.org/asset-library/asset/1203
 - https://godotengine.org/qa/91750/invalid-get-index-bought-on-base-nil-why
+- https://github.com/godotengine/godot-git-plugin/ Godot official VCS Git plugin
+- https://godotengine.org/article/turn-android-app-quest-vr-app-3-steps turn regular android app into Meta Quest app XR
+- https://github.com/godotengine/godot-docs/issues/4018
