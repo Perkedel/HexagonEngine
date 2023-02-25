@@ -1,5 +1,0 @@
-# Put here names of standard framewors to include in xcode project
-# You also can comment them with #
-
-Accelerate.framework
-
