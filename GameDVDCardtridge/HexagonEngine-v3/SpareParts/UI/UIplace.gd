@@ -1,28 +1,28 @@
 extends Control
 
-onready var PauseMainMenuNode = $PauseMainMenu
-onready var GameplayHUDMenuNode = $GameplayHUDMenu
-onready var JustPauseMenuNode = $JustPauseMenu
-onready var AreYouSureDialog = $SystemDialogues/AreYouSureDialog
+@onready var PauseMainMenuNode = $PauseMainMenu
+@onready var GameplayHUDMenuNode = $GameplayHUDMenu
+@onready var JustPauseMenuNode = $JustPauseMenu
+@onready var AreYouSureDialog = $SystemDialogues/AreYouSureDialog
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal doChangeDVD
 signal doShutdown
 enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3}
-export(DialogConfirmsFor) var DialogSelectAction
+@export var DialogSelectAction: DialogConfirmsFor
 
 func preloadPauseMainMenu(scened:PackedScene):
-	PauseMainMenuNode.add_child(scened.instance())
+	PauseMainMenuNode.add_child(scened.instantiate())
 	for mes in PauseMainMenuNode.get_children():
-		mes.connect("doChangeDVD", self, "_on_ChangeDVD_do")
-		mes.connect("doShutdown", self, "_on_Shutdown_do")
+		mes.connect("doChangeDVD", Callable(self, "_on_ChangeDVD_do"))
+		mes.connect("doShutdown", Callable(self, "_on_Shutdown_do"))
 
 func preloadGameplayHUDMenu(scened:PackedScene):
-	GameplayHUDMenuNode.add_child(scened.instance())
+	GameplayHUDMenuNode.add_child(scened.instantiate())
 
 func preloadJustPauseMenu(scened:PackedScene):
-	JustPauseMenuNode.add_child(scened.instance())
+	JustPauseMenuNode.add_child(scened.instantiate())
 
 func backToMainMenu():
 	PauseMainMenuNode.show()

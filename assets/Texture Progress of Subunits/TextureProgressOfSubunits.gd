@@ -1,9 +1,9 @@
 extends Control
 
-export var num_subunits = 1 setget set_num_subunits
-export var percent = 0.0 setget set_percent #0-1
+@export var num_subunits = 1: set = set_num_subunits
+@export var percent = 0.0: set = set_percent
 
-export var margin_x = 10
+@export var margin_x = 10
 
 func _ready():
 	set_num_subunits(num_subunits)
@@ -38,7 +38,7 @@ func set_num_subunits(new_num_subunits):
 			for i in range(new_num_subunits):
 				var tp = $ReferenceTextureProgress.duplicate()
 				$CreatedTextureProgresses.add_child(tp)
-				tp.rect_position = Vector2(i * (tp.rect_size.x + margin_x), 0)
+				tp.position = Vector2(i * (tp.size.x + margin_x), 0)
 				tp.visible = true
 	
 	num_subunits = new_num_subunits
@@ -46,11 +46,11 @@ func set_num_subunits(new_num_subunits):
 
 func get_width():
 	var tp = _last_tp()
-	return tp.rect_position.x + tp.rect_size.x
+	return tp.position.x + tp.size.x
 
 func get_height():
 	var tp = _last_tp()
-	return tp.rect_position.y + tp.rect_size.y
+	return tp.position.y + tp.size.y
 
 func _last_tp():
 	var num_children = $CreatedTextureProgresses.get_children().size()

@@ -4,10 +4,10 @@
 [ext_resource path="res://GameDVDCardtridge/BolaAccelerometer/TembokNyatu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GameDVDCardtridge/BolaAccelerometer/MiringMeterSemangat.tscn" type="PackedScene" id=4]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="FontFile" id=5]
 [ext_resource path="res://GameDVDCardtridge/BolaAccelerometer/Bola2D.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 size = 48
@@ -36,8 +36,8 @@ __meta__ = {
 [node name="MengandungMenu" type="HBoxContainer" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.698303
-margin_right = 0.698242
+offset_left = 0.698303
+offset_right = 0.698242
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,19 +45,19 @@ __meta__ = {
 
 [node name="Menu404" parent="CanvasLayer/Control" instance=ExtResource( 3 )]
 anchor_right = 1.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 63.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 63.0
 
 [node name="ChangeDVDButton" parent="CanvasLayer/Control/Menu404" index="0"]
-margin_left = 631.0
-margin_right = 931.0
-custom_fonts/font = SubResource( 1 )
+offset_left = 631.0
+offset_right = 931.0
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="ExitGameButton" parent="CanvasLayer/Control/Menu404" index="1"]
-margin_left = 935.0
-margin_right = 1289.0
-custom_fonts/font = SubResource( 1 )
+offset_left = 935.0
+offset_right = 1289.0
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="MiringMeterSemangat" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
 [connection signal="pressed" from="CanvasLayer/Control/Menu404/ChangeDVDButton" to="." method="_on_ChangeDVDButton_pressed"]

@@ -12,7 +12,7 @@
 [ext_resource path="res://player/abilities/footstep_sound/footstep5.wav" type="AudioStream" id=10]
 [ext_resource path="res://player/abilities/footstep_sound/footstep9.wav" type="AudioStream" id=11]
 
-[node name="FootstepSound" type="Spatial"]
+[node name="FootstepSound" type="Node3D"]
 script = ExtResource( 1 )
 footstep_sound1 = ExtResource( 2 )
 footstep_sound2 = ExtResource( 3 )

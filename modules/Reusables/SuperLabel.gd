@@ -1,20 +1,20 @@
-tool
+@tool
 extends Label
 
 #onready var superLabelFont:DynamicFont = preload("res://modules/Reusables/SuperLabelDynamicFont.tres")
-export(DynamicFontData) var fontFile = load("res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf") setget set_font_file
-onready var fonto = get_font("font")
-export(float) var size = 24.0 setget set_font_size
-export(Color) var fontColor = Color.white setget set_font_color # to rechange again, use add color overide directly. if it is in process, it lags!
-export(float) var outlineSize = 1.0 setget set_outline_size
-export(Color) var OutlineColor = Color.black setget set_outline_color
-export(bool) var useMipmaps = false setget set_use_mipmaps
-export(bool) var useFilter = false setget set_use_filter
+@export var fontFile: FontFile = load("res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"): set = set_font_file
+@onready var fonto = get_font("font")
+@export var size: float = 24.0: set = set_font_size
+@export var fontColor: Color = Color.WHITE: set = set_font_color
+@export var outlineSize: float = 1.0: set = set_outline_size
+@export var OutlineColor: Color = Color.BLACK: set = set_outline_color
+@export var useMipmaps: bool = false: set = set_use_mipmaps
+@export var useFilter: bool = false: set = set_use_filter
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-func set_font_file(theFont:DynamicFontData):
+func set_font_file(theFont:FontFile):
 	fontFile = theFont
 	_updateFont()
 
@@ -61,7 +61,7 @@ func _updateFont():
 func _ready():
 	#fonto = get_font("font")
 	#add_font_override("font",superLabelFont)
-	add_color_override("font_color",fontColor)
+	add_theme_color_override("font_color",fontColor)
 	_updateFont()
 	pass # Replace with function body.
 

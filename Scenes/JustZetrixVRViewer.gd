@@ -1,10 +1,10 @@
-extends WindowDialog
+extends Window
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var zetrixViewport:Viewport
+var zetrixViewport:SubViewport
 var images
 var ZetrixCheatAttempt:String
 
@@ -15,10 +15,10 @@ func _ready():
 	pass # Replace with function body.
 
 # Demo from 3D in 2D Godot official
-func ReceiveZetrixViewport(getIt:Viewport):
+func ReceiveZetrixViewport(getIt:SubViewport):
 	zetrixViewport = getIt
-	yield(get_tree(), "idle_frame")
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
+	await get_tree().idle_frame
 	images = zetrixViewport.get_texture()
 	$ZetrixTextureResult.texture = images
 	pass

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/GradeAUnderA Tada.wav-d244066f4984f10844f02b2f1b127be1.sample"
+type="AudioStreamWAV"
+uid="uid://cw5ergjfyatqw"
+path="res://.godot/imported/GradeAUnderA Tada.wav-d244066f4984f10844f02b2f1b127be1.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/GradeAUnderA Tada.wav"
-dest_files=[ "res://.import/GradeAUnderA Tada.wav-d244066f4984f10844f02b2f1b127be1.sample" ]
+dest_files=["res://.godot/imported/GradeAUnderA Tada.wav-d244066f4984f10844f02b2f1b127be1.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

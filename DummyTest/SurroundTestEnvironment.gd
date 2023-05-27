@@ -1,10 +1,10 @@
-extends Spatial
+extends Node3D
 
-onready var MainSpk = $Speaker
-onready var SubSpk = $Subwoofer
-onready var MainSpkButton = $SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker
-onready var SubSpkButton = $SpeakerPanel/VBoxContainer/SpeakerContains/LFESpeaker
-onready var labeler = $SpeakerPanel/VBoxContainer/Labelrer
+@onready var MainSpk = $Speaker
+@onready var SubSpk = $Subwoofer
+@onready var MainSpkButton = $SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker
+@onready var SubSpkButton = $SpeakerPanel/VBoxContainer/SpeakerContains/LFESpeaker
+@onready var labeler = $SpeakerPanel/VBoxContainer/Labelrer
 var speakerCount = 0
 var subwooferCount = 0
 # Declare member variables here. Examples:
@@ -15,11 +15,11 @@ var subwooferCount = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for eachButton in range(MainSpkButton.get_child_count()):
-		MainSpkButton.get_child(eachButton).connect("pressed",MainSpk.get_child(eachButton),"test_me")
+		MainSpkButton.get_child(eachButton).connect("pressed", Callable(MainSpk.get_child(eachButton), "test_me"))
 		print("Connect Speaker " + String(eachButton))
 		speakerCount+=1
 	for eachButton in range(SubSpkButton.get_child_count()):
-		SubSpkButton.get_child(eachButton).connect("pressed",SubSpk.get_child(eachButton),"test_me")
+		SubSpkButton.get_child(eachButton).connect("pressed", Callable(SubSpk.get_child(eachButton), "test_me"))
 		print("Connect Subwoofer " + String(eachButton))
 		subwooferCount+=1
 	pass # Replace with function body.

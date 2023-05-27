@@ -1,4 +1,4 @@
-tool
+@tool
 extends LineEdit
 
 var previousCaretPosition : int = 0
@@ -11,13 +11,13 @@ func _ready():
 
 func _on_LineEdit_text_changed(new_text):
 	text = String(int(new_text))
-	print(caret_position)
-	if caret_position >= text.length():
-		caret_position = text.length()
+	print(caret_column)
+	if caret_column >= text.length():
+		caret_column = text.length()
 	else:
-		caret_position = previousCaretPosition + 1
+		caret_column = previousCaretPosition + 1
 		
-	previousCaretPosition = caret_position
+	previousCaretPosition = caret_column
 
 
 #func _on_LineEdit_text_entered(new_text):
@@ -42,4 +42,4 @@ func _on_LineEdit_text_changed(new_text):
 
 
 func _on_LineEdit_gui_input(event):
-	previousCaretPosition = caret_position
+	previousCaretPosition = caret_column

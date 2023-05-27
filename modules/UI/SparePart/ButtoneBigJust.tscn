@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=1]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=2]
 
 [node name="ButtoneBigJust" type="Button"]
-margin_top = 472.0
-margin_right = 1553.0
-margin_bottom = 562.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 472.0
+offset_right = 1553.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "Buttone"
 icon = ExtResource( 2 )
 expand_icon = true

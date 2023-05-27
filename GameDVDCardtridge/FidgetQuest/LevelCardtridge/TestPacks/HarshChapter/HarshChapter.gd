@@ -7,12 +7,12 @@ extends Control
 https://github.com/Perkedel/After-Church/blob/master/RAW%20files/Blender/ZoblatosImprovement.blend
 """
 
-export(String) var ResultPrice = "[color=#00ff00]Ideal[/color]"
-export(String) var WarningText = ""
+@export var ResultPrice: String = "[color=#00ff00]Ideal[/color]"
+@export var WarningText: String = ""
 var priceNum:float = 0.0
-onready var submit = $VBoxContainer/ButtonDecide/Submit
-onready var priceTextLabel = $VBoxContainer/PriceTag/Harga
-onready var warningTextLabel = $VBoxContainer/PriceTag/Warning
+@onready var submit = $VBoxContainer/ButtonDecide/Submit
+@onready var priceTextLabel = $VBoxContainer/PriceTag/Harga
+@onready var warningTextLabel = $VBoxContainer/PriceTag/Warning
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -46,7 +46,7 @@ func VerifyPrice(value):
 		submit.disabled = false
 	
 	priceNum = value
-	priceTextLabel.bbcode_text = "$"+String(value)+" "+ResultPrice
+	priceTextLabel.text = "$"+String(value)+" "+ResultPrice
 	warningTextLabel.text = WarningText
 	pass
 

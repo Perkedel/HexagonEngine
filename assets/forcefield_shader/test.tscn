@@ -2,10 +2,10 @@
 
 [ext_resource path="res://diffuse.tres" type="Shader" id=1]
 [ext_resource path="res://force_field1.tres" type="Shader" id=2]
-[ext_resource path="res://hexes.png" type="Texture" id=3]
+[ext_resource path="res://hexes.png" type="Texture2D" id=3]
 [ext_resource path="res://force_field3.tres" type="Shader" id=4]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="Sky" id=1]
 
 radiance_size = 4
 sky_top_color = Color( 0.492096, 0.704689, 0.976563, 1 )
@@ -58,11 +58,11 @@ auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.05
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = false
-ss_reflections_max_steps = 64
-ss_reflections_fade_in = 0.15
-ss_reflections_fade_out = 2.0
-ss_reflections_depth_tolerance = 0.2
+ssr_enabled = false
+ssr_max_steps = 64
+ssr_fade_in = 0.15
+ssr_fade_out = 2.0
+ssr_depth_tolerance = 0.2
 ss_reflections_roughness = true
 ssao_enabled = false
 ssao_radius = 1.0
@@ -102,7 +102,7 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Background" ]
+_sections_unfolded = [ "Ambient Light3D", "Background" ]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -138,9 +138,9 @@ _sections_unfolded = [ "shader_param" ]
 code = "shader_type spatial;
 render_mode blend_add, depth_draw_opaque, cull_disabled;
 
-uniform vec4 base_color:hint_color;
+uniform vec4 base_color:source_color;
 uniform vec2 near_far=vec2(0.1,100.0);
-uniform sampler2D hex_tex:hint_black;
+uniform sampler2D hex_tex:hint_default_black;
 uniform float hexes_scale:hint_range(1,100);
 
 float linearize(float val) {
@@ -198,7 +198,7 @@ shader_param/hexes_scale = 20.0
 shader_param/hex_tex = ExtResource( 3 )
 _sections_unfolded = [ "shader_param" ]
 
-[sub_resource type="CubeMesh" id=10]
+[sub_resource type="BoxMesh" id=10]
 
 size = Vector3( 0.5, 0.5, 2 )
 subdivide_width = 0
@@ -213,9 +213,9 @@ _sections_unfolded = [ "shader_param" ]
 
 [node name="test" type="Node"]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 
-transform = Transform( 0.739348, 0.521378, -0.426062, 0, 0.632775, 0.774336, 0.673323, -0.572504, 0.467841, 0, 11.6292, 0 )
+transform = Transform3D( 0.739348, 0.521378, -0.426062, 0, 0.632775, 0.774336, 0.673323, -0.572504, 0.467841, 0, 11.6292, 0 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
@@ -234,11 +234,11 @@ directional_shadow_split_2 = 0.2
 directional_shadow_split_3 = 0.5
 directional_shadow_blend_splits = false
 directional_shadow_normal_bias = 0.2
-_sections_unfolded = [ "Light" ]
+_sections_unfolded = [ "Light3D" ]
 
-[node name="Camera" type="Camera" parent="."]
+[node name="Camera3D" type="Camera3D" parent="."]
 
-transform = Transform( 1, 0, 0, 0, 0.819146, 0.573586, 0, -0.573586, 0.819146, 0, 1.96632, 4.36629 )
+transform = Transform3D( 1, 0, 0, 0, 0.819146, 0.573586, 0, -0.573586, 0.819146, 0, 1.96632, 4.36629 )
 projection = 0
 fov = 65.0
 near = 0.1
@@ -250,11 +250,11 @@ environment = SubResource( 2 )
 h_offset = 0.0
 v_offset = 0.0
 doppler/tracking = 0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform3D" ]
 
-[node name="floor" type="MeshInstance" parent="."]
+[node name="floor" type="MeshInstance3D" parent="."]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.01966 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.01966 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -270,7 +270,7 @@ skeleton = NodePath("..")
 material/0 = SubResource( 4 )
 _sections_unfolded = [ "material" ]
 
-[node name="forcefield1" type="MeshInstance" parent="."]
+[node name="forcefield1" type="MeshInstance3D" parent="."]
 
 layers = 1
 material_override = null
@@ -285,11 +285,11 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 5 )
 skeleton = NodePath("..")
 material/0 = SubResource( 6 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform3D", "material" ]
 
-[node name="forcefield2" type="MeshInstance" parent="."]
+[node name="forcefield2" type="MeshInstance3D" parent="."]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -303,11 +303,11 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 5 )
 skeleton = NodePath("..")
 material/0 = SubResource( 8 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform3D", "material" ]
 
-[node name="forcefield3" type="MeshInstance" parent="."]
+[node name="forcefield3" type="MeshInstance3D" parent="."]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -321,11 +321,11 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 5 )
 skeleton = NodePath("..")
 material/0 = SubResource( 9 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform3D", "material" ]
 
-[node name="cube" type="MeshInstance" parent="."]
+[node name="cube" type="MeshInstance3D" parent="."]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.56247 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.56247 )
 layers = 1
 material_override = null
 cast_shadow = 1

@@ -4,16 +4,16 @@
 [ext_resource path="res://modules/Reusables/parts/FrontRef.tscn" type="PackedScene" id=2]
 [ext_resource path="res://modules/Reusables/parts/SpringCamArm.tscn" type="PackedScene" id=3]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape3D" id=1]
 
-[node name="JustKinematic" type="KinematicBody"]
+[node name="JustKinematic" type="CharacterBody3D"]
 script = ExtResource( 1 )
 
-[node name="CollideMe" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+[node name="CollideMe" type="CollisionShape3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="FormSlot" type="Spatial" parent="."]
+[node name="FormSlot" type="Node3D" parent="."]
 
 [node name="FrontRef" parent="." instance=ExtResource( 2 )]
 

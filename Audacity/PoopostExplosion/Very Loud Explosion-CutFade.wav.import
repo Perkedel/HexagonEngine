@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Very Loud Explosion-CutFade.wav-15dc84d081c5d8bcdad8ee2104a364c9.sample"
+type="AudioStreamWAV"
+uid="uid://dfjqcl73u4pnj"
+path="res://.godot/imported/Very Loud Explosion-CutFade.wav-15dc84d081c5d8bcdad8ee2104a364c9.sample"
 
 [deps]
 
 source_file="res://Audacity/PoopostExplosion/Very Loud Explosion-CutFade.wav"
-dest_files=[ "res://.import/Very Loud Explosion-CutFade.wav-15dc84d081c5d8bcdad8ee2104a364c9.sample" ]
+dest_files=["res://.godot/imported/Very Loud Explosion-CutFade.wav-15dc84d081c5d8bcdad8ee2104a364c9.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -1,7 +1,7 @@
-[gd_resource type="DynamicFont" load_steps=3 format=2]
+[gd_resource type="FontFile" load_steps=3 format=2]
 
 [ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" type="Script" id=1]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" type="FontFile" id=2]
 
 [resource]
 resource_local_to_scene = true

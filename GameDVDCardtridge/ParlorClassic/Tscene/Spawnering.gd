@@ -1,20 +1,20 @@
-extends Position2D
+extends Marker2D
 
-export (bool) var Activated = false
-export (PackedScene) var SpawnThisTscene
+@export (bool) var Activated = false
+@export (PackedScene) var SpawnThisTscene
 var TargetNode 
-export (PoolStringArray) var SpawnSceneStrings
-export (bool) var Randomizing = true
-export (float) var SetSpawnIn = 5
-export (float) var SpawnMin = 1
-export (float) var SpawnMax = 10
+@export (PackedStringArray) var SpawnSceneStrings
+@export (bool) var Randomizing = true
+@export (float) var SetSpawnIn = 5
+@export (float) var SpawnMin = 1
+@export (float) var SpawnMax = 10
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 func SpawnFollowingObject():
 	print("SpawnStuff")
-	var ObjectInstancer = SpawnThisTscene.instance()
+	var ObjectInstancer = SpawnThisTscene.instantiate()
 	ObjectInstancer.position = position
 	if TargetNode:
 		TargetNode.add_child(ObjectInstancer)
@@ -29,7 +29,7 @@ func _ready():
 	if Randomizing:
 		$SpawnInATimer.wait_time = SetSpawnIn
 	else:
-		$SpawnInATimer.wait_time = rand_range(SpawnMin, SpawnMax)
+		$SpawnInATimer.wait_time = randf_range(SpawnMin, SpawnMax)
 		pass
 #	$SpawnInATimer.wait_time = SetSpawnIn
 	pass # Replace with function body.
@@ -57,7 +57,7 @@ func _on_SpawnInATimer_timeout():
 	if Randomizing:
 		#print("Randomize Timer!")
 		$SpawnInATimer.stop()
-		$SpawnInATimer.wait_time = rand_range(SpawnMin,SpawnMax)
+		$SpawnInATimer.wait_time = randf_range(SpawnMin,SpawnMax)
 		print("Randomize Timer " + String($SpawnInATimer.wait_time))
 		if Activated:
 			$SpawnInATimer.start()

@@ -1,6 +1,6 @@
 extends Node
 
-export(Dictionary) var nextLevelwhat
+@export var nextLevelwhat: Dictionary
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

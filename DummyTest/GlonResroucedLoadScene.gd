@@ -18,7 +18,7 @@ func _ready():
 	start_cutscene()
 	
 	# Later, when the user presses the pause button for the first time:
-	pause_menu = queue.get_resource("res://DummyTest/PausoDummy.tscn").instance()
+	pause_menu = queue.get_resource("res://DummyTest/PausoDummy.tscn").instantiate()
 	pause_menu.show()
 	
 	# when you need a new scene:

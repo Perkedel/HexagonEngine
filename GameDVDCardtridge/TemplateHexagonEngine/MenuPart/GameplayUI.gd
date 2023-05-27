@@ -1,8 +1,8 @@
 extends Control
 
-export (float, 0, 100) var HPlevel = 100
-export (Texture) var ScoreIcon
-export (float) var ScoreNumber = 2000
+@export (float, 0, 100) var HPlevel = 100
+@export (Texture2D) var ScoreIcon
+@export (float) var ScoreNumber = 2000
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

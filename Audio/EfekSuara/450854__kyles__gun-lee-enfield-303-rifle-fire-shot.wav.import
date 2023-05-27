@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav-abc995365ba918655bc9f9da86c85dcc.sample"
+type="AudioStreamWAV"
+uid="uid://5l04cu1ikwia"
+path="res://.godot/imported/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav-abc995365ba918655bc9f9da86c85dcc.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav"
-dest_files=[ "res://.import/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav-abc995365ba918655bc9f9da86c85dcc.sample" ]
+dest_files=["res://.godot/imported/450854__kyles__gun-lee-enfield-303-rifle-fire-shot.wav-abc995365ba918655bc9f9da86c85dcc.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

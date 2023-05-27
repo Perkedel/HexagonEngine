@@ -4,14 +4,14 @@
 [ext_resource path="res://player/abilities/shoot/Impact.gd" type="Script" id=2]
 [ext_resource path="res://player/abilities/shoot/Debris.tscn" type="PackedScene" id=3]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="StandardMaterial3D" id=1]
 emission_enabled = true
 emission = Color( 0.93, 0.9, 0.89, 1 )
 emission_energy = 2.0
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticleProcessMaterial" id=2]
 direction = Vector3( 0, 0, 1 )
 spread = 15.0
 initial_velocity = 25.0
@@ -31,12 +31,12 @@ height = 0.01
 radial_segments = 32
 rings = 1
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="StandardMaterial3D" id=5]
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="StandardMaterial3D" id=6]
 albedo_color = Color( 0.882353, 0.54902, 0.415686, 1 )
 
-[node name="Impact" type="Position3D"]
+[node name="Impact" type="Marker3D"]
 script = ExtResource( 2 )
 debris = ExtResource( 3 )
 
@@ -51,16 +51,16 @@ local_coords = false
 process_material = SubResource( 2 )
 draw_pass_1 = SubResource( 3 )
 
-[node name="Bullet" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+[node name="Bullet" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource( 6 )
 
-[node name="DebrisPosition3D" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0459025 )
+[node name="DebrisPosition3D" type="Marker3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0459025 )
 
 [node name="ImpactSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 1 )

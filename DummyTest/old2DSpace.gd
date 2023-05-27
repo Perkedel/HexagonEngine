@@ -6,14 +6,14 @@ extends Node2D
 var LevelLoadRoot
 var ConThread2D
 var a2DResource
-export(PackedScene) var Your2DSpaceLevel
-export(String) var Raw2DSpaceLevelPath
+@export var Your2DSpaceLevel: PackedScene
+@export var Raw2DSpaceLevelPath: String
 var Prev2DSpaceLevel
 var Now2DSpaceLevel
 var mutex
 var semaphore
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
+@onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a2D_Loading_ProgressBar(valuet)
 var ProgressValue
@@ -63,7 +63,7 @@ func spawnAScene(pathO):
 	$Dummy2DLoad.hide()
 	print("SpawnScene %s", pathO)
 	Prev2DSpaceLevel = Now2DSpaceLevel
-	a2DResource = ResourceLoader.load_interactive(pathO)
+	a2DResource = ResourceLoader.load_threaded_request(pathO)
 	if a2DResource == null:
 		# Error 3D
 		show_error()
@@ -110,8 +110,8 @@ func _process(delta):
 		hasMeLoading = true
 		return
 
-	var t = OS.get_ticks_msec()
-	while OS.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
+	var t = Time.get_ticks_msec()
+	while Time.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
 	# poll your loader
 		var err = a2DResource.poll()
 		if err == ERR_FILE_EOF: # Finished loading.
@@ -162,7 +162,7 @@ func _process(delta):
 
 signal hasLoadingCompleted
 func InitiateThatScene(scene_resource):
-	Now2DSpaceLevel = scene_resource.instance()
+	Now2DSpaceLevel = scene_resource.instantiate()
 	# https://docs.godotengine.org/en/3.1/tutorials/threads/thread_safe_apis.html#doc-thread-safe-apis
 	$Level2DCartridgeSlot.call_deferred("add_child",Now2DSpaceLevel)
 	emit_signal("hasLoadingCompleted")

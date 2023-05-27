@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-onready var speakerer = $Speakerer
+@onready var speakerer = $Speakerer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

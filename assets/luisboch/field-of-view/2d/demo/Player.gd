@@ -1,14 +1,14 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-export var speed = 200
+@export var speed = 200
 var move_control = Vector2()
 var vel = Vector2()
 var moving = false
-export (NodePath) var danger_text_path
-export (NodePath) var warn_text_path
+@export (NodePath) var danger_text_path
+@export (NodePath) var warn_text_path
 
-onready var danger_txt = get_node(danger_text_path)
-onready var warn_txt = get_node(warn_text_path)
+@onready var danger_txt = get_node(danger_text_path)
+@onready var warn_txt = get_node(warn_text_path)
 
 # class member variables go here, for example:
 # var a = 2
@@ -29,7 +29,7 @@ func _process(delta):
 	check_fov()
 	var pos = get_position()
 	var dir = (get_global_mouse_position() - pos).normalized()
-	set_rotation(deg2rad(rad2deg(dir.angle()) - 90))
+	set_rotation(deg_to_rad(rad_to_deg(dir.angle()) - 90))
 
 	
 	# vel = Vector2()
@@ -52,6 +52,9 @@ func _process(delta):
 	
 	vel = (move_control.normalized() * speed).rotated(transform.get_rotation())
 	
-	vel = move_and_slide(vel, Vector2())
+	set_velocity(vel)
+	set_up_direction(Vector2())
+	move_and_slide()
+	vel = velocity
 
 

@@ -5,9 +5,9 @@ extends HBoxContainer
 # var a = 2
 # var b = "text"
 enum StatusLED {LED_OFF=-1, LED_OK=0, LED_FAILED=1}
-export (PoolIntArray) var StatusSet = [-1,-1,-1]
-export (int) var TestStatusCycle = -1
-export (bool) var TestModeOn = false
+@export (PackedInt32Array) var StatusSet = [-1,-1,-1]
+@export (int) var TestStatusCycle = -1
+@export (bool) var TestModeOn = false
 
 # Called when the node enters the scene tree for the first time.
 
@@ -16,9 +16,9 @@ func TestLEDs():
 	pass
 
 func PrepareLEDs():
-	$Banner.self_modulate = Color.black
-	$Interstitial.self_modulate = Color.black
-	$RewardedVideo.self_modulate = Color.black
+	$Banner.self_modulate = Color.BLACK
+	$Interstitial.self_modulate = Color.BLACK
+	$RewardedVideo.self_modulate = Color.BLACK
 	TestLEDs()
 	pass
 
@@ -68,16 +68,16 @@ func _process(delta):
 	if !TestModeOn:
 		for i in 3:
 			if StatusSet[i] == -1:
-				get_child(i).self_modulate = Color.black
+				get_child(i).self_modulate = Color.BLACK
 				pass
 			elif StatusSet[i]  == 0:
-				get_child(i).self_modulate = Color.green
+				get_child(i).self_modulate = Color.GREEN
 				pass
 			elif StatusSet[i]  == 1:
-				get_child(i).self_modulate = Color.red
+				get_child(i).self_modulate = Color.RED
 				pass
 			else:
-				get_child(i).self_modulate = Color.yellowgreen
+				get_child(i).self_modulate = Color.YELLOW_GREEN
 				pass
 			pass
 		pass
@@ -92,16 +92,16 @@ func _process(delta):
 		
 		for i in 3:
 			if TestStatusCycle == -1:
-				get_child(i).self_modulate = Color.black
+				get_child(i).self_modulate = Color.BLACK
 				pass
 			elif TestStatusCycle  == 0:
-				get_child(i).self_modulate = Color.green
+				get_child(i).self_modulate = Color.GREEN
 				pass
 			elif TestStatusCycle  == 1:
-				get_child(i).self_modulate = Color.red
+				get_child(i).self_modulate = Color.RED
 				pass
 			else:
-				get_child(i).self_modulate = Color.yellowgreen
+				get_child(i).self_modulate = Color.YELLOW_GREEN
 				pass
 			pass
 		pass

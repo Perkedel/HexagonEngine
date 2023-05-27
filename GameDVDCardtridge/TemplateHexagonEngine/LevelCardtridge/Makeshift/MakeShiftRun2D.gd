@@ -1,11 +1,11 @@
 extends RigidBody2D
-export (float) var x_move
-export (float) var y_move
-export (float) var x_InputMap
-export (float) var y_InputMap
-export (float) var deadzone_circle = .5
-onready var x_deadzone = 0
-onready var y_deadzone = 0
+@export (float) var x_move
+@export (float) var y_move
+@export (float) var x_InputMap
+@export (float) var y_InputMap
+@export (float) var deadzone_circle = .5
+@onready var x_deadzone = 0
+@onready var y_deadzone = 0
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -20,9 +20,9 @@ func _ready():
 	pass # Replace with function body.
 
 
-onready var Direction = Vector2()
-onready var DirectionRaw = Vector2()
-onready var DirectionInputMap = Vector2()
+@onready var Direction = Vector2()
+@onready var DirectionRaw = Vector2()
+@onready var DirectionInputMap = Vector2()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
@@ -65,7 +65,7 @@ func _process(delta):
 	print("AnalogKiri Action Strength: " + String(x_InputMap) + ", " + String(y_InputMap))
 	#print("Raw Map : " + String(Input.get_action_strength("AnalogKiri_x")) + ", " + String(Input.get_action_strength("AnalogKiri_y")))
 	#translate(Direction * 5)
-	apply_impulse(Vector2.ZERO, DirectionInputMap * 5)
+	apply_impulse(DirectionInputMap * 5, Vector2.ZERO)
 	pass
 
 

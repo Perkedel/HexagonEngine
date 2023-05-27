@@ -12,27 +12,27 @@ extends Node
 # TODO in function of those systole and diastoles the heart.
 
 
-export(PoolStringArray) var SystoleSounds
-export(PoolStringArray) var DiastoleSounds
+@export var SystoleSounds: PackedStringArray
+@export var DiastoleSounds: PackedStringArray
 
-export(float) var HeartRate = 70
-onready var Hertz = HeartRate / 60
-onready var PeriodT = 1/Hertz
-onready var remainPeriod = PeriodT
-onready var remainPeriodMillisec = remainPeriod * 1000
-export(float) var returnTime = .25
-onready var startReturnTime = returnTime
-onready var startReturnTimeMillisec = startReturnTime * 1000
+@export var HeartRate: float = 70
+@onready var Hertz = HeartRate / 60
+@onready var PeriodT = 1/Hertz
+@onready var remainPeriod = PeriodT
+@onready var remainPeriodMillisec = remainPeriod * 1000
+@export var returnTime: float = .25
+@onready var startReturnTime = returnTime
+@onready var startReturnTimeMillisec = startReturnTime * 1000
 
 var GlobalTimer = [0,0]
 var CatchGlobalTimer = [0,0]
 var Lub:bool = false
 var stateIndex:int = 0
 var isBeating = true
-onready var EnableSound = true
+@onready var EnableSound = true
 
-onready var debugToggle = $CanvasLayer/UIsoWe/Listoid/ToggleDebugButton
-onready var ToggleSays = "Heartbeat"
+@onready var debugToggle = $CanvasLayer/UIsoWe/Listoid/ToggleDebugButton
+@onready var ToggleSays = "Heartbeat"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -41,16 +41,16 @@ signal Shutdown_Exec()
 
 enum SureToDo {Quit = 0, ChangeDVD = 1}
 var ToWhat = "Quit"
-onready var SelectedLeave = SureToDo.Quit
+@onready var SelectedLeave = SureToDo.Quit
 
-export var useAsync:bool = true #make heartbeat asyncronouse. after a lub, heartbeat can lub again without need of dubb first.
+@export var useAsync:bool = true #make heartbeat asyncronouse. after a lub, heartbeat can lub again without need of dubb first.
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func DecideReturnTime(var forWhathowMuch):
+func DecideReturnTime(forWhathowMuch):
 	if forWhathowMuch <= 0:
 		ToggleSays = "Eik Serkat!"
 		returnTime = 0
@@ -101,7 +101,7 @@ func DecideReturnTime(var forWhathowMuch):
 	debugToggle.text = ToggleSays
 	pass
 
-func SetHeartRate(var value):
+func SetHeartRate(value):
 	HeartRate = value
 	if HeartRate >= 1:
 		isBeating = true
@@ -117,27 +117,27 @@ func SetHeartRate(var value):
 	PeriodT = 1 / Hertz if Hertz > 0 else 1
 	pass
 
-func SystoleCodeProcess(var delta):
+func SystoleCodeProcess(delta):
 	remainPeriod -= delta
 	remainPeriodMillisec = remainPeriod * 1000
 	startReturnTime = returnTime
 	startReturnTimeMillisec = startReturnTime * 1000
 	pass
 
-func DiastoleBeatCodeProcess(var delta):
+func DiastoleBeatCodeProcess(delta):
 	remainPeriod = PeriodT
 	remainPeriodMillisec = remainPeriod * 1000
 	startReturnTime -= delta
 	startReturnTimeMillisec = startReturnTime * 1000
 	pass
 
-func NewHeartbeatMode(var delta):
+func NewHeartbeatMode(delta):
 	remainPeriod -= delta
 	remainPeriodMillisec = remainPeriod * 1000
 	if(remainPeriodMillisec <= 0):
 		stateIndex = 1
 		if(debugToggle):
-			debugToggle.pressed = true
+			debugToggle.button_pressed = true
 			pass
 		#Play Sounds Systole
 		print("Lub")
@@ -160,7 +160,7 @@ func NewHeartbeatMode(var delta):
 			$CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting/HeartProgress.value = 0
 			stateIndex = 0
 			if(debugToggle):
-				debugToggle.pressed = false
+				debugToggle.button_pressed = false
 				pass
 			# Play Sounds Diastole
 			print("Dubb")
@@ -181,13 +181,13 @@ func NewHeartbeatMode(var delta):
 		pass
 	pass
 
-func OldHeartbeatMode(var delta):
+func OldHeartbeatMode(delta):
 	if not Lub:
 		SystoleCodeProcess(delta)
 		if(remainPeriodMillisec <= 0):
 			stateIndex = 1
 			if(debugToggle):
-				debugToggle.pressed = true
+				debugToggle.button_pressed = true
 				pass
 			#Play Sounds Systole
 			print("Lub")
@@ -199,7 +199,7 @@ func OldHeartbeatMode(var delta):
 		if startReturnTimeMillisec <= 0:
 			stateIndex = 0
 			if(debugToggle):
-				debugToggle.pressed = false
+				debugToggle.button_pressed = false
 				pass
 			# Play Sounds Diastole
 			print("Dubb")
@@ -208,7 +208,7 @@ func OldHeartbeatMode(var delta):
 		pass
 	pass
 
-func NoHeartbeatEikSerkat(var delta):
+func NoHeartbeatEikSerkat(delta):
 	remainPeriod = PeriodT
 	remainPeriodMillisec = remainPeriod * 1000
 	startReturnTime = returnTime
@@ -221,7 +221,7 @@ func NoHeartbeatEikSerkat(var delta):
 		if startReturnTimeMillisec <= 0:
 			stateIndex = 0
 			if(debugToggle):
-				debugToggle.pressed = false
+				debugToggle.button_pressed = false
 				pass
 			# Play Sounds Diastole
 			print("Dubb")
@@ -252,7 +252,7 @@ func _process(delta):
 		NoHeartbeatEikSerkat(delta)
 	pass
 
-func AreYouSureToDo(var whatThis):
+func AreYouSureToDo(whatThis):
 	SelectedLeave = whatThis
 	match whatThis:
 		SureToDo.ChangeDVD:
@@ -267,7 +267,7 @@ func AreYouSureToDo(var whatThis):
 	$CanvasLayer/UIsoWe/AreYouSureTo.popup()
 	pass
 
-func ConfirmAreYouSure(var whatThis):
+func ConfirmAreYouSure(whatThis):
 	
 	match whatThis:
 		SureToDo.ChangeDVD:

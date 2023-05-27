@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -13,12 +13,12 @@ var semaphore
 var exit_thread = false
 var a3DResource
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
+@onready var custom_Resource_Queue = preload("res://Scripts/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a3D_Loading_ProgressBar(valuet)
 var ProgressValue
-export(PackedScene) var Your3DSpaceLevel
-export(String) var Raw3DSpaceLevelPath
+@export var Your3DSpaceLevel: PackedScene
+@export var Raw3DSpaceLevelPath: String
 var Now3DSpaceLevel
 var Prev3DSpaceLevel
 var time_max = 100 # msec
@@ -134,7 +134,7 @@ func spawnAScene(pathO):
 	$Dummy3DLoad.hide()
 	print("SpawnScene %s", pathO)
 	Prev3DSpaceLevel = Now3DSpaceLevel
-	a3DResource = ResourceLoader.load_interactive(pathO)
+	a3DResource = ResourceLoader.load_threaded_request(pathO)
 	if a3DResource == null:
 		# Error 3D
 		show_error()
@@ -160,7 +160,7 @@ func despawnTheScene():
 
 signal hasLoadingCompleted
 func InitiateThatScene(scene_resource):
-	Now3DSpaceLevel = scene_resource.instance()
+	Now3DSpaceLevel = scene_resource.instantiate()
 	# https://docs.godotengine.org/en/3.1/tutorials/threads/thread_safe_apis.html#doc-thread-safe-apis
 	$Level3DCartridgeSlot.call_deferred("add_child",Now3DSpaceLevel)
 	emit_signal("hasLoadingCompleted")
@@ -194,8 +194,8 @@ func _process(delta):
 		hasMeLoading = true
 		return
 
-	var t = OS.get_ticks_msec()
-	while OS.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
+	var t = Time.get_ticks_msec()
+	while Time.get_ticks_msec() < t + time_max: # use "time_max" to control for how long we block this thread
 	# poll your loader
 		var err = a3DResource.poll()
 		update_progress()

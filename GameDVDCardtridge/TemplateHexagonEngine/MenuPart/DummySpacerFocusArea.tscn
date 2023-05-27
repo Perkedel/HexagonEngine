@@ -1,7 +1,7 @@
 [gd_scene format=2]
 
 [node name="SpaceLeft" type="Control"]
-margin_right = 916.0
-margin_bottom = 114.0
+offset_right = 916.0
+offset_bottom = 114.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

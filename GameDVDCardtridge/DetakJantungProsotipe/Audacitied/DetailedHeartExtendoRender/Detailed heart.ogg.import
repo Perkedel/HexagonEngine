@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Detailed heart.ogg-8a570c94645f91d4d3344ed974febed8.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bv7brweic60jx"
+path="res://.godot/imported/Detailed heart.ogg-8a570c94645f91d4d3344ed974febed8.oggvorbisstr"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Detailed heart.ogg"
-dest_files=[ "res://.import/Detailed heart.ogg-8a570c94645f91d4d3344ed974febed8.oggstr" ]
+dest_files=["res://.godot/imported/Detailed heart.ogg-8a570c94645f91d4d3344ed974febed8.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

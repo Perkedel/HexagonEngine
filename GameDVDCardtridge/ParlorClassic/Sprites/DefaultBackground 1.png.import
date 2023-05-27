@@ -2,12 +2,13 @@
 
 importer="image"
 type="Image"
-path="res://.import/DefaultBackground 1.png-58959b370bede1df6b3b95bc21354602.image"
+uid="uid://113cv30o4uc8"
+path="res://.godot/imported/DefaultBackground 1.png-58959b370bede1df6b3b95bc21354602.image"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/ParlorClassic/Sprites/DefaultBackground 1.png"
-dest_files=[ "res://.import/DefaultBackground 1.png-58959b370bede1df6b3b95bc21354602.image" ]
+dest_files=["res://.godot/imported/DefaultBackground 1.png-58959b370bede1df6b3b95bc21354602.image"]
 
 [params]
 

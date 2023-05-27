@@ -2,6 +2,6 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/NonVRCamera.gd" type="Script" id=1]
 
-[node name="NonVRCamera" type="Camera"]
+[node name="NonVRCamera" type="Camera3D"]
 current = true
 script = ExtResource( 1 )

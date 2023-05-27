@@ -5,9 +5,9 @@
 [node name="GlonResroucedLoadScene" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Level" type="Spatial" parent="."]
+[node name="Level" type="Node3D" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1070.0
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 1070.0

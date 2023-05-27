@@ -8,7 +8,7 @@
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 
-[node name="GDquestDissolved" type="CSGMesh"]
+[node name="GDquestDissolved" type="CSGMesh3D"]
 mesh = SubResource( 1 )
 material = SubResource( 2 )
 script = ExtResource( 2 )

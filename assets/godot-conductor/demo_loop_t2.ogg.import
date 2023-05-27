@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/demo_loop_t2.ogg-d9a4aef27f10fd282ea5da7d018432af.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0yx5qto473hc"
+path="res://.godot/imported/demo_loop_t2.ogg-d9a4aef27f10fd282ea5da7d018432af.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/godot-conductor/demo_loop_t2.ogg"
-dest_files=[ "res://.import/demo_loop_t2.ogg-d9a4aef27f10fd282ea5da7d018432af.oggstr" ]
+dest_files=["res://.godot/imported/demo_loop_t2.ogg-d9a4aef27f10fd282ea5da7d018432af.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

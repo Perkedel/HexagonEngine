@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/DefaultImageTexture.tres" type="Texture" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/DefaultImageTexture.tres" type="Texture2D" id=1]
 
 [node name="Paralak" type="ParallaxLayer"]
 
-[node name="Bekgron" type="Sprite" parent="."]
+[node name="Bekgron" type="Sprite2D" parent="."]
 position = Vector2( -7680, 0 )
 texture = ExtResource( 1 )
 centered = false

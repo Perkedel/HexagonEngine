@@ -2,12 +2,13 @@
 
 importer="image"
 type="Image"
-path="res://.import/29705 Escena.jpg-4bb9ff3a7e665320435a93908afd9a56.image"
+uid="uid://b7dq83pdpae8n"
+path="res://.godot/imported/29705 Escena.jpg-4bb9ff3a7e665320435a93908afd9a56.image"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/ParlorClassic/Sprites/Vincent Thamrin/escena-perfecta-arboles-parque/29705 Escena.jpg"
-dest_files=[ "res://.import/29705 Escena.jpg-4bb9ff3a7e665320435a93908afd9a56.image" ]
+dest_files=["res://.godot/imported/29705 Escena.jpg-4bb9ff3a7e665320435a93908afd9a56.image"]
 
 [params]
 

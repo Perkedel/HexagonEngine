@@ -25,8 +25,8 @@ var c = 3
 # This DVD replicates its own source code!!!
 # Here's quine. Technique to print own source code
 # https://en.wikipedia.org/wiki/Quine_%28computing%29
-onready var theTextEdit = $Sgond/CodeFillSelf
-onready var AreYouSureDialog = $AreYouSureDialog
+@onready var theTextEdit = $Sgond/CodeFillSelf
+@onready var AreYouSureDialog = $AreYouSureDialog
 enum AreYouSureActions {ChangeDVD, Shutdown, Export}
 var SelectAction
 
@@ -36,12 +36,12 @@ signal Shutdown_Exec()
 var Directorie
 
 var ownSelfThisScript:String
-export var ExportDVDDir = "user://GameDVDCartridge"
-export var ExportDVDname = "ExportMyself"
+@export var ExportDVDDir = "user://GameDVDCartridge"
+@export var ExportDVDname = "ExportMyself"
 
 func ExportMeSelf():
 	# Coming soon
-	Directorie = Directory.new()
+	Directorie = DirAccess.new()
 	var testDir = Directorie.open(ExportDVDDir + ExportDVDname)
 	pass
 

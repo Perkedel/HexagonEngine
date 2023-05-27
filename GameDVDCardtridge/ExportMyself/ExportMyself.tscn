@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ExportMyself/ExportMyself.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_24tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=4]
-[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_24tred.tres" type="FontFile" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="FontFile" id=5]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture2D" id=6]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=8]
+[ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture2D" id=9]
 
 
 [node name="ExportMyself" type="Node"]
@@ -22,9 +22,9 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Sgond"]
-margin_right = 500.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 500, 0 )
+offset_right = 500.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 500, 0 )
 
 [node name="InterfaceButtons" type="VBoxContainer" parent="Sgond/Panel"]
 anchor_right = 1.0
@@ -34,74 +34,74 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="Sgond/Panel/InterfaceButtons"]
-margin_right = 500.0
-margin_bottom = 175.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 500.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Lukewarm Quinifications"
 autowrap = true
 
 [node name="Description" type="Label" parent="Sgond/Panel/InterfaceButtons"]
-margin_top = 179.0
-margin_right = 500.0
-margin_bottom = 246.0
-custom_fonts/font = ExtResource( 3 )
+offset_top = 179.0
+offset_right = 500.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "View the uncool side of me, according to previous Reddit post."
 autowrap = true
 
 [node name="ChangeDVDButton" type="Button" parent="Sgond/Panel/InterfaceButtons"]
-margin_top = 250.0
-margin_right = 500.0
-margin_bottom = 291.0
-custom_fonts/font = ExtResource( 5 )
+offset_top = 250.0
+offset_right = 500.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource( 5 )
 text = "Change DVD"
 icon = ExtResource( 6 )
 expand_icon = true
 
 [node name="ShutdownButton" type="Button" parent="Sgond/Panel/InterfaceButtons"]
-margin_top = 295.0
-margin_right = 500.0
-margin_bottom = 336.0
-custom_fonts/font = ExtResource( 5 )
+offset_top = 295.0
+offset_right = 500.0
+offset_bottom = 336.0
+theme_override_fonts/font = ExtResource( 5 )
 text = "Shutdown Hexagon Engine"
 icon = ExtResource( 8 )
 expand_icon = true
 
 [node name="ExportButton" type="Button" parent="Sgond/Panel/InterfaceButtons"]
 visible = false
-margin_top = 340.0
-margin_right = 500.0
-margin_bottom = 381.0
-custom_fonts/font = ExtResource( 5 )
+offset_top = 340.0
+offset_right = 500.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource( 5 )
 text = "Export This DVD to user://"
 icon = ExtResource( 9 )
 expand_icon = true
 
 [node name="CustomLabel" type="Label" parent="Sgond/Panel/InterfaceButtons"]
-margin_top = 340.0
-margin_right = 500.0
-margin_bottom = 381.0
-custom_fonts/font = ExtResource( 5 )
+offset_top = 340.0
+offset_right = 500.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource( 5 )
 
 [node name="CodeFillSelf" type="TextEdit" parent="Sgond"]
-margin_left = 504.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 504.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 4 )
-custom_colors/member_variable_color = Color( 0.486275, 0.486275, 0.486275, 1 )
-custom_colors/function_color = Color( 0, 0.533333, 0.0980392, 1 )
-custom_colors/symbol_color = Color( 0.286275, 0.321569, 0, 1 )
-custom_colors/caret_background_color = Color( 0, 0.427451, 0.498039, 1 )
-custom_colors/bookmark_color = Color( 0, 0.666667, 0.631373, 1 )
-custom_colors/caret_color = Color( 0.517647, 0, 0.564706, 1 )
-custom_colors/breakpoint_color = Color( 0.886275, 0, 0, 1 )
-custom_colors/line_number_color = Color( 1, 0.972549, 0.823529, 1 )
-custom_colors/background_color = Color( 0, 0.0156863, 0.164706, 0.878431 )
-custom_colors/number_color = Color( 1, 0.729412, 0.47451, 1 )
-custom_colors/current_line_color = Color( 0.0235294, 0, 0.45098, 1 )
-custom_colors/mark_color = Color( 0.207843, 0.227451, 0, 1 )
-custom_colors/word_highlighted_color = Color( 0.396078, 1, 0.984314, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/member_variable_color = Color( 0.486275, 0.486275, 0.486275, 1 )
+theme_override_colors/function_color = Color( 0, 0.533333, 0.0980392, 1 )
+theme_override_colors/symbol_color = Color( 0.286275, 0.321569, 0, 1 )
+theme_override_colors/caret_background_color = Color( 0, 0.427451, 0.498039, 1 )
+theme_override_colors/bookmark_color = Color( 0, 0.666667, 0.631373, 1 )
+theme_override_colors/caret_color = Color( 0.517647, 0, 0.564706, 1 )
+theme_override_colors/breakpoint_color = Color( 0.886275, 0, 0, 1 )
+theme_override_colors/line_number_color = Color( 1, 0.972549, 0.823529, 1 )
+theme_override_colors/background_color = Color( 0, 0.0156863, 0.164706, 0.878431 )
+theme_override_colors/number_color = Color( 1, 0.729412, 0.47451, 1 )
+theme_override_colors/current_line_color = Color( 0.0235294, 0, 0.45098, 1 )
+theme_override_colors/mark_color = Color( 0.207843, 0.227451, 0, 1 )
+theme_override_colors/word_highlighted_color = Color( 0.396078, 1, 0.984314, 1 )
 text = "Code
 a
 mi
@@ -109,7 +109,7 @@ go
 var a = 1"
 readonly = true
 highlight_current_line = true
-syntax_highlighting = true
+syntax_highlighter = true
 show_line_numbers = true
 smooth_scrolling = true
 wrap_enabled = true

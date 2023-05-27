@@ -1,15 +1,15 @@
 extends Node
 
-export (bool) var isPlayingGameNow = false
+@export (bool) var isPlayingGameNow = false
 enum QuitMode{MainMenuTO,QuitTO,ChangeDVDTO}
-export (int) var SelectQuitMode
+@export (int) var SelectQuitMode
 
-export (float,0,100) var HealthPoint = 100
-export (float) var ScoreRightNow
-export (float) var HighScoreDisk
-export (String) var SaveFile = ""
+@export (float,0,100) var HealthPoint = 100
+@export (float) var ScoreRightNow
+@export (float) var HighScoreDisk
+@export (String) var SaveFile = ""
 
-export (PackedScene) var BulletSceneFile = load("res://GameDVDCardtridge/ParlorClassic/Tscene/Peluru.tscn")
+@export (PackedScene) var BulletSceneFile = load("res://GameDVDCardtridge/ParlorClassic/Tscene/Peluru.tscn")
 
 var MousePosition
 # Declare member variables here. Examples:
@@ -44,8 +44,8 @@ func PleaseHealth(much):
 	pass
 
 func SpawnBullet(positione:Vector2):
-	var InstanceBullet = BulletSceneFile.instance()
-	var WeponSounding = InstanceBullet.EmitThisSoundSpeaker.instance()
+	var InstanceBullet = BulletSceneFile.instantiate()
+	var WeponSounding = InstanceBullet.EmitThisSoundSpeaker.instantiate()
 	InstanceBullet.position = positione
 	WeponSounding.position = positione
 	

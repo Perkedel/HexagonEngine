@@ -1,11 +1,11 @@
-extends Spatial
+extends Node3D
 
-export (float) var scorePar = 0
-export (float) var limitStroke = 6
-onready var isPullingPutt = false
-onready var puttPower = 0.0
-onready var pullRelativeScreenPos = Vector2.ZERO
-onready var isItWalking = false
+@export (float) var scorePar = 0
+@export (float) var limitStroke = 6
+@onready var isPullingPutt = false
+@onready var puttPower = 0.0
+@onready var pullRelativeScreenPos = Vector2.ZERO
+@onready var isItWalking = false
 
 # https://www.reddit.com/r/godot/comments/bd2q87/how_to_make_a_camera_follow_the_player/
 # https://docs.godotengine.org/en/latest/tutorials/inputs/input_examples.html#mouse-events
@@ -41,18 +41,18 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if !isPullingPutt and event.pressed:
 			pullRelativeScreenPos = event.position
-			$"CanvasUI/MINI-UI/DotRectAwal".rect_position = event.position
-			$"CanvasUI/MINI-UI/PowerProgress".rect_position = event.position
+			$"CanvasUI/MINI-UI/DotRectAwal".position = event.position
+			$"CanvasUI/MINI-UI/PowerProgress".position = event.position
 			$Player/BolaGolf1.setYLaunch($CamStickPole.rotation.y)
 			if !isItWalking:
 				$"CanvasUI/MINI-UI/PowerProgress".show()
 			isPullingPutt = true
 			pass
 		if isPullingPutt and !event.pressed:
-			$"CanvasUI/MINI-UI/DotRectAkhir".rect_position = event.position
+			$"CanvasUI/MINI-UI/DotRectAkhir".position = event.position
 			$"CanvasUI/MINI-UI/PowerProgress".hide()
 			isPullingPutt = false
 			pass

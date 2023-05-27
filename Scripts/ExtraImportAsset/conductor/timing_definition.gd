@@ -4,20 +4,20 @@ extends Object
 
 # The measure position of the first beat.  If the first beat in the measure, 0.
 # 1 is the second beat in the measure, and so on.
-var beat_offset: int setget , _get_beat_offset
+var beat_offset: int: get = _get_beat_offset
 
 # The number of beats per minute.
-var bpm: float setget , _get_bpm
+var bpm: float: get = _get_bpm
 
 # The total length of the section, in seconds.
-var duration: float setget , _get_duration
+var duration: float: get = _get_duration
 
 # The number of beats in a measure in this section.
-var measure: int setget , _get_measure
+var measure: int: get = _get_measure
 
 # The duration between the start of the section and the first beat in the
 # section.
-var offset: float setget , _get_offset
+var offset: float: get = _get_offset
 
 
 # To create a timing definition, provide a duration, beats per minute, the
@@ -25,7 +25,7 @@ var offset: float setget , _get_offset
 # beat that occurs at the beginning of that section of the song.
 func _init(_duration: float, _bpm: float, _offset: float, _measure: int,
 		_beat_offset: int) -> void:
-	assert(_offset < _duration, "Beat offset cannot exceeed section duration.")
+	assert(_offset < _duration) #,"Beat offset cannot exceeed section duration.")
 	duration = _duration
 	bpm = _bpm
 	offset = _offset

@@ -7,11 +7,11 @@ extends VBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export (bool) var DisplaySettingLoaded = false
+@export (bool) var DisplaySettingLoaded = false
 
 func reload():
-	$FullScreen.ForceValue(OS.is_window_fullscreen())
-	$Vsync.ForceValue(OS.vsync_enabled)
+	$FullScreen.ForceValue(((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN)))
+	$Vsync.ForceValue((DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED))
 	DisplaySettingLoaded = true
 	pass
 
@@ -27,7 +27,7 @@ func _ready():
 
 func _on_FullScreen_Statement(value1):
 	if DisplaySettingLoaded:
-		OS.set_window_fullscreen(value1)
+		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (value1) else Window.MODE_WINDOWED
 		Settingers.setDisplay("FullScreen",value1)
 		#Settingers.SettingData.DisplaySetting.FullScreen = value1
 		#Settingers.SettingSave()
@@ -38,7 +38,7 @@ func _on_FullScreen_Statement(value1):
 
 func _on_Vsync_Statement(value1):
 	if DisplaySettingLoaded:
-		OS.vsync_enabled = value1
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if (value1) else DisplayServer.VSYNC_DISABLED)
 		Settingers.setDisplay("Vsync",value1)
 		Settingers.SettingData.DisplaySetting.Vsync = value1
 		#Settingers.SettingSave()

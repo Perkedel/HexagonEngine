@@ -1,25 +1,25 @@
-extends VehicleBody
+extends VehicleBody3D
 
 var SettingspanelPath = preload("../scenes/settings.tscn")
 var mouseDelta = Vector2()
 
 # Camera variables
 
-export(bool) var use_camera = true
+@export var use_camera: bool = true
 var lookSensitivity = 0.1
 var minLookAngle = -130.0
 var maxLookAngle = 25.0
 var followCameraAngle = 20
 var camera_onoff = true
 var cameraTimerSecond = 2
-onready var cameraTimer = 0
+@onready var cameraTimer = 0
 var cameraOrbit
 var followCameraY = 0
 
 # Car variables
 
-export(bool) var use_controls = true
-export(bool) var show_settings = true
+@export var use_controls: bool = true
+@export var show_settings: bool = true
 # These become just placeholders if presets are in use
 var MAX_ENGINE_FORCE = 100.0
 var MAX_BRAKE = 5.0
@@ -33,8 +33,8 @@ var STEERING_SPEED = 7
 func _ready():
 	# A camera node is attached if `Use Camera is checked
 	if(use_camera):
-		cameraOrbit = Spatial.new()
-		var aCameraNode : Camera = Camera.new()
+		cameraOrbit = Node3D.new()
+		var aCameraNode : Camera3D = Camera3D.new()
 		aCameraNode.translate(Vector3(0, 0, 0))
 		aCameraNode.rotation_degrees.y = 180
 		# You can change the camera position here
@@ -47,7 +47,7 @@ func _ready():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	# ..and the Settingspanel gets instanced
-	var SettingsPanel = SettingspanelPath.instance()
+	var SettingsPanel = SettingspanelPath.instantiate()
 	SettingsPanel.visible = false
 	SettingsPanel.CarNode = self
 	call_deferred("add_child", SettingsPanel)

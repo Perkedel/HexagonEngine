@@ -14,23 +14,23 @@
 script = ExtResource( 2 )
 
 [node name="MasterVolume" parent="." index="0" instance=ExtResource( 3 )]
-margin_right = 1920.0
-margin_bottom = 63.0
+offset_right = 1920.0
+offset_bottom = 63.0
 VariableName = "Master"
 VolumeBus = "Master"
 
 [node name="Music" parent="." index="1" instance=ExtResource( 3 )]
-margin_top = 67.0
-margin_right = 1920.0
-margin_bottom = 130.0
+offset_top = 67.0
+offset_right = 1920.0
+offset_bottom = 130.0
 VariableName = "Music"
 VolumeBus = "Music"
 TestoidPitch = 0.5
 
 [node name="SoundEffect" parent="." index="2" instance=ExtResource( 3 )]
-margin_top = 134.0
-margin_right = 1920.0
-margin_bottom = 197.0
+offset_top = 134.0
+offset_right = 1920.0
+offset_bottom = 197.0
 VariableName = "Sound Effect"
 VolumeBus = "SoundEffect"
 TestoidPitch = 1.5
@@ -40,69 +40,69 @@ visible = false
 
 [node name="InheritableSettingEmpty" parent="." index="4"]
 visible = false
-margin_top = 0.0
-margin_bottom = 55.0
+offset_top = 0.0
+offset_bottom = 55.0
 
 [node name="InheritableSettingOptionButton" parent="." index="5"]
 visible = false
-margin_top = 63.0
-margin_bottom = 118.0
+offset_top = 63.0
+offset_bottom = 118.0
 
 [node name="InheritableSettingCheckBox" parent="." index="6"]
 visible = false
-margin_top = 126.0
-margin_bottom = 197.0
+offset_top = 126.0
+offset_bottom = 197.0
 ButtonGrouper = SubResource( 1 )
 
 [node name="InheritableSettingCheckBox2" parent="." index="7"]
 visible = false
-margin_top = 205.0
-margin_bottom = 276.0
+offset_top = 205.0
+offset_bottom = 276.0
 script = null
 
 [node name="InheritableSettingCheckButton" parent="." index="8"]
 visible = false
-margin_top = 284.0
-margin_bottom = 364.0
+offset_top = 284.0
+offset_bottom = 364.0
 
 [node name="InheritableSettingCheckButton2" parent="." index="9"]
 visible = false
-margin_top = 372.0
-margin_bottom = 452.0
+offset_top = 372.0
+offset_bottom = 452.0
 script = null
 
 [node name="TestoidProgressBar" parent="." index="10"]
 visible = false
-margin_top = 189.0
-margin_bottom = 244.0
+offset_top = 189.0
+offset_bottom = 244.0
 
 [node name="TestoidSpectrumAnalyzer" parent="." index="11"]
 visible = false
-margin_top = 189.0
-margin_bottom = 439.0
+offset_top = 189.0
+offset_bottom = 439.0
 VU_counts = 16
 
 [node name="TestoidMusicPlayer" parent="." index="12"]
 visible = false
-margin_top = 201.0
-margin_bottom = 264.0
+offset_top = 201.0
+offset_bottom = 264.0
 
 [node name="AudioTestMeter" parent="." index="13" instance=ExtResource( 5 )]
-margin_top = 201.0
-margin_right = 1920.0
-margin_bottom = 264.0
+offset_top = 201.0
+offset_right = 1920.0
+offset_bottom = 264.0
 VariableName = "VU meter"
 maximum = 1.0
 stepp = 0.001
 
 [node name="AudioSpectrum" parent="." index="14" instance=ExtResource( 7 )]
-margin_top = 268.0
-margin_bottom = 518.0
+offset_top = 268.0
+offset_bottom = 518.0
 VU_counts = 16
 
 [node name="AudioTestPlayer" parent="." index="15" instance=ExtResource( 6 )]
-margin_top = 522.0
-margin_bottom = 585.0
+offset_top = 522.0
+offset_bottom = 585.0
 VariableName = "J. Fontanez - Floaters"
 
 [node name="Testoid" type="AudioStreamPlayer" parent="." index="16"]
@@ -120,13 +120,13 @@ bus = "SoundEffect"
 
 [node name="TestoidSpeakerTryer" parent="." index="19"]
 visible = false
-margin_top = 589.0
-margin_bottom = 1089.0
+offset_top = 589.0
+offset_bottom = 1089.0
 
 [node name="TestoidClock" parent="." index="20"]
 visible = false
-margin_top = 1093.0
-margin_bottom = 1363.0
+offset_top = 1093.0
+offset_bottom = 1363.0
 
 [connection signal="HasChanged" from="MasterVolume" to="." method="_on_MasterVolume_HasChanged"]
 [connection signal="SliderReleased" from="MasterVolume" to="." method="_on_MasterVolume_SliderReleased"]

@@ -4,7 +4,7 @@ extends Popup
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(bool) var isSpawned
+@export var isSpawned: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,11 +18,11 @@ func _process(delta):
 func SpawnDialog():
 	#set_visible(true)
 	print($Panel/VBoxContainer/Label.text)
-	popup_centered_minsize(Vector2(.2,.2))
+	popup_centered_clamped(Vector2(.2,.2))
 	$Panel/VBoxContainer/ButtonConfirmations/No.grab_focus()
 	pass
 
-func SpawnDialogWithText(var TextDialog):
+func SpawnDialogWithText(TextDialog):
 	$Panel/VBoxContainer/Label.text = TextDialog
 	SpawnDialog()
 	pass

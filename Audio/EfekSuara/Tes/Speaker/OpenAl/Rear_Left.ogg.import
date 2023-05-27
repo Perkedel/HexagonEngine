@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Rear_Left.ogg-c5a17b963772e0ac913346bfed8f3ace.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cj1qlng4oi7g5"
+path="res://.godot/imported/Rear_Left.ogg-c5a17b963772e0ac913346bfed8f3ace.oggvorbisstr"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Rear_Left.ogg"
-dest_files=[ "res://.import/Rear_Left.ogg-c5a17b963772e0ac913346bfed8f3ace.oggstr" ]
+dest_files=["res://.godot/imported/Rear_Left.ogg-c5a17b963772e0ac913346bfed8f3ace.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

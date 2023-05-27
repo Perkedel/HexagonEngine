@@ -15,7 +15,7 @@ func _ready():
 	# luckily I was also next to her and Unity still had cooldown
 	# hence I managed to reach her body and report Eik serkat
 	OS.shell_open("steam://rungameid/945360")
-	yield(get_tree().create_timer(1),"timeout")
+	await get_tree().create_timer(1).timeout
 	emit_signal("ChangeDVD_Exec")
 	
 	# Vote Unity guys. that's the Impostor!

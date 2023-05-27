@@ -2,7 +2,7 @@
 
 [ext_resource path="res://DummyTest/Gron.tscn" type="PackedScene" id=1]
 
-[node name="talc" type="Spatial"]
+[node name="talc" type="Node3D"]
 
 [node name="Gron" parent="." instance=ExtResource( 1 )]
 

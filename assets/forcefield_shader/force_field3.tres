@@ -5,9 +5,9 @@
 code = "shader_type spatial;
 render_mode blend_add, depth_draw_opaque, cull_disabled;
 
-uniform vec4 base_color:hint_color;
+uniform vec4 base_color:source_color;
 uniform vec2 near_far=vec2(0.1,100.0);
-uniform sampler2D hex_tex:hint_black;
+uniform sampler2D hex_tex:hint_default_black;
 uniform float hexes_scale:hint_range(1,100);
 
 float linearize(float val) {

@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Floaters.ogg-11813609cef78ec05dc192e3db332a65.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbwreakiog4it"
+path="res://.godot/imported/Floaters.ogg-11813609cef78ec05dc192e3db332a65.oggvorbisstr"
 
 [deps]
 
 source_file="res://Audio/Musik/Floaters.ogg"
-dest_files=[ "res://.import/Floaters.ogg-11813609cef78ec05dc192e3db332a65.oggstr" ]
+dest_files=["res://.godot/imported/Floaters.ogg-11813609cef78ec05dc192e3db332a65.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

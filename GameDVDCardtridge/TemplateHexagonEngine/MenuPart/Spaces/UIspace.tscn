@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Scripts/UIspace.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MainMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=7]
 
 [node name="UIspace" type="Control"]
-pause_mode = 2
+process_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -25,9 +25,9 @@ NextMenuNode = NodePath("../NextMenu")
 
 [node name="Mavrickle" type="TextureRect" parent="."]
 visible = false
-margin_top = 515.0
-margin_right = 1920.0
-margin_bottom = 725.0
+offset_top = 515.0
+offset_right = 1920.0
+offset_bottom = 725.0
 texture = ExtResource( 3 )
 
 [node name="NextMenu" parent="." instance=ExtResource( 4 )]

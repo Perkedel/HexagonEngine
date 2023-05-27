@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-96c62baf0bd13feb35588105e4ec3e9b.sample"
+type="AudioStreamWAV"
+uid="uid://b30i1il78j2q5"
+path="res://.godot/imported/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-96c62baf0bd13feb35588105e4ec3e9b.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav"
-dest_files=[ "res://.import/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-96c62baf0bd13feb35588105e4ec3e9b.sample" ]
+dest_files=["res://.godot/imported/452596__kyles__door-wood-impact-hit-kick-open-sudden-explode.wav-96c62baf0bd13feb35588105e4ec3e9b.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -1,10 +1,10 @@
-extends TextureProgress
+extends TextureProgressBar
 
-export(bool) var showName = false
-export(String) var Name = ""
-export(float) var labelSize = 72
+@export var showName: bool = false
+@export var Name: String = ""
+@export var labelSize: float = 72
 
-onready var label = $LabelValue
+@onready var label = $LabelValue
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

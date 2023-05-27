@@ -1,4 +1,4 @@
-extends Position2D
+extends Marker2D
 
 func white():
 	$Inline.color = Color(1, 1, 1)

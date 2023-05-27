@@ -50,15 +50,15 @@ window/stretch/aspect="keep_width"
 
 [editor]
 
-search_in_file_extensions=PoolStringArray( "gd", "shader", "js" )
+search_in_file_extensions=PackedStringArray( "gd", "shader", "js" )
 
 [editor_plugins]
 
-enabled=PoolStringArray( "WebAudioExternal" )
+enabled=PackedStringArray( "WebAudioExternal" )
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
+textures/vram_compression/import_etc2_astc=false
+environment/defaults/default_environment="res://default_env.tres"

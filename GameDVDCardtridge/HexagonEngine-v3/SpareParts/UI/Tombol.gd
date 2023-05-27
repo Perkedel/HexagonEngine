@@ -1,4 +1,4 @@
-tool
+@tool
 extends Button
 
 # Are you coding son

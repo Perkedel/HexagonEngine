@@ -1,9 +1,9 @@
 extends Control
 
-var radius:float = 1.0 setget _set_radius
-var color:Color = Color.white setget _set_color
+var radius:float = 1.0: set = _set_radius
+var color:Color = Color.WHITE: set = _set_color
 
-func _init(radius:float = 1.0, color:Color = Color.white):
+func _init(radius:float = 1.0, color:Color = Color.WHITE):
 	self.radius = radius
 	self.color = color
 

@@ -1,8 +1,8 @@
 extends ParallaxBackground
 
-export (float) var speedWay = -500
-export (float) var currentXoffset = 0
-export (bool) var EnableSpeed = true
+@export (float) var speedWay = -500
+@export (float) var currentXoffset = 0
+@export (bool) var EnableSpeed = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

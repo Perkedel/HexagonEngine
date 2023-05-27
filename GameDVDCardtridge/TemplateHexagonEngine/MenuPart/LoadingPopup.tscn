@@ -1,62 +1,63 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://bs2xtxubyes3w"]
 
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.gd" type="Script" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" type="PackedScene" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=4]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://2inhr4yab0i7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" id="2"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_B_72.tres" id="3"]
+[ext_resource type="Theme" uid="uid://4g7pi1nwsoji" path="res://Theme/Perkedel_Tema.tres" id="4"]
 
 [node name="LoadingPopup" type="Popup"]
+size = Vector2i(213, 200)
 visible = true
-anchor_right = 1.0
-margin_top = 100.0
-margin_bottom = 300.0
-theme = ExtResource( 4 )
-popup_exclusive = true
-script = ExtResource( 1 )
-ProgressMeterValue = 15.0
+exclusive = true
+theme = ExtResource("4")
+script = ExtResource("1")
 ProgressWording = "Loading Wordings"
-IncompleteLoadingColor = Color( 0, 1, 0, 1 )
-CompleteLoadingColor = Color( 0, 0, 1, 1 )
+IncompleteLoadingColor = Color(0, 1, 0, 1)
+CompleteLoadingColor = Color(0, 0, 1, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="SpaceContain" type="Control" parent="HBoxContainer"]
-margin_right = 200.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 200, 200 )
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
 
-[node name="GravityHourGlass" parent="HBoxContainer/SpaceContain" instance=ExtResource( 2 )]
+[node name="GravityHourGlass" parent="HBoxContainer/SpaceContain" instance=ExtResource("2")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 200.0
+offset_bottom = 200.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 204.0
-margin_right = 1920.0
-margin_bottom = 200.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
 
 [node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/VBoxContainer"]
-self_modulate = Color( 0, 1, 0, 1 )
-margin_right = 1716.0
-margin_bottom = 90.0
-rect_min_size = Vector2( 0, 90 )
+self_modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource("3")
 value = 15.0
 rounded = true
 
 [node name="LoadingHintWord" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_top = 106.0
-margin_right = 1716.0
-margin_bottom = 196.0
-rect_min_size = Vector2( 0, 90 )
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource("3")
 text = "LoadingWord"
-valign = 1
 clip_text = true
 
 [node name="Timerout" type="Timer" parent="."]

@@ -20,8 +20,8 @@ func _input(event):
 	if event is InputEventKey:
 		# https://godotengine.org/qa/30582/how-to-detect-which-key-is-pressed
 		# https://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html
-		IsKeyPress = OS.get_scancode_string(event.scancode)
-		IsKeyCode = OS.find_scancode_from_string(IsKeyPress)
+		IsKeyPress = OS.get_keycode_string(event.keycode)
+		IsKeyCode = OS.find_keycode_from_string(IsKeyPress)
 		# https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html
 		Formatsing = "Name: %s; Code: %s"
 		Wroding = Formatsing % [IsKeyPress, IsKeyCode]

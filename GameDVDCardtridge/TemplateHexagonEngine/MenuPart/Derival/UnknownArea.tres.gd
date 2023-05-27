@@ -1,6 +1,6 @@
 extends Control
 
-export (String) var pathToSave = "user://Unknown.txt"
+@export (String) var pathToSave = "user://Unknown.txt"
 var Filer
 # Declare member variables here. Examples:
 # var a = 2

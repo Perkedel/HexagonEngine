@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=2]
 
 
 [node name="Control" type="Control"]
@@ -12,8 +12,8 @@ __meta__ = {
 }
 
 [node name="CircularContainer" type="Container" parent="."]
-margin_right = 1060.0
-margin_bottom = 733.0
+offset_right = 1060.0
+offset_bottom = 733.0
 script = ExtResource( 1 )
 arrange/force_squares = false
 arrange/force_expand = false
@@ -24,111 +24,111 @@ animate/percent_visible = 1
 animate/all_at_once = false
 
 [node name="WaffTopi" type="Button" parent="CircularContainer"]
-margin_left = 779.4
-margin_right = 1140.4
-margin_bottom = 94.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 779.4
+offset_right = 1140.4
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi2" type="Button" parent="CircularContainer"]
-margin_left = 417.201
-margin_top = 89.272
-margin_right = 778.201
-margin_bottom = 183.272
-custom_fonts/font = ExtResource( 2 )
+offset_left = 417.201
+offset_top = 89.272
+offset_right = 778.201
+offset_bottom = 183.272
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi3" type="Button" parent="CircularContainer"]
-margin_left = 137.975
-margin_top = 336.637
-margin_right = 498.975
-margin_bottom = 430.637
-custom_fonts/font = ExtResource( 2 )
+offset_left = 137.975
+offset_top = 336.637
+offset_right = 498.975
+offset_bottom = 430.637
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi4" type="Button" parent="CircularContainer"]
-margin_left = 5.68549
-margin_top = 685.43
-margin_right = 366.685
-margin_bottom = 779.43
-custom_fonts/font = ExtResource( 2 )
+offset_left = 5.68549
+offset_top = 685.43
+offset_right = 366.685
+offset_bottom = 779.43
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi5" type="Button" parent="CircularContainer"]
-margin_left = 50.6374
-margin_top = 1055.75
-margin_right = 411.637
-margin_bottom = 1149.75
-custom_fonts/font = ExtResource( 2 )
+offset_left = 50.6374
+offset_top = 1055.75
+offset_right = 411.637
+offset_bottom = 1149.75
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi6" type="Button" parent="CircularContainer"]
-margin_left = 262.533
-margin_top = 1362.76
-margin_right = 623.533
-margin_bottom = 1456.76
-custom_fonts/font = ExtResource( 2 )
+offset_left = 262.533
+offset_top = 1362.76
+offset_right = 623.533
+offset_bottom = 1456.76
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi7" type="Button" parent="CircularContainer"]
-margin_left = 592.832
-margin_top = 1536.14
-margin_right = 953.832
-margin_bottom = 1630.14
-custom_fonts/font = ExtResource( 2 )
+offset_left = 592.832
+offset_top = 1536.14
+offset_right = 953.832
+offset_bottom = 1630.14
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi8" type="Button" parent="CircularContainer"]
-margin_left = 965.87
-margin_top = 1536.16
-margin_right = 1326.87
-margin_bottom = 1630.16
-custom_fonts/font = ExtResource( 2 )
+offset_left = 965.87
+offset_top = 1536.16
+offset_right = 1326.87
+offset_bottom = 1630.16
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi9" type="Button" parent="CircularContainer"]
-margin_left = 1296.19
-margin_top = 1362.83
-margin_right = 1657.19
-margin_bottom = 1456.83
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1296.19
+offset_top = 1362.83
+offset_right = 1657.19
+offset_bottom = 1456.83
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi10" type="Button" parent="CircularContainer"]
-margin_left = 1508.13
-margin_top = 1055.84
-margin_right = 1869.13
-margin_bottom = 1149.84
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1508.13
+offset_top = 1055.84
+offset_right = 1869.13
+offset_bottom = 1149.84
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi11" type="Button" parent="CircularContainer"]
-margin_left = 1553.13
-margin_top = 685.53
-margin_right = 1914.13
-margin_bottom = 779.53
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1553.13
+offset_top = 685.53
+offset_right = 1914.13
+offset_bottom = 779.53
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi12" type="Button" parent="CircularContainer"]
-margin_left = 1420.88
-margin_top = 336.72
-margin_right = 1781.88
-margin_bottom = 430.72
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1420.88
+offset_top = 336.72
+offset_right = 1781.88
+offset_bottom = 430.72
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi13" type="Button" parent="CircularContainer"]
-margin_left = 1141.69
-margin_top = 89.3187
-margin_right = 1502.69
-margin_bottom = 183.319
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1141.69
+offset_top = 89.3187
+offset_right = 1502.69
+offset_bottom = 183.319
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"
 
 [node name="WaffTopi14" type="Button" parent="CircularContainer"]
-margin_left = 779.5
-margin_right = 1140.5
-margin_bottom = 94.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 779.5
+offset_right = 1140.5
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Waff Topi"

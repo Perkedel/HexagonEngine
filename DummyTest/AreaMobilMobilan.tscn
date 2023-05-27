@@ -6,7 +6,7 @@
 [ext_resource path="res://modules/Reusables/TembokExample.tscn" type="PackedScene" id=4]
 [ext_resource path="res://DummyTest/AreaMobilMobilan.gd" type="Script" id=5]
 
-[node name="AreaMobilMobilan" type="Spatial"]
+[node name="AreaMobilMobilan" type="Node3D"]
 script = ExtResource( 5 )
 
 [node name="LantaiExample" parent="." instance=ExtResource( 3 )]
@@ -14,35 +14,35 @@ script = ExtResource( 5 )
 [node name="MobilMobilan" parent="." instance=ExtResource( 2 )]
 
 [node name="anCapsol" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 4 )
 
 [node name="anCapsol2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12 )
 
 [node name="anCapsol3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12 )
 
 [node name="anCapsol4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21 )
 
 [node name="anCapsol5" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 20, 0 )
+transform = Transform3D( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 20, 0 )
 
 [node name="anCapsol6" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 
 [node name="TembokExample" parent="." instance=ExtResource( 4 )]
 
 [node name="TembokExample2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0 )
 
 [node name="TembokExample3" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 50 )
+transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 50 )
 
 [node name="TembokExample4" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -50 )
+transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -50 )
 
-[node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
+[node name="Generic6DOFJoint3D" type="Generic6DOFJoint3D" parent="."]
 nodes/node_a = NodePath("../MobilMobilan")
 nodes/node_b = NodePath("../anCapsol6")
 angular_limit_x/upper_angle = 45.0

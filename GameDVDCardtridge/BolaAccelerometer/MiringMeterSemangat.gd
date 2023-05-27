@@ -1,6 +1,6 @@
 extends Panel
 
-export var Daya:float = 25
+@export var Daya:float = 25
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

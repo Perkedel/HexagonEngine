@@ -1,6 +1,6 @@
 extends Node2D
 
-export(PackedScene) var NextLevelPath
+@export var NextLevelPath: PackedScene
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

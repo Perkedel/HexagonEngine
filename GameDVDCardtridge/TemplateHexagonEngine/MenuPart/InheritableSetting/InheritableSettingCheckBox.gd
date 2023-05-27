@@ -1,9 +1,9 @@
 extends HBoxContainer
 
-export (String) var VariableName = "CheckBox"
-export (String) var CheckBoxName = "Status"
-export (bool) var RadioMode = false;
-export (ButtonGroup) var ButtonGrouper
+@export (String) var VariableName = "CheckBox"
+@export (String) var CheckBoxName = "Status"
+@export (bool) var RadioMode = false;
+@export (ButtonGroup) var ButtonGrouper
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -18,7 +18,7 @@ func _ready():
 	pass # Replace with function body.
 
 func ForceValue(value:bool):
-	$HBoxContainer/CheckBox.pressed = value
+	$HBoxContainer/CheckBox.button_pressed = value
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

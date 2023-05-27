@@ -12,12 +12,12 @@ __meta__ = {
 
 [node name="FileDialog" type="FileDialog" parent="."]
 visible = true
-margin_right = 321.0
-margin_bottom = 384.0
+offset_right = 321.0
+offset_bottom = 384.0
 window_title = "Buka sebuah File"
 mode = 0
 access = 2
-filters = PoolStringArray( "*.ogg" )
+filters = PackedStringArray( "*.ogg" )
 show_hidden_files = true
 current_dir = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
 current_path = "C:/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"

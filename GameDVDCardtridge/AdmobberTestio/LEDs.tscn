@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=1]
 [ext_resource path="res://GameDVDCardtridge/AdmobberTestio/LEDs.gd" type="Script" id=2]
 
 
 [node name="LEDs" type="HBoxContainer"]
-margin_top = 57.0
-margin_right = 1216.0
-margin_bottom = 121.0
+offset_top = 57.0
+offset_right = 1216.0
+offset_bottom = 121.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -18,15 +18,15 @@ __meta__ = {
 
 [node name="Banner" type="Panel" parent="."]
 self_modulate = Color( 0, 0.984314, 0, 1 )
-margin_right = 400.0
-margin_bottom = 64.0
+offset_right = 400.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Banner"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Banner"
 align = 1
 valign = 1
@@ -36,16 +36,16 @@ __meta__ = {
 
 [node name="Interstitial" type="Panel" parent="."]
 self_modulate = Color( 0, 1, 1, 1 )
-margin_left = 408.0
-margin_right = 808.0
-margin_bottom = 64.0
+offset_left = 408.0
+offset_right = 808.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Labol" type="Label" parent="Interstitial"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Interstitial"
 align = 1
 valign = 1
@@ -55,16 +55,16 @@ __meta__ = {
 
 [node name="RewardedVideo" type="Panel" parent="."]
 self_modulate = Color( 0.0784314, 0, 1, 1 )
-margin_left = 816.0
-margin_right = 1216.0
-margin_bottom = 64.0
+offset_left = 816.0
+offset_right = 1216.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Labal" type="Label" parent="RewardedVideo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Video Rewarded"
 align = 1
 valign = 1

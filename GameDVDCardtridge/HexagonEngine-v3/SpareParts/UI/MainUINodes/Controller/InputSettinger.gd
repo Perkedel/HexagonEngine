@@ -3,13 +3,13 @@ extends GridContainer
 
 const InputEachActionLoad = preload("res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Controller/InputEachAction.tscn")
 
-export(String) var FilterActionPrefixOf = "^ui_"
+@export var FilterActionPrefixOf: String = "^ui_"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 # https://github.com/AnJ95/godot-toolbox-project
 
-export var pretty_action_names = {
+@export var pretty_action_names = {
 	"game_left" : "Left",
 	"game_right" : "Right",
 	"game_up" : "Up",
@@ -21,7 +21,7 @@ export var pretty_action_names = {
 	"game_pause" : "Pause"
 }
 
-export var preferred_order = [
+@export var preferred_order = [
 	"game_left",
 	"game_right",
 	"game_up",
@@ -69,7 +69,7 @@ func add_actions():
 			continue
 		
 		# create and add instance
-		var menu_action_inst = InputEachActionLoad.instance()
+		var menu_action_inst = InputEachActionLoad.instantiate()
 		menu_action_inst.init(action_name)
 		add_child(menu_action_inst)
 	

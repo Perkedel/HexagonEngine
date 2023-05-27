@@ -1,6 +1,6 @@
 extends Button
 
-export(PoolStringArray) var contextInputMapName:PoolStringArray = ["ui_cancel"]
+@export var contextInputMapName: PackedStringArray:PackedStringArray = ["ui_cancel"]
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -13,7 +13,7 @@ var isInGamePad = false
 var isAMouse = false # is the context being observed a mouse?
 var isGamepadButton = false # is the gamepad context being a button?
 var actionList:Array
-onready var filteredActionList:Dictionary = {
+@onready var filteredActionList:Dictionary = {
 	counts = {
 		type_InputEventKey = 0,
 		type_InputEventJoypadButton = 0,
@@ -27,23 +27,23 @@ onready var filteredActionList:Dictionary = {
 		type_InputEventMouseButton = {}
 	}
 }
-onready var filter_InputEventKey:Array
-onready var filter_InputEventJoypadButton:Array
-onready var filter_InputEventJoypadMotion:Array
-onready var filter_InputEventMouseButton:Array
-onready var texture_InputEventKey:Array
-onready var texture_InputEventMouseButton:Array
-onready var texture_InputEventKeyboardMouse:Array
-onready var texture_InputEventJoypad:Array
-onready var texture_InputEventJoypadButton:Array
-onready var texture_InputEventJoypadMotion:Array
-onready var texture_InputEventNeither:Array
-onready var counter_InputEventKey:int = 0
-onready var counter_InputEventMouseButton:int = 0
-onready var counter_InputEventKeyboardMouse:int = 0
-onready var counter_InputEventJoypadButton:int = 0
-onready var counter_InputEventJoypadMotion:int = 0
-onready var counter_InputEventJoypad:int = 0
+@onready var filter_InputEventKey:Array
+@onready var filter_InputEventJoypadButton:Array
+@onready var filter_InputEventJoypadMotion:Array
+@onready var filter_InputEventMouseButton:Array
+@onready var texture_InputEventKey:Array
+@onready var texture_InputEventMouseButton:Array
+@onready var texture_InputEventKeyboardMouse:Array
+@onready var texture_InputEventJoypad:Array
+@onready var texture_InputEventJoypadButton:Array
+@onready var texture_InputEventJoypadMotion:Array
+@onready var texture_InputEventNeither:Array
+@onready var counter_InputEventKey:int = 0
+@onready var counter_InputEventMouseButton:int = 0
+@onready var counter_InputEventKeyboardMouse:int = 0
+@onready var counter_InputEventJoypadButton:int = 0
+@onready var counter_InputEventJoypadMotion:int = 0
+@onready var counter_InputEventJoypad:int = 0
 var theActionEventOfIt # is dynamic, supposedly any InputEvent based such as InputEventKey, InputEventJoypadButton, etc. etc.
 var gamepadName:String
 var gamepadGuid:String
@@ -53,21 +53,21 @@ var contains_InputEventMouseButton:bool = false
 var contains_InputEventJoypadButton:bool = false
 var contains_InputEventJoypadMotion:bool = false
 
-onready var overTopImager = $OverTop
+@onready var overTopImager = $OverTop
 
-export(int) var whichGamepad = 0
-export(String) var tempThemePathment = "res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/"
+@export var whichGamepad: int = 0
+@export var tempThemePathment: String = "res://assets/ExtraImport/Xelu_Free_Controller&Key_Prompts/"
 
-export(Texture) var tempGamepadImage = load(tempThemePathment + "PS5/PS5_Circle.png")
-export(Texture) var tempGamepadButtonImage = load(tempThemePathment + "PS5/PS5_Circle.png")
-export(Texture) var tempGamepadMotionImage = load(tempThemePathment + "PS5/PS5_Left_Stick.png")
-export(Texture) var tempOverTopImage
-export(Texture) var tempKeyboardMouseImage = load(tempThemePathment + "Keyboard & Mouse/Light/Esc_Key_Light.png")
-export(Texture) var tempKeyboardImage = load(tempThemePathment + "Keyboard & Mouse/Light/Esc_Key_Light.png")
-export(Texture) var tempMouseImage = load(tempThemePathment + "Keyboard & Mouse/Light/Mouse_Simple_Key_Light.png")
-export(Texture) var tempTouchscreenImage = load("res://Sprites/KembaliButton.png")
-export(Texture) var tempNeitherImage = load("res://Sprites/MavrickleIcon.png")
-export(bool) var _debug_printNow:bool = false
+@export var tempGamepadImage: Texture2D = load(tempThemePathment + "PS5/PS5_Circle.png")
+@export var tempGamepadButtonImage: Texture2D = load(tempThemePathment + "PS5/PS5_Circle.png")
+@export var tempGamepadMotionImage: Texture2D = load(tempThemePathment + "PS5/PS5_Left_Stick.png")
+@export var tempOverTopImage: Texture2D
+@export var tempKeyboardMouseImage: Texture2D = load(tempThemePathment + "Keyboard & Mouse/Light3D/Esc_Key_Light.png")
+@export var tempKeyboardImage: Texture2D = load(tempThemePathment + "Keyboard & Mouse/Light3D/Esc_Key_Light.png")
+@export var tempMouseImage: Texture2D = load(tempThemePathment + "Keyboard & Mouse/Light3D/Mouse_Simple_Key_Light.png")
+@export var tempTouchscreenImage: Texture2D = load("res://Sprites/KembaliButton.png")
+@export var tempNeitherImage: Texture2D = load("res://Sprites/MavrickleIcon.png")
+@export var _debug_printNow: bool:bool = false
 
 func _returnJoyPadButton(button_index:int)->String:
 	# TODO: wrap by different brand of console
@@ -90,7 +90,7 @@ func _returnJoyPadButton(button_index:int)->String:
 	return "res://Sprites/MavrickleIcon.png"
 	pass
 
-func _checkJoyPadButton(button_index:int) -> Texture:
+func _checkJoyPadButton(button_index:int) -> Texture2D:
 	if _debug_printNow:
 		print("Joypad Button of " + String(button_index)) 
 	tempGamepadImage = load(_returnJoyPadButton(button_index))
@@ -127,7 +127,7 @@ func _returnJoypadAxis(axis_index:int)->String:
 	return "res://Sprites/MavrickleIcon.png"
 	pass
 
-func _checkJoyPadAxis(axis_index:int) -> Texture:
+func _checkJoyPadAxis(axis_index:int) -> Texture2D:
 	if _debug_printNow:
 		print("Joypad Axis of " + String(axis_index)) 
 	tempGamepadImage = load(_returnJoypadAxis(axis_index))
@@ -158,16 +158,16 @@ func _checkDirection(chooseEnum):
 	pass
 
 func _calculateFunctionKey(button_index:int)->String:
-	return tempThemePathment + "Keyboard & Mouse/Light/F" + String((button_index - KEY_F1) + 1) + "_Key_Light.png"
+	return tempThemePathment + "Keyboard & Mouse/Light3D/F" + String((button_index - KEY_F1) + 1) + "_Key_Light.png"
 
 func _calculateAlphabeticKey(button_index:int)->String:
-	return tempThemePathment + "Keyboard & Mouse/Light/"+ char(button_index) +"_Key_Light.png"
+	return tempThemePathment + "Keyboard & Mouse/Light3D/"+ char(button_index) +"_Key_Light.png"
 
 func _calculateNumericRow(button_index:int)->String:
-	return tempThemePathment + "Keyboard & Mouse/Light/"+ String(button_index - KEY_0) +"_Key_Light.png"
+	return tempThemePathment + "Keyboard & Mouse/Light3D/"+ String(button_index - KEY_0) +"_Key_Light.png"
 
 func _calculateNumpad(button_index:int)->String:
-	return tempThemePathment + "Keyboard & Mouse/Light/"+ String(button_index - KEY_KP_0) +"_Key_Light.png"
+	return tempThemePathment + "Keyboard & Mouse/Light3D/"+ String(button_index - KEY_KP_0) +"_Key_Light.png"
 
 func _returnKeyboardButton(button_index:int)->String:
 	if button_index >= KEY_A and button_index <= KEY_Z:
@@ -181,15 +181,15 @@ func _returnKeyboardButton(button_index:int)->String:
 	
 	match(button_index):
 		KEY_ESCAPE:
-			return tempThemePathment + "Keyboard & Mouse/Light/Esc_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Esc_Key_Light.png"
 			pass
 		KEY_ENTER:
-			return tempThemePathment + "Keyboard & Mouse/Light/Enter_Alt_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Enter_Alt_Key_Light.png"
 			pass
 		KEY_KP_ENTER:
-			return tempThemePathment + "Keyboard & Mouse/Light/Enter_Tall_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Enter_Tall_Key_Light.png"
 		KEY_SPACE:
-			return tempThemePathment + "Keyboard & Mouse/Light/Space_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Space_Key_Light.png"
 		_:
 			pass
 	
@@ -200,7 +200,7 @@ func _returnKeyboardButton(button_index:int)->String:
 	return "res://Sprites/MavrickleIcon.png"
 	pass
 
-func _checkKeyboardButton(button_index:int) -> Texture:
+func _checkKeyboardButton(button_index:int) -> Texture2D:
 	overTopImager.visible = false
 	if _debug_printNow:
 		print("Keyboard Scancode of " + String(button_index))
@@ -214,16 +214,16 @@ func _returnMouseButton(button_index:int)->String:
 		0:
 			pass
 		1:
-			return tempThemePathment + "Keyboard & Mouse/Light/Mouse_Left_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Mouse_Left_Key_Light.png"
 		2:
-			return tempThemePathment + "Keyboard & Mouse/Light/Mouse_Right_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Mouse_Right_Key_Light.png"
 		3:
-			return tempThemePathment + "Keyboard & Mouse/Light/Mouse_Middle_Key_Light.png"
+			return tempThemePathment + "Keyboard & Mouse/Light3D/Mouse_Middle_Key_Light.png"
 		_:
 			pass
 	return "res://Sprites/MavrickleIcon.png"
 
-func _checkMouseButton(button_index:int) -> Texture:
+func _checkMouseButton(button_index:int) -> Texture2D:
 	if _debug_printNow:
 		print("Mouse Index of " + String(button_index))
 	tempKeyboardMouseImage = load(_returnMouseButton(button_index))
@@ -238,7 +238,7 @@ func _retrieveActionContext():
 	#TODO reset contains
 	
 	isDirection = false # reset the flag first
-	actionList = InputMap.get_action_list(contextInputMapName[0])
+	actionList = InputMap.action_get_events(contextInputMapName[0])
 	if _debug_printNow:
 		print(String(actionList))
 	# TODO: watch for copy of InputEvent as there may be one another with same datatype. e.g. ui_accept has ENTER & SPACE, both are InputEventKey. it indexes last scanned of them.
@@ -246,10 +246,10 @@ func _retrieveActionContext():
 #		if _debug_printNow:
 #			print(""+String(things))
 		if things is InputEventKey:
-			filteredActionList["Listing"]["type_InputEventKey"][things.scancode] = things
+			filteredActionList["Listing"]["type_InputEventKey"][things.keycode] = things
 			filter_InputEventKey.append(things)
-			texture_InputEventKey.append(_checkKeyboardButton(things.scancode))
-			texture_InputEventKeyboardMouse.append(_checkKeyboardButton(things.scancode))
+			texture_InputEventKey.append(_checkKeyboardButton(things.keycode))
+			texture_InputEventKeyboardMouse.append(_checkKeyboardButton(things.keycode))
 			isAMouse = false
 			contains_InputEventKey = true
 			pass
@@ -322,7 +322,7 @@ func _retrieveGamePadName(which:int = 0):
 	pass
 
 func _cycleImages():
-	if not texture_InputEventKey.empty():
+	if not texture_InputEventKey.is_empty():
 	#	var theKeyboardThing:int = filteredActionList["Listing"]["type_InputEventKey"].values()[ int(filteredActionList["counts"]["type_InputEventKey"])]
 		if _debug_printNow:
 			print(String(counter_InputEventKey) + " indexd")
@@ -347,7 +347,7 @@ func _cycleImages():
 	else:
 		tempKeyboardImage = tempNeitherImage
 	
-	if not texture_InputEventMouseButton.empty():
+	if not texture_InputEventMouseButton.is_empty():
 		tempMouseImage = texture_InputEventMouseButton[counter_InputEventMouseButton]
 		counter_InputEventMouseButton += 1
 		if counter_InputEventMouseButton > texture_InputEventMouseButton.size()-1:
@@ -356,7 +356,7 @@ func _cycleImages():
 	else:
 		tempMouseImage = tempNeitherImage
 	
-	if not texture_InputEventKeyboardMouse.empty():
+	if not texture_InputEventKeyboardMouse.is_empty():
 		tempKeyboardMouseImage = texture_InputEventKeyboardMouse[counter_InputEventKeyboardMouse]
 		counter_InputEventKeyboardMouse += 1
 		if counter_InputEventKeyboardMouse > texture_InputEventKeyboardMouse.size()-1:
@@ -365,7 +365,7 @@ func _cycleImages():
 	else:
 		tempKeyboardMouseImage = tempNeitherImage
 	
-	if not texture_InputEventJoypadButton.empty():
+	if not texture_InputEventJoypadButton.is_empty():
 		tempGamepadButtonImage = texture_InputEventJoypadButton[counter_InputEventJoypadButton]
 		counter_InputEventJoypadButton += 1
 		if counter_InputEventJoypadButton > texture_InputEventJoypadButton.size()-1:
@@ -374,7 +374,7 @@ func _cycleImages():
 	else:
 		tempGamepadButtonImage = tempNeitherImage
 	
-	if not texture_InputEventJoypadMotion.empty():
+	if not texture_InputEventJoypadMotion.is_empty():
 		tempGamepadMotionImage = texture_InputEventJoypadMotion[counter_InputEventJoypadMotion]
 		counter_InputEventJoypadMotion += 1
 		if counter_InputEventJoypadMotion > texture_InputEventJoypadMotion.size()-1:
@@ -383,7 +383,7 @@ func _cycleImages():
 	else:
 		tempGamepadMotionImage = tempNeitherImage
 	
-	if not texture_InputEventJoypad.empty():
+	if not texture_InputEventJoypad.is_empty():
 		tempGamepadImage = texture_InputEventJoypad[counter_InputEventJoypad]
 		counter_InputEventJoypad += 1
 		if counter_InputEventJoypad > texture_InputEventJoypad.size()-1:
@@ -396,7 +396,7 @@ func _cycleImages():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# from Godot demo "Joypads", connect signals
-	Input.connect("joy_connection_changed", self, "_on_joy_connection_changed")
+	Input.connect("joy_connection_changed", Callable(self, "_on_joy_connection_changed"))
 	# then get name & the context
 	_retrieveGamePadName(whichGamepad)
 	_retrieveActionContext()

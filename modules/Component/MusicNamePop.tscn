@@ -1,26 +1,26 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=1]
 [ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://modules/Component/MusicNamePop.gd" type="Script" id=3]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=4]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 size = 42
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="FontFile" id=3]
 resource_local_to_scene = true
 font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 size = 24
@@ -28,21 +28,21 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 3 )
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="FontFile" id=5]
 resource_local_to_scene = true
 font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="FontFile" id=6]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 5 )
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="FontFile" id=7]
 resource_local_to_scene = true
 font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="FontFile" id=8]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 outline_color = Color( 0, 0, 0, 1 )
@@ -51,9 +51,9 @@ font_data = SubResource( 7 )
 [node name="MusicNamePop" type="Popup"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -103.5
-margin_right = 712.0
-margin_bottom = 103.5
+offset_top = -103.5
+offset_right = 712.0
+offset_bottom = 103.5
 theme = ExtResource( 4 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -68,18 +68,18 @@ __meta__ = {
 }
 
 [node name="AlbumPicture" type="TextureRect" parent="HBoxContainer"]
-margin_right = 181.0
-margin_bottom = 207.0
-rect_min_size = Vector2( 181, 0 )
+offset_right = 181.0
+offset_bottom = 207.0
+custom_minimum_size = Vector2( 181, 0 )
 size_flags_vertical = 3
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
 [node name="TextLabels" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 185.0
-margin_right = 712.0
-margin_bottom = 207.0
+offset_left = 185.0
+offset_right = 712.0
+offset_bottom = 207.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -87,10 +87,10 @@ alignment = 1
 [node name="Title" parent="HBoxContainer/TextLabels" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 24.0
-margin_right = 527.0
-margin_bottom = 80.0
-custom_fonts/font = SubResource( 2 )
+offset_top = 24.0
+offset_right = 527.0
+offset_bottom = 80.0
+theme_override_fonts/font = SubResource( 2 )
 text = "Title"
 clip_text = true
 fontFile = SubResource( 1 )
@@ -100,10 +100,10 @@ outlineSize = 2.0
 [node name="Artist" parent="HBoxContainer/TextLabels" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 84.0
-margin_right = 527.0
-margin_bottom = 120.0
-custom_fonts/font = SubResource( 4 )
+offset_top = 84.0
+offset_right = 527.0
+offset_bottom = 120.0
+theme_override_fonts/font = SubResource( 4 )
 text = "Artist"
 clip_text = true
 fontFile = SubResource( 3 )
@@ -111,10 +111,10 @@ fontFile = SubResource( 3 )
 [node name="License" parent="HBoxContainer/TextLabels" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 124.0
-margin_right = 527.0
-margin_bottom = 151.0
-custom_fonts/font = SubResource( 6 )
+offset_top = 124.0
+offset_right = 527.0
+offset_bottom = 151.0
+theme_override_fonts/font = SubResource( 6 )
 text = "CC4.0-BY-SA"
 clip_text = true
 fontFile = SubResource( 5 )
@@ -124,10 +124,10 @@ outlineSize = 0.5
 [node name="Source" parent="HBoxContainer/TextLabels" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 155.0
-margin_right = 527.0
-margin_bottom = 182.0
-custom_fonts/font = SubResource( 8 )
+offset_top = 155.0
+offset_right = 527.0
+offset_bottom = 182.0
+theme_override_fonts/font = SubResource( 8 )
 text = "https://example.com"
 clip_text = true
 fontFile = SubResource( 7 )

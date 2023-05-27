@@ -4,6 +4,6 @@
 
 [node name="Nodefun" type="Node"]
 
-[node name="an3Dspace" type="Spatial" parent="."]
+[node name="an3Dspace" type="Node3D" parent="."]
 
 [node name="GDquestDissolved" parent="an3Dspace" instance=ExtResource( 1 )]

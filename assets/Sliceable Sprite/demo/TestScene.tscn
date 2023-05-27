@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/Sliceable Sprite/demo/TestScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/Sliceable Sprite2D/demo/TestScene.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/ExtraImportAsset/Slicer2D.gd" type="Script" id=2]
-[ext_resource path="res://assets/Sliceable Sprite/demo/Fruit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Sliceable Sprite2D/demo/Fruit.tscn" type="PackedScene" id=3]
 
 
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 613.364, 77.6976 )
+size = Vector2( 613.364, 77.6976 )
 
 [node name="TestScene" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,7 +28,7 @@ position = Vector2( 494.621, 572.898 )
 shape = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="Floor"]
-margin_left = -10.0
-margin_top = 496.0
-margin_right = 1046.0
-margin_bottom = 611.0
+offset_left = -10.0
+offset_top = 496.0
+offset_right = 1046.0
+offset_bottom = 611.0

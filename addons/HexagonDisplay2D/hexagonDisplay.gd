@@ -1,24 +1,24 @@
+@tool
 extends Control
 class_name HexagonDisplay2D, "res://addons/HexagonDisplay2D/icon.png"
-tool
 
-export var displayLines: bool = false setget _displayLinesRefresh
-export var lineThickness: float = 1.0 setget _lineThicknesRefresh
-export var lineAbovePolygon: bool = false setget _lineAbovePolygonRefresh
-export(Color) var lineColor = Color.white setget _lineColorRefresh
-export(float,0,100) var fillRayTopLeft: float = 0.0 setget _fillRay1Refresh
-export(float,0,100) var fillRayTopRight: float = 0.0 setget _fillRay2Refresh
-export(float,0,100) var fillRayMiddleRight: float = 0.0 setget _fillRay3Refresh
-export(float,0,100) var fillRayBottomRight: float = 0.0 setget _fillRay4Refresh
-export(float,0,100) var fillRayBottomLeft: float = 0.0 setget _fillRay5Refresh
-export(float,0,100) var fillRayMiddleLeft: float = 0.0 setget _fillRay6Refresh
-export(Color) var fillRayTopLeftColor = Color.white setget _fillRay1ColorRefresh
-export(Color) var fillRayTopRightColor = Color.white setget _fillRay2ColorRefresh
-export(Color) var fillRayMiddleRightColor = Color.white setget _fillRay3ColorRefresh
-export(Color) var fillRayBottomRightColor = Color.white setget _fillRay4ColorRefresh
-export(Color) var fillRayBottomLeftColor = Color.white setget _fillRay5ColorRefresh
-export(Color) var fillRayMiddleLeftColor = Color.white setget _fillRay6ColorRefresh
-export(int) var z_index = 0 setget _zindexRefresh
+@export var displayLines: bool = false: set = _displayLinesRefresh
+@export var lineThickness: float = 1.0: set = _lineThicknesRefresh
+@export var lineAbovePolygon: bool = false: set = _lineAbovePolygonRefresh
+@export var lineColor: Color = Color.WHITE: set = _lineColorRefresh
+@export var fillRayTopLeft: float = 0.0: set = _fillRay1Refresh
+@export var fillRayTopRight: float = 0.0: set = _fillRay2Refresh
+@export var fillRayMiddleRight: float = 0.0: set = _fillRay3Refresh
+@export var fillRayBottomRight: float = 0.0: set = _fillRay4Refresh
+@export var fillRayBottomLeft: float = 0.0: set = _fillRay5Refresh
+@export var fillRayMiddleLeft: float = 0.0: set = _fillRay6Refresh
+@export var fillRayTopLeftColor: Color = Color.WHITE: set = _fillRay1ColorRefresh
+@export var fillRayTopRightColor: Color = Color.WHITE: set = _fillRay2ColorRefresh
+@export var fillRayMiddleRightColor: Color = Color.WHITE: set = _fillRay3ColorRefresh
+@export var fillRayBottomRightColor: Color = Color.WHITE: set = _fillRay4ColorRefresh
+@export var fillRayBottomLeftColor: Color = Color.WHITE: set = _fillRay5ColorRefresh
+@export var fillRayMiddleLeftColor: Color = Color.WHITE: set = _fillRay6ColorRefresh
+@export var z_index: int = 0: set = _zindexRefresh
 
 var polygonForm: Polygon2D
 var lineTopLeftBottomRight: Line2D
@@ -81,7 +81,7 @@ func _onChanged():
 	prepareHex()
 
 func _init():
-	self.connect("resized", self, "_onChanged")
+	self.connect("resized", Callable(self, "_onChanged"))
 	
 	polygonForm = Polygon2D.new()
 	polygonForm.texture = load("res://addons/HexagonDisplay2D/1x1.png")
@@ -135,14 +135,14 @@ func prepareHex():
 		lineTopLeftBottomRight.remove_point(0)
 		lineTopLeftBottomRight.remove_point(0)
 
-	lineMiddle.add_point(Vector2(0, self.rect_size.y / 2))
-	lineMiddle.add_point(Vector2(self.rect_size.x, self.rect_size.y / 2))
+	lineMiddle.add_point(Vector2(0, self.size.y / 2))
+	lineMiddle.add_point(Vector2(self.size.x, self.size.y / 2))
 
-	lineTopLeftBottomRight.add_point(Vector2(self.rect_size.x / 10 * 3, 0))
-	lineTopLeftBottomRight.add_point(Vector2(self.rect_size.x / 10 * 7, self.rect_size.y))
+	lineTopLeftBottomRight.add_point(Vector2(self.size.x / 10 * 3, 0))
+	lineTopLeftBottomRight.add_point(Vector2(self.size.x / 10 * 7, self.size.y))
 
-	lineTopRightBottomLeft.add_point(Vector2(self.rect_size.x / 10 * 7, 0))
-	lineTopRightBottomLeft.add_point(Vector2(self.rect_size.x / 10 * 3, self.rect_size.y))
+	lineTopRightBottomLeft.add_point(Vector2(self.size.x / 10 * 7, 0))
+	lineTopRightBottomLeft.add_point(Vector2(self.size.x / 10 * 3, self.size.y))
 
 	polygonRays.clear()
 	# oben links
@@ -230,8 +230,8 @@ func prepareHex():
 
 
 func setPolygon():
-	var f = PoolVector2Array()
-	var c = PoolColorArray()
+	var f = PackedVector2Array()
+	var c = PackedColorArray()
 	for i in range(polygonRays.size()):
 		match i:
 			0:

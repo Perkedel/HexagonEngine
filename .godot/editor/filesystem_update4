@@ -1,0 +1,9 @@
+res://default_env.tres
+res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn
+res://Theme/Perkedel_Tema.tres
+res://DummyTest/AnimashaMaterial.tres
+res://Audio/MusicCardtridge/MusicCardtridge.gd
+res://modules/Reusables/parts/OneShotSpeaker.tscn
+res://Scripts/AutoSpeaker.gd
+res://modules/Reusables/parts/OneShotSpeaker.gd
+res://Scripts/ExtraImportAsset/FPSLabel.gd

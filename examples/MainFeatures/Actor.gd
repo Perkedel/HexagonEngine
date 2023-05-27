@@ -1,11 +1,11 @@
-extends Sprite
+extends Sprite2D
 
 var target:Vector2
 
-var speech: String setget _set_speech
-onready var label = $PanelContainer/Label
+var speech: String: set = _set_speech
+@onready var label = $PanelContainer/Label
 
-export (Array, String) var greetings = [
+@export (Array, String) var greetings = [
 	"Hello", "Good Day", "Yoyo-yo", "Wassuuuup", 
 	"Aight", "Howdy", "EZ", "Hola", "Hey"]
 

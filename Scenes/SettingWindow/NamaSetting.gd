@@ -4,7 +4,7 @@ extends HBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var SettingersPath = "Nama"
+@export var SettingersPath = "Nama"
 var settingLoaded : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -42,6 +42,6 @@ func _on_LineEdit_text_changed(new_text):
 
 func _on_NamaSetting_visibility_changed():
 	settingLoaded = false
-	yield(get_tree().create_timer(.01),"timeout")
+	await get_tree().create_timer(.01).timeout
 	reload()
 	pass # Replace with function body.

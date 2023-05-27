@@ -4,30 +4,30 @@ extends Object
 # boundaries of a section of a song.
 
 # The amount of time, in seconds, for one beat to elapse, based on bpm.
-var beat_length: float setget , _get_beat_length
+var beat_length: float: get = _get_beat_length
 
 # The measure position of the first beat.  If the first beat in the measure, 0.
 # 1 is the second beat in the measure, and so on.
-var beat_offset: int setget , _get_beat_offset
+var beat_offset: int: get = _get_beat_offset
 
 # The number of beats per minute.
-var bpm: float setget , _get_bpm
+var bpm: float: get = _get_bpm
 
 # The total length of the section, in seconds.
-var duration: float setget , _get_duration
+var duration: float: get = _get_duration
 
 # The point in the song where this section ends, in seconds.
-var end: float setget , _get_end
+var end: float: get = _get_end
 
 # The number of beats in a measure in this section.
-var measure: int setget , _get_measure
+var measure: int: get = _get_measure
 
 # The duration between the start of the section and the first beat in the
 # section.
-var offset: float setget , _get_offset
+var offset: float: get = _get_offset
 
 # The point in the song where this section begins, in seconds.
-var start: float setget , _get_start
+var start: float: get = _get_start
 
 
 # To create a new timing element, pass a timing definition and the point in the

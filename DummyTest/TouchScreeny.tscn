@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://DummyTest/TouchScreeny.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture2D" id=2]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -19,10 +19,10 @@ pressed = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 460.0
-margin_top = 600.0
-margin_right = 1084.0
-margin_bottom = 1001.0
+offset_left = 460.0
+offset_top = 600.0
+offset_right = 1084.0
+offset_bottom = 1001.0
 [connection signal="pressed" from="UIPlave/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
 [connection signal="released" from="UIPlave/TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

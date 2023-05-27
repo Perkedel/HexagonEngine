@@ -10,16 +10,16 @@ var audio_path_names = {
 	"Sounds/Gameplay":["3rdStar"]
 }
 
-onready var modes = {
+@onready var modes = {
 	"Standard":$Standard,
 	"Spacial2D":$Spacial2D
 }
 var mode = "Standard"
 
 func _ready():
-	AudioManager.connect("updateProgressLoad",self,"updateProgress")
-	AudioManager.connect("loadedAllAudios",self,"audioLoaded")
-	AudioManager.connect("audioEnd",self,"audioEnd")
+	AudioManager.connect("updateProgressLoad", Callable(self, "updateProgress"))
+	AudioManager.connect("loadedAllAudios", Callable(self, "audioLoaded"))
+	AudioManager.connect("audioEnd", Callable(self, "audioEnd"))
 	AudioManager._audioMotorPath = ["res://howler.min.js","res://howler.spatial.min.js","res://audioEngine.js"]
 	
 	$Standard._list_group = audio_path_names.keys()

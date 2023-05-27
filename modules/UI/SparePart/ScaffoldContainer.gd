@@ -1,14 +1,14 @@
 extends Control
 
-onready var current = $CurrentScaffold
-onready var next = $NextScaffold
-onready var tween = $aTween
-onready var twoon = $bTween
-onready var tweep = $aTwoop
-onready var twoop = $bTwoop
+@onready var current = $CurrentScaffold
+@onready var next = $NextScaffold
+@onready var tween = $aTween
+@onready var twoon = $bTween
+@onready var tweep = $aTwoop
+@onready var twoop = $bTwoop
 
-export(float) var moveBy = 5
-export(float) var howLong = .5
+@export var moveBy: float = 5
+@export var howLong: float = .5
 
 var anotherScaffold:PackedScene
 
@@ -18,11 +18,11 @@ signal plsGoBack
 # var b = "text"
 
 func bindScaffold():
-	next.get_child(0).connect("plsGoBack",self,"goBack")
+	next.get_child(0).connect("plsGoBack", Callable(self, "goBack"))
 	pass
 
 func initCurrent():
-	current.get_child(0).connect("plsGoBack",self,"closeMe")
+	current.get_child(0).connect("plsGoBack", Callable(self, "closeMe"))
 	pass
 
 # Called when the node enters the scene tree for the first time.
@@ -37,11 +37,11 @@ func closeMe():
 	pass
 
 func goBack():
-	tween.interpolate_property(current,"rect_position",Vector2(-moveBy,0),Vector2.ZERO,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	twoon.interpolate_property(next,"rect_position",Vector2.ZERO,Vector2(moveBy,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tween.interpolate_property(current,"position",Vector2(-moveBy,0),Vector2.ZERO,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	twoon.interpolate_property(next,"position",Vector2.ZERO,Vector2(moveBy,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	
-	tweep.interpolate_property(current,"modulate",Color(1,1,1,0),Color.white,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	twoop.interpolate_property(next,"modulate",Color.white,Color(1,1,1,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tweep.interpolate_property(current,"modulate",Color(1,1,1,0),Color.WHITE,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	twoop.interpolate_property(next,"modulate",Color.WHITE,Color(1,1,1,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
 	twoon.start()
 	tweep.start()
@@ -49,7 +49,7 @@ func goBack():
 	
 
 	current.show()
-	yield(tween,"tween_completed")
+	await tween.tween_completed
 	next.hide()
 	for stuff in next.get_children():
 		stuff.free()
@@ -57,18 +57,18 @@ func goBack():
 
 func openScaffold(AnotherScaffoldContainer:PackedScene):
 	anotherScaffold = AnotherScaffoldContainer
-	tween.interpolate_property(current,"rect_position",Vector2.ZERO,Vector2(-moveBy,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	twoon.interpolate_property(next,"rect_position",Vector2(moveBy,0),Vector2.ZERO,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tween.interpolate_property(current,"position",Vector2.ZERO,Vector2(-moveBy,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	twoon.interpolate_property(next,"position",Vector2(moveBy,0),Vector2.ZERO,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	next.add_child(anotherScaffold)
 	
-	tweep.interpolate_property(current,"modulate",Color.white,Color(1,1,1,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	twoop.interpolate_property(next,"modulate",Color(1,1,1,0),Color.white,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tweep.interpolate_property(current,"modulate",Color.WHITE,Color(1,1,1,0),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	twoop.interpolate_property(next,"modulate",Color(1,1,1,0),Color.WHITE,howLong,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
 	twoon.start()
 	tweep.start()
 	twoop.start()
 	next.show()
-	yield(tween,"tween_completed")
+	await tween.tween_completed
 	current.hide()
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,6 +1,6 @@
-extends Position3D
+extends Marker3D
 
-export (PackedScene) var object
+@export (PackedScene) var object
 
 var force = 20
 
@@ -10,7 +10,7 @@ func _input(event):
 		$Timer.start()
 
 func spawn_object():
-	var object_instance = object.instance()
-	object_instance.global_transform = $Position3D.global_transform
+	var object_instance = object.instantiate()
+	object_instance.global_transform = $Marker3D.global_transform
 	object_instance.linear_velocity =global_transform.basis.z * -force
 	get_tree().get_root().add_child(object_instance)

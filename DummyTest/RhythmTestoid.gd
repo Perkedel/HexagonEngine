@@ -8,8 +8,8 @@ var insertTheCardtridge = load("res://Audio/MusicCardtridge/Musik/Floaters.tres"
 # var b = "text"
 
 func _init():
-	AutoSpeaker.connect("beat",self,"_on_AutoSpeaker_beat")
-	AutoSpeaker.connect("measure",self,"_on_AutoSpeaker_measure")
+	AutoSpeaker.connect("beat", Callable(self, "_on_AutoSpeaker_beat"))
+	AutoSpeaker.connect("measure", Callable(self, "_on_AutoSpeaker_measure"))
 	pass
 
 # Called when the node enters the scene tree for the first time.

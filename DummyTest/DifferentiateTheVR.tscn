@@ -12,11 +12,11 @@ script = ExtResource( 4 )
 
 [node name="anCapsol" parent="Slot" instance=ExtResource( 1 )]
 
-[node name="Camera" type="Camera" parent="Slot"]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4 )
+[node name="Camera3D" type="Camera3D" parent="Slot"]
+transform = Transform3D( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4 )
 
 [node name="LantaiExample" parent="Slot" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27,32 +27,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ViewportContainer" type="ViewportContainer" parent="CanvasLayer/Control"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1366.0
-margin_bottom = -684.0
+offset_right = -1366.0
+offset_bottom = -684.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Viewport" type="Viewport" parent="CanvasLayer/Control/ViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Control/SubViewportContainer"]
 arvr = true
 size = Vector2( 500, 300 )
 handle_input_locally = false
 render_target_update_mode = 3
 
-[node name="ARVROrigin" type="ARVROrigin" parent="CanvasLayer/Control/ViewportContainer/Viewport"]
+[node name="XROrigin3D" type="XROrigin3D" parent="CanvasLayer/Control/SubViewportContainer/SubViewport"]
 
-[node name="OVRController" parent="CanvasLayer/Control/ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 2 )]
+[node name="OVRController" parent="CanvasLayer/Control/SubViewportContainer/SubViewport/XROrigin3D" instance=ExtResource( 2 )]
 
-[node name="ARVRCamera" type="ARVRCamera" parent="CanvasLayer/Control/ViewportContainer/Viewport/ARVROrigin"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
+[node name="XRCamera3D" type="XRCamera3D" parent="CanvasLayer/Control/SubViewportContainer/SubViewport/XROrigin3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
-margin_left = 520.0
-margin_right = 1064.0
-margin_bottom = 306.0
+offset_left = 520.0
+offset_right = 1064.0
+offset_bottom = 306.0
 expand = true
 stretch_mode = 6
 __meta__ = {

@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="FontFile" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingOptionButton.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
+[ext_resource path="res://icon.png" type="Texture2D" id=5]
 
 
-[sub_resource type="OpenSimplexNoise" id=1]
+[sub_resource type="FastNoiseLite" id=1]
 
 [sub_resource type="NoiseTexture" id=2]
 width = 32
@@ -15,34 +15,34 @@ height = 32
 noise = SubResource( 1 )
 
 [node name="InheritableSettingOptionButton" type="HBoxContainer"]
-margin_top = 126.0
-margin_right = 1924.0
-margin_bottom = 181.0
+offset_top = 126.0
+offset_right = 1924.0
+offset_bottom = 181.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 958.0
-margin_bottom = 55.0
+offset_right = 958.0
+offset_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Option Button"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 966.0
-margin_right = 1924.0
-margin_bottom = 55.0
+offset_left = 966.0
+offset_right = 1924.0
+offset_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
-margin_right = 958.0
-margin_bottom = 55.0
+offset_right = 958.0
+offset_bottom = 55.0
 size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "Item 0"
 icon = SubResource( 2 )
 items = [ "Item 0", SubResource( 2 ), false, 0, null, "Item 1", ExtResource( 5 ), false, 1, null, "Item 2", ExtResource( 4 ), false, 2, null ]

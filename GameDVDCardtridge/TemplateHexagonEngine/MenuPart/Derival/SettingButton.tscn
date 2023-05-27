@@ -7,7 +7,7 @@ GoToMenuSceneOf = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Settin
 ButtonLabelName = "Setting"
 
 [node name="Button" parent="." index="0"]
-hint_tooltip = "Adjust your experience configurations"
+tooltip_text = "Adjust your experience configurations"
 
 [node name="BackgroundPanel" parent="Button" index="0"]
 modulate = Color( 1, 0.788235, 0.458824, 1 )

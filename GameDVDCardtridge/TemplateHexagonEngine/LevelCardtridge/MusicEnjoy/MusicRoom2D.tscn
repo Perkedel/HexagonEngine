@@ -2,10 +2,10 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SpectrumPillars.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/MusicRoom2D.gd" type="Script" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Crackle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Built/Ubuntu_M_28tred.tres" type="FontFile" id=6]
 [ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=7]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/Scroncher.tscn" type="PackedScene" id=9]
@@ -13,12 +13,12 @@
 [ext_resource path="res://addons/midi/MidiPlayer.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 37.7963, 816.715 )
+size = Vector2( 37.7963, 816.715 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 1270.32, 95.3083 )
+size = Vector2( 1270.32, 95.3083 )
 
-[sub_resource type="OpenSimplexNoise" id=3]
+[sub_resource type="FastNoiseLite" id=3]
 
 [sub_resource type="NoiseTexture" id=4]
 width = 64
@@ -26,10 +26,10 @@ height = 64
 noise = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 48.4447, 47 )
+size = Vector2( 48.4447, 47 )
 
 [node name="MusicRoom2D" type="Node2D"]
-pause_mode = 2
+process_mode = 2
 script = ExtResource( 2 )
 FileAudio = ExtResource( 7 )
 
@@ -65,39 +65,39 @@ shape = SubResource( 2 )
 position = Vector2( 903.532, 687.5 )
 
 [node name="SpectrumPillars" parent="." instance=ExtResource( 1 )]
-pause_mode = 1
+process_mode = 1
 
 [node name="SpectrumPillars2" parent="." instance=ExtResource( 1 )]
-pause_mode = 1
+process_mode = 1
 position = Vector2( 1902.71, -341.591 )
 rotation = -3.14159
 
 [node name="MusicController" type="CanvasLayer" parent="."]
-pause_mode = 2
+process_mode = 2
 layer = 2
 
 [node name="MusicUI" type="Control" parent="MusicController"]
-pause_mode = 2
+process_mode = 2
 self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -761.0
-margin_top = -208.0
-margin_right = 762.0
-margin_bottom = 207.0
+offset_left = -761.0
+offset_top = -208.0
+offset_right = 762.0
+offset_bottom = 207.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MusicPlaySpeaker" type="AudioStreamPlayer" parent="MusicController/MusicUI"]
-pause_mode = 1
+process_mode = 1
 bus = "Music"
 
 [node name="GodotMIDIPlayer" type="AudioStreamPlayer" parent="MusicController/MusicUI"]
-pause_mode = 1
+process_mode = 1
 bus = "Music"
 script = ExtResource( 11 )
 max_polyphony = 128
@@ -116,60 +116,60 @@ __meta__ = {
 }
 
 [node name="OptionButton" type="OptionButton" parent="MusicController/MusicUI/MainContains"]
-margin_right = 1523.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 3 )
+offset_right = 1523.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Item 0"
 items = [ "Item 0", null, false, 0, null ]
 selected = 0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MusicController/MusicUI/MainContains"]
-margin_top = 94.0
-margin_right = 1523.0
-margin_bottom = 348.0
+offset_top = 94.0
+offset_right = 1523.0
+offset_bottom = 348.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="HBoxContainer" parent="MusicController/MusicUI/MainContains/ScrollContainer"]
-margin_right = 1523.0
-margin_bottom = 254.0
+offset_right = 1523.0
+offset_bottom = 254.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Title" type="Label" parent="MusicController/MusicUI/MainContains/ScrollContainer/Label"]
-margin_top = 82.0
-margin_right = 1523.0
-margin_bottom = 172.0
+offset_top = 82.0
+offset_right = 1523.0
+offset_bottom = 172.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Artist - Song"
 align = 1
 valign = 1
 autowrap = true
 
 [node name="ControllingMusic" type="HBoxContainer" parent="MusicController/MusicUI/MainContains"]
-margin_top = 352.0
-margin_right = 1523.0
-margin_bottom = 415.0
+offset_top = 352.0
+offset_right = 1523.0
+offset_bottom = 415.0
 size_flags_horizontal = 3
 
 [node name="Play" type="Button" parent="MusicController/MusicUI/MainContains/ControllingMusic"]
-margin_right = 759.0
-margin_bottom = 63.0
+offset_right = 759.0
+offset_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 4 )
+theme_override_fonts/font = ExtResource( 4 )
 toggle_mode = true
 text = "Play"
 
 [node name="LoadSong" type="Button" parent="MusicController/MusicUI/MainContains/ControllingMusic"]
-margin_left = 763.0
-margin_right = 1523.0
-margin_bottom = 63.0
+offset_left = 763.0
+offset_right = 1523.0
+offset_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 6 )
+theme_override_fonts/font = ExtResource( 6 )
 text = "Load Song"
 
 [node name="FileDialog" type="FileDialog" parent="MusicController/MusicUI"]
@@ -177,16 +177,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -520.0
-margin_top = -304.5
-margin_right = 519.0
-margin_bottom = 303.5
+offset_left = -520.0
+offset_top = -304.5
+offset_right = 519.0
+offset_bottom = 303.5
 theme = ExtResource( 10 )
 window_title = "Buka sebuah File"
 resizable = true
 mode = 0
 access = 2
-filters = PoolStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis", "*.mod; Music Module", "*.it; Impulse Tracker", "*.s3m; Scream Tracker", "*.xm; Extended Module Music", "*.mp3; MPEG Layer 3", "*.midi; Musical Digital Interface", "*.mid; Musical Digital Interface" )
+filters = PackedStringArray( "*.wav ; Microsoft Wave", "*.ogg; OGG Vorbis", "*.mod; Music Module", "*.it; Impulse Tracker", "*.s3m; Scream Tracker", "*.xm; Extended Module Music", "*.mp3; MPEG Layer 3", "*.midi; Musical Digital Interface", "*.mid; Musical Digital Interface" )
 show_hidden_files = true
 current_dir = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine"
 current_path = "/Users/joelr/Documents/starring codes/Godot Projects/HexagonEngine/"
@@ -197,7 +197,7 @@ __meta__ = {
 [node name="SelectFileLoadingMode" parent="MusicController/MusicUI" instance=ExtResource( 8 )]
 
 [node name="Crackles" type="Node2D" parent="."]
-pause_mode = 1
+process_mode = 1
 
 [node name="Crackle" parent="Crackles" instance=ExtResource( 5 )]
 position = Vector2( 1151.37, -3.09094 )
@@ -249,7 +249,7 @@ position = Vector2( 410, 0 )
 [node name="TestoidDrop" type="RigidBody2D" parent="TestoidBody"]
 position = Vector2( -698.445, 0 )
 
-[node name="Sprite" type="Sprite" parent="TestoidBody/TestoidDrop"]
+[node name="Sprite2D" type="Sprite2D" parent="TestoidBody/TestoidDrop"]
 texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestoidBody/TestoidDrop"]

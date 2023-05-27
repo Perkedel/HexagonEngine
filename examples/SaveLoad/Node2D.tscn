@@ -8,6 +8,6 @@ script = ExtResource( 1 )
 
 [node name="Actors" type="Node2D" parent="."]
 
-[node name="Sprite" parent="Actors" instance=ExtResource( 2 )]
+[node name="Sprite2D" parent="Actors" instance=ExtResource( 2 )]
 position = Vector2( 351, 297 )
 greetings = [ "Saving?", "Loading?", "Moving...", "I'm over here!" ]

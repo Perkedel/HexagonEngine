@@ -3,38 +3,38 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(String) var TitleBarName = "NextMenu Title Bar!"
-export(Image) var TitleIcon
-export(PackedScene) var MainMenuBack
-export(PackedScene) var GameplayArea
-export(PackedScene) var SettingArea
-export(PackedScene) var UnknownArea #area51
-export(PackedScene) var ExtrasArea
-onready var PrevNode = $VBoxContainer/MenuSpaceArea/InheritableMenuArea
-export(NodePath) var NextNode
+@export var TitleBarName: String = "NextMenu Title Bar!"
+@export var TitleIcon: Image
+@export var MainMenuBack: PackedScene
+@export var GameplayArea: PackedScene
+@export var SettingArea: PackedScene
+@export var UnknownArea: PackedScene #area51
+@export var ExtrasArea: PackedScene
+@onready var PrevNode = $VBoxContainer/MenuSpaceArea/InheritableMenuArea
+@export var NextNode: NodePath
 
-export(Image) var LoadSettingIcon
-export(Image) var LoadUnknownIcon
-export(Image) var LoadExtrasIcon
-export(Image) var LoadPlayGameIcon
+@export var LoadSettingIcon: Image
+@export var LoadUnknownIcon: Image
+@export var LoadExtrasIcon: Image
+@export var LoadPlayGameIcon: Image
 
-export(PackedScene) var Your3DSpaceLevel
-export(PackedScene) var Your2DSpaceLevel
-export(Texture) var LevelBannerThumbnail
-export(Image) var LevelImageThumbnail
-export(String) var LevelTitleg
+@export var Your3DSpaceLevel: PackedScene
+@export var Your2DSpaceLevel: PackedScene
+@export var LevelBannerThumbnail: Texture2D
+@export var LevelImageThumbnail: Image
+@export var LevelTitleg: String
 
-export(bool) var a2DSpaceReportHP = false
-export(bool) var a3DSpaceReportHP = false
-export(bool) var a2DSpaceReportScore = false
-export(bool) var a3DSpaceReportScore = false
+@export var a2DSpaceReportHP: bool = false
+@export var a3DSpaceReportHP: bool = false
+@export var a2DSpaceReportScore: bool = false
+@export var a3DSpaceReportScore: bool = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-export(String, MULTILINE) var LevelDescription
+@export var LevelDescription # (String, MULTILINE)
 
 
 
 enum SelectMenuList {MainMenu=-1, Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
-export(SelectMenuList) var SelectYourMenu
+@export var SelectYourMenu: SelectMenuList
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -62,7 +62,7 @@ func ChangeMenuSpace(CurrentFrom, IntoNewSpace):
 	
 	# Add the next level
 	var next_level_resource = IntoNewSpace
-	var next_level = next_level_resource.instance()
+	var next_level = next_level_resource.instantiate()
 	$VBoxContainer/MenuSpaceArea.add_child(next_level)
 	pass
 

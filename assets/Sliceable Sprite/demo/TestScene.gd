@@ -30,4 +30,4 @@ func _input(event : InputEvent):
 
 func _draw():
 	if draw_enabled:
-		draw_line(begin, end, Color.red)
+		draw_line(begin, end, Color.RED)

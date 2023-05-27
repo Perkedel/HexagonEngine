@@ -1,15 +1,15 @@
-extends WindowDialog
+extends Window
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var modPCKs:Dictionary = Settingers.getModPCKs()
+@onready var modPCKs:Dictionary = Settingers.getModPCKs()
 var textModList:String
 var loaded = false
 
 func Load():
-	textModList = JSONBeautifier.beautify_json(to_json(modPCKs))
+	textModList = JSONBeautifier.beautify_json(JSON.new().stringify(modPCKs))
 	$VBoxContainer/TempTextModList.text = textModList
 	loaded = true
 	pass
@@ -26,9 +26,11 @@ func _ready():
 #	pass
 
 func _on_SaveClose_pressed():
-	modPCKs = parse_json(textModList)
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(textModList)
+	modPCKs = test_json_conv.get_data()
 	Settingers.setModPCKs(modPCKs)
-	print("Now ModsPCKs\n", JSONBeautifier.beautify_json(to_json(Settingers.getModPCKs())))
+	print("Now ModsPCKs\n", JSONBeautifier.beautify_json(JSON.new().stringify(Settingers.getModPCKs())))
 	hide()
 	pass # Replace with function body.
 

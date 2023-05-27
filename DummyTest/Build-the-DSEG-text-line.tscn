@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://modules/Reusables/DSEGLabel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_R_16tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_R_16tred.tres" type="FontFile" id=2]
 [ext_resource path="res://DummyTest/Build-the-DSEG-text-line.gd" type="Script" id=3]
 [ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" type="Script" id=4]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" type="FontFile" id=5]
+[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf" type="FontFile" id=6]
+[ext_resource path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.ttf" type="FontFile" id=7]
+[ext_resource path="res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf" type="FontFile" id=8]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
 font_data = ExtResource( 5 )
@@ -22,7 +22,7 @@ Fonts = {
 
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
 font_data = ExtResource( 6 )
@@ -35,7 +35,7 @@ Fonts = {
 
 }
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
 font_data = ExtResource( 7 )
@@ -48,7 +48,7 @@ Fonts = {
 
 }
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
 font_data = ExtResource( 8 )
@@ -78,87 +78,87 @@ __meta__ = {
 }
 
 [node name="DSEGs" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 498.0
+offset_right = 1920.0
+offset_bottom = 498.0
 size_flags_vertical = 3
 alignment = 1
 
 [node name="DSEGLabel" parent="VBoxContainer/DSEGs" instance=ExtResource( 1 )]
-margin_top = 194.0
-margin_bottom = 218.0
-custom_fonts/font = SubResource( 1 )
+offset_top = 194.0
+offset_bottom = 218.0
+theme_override_fonts/font = SubResource( 1 )
 Fonts = {
 
 }
 
 [node name="DSEGLabel2" parent="VBoxContainer/DSEGs" instance=ExtResource( 1 )]
-margin_top = 222.0
-margin_bottom = 246.0
-custom_fonts/font = SubResource( 2 )
+offset_top = 222.0
+offset_bottom = 246.0
+theme_override_fonts/font = SubResource( 2 )
 chooseMode = "14Seg"
 Fonts = {
 
 }
 
 [node name="DSEGLabel3" parent="VBoxContainer/DSEGs" instance=ExtResource( 1 )]
-margin_top = 250.0
-margin_bottom = 274.0
-custom_fonts/font = SubResource( 3 )
+offset_top = 250.0
+offset_bottom = 274.0
+theme_override_fonts/font = SubResource( 3 )
 chooseForm = "Egg"
 Fonts = {
 
 }
 
 [node name="DSEGLabel4" parent="VBoxContainer/DSEGs" instance=ExtResource( 1 )]
-margin_top = 278.0
-margin_bottom = 303.0
-custom_fonts/font = SubResource( 4 )
+offset_top = 278.0
+offset_bottom = 303.0
+theme_override_fonts/font = SubResource( 4 )
 chooseMode = "Weather"
 Fonts = {
 
 }
 
 [node name="Sliders" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 502.0
-margin_right = 1920.0
-margin_bottom = 578.0
+offset_top = 502.0
+offset_right = 1920.0
+offset_bottom = 578.0
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/Sliders"]
-margin_right = 1920.0
-margin_bottom = 16.0
+offset_right = 1920.0
+offset_bottom = 16.0
 value = 16.0
 
 [node name="HSlider2" type="HSlider" parent="VBoxContainer/Sliders"]
-margin_top = 20.0
-margin_right = 1920.0
-margin_bottom = 36.0
+offset_top = 20.0
+offset_right = 1920.0
+offset_bottom = 36.0
 value = 16.0
 
 [node name="HSlider3" type="HSlider" parent="VBoxContainer/Sliders"]
-margin_top = 40.0
-margin_right = 1920.0
-margin_bottom = 56.0
+offset_top = 40.0
+offset_right = 1920.0
+offset_bottom = 56.0
 value = 16.0
 
 [node name="HSlider4" type="HSlider" parent="VBoxContainer/Sliders"]
-margin_top = 60.0
-margin_right = 1920.0
-margin_bottom = 76.0
+offset_top = 60.0
+offset_right = 1920.0
+offset_bottom = 76.0
 value = 16.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 582.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_top = 582.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/VBoxContainer3"]
-margin_right = 1920.0
-margin_bottom = 498.0
+offset_right = 1920.0
+offset_bottom = 498.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "1234567890!abcdefghijklmnopqrstuvwxyz"
 [connection signal="value_changed" from="VBoxContainer/Sliders/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/Sliders/HSlider2" to="." method="_on_HSlider2_value_changed"]

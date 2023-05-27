@@ -1,6 +1,6 @@
 extends Node
 
-export var TambahanSebanyak:float = 50
+@export var TambahanSebanyak:float = 50
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

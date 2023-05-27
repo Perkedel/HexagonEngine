@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Loader.connect("_play", self, 'play')
+	Loader.connect("_play", Callable(self, 'play'))
 
 func play(stream):
 	$player.set_stream(stream)

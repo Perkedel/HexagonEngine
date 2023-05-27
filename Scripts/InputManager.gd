@@ -37,7 +37,7 @@ func _ready():
 # macro to add a timer and connect it's timeout to func_name
 func add_timer(timer,func_name):
 	timer.one_shot = true
-	timer.connect("timeout",self,func_name)
+	timer.connect("timeout", Callable(self, func_name))
 	self.add_child(timer)
 
 ## Handles all unhandled inputs emiting the corresponding signals
@@ -45,12 +45,12 @@ func _unhandled_input(event):
 	# mouse to gesture
 	if event is InputEventMouseButton:
 		if event.pressed:
-			if event.button_index == BUTTON_WHEEL_DOWN:
+			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				emit("pinch",InputEventScreenPinch.new({"position":event.position,
 														"distance":200.0,
 														"relative":-40.0,
 														"speed"   :25.0}))
-			elif event.button_index == BUTTON_WHEEL_UP:
+			elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
 				emit("pinch",InputEventScreenPinch.new({"position":event.position,
 														"distance":200.0,
 														"relative":40.0,
@@ -61,11 +61,11 @@ func _unhandled_input(event):
 			
 	elif event is InputEventMouseMotion:
 		if last_mouse_press:
-			if last_mouse_press.button_index == BUTTON_MIDDLE:
+			if last_mouse_press.button_index == MOUSE_BUTTON_MIDDLE:
 				emit("multi_drag", InputEventMultiScreenDrag.new({"position":event.position,
 																  "relative":event.relative,
 																  "speed":event.speed}))
-			elif last_mouse_press.button_index == BUTTON_RIGHT:
+			elif last_mouse_press.button_index == MOUSE_BUTTON_RIGHT:
 				var rel1 = event.position - last_mouse_press.position
 				var rel2 = rel1 + event.relative
 				emit("twist", InputEventScreenTwist.new({"position":last_mouse_press.position,

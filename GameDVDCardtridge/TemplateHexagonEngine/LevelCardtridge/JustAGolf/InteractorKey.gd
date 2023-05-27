@@ -1,16 +1,16 @@
-extends Area
+extends Area3D
 
-onready var ortu = get_parent()
+@onready var ortu = get_parent()
 # interactable
-export var is_ride = false
-export var being_rode = false
+@export var is_ride = false
+@export var being_rode = false
 var activated : bool = true
-export var do_prerequisite = false
+@export var do_prerequisite = false
 var prerequisite_done = false
-export var prerequisite_interact: NodePath
+@export var prerequisite_interact: NodePath
 var prereq_watch: Node
-export var is_toggle = true
-export var is_goal = false
+@export var is_toggle = true
+@export var is_goal = false
 var has_Interacted = false
 # Declare member variables here. Examples:
 # var a = 2
@@ -21,7 +21,7 @@ var has_Interacted = false
 func _ready():
 	pass # Replace with function body.
 
-func setYLaunch(var value:float):
+func setYLaunch(value:float):
 	ortu.setYLaunch(value)
 	pass
 

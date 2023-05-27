@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=2]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Side_Left.ogg" type="AudioStream" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/SubInheritable/SpeakerTryButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Left.ogg" type="AudioStream" id=5]
@@ -14,32 +14,32 @@
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Alsa_themed_speaker_test-7dot1.ogg" type="AudioStream" id=12]
 
 [node name="TestoidSpeakerTryer" type="HBoxContainer"]
-margin_top = 857.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 500 )
+offset_top = 857.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 500 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LabelContainer" type="HBoxContainer" parent="."]
-margin_right = 637.0
-margin_bottom = 500.0
+offset_right = 637.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="LabelContainer"]
-margin_top = 218.0
-margin_right = 318.0
-margin_bottom = 281.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 218.0
+offset_right = 318.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Speaker Tests"
 
 [node name="MainSpeaker" type="Container" parent="."]
-margin_left = 641.0
-margin_right = 1278.0
-margin_bottom = 500.0
+offset_left = 641.0
+offset_right = 1278.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -55,65 +55,65 @@ animate/all_at_once = false
 text = "FC"
 
 [node name="SpeakerTryButtonFL" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 112.134
-margin_top = 75.302
-margin_right = 212.134
-margin_bottom = 175.302
+offset_left = 112.134
+offset_top = 75.302
+offset_right = 212.134
+offset_bottom = 175.302
 text = "L"
 playThisPls = ExtResource( 5 )
 
 [node name="SpeakerTryButtonSL" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 73.5144
-margin_top = 244.504
-margin_right = 173.514
-margin_bottom = 344.504
+offset_left = 73.5144
+offset_top = 244.504
+offset_right = 173.514
+offset_bottom = 344.504
 text = "SL"
 playThisPls = ExtResource( 3 )
 
 [node name="SpeakerTryButtonRL" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 181.723
-margin_top = 380.194
-margin_right = 281.723
-margin_bottom = 480.194
+offset_left = 181.723
+offset_top = 380.194
+offset_right = 281.723
+offset_bottom = 480.194
 text = "RL"
 playThisPls = ExtResource( 7 )
 
 [node name="SpeakerTryButtonRR" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 355.277
-margin_top = 380.194
-margin_right = 455.277
-margin_bottom = 480.194
+offset_left = 355.277
+offset_top = 380.194
+offset_right = 455.277
+offset_bottom = 480.194
 text = "RR"
 playThisPls = ExtResource( 8 )
 
 [node name="SpeakerTryButtonSR" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 463.486
-margin_top = 244.504
-margin_right = 563.486
-margin_bottom = 344.504
+offset_left = 463.486
+offset_top = 244.504
+offset_right = 563.486
+offset_bottom = 344.504
 text = "SL"
 playThisPls = ExtResource( 9 )
 
 [node name="SpeakerTryButtonFR" parent="MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 424.866
-margin_top = 75.302
-margin_right = 524.866
-margin_bottom = 175.302
+offset_left = 424.866
+offset_top = 75.302
+offset_right = 524.866
+offset_bottom = 175.302
 text = "R"
 playThisPls = ExtResource( 10 )
 
 [node name="AnotherSpeaker" type="HBoxContainer" parent="."]
-margin_left = 1282.0
-margin_right = 1920.0
-margin_bottom = 500.0
+offset_left = 1282.0
+offset_right = 1920.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
 [node name="SpeakerTryButtonLFEFC" parent="AnotherSpeaker" instance=ExtResource( 4 )]
-margin_left = 0.0
-margin_right = 638.0
-margin_bottom = 500.0
+offset_left = 0.0
+offset_right = 638.0
+offset_bottom = 500.0
 text = "LFE C"
 playThisPls = ExtResource( 11 )
 

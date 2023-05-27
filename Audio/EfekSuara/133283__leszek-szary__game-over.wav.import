@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/133283__leszek-szary__game-over.wav-16f02c9ffd8521005359b4c4c6af5ab1.sample"
+type="AudioStreamWAV"
+uid="uid://dbpc54yls2oyb"
+path="res://.godot/imported/133283__leszek-szary__game-over.wav-16f02c9ffd8521005359b4c4c6af5ab1.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/133283__leszek-szary__game-over.wav"
-dest_files=[ "res://.import/133283__leszek-szary__game-over.wav-16f02c9ffd8521005359b4c4c6af5ab1.sample" ]
+dest_files=["res://.godot/imported/133283__leszek-szary__game-over.wav-16f02c9ffd8521005359b4c4c6af5ab1.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=1]
 
 
 [node name="HSplitContainer" type="HSplitContainer"]
@@ -12,115 +12,115 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1187.0
-margin_bottom = 1080.0
+offset_right = 1187.0
+offset_bottom = 1080.0
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 213.0
-margin_right = 1187.0
-margin_bottom = 303.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 213.0
+offset_right = 1187.0
+offset_bottom = 303.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 307.0
-margin_right = 1187.0
-margin_bottom = 397.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 307.0
+offset_right = 1187.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
-margin_top = 401.0
-margin_right = 1187.0
-margin_bottom = 491.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 401.0
+offset_right = 1187.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label4" type="Label" parent="VBoxContainer"]
-margin_top = 495.0
-margin_right = 1187.0
-margin_bottom = 585.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 495.0
+offset_right = 1187.0
+offset_bottom = 585.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label5" type="Label" parent="VBoxContainer"]
-margin_top = 589.0
-margin_right = 1187.0
-margin_bottom = 679.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 589.0
+offset_right = 1187.0
+offset_bottom = 679.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label6" type="Label" parent="VBoxContainer"]
-margin_top = 683.0
-margin_right = 1187.0
-margin_bottom = 773.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 683.0
+offset_right = 1187.0
+offset_bottom = 773.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="Label7" type="Label" parent="VBoxContainer"]
-margin_top = 777.0
-margin_right = 1187.0
-margin_bottom = 867.0
-custom_fonts/font = ExtResource( 1 )
+offset_top = 777.0
+offset_right = 1187.0
+offset_bottom = 867.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "A Split"
 align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 1195.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 1195.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="VScrollBar" type="VScrollBar" parent="HBoxContainer"]
-margin_right = 117.0
-margin_bottom = 1080.0
+offset_right = 117.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VScrollBar2" type="VScrollBar" parent="HBoxContainer"]
-margin_left = 121.0
-margin_right = 239.0
-margin_bottom = 1080.0
+offset_left = 121.0
+offset_right = 239.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VScrollBar3" type="VScrollBar" parent="HBoxContainer"]
-margin_left = 243.0
-margin_right = 360.0
-margin_bottom = 1080.0
+offset_left = 243.0
+offset_right = 360.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VScrollBar4" type="VScrollBar" parent="HBoxContainer"]
-margin_left = 364.0
-margin_right = 482.0
-margin_bottom = 1080.0
+offset_left = 364.0
+offset_right = 482.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VScrollBar5" type="VScrollBar" parent="HBoxContainer"]
-margin_left = 486.0
-margin_right = 603.0
-margin_bottom = 1080.0
+offset_left = 486.0
+offset_right = 603.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VScrollBar6" type="VScrollBar" parent="HBoxContainer"]
-margin_left = 607.0
-margin_right = 725.0
-margin_bottom = 1080.0
+offset_left = 607.0
+offset_right = 725.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

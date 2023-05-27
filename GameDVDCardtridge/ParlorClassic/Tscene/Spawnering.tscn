@@ -3,7 +3,7 @@
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Spawnering.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.tscn" type="PackedScene" id=2]
 
-[node name="Spawnering" type="Position2D"]
+[node name="Spawnering" type="Marker2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_gizmo_extents_": 50.0

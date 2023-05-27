@@ -2,17 +2,17 @@ class_name ChannelGroupDefinition
 extends Object
 
 # The audio tracks to play together as part of this channel group.
-var channels: Array setget , _get_channels
+var channels: Array: get = _get_channels
 
 # The name of the song.
-var name: String setget , _get_name
+var name: String: get = _get_name
 
 # Breaks the song down into sections that can each have their own tempo and
 # time signature.
-var timings: Array = [] setget , _get_timings
+var timings: Array = []: get = _get_timings
 
 # The total length of the song, in seconds.
-var total_length: float setget , _get_total_length
+var total_length: float: get = _get_total_length
 
 
 # To create a new channel group definition, provide the name of the song, an

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/footstep7.wav-ab2cbc3c48119e6c4606fac1d244c058.sample"
+type="AudioStreamWAV"
+uid="uid://c7mt58401gnlm"
+path="res://.godot/imported/footstep7.wav-ab2cbc3c48119e6c4606fac1d244c058.sample"
 
 [deps]
 
 source_file="res://player/abilities/footstep_sound/footstep7.wav"
-dest_files=[ "res://.import/footstep7.wav-ab2cbc3c48119e6c4606fac1d244c058.sample" ]
+dest_files=["res://.godot/imported/footstep7.wav-ab2cbc3c48119e6c4606fac1d244c058.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -10,151 +10,151 @@
 [ext_resource path="res://modules/Reusables/anCapsol.tscn" type="PackedScene" id=8]
 [ext_resource path="res://modules/Environmenting/anEnvironment.tres" type="Environment" id=9]
 
-[node name="YOTestJustChar" type="Spatial"]
+[node name="YOTestJustChar" type="Node3D"]
 script = ExtResource( 5 )
 
 [node name="Lantai" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27693, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27693, 0 )
 
 [node name="TembokExample" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0 )
 
 [node name="TembokExample2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -20 )
+transform = Transform3D( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -20 )
 
 [node name="TembokExample3" parent="." instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21, 0, 0 )
+transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21, 0, 0 )
 
 [node name="TembokExample4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 20 )
+transform = Transform3D( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 20 )
 
 [node name="JustKinematic" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 0, 0 )
+transform = Transform3D( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 0, 0 )
 current = true
 rotateOnFloorOnly = true
 
 [node name="Zoblatos" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5 )
 
 [node name="Lantai2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 1, 0 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 1, 0 )
 
 [node name="Lantai3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 2, -5 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 2, -5 )
 
 [node name="Lantai4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 3, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 3, -10 )
 
 [node name="Lantai5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 5, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 5, -10 )
 
 [node name="Lantai6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 7, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 7, -10 )
 
 [node name="Lantai7" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 9, -15 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 9, -15 )
 
 [node name="Lantai8" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 11, -15 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 11, -15 )
 
 [node name="Lantai9" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 13, -15 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 13, -15 )
 
 [node name="Lantai10" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 15, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 7, 15, -10 )
 
 [node name="Lantai11" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 17, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 2, 17, -10 )
 
 [node name="Lantai12" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 19, -10 )
+transform = Transform3D( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, -3, 19, -10 )
 
 [node name="JustKinematic2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
 
 [node name="anSphere" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
 
 [node name="anSphere2" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -6 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -6 )
 
 [node name="anSphere3" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -6 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -6 )
 
 [node name="anSphere4" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -6 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -6 )
 
 [node name="anBox" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
 
 [node name="anBox6" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
 
 [node name="anBox7" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 15 )
 
 [node name="anBox8" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15 )
 
 [node name="anBox9" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 15 )
 
 [node name="anBox10" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 15 )
 
 [node name="anBox11" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 15 )
 
 [node name="anBox14" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 15 )
 
 [node name="anBox15" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6, 15 )
 
 [node name="anBox16" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 9, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 9, 15 )
 
 [node name="anBox12" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 15 )
 
 [node name="anBox13" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 15 )
 
 [node name="anBox17" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, 15 )
 
 [node name="anBox18" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9, 15 )
 
 [node name="anBox21" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 12, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 12, 15 )
 
 [node name="anBox19" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 15 )
 
 [node name="anBox20" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 15 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 15 )
 
 [node name="anBox2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -4 )
 
 [node name="anBox3" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 6, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 6, -4 )
 
 [node name="anBox4" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 9, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 9, -4 )
 
 [node name="anBox5" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 12, -4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 12, -4 )
 
 [node name="anCapsol" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
 
 [node name="anCapsol2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 0 )
 
 [node name="anCapsol3" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 0 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 9 )

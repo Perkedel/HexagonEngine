@@ -5,18 +5,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Button" type="Button" parent="."]
-margin_right = 625.0
-margin_bottom = 260.0
+offset_right = 625.0
+offset_bottom = 260.0
 text = "Oone"
 
 [node name="Button2" type="Button" parent="."]
-margin_top = 270.0
-margin_right = 625.0
-margin_bottom = 530.0
+offset_top = 270.0
+offset_right = 625.0
+offset_bottom = 530.0
 text = "Twoo"
 
 [node name="Button3" type="Button" parent="."]
-margin_top = 540.0
-margin_right = 625.0
-margin_bottom = 800.0
+offset_top = 540.0
+offset_right = 625.0
+offset_bottom = 800.0
 text = "Three"

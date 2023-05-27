@@ -6,45 +6,45 @@
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/KapsulPlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/Hoop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/IsengHedBoll/Objects/Bola.tscn" type="PackedScene" id=6]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=7]
 [ext_resource path="res://admob-lib/admob.gd" type="Script" id=8]
 
 [node name="IsengModeHeddBoll" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Spatial" type="Spatial" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="Camera" type="Camera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
 
-[node name="Barrier" type="Spatial" parent="Spatial"]
+[node name="Barrier" type="Node3D" parent="Node3D"]
 
-[node name="Lantai" parent="Spatial/Barrier" instance=ExtResource( 3 )]
-transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, -2, 0 )
+[node name="Lantai" parent="Node3D/Barrier" instance=ExtResource( 3 )]
+transform = Transform3D( 10, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, -2, 0 )
 
-[node name="Lantai2" parent="Spatial/Barrier" instance=ExtResource( 3 )]
-transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 2, 0 )
+[node name="Lantai2" parent="Node3D/Barrier" instance=ExtResource( 3 )]
+transform = Transform3D( 10, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 2, 0 )
 
-[node name="Nembok" parent="Spatial/Barrier" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, -7, 0, 0 )
+[node name="Nembok" parent="Node3D/Barrier" instance=ExtResource( 2 )]
+transform = Transform3D( 1, 0, 0, 0, 5, 0, 0, 0, 1, -7, 0, 0 )
 
-[node name="Nembok2" parent="Spatial/Barrier" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, 7, 0, 0 )
+[node name="Nembok2" parent="Node3D/Barrier" instance=ExtResource( 2 )]
+transform = Transform3D( 1, 0, 0, 0, 5, 0, 0, 0, 1, 7, 0, 0 )
 
-[node name="PlaySpace" type="Spatial" parent="Spatial"]
+[node name="PlaySpace" type="Node3D" parent="Node3D"]
 
-[node name="Bola" parent="Spatial/PlaySpace" instance=ExtResource( 6 )]
+[node name="Bola" parent="Node3D/PlaySpace" instance=ExtResource( 6 )]
 
-[node name="KapsulPlayer" parent="Spatial/PlaySpace" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+[node name="KapsulPlayer" parent="Node3D/PlaySpace" instance=ExtResource( 4 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
 
-[node name="Goal" type="Spatial" parent="Spatial"]
+[node name="Goal" type="Node3D" parent="Node3D"]
 
-[node name="Hoop" parent="Spatial/Goal" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
+[node name="Hoop" parent="Node3D/Goal" instance=ExtResource( 5 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 
-[node name="Hoop2" parent="Spatial/Goal" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+[node name="Hoop2" parent="Node3D/Goal" instance=ExtResource( 5 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -65,31 +65,31 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 100 )
 alignment = 1
 
 [node name="ChangeDVD" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
-margin_left = 474.0
-margin_right = 917.0
-margin_bottom = 100.0
-custom_fonts/font = ExtResource( 7 )
+offset_left = 474.0
+offset_right = 917.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource( 7 )
 text = "Change DVD"
 
 [node name="ShutdownHexagon" type="Button" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
-margin_left = 921.0
-margin_right = 1445.0
-margin_bottom = 100.0
-custom_fonts/font = ExtResource( 7 )
+offset_left = 921.0
+offset_right = 1445.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource( 7 )
 text = "Shutdown Quit"
 
 [node name="Admob" type="Node" parent="."]
 script = ExtResource( 8 )
 banner_id = "ca-app-pub-3940256099942544/6300978111"
-[connection signal="BasketMasuk" from="Spatial/Goal/Hoop" to="." method="_on_Hoop_BasketMasuk"]
-[connection signal="BasketMasuk" from="Spatial/Goal/Hoop2" to="." method="_on_Hoop2_BasketMasuk"]
+[connection signal="BasketMasuk" from="Node3D/Goal/Hoop" to="." method="_on_Hoop_BasketMasuk"]
+[connection signal="BasketMasuk" from="Node3D/Goal/Hoop2" to="." method="_on_Hoop2_BasketMasuk"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/ChangeDVD" to="." method="_on_ChangeDVD_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/HBoxContainer/ShutdownHexagon" to="." method="_on_ShutdownHexagon_pressed"]
 [connection signal="banner_loaded" from="Admob" to="." method="_on_Admob_banner_loaded"]

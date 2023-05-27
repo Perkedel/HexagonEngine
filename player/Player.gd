@@ -1,8 +1,8 @@
-extends KinematicBody
+extends CharacterBody3D
 
 var mouse_sensitivity = 1
 var direction = Vector3()
-var gravity_vec = Vector3()
+var gravity_direction = Vector3()
 var stick_amount = 10
 var velocity = Vector3()
 var acceleration = 10
@@ -43,7 +43,7 @@ func walk():
 	camera_height = -0.1
 	if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_Z) or Input.is_key_pressed(KEY_UP):
 		direction.z = -1
-		if Input.is_key_pressed(KEY_SHIFT) and is_on_floor() and not Input.is_mouse_button_pressed(BUTTON_LEFT) and not Input.is_mouse_button_pressed(BUTTON_RIGHT) and not $CrouchTween.is_active():
+		if Input.is_key_pressed(KEY_SHIFT) and is_on_floor() and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and not $CrouchTween.is_active():
 			if is_crouched:
 				crouching_animation(false)
 			speed_multiplier = 2
@@ -65,9 +65,9 @@ func walk():
 func _physics_process(delta):
 	# To enable
 	if speed_multiplier == 2:
-		$Head/Movements/Camera.fov = lerp($Head/Movements/Camera.fov, 80, 5 * delta)
+		$Head/Movements/Camera3D.fov = lerp($Head/Movements/Camera3D.fov, 80, 5 * delta)
 	else:
-		$Head/Movements/Camera.fov = lerp($Head/Movements/Camera.fov, 70, 5 * delta)
+		$Head/Movements/Camera3D.fov = lerp($Head/Movements/Camera3D.fov, 70, 5 * delta)
 	
 	if direction != Vector3() and is_on_floor():
 		if not $CameraTween.is_active():
@@ -80,23 +80,23 @@ func _physics_process(delta):
 			$CameraTween.start()
 	
 	if direction != Vector3():
-		$Head/Movements.translation.y = lerp($Head/Movements.translation.y, camera_height, 10 * delta)
+		$Head/Movements.position.y = lerp($Head/Movements.position.y, camera_height, 10 * delta)
 	else:
-		$Head/Movements.translation.y = lerp($Head/Movements.translation.y, 0, 10 * delta)
+		$Head/Movements.position.y = lerp($Head/Movements.position.y, 0, 10 * delta)
 	
 	if is_on_floor():
 		if not on_ground:
 			landing_animation()
 			$JumpTimer.start()
-		gravity_vec = -get_floor_normal() * stick_amount
+		gravity_direction = -get_floor_normal() * stick_amount
 		on_ground = true
 	else:
 		can_jump = false
 		if on_ground:
-			gravity_vec = Vector3()
+			gravity_direction = Vector3()
 			on_ground = false
 		else:
-			gravity_vec += Vector3.DOWN * gravity * delta
+			gravity_direction += Vector3.DOWN * gravity * delta
 	
 	if Input.is_key_pressed(KEY_SPACE):
 		if is_on_floor() and can_jump:
@@ -105,26 +105,29 @@ func _physics_process(delta):
 			if is_crouched:
 				crouching_animation(false)
 	
-	if Input.is_key_pressed(KEY_CONTROL) or Input.is_key_pressed(KEY_C):
+	if Input.is_key_pressed(KEY_CTRL) or Input.is_key_pressed(KEY_C):
 		if not $CrouchTween.is_active():
 			crouching_animation(!is_crouched)
 			if is_crouched:
 				speed_multiplier = 0.5
 		
-	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
-	movement.z = velocity.z + gravity_vec.z
-	movement.x = velocity.x + gravity_vec.x
-	movement.y = gravity_vec.y
-	movement = move_and_slide(movement, Vector3.UP)
+	velocity = velocity.lerp(direction * speed, acceleration * delta)
+	movement.z = velocity.z + gravity_direction.z
+	movement.x = velocity.x + gravity_direction.x
+	movement.y = gravity_direction.y
+	set_velocity(movement)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
+	movement = velocity
 
-	if Input.is_mouse_button_pressed(BUTTON_RIGHT) and is_on_floor():
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and is_on_floor():
 		mouse_sensitivity = 0.5
 	else:
 		mouse_sensitivity = 1
 
 func jump():
 	on_ground = false
-	gravity_vec = Vector3.UP * jump_height
+	gravity_direction = Vector3.UP * jump_height
 
 # Animations
 
@@ -137,14 +140,14 @@ func jump_animation():
 	$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", 0, -1, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
 	$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", -1, 0, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.5)
 	
-	$CameraTween.interpolate_property($Head/Movements, "translation:y", 0, -0.5, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-	$CameraTween.interpolate_property($Head/Movements, "translation:y", -0.5, 0, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
+	$CameraTween.interpolate_property($Head/Movements, "position:y", 0, -0.5, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$CameraTween.interpolate_property($Head/Movements, "position:y", -0.5, 0, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
 	$CameraTween.start()
 
 
 func landing_animation():
-	$CameraTween.interpolate_property($Head/Movements, "translation:y", 0, -0.5, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-	$CameraTween.interpolate_property($Head/Movements, "translation:y", -0.5, 0, 0.35, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.15)
+	$CameraTween.interpolate_property($Head/Movements, "position:y", 0, -0.5, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$CameraTween.interpolate_property($Head/Movements, "position:y", -0.5, 0, 0.35, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.15)
 	
 	$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", 0, -5, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", -5, 0, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.3)
@@ -157,24 +160,24 @@ func crouching_animation(crouching):
 	is_crouched = crouching
 	var animation_speed = 0.4
 	if crouching:
-		$CrouchTween.interpolate_property($Head, "translation:y", $Head.translation.y, 0.9/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($Head, "position:y", $Head.position.y, 0.9/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", 0, -1, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.35)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", -1, 0, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.5)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", 0, -1, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.35)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", -1, 0, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.5)
-		$CrouchTween.interpolate_property($CollisionShape, "shape:height", $CollisionShape.shape.height, 1/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-		$CrouchTween.interpolate_property($MeshInstance, "mesh:mid_height", $MeshInstance.mesh.mid_height, 1/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($CollisionShape3D, "shape:height", $CollisionShape3D.shape.height, 1/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($MeshInstance3D, "mesh:height", $MeshInstance3D.mesh.height, 1/1.5, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CrouchTween.start()
 		$CameraTween.start()
 	else:
-		$CrouchTween.interpolate_property($Head, "translation:y", $Head.translation.y, 0.9, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($Head, "position:y", $Head.position.y, 0.9, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", 0, 1, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", 1, -1, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.15)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:z", -1, 0, 0.15, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.3)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", 0, -1, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CameraTween.interpolate_property($Head/Movements, "rotation_degrees:x", -1, 0, 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.3)
-		$CrouchTween.interpolate_property($CollisionShape, "shape:height", $CollisionShape.shape.height, 1, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-		$CrouchTween.interpolate_property($MeshInstance, "mesh:mid_height", $MeshInstance.mesh.mid_height, 1, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($CollisionShape3D, "shape:height", $CollisionShape3D.shape.height, 1, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		$CrouchTween.interpolate_property($MeshInstance3D, "mesh:height", $MeshInstance3D.mesh.height, 1, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$CrouchTween.start()
 		$CameraTween.start()
 

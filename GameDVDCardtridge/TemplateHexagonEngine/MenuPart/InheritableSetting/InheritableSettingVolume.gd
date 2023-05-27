@@ -1,22 +1,22 @@
-tool
+@tool
 extends HBoxContainer
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export (float, -80, 24) var VolumeLevel = 0
-export (String) var UnitName = "dB"
-export (float) var VolumeMin = -80
-export (float) var VolumeMax = 24
-export (String) var VariableName = "Volume"
-export (bool) var InitiativelyControlVolumeBus = false
-export (bool) var EmitVolumeSignal = true
-export (bool) var EmitSliderReleased = true
-export (bool) var PlayTestoidFile = false
-export (String) var VolumeBus = "Dummy"
-export (AudioStream) var TestoidAudio
-export (float, 0.01, 32) var TestoidPitch = 1
+@export (float, -80, 24) var VolumeLevel = 0
+@export (String) var UnitName = "dB"
+@export (float) var VolumeMin = -80
+@export (float) var VolumeMax = 24
+@export (String) var VariableName = "Volume"
+@export (bool) var InitiativelyControlVolumeBus = false
+@export (bool) var EmitVolumeSignal = true
+@export (bool) var EmitSliderReleased = true
+@export (bool) var PlayTestoidFile = false
+@export (String) var VolumeBus = "Dummy"
+@export (AudioStream) var TestoidAudio
+@export (float, 0.01, 32) var TestoidPitch = 1
 
 var VolumeHasLoaded = false
 

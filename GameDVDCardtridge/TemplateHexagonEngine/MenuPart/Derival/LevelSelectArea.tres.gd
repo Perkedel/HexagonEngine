@@ -3,17 +3,17 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(PackedScene) var Your3DSpaceLevel
-export(PackedScene) var Your2DSpaceLevel
-export(Texture) var LevelBannerThumbnail
-export(String) var LevelTitleg
+@export var Your3DSpaceLevel: PackedScene
+@export var Your2DSpaceLevel: PackedScene
+@export var LevelBannerThumbnail: Texture2D
+@export var LevelTitleg: String
 
-export(bool) var a2DSpaceReportHP = false
-export(bool) var a3DSpaceReportHP = false
-export(bool) var a2DSpaceReportScore = false
-export(bool) var a3DSpaceReportScore = false
+@export var a2DSpaceReportHP: bool = false
+@export var a3DSpaceReportHP: bool = false
+@export var a2DSpaceReportScore: bool = false
+@export var a3DSpaceReportScore: bool = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-export(String, MULTILINE) var LevelDescription
+@export var LevelDescription # (String, MULTILINE)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,10 +25,10 @@ func PreConnectCards():
 	for LevelCardings in $ScrollContainer/HBoxContainer.get_children():
 		# https://www.youtube.com/watch?v=sKuM5AzK-uA&t=1517s
 		#LevelCardings.connect("PleaseLoadThisLevelOf", self, "_ReceivesSignalClick", LevelCardings.Your3DSpaceLevel, LevelCardings.Your2DSpaceLevel, LevelCardings.LevelBannerThumbnail, LevelCardings.LevelTitleg, LevelCardings.LevelDescription)
-		LevelCardings.connect("PleaseLoadThisLevelOf",self, "_ReceivesSignalClick")
+		LevelCardings.connect("PleaseLoadThisLevelOf", Callable(self, "_ReceivesSignalClick"))
 		print("Level Cards", LevelCardings)
-		LevelCardings.connect("AlsoPlsConnectThisReportStatus", self, "_ReceiveSignalStatus")
-		LevelCardings.connect("canThisLevelPlayEvenOutOfFocus", self, "_SecondPartSignalStatus")
+		LevelCardings.connect("AlsoPlsConnectThisReportStatus", Callable(self, "_ReceiveSignalStatus"))
+		LevelCardings.connect("canThisLevelPlayEvenOutOfFocus", Callable(self, "_SecondPartSignalStatus"))
 		pass
 	pass
 

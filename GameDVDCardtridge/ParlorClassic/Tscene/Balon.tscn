@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustBalloon.png" type="Texture" id=1]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustBalloon.png" type="Texture2D" id=1]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Balon.gd" type="Script" id=2]
 
 [node name="Balon" type="RigidBody2D"]
@@ -11,16 +11,16 @@ collision_mask = 16
 mode = 3
 mass = 0.102041
 gravity_scale = 0.0
-contacts_reported = 1
+max_contacts_reported = 1
 contact_monitor = true
 applied_force = Vector2( 0, -1 )
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 1.78238, -234.18, -50.8863, -223.452, -86.9741, -164.931, -93.8015, -95.6813, -67.4672, -24.481, -18.6999, 15.5081, 2.75772, 23.3109, 25.1907, 15.5081, 72.0073, -29.3578, 96.3909, -95.6813, 86.6375, -167.857, 41.7715, -228.328 )
+polygon = PackedVector2Array( 1.78238, -234.18, -50.8863, -223.452, -86.9741, -164.931, -93.8015, -95.6813, -67.4672, -24.481, -18.6999, 15.5081, 2.75772, 23.3109, 25.1907, 15.5081, 72.0073, -29.3578, 96.3909, -95.6813, 86.6375, -167.857, 41.7715, -228.328 )
 [connection signal="body_entered" from="." to="." method="_on_Balon_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_Balon_body_shape_entered"]
 [connection signal="input_event" from="." to="." method="_on_Balon_input_event"]

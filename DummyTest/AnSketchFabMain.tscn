@@ -1,4 +1,4 @@
 [gd_scene format=2]
 
-[node name="Spatial" type="Spatial" index="0"]
+[node name="Node3D" type="Node3D" index="0"]
 

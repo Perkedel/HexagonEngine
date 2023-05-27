@@ -7,9 +7,9 @@ extends HBoxContainer
 var LayarSettingLoaded = false
 
 func reload():
-	$FullSkren.pressed = OS.is_window_fullscreen()
-	$Vsync.pressed = OS.vsync_enabled
-	$VsyncCompositor.pressed = OS.vsync_via_compositor
+	$FullSkren.button_pressed = ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN))
+	$Vsync.button_pressed = (DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED)
+	$VsyncCompositor.button_pressed = OS.vsync_via_compositor
 	LayarSettingLoaded = true
 	pass
 
@@ -32,7 +32,7 @@ func _on_LayarSetting_visibility_changed():
 
 func _on_FullSkren_toggled(button_pressed):
 	if LayarSettingLoaded:
-		OS.set_window_fullscreen(button_pressed)
+		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (button_pressed) else Window.MODE_WINDOWED
 		#Settingers.SettingData.DisplaySetting.FullScreen = button_pressed
 		Settingers.setDisplay("FullScreen",button_pressed)
 	pass # Replace with function body.
@@ -40,7 +40,7 @@ func _on_FullSkren_toggled(button_pressed):
 
 func _on_Vsync_toggled(button_pressed):
 	if LayarSettingLoaded:
-		OS.vsync_enabled = button_pressed
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if (button_pressed) else DisplayServer.VSYNC_DISABLED)
 		#Settingers.SettingData.DisplaySetting.Vsync = button_pressed
 		Settingers.setDisplay("Vsync",button_pressed)
 	pass # Replace with function body.

@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="FontFile" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/SubInheritable/SpeakerTryButton.gd" type="Script" id=2]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Center.ogg" type="AudioStream" id=3]
 
 [node name="SpeakerTryButton" type="Button"]
-margin_left = 268.5
-margin_right = 368.5
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_clip_content = true
+offset_left = 268.5
+offset_right = 368.5
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 100, 100 )
+clip_contents = true
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 toggle_mode = true
 text = "Speaker"
 clip_text = true

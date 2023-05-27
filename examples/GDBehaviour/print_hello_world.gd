@@ -1,4 +1,4 @@
-tool
+@tool
 extends EditorScript
 
 """
@@ -16,7 +16,8 @@ class Print:
 	extends "res://addons/GDBehavior/Base/BTAction.gd"
 	var msg
 
-	func _init(msg).("print"):
+	func _init(msg):
+		super("print")
 		self.msg = msg
 
 	func _exe(tick):

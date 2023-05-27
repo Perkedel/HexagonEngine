@@ -6,11 +6,11 @@ extends VBoxContainer
 #var DVDListCachePath = "user://Pengaturan/DaftarDVD.json"
 var DVDItemLists :Dictionary
 var shownDVDItemLists : Dictionary
-var DVDarrayPathLoad : PoolStringArray = []
-var DVDExclusiveBootStatement : PoolIntArray = []
+var DVDarrayPathLoad : PackedStringArray = []
+var DVDExclusiveBootStatement : PackedInt32Array = []
 var DVDcounter : int = 0
-onready var preSelImag = preload("res://Sprites/ConsoleHoverEmpty.png")
-onready var preLauImag = preload("res://Sprites/ConsoleLaunchEmpty.png")
+@onready var preSelImag = preload("res://Sprites/ConsoleHoverEmpty.png")
+@onready var preLauImag = preload("res://Sprites/ConsoleLaunchEmpty.png")
 signal openSetting()
 signal shareBootInfoJson(JsonOfIt, pathOfIt)
 signal updateSelectionAssets(hoverImage,launchImage,hoverAudio,launchAudio)
@@ -43,19 +43,21 @@ signal DVDListRefreshed()
 func refreshDVDs():
 	# documentation of "Directory"
 	print("DVD Cardtridges")
-	var GameDVDCardtridges = Directory.new()
+	var GameDVDCardtridges = DirAccess.new()
 	var bootFile = File.new()
 	if GameDVDCardtridges.open("res://GameDVDCardtridge/") == OK:
 		# Basic DVD loading
-		GameDVDCardtridges.list_dir_begin()
+		GameDVDCardtridges.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		var file_name = GameDVDCardtridges.get_next()
 		
 		while file_name != "":
 			if GameDVDCardtridges.current_is_dir():
-				print(file_name, " Directory")
+				print(file_name, " DirAccess")
 				# GameDVDCardtridges.get_current_dir()
 				if bootFile.open(GameDVDCardtridges.get_current_dir() + "/" + file_name + "/boot.json", File.READ) == OK:
-					var content = parse_json(bootFile.get_as_text())
+					var test_json_conv = JSON.new()
+					test_json_conv.parse(bootFile.get_as_text())
+					var content = test_json_conv.get_data()
 					print("\n\nContent ", String(content))
 					emit_signal("shareBootInfoJson", content, bootFile.get_path())
 					DVDItemLists[content.id] = content
@@ -73,7 +75,7 @@ func refreshDVDs():
 		
 		
 		# https://godotengine.org/asset-library/asset/157
-		print("\n\nDVDs now\n", String(JSONBeautifier.beautify_json(to_json(DVDItemLists))))
+		print("\n\nDVDs now\n", String(JSONBeautifier.beautify_json(JSON.new().stringify(DVDItemLists))))
 		pass
 	else:
 		printerr("Werror cannot open GameDVDCartridged dir!!!")
@@ -91,7 +93,7 @@ func refreshDVDs():
 			else: # is hidden
 				# Read required activation of easter eggsellent
 				if DVDItemLists[aDVD].has("requiredEggsellents"):
-					if DVDItemLists[aDVD].requiredEggsellents.empty():
+					if DVDItemLists[aDVD].requiredEggsellents.is_empty():
 						# No easter egg needed but it's hidden
 						print(aDVD, " is hidden, empty eggsellent\n")
 						deserve_addition = false
@@ -165,8 +167,8 @@ func iHoverThisDVD():
 	print("Hovered DVD ", keying[WhichItemSelected])
 	var selPath:String
 	var lauPath:String
-	var selImag : Texture 
-	var lauImag : Texture
+	var selImag : Texture2D 
+	var lauImag : Texture2D
 	if checkering.has("HoveredImage"):
 		selPath = checkering["HoveredImage"] 
 		if(selPath == ""):
@@ -195,14 +197,14 @@ func _on_PowerOffButton_pressed():
 	emit_signal("PressShutDown")
 	pass # Replace with function body.
 
-export var WhichItemSelected = 0
+@export var WhichItemSelected = 0
 func _on_ItemList_item_selected(index):
 	
 	WhichItemSelected = index
 	iHoverThisDVD()
 	pass # Replace with function body.
 
-export var WhichItemClickEnter = 0
+@export var WhichItemClickEnter = 0
 signal ItemClickEnter(Index, pathOfThis, ExclusiveBootStatement)
 func _on_ItemList_item_activated(index):
 	AutoSpeaker.playButtonClick()

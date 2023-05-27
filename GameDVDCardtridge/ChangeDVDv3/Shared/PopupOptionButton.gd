@@ -1,8 +1,8 @@
-tool
+@tool
 extends Button
 
-export(String) var ButtonLabel = "Menu Button"
-export(Texture) var ButtonIcon = load("res://Sprites/MavrickleIcon.png")
+@export var ButtonLabel: String = "Menu Button"
+@export var ButtonIcon: Texture2D = load("res://Sprites/MavrickleIcon.png")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

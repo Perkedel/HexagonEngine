@@ -6,7 +6,7 @@ extends Node
 var ResourceQueueing
 var StartLoadScene = false
 var SceneHasLoaded = false
-export(PackedScene) var ZoingLoad
+@export var ZoingLoad: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +28,7 @@ func _process(delta):
 	if StartLoadScene:
 		print("Start Load Scene")
 		if ResourceQueueing.is_ready(ZoingLoad):
-			$Spatial.add_child(ResourceQueueing.get_resource(ZoingLoad))
+			$Node3D.add_child(ResourceQueueing.get_resource(ZoingLoad))
 			pass
 		else:
 			$Control/ProgressBar.value = ResourceQueueing.get_progress(ZoingLoad) * 100

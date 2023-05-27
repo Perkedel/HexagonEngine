@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Zetrix/ZetrixWorld.tres" type="World" id=1]
 
-[node name="Viewport" type="Viewport"]
+[node name="SubViewport" type="SubViewport"]
 arvr = true
 size = Vector2( 1920, 1080 )
 own_world = true

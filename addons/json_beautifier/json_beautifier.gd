@@ -14,9 +14,10 @@ class_name JSONBeautifier
 # 'validade_json()' method) and a number of spaces for indentation (default is
 # '0', in which it will use tabs instead), returning properly formatted JSON.
 static func beautify_json(json: String, spaces := 0) -> String:
-	var error_message: String = validate_json(json)
-	if not error_message.empty():
-		return error_message
+#	var error_message: String = validate_json(json)
+#	if not error_message.is_empty():
+#		return error_message
+#	var error_message = json.parse(json)
 
 	var indentation := ""
 	if spaces > 0:

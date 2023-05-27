@@ -2,7 +2,7 @@ extends Node
 
 class WebClient:
 	var _debug := false
-	var _headers = PoolStringArray([])
+	var _headers = PackedStringArray([])
 	var _client = null
 	var object = null
 	var callback = null
@@ -60,12 +60,12 @@ class WebClient:
 				if chunk.size() > 0:
 					_response_body += chunk
 		if err != OK:
-			push_error('Networking error: %s'%var2str(err))
+			push_error('Networking error: %s'%var_to_str(err))
 
 	func _perform_request(method, url, data=''):
 		if _debug:
 			print('Start web request: %s\nwith data: %s'%[url,data])
-		_response_body = PoolByteArray()
+		_response_body = PackedByteArray()
 		_response_headers = null
 		_response_code = null
 		_method = method
@@ -91,7 +91,7 @@ class WebClient:
 			ssl = true
 		var err = _client.connect_to_host(host, int(port), ssl)
 		if err != OK:
-			push_error('Networking error: %s'%var2str(err))
+			push_error('Networking error: %s'%var_to_str(err))
 
 	func _finish_request(result, response_code, headers, body):
 		if _debug:
@@ -101,7 +101,7 @@ class WebClient:
 		_client.close()
 		self.callback = null
 		self.object = null
-		self._headers = PoolStringArray([])
+		self._headers = PackedStringArray([])
 		self.user_data = null
 	
 	func _native_finish_request(response_code, body):
@@ -111,7 +111,7 @@ class WebClient:
 			self.object.callv(self.callback, [response_code, body, self])
 		self.callback = null
 		self.object = null
-		self._headers = PoolStringArray([])
+		self._headers = PackedStringArray([])
 		self.user_data = null
 
 	func set_headers(headers):
@@ -147,7 +147,7 @@ class WebClient:
 			return
 		self.object = object
 		self.callback = callback
-		data = JSON.print(data)
+		data = JSON.stringify(data)
 		self._headers.append_array(['Content-Type: application/json'])
 		self._headers.append_array(["Content-Length: " + str(data.length())])
 		self._headers.append_array(headers)

@@ -1,20 +1,20 @@
 extends Control
 
-onready var tween = $aTween
-onready var titler = $KonMenu/TitleHeader
-onready var navigator = $KonMenu/MenuNavigation
-export(float) var howLong = .5
+@onready var tween = $aTween
+@onready var titler = $KonMenu/TitleHeader
+@onready var navigator = $KonMenu/MenuNavigation
+@export var howLong: float = .5
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal doChangeDVD
 signal doShutdown
-onready var PortraitMode = false
+@onready var PortraitMode = false
 
 func preAnimate():
-	var NavpositionBefore = navigator.rect_position
-	tween.interpolate_property(titler, "rect_position", Vector2(0,-titler.rect_size.y),Vector2.ZERO, howLong, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	tween.interpolate_property(navigator, "rect_position", Vector2(0,navigator.rect_position.y+navigator.rect_size.y),NavpositionBefore, howLong, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	var NavpositionBefore = navigator.position
+	tween.interpolate_property(titler, "position", Vector2(0,-titler.size.y),Vector2.ZERO, howLong, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	tween.interpolate_property(navigator, "position", Vector2(0,navigator.position.y+navigator.size.y),NavpositionBefore, howLong, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	
 	tween.start()
 	pass

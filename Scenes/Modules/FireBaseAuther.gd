@@ -8,10 +8,10 @@ https://www.epochconverter.com/
 https://duckduckgo.com/?q=firebase+firestore+rest+api&t=brave&ia=web
 """
 
-onready var Authing = $AUTHING
-onready var Authed = $AUTHED
-onready var PlsWaiter = $PLSWAIT
-onready var userButton = Authed.get_node("USERbutton")
+@onready var Authing = $AUTHING
+@onready var Authed = $AUTHED
+@onready var PlsWaiter = $PLSWAIT
+@onready var userButton = Authed.get_node("USERbutton")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -22,8 +22,8 @@ var UserNameText
 var PasswordText ## Do not save this variable on disk unencrypted!!!
 
 var HourglassRotateDegree:float = 0
-onready var TimePiece = $PLSWAIT/HourGlassContainer/GravityHourGlass
-onready var TimerFrameHourglass = $PLSWAIT/HourglassFramePerSecond
+@onready var TimePiece = $PLSWAIT/HourGlassContainer/GravityHourGlass
+@onready var TimerFrameHourglass = $PLSWAIT/HourglassFramePerSecond
 
 signal loggedInAuthed(theAuth)
 signal loggedFaile(code, message)
@@ -35,9 +35,9 @@ var userDictionaryData = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Firebase.Auth.connect("login_succeeded", self, "_on_FirebaseAuth_LoginSuccess")
-	Firebase.Auth.connect("login_failed", self, "_on_FirebaseAuth_LoginFail")
-	Firebase.Auth.connect("userdata_received", self, "_on_FirebaseAuth_GetUserData")
+	Firebase.Auth.connect("login_succeeded", Callable(self, "_on_FirebaseAuth_LoginSuccess"))
+	Firebase.Auth.connect("login_failed", Callable(self, "_on_FirebaseAuth_LoginFail"))
+	Firebase.Auth.connect("userdata_received", Callable(self, "_on_FirebaseAuth_GetUserData"))
 	
 	pass # Replace with function body.
 
@@ -61,7 +61,7 @@ func loggedIn(whoAuth):
 	authedMe = whoAuth
 	Firebase.Auth.get_user_data()
 	#print(String(authedMe))
-	yield(get_tree().create_timer(0.1),"timeout")
+	await get_tree().create_timer(0.1).timeout
 	#firebaseReferencer = Firebase.Database.get_database_reference("pengguna", { })
 	#firestorer = Firebase.Firestore.collection("pengguna/")
 	userButton.text
@@ -156,7 +156,7 @@ func _on_SIGNUPbutton_pressed():
 
 func _on_FirebaseAuth_LoginSuccess(whoAuth):
 	print("login success")
-	yield(get_tree().create_timer(.1),"timeout")
+	await get_tree().create_timer(.1).timeout
 	loggedIn(whoAuth)
 	pass
 

@@ -2,7 +2,8 @@ extends "res://addons/GDBehavior/Base/BTAction.gd"
 
 var msg: String
 
-func _init(msg:String="").("print"):
+func _init(msg:String=""):
+	super("print")
 	self.msg = msg
 
 func _exe(tick):

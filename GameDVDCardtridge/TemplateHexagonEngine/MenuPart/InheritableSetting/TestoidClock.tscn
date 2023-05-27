@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
 [ext_resource path="res://modules/Reusables/JustClock.tscn" type="PackedScene" id=2]
 
 [node name="TestoidClock" type="HBoxContainer"]
@@ -11,24 +11,24 @@ __meta__ = {
 }
 
 [node name="LabelContainer" type="HBoxContainer" parent="."]
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="LabelContainer"]
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Clock"
 valign = 1
 
 [node name="Clocking" type="HBoxContainer" parent="."]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -37,9 +37,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

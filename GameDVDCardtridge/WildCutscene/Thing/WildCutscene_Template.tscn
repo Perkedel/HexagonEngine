@@ -4,7 +4,7 @@
 
 [node name="WildCutscene_Template" type="Node"]
 
-[node name="Scene" type="Spatial" parent="."]
+[node name="Scene" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Scene"]
 environment = ExtResource( 1 )

@@ -10,10 +10,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -413.5
-margin_top = -105.5
-margin_right = 413.5
-margin_bottom = 105.5
+offset_left = -413.5
+offset_top = -105.5
+offset_right = 413.5
+offset_bottom = 105.5
 text = "Play Ronaldhuno Soccer in BaWaMi"
 __meta__ = {
 "_edit_use_anchors_": false

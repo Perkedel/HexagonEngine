@@ -1,15 +1,15 @@
 extends VBoxContainer
 
 var Spectrum
-export (String) var AnalyzeBus = "Master"
-export (int) var EffectAnalyze = 0
-export (float) var minDB = 60
-export (float) var MaxFrequency = 44100
+@export (String) var AnalyzeBus = "Master"
+@export (int) var EffectAnalyze = 0
+@export (float) var minDB = 60
+@export (float) var MaxFrequency = 44100
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-export (bool) var AudioSettingLoaded = false
+@export (bool) var AudioSettingLoaded = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,7 +23,7 @@ func _process(delta):
 
 func Spectrumer():
 	var Magnitude:float = Spectrum.get_magnitude_for_frequency_range(0,MaxFrequency).length()
-	var energy = clamp((minDB + linear2db(Magnitude)) / minDB, 0, 1)
+	var energy = clamp((minDB + linear_to_db(Magnitude)) / minDB, 0, 1)
 	$AudioTestMeter.SetValue(energy)
 	pass
 

@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 #Variables
 var global = "root/global"
 
@@ -25,7 +25,7 @@ var is_sprinting = false
 var flashlight
 
 func _ready():
-	camera = $rotation_helper/Camera
+	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Flashlight
 	
@@ -103,15 +103,21 @@ func process_movement(delta):
 	else:
 		accel = DEACCEL
 
-	hvel = hvel.linear_interpolate(target, accel * delta)
+	hvel = hvel.lerp(target, accel * delta)
 	vel.x = hvel.x
 	vel.z = hvel.z
-	vel = move_and_slide(vel, Vector3(0, 1, 0), 0.05, 4, deg2rad(MAX_SLOPE_ANGLE))
+	set_velocity(vel)
+	set_up_direction(Vector3(0, 1, 0))
+	set_floor_stop_on_slope_enabled(0.05)
+	set_max_slides(4)
+	set_floor_max_angle(deg_to_rad(MAX_SLOPE_ANGLE))
+	move_and_slide()
+	vel = velocity
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotation_helper.rotate_x(deg2rad(event.relative.y * MOUSE_SENSITIVITY))
-		self.rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
+		rotation_helper.rotate_x(deg_to_rad(event.relative.y * MOUSE_SENSITIVITY))
+		self.rotate_y(deg_to_rad(event.relative.x * MOUSE_SENSITIVITY * -1))
 
 		var camera_rot = rotation_helper.rotation_degrees
 		camera_rot.x = clamp(camera_rot.x, -80, 80)

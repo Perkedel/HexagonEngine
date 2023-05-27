@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample"
+type="AudioStreamWAV"
+uid="uid://gl1gnklp1t8j"
+path="res://.godot/imported/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Sampling/Pen-and-paper (Discorded)/Heart_54_Asystole.wav"
-dest_files=[ "res://.import/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample" ]
+dest_files=["res://.godot/imported/Heart_54_Asystole.wav-ac9b88527b295c0a76cce668d7452928.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -80,7 +80,7 @@ func save_state():
 	state['current_state'] = str(self._current_state)
 
 	#Get the JSON string
-	var json = JSON.print(state, ' ', false)
+	var json = JSON.stringify(state, ' ', false)
 	return json
 
 func load_state(json_state):
@@ -88,7 +88,9 @@ func load_state(json_state):
 	#WARNING: If this is not a 'valid' state, this process will take an ~infinite amount of time until it reaches the state. Don't feed invalid data!
 
 	#Re-initialize with the previous state
-	var json_result = JSON.parse(json_state)
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(json_state)
+	var json_result = test_json_conv.get_data()
 	var json_data = json_result.result
 
 	#Did it parse the result properly?

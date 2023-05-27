@@ -4,11 +4,11 @@ extends VBoxContainer
 # var a = 2
 # var b = "text"
 
-export(NodePath) var MenuAnimating
+@export var MenuAnimating: NodePath
 signal Press_Play_Button()
 signal Hover_MoreMenu_Button()
 signal Hover_Play_Button()
-export(NodePath) var MoreMenuSelectFirst
+@export var MoreMenuSelectFirst: NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

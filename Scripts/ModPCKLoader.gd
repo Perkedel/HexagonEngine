@@ -12,12 +12,13 @@ signal modFolderLoaded()
 func loadAllModsFolder():
 	var locate = OS.get_executable_path() + "/ModPCK"
 	
-	var dirNow = Directory.new()
+#	var dirNow = DirAccess.new()
+	var dirNow:DirAccess
 	var modInFolder
 	
 	var try = dirNow.open(locate)
 	if try == OK:
-		dirNow.list_dir_begin(true,false)
+		dirNow.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		modInFolder = dirNow.get_next()
 		while modInFolder != "":
 			if dirNow.current_is_dir():
@@ -34,13 +35,13 @@ func loadAllModsFolder():
 			pass
 		pass
 	else:
-		printerr("Werror "+ String(try) +" cannot open ModPCK file!\ndid you deleted it?")
+		printerr("Werror "+ try.to_string() +" cannot open ModPCK file!\ndid you deleted it?")
 		pass
 	pass
 
 func wellLoadModsFolder():
 	loadAllModsFolder()
-	print(String(modsFolder))
+#	print(String(modsFolder.))
 	print("\n\nMods Folder:")
 	
 	for modu in modsFolder:
@@ -59,7 +60,7 @@ func wellLoadModsFolder():
 func loadAllMods():
 	wellLoadModsFolder()
 	modLists = Settingers.getModPCKs()
-	print(String(modLists))
+#	print(String(modLists.values()))
 	print("\n\nMods List:")
 	
 	# https://www.codingcommanders.com/godot/gdscript-loops.html

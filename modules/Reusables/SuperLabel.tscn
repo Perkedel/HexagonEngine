@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://modules/Reusables/SuperLabel.gd" type="Script" id=1]
-[ext_resource path="res://modules/Reusables/SuperLabelDynamicFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://modules/Reusables/SuperLabelDynamicFont.tres" type="FontFile" id=2]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" type="FontFile" id=3]
 
 [node name="SuperLabel" type="Label"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color( 1, 1, 1, 1 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "Lorem Ipsum"
 script = ExtResource( 1 )
 fontFile = ExtResource( 3 )

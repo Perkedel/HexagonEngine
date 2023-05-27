@@ -1,14 +1,14 @@
 extends RigidBody2D
 
-export (float) var x_InputMap
-export (float) var y_InputMap
+@export (float) var x_InputMap
+@export (float) var y_InputMap
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-onready var DirectionInputMap = Vector2()
-onready var x_init = position.x #961.26
-onready var y_init = position.y #550.175
+@onready var DirectionInputMap = Vector2()
+@onready var x_init = position.x #961.26
+@onready var y_init = position.y #550.175
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

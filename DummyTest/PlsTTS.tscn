@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://DummyTest/PlsTTS.gd" type="Script" id=1]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" type="FontFile" id=2]
 [ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=5]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 size = 72
@@ -15,14 +15,14 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 size = 48
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 size = 24
@@ -47,25 +47,25 @@ __meta__ = {
 }
 
 [node name="ShowOff" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TopText" parent="HBoxContainer/ShowOff" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 958.0
-margin_bottom = 90.0
-custom_fonts/font = SubResource( 1 )
+offset_right = 958.0
+offset_bottom = 90.0
+theme_override_fonts/font = SubResource( 1 )
 text = "Utu Ano"
 align = 1
 size = 72.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ShowOff"]
-margin_top = 94.0
-margin_right = 958.0
-margin_bottom = 986.0
+offset_top = 94.0
+offset_right = 958.0
+offset_bottom = 986.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
@@ -75,40 +75,40 @@ stretch_mode = 6
 [node name="BottomText" parent="HBoxContainer/ShowOff" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 990.0
-margin_right = 958.0
-margin_bottom = 1080.0
-custom_fonts/font = SubResource( 1 )
+offset_top = 990.0
+offset_right = 958.0
+offset_bottom = 1080.0
+theme_override_fonts/font = SubResource( 1 )
 text = "I ved Gro"
 align = 1
 size = 72.0
 
 [node name="Controlings" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Title" parent="HBoxContainer/Controlings" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 958.0
-margin_bottom = 63.0
-custom_fonts/font = SubResource( 2 )
+offset_right = 958.0
+offset_bottom = 63.0
+theme_override_fonts/font = SubResource( 2 )
 text = "Please Text to Speech Now!"
 align = 1
 size = 48.0
 
 [node name="Dropdowns" type="HBoxContainer" parent="HBoxContainer/Controlings"]
-margin_top = 67.0
-margin_right = 958.0
-margin_bottom = 103.0
+offset_top = 67.0
+offset_right = 958.0
+offset_bottom = 103.0
 alignment = 1
 
 [node name="ChooseEngine" type="OptionButton" parent="HBoxContainer/Controlings/Dropdowns"]
-margin_right = 400.0
-margin_bottom = 36.0
+offset_right = 400.0
+offset_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "godot-tts"
@@ -118,38 +118,38 @@ selected = 0
 [node name="LabelThatChooseVoice" parent="HBoxContainer/Controlings/Dropdowns" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 404.0
-margin_right = 554.0
-margin_bottom = 36.0
-custom_fonts/font = SubResource( 3 )
+offset_left = 404.0
+offset_right = 554.0
+offset_bottom = 36.0
+theme_override_fonts/font = SubResource( 3 )
 text = "Voice Name: "
 
 [node name="ChooseVoice" type="LineEdit" parent="HBoxContainer/Controlings/Dropdowns"]
-margin_left = 558.0
-margin_right = 958.0
-margin_bottom = 36.0
+offset_left = 558.0
+offset_right = 958.0
+offset_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "rms"
 placeholder_text = "Choose Voice Name"
 
 [node name="TextEdit" type="TextEdit" parent="HBoxContainer/Controlings"]
-margin_top = 107.0
-margin_right = 958.0
-margin_bottom = 826.0
+offset_top = 107.0
+offset_right = 958.0
+offset_bottom = 826.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
+theme_override_fonts/font = ExtResource( 5 )
 text = "Hello World"
 show_line_numbers = true
 
 [node name="SpeakNow" parent="HBoxContainer/Controlings" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 830.0
-margin_right = 958.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 10, 250 )
+offset_top = 830.0
+offset_right = 958.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 10, 250 )
 size_flags_vertical = 1
 MenuName = "Speak"
 ChooseOrientation = 2

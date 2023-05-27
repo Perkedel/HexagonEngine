@@ -1,20 +1,20 @@
-extends RigidBody
+extends RigidBody3D
 
 # Pls walk
 
 # https://godotengine.org/article/godot-3-4-is-released#input
 
-export(NodePath) var catchCamera:NodePath
-export(float) var WALK_FORCE:float = 1
-export(float) var WALK_DEADZONE:float = .25
-export(float) var JUMP_STRENGTH:float = 20.0
-export(float) var JUMP_TOKEN:int = 2
+@export var catchCamera: NodePath:NodePath
+@export var WALK_FORCE: float:float = 1
+@export var WALK_DEADZONE: float:float = .25
+@export var JUMP_STRENGTH: float:float = 20.0
+@export var JUMP_TOKEN: float:int = 2
 
-onready var jalan:Vector2 = Vector2.ZERO # walk right now
-onready var loncatRightNow:int = 2 # jump token right now 
-onready var floored:bool = true
+@onready var jalan:Vector2 = Vector2.ZERO # walk right now
+@onready var loncatRightNow:int = 2 # jump token right now 
+@onready var floored:bool = true
 
-onready var _springArm:SpringArm = $SpringArm
+@onready var _springArm:SpringArm3D = $SpringArm3D
 
 # Declare member variables here. Examples:
 # var a = 2

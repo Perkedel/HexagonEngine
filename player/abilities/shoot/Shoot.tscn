@@ -10,40 +10,40 @@
 [ext_resource path="res://player/abilities/shoot/AK-47_Magazine.tscn" type="PackedScene" id=8]
 [ext_resource path="res://player/abilities/shoot/reload.wav" type="AudioStream" id=9]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="StandardMaterial3D" id=1]
 albedo_color = Color( 0.247059, 0.239216, 0.239216, 1 )
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="StandardMaterial3D" id=2]
 albedo_color = Color( 0.360784, 0.32549, 0.254902, 1 )
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="StandardMaterial3D" id=3]
 albedo_color = Color( 0.388235, 0.317647, 0.223529, 1 )
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="StandardMaterial3D" id=4]
 albedo_color = Color( 0.247059, 0.258824, 0.223529, 1 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="StandardMaterial3D" id=5]
 albedo_color = Color( 0.286275, 0.266667, 0.266667, 1 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="StandardMaterial3D" id=6]
 albedo_color = Color( 0.227451, 0.219608, 0.219608, 1 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="StandardMaterial3D" id=7]
 albedo_color = Color( 0.301961, 0.298039, 0.290196, 1 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="StandardMaterial3D" id=8]
 albedo_color = Color( 0.235294, 0.223529, 0.223529, 1 )
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="StandardMaterial3D" id=9]
 albedo_color = Color( 0.27451, 0.266667, 0.266667, 1 )
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="StandardMaterial3D" id=10]
 albedo_color = Color( 0.270588, 0.266667, 0.266667, 1 )
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="StandardMaterial3D" id=11]
 albedo_color = Color( 0.313726, 0.258824, 0.243137, 1 )
 
-[node name="Shoot" type="Spatial"]
+[node name="Shoot" type="Node3D"]
 script = ExtResource( 1 )
 impact = ExtResource( 4 )
 muzzle_flash = ExtResource( 6 )
@@ -53,20 +53,20 @@ shoot_sound = ExtResource( 5 )
 reload_sound = ExtResource( 9 )
 empty_sound = ExtResource( 2 )
 
-[node name="BulletSpread" type="Position3D" parent="."]
+[node name="BulletSpread" type="Marker3D" parent="."]
 
-[node name="RayCast" type="RayCast" parent="BulletSpread"]
+[node name="RayCast3D" type="RayCast3D" parent="BulletSpread"]
 enabled = true
-cast_to = Vector3( 0, 0, -100 )
+target_position = Vector3( 0, 0, -100 )
 
-[node name="Shoulder" type="Position3D" parent="."]
+[node name="Shoulder" type="Marker3D" parent="."]
 
-[node name="Hand" type="Position3D" parent="Shoulder"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, -0.15, -0.2 )
+[node name="Hand" type="Marker3D" parent="Shoulder"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, -0.15, -0.2 )
 
-[node name="Weapon" type="Position3D" parent="Shoulder/Hand"]
+[node name="Weapon" type="Marker3D" parent="Shoulder/Hand"]
 
-[node name="WeaponModel" type="MeshInstance" parent="Shoulder/Hand/Weapon"]
+[node name="WeaponModel" type="MeshInstance3D" parent="Shoulder/Hand/Weapon"]
 mesh = ExtResource( 3 )
 material/0 = SubResource( 1 )
 material/1 = SubResource( 2 )
@@ -80,24 +80,24 @@ material/8 = SubResource( 9 )
 material/9 = SubResource( 10 )
 material/10 = SubResource( 11 )
 
-[node name="Muzzle" type="Position3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0727332, -0.614556 )
+[node name="Muzzle" type="Marker3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0727332, -0.614556 )
 
-[node name="Shell" type="Position3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0452856, 0.0983432, -0.188937 )
+[node name="Shell" type="Marker3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0452856, 0.0983432, -0.188937 )
 
-[node name="AmmoPosition" type="Position3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0754753, -0.228281 )
+[node name="AmmoPosition" type="Marker3D" parent="Shoulder/Hand/Weapon/WeaponModel"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0754753, -0.228281 )
 
 [node name="BackgroundText" type="ColorRect" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -108.0
-margin_top = -108.0
-margin_right = -92.0
-margin_bottom = -96.0
+offset_left = -108.0
+offset_top = -108.0
+offset_right = -92.0
+offset_bottom = -96.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -108,10 +108,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -108.0
-margin_top = -108.0
-margin_right = -92.0
-margin_bottom = -94.0
+offset_left = -108.0
+offset_top = -108.0
+offset_right = -92.0
+offset_bottom = -94.0
 text = "30"
 align = 2
 __meta__ = {

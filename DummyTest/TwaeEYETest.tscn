@@ -7,31 +7,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_stretch_ratio = 0.0
 
 [node name="CenterContainer1" type="CenterContainer" parent="HBoxContainer"]
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer1"]
-margin_left = 223.0
-margin_top = 284.0
-margin_right = 735.0
-margin_bottom = 796.0
+offset_left = 223.0
+offset_top = 284.0
+offset_right = 735.0
+offset_bottom = 796.0
 texture = SubResource( 1 )
 
 [node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer"]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer2"]
-margin_left = 223.0
-margin_top = 284.0
-margin_right = 735.0
-margin_bottom = 796.0
+offset_left = 223.0
+offset_top = 284.0
+offset_right = 735.0
+offset_bottom = 796.0
 texture = SubResource( 1 )

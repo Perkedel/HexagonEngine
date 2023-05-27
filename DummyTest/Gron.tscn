@@ -6,14 +6,14 @@
 rough = true
 bounce = 10.0
 
-[sub_resource type="SphereShape" id=1]
+[sub_resource type="SphereShape3D" id=1]
 
-[node name="Gron" type="RigidBody"]
+[node name="Gron" type="RigidBody3D"]
 mode = 1
 physics_material_override = SubResource( 2 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource( 1 )
 
-[node name="CSGMesh" type="CSGMesh" parent="."]
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 mesh = ExtResource( 1 )

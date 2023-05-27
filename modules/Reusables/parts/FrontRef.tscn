@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="BoxMesh" id=2]
 
 [sub_resource type="SphereMesh" id=3]
 
-[node name="FrontRef" type="MeshInstance"]
+[node name="FrontRef" type="MeshInstance3D"]
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="Hed" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
+[node name="Hed" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
 mesh = SubResource( 3 )
 material/0 = null

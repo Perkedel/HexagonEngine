@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/166186__drminky__menu-screen-mouse-over.wav-bd1dbc89ef3ffc2186d32e38065f69db.sample"
+type="AudioStreamWAV"
+uid="uid://mlbpgeq8bv4a"
+path="res://.godot/imported/166186__drminky__menu-screen-mouse-over.wav-bd1dbc89ef3ffc2186d32e38065f69db.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav"
-dest_files=[ "res://.import/166186__drminky__menu-screen-mouse-over.wav-bd1dbc89ef3ffc2186d32e38065f69db.sample" ]
+dest_files=["res://.godot/imported/166186__drminky__menu-screen-mouse-over.wav-bd1dbc89ef3ffc2186d32e38065f69db.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

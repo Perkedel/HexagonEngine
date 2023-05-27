@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 var player
 
@@ -7,7 +7,7 @@ var jumps_remaining = number_of_jumps
 var can_jump = false # Used with a timer to add a delay before each jumps
 
 func _ready():
-	player = get_tree().get_root().find_node("Player", true, false)
+	player = get_tree().get_root().find_child("Player", true, false)
 
 func _input(event):
 	if Input.is_key_pressed(KEY_SPACE) and can_jump and jumps_remaining > 0:

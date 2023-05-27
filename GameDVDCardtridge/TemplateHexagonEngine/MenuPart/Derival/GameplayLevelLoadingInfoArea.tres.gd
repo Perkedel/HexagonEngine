@@ -1,6 +1,6 @@
 extends Control
 
-export (Texture) var ThumbnailImage
+@export (Texture2D) var ThumbnailImage
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

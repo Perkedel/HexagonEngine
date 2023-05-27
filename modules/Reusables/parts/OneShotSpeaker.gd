@@ -1,11 +1,13 @@
+class_name OneShotSpeaker
 extends AudioStreamPlayer
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(bool) var destroyOnFinish:bool = true
-class_name OneShotSpeaker
+@export var destroyOnFinish: bool = true
+#class_name OneShotSpeaker
+#class OneShotSpeaker
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

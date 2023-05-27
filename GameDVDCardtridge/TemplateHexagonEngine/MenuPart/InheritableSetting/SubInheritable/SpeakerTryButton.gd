@@ -1,6 +1,6 @@
 extends Button
 
-export(AudioStream) var playThisPls
+@export var playThisPls: AudioStream
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

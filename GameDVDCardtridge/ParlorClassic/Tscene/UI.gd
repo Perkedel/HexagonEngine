@@ -56,7 +56,7 @@ func _notification(what):
 				pass
 			pass
 		pass
-	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+	if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
 		
 		pass
 	pass

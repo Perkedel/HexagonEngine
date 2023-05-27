@@ -9,7 +9,7 @@
 [ext_resource path="res://Scenes/JustModListToLoad.tscn" type="PackedScene" id=7]
 
 [node name="ChangeDVDMenu" type="Control"]
-pause_mode = 2
+process_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 3 )
@@ -22,12 +22,12 @@ __meta__ = {
 
 [node name="JustWorkingAreYouSure" type="ConfirmationDialog" parent="."]
 visible = true
-margin_left = 550.0
-margin_top = 310.0
-margin_right = 1350.0
-margin_bottom = 780.0
+offset_left = 550.0
+offset_top = 310.0
+offset_right = 1350.0
+offset_bottom = 780.0
 theme = ExtResource( 3 )
-popup_exclusive = true
+exclusive = true
 window_title = "Shutdown Hexagon Engine?"
 dialog_text = "Are you sure to shutdown?"
 __meta__ = {
@@ -35,17 +35,17 @@ __meta__ = {
 }
 
 [node name="JustWorkingSetting" parent="." instance=ExtResource( 4 )]
-popup_exclusive = true
+exclusive = true
 
 [node name="SelectFileLoadingMode" parent="." instance=ExtResource( 5 )]
 
 [node name="JustAFileDialog" type="FileDialog" parent="."]
-margin_top = 43.0
-margin_right = 1887.0
-margin_bottom = 1053.0
+offset_top = 43.0
+offset_right = 1887.0
+offset_bottom = 1053.0
 window_title = "Buka sebuah File"
 mode = 0
-filters = PoolStringArray( "*.tscn; Godot Tscene", "*.scn; Godot scene" )
+filters = PackedStringArray( "*.tscn; Godot Tscene", "*.scn; Godot scene" )
 show_hidden_files = true
 
 [node name="JustZetrixVRViewer" parent="." instance=ExtResource( 6 )]

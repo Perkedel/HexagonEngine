@@ -3,13 +3,13 @@ extends ScrollContainer
 # It is necessary to check the state of the scroll when working with internal controls
 
 # The variable determines the direction of the scroll
-export(String, "Horizontal", "Vertical") var scrollDirection = "Horizontal"
+@export var scrollDirection = "Horizontal" # (String, "Horizontal", "Vertical")
 # Variable specifies how long it will continue scrolling
-export var kineticScrollTime = 0.3
+@export var kineticScrollTime = 0.3
 # The variable determines the kinetic scroll length
-export var kineticScrollBias = 0.5
+@export var kineticScrollBias = 0.5
 # The variable determines which offset to consider as a swipe
-export var swipeTolerance = 50
+@export var swipeTolerance = 50
 
 # The variable shows the state of the scroll. Used to organize the work of internal controls
 var swiping = false
@@ -24,13 +24,13 @@ func _input(event):
 		_swipePoint = null
 		return
 	# By pressing set the necessary variables
-	if (event is InputEventMouseButton) and (event.pressed == true): 
+	if (event is InputEventMouseButton) and (event.button_pressed == true): 
 		swiping = true
-		if ((event.button_index == BUTTON_LEFT) or (event.button_index == BUTTON_RIGHT)):
+		if ((event.button_index == MOUSE_BUTTON_LEFT) or (event.button_index == MOUSE_BUTTON_RIGHT)):
 			_swipePoint = event.position
-		if ((event.button_index == BUTTON_WHEEL_UP) or (event.button_index == BUTTON_WHEEL_DOWN)):
+		if ((event.button_index == MOUSE_BUTTON_WHEEL_UP) or (event.button_index == MOUSE_BUTTON_WHEEL_DOWN)):
 			_swipePoint = Vector2(self.get_h_scroll(), self.get_v_scroll())
-	if (swiping) and (event is InputEventMouseButton) and (event.pressed == false):
+	if (swiping) and (event is InputEventMouseButton) and (event.button_pressed == false):
 		# Swipe off if the cursor position has not changed
 		if ((_swipePoint - event.position).length() < swipeTolerance):
 			swiping = false
@@ -39,7 +39,7 @@ func _input(event):
 		# Create a tween responsible for kinetic scrolling
 		var tween = Tween.new()
 		add_child(tween)
-		if ((event.button_index == BUTTON_LEFT) or (event.button_index == BUTTON_RIGHT)):
+		if ((event.button_index == MOUSE_BUTTON_LEFT) or (event.button_index == MOUSE_BUTTON_RIGHT)):
 			if (scrollDirection == "Horizontal"):
 				tween.interpolate_method(self, "set_h_scroll", self.get_h_scroll(), 
 					self.get_h_scroll() - kineticScrollBias*(event.position.x - _swipePoint.x), kineticScrollTime, 
@@ -48,7 +48,7 @@ func _input(event):
 				tween.interpolate_method(self, "set_v_scroll", self.get_v_scroll(), 
 					self.get_v_scroll() - kineticScrollBias*(event.position.y - _swipePoint.y), kineticScrollTime, 
 					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		if ((event.button_index == BUTTON_WHEEL_UP) or (event.button_index == BUTTON_WHEEL_DOWN)):
+		if ((event.button_index == MOUSE_BUTTON_WHEEL_UP) or (event.button_index == MOUSE_BUTTON_WHEEL_DOWN)):
 			if (scrollDirection == "Horizontal"):
 				tween.interpolate_method(self, "set_h_scroll", self.get_h_scroll(), 
 					self.get_h_scroll() + kineticScrollBias*(self.get_h_scroll() - _swipePoint.x), kineticScrollTime, 

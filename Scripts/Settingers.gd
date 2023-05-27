@@ -31,9 +31,9 @@ var tempAreYouSureDialog = preload("res://GameDVDCardtridge/TemplateHexagonEngin
 # https://www.youtube.com/watch?v=L9Zekkb4ZXc
 # https://godotengine.org/asset-library/asset/157
 # YOINK! your coding is now mine! jk, it's still yours.
-onready var useJSON = true
+@onready var useJSON = true
 
-var _DefaultSetting = {
+var _DefaultSetting:Dictionary = {
 	Version = 0,
 	Nama = "a Dasandimian",
 	ModPCKs={ #ModPCK
@@ -53,8 +53,8 @@ var _DefaultSetting = {
 		RecordingVolume = 0,
 	},
 	DisplaySetting = {
-		FullScreen = OS.is_window_fullscreen(),
-		Vsync = OS.vsync_enabled,
+		FullScreen = ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN)),
+		Vsync = (DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED),
 	},
 	ControllerMappings = {
 		
@@ -68,7 +68,7 @@ var _DefaultSetting = {
 
 "Total SettingData must be private! so do your save data! use _ to private. For security reason in case a mod PCK has malicious intents"
 "SettingData total harus pribadi! juga dengan data simpanmu! gunakan _ untuk mempribadikan. Demi keamanan jika seandainya sebuah mod PCK memiliki niat jahat."
-onready var _SettingData = {
+@onready var _SettingData:Dictionary = {
 	Version = 0,
 	Nama = "a Dasandimian",
 	ModPCKs={
@@ -84,8 +84,8 @@ onready var _SettingData = {
 	},
 	DVDListCache={},
 	DisplaySetting = {
-		FullScreen = OS.is_window_fullscreen(),
-		Vsync = OS.vsync_enabled,
+		FullScreen = ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN)),
+		Vsync = (DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED),
 	},
 	ControllerMappings = {},
 	Firebasers = {
@@ -93,8 +93,8 @@ onready var _SettingData = {
 	},
 	Eggsellents = {},
 }
-var SettingFile:File
-var SettingFolder:Directory
+var SettingFile:FileAccess
+var SettingFolder:DirAccess
 const SettingDirectory:String = "user://Pengaturan/"
 var SettingPath:String = SettingDirectory + "Setelan.simpan"
 var SettingJson:String = SettingDirectory + "Setelan.json"
@@ -107,7 +107,7 @@ var TheFirstTime : bool = false
 enum DialogReason  {Nothing, ResetMe}
 var SelectDialogReason
 func prepareDialog():
-	var instanceDialog = tempAreYouSureDialog.instance()
+	var instanceDialog = tempAreYouSureDialog.instantiate()
 	add_child(instanceDialog)
 	
 	pass
@@ -143,14 +143,14 @@ func ApplySetting():
 			AudioServer.set_bus_volume_db(manyAudioVol, _SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"])
 		pass
 	
-	OS.set_window_fullscreen(_SettingData.DisplaySetting.FullScreen)
-	OS.set_use_vsync(_SettingData.DisplaySetting.Vsync)
+	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (_SettingData.DisplaySetting.FullScreen) else Window.MODE_WINDOWED
+	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if (_SettingData.DisplaySetting.Vsync) else DisplayServer.VSYNC_DISABLED)
 	pass
 
 func SettingLoad():
-	SettingFile = File.new()
+#	SettingFile = FileAccess.new()
 	if SettingFile.file_exists(SettingPath) && not useJSON:
-		var werror = SettingFile.open(SettingPath, File.READ)
+		var werror = SettingFile.open(SettingPath, FileAccess.READ)
 		match(werror):
 			OK:
 				TheFirstTime = false
@@ -167,11 +167,13 @@ func SettingLoad():
 				pass
 		pass
 	elif SettingFile.file_exists(SettingJson) && useJSON:
-		var werror = SettingFile.open(SettingJson, File.READ)
+		var werror = SettingFile.open(SettingJson, FileAccess.READ)
 		match(werror):
 			OK:
 				TheFirstTime = false
-				_SettingData = parse_json(SettingFile.get_as_text())
+				var test_json_conv = JSON.new()
+				test_json_conv.parse(SettingFile.get_as_text())
+				_SettingData = test_json_conv.get_data()
 				
 				ApplySetting()
 				SettingFile.close()
@@ -197,7 +199,7 @@ func checkForResetMe():
 		SelectDialogReason = DialogReason.ResetMe
 		var theDialog = get_node("AreYouSureDialog")
 		theDialog.SpawnDialogWithText(ResetSay)
-		var whatAnswer = yield(theDialog, "YesOrNoo")
+		var whatAnswer = await theDialog.YesOrNoo
 		if whatAnswer:
 			engageFactoryReset()
 		pass
@@ -210,17 +212,17 @@ func engageFactoryReset():
 	pass
 
 func ResetControllerMaps():
-	InputMap.load_from_globals()
+	InputMap.load_from_project_settings()
 	var Actions = InputMap.get_actions()
 	var EachActionContains
 	#SettingData.ControllerMappings = Actions
 	for everye in Actions:
-		EachActionContains = InputMap.get_action_list(everye)
+		EachActionContains = InputMap.action_get_events(everye)
 		_SettingData.ControllerMappings[String(everye)] = EachActionContains
 	pass
 
 func ResetFirstTimer():
-	_SettingData = _DefaultSetting
+#	_SettingData = _DefaultSetting
 	
 	for manyAudioVol in AudioServer.get_bus_count():
 			_SettingData.AudioSetting[AudioServer.get_bus_name(manyAudioVol) + "Volume"] = AudioServer.get_bus_volume_db(manyAudioVol)
@@ -241,13 +243,13 @@ func SettingSave():
 		ResetFirstTimer()
 		pass
 	
-	SettingFolder = Directory.new()
+#	SettingFolder = DirAccess.new()
 	if !SettingFolder.dir_exists(SettingDirectory):
 		SettingFolder.make_dir_recursive(SettingDirectory)
 		pass
 	
-	SettingFile = File.new()
-	var werror = SettingFile.open(SettingPath, File.WRITE)
+#	SettingFile = FileA.new()
+	var werror = SettingFile.open(SettingPath, FileAccess.WRITE)
 	match(werror):
 		OK:
 			SettingFile.store_var(_SettingData)
@@ -257,13 +259,13 @@ func SettingSave():
 		_:
 			print('Werror Saving File Bin code ', werror)
 			pass
-	SettingFile = File.new()
-	werror = SettingFile.open(SettingJson, File.WRITE)
+#	SettingFile = File.new()
+	werror = SettingFile.open(SettingJson, FileAccess.WRITE)
 	match(werror):
 		OK:
 			# https://godotengine.org/asset-library/asset/157
 			# https://www.youtube.com/watch?v=L9Zekkb4ZXc
-			var SettingJsonBeautiful = JSONBeautifier.beautify_json(to_json(_SettingData))
+			var SettingJsonBeautiful = JSONBeautifier.beautify_json(JSON.new().stringify(_SettingData))
 			SettingFile.store_string(SettingJsonBeautiful)
 			SettingFile.close()
 			print("Setting Json Saved")

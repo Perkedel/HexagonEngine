@@ -6,9 +6,9 @@
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -93.0
-margin_bottom = -18.0
-rect_min_size = Vector2( 0, 75 )
+offset_top = -93.0
+offset_bottom = -18.0
+custom_minimum_size = Vector2( 0, 75 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

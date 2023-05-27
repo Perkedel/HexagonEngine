@@ -4,7 +4,7 @@
 [ext_resource path="res://DummyTest/CenterSpeaker.gd" type="Script" id=2]
 
 [node name="CenterSpeaker" type="AudioStreamPlayer3D"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -50 )
+transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -50 )
 stream = ExtResource( 1 )
 attenuation_model = 3
 bus = "SoundEffect"

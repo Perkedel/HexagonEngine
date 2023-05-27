@@ -11,11 +11,11 @@ signal Shutdown_Exec()
 # https://youtu.be/nFcBSuzxFdM how to yield a tween
 # yield the tween node object and wait for "tween_completed" signal from it.
 
-onready var anTween:Tween = $Tween
-onready var anButton1:NodePath = "./UIixef/BaseOf/Scene1/Button1"
-onready var anButton2:NodePath = "./UIixef/BaseOf/Scene2/Button2"
-onready var buttonNo:int = 1
-onready var onGoing = false
+@onready var anTween:Tween = $Tween
+@onready var anButton1:NodePath = "./UIixef/BaseOf/Scene1/Button1"
+@onready var anButton2:NodePath = "./UIixef/BaseOf/Scene2/Button2"
+@onready var buttonNo:int = 1
+@onready var onGoing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,12 +39,12 @@ func TransitionNext():
 		$CanvasLayer/Panel.self_modulate = Color(0,0,0, 0)
 		anTween.interpolate_property($CanvasLayer/Panel,"self_modulate", Color(0,0,0,0), Color(0,0,0,1), 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 		anTween.start()
-		yield(anTween, "tween_completed")
+		await anTween.tween_completed
 		$UIixef/BaseOf/Scene1.hide()
 		$UIixef/BaseOf/Scene2.show()
 		anTween.interpolate_property($CanvasLayer/Panel,"self_modulate", Color(0,0,0,1), Color(0,0,0,0), 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 		anTween.start()
-		yield(anTween, "tween_completed")
+		await anTween.tween_completed
 		$UIixef/BaseOf/Scene2/Button2.grab_focus()
 		#$UIMeta/QuitButtons/TheyContains/ChangeDVD.set_focus_neighbour(MARGIN_TOP,anButton2)
 		#$UIMeta/QuitButtons/TheyContains/Shutdown.set_focus_neighbour(MARGIN_TOP,anButton2)
@@ -60,12 +60,12 @@ func TransitionPlsGoBack():
 		$CanvasLayer/Panel.self_modulate = Color(0,0,0, 0)
 		anTween.interpolate_property($CanvasLayer/Panel,"self_modulate", Color(0,0,0,0), Color(0,0,0,1), 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 		anTween.start()
-		yield(anTween, "tween_completed")
+		await anTween.tween_completed
 		$UIixef/BaseOf/Scene1.show()
 		$UIixef/BaseOf/Scene2.hide()
 		anTween.interpolate_property($CanvasLayer/Panel,"self_modulate", Color(0,0,0,1), Color(0,0,0,0), 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 		anTween.start()
-		yield(anTween, "tween_completed")
+		await anTween.tween_completed
 		$UIixef/BaseOf/Scene1/Button1.grab_focus()
 		#$UIMeta/QuitButtons/TheyContains/ChangeDVD.set_focus_neighbour(MARGIN_TOP,anButton1)
 		#$UIMeta/QuitButtons/TheyContains/Shutdown.set_focus_neighbour(MARGIN_TOP,anButton1)

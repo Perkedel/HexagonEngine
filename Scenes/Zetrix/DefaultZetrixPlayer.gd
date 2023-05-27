@@ -1,12 +1,12 @@
-extends ARVROrigin
+extends XROrigin3D
 
 # from OpenXR plugin Bastiaan Olij GodotVR
-var interface : ARVRInterface
+var interface : XRInterface
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 func initialize() -> bool:
-	var interface = ARVRServer.find_interface("OpenXR")
+	var interface = XRServer.find_interface("OpenXR")
 	if interface and interface.initialize():
 		print("OpenXR Interface initialized")
 		

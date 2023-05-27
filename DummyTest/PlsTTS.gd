@@ -1,8 +1,8 @@
 extends Control
 
-onready var TextToSpeak = $HBoxContainer/Controlings/TextEdit
-onready var SpeakButton = $HBoxContainer/Controlings/SpeakNow
-onready var SelectVoiceDropdown = $HBoxContainer/Controlings/Dropdowns/ChooseVoice
+@onready var TextToSpeak = $HBoxContainer/Controlings/TextEdit
+@onready var SpeakButton = $HBoxContainer/Controlings/SpeakNow
+@onready var SelectVoiceDropdown = $HBoxContainer/Controlings/Dropdowns/ChooseVoice
 var chosenEngine:int = 0
 var chosenVoice:String
 var textContains:String

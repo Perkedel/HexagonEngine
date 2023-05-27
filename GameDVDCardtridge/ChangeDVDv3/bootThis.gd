@@ -5,40 +5,40 @@ extends Node
 # Daddy is disappointed!
 
 # Made with Godot in style of "Made with Unity"
-export(float) var TimeDelay
-export(PackedScene) var bootTheDVD = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
-export(String) var bootTheDVDpath = "res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn"
+@export var TimeDelay: float
+@export var bootTheDVD: PackedScene = load("res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn")
+@export var bootTheDVDpath: String = "res://GameDVDCardtridge/ChangeDVDv3/ChangeDVDv3.tscn"
 # onready var loadingResource = ResourceLoader()
-export(bool) var disableSplash = false
-export(PoolStringArray) var bootBannerLocations = [
+@export var disableSplash: bool = false
+@export var bootBannerLocations: PackedStringArray = [
 	"res://GameDVDCardtridge/ChangeDVDv3/Shared/bootBanner/RowCellPerkedel.tscn",
 	"res://GameDVDCardtridge/ChangeDVDv3/Shared/bootBanner/RowCellA.tscn",
 ]
-export(float) var fadeSplashIn = .5
-onready var resourcering = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+@export var fadeSplashIn: float = .5
+@onready var resourcering = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 var ContainsBootBannerInstance
 var ContainsDVDInstance
 var pleaseJustSkip = false
 
-onready var tween = $Tweenee
-onready var indexBootBanner = 0
-onready var howManyBootBanners = 0
-onready var finishedBootBanner = false
-onready var finishedDVDLoading = false
-onready var hasTooDone = false
+@onready var tween = $Tweenee
+@onready var indexBootBanner = 0
+@onready var howManyBootBanners = 0
+@onready var finishedBootBanner = false
+@onready var finishedDVDLoading = false
+@onready var hasTooDone = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 
-func loadBootBanner(var which:String):
+func loadBootBanner(which:String):
 	howManyBootBanners = $Splash/SplashMan/SplashControl/ColumnStack.get_child_count()
-	ContainsBootBannerInstance = load(which).instance()
+	ContainsBootBannerInstance = load(which).instantiate()
 	$Splash/SplashMan/SplashControl/ColumnStack.add_child(ContainsBootBannerInstance)
 	for childrens in $Splash/SplashMan/SplashControl/ColumnStack.get_children():
-		childrens.connect("ImDone", self, "_on_RowCell_ImDone")
-		childrens.connect("ImDone", $Splash/SplashMan/SplashControl/ColumnStack, "_on_ImDone")
+		childrens.connect("ImDone", Callable(self, "_on_RowCell_ImDone"))
+		childrens.connect("ImDone", Callable($Splash/SplashMan/SplashControl/ColumnStack, "_on_ImDone"))
 	pass
 
 func removeBootBanners():
@@ -61,14 +61,14 @@ func DestroySplashScreen():
 
 func loadTray(whatDVD):
 	print("\n\n\nWOW DVD Finish now load\n\n\n")
-	ContainsDVDInstance = whatDVD.instance()
+	ContainsDVDInstance = whatDVD.instantiate()
 	$Tray.add_child(ContainsDVDInstance)
 	if $Tray.get_child(0).has_signal("ChangeDVD_Exec"):
-		$Tray.get_child(0).connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
+		$Tray.get_child(0).connect("ChangeDVD_Exec", Callable(self, "_on_ChangeDVD_Exec"))
 	else:
 		print("Hmm, looks like this DVD missing the ChangeDVD_Exec")
 	if $Tray.get_child(0).has_signal("Shutdown_Exec"):
-		$Tray.get_child(0).connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		$Tray.get_child(0).connect("Shutdown_Exec", Callable(self, "_on_Shutdown_Exec"))
 	else:
 		print("Hmm, looks like this DVD missing the Shutdown_Exec")
 	pass
@@ -87,7 +87,7 @@ func _splashing():
 			howManyBootBanners = $Splash/SplashMan/SplashControl/ColumnStack.get_child_count()
 			print("Load " + bootBannersHere)
 			loadBootBanner(bootBannersHere)
-			yield($Splash/SplashMan/SplashControl/ColumnStack, "ImDone")
+			await $Splash/SplashMan/SplashControl/ColumnStack.ImDone
 			print("Done the " + bootBannersHere)
 			# $Splash/SplashMan/SplashControl/ColumnStack.get_child(0).queue_free()
 			if pleaseJustSkip:
@@ -115,7 +115,7 @@ func _splashing():
 func _kickTheBootDVD():
 	loadTray(resourcering.get_resource(bootTheDVDpath))
 	if not disableSplash:
-		yield(tween, "tween_all_completed")
+		await tween.tween_all_completed
 	$Splash/SplashMan/SplashControl.hide()
 	$Splash/BekgronMan/BekgronControl.hide()
 	pass
@@ -143,7 +143,7 @@ func _process(delta):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == BUTTON_LEFT:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			skipSplash()
 			pass
 

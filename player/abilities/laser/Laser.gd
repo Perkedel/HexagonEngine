@@ -1,17 +1,17 @@
-extends RayCast
+extends RayCast3D
 
-export (PackedScene) var dot
+@export (PackedScene) var dot
 
-onready var dot_instance = dot.instance()
+@onready var dot_instance = dot.instantiate()
 
-onready var crosshair = get_tree().get_root().find_node("Crosshair", true ,false)
-onready var shoot = get_tree().get_root().find_node("Shoot", true ,false)
-onready var player = get_tree().get_root().find_node("Player", true ,false)
-onready var reload_tween = get_tree().get_root().find_node("ReloadTween", true, false)
-onready var grab = get_tree().get_root().find_node("Grab", true, false)
+@onready var crosshair = get_tree().get_root().find_child("Crosshair", true ,false)
+@onready var shoot = get_tree().get_root().find_child("Shoot", true ,false)
+@onready var player = get_tree().get_root().find_child("Player", true ,false)
+@onready var reload_tween = get_tree().get_root().find_child("ReloadTween", true, false)
+@onready var grab = get_tree().get_root().find_child("Grab", true, false)
 
 func _ready():
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	get_tree().get_root().add_child(dot_instance)
 
 func _process(delta):

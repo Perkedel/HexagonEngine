@@ -1,7 +1,7 @@
 extends Button
 
-export (int) var WhatNumberAmI = 0
-export (bool) var SingleUse = true
+@export (int) var WhatNumberAmI = 0
+@export (bool) var SingleUse = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

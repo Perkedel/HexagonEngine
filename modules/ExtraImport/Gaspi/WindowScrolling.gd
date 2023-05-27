@@ -4,19 +4,19 @@ extends Control
 # How far from the border the contents draw.
 # 0 means no margin, the contents draw right next to the border.
 # 2 means the margin is twice the border size.
-export(float, 0, 10) var margin_scale: float = 0
+@export var margin_scale: float = 0 # (float, 0, 10)
 # Opening time:
 # The time it takes for the opening animation of this window to end.
-export(float, 0, 5) var opening_time: float = 1
+@export var opening_time: float = 1 # (float, 0, 5)
 # Closing time:
 # The time it takes for the closing animation of this window to end.
-export(float, 0, 5) var closing_time: float = .5
+@export var closing_time: float = .5 # (float, 0, 5)
 
 # Node variables for easy access.
-onready var _background_node := $Background
-onready var _border_node := $Border
-onready var _contents_node := $Contents
-onready var _tween := $Tween
+@onready var _background_node := $Background
+@onready var _border_node := $Border
+@onready var _contents_node := $Contents
+@onready var _tween := $Tween
 
 # Signals.
 signal animation_ended()
@@ -27,32 +27,32 @@ signal closed()
 func _ready() -> void:
 	
 	# Set minimum size based on the minimum size of the border.
-	_border_node.rect_min_size = _border_node.texture.get_size()
-	rect_min_size = _border_node.rect_min_size
-	_background_node.rect_min_size = rect_min_size * 2/3
+	_border_node.custom_minimum_size = _border_node.texture.get_size()
+	custom_minimum_size = _border_node.custom_minimum_size
+	_background_node.custom_minimum_size = custom_minimum_size * 2/3
 	
 	# Animate opening.
 	opening_animation()
-	yield(self, "opened")
+	await self.opened
 	
 	# Set margins depending on the movement direction.
 	var texture_size = _background_node.texture.get_size()
 	
 	if _background_node.scroll_velocity.x > 0:
-		_background_node.margin_right = -texture_size.x
+		_background_node.offset_right = -texture_size.x
 	elif _background_node.scroll_velocity.x < 0:
-		_background_node.margin_left = texture_size.x
+		_background_node.offset_left = texture_size.x
 
 	if _background_node.scroll_velocity.y > 0:
-		_background_node.margin_bottom = -texture_size.y
+		_background_node.offset_bottom = -texture_size.y
 	elif _background_node.scroll_velocity.y < 0:
-		_background_node.margin_top = texture_size.y
+		_background_node.offset_top = texture_size.y
 	
 	# Set contents container margins.
-	_contents_node.margin_bottom = - (margin_scale + 1) * _border_node.patch_margin_bottom
-	_contents_node.margin_left = (margin_scale + 1) * _border_node.patch_margin_left
-	_contents_node.margin_right = - (margin_scale + 1) * _border_node.patch_margin_right
-	_contents_node.margin_top = (margin_scale + 1) * _border_node.patch_margin_top
+	_contents_node.offset_bottom = - (margin_scale + 1) * _border_node.patch_margin_bottom
+	_contents_node.offset_left = (margin_scale + 1) * _border_node.patch_margin_left
+	_contents_node.offset_right = - (margin_scale + 1) * _border_node.patch_margin_right
+	_contents_node.offset_top = (margin_scale + 1) * _border_node.patch_margin_top
 
 
 
@@ -65,10 +65,10 @@ func resize_animation(start_pos: Vector2, final_pos: Vector2, start_size: Vector
 	if to_hide != null: to_hide.visible = false
 	
 	# Start opening animation.
-	_tween.interpolate_property(self, "rect_size", start_size, final_size, time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	_tween.interpolate_property(self, "rect_position", start_pos, final_pos, time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	_tween.interpolate_property(self, "size", start_size, final_size, time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	_tween.interpolate_property(self, "position", start_pos, final_pos, time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	_tween.start()
-	yield(_tween, "tween_all_completed") # Wait until the animation is over.
+	await _tween.tween_all_completed # Wait until the animation is over.
 	# Animation is over.
 	
 	# Restore previous scrolling state.
@@ -81,12 +81,12 @@ func resize_animation(start_pos: Vector2, final_pos: Vector2, start_size: Vector
 
 
 func opening_animation(time = opening_time):
-	resize_animation(rect_position + rect_size / 2 - rect_min_size / 2, rect_position, rect_min_size, rect_size, time)
-	yield(self, "animation_ended")
+	resize_animation(position + size / 2 - custom_minimum_size / 2, position, custom_minimum_size, size, time)
+	await self.animation_ended
 	emit_signal("opened")
 
 
 func closing_animation(time = closing_time):
-	resize_animation(rect_position, rect_position + rect_size / 2 - rect_min_size / 2, rect_size, rect_min_size, time)
-	yield(self, "animation_ended")
+	resize_animation(position, position + size / 2 - custom_minimum_size / 2, size, custom_minimum_size, time)
+	await self.animation_ended
 	emit_signal("closed")

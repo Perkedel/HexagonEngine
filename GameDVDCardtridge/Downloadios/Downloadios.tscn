@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/Downloadios/Downloadios.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="FontFile" id=4]
 [ext_resource path="res://GameDVDCardtridge/404/uiPart/Menu404.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 size = 48
@@ -32,86 +32,86 @@ __meta__ = {
 }
 
 [node name="URL" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 63.0
+offset_right = 1920.0
+offset_bottom = 63.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/URL"]
-margin_right = 119.0
-margin_bottom = 63.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 119.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "URL: "
 
 [node name="LineEditURL" type="LineEdit" parent="Control/VBoxContainer/URL"]
-margin_left = 123.0
-margin_right = 1835.0
-margin_bottom = 63.0
+offset_left = 123.0
+offset_right = 1835.0
+offset_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 placeholder_text = "https://example.com"
 
 [node name="ButtonURL" type="Button" parent="Control/VBoxContainer/URL"]
-margin_left = 1839.0
-margin_right = 1920.0
-margin_bottom = 63.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1839.0
+offset_right = 1920.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "GO"
 
 [node name="DoDownload" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 67.0
-margin_right = 1920.0
-margin_bottom = 130.0
+offset_top = 67.0
+offset_right = 1920.0
+offset_bottom = 130.0
 
 [node name="CheckButton" type="CheckButton" parent="Control/VBoxContainer/DoDownload"]
-margin_right = 1920.0
-margin_bottom = 63.0
+offset_right = 1920.0
+offset_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "Do Download"
 
 [node name="DownloadInto" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 134.0
-margin_right = 1920.0
-margin_bottom = 197.0
+offset_top = 134.0
+offset_right = 1920.0
+offset_bottom = 197.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/DownloadInto"]
-margin_right = 455.0
-margin_bottom = 63.0
-custom_fonts/font = ExtResource( 2 )
+offset_right = 455.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Download to folder: "
 
 [node name="LineEditDownload" type="LineEdit" parent="Control/VBoxContainer/DownloadInto"]
-margin_left = 459.0
-margin_right = 1741.0
-margin_bottom = 63.0
+offset_left = 459.0
+offset_right = 1741.0
+offset_bottom = 63.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 placeholder_text = "~/Downloads"
 
 [node name="ButtonDownload" type="Button" parent="Control/VBoxContainer/DownloadInto"]
-margin_left = 1745.0
-margin_right = 1920.0
-margin_bottom = 63.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = 1745.0
+offset_right = 1920.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Browse"
 
 [node name="Splitron" type="HSplitContainer" parent="Control/VBoxContainer"]
-margin_top = 201.0
-margin_right = 1920.0
-margin_bottom = 976.0
+offset_top = 201.0
+offset_right = 1920.0
+offset_bottom = 976.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="StatusBox" type="TextEdit" parent="Control/VBoxContainer/Splitron"]
-margin_right = 956.0
-margin_bottom = 775.0
+offset_right = 956.0
+offset_bottom = 775.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Text"
 readonly = true
 __meta__ = {
@@ -119,9 +119,9 @@ __meta__ = {
 }
 
 [node name="Gambar" type="TextureRect" parent="Control/VBoxContainer/Splitron"]
-margin_left = 964.0
-margin_right = 1920.0
-margin_bottom = 775.0
+offset_left = 964.0
+offset_right = 1920.0
+offset_bottom = 775.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -131,14 +131,14 @@ __meta__ = {
 [node name="Menu404" parent="Control/VBoxContainer" instance=ExtResource( 5 )]
 
 [node name="ChangeDVDButton" parent="Control/VBoxContainer/Menu404" index="0"]
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="ExitGameButton" parent="Control/VBoxContainer/Menu404" index="1"]
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="DownloadFileDialog" type="FileDialog" parent="Control"]
-margin_right = 1850.0
-margin_bottom = 1027.0
+offset_right = 1850.0
+offset_bottom = 1027.0
 window_title = "Simpan ke File"
 resizable = true
 access = 2
@@ -153,7 +153,7 @@ __meta__ = {
 
 [node name="HTTPRequestJustDownload" type="HTTPRequest" parent="."]
 [connection signal="text_changed" from="Control/VBoxContainer/URL/LineEditURL" to="." method="_on_LineEdit_text_changed"]
-[connection signal="text_entered" from="Control/VBoxContainer/URL/LineEditURL" to="." method="_on_LineEditURL_text_entered"]
+[connection signal="text_submitted" from="Control/VBoxContainer/URL/LineEditURL" to="." method="_on_LineEditURL_text_entered"]
 [connection signal="pressed" from="Control/VBoxContainer/URL/ButtonURL" to="." method="_on_Button_pressed"]
 [connection signal="toggled" from="Control/VBoxContainer/DoDownload/CheckButton" to="." method="_on_CheckButton_toggled"]
 [connection signal="text_changed" from="Control/VBoxContainer/DownloadInto/LineEditDownload" to="." method="_on_LineEditDownload_text_changed"]

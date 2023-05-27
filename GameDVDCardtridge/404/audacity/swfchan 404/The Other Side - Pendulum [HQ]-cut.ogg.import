@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/The Other Side - Pendulum [HQ]-cut.ogg-ab3ac15981ec5506e6a5328616f093ef.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqowpr5kw4dqy"
+path="res://.godot/imported/The Other Side - Pendulum [HQ]-cut.ogg-ab3ac15981ec5506e6a5328616f093ef.oggvorbisstr"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/404/audacity/swfchan 404/The Other Side - Pendulum [HQ]-cut.ogg"
-dest_files=[ "res://.import/The Other Side - Pendulum [HQ]-cut.ogg-ab3ac15981ec5506e6a5328616f093ef.oggstr" ]
+dest_files=["res://.godot/imported/The Other Side - Pendulum [HQ]-cut.ogg-ab3ac15981ec5506e6a5328616f093ef.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

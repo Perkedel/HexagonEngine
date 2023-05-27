@@ -1,21 +1,21 @@
-extends StaticBody
+extends StaticBody3D
 class_name InteractMe
 
 # Interact with Mitch Makes Things https://youtu.be/C_-faOyIuTQ
 
-export var do_prerequisite = false
+@export var do_prerequisite = false
 var prerequisite_done = false
-export var prerequisite_interact: NodePath
+@export var prerequisite_interact: NodePath
 var prereq_watch: Node
-export var is_toggle = true
-export var is_goal = false
+@export var is_toggle = true
+@export var is_goal = false
 var has_Interacted = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var colorNotYet: Material
-export var colorDid: Material
-export var colorNotPrerequisiteYet: Material
+@export var colorNotYet: Material
+@export var colorDid: Material
+@export var colorNotPrerequisiteYet: Material
 
 signal Interacted()
 signal InteractGoaled()
@@ -27,10 +27,10 @@ func _ready():
 		prereq_watch = get_node(prerequisite_interact)
 	
 	if do_prerequisite:
-		$CSGMesh.material = colorNotPrerequisiteYet
+		$CSGMesh3D.material = colorNotPrerequisiteYet
 		pass
 	else:
-		$CSGMesh.material = colorNotYet
+		$CSGMesh3D.material = colorNotYet
 	pass # Replace with function body.
 
 func interaction_can_interact(interactionComponentParent : Node) -> bool:
@@ -46,7 +46,7 @@ func _process(delta):
 			prerequisite_done = prereq_watch.has_Interacted
 			
 			if prerequisite_done:
-				$CSGMesh.material = colorNotYet
+				$CSGMesh3D.material = colorNotYet
 			pass
 		pass 
 
@@ -56,13 +56,13 @@ func interaction_interact(interactionComponentParent : Node) -> void:
 	
 	if has_Interacted:
 		if is_toggle:
-			$CSGMesh.material = colorNotYet
+			$CSGMesh3D.material = colorNotYet
 			has_Interacted = false
 		return
 	
 	# DO Something
 	emit_signal("Interacted")
-	$CSGMesh.material = colorDid
+	$CSGMesh3D.material = colorDid
 	
 	if is_goal:
 		emit_signal("InteractGoaled")

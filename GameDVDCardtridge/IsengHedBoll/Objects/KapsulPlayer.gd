@@ -1,15 +1,15 @@
-extends RigidBody
+extends RigidBody3D
 
-export (float) var WanalogX = 0
-export (float) var WanalogY = 0
-export (float) var Cepatan = 20
+@export (float) var WanalogX = 0
+@export (float) var WanalogY = 0
+@export (float) var Cepatan = 20
 var GayaLoncat = 0
-export (float) var LoncatKuat = 5
-export (bool) var BisaPegang = false
-export (bool) var PegangBola = false
+@export (float) var LoncatKuat = 5
+@export (bool) var BisaPegang = false
+@export (bool) var PegangBola = false
 var ManaBola
-export (Vector3) var LemparArah = Vector3(10,10,0)
-export (bool) var TweenSetNow = false
+@export (Vector3) var LemparArah = Vector3(10,10,0)
+@export (bool) var TweenSetNow = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

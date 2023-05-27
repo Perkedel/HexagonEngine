@@ -1,6 +1,6 @@
 extends "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox.gd"
 
-export (String) var Checkbox2Name = "Status 2"
+@export (String) var Checkbox2Name = "Status 2"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,7 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 func ForceValue2(value:bool):
-	$HBoxContainer/CheckBox2.pressed = value
+	$HBoxContainer/CheckBox2.button_pressed = value
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

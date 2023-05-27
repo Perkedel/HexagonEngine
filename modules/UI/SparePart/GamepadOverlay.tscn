@@ -7,37 +7,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Nduts" type="HBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="LeftNduts" type="HBoxContainer" parent="Nduts"]
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LeftTrigger" parent="Nduts/LeftNduts" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 674.0
-margin_bottom = 1080.0
+offset_right = 674.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LeftBumper" parent="Nduts/LeftNduts" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 678.0
-margin_right = 958.0
-margin_bottom = 1080.0
+offset_left = 678.0
+offset_right = 958.0
+offset_bottom = 1080.0
 size_flags_vertical = 3
 
 [node name="RightNduts" type="HBoxContainer" parent="Nduts"]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

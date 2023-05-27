@@ -9,7 +9,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Hands.pause_mode = PAUSE_MODE_PROCESS
+	$Hands.process_mode = PROCESS_MODE_ALWAYS
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

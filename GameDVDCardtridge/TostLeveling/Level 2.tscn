@@ -13,10 +13,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -541.214
-margin_top = 153.509
-margin_right = 329.786
-margin_bottom = 367.509
+offset_left = -541.214
+offset_top = 153.509
+offset_right = 329.786
+offset_bottom = 367.509
 text = "next "
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,7 +1,7 @@
-extends SpotLight
+extends SpotLight3D
 
-export (Resource) var light_on_sound
-export (Resource) var light_off_sound
+@export (Resource) var light_on_sound
+@export (Resource) var light_off_sound
 
 var sound = light_on_sound
 
@@ -22,5 +22,5 @@ func play_sound():
 		audio_node.stream = light_off_sound
 	add_child(audio_node)
 	audio_node.play()
-	yield(get_tree().create_timer(1), "timeout")
+	await get_tree().create_timer(1).timeout
 	audio_node.queue_free()

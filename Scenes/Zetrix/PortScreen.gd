@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 
 # Declare member variables here. Examples:
@@ -6,10 +6,10 @@ extends Spatial
 # var b = "text"
 var rootViewport
 #var img
-onready var imgTexture = ImageTexture.new()
+@onready var imgTexture = ImageTexture.new()
 
 # https://godotengine.org/qa/23713/how-to-convert-image-to-texture
-func ReceiveRootViewport(getIt:Viewport):
+func ReceiveRootViewport(getIt:SubViewport):
 	rootViewport = getIt
 	
 	# Demo of Screen Capture Godot official
@@ -20,8 +20,8 @@ func ReceiveRootViewport(getIt:Viewport):
 #	$ScreenMesh.material_override.albedo_texture = imgTexture
 	
 	# Demo of 2d in 3d demo Godot official
-	yield(get_tree(), "idle_frame")
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
+	await get_tree().idle_frame
 	# https://godotengine.org/qa/23713/how-to-convert-image-to-texture
 	$ScreenMesh.material_override.albedo_texture = rootViewport.get_texture()
 

@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-export (String) var VariableName = "Empty"
+@export (String) var VariableName = "Empty"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 class_name HeroicPlayer
 
 var MOVE_SPEED = 12
@@ -9,16 +9,16 @@ const MAX_FALL_SPEED = 30
 const H_LOOK_SENS = 1.0
 const V_LOOK_SENS = 1.0
 
-onready var cam = $HoldRigKamera
-onready var anim = $Graphics/AnimationPlayer
+@onready var cam = $HoldRigKamera
+@onready var anim = $Graphics/AnimationPlayer
 
 var y_velo = 0
 
 # Artindi's Special Coyote Time
 var shouldCoyoteJump = false
 var jumpJustPressed = false
-export var howLongCoyoteTime = .5
-export var howLongStickyLoncatButton = .1
+@export var howLongCoyoteTime = .5
+@export var howLongStickyLoncatButton = .1
 
 # JOELwindows7 Special Double Jump Signature
 var extraJumpTokenInit = 1
@@ -26,7 +26,7 @@ var JumpTokenRightNow = 1
 var shouldUseExtraJumpToken = false
 
 # Mitch Makes things interact https://youtu.be/C_-faOyIuTQ
-export var interaction_parent : NodePath = self.get_path()
+@export var interaction_parent : NodePath = self.get_path()
 
 var interaction_target:Node
 var is_riding : bool = false
@@ -55,7 +55,7 @@ func _input(event):
 #		pass
 	
 	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == BUTTON_LEFT:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if interaction_target != null:
 				if (interaction_target.has_method("interaction_interact")):
 					interaction_target.interaction_interact(self)
@@ -98,7 +98,9 @@ func _physics_process(delta):
 		move_vec = move_vec.rotated(Vector3(0, 1, 0), rotation.y)
 		move_vec *= MOVE_SPEED
 		move_vec.y = y_velo
-		move_and_slide(move_vec, Vector3(0, 1, 0))
+		set_velocity(move_vec)
+		set_up_direction(Vector3(0, 1, 0))
+		move_and_slide()
 		
 		y_velo -= GRAVITY
 		
@@ -191,14 +193,14 @@ func play_anim(name):
 	anim.play(name)
 
 func coyoteTime():
-	yield(get_tree().create_timer(howLongCoyoteTime), "timeout")
+	await get_tree().create_timer(howLongCoyoteTime).timeout
 	#print('Coyote timed')
 	shouldCoyoteJump = false
 	shouldUseExtraJumpToken = true
 	pass
 
 func rememberJumpTime():
-	yield(get_tree().create_timer(howLongStickyLoncatButton), "timeout")
+	await get_tree().create_timer(howLongStickyLoncatButton).timeout
 	print('Remembered Jump Time')
 	jumpJustPressed = false
 	shouldUseExtraJumpToken = true

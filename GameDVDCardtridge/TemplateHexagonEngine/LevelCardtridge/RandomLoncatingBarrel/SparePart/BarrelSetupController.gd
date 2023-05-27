@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-export (int) var NumbersOfButton = 5
+@export (int) var NumbersOfButton = 5
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

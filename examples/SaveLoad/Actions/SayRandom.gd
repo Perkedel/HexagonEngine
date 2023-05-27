@@ -1,6 +1,7 @@
 extends "res://addons/GDBehavior/Base/BTAction.gd"
 
-func _init().("say random greeting"):
+func _init():
+	super("say random greeting")
 	pass
 	
 func _exe(tick):

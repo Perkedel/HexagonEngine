@@ -7,20 +7,20 @@ var RememberMeNow:bool = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var selectAuth = $SelectAuthMode 
-onready var Loginer = $LoginNow
-onready var Registre = $RegisterNow
-onready var Logedin = $LoggedInYay
-onready var Loadinger = $LoadingNow
-onready var http = $HTTPRequest
-onready var RegStatus = $RegisterNow/RegisterStatusLabel
-onready var LoginStatus = $LoginNow/LoginStatusLabel
-onready var SelectStatus = $SelectAuthMode/SelectStatusLabel
-onready var AuthMode:int = 0
+@onready var selectAuth = $SelectAuthMode 
+@onready var Loginer = $LoginNow
+@onready var Registre = $RegisterNow
+@onready var Logedin = $LoggedInYay
+@onready var Loadinger = $LoadingNow
+@onready var http = $HTTPRequest
+@onready var RegStatus = $RegisterNow/RegisterStatusLabel
+@onready var LoginStatus = $LoginNow/LoginStatusLabel
+@onready var SelectStatus = $SelectAuthMode/SelectStatusLabel
+@onready var AuthMode:int = 0
 
 var HourglassRotateDegree:float = 0
-onready var TimePiece = $LoadingNow/PLSWAIT/HourGlassContainer/GravityHourGlass
-onready var TimerFrameHourglass = $LoadingNow/PLSWAIT/HourglassFramePerSecond
+@onready var TimePiece = $LoadingNow/PLSWAIT/HourGlassContainer/GravityHourGlass
+@onready var TimerFrameHourglass = $LoadingNow/PLSWAIT/HourglassFramePerSecond
 
 var user_info: Dictionary
 
@@ -49,15 +49,15 @@ func _hide_windows():
 
 func _GoHome():
 	RememberMeNow = false
-	$LoginNow/RememberMeChecko.pressed = false
-	$RegisterNow/RememberMeChecki.pressed = false
+	$LoginNow/RememberMeChecko.button_pressed = false
+	$RegisterNow/RememberMeChecki.button_pressed = false
 	_hide_windows()
 	selectAuth.show()
 
 func _checkSecretFile():
 	var filer = ConfigFile.new()
 	
-	var direr = Directory.new()
+	var direr = DirAccess.new()
 	if direr.dir_exists(_dirSecret):
 		pass
 	else:
@@ -95,7 +95,7 @@ func _deleteSecretFile():
 	filer.erase_section("Firebase")
 	filer.save_encrypted_pass(_fileSecret,_encryptFilePass)
 	filer = null
-	var direr = Directory.new()
+	var direr = DirAccess.new()
 	# https://godotengine.org/qa/11098/how-to-delete-a-save-game
 	direr.remove(_fileSecret)
 	direr.remove(_dirSecret)
@@ -105,7 +105,7 @@ func _preAuthenticate():
 	RememberMeNow = didRemember
 	if didRemember:
 		_checkSecretFile()
-		if not emailFill.empty() and not passwordFill.empty():
+		if not emailFill.is_empty() and not passwordFill.is_empty():
 			_authenticateNow()
 		else:
 			SelectStatus.text = "email or password is empty!"
@@ -138,7 +138,7 @@ func _authenticateNow():
 			pass
 		_:
 			pass
-	var result = yield(http,"request_completed") as Array
+	var result = await http.request_completed as Array
 	# https://github.com/GDQuest/godot-demos/blob/master/2019/05-21-firebase-firestore/end/static/Firebase.gd
 	_hide_windows()
 	match result[1]:
@@ -175,17 +175,17 @@ func _deAuthenticateNow():
 	pass
 
 func _checkLogin():
-	if !passwordFill.empty() && !emailFill.empty():
+	if !passwordFill.is_empty() && !emailFill.is_empty():
 		_authenticateNow()
 	else:
 		# I commit sin. sorry!
-		if passwordFill.empty():
+		if passwordFill.is_empty():
 			print("Password field empty!")
 			LoginStatus.text = "Please fill Password!"
-		elif emailFill.empty():
+		elif emailFill.is_empty():
 			print("Email field empty!")
 			LoginStatus.text = "Please fill Email!"
-		elif emailFill.empty() && passwordFill.empty():
+		elif emailFill.is_empty() && passwordFill.is_empty():
 			print("Email & Password field empty!")
 			LoginStatus.text = "Please fill Email & Password!"
 	pass

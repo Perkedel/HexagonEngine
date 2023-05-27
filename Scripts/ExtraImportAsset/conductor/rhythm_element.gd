@@ -3,16 +3,16 @@ extends Object
 # One component of a rhythm.
 
 # The beat that changes this rhythm element to the next element.
-var change_beat: int setget , _get_change_beat
+var change_beat: int: get = _get_change_beat
 
 # The ID of this rhythm element.  This ID value is emitted by the rhythm when
 # changing from one element to another.
-var id: int setget , _get_id
+var id: int: get = _get_id
 
 # The minimum duration of this rhythm element.  If the change beat happens
 # before this number of beats have elapsed, the rhythm will stay on this element
 # until a later measure.
-var minimum_beats: int setget , _get_minimum_beats
+var minimum_beats: int: get = _get_minimum_beats
 
 
 # To create a new rhythm element, give it an ID value, the beat when it changes

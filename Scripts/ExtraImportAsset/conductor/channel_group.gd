@@ -5,10 +5,10 @@ extends Object
 const NO_BEAT = -1
 
 # The name of the currently loaded audio group.
-var name: String setget , _get_name
+var name: String: get = _get_name
 
 # The ID of the currently playing section in the audio group.
-var section_id: int = 0 setget , _get_section_id
+var section_id: int = 0: get = _get_section_id
 
 var _active_channels: int = 0
 var _channels: Array
@@ -23,7 +23,7 @@ var _waiting_on_loop: bool = false
 
 # To create a new channel group, pass an array of channel controllers.
 func _init(channels: Array) -> void:
-	assert(channels.size() > 0, "Can't create a channel group with 0 channels.")
+	assert(channels.size() > 0) #,"Can't create a channel group with 0 channels.")
 	_channels = channels
 
 

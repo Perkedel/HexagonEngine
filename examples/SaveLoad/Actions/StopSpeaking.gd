@@ -1,6 +1,7 @@
 extends "res://addons/GDBehavior/Base/BTAction.gd"
 
-func _init().("stop speaking"):
+func _init():
+	super("stop speaking")
 	pass
 
 func _exe(tick):

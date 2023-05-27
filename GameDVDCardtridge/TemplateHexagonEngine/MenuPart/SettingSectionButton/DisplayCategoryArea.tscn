@@ -16,67 +16,67 @@ visible = false
 
 [node name="InheritableSettingEmpty" parent="." index="1"]
 visible = false
-margin_top = 0.0
-margin_bottom = 55.0
+offset_top = 0.0
+offset_bottom = 55.0
 
 [node name="InheritableSettingOptionButton" parent="." index="2"]
 visible = false
-margin_top = 0.0
-margin_bottom = 55.0
+offset_top = 0.0
+offset_bottom = 55.0
 
 [node name="InheritableSettingCheckBox" parent="." index="3"]
 visible = false
-margin_top = 0.0
-margin_bottom = 71.0
+offset_top = 0.0
+offset_bottom = 71.0
 ButtonGrouper = SubResource( 1 )
 
 [node name="InheritableSettingCheckBox2" parent="." index="4"]
 visible = false
-margin_top = 0.0
-margin_bottom = 71.0
+offset_top = 0.0
+offset_bottom = 71.0
 ButtonGrouper = SubResource( 2 )
 
 [node name="InheritableSettingCheckButton" parent="." index="5"]
 visible = false
-margin_top = 0.0
-margin_bottom = 80.0
+offset_top = 0.0
+offset_bottom = 80.0
 
 [node name="InheritableSettingCheckButton2" parent="." index="6"]
 visible = false
-margin_top = 0.0
-margin_bottom = 80.0
+offset_top = 0.0
+offset_bottom = 80.0
 
 [node name="TestoidProgressBar" parent="." index="7"]
 visible = false
-margin_top = 0.0
-margin_bottom = 55.0
+offset_top = 0.0
+offset_bottom = 55.0
 
 [node name="TestoidSpectrumAnalyzer" parent="." index="8"]
 visible = false
-margin_top = 0.0
-margin_bottom = 250.0
+offset_top = 0.0
+offset_bottom = 250.0
 
 [node name="TestoidMusicPlayer" parent="." index="9"]
 visible = false
-margin_top = 0.0
-margin_bottom = 67.0
+offset_top = 0.0
+offset_bottom = 67.0
 
 [node name="FullScreen" parent="." index="10" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_right = 1920.0
-margin_bottom = 63.0
+offset_top = 0.0
+offset_right = 1920.0
+offset_bottom = 63.0
 VariableName = "Full Screen"
 
 [node name="Vsync" parent="." index="11" instance=ExtResource( 2 )]
-margin_top = 67.0
-margin_right = 1920.0
-margin_bottom = 130.0
+offset_top = 67.0
+offset_right = 1920.0
+offset_bottom = 130.0
 VariableName = "Vsync"
 
 [node name="TestoidSpeakerTryer" parent="." index="12"]
 visible = false
-margin_top = 134.0
-margin_bottom = 634.0
+offset_top = 134.0
+offset_bottom = 634.0
 [connection signal="visibility_changed" from="." to="." method="_on_DisplayCategoryArea_visibility_changed"]
 [connection signal="Statement" from="FullScreen" to="." method="_on_FullScreen_Statement"]
 [connection signal="visibility_changed" from="FullScreen" to="." method="_on_FullScreen_visibility_changed"]

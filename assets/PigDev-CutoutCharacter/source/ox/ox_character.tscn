@@ -8,13 +8,13 @@
 [ext_resource path="res://ox/animations/jump.tres" type="Animation" id=6]
 [ext_resource path="res://ox/animations/walk.tres" type="Animation" id=7]
 [ext_resource path="res://ox/animations/wall.tres" type="Animation" id=8]
-[ext_resource path="res://ox/ox_body_sprites.png" type="Texture" id=9]
-[ext_resource path="res://ox/ox_face_sprites.png" type="Texture" id=10]
+[ext_resource path="res://ox/ox_body_sprites.png" type="Texture2D" id=9]
+[ext_resource path="res://ox/ox_face_sprites.png" type="Texture2D" id=10]
 
-[node name="ox_character" type="Position2D"]
+[node name="ox_character" type="Marker2D"]
 
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform3D" ]
 
 [node name="animator" type="AnimationPlayer" parent="." index="0"]
 
@@ -35,9 +35,9 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="sprites" type="Node2D" parent="." index="1"]
 
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform3D" ]
 
-[node name="body" type="Sprite" parent="sprites" index="0"]
+[node name="body" type="Sprite2D" parent="sprites" index="0"]
 
 position = Vector2( 3.62958, -25.0478 )
 rotation = -0.00526074
@@ -47,17 +47,17 @@ region_enabled = true
 region_rect = Rect2( 1, 64, 101, 107 )
 _sections_unfolded = [ "Region" ]
 
-[node name="head" type="Sprite" parent="sprites/body" index="0"]
+[node name="head" type="Sprite2D" parent="sprites/body" index="0"]
 
 position = Vector2( -4.28885, -71.8452 )
 texture = ExtResource( 10 )
 offset = Vector2( 27.3104, -45.2847 )
 region_enabled = true
 region_rect = Rect2( 0, 16, 128, 112 )
-region_filter_clip = true
+region_filter_clip_enabled = true
 _sections_unfolded = [ "Region", "Visibility", "Z Index" ]
 
-[node name="arm_l" type="Sprite" parent="sprites/body" index="1"]
+[node name="arm_l" type="Sprite2D" parent="sprites/body" index="1"]
 
 position = Vector2( 35.2036, -45.6544 )
 rotation = -0.416584
@@ -66,9 +66,9 @@ texture = ExtResource( 9 )
 offset = Vector2( 12.9859, 4.10221 )
 region_enabled = true
 region_rect = Rect2( 192, 154, 38, 38 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform3D", "Z Index" ]
 
-[node name="arm_r" type="Sprite" parent="sprites/body" index="2"]
+[node name="arm_r" type="Sprite2D" parent="sprites/body" index="2"]
 
 position = Vector2( -41.8417, -44.2819 )
 rotation = 0.362102
@@ -78,7 +78,7 @@ region_enabled = true
 region_rect = Rect2( 128, 154, 38, 38 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tail" type="Sprite" parent="sprites/body" index="3"]
+[node name="tail" type="Sprite2D" parent="sprites/body" index="3"]
 
 show_behind_parent = true
 position = Vector2( -37.221, -7.38097 )
@@ -90,7 +90,7 @@ region_enabled = true
 region_rect = Rect2( 128, 67, 64, 61 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="leg_l" type="Sprite" parent="sprites" index="1"]
+[node name="leg_l" type="Sprite2D" parent="sprites" index="1"]
 
 position = Vector2( 23.8485, -47.7066 )
 z_index = -1
@@ -100,7 +100,7 @@ region_enabled = true
 region_rect = Rect2( 64, 200, 31, 56 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="leg_r" type="Sprite" parent="sprites" index="2"]
+[node name="leg_r" type="Sprite2D" parent="sprites" index="2"]
 
 position = Vector2( -18.8922, -49.7066 )
 z_index = -1

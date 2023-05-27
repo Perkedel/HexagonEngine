@@ -2,11 +2,11 @@ extends Node
 
 # https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_exports.html
 enum OpenModes {shellOpen,OSExecute}
-export(OpenModes) var open_mode
-export(String) var target = "https://cointr.ee/joelwindows7"
-export var appArgs :PoolStringArray
-export var doBlocking :bool = false
-export var readStdErr :bool = false
+@export var open_mode: OpenModes
+@export var target: String = "https://cointr.ee/joelwindows7"
+@export var appArgs :PackedStringArray
+@export var doBlocking :bool = false
+@export var readStdErr :bool = false
 #export var requiredEggselents:PoolStringArray
 var pid_error_code
 var output = []
@@ -29,7 +29,7 @@ func _ready():
 			print("\n\npid or error code ", pid_error_code)
 			pass
 	
-	yield(get_tree().create_timer(1),"timeout")
+	await get_tree().create_timer(1).timeout
 	emit_signal("ChangeDVD_Exec")
 	pass # Replace with function body.
 

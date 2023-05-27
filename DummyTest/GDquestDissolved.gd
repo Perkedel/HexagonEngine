@@ -1,4 +1,4 @@
-extends CSGMesh
+extends CSGMesh3D
 
 
 # Declare member variables here. Examples:

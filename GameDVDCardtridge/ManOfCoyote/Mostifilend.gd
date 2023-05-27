@@ -1,7 +1,7 @@
-extends Spatial
+extends Node3D
 
-onready var anPlayer = $ProsotipePlatformerGuy
-onready var anPlayerPosInit = anPlayer.transform
+@onready var anPlayer = $ProsotipePlatformerGuy
+@onready var anPlayerPosInit = anPlayer.transform
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

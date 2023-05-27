@@ -3,7 +3,7 @@ extends Object
 # Wraps an AudioStreamPlayer with additional features like timed volume fading.
 
 # The AudioStreamController managed by this stream controller.
-var player: AudioStreamPlayer setget , _get_player
+var player: AudioStreamPlayer: get = _get_player
 
 var _fade_source: float = 0.0
 var _fade_remaining_duration: float = 0.0
@@ -50,7 +50,7 @@ func play() -> void:
 func pause() -> void:
 	if _paused and not player.playing:
 		return
-	_unpaused_volume = db2linear(player.volume_db)
+	_unpaused_volume = db_to_linear(player.volume_db)
 	_paused = true
 	_fade(0, 0.1, true)
 
@@ -66,13 +66,13 @@ func update(delta: float) -> void:
 		if _pause_after_fade:
 			player.stop()
 		return
-	player.volume_db = linear2db(lerp(_fade_target, _fade_source,
+	player.volume_db = linear_to_db(lerp(_fade_target, _fade_source,
 			_fade_remaining_duration / _fade_total_duration))
 
 
 func _fade(target_volume: float, fade_duration: float,
 		pause_after_fade: bool = false) -> void:
-	_fade_source = db2linear(player.volume_db)
+	_fade_source = db_to_linear(player.volume_db)
 	_fade_target = target_volume
 	_fade_total_duration = fade_duration
 	_fade_remaining_duration = fade_duration
@@ -81,7 +81,7 @@ func _fade(target_volume: float, fade_duration: float,
 		if target_volume <= 0:
 			player.volume_db = -100.0
 		else:
-			player.volume_db = linear2db(target_volume)
+			player.volume_db = linear_to_db(target_volume)
 		if pause_after_fade:
 			player.stop()
 

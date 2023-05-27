@@ -1,13 +1,13 @@
 extends HBoxContainer
 
-export (String) var VariableName = "Test Music"
-export (AudioStream) var SongFile
-export (bool) var isItPlaying = false
-export (String) var PressToPlayName = "Press to Play"
-export (String) var PressToStopName = "Press to Stop"
-export (String) var PlayButtonLabelRightNow
-export (Texture) var PlayIcon
-export (Texture) var StopIcon
+@export (String) var VariableName = "Test Music"
+@export (AudioStream) var SongFile
+@export (bool) var isItPlaying = false
+@export (String) var PressToPlayName = "Press to Play"
+@export (String) var PressToStopName = "Press to Stop"
+@export (String) var PlayButtonLabelRightNow
+@export (Texture2D) var PlayIcon
+@export (Texture2D) var StopIcon
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -21,7 +21,7 @@ func _ready():
 	pass # Replace with function body.
 
 func DeToggle(): #Stop Testing
-	$HBoxContainer/PlayButton.pressed = false
+	$HBoxContainer/PlayButton.button_pressed = false
 	pass
 
 func PlaySong():

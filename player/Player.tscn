@@ -10,7 +10,7 @@
 [ext_resource path="res://player/abilities/double_jump/DoubleJump.tscn" type="PackedScene" id=8]
 [ext_resource path="res://player/abilities/laser/Laser.tscn" type="PackedScene" id=9]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="CapsuleShape3D" id=1]
 radius = 0.5
 
 [sub_resource type="CapsuleMesh" id=2]
@@ -21,46 +21,46 @@ top_radius = 0.05
 bottom_radius = 0.1
 height = 0.5
 
-[node name="Player" type="KinematicBody" groups=[
+[node name="Player" type="CharacterBody3D" groups=[
 "Player",
 ]]
 script = ExtResource( 2 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
 cast_shadow = 0
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="Head" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0 )
+[node name="Head" type="Marker3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0 )
 
-[node name="Movements" type="Position3D" parent="Head"]
+[node name="Movements" type="Marker3D" parent="Head"]
 
-[node name="Camera" type="Camera" parent="Head/Movements"]
+[node name="Camera3D" type="Camera3D" parent="Head/Movements"]
 
-[node name="Shoot" parent="Head/Movements/Camera" instance=ExtResource( 4 )]
+[node name="Shoot" parent="Head/Movements/Camera3D" instance=ExtResource( 4 )]
 
-[node name="Crosshair" parent="Head/Movements/Camera" instance=ExtResource( 3 )]
+[node name="Crosshair" parent="Head/Movements/Camera3D" instance=ExtResource( 3 )]
 
-[node name="DoubleJump" parent="Head/Movements/Camera" instance=ExtResource( 8 )]
+[node name="DoubleJump" parent="Head/Movements/Camera3D" instance=ExtResource( 8 )]
 
-[node name="FlashLight" parent="Head/Movements/Camera" instance=ExtResource( 1 )]
+[node name="FlashLight" parent="Head/Movements/Camera3D" instance=ExtResource( 1 )]
 
-[node name="FootstepSound" parent="Head/Movements/Camera" instance=ExtResource( 6 )]
+[node name="FootstepSound" parent="Head/Movements/Camera3D" instance=ExtResource( 6 )]
 
-[node name="Grab" parent="Head/Movements/Camera" instance=ExtResource( 5 )]
+[node name="Grab" parent="Head/Movements/Camera3D" instance=ExtResource( 5 )]
 
-[node name="Laser" parent="Head/Movements/Camera" instance=ExtResource( 9 )]
+[node name="Laser" parent="Head/Movements/Camera3D" instance=ExtResource( 9 )]
 
-[node name="ThrowObject" parent="Head/Movements/Camera" instance=ExtResource( 7 )]
+[node name="ThrowObject" parent="Head/Movements/Camera3D" instance=ExtResource( 7 )]
 
-[node name="DirectionIndicator" type="MeshInstance" parent="Head"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, -0.5 )
+[node name="DirectionIndicator" type="MeshInstance3D" parent="Head"]
+transform = Transform3D( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, -0.5 )
 layers = 0
 mesh = SubResource( 3 )
 material/0 = null

@@ -18,8 +18,8 @@
 [sub_resource type="ButtonGroup" id=2]
 
 [node name="InheritableCategoryArea" type="VBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -27,64 +27,64 @@ __meta__ = {
 }
 
 [node name="InheritableSettingVolume" parent="." instance=ExtResource( 1 )]
-margin_right = 1920.0
-margin_bottom = 63.0
+offset_right = 1920.0
+offset_bottom = 63.0
 
 [node name="InheritableSettingEmpty" parent="." instance=ExtResource( 2 )]
-margin_top = 67.0
-margin_right = 1920.0
-margin_bottom = 130.0
+offset_top = 67.0
+offset_right = 1920.0
+offset_bottom = 130.0
 
 [node name="InheritableSettingOptionButton" parent="." instance=ExtResource( 3 )]
-margin_top = 134.0
-margin_right = 1920.0
-margin_bottom = 197.0
+offset_top = 134.0
+offset_right = 1920.0
+offset_bottom = 197.0
 
 [node name="InheritableSettingCheckBox" parent="." instance=ExtResource( 4 )]
-margin_top = 201.0
-margin_right = 1920.0
-margin_bottom = 264.0
+offset_top = 201.0
+offset_right = 1920.0
+offset_bottom = 264.0
 ButtonGrouper = SubResource( 1 )
 
 [node name="InheritableSettingCheckBox2" parent="." instance=ExtResource( 5 )]
-margin_top = 268.0
-margin_right = 1920.0
-margin_bottom = 331.0
+offset_top = 268.0
+offset_right = 1920.0
+offset_bottom = 331.0
 ButtonGrouper = SubResource( 2 )
 
 [node name="InheritableSettingCheckButton" parent="." instance=ExtResource( 6 )]
-margin_top = 335.0
-margin_right = 1920.0
-margin_bottom = 398.0
+offset_top = 335.0
+offset_right = 1920.0
+offset_bottom = 398.0
 
 [node name="InheritableSettingCheckButton2" parent="." instance=ExtResource( 7 )]
-margin_top = 402.0
-margin_right = 1920.0
-margin_bottom = 465.0
+offset_top = 402.0
+offset_right = 1920.0
+offset_bottom = 465.0
 
 [node name="TestoidProgressBar" parent="." instance=ExtResource( 9 )]
-margin_top = 469.0
-margin_right = 1920.0
-margin_bottom = 532.0
+offset_top = 469.0
+offset_right = 1920.0
+offset_bottom = 532.0
 VariableName = "Testoid Progress"
 minimum = 0.0
 maximum = 100.0
 stepp = 0.01
 
 [node name="TestoidSpectrumAnalyzer" parent="." instance=ExtResource( 8 )]
-margin_top = 536.0
-margin_bottom = 786.0
+offset_top = 536.0
+offset_bottom = 786.0
 
 [node name="TestoidMusicPlayer" parent="." instance=ExtResource( 10 )]
-margin_top = 790.0
-margin_bottom = 853.0
+offset_top = 790.0
+offset_bottom = 853.0
 
 [node name="TestoidSpeakerTryer" parent="." instance=ExtResource( 11 )]
-margin_bottom = 1357.0
+offset_bottom = 1357.0
 
 [node name="TestoidClock" parent="." instance=ExtResource( 12 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1361.0
-margin_right = 1920.0
-margin_bottom = 1631.0
+offset_top = 1361.0
+offset_right = 1920.0
+offset_bottom = 1631.0

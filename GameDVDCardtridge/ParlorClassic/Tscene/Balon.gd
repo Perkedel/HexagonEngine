@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-export (float) var BalonHP = 1
-export (Vector2) var ArahJalan = Vector2(-250,0)
+@export (float) var BalonHP = 1
+@export (Vector2) var ArahJalan = Vector2(-250,0)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -19,7 +19,7 @@ func BalonMeletus():
 	if BalonHP <= 0:
 		print("dor")
 		var LoadParticle = load("res://GameDVDCardtridge/ParlorClassic/Tscene/DorMeletus.tscn")
-		var Particled = LoadParticle.instance()
+		var Particled = LoadParticle.instantiate()
 		var positioner = position
 		Particled.position = positioner + Vector2(0,1)
 		$"..".add_child(Particled)

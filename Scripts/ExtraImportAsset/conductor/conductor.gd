@@ -15,24 +15,24 @@ const CHANNEL_COUNT = 8
 const CHANNELS_PER_GROUP = 4
 
 # The name of the currently playing audio track.
-var playing_name: String setget ,  _get_playing_name
+var playing_name: String: get = _get_playing_name
 
 # The numeric section ID of the currently playing audio track.
-var playing_section: int setget , _get_playing_section
+var playing_section: int: get = _get_playing_section
 
 # True if the conductor is playing, and false if not.
-var playing: bool setget , _get_playing
+var playing: bool: get = _get_playing
 
 var _fade_out_profile: Array = [0.0, 0.0, 0.0, 0.0]
 
-onready var _front_group: = ChannelGroup.new([
+@onready var _front_group: = ChannelGroup.new([
 	ChannelController.new($Channel0),
 	ChannelController.new($Channel1),
 	ChannelController.new($Channel2),
 	ChannelController.new($Channel3),
 ])
 
-onready var _back_group: = ChannelGroup.new([
+@onready var _back_group: = ChannelGroup.new([
 	ChannelController.new($Channel4),
 	ChannelController.new($Channel5),
 	ChannelController.new($Channel6),

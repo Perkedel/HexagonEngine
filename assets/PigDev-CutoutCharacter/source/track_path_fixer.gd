@@ -1,9 +1,9 @@
-tool
+@tool
 extends AnimationPlayer
 
-export (String) var undesired_path
-export (String) var desired_path
-export (bool) var fix_it = false setget set_fix_it
+@export (String) var undesired_path
+@export (String) var desired_path
+@export (bool) var fix_it = false: set = set_fix_it
 
 func set_fix_it(value):
 	if !value:

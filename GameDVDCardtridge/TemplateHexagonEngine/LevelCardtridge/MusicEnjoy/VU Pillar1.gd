@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-onready var Y_init = position.y
+@onready var Y_init = position.y
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

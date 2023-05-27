@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample"
+type="AudioStreamWAV"
+uid="uid://dapycn0lrhxb8"
+path="res://.godot/imported/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Noise.wav"
-dest_files=[ "res://.import/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample" ]
+dest_files=["res://.godot/imported/Noise.wav-3e6f56d7668d6fc1149e2dee018f067b.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

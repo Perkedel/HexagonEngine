@@ -1,23 +1,23 @@
-tool
+@tool
 class_name SpriteText
 extends ReferenceRect
 
 var animate = false;
 var anim_timer = 0;
 var anim_timer_i:int = 0;
-export(String,MULTILINE) var text = "¬SSample ¬C01¬WText" setget set_text,get_text;
-export(String) var character_set = " !\"#$%&'()*+,-./0123456789;M<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+@export var text = "¬SSample ¬C01¬WText": get = get_text, set = set_text; # (String,MULTILINE)
+@export var character_set: String = " !\"#$%&'()*+,-./0123456789;M<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 var _text = "";
-export var visible_characters:int = -1 setget set_visible_chars,get_visible_chars;
-export var font_texture:Texture = null setget set_font_texture,get_font_texture;
-export var char_width:int = 8 setget set_char_width,get_char_width;
-export var char_height:int = 8 setget set_char_height,get_char_height;
-export var anim_speed:float = 60;
-export var tab_spaces:int = 2;
+@export var visible_characters:int = -1: get = get_visible_chars, set = set_visible_chars;
+@export var font_texture:Texture2D = null: get = get_font_texture, set = set_font_texture;
+@export var char_width:int = 8: get = get_char_width, set = set_char_width;
+@export var char_height:int = 8: get = get_char_height, set = set_char_height;
+@export var anim_speed:float = 60;
+@export var tab_spaces:int = 2;
 var char_map:Dictionary;
 var can_draw:bool = false;
 var has_char_map = false;
-export var texture_rows:int = 10 setget set_texture_rows,get_texture_rows;
+@export var texture_rows:int = 10: get = get_texture_rows, set = set_texture_rows;
 var wchars;
 var hchars;
 var colors = [];
@@ -31,7 +31,7 @@ func _ready():
 	if font_texture != null:
 		can_draw = true;
 		setup();
-func set_text(var txt):
+func set_text(txt):
 	text = txt;
 	
 	if !is_inside_tree():
@@ -42,7 +42,7 @@ func set_text(var txt):
 func get_text():
 	return text;
 	
-func set_visible_chars(var value):
+func set_visible_chars(value):
 	visible_characters = value;
 	if !is_inside_tree():
 		return;
@@ -98,19 +98,19 @@ func setup():
 	wchars = font_w/char_width;
 	hchars = font_h/char_height;
 	colors.resize(13);
-	colors[0] = Color.white;
-	colors[1] = Color.yellow;
-	colors[2] = Color.green;
-	colors[3] = Color.blue;
-	colors[4] = Color.red;
-	colors[5] = Color.yellowgreen;
-	colors[6] = Color.brown;
-	colors[7] = Color.purple;
-	colors[8] = Color.azure;
-	colors[9] = Color.beige;
-	colors[10] = Color.bisque;
-	colors[11] = Color.burlywood;
-	colors[12] = Color.chartreuse;
+	colors[0] = Color.WHITE;
+	colors[1] = Color.YELLOW;
+	colors[2] = Color.GREEN;
+	colors[3] = Color.BLUE;
+	colors[4] = Color.RED;
+	colors[5] = Color.YELLOW_GREEN;
+	colors[6] = Color.BROWN;
+	colors[7] = Color.PURPLE;
+	colors[8] = Color.AZURE;
+	colors[9] = Color.BEIGE;
+	colors[10] = Color.BISQUE;
+	colors[11] = Color.BURLYWOOD;
+	colors[12] = Color.CHARTREUSE;
 	char_map = Dictionary();
 	var cid = 0;
 	for c in character_set:
@@ -136,7 +136,7 @@ func _draw():
 
 	var length = _text.length();
 	var ci = 0;
-	var col = Color.white;
+	var col = Color.WHITE;
 	var has_anim = false;
 	anim_id = 0;
 	while ci < length:
@@ -148,7 +148,7 @@ func _draw():
 				j += 1;
 			elif c == '\t':
 				i += tab_spaces;
-				if i > floor(rect_size.x/char_width)-1:
+				if i > floor(size.x/char_width)-1:
 					j += 1;
 					i = 0;
 			elif c == '¬' && ci+1 < length:
@@ -192,10 +192,10 @@ func _draw():
 		
 		draw_texture_rect_region(font_texture,Rect2(i*char_width + ox,j*char_height + oy,char_width,char_height),Rect2(x*char_width,y*char_height,char_width,char_height),col,false);
 		i += 1;
-		if i > floor(rect_size.x/char_width)-1:
+		if i > floor(size.x/char_width)-1:
 			j += 1;
 			i = 0;
-			if j*char_height > rect_size.y-char_height:
+			if j*char_height > size.y-char_height:
 				break;
 		
 		ci += 1;

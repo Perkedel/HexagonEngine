@@ -4,8 +4,8 @@ extends Control
 # var a = 2
 # var b = "text"
 enum SelectMenuList {Setting=0,Unknown=1,Extras=2, Gameplay = 3}
-export(SelectMenuList) var NextMenuScene
-export(NodePath) var NextMenuNode
+@export var NextMenuScene: SelectMenuList
+@export var NextMenuNode: NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

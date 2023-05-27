@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/ButtonGroup/CategoryButtonGroup.tres" type="ButtonGroup" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableCategoryButton.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
 
 
 [node name="InheritableCategoryButton" type="Button"]
-margin_right = 500.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
+offset_right = 500.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 toggle_mode = true
 group = ExtResource( 2 )
 align = 0
@@ -26,21 +26,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 0 )
+offset_right = 100.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 100, 0 )
 size_flags_vertical = 3
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-margin_left = 108.0
-margin_right = 500.0
-margin_bottom = 100.0
+offset_left = 108.0
+offset_right = 500.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "CategoryButton"
 align = 1
 valign = 1

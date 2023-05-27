@@ -1,34 +1,34 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=1]
 [ext_resource path="res://modules/UI/SparePart/JustLineEdit.gd" type="Script" id=2]
 
 
 [node name="JustLineEdit" type="HBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 90.0
+offset_right = 1920.0
+offset_bottom = 90.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 498.0
-margin_bottom = 90.0
+offset_right = 498.0
+offset_bottom = 90.0
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Just a LineEdit"
 align = 1
 valign = 1
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 502.0
-margin_right = 1920.0
-margin_bottom = 90.0
+offset_left = 502.0
+offset_right = 1920.0
+offset_bottom = 90.0
 size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 placeholder_text = "Just a Placeholder"
 caret_blink = true
 [connection signal="text_change_rejected" from="LineEdit" to="." method="_on_LineEdit_text_change_rejected"]
 [connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
-[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_LineEdit_text_entered"]

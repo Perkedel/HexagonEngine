@@ -2,11 +2,11 @@
 
 [ext_resource path="res://DummyTest/firebasetonl.gd" type="Script" id=1]
 [ext_resource path="res://addons/FontAwesome5/FontAwesome.gd" type="Script" id=2]
-[ext_resource path="res://addons/FontAwesome5/fa-solid-900.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/FontAwesome5/fa-solid-900.ttf" type="FontFile" id=3]
 [ext_resource path="res://Scenes/Modules/FireBaseAuther.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 font_data = ExtResource( 3 )
 
 [node name="firebaseton" type="Control"]
@@ -22,10 +22,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -107.0
-margin_top = -163.0
-margin_right = 542.0
-margin_bottom = 164.0
+offset_left = -107.0
+offset_top = -163.0
+offset_right = 542.0
+offset_bottom = 164.0
 text = "Test The Firebaseton"
 
 [node name="Button3" type="Button" parent="."]
@@ -33,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 556.0
-margin_top = -163.0
-margin_right = 934.0
-margin_bottom = 164.0
+offset_left = 556.0
+offset_top = -163.0
+offset_right = 934.0
+offset_bottom = 164.0
 text = "Test The upload to Storageon"
 
 [node name="Button2" type="Button" parent="."]
@@ -44,10 +44,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -107.0
-margin_top = 164.0
-margin_right = 542.0
-margin_bottom = 491.0
+offset_left = -107.0
+offset_top = 164.0
+offset_right = 542.0
+offset_bottom = 491.0
 text = "Connek firebaseton"
 
 [node name="Button4" type="Button" parent="."]
@@ -55,16 +55,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 560.0
-margin_top = 164.0
-margin_right = 926.0
-margin_bottom = 491.0
+offset_left = 560.0
+offset_top = 164.0
+offset_right = 926.0
+offset_bottom = 491.0
 text = "Downlod fel"
 
 [node name="FontAwesome" type="Label" parent="."]
-margin_right = 362.0
-margin_bottom = 270.0
-custom_fonts/font = SubResource( 1 )
+offset_right = 362.0
+offset_bottom = 270.0
+theme_override_fonts/font = SubResource( 1 )
 text = ""
 script = ExtResource( 2 )
 icon_size = 16
@@ -74,9 +74,9 @@ icon_name = "flag"
 [node name="FireBaseAuth" parent="." instance=ExtResource( 4 )]
 
 [node name="MehLog" type="RichTextLabel" parent="."]
-margin_top = 115.0
-margin_right = 820.0
-margin_bottom = 1068.0
+offset_top = 115.0
+offset_right = 820.0
+offset_bottom = 1068.0
 text = "Mehalog
 ahahahahahaha"
 __meta__ = {
@@ -87,10 +87,10 @@ __meta__ = {
 
 [node name="FileDialog" type="FileDialog" parent="."]
 visible = true
-margin_left = 336.38
-margin_top = 152.172
-margin_right = 1721.38
-margin_bottom = 894.172
+offset_left = 336.38
+offset_top = 152.172
+offset_right = 1721.38
+offset_bottom = 894.172
 window_title = "Buka sebuah File"
 mode = 0
 show_hidden_files = true

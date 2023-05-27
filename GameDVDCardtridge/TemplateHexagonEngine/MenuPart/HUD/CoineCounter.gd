@@ -1,7 +1,7 @@
 extends HBoxContainer
 
-export (float) var CoineCountNumber
-export (Texture) var CoineIcon
+@export (float) var CoineCountNumber
+@export (Texture2D) var CoineIcon
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

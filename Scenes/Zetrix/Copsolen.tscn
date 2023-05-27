@@ -2,7 +2,7 @@
 
 [sub_resource type="CapsuleMesh" id=1]
 
-[node name="Copsolen" type="CSGMesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -3, 10 )
+[node name="Copsolen" type="CSGMesh3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -3, 10 )
 layers = 2
 mesh = SubResource( 1 )

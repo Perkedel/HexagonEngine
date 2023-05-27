@@ -8,7 +8,7 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-export(String) var Wrind = "Wrindeeeeee"
+@export var Wrind: String = "Wrindeeeeee"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

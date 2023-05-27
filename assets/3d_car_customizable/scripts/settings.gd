@@ -1,10 +1,10 @@
 extends MarginContainer
 
-var CarNode : VehicleBody
+var CarNode : VehicleBody3D
 
-onready var PresetList = get_node("ScrollContainer/MarginContainer/List/Car/PresetList")
-onready var DeleteButton = get_node("ScrollContainer/MarginContainer/List/Car/PresetButtons/DeletePreset")
-onready var LoadButton = get_node("ScrollContainer/MarginContainer/List/Car/PresetButtons/LoadPreset")
+@onready var PresetList = get_node("ScrollContainer/MarginContainer/List/Car/PresetList")
+@onready var DeleteButton = get_node("ScrollContainer/MarginContainer/List/Car/PresetButtons/DeletePreset")
+@onready var LoadButton = get_node("ScrollContainer/MarginContainer/List/Car/PresetButtons/LoadPreset")
 
 func _ready():
 	# If there is no CarNode attached, Settingspanel quits the tree
@@ -21,7 +21,7 @@ func _ready():
 	_on_MaxSteering_value_changed(CarNode.MAX_STEERING)
 	get_node("ScrollContainer/MarginContainer/List/Car/ScriptVariables/SteeringSpeed/SteeringSpeed").value = CarNode.STEERING_SPEED
 	_on_SteeringSpeed_value_changed(CarNode.STEERING_SPEED)
-	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/Weight").value = CarNode.weight
+	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/Weight").value = CarNode.weight
 	_on_Weight_value_changed(CarNode.weight)
 	# We do not need to get the Mass from the VehicleBody because Weight automatically updates the Mass
 	#get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/Mass").value = CarNode.mass
@@ -30,22 +30,22 @@ func _ready():
 	# Each wheel contributes the Wheels dictionary that will later be used twice
 	var Wheels = {}
 	for Wheel in CarNode.get_children():
-		if(Wheel is VehicleWheel):
+		if(Wheel is VehicleWheel3D):
 			Wheels[Wheel.name] = Wheel
 	
 	# All wheels are instanced in the Settingspanel
 	# with their properties from the CarNode
 	for Items in Wheels:
 		var Wheel = Wheels[Items]
-		var ToInstance = preload("../scenes/wheelsettings.tscn").instance()
+		var ToInstance = preload("../scenes/wheelsettings.tscn").instantiate()
 		ToInstance.get_child(0).text = Wheel.name
 		ToInstance.name = Wheel.name
 		ToInstance.get_node("Binding/BindedTo").add_item("none")
 		for items in Wheels: if(Wheels[items].name != Wheel.name):
 			ToInstance.get_node("Binding/BindedTo").add_item(Wheels[items].name)
 		ToInstance.set("WheelNode", { Wheel.name : Wheel } )
-		ToInstance.get_node("General/UseAsTraction").pressed = Wheel.use_as_traction
-		ToInstance.get_node("General/UseAsSteering").pressed = Wheel.use_as_steering
+		ToInstance.get_node("General/UseAsTraction").button_pressed = Wheel.use_as_traction
+		ToInstance.get_node("General/UseAsSteering").button_pressed = Wheel.use_as_steering
 		ToInstance.get_node("Wheel/RollInfluence/WheelRollInfluence").value = Wheel.wheel_roll_influence
 		ToInstance.get_node("Wheel/WheelRadius/WheelRadius").value = Wheel.wheel_radius
 		ToInstance.get_node("Wheel/RestLength/WheelRestLength").value = Wheel.wheel_rest_length
@@ -73,7 +73,7 @@ func SavePreset():
 		return
 	print("Generating Preset File")
 	var preset_file = File.new()
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	print("Checking the presets directory")
 	if (dir.open("user://3d_car_customizable/") != OK):
 		print("Preset directory doesn't exist")
@@ -91,10 +91,10 @@ func SavePreset():
 		"wheel_names" : ""
 	}
 	for Wheel in CarNode.get_children():
-		if(Wheel is VehicleWheel):
+		if(Wheel is VehicleWheel3D):
 			CarPreset["wheel_names"] += Wheel.name + "."
 			CarPreset[Wheel.name] = get_node("ScrollContainer/MarginContainer/List").get_node(Wheel.name).save()
-	preset_file.store_line(to_json(CarPreset))
+	preset_file.store_line(JSON.new().stringify(CarPreset))
 	print("Writing file")
 	preset_file.close()
 	print("Closing file manager")
@@ -103,10 +103,10 @@ func SavePreset():
 func GetPresets():
 	PresetList.clear()
 	print("Checking the preset directory")
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	if (dir.open("user://3d_car_customizable/")) == OK:
 		print("Generating Preset List")
-		dir.list_dir_begin()
+		dir.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		var file_name = dir.get_next()
 		while (file_name != ""):
 			if !dir.current_is_dir():
@@ -128,10 +128,10 @@ func GetPresets():
 
 func DeletePreset():
 	print("Checking the preset directory")
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	if (dir.open("user://3d_car_customizable/")) == OK:
 		print("Generating Preset List")
-		dir.list_dir_begin()
+		dir.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		var file_name = dir.get_next()
 		while (file_name != ""):
 			if (file_name == PresetList.get_item_text(PresetList.get_selected_items()[0]) + ".json"):
@@ -160,7 +160,9 @@ func LoadPreset():
 		return
 	preset_file.open("user://3d_car_customizable/" + PresetList.get_item_text(PresetList.get_selected_items()[0]) + ".json", File.READ)
 	print("Read car settings")
-	var CarPreset = parse_json(preset_file.get_line())
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(preset_file.get_line())
+	var CarPreset = test_json_conv.get_data()
 	_on_MaxEngineForce_value_changed(CarPreset["MAX_ENGINE_FORCE"])
 	_on_MaxBrake_value_changed(CarPreset["MAX_BRAKE"])
 	_on_MaxSteering_value_changed(CarPreset["MAX_STEERING"])
@@ -200,22 +202,22 @@ func _on_SteeringSpeed_value_changed(value):
 	CarNode.set("STEERING_SPEED", value)
 
 func _on_Mass_value_changed(value):
-	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/MassText").text = "Mass = (" + str(value) + ")"
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/Mass").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/Mass").value = value
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/MassBox").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/MassBox").value = value
+	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/MassText").text = "Mass = (" + str(value) + ")"
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/Mass").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/Mass").value = value
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/MassBox").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/MassBox").value = value
 	CarNode.mass = value
-	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/WeightText").text = "Weight = (" + str(CarNode.weight) + ")"
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/Weight").value != CarNode.weight): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/Weight").value = CarNode.weight
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/WeightBox").value != CarNode.weight): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/WeightBox").value = CarNode.weight
+	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/WeightText").text = "Weight = (" + str(CarNode.weight) + ")"
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/Weight").value != CarNode.weight): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/Weight").value = CarNode.weight
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/WeightBox").value != CarNode.weight): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/WeightBox").value = CarNode.weight
 
 func _on_Weight_value_changed(value):
-	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/WeightText").text = "Weight = (" + str(value) + ")"
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/Weight").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/Weight").value = value
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/WeightBox").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Weight/WeightBox").value = value
+	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/WeightText").text = "Weight = (" + str(value) + ")"
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/Weight").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/Weight").value = value
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/WeightBox").value != value): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Weight/WeightBox").value = value
 	CarNode.weight = value
-	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/MassText").text = "Mass = (" + str(CarNode.mass) + ")"
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/Mass").value != CarNode.mass): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/Mass").value = CarNode.mass
-	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/MassBox").value != CarNode.mass): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody/Mass/MassBox").value = CarNode.mass
+	get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/MassText").text = "Mass = (" + str(CarNode.mass) + ")"
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/Mass").value != CarNode.mass): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/Mass").value = CarNode.mass
+	if(get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/MassBox").value != CarNode.mass): get_node("ScrollContainer/MarginContainer/List/Car/VehicleBody3D/Mass/MassBox").value = CarNode.mass
 
 func _on_PresetList_item_selected(index):
 	if(PresetList.get_item_text(index) == "No Presets"): return

@@ -1,23 +1,23 @@
 extends Panel
 
 func init_panel():
-	get_node("Control/orientation_listener/x").connect("value_changed",self,"orietnation_change_listener",[0])
-	get_node("Control/orientation_listener/y").connect("value_changed",self,"orietnation_change_listener",[1])
-	get_node("Control/orientation_listener/z").connect("value_changed",self,"orietnation_change_listener",[2])
-	get_node("Control/orientation/x").connect("value_changed",self,"orietnation_change",[0])
-	get_node("Control/orientation/y").connect("value_changed",self,"orietnation_change",[1])
-	get_node("Control/orientation/z").connect("value_changed",self,"orietnation_change",[2])
+	get_node("Control/orientation_listener/x").connect("value_changed", Callable(self, "orietnation_change_listener").bind(0))
+	get_node("Control/orientation_listener/y").connect("value_changed", Callable(self, "orietnation_change_listener").bind(1))
+	get_node("Control/orientation_listener/z").connect("value_changed", Callable(self, "orietnation_change_listener").bind(2))
+	get_node("Control/orientation/x").connect("value_changed", Callable(self, "orietnation_change").bind(0))
+	get_node("Control/orientation/y").connect("value_changed", Callable(self, "orietnation_change").bind(1))
+	get_node("Control/orientation/z").connect("value_changed", Callable(self, "orietnation_change").bind(2))
 
 	for control in $Control/Control.get_children():
 		var value = "";
 		if control.has_signal("value_changed"):
-			control.connect("value_changed",self,"hscrol_change",[control.name])
+			control.connect("value_changed", Callable(self, "hscrol_change").bind(control.name))
 			value = control.value
 		elif control.has_signal("item_selected"):
-			control.connect("item_selected",self,"options_change",[control.name])
+			control.connect("item_selected", Callable(self, "options_change").bind(control.name))
 			value = control.get_item_text(control.get_selected_id())
 		elif control.has_signal("toggled"):
-			control.connect("toggled",self,"hscrol_change",[control.name])
+			control.connect("toggled", Callable(self, "hscrol_change").bind(control.name))
 			value = control.pressed
 		hscrol_change(value,control.name)
 
@@ -32,7 +32,7 @@ func orietnation_change_listener(newVal, _id):
 	_new_label_text = _new_label_text + ": " + str(_orientation)
 	label.text = _new_label_text
 	print("orietnation_change_listener")
-	owner.addLog("Orientation Listener : "+str(_orientation))
+	owner.addLog("Orientation AudioListener3D : "+str(_orientation))
 	AudioManager.orientation_listener = _orientation
 
 func orietnation_change(newVal, _id):
@@ -78,10 +78,10 @@ func _on_Spacial2D_visibility_changed():
 func _input(event):
 	if event is InputEventMouseButton and is_inside_tree() and event.is_pressed() and visible:
 		var pos_mouse = get_viewport().get_mouse_position();
-		if pos_mouse[0]< rect_size[0] and pos_mouse[1] < rect_size[1]:
-			var newpos = get_viewport().get_mouse_position()-$Listener.position;
-			$Listener.translate(newpos)
-			$Listener/Label.text = str($AudioSource.position.distance_to(get_viewport().get_mouse_position()))
+		if pos_mouse[0]< size[0] and pos_mouse[1] < size[1]:
+			var newpos = get_viewport().get_mouse_position()-$AudioListener3D.position;
+			$AudioListener3D.translate(newpos)
+			$AudioListener3D/Label.text = str($AudioSource.position.distance_to(get_viewport().get_mouse_position()))
 			$AudioSource/AudioSpacial2D.update_pos()
 			var posL = AudioManager.get_pos_listner()
 			print(str(posL))

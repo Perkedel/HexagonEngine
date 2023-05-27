@@ -32,7 +32,7 @@ func clearTimings():
 	allTimings = []
 
 func addTiming(startBeat:float, bpm:float, endBeat:float, offset:float):
-	var pog = load("res://Scripts/AutoKadeTimingStruct.gd").instance()
+	var pog = load("res://Scripts/AutoKadeTimingStruct.gd").instantiate()
 	pog.newe(startBeat,bpm,endBeat, offset)
 	allTimings.append(pog)
 	pass

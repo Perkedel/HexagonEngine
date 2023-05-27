@@ -11,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func ForceValue2(value:bool):
-	$HBoxContainer/CheckButton2.pressed = value
+	$HBoxContainer/CheckButton2.button_pressed = value
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

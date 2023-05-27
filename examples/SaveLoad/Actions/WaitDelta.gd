@@ -2,7 +2,8 @@ extends "res://addons/GDBehavior/Base/BTAction.gd"
 
 var duration: float
 
-func _init(duration_secs:float=1.0).("wait_delta_time"):
+func _init(duration_secs:float=1.0):
+	super("wait_delta_time")
 	self.duration = duration_secs
 	
 func _open(tick):

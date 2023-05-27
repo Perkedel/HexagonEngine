@@ -2,16 +2,16 @@
 
 [ext_resource path="res://modules/ShadeMaterials/Energie.tres" type="Material" id=1]
 
-[sub_resource type="CapsuleShape" id=5]
+[sub_resource type="CapsuleShape3D" id=5]
 
 [sub_resource type="CapsuleMesh" id=6]
 
-[node name="anCapsol" type="RigidBody" groups=["pushening"]]
+[node name="anCapsol" type="RigidBody3D" groups=["pushening"]]
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource( 5 )
 
-[node name="CSGMesh" type="CSGMesh" parent="."]
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 mesh = SubResource( 6 )
 material = ExtResource( 1 )
 __meta__ = {

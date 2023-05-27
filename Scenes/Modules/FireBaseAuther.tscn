@@ -1,90 +1,90 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=1]
 [ext_resource path="res://Scenes/Modules/FireBaseAuther.gd" type="Script" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=3]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
 [ext_resource path="res://modules/UI/SparePart/PLSWAIT.tscn" type="PackedScene" id=5]
 
 
 [node name="FireBaseAuther" type="HBoxContainer"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -1100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 0, 96 )
+offset_left = -1100.0
+offset_bottom = 96.0
+custom_minimum_size = Vector2( 0, 96 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AUTHING" type="HBoxContainer" parent="."]
-margin_right = 1100.0
-margin_bottom = 96.0
+offset_right = 1100.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextFields" type="HBoxContainer" parent="AUTHING"]
-margin_right = 696.0
-margin_bottom = 96.0
+offset_right = 696.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="UserMail" type="LineEdit" parent="AUTHING/TextFields"]
-margin_right = 346.0
-margin_bottom = 96.0
+offset_right = 346.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 placeholder_text = "User / Mail"
 
 [node name="Password" type="LineEdit" parent="AUTHING/TextFields"]
-margin_left = 350.0
-margin_right = 696.0
-margin_bottom = 96.0
+offset_left = 350.0
+offset_right = 696.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 secret = true
 placeholder_text = "Password"
 
 [node name="Buttons" type="HBoxContainer" parent="AUTHING"]
-margin_left = 700.0
-margin_right = 1100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 400, 0 )
+offset_left = 700.0
+offset_right = 1100.0
+offset_bottom = 96.0
+custom_minimum_size = Vector2( 400, 0 )
 size_flags_vertical = 3
 
 [node name="LOGINbutton" type="Button" parent="AUTHING/Buttons"]
-margin_right = 198.0
-margin_bottom = 96.0
+offset_right = 198.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "LOGIN"
 
 [node name="SIGNUPbutton" type="Button" parent="AUTHING/Buttons"]
-margin_left = 202.0
-margin_right = 400.0
-margin_bottom = 96.0
+offset_left = 202.0
+offset_right = 400.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "SIGNUP"
 
 [node name="AUTHED" type="HBoxContainer" parent="."]
 visible = false
-margin_right = 1100.0
-margin_bottom = 96.0
+offset_right = 1100.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="USERbutton" type="Button" parent="AUTHED"]
-margin_right = 1100.0
-margin_bottom = 96.0
+offset_right = 1100.0
+offset_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "A Dasandimian"
 icon = ExtResource( 4 )
 expand_icon = true

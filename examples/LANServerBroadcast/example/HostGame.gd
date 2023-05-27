@@ -1,16 +1,16 @@
 extends Control
 
-export (NodePath) var advertiserPath: NodePath
-onready var advertiser := get_node(advertiserPath)
+@export (NodePath) var advertiserPath: NodePath
+@onready var advertiser := get_node(advertiserPath)
 
 const PORT := 3333
 
 
 func _enter_tree():
-	var peer = NetworkedMultiplayerENet.new()
+	var peer = ENetMultiplayerPeer.new()
 	var result = peer.create_server(PORT)
 	if result == OK:
-		get_tree().set_network_peer(peer)
+		get_tree().set_multiplayer_peer(peer)
 		print("Game hosted")
 	else:
 		print("Failed to host game")

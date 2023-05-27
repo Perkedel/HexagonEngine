@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Diastole1.wav-5803e2610f8dd8c6ca01be1a1e557053.sample"
+type="AudioStreamWAV"
+uid="uid://c45lt0o1wkuiv"
+path="res://.godot/imported/Diastole1.wav-5803e2610f8dd8c6ca01be1a1e557053.sample"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRenderWav/Diastole1.wav"
-dest_files=[ "res://.import/Diastole1.wav-5803e2610f8dd8c6ca01be1a1e557053.sample" ]
+dest_files=["res://.godot/imported/Diastole1.wav-5803e2610f8dd8c6ca01be1a1e557053.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -9,14 +9,14 @@
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/Bekgronding.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1318.12, 91.0764 )
+size = Vector2( 1318.12, 91.0764 )
 
 [node name="ParlorClassic" type="Node"]
-pause_mode = 2
+process_mode = 2
 script = ExtResource( 1 )
 
 [node name="GameField" type="Node2D" parent="."]
-pause_mode = 1
+process_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="GameField"]
 position = Vector2( 960, 540 )
@@ -53,7 +53,7 @@ collision_mask = 16
 mode = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameField/GamePlay/Bekgron/CompensatorBottom"]
-polygon = PoolVector2Array( -1320.52, -104.283, -1314.8, 90.197, 1573.8, 113.077, 1562.36, -110.003, 966.029, -119.888, 30.7737, -111.53, 31.9471, 6.17297, -32.399, 3.72949, -32.8273, -114.18, -961.542, -115.944 )
+polygon = PackedVector2Array( -1320.52, -104.283, -1314.8, 90.197, 1573.8, 113.077, 1562.36, -110.003, 966.029, -119.888, 30.7737, -111.53, 31.9471, 6.17297, -32.399, 3.72949, -32.8273, -114.18, -961.542, -115.944 )
 
 [node name="Spawnerers" type="Node2D" parent="GameField/GamePlay"]
 
@@ -85,10 +85,10 @@ SetSpawnIn = 6.0
 [node name="ScronchKey" type="Area2D" parent="GameField/GamePlay/Scroncher"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GameField/GamePlay/Scroncher/ScronchKey"]
-polygon = PoolVector2Array( -0.771851, -355.28, -385.836, -359.706, -390.262, -5.6239, -394.688, 1348.74, -9.6239, 1556.76, 2243.22, 1565.61, 2590.71, 1215.26, 2536.05, -315.26, 65.6185, -346.428, -22.902, -687.232, 3101.87, -665.102, 3075.32, 1835.6, -762.048, 1809.05, -731.066, -758.048, 92.1747, -753.622 )
+polygon = PackedVector2Array( -0.771851, -355.28, -385.836, -359.706, -390.262, -5.6239, -394.688, 1348.74, -9.6239, 1556.76, 2243.22, 1565.61, 2590.71, 1215.26, 2536.05, -315.26, 65.6185, -346.428, -22.902, -687.232, 3101.87, -665.102, 3075.32, 1835.6, -762.048, 1809.05, -731.066, -758.048, 92.1747, -753.622 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
-follow_viewport_enable = false
+follow_viewport_enabled = false
 
 [node name="Bekgronding" parent="." instance=ExtResource( 9 )]
 scroll_base_offset = Vector2( 0, 0 )

@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Floaters.mp3-4187f8794c85c45d9f2c5fa64a206927.mp3str"
+uid="uid://cd48gwovca0gp"
+path="res://.godot/imported/Floaters.mp3-4187f8794c85c45d9f2c5fa64a206927.mp3str"
 
 [deps]
 
 source_file="res://Audio/Sounds/Musics/Floaters.mp3"
-dest_files=[ "res://.import/Floaters.mp3-4187f8794c85c45d9f2c5fa64a206927.mp3str" ]
+dest_files=["res://.godot/imported/Floaters.mp3-4187f8794c85c45d9f2c5fa64a206927.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

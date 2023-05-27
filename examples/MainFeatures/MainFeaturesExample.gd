@@ -39,7 +39,8 @@ class WaitDelta:
 	extends BTAction
 	var duration: float
 
-	func _init(duration_secs:float).("wait_delta_time"):
+	func _init(duration_secs:float):
+		super("wait_delta_time")
 		self.duration = duration_secs
 		
 	func _open(tick):
@@ -57,7 +58,8 @@ class GotoRandom:
 	var stop_dist: float
 	var spd: float
 	
-	func _init(area:Vector2, spd=40.0, stop_dist=8.0).("goto_pos"):
+	func _init(area:Vector2, spd=40.0, stop_dist=8.0):
+		super("goto_pos")
 		self.area = area
 		self.stop_dist = stop_dist
 		self.spd = spd
@@ -86,7 +88,8 @@ class GotoRandom:
 class ColorRandom:
 	extends BTAction
 
-	func _init().("color random"):
+	func _init():
+		super("color random")
 		pass
 
 	func _exe(tick):
@@ -99,7 +102,8 @@ class ColorRandom:
 class StopSpeaking:
 	extends BTAction
 	
-	func _init().("stop speaking"):
+	func _init():
+		super("stop speaking")
 		pass
 
 	func _exe(tick):
@@ -109,7 +113,8 @@ class StopSpeaking:
 class SayRandom:
 	extends BTAction
 
-	func _init().("say random greeting"):
+	func _init():
+		super("say random greeting")
 		pass
 		
 	func _exe(tick):
@@ -129,7 +134,8 @@ class AlwaysCondition:
 	extends BTCondition
 	var value:bool
 
-	func _init(value:bool).("is speaking?"):
+	func _init(value:bool):
+		super("is speaking?")
 		self.value = value
 
 	func _validate(tick):
@@ -141,7 +147,8 @@ class ActorInRange:
 	var distance: float
 	var actors = []
 	
-	func _init(distance, actors:Array).("actor in range?"):
+	func _init(distance, actors:Array):
+		super("actor in range?")
 		self.distance = distance
 		self.actors = actors
 
@@ -155,7 +162,8 @@ class ActorInRange:
 class IsSpeaking:
 	extends BTCondition
 
-	func _init().("is speaking?"):
+	func _init():
+		super("is speaking?")
 		pass
 
 	func _validate(tick):
@@ -184,7 +192,7 @@ const Succeeder = Decorators.Succeeder
 const MultiCondition = Decorators.MultiCondition
 const Invert = Decorators.Invert
 
-onready var actors = $Actors.get_children()
+@onready var actors = $Actors.get_children()
 
 var ticks = []
 var tree_runner

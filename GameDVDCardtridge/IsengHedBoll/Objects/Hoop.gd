@@ -1,7 +1,7 @@
-extends Spatial
+extends Node3D
 
-export (bool) var inBasket1 = false
-export (bool) var anBasket2 = false
+@export (bool) var inBasket1 = false
+@export (bool) var anBasket2 = false
 # https://godotengine.org/article/importing-3d-assets-blender-gamedevtv
 # Declare member variables here. Examples:
 # var a = 2

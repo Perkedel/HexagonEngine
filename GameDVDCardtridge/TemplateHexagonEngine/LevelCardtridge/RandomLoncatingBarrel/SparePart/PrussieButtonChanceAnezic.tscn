@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_BI_48tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_BI_48tred.tres" type="FontFile" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/RandomLoncatingBarrel/SparePart/PrussieButtonChanceAnezic.gd" type="Script" id=2]
 
 
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Chance Anezic"
 clip_text = true
 script = ExtResource( 2 )

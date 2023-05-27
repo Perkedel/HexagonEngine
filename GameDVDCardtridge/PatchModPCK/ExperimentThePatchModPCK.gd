@@ -20,7 +20,7 @@ func _loadingBarNow():
 	$Control/OpenPCKbutton.hide()
 	$Control/PutLoadingBarHereButton.hide()
 	loadingbarIncase = load("res://GenLoad.tscn")
-	loadingbarInstance = loadingbarIncase.instance()
+	loadingbarInstance = loadingbarIncase.instantiate()
 	$LoadingBay.add_child(loadingbarInstance)
 	pass
 

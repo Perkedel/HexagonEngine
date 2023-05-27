@@ -5,11 +5,11 @@
 [node name="LevelLoaderAdapterFromV2" type="Node"]
 script = ExtResource( 1 )
 
-[node name="3DSpace" type="Spatial" parent="."]
+[node name="3DSpace" type="Node3D" parent="."]
 
-[node name="PersonCamera" type="Camera" parent="3DSpace"]
+[node name="PersonCamera" type="Camera3D" parent="3DSpace"]
 
-[node name="Level3DCartridgeSlot" type="Spatial" parent="3DSpace"]
+[node name="Level3DCartridgeSlot" type="Node3D" parent="3DSpace"]
 
 [node name="2DSpace" type="Node2D" parent="."]
 

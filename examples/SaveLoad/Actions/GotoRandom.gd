@@ -3,7 +3,8 @@ extends "res://addons/GDBehavior/Base/BTAction.gd"
 var area: Vector2
 var spd: float
 
-func _init(area:Vector2=Vector2.ZERO, spd=40.0).("goto_pos"):
+func _init(area:Vector2=Vector2.ZERO, spd=40.0):
+	super("goto_pos")
 	self.area = area
 	self.spd = spd
 	
@@ -27,9 +28,9 @@ func random_pos():
 	return Vector2(x,y)
 	
 func to_dict():
-	return {area=var2str(area), spd=spd}
+	return {area=var_to_str(area), spd=spd}
 	
 func from_dict(dict):
-	area = str2var(dict.area)
+	area = str_to_var(dict.area)
 	spd = dict.spd
 	return self	

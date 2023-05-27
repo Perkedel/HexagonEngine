@@ -12,7 +12,7 @@ var pathon : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SceneLoader.connect("on_progress",self,"_watch_progress")
+	SceneLoader.connect("on_progress", Callable(self, "_watch_progress"))
 	pass # Replace with function body.
 
 

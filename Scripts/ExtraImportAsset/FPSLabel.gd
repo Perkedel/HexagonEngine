@@ -8,8 +8,8 @@ extends CanvasLayer
 
 enum Position {TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, NONE}
 
-export (Position) var position = Position.TOP_LEFT
-export(int) var margin : int = 5
+@export var position:Position = Position.TOP_LEFT
+@export var margin: int  = 5
 
 var label : Label
 
@@ -17,7 +17,7 @@ var label : Label
 func _ready() -> void:
 	label = Label.new()
 	add_child(label)
-	get_tree().get_root().connect("size_changed", self, "update_position")
+	get_tree().get_root().connect("size_changed", Callable(self, "update_position"))
 	update_position()
 
 # pos should be of type Position
@@ -28,7 +28,7 @@ func set_position(pos : int):
 
 func update_position():
 	var viewport_size : Vector2 = get_viewport().size
-	var label_size : Vector2 = label.rect_size
+	var label_size : Vector2 = label.size
 	
 	match position:
 		Position.TOP_LEFT:

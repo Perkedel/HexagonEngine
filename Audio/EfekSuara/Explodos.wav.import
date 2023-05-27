@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Explodos.wav-4213b1c9771239a075fbbbe732ff961e.sample"
+type="AudioStreamWAV"
+uid="uid://dtvsjqweay1c5"
+path="res://.godot/imported/Explodos.wav-4213b1c9771239a075fbbbe732ff961e.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Explodos.wav"
-dest_files=[ "res://.import/Explodos.wav-4213b1c9771239a075fbbbe732ff961e.sample" ]
+dest_files=["res://.godot/imported/Explodos.wav-4213b1c9771239a075fbbbe732ff961e.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

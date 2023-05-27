@@ -6,7 +6,7 @@ extends Node2D
 class_name Slicer2D
 
 # Assign a Physics2DDirectSpaceState to use a custom one, null equals the default one.
-var space_state : Physics2DDirectSpaceState = null
+var space_state : PhysicsDirectSpaceState2D = null
 # Min area for the slice to be valid.
 var min_area := 0.01
 # This will multiply the impulse applied to the slices after the cut.
@@ -32,7 +32,7 @@ func slice_one(item : Sliceable2D, start : Vector2, end : Vector2, collision_lay
 func _slice(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFFFF, destroy : bool = true, fixed_body : RigidBody2D = null) -> Array:
 	var res := []
 	var data_arr : Array = _query_slicing_data(start, end, collision_layer, fixed_body)
-	if data_arr.empty():
+	if data_arr.is_empty():
 		return res
 	
 	# After this point we assume the objects processed are valid (they require slicing)
@@ -40,8 +40,8 @@ func _slice(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFFFF, 
 	for data in data_arr:
 		
 		# The unified arr is the list of points of all the shapes from each part of the cut
-		var unified_arr_1 := PoolVector2Array() 
-		var unified_arr_2 := PoolVector2Array()
+		var unified_arr_1 := PackedVector2Array() 
+		var unified_arr_2 := PackedVector2Array()
 		
 		var object : Sliceable2D = data.object
 		
@@ -81,12 +81,12 @@ func _slice(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFFFF, 
 			
 			for shape_id in object.shape_owner_get_shape_count(shape_owner):
 				
-				var child_1_arr := PoolVector2Array()
-				var child_2_arr := PoolVector2Array()
+				var child_1_arr := PackedVector2Array()
+				var child_2_arr := PackedVector2Array()
 				
 				var shape : Shape2D = object.shape_owner_get_shape(shape_owner, shape_id)
 				
-				var points : PoolVector2Array = _get_shape_points(shape)
+				var points : PackedVector2Array = _get_shape_points(shape)
 				
 				if points.size() == 0:
 					continue
@@ -125,12 +125,12 @@ func _slice(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFFFF, 
 				
 				var child_1_shape := ConvexPolygonShape2D.new()
 				
-				child_1_shape.points = Geometry.convex_hull_2d(child_1_arr)
+				child_1_shape.points = Geometry.convex_hull(child_1_arr)
 				shape_arr_1.push_back(child_1_shape)
 				unified_arr_1 += child_1_shape.points
 				
 				var child_2_shape := ConvexPolygonShape2D.new()
-				child_2_shape.points = Geometry.convex_hull_2d(child_2_arr)
+				child_2_shape.points = Geometry.convex_hull(child_2_arr)
 				shape_arr_2.push_back(child_2_shape)
 				unified_arr_2 += child_2_shape.points
 				# Shape id loop
@@ -142,7 +142,7 @@ func _slice(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFFFF, 
 		state.cut_number += 1
 		data.cut_number = state.cut_number
 		
-		var sprite : Sprite = object.get_node(object.sprite_node) as Sprite
+		var sprite : Sprite2D = object.get_node(object.sprite_node) as Sprite2D
 		if sprite:
 			var orig := object.to_local(sprite.get_global_transform().origin)
 			var rect := sprite.get_rect()
@@ -196,18 +196,18 @@ class SliceState:
 
 const STATE_META := "STATE_META"
 
-func _init_sprite(parent : Sliceable2D, child : Sliceable2D, polygon : PoolVector2Array) -> void:
+func _init_sprite(parent : Sliceable2D, child : Sliceable2D, polygon : PackedVector2Array) -> void:
 	var mesh_inst : MeshInstance2D = child.get_node(child.sprite_node)
 	var first_node = parent.get_node(parent.sprite_node) # TODO
 	# valid for Sprite and MeshInstance2D
 	mesh_inst.texture = first_node.texture
 	
 	# mesh creation
-	polygon = Geometry.convex_hull_2d(polygon)
+	polygon = Geometry.convex_hull(polygon)
 	var indices = Geometry.triangulate_polygon(polygon)
 	
 	var state : SliceState = parent.get_meta(STATE_META)
-	var uvs := PoolVector2Array()
+	var uvs := PackedVector2Array()
 	uvs.resize(polygon.size())
 	var vec : Vector2
 	for i in uvs.size():
@@ -243,8 +243,8 @@ func _create_child(object : Sliceable2D, shapes : Array) -> Sliceable2D:
 	return child
 
 
-func _get_shape_points(shape : Shape2D) -> PoolVector2Array:
-	var points := PoolVector2Array()
+func _get_shape_points(shape : Shape2D) -> PackedVector2Array:
+	var points := PackedVector2Array()
 				
 	if shape is ConvexPolygonShape2D:
 		points = shape.points
@@ -278,7 +278,7 @@ func _get_shape_points(shape : Shape2D) -> PoolVector2Array:
 	
 	return points
 
-func _point_arr_is_valid(points : PoolVector2Array) -> bool:
+func _point_arr_is_valid(points : PackedVector2Array) -> bool:
 	# check area size
 	var r : Rect2
 	for p in points:
@@ -293,7 +293,7 @@ func _line_cast(start : Vector2, end : Vector2, collision_layer : int = 0x7FFFFF
 	
 	while true:
 		var query : Dictionary = ss.intersect_ray(start, end, exceptions, collision_layer)
-		if query.empty():
+		if query.is_empty():
 			break
 		var pos : Vector2 = query.position
 		exceptions.append(query.collider)
@@ -335,7 +335,7 @@ func _query_slicing_data(start : Vector2, end : Vector2, collision_layer : int =
 			continue
 		# Validate sprite
 		var first_node = collider.get_node(collider.sprite_node)
-		var sprite = first_node as Sprite
+		var sprite = first_node as Sprite2D
 		if not sprite and not first_node is MeshInstance2D:
 			continue
 		elif sprite and (sprite.hframes > 1 or sprite.vframes > 1):

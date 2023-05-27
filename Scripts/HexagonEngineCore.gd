@@ -21,30 +21,30 @@ serta plugin akan dirombak serentak.
 
 #@onready # Godot 4.0
 #onready var zetrixViewport = $ZetrixViewport
-onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
-onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
-onready var dvdSlot = $DVDCartridgeSlot
-onready var dvdSelBg = $MetaMenu/DVDSelectBackground
-onready var dvdSelTr= $MetaMenu/DVDSelectTransitioner
-onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
-onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
-onready var tweens = $SystemGut/aTweens.get_children()
-onready var immediateTween = $SystemGut/aTweens/Tween1
-onready var immediateTween2 = $SystemGut/aTweens/Tween2
-onready var timerer = $SystemGut/Timer
-onready var LoadingPopup = $MetaMenu/LoadingPopup
+@onready var changeDVDMenu = $MetaMenu/ChangeDVDMenu
+@onready var zetrixPreview = $MetaMenu/JustZetrixVRViewer
+@onready var dvdSlot = $DVDCartridgeSlot
+@onready var dvdSelBg = $MetaMenu/DVDSelectBackground
+@onready var dvdSelTr= $MetaMenu/DVDSelectTransitioner
+@onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
+@onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
+@onready var tweens = $SystemGut/aTweens.get_children()
+@onready var immediateTween = $SystemGut/aTweens/Tween1
+@onready var immediateTween2 = $SystemGut/aTweens/Tween2
+@onready var timerer = $SystemGut/Timer
+@onready var LoadingPopup = $MetaMenu/LoadingPopup
 var DVDCardtridgeLists
-onready var isRunningDVD = false
-onready var preloadDVD = 0
-onready var doPreloadDVD = false
-onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
-export(PackedScene) var LoadDVD 
+@onready var isRunningDVD = false
+@onready var preloadDVD = 0
+@onready var doPreloadDVD = false
+@onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+@export var LoadDVD: PackedScene 
 #enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 var LoadingProgressNum:float=0.0
 
 # demo of 3D in 2D official Godot
 func _zetrixInit():
-	ARVRServer.find_interface("OpenXR")
+	XRServer.find_interface("OpenXR")
 	#zetrixViewport.hdr = false
 #	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
 #	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)
@@ -103,10 +103,10 @@ func JustRemoveDVDThatsIt():
 	pass
 
 func interceptFiftConsole(path:String):
-	yield(get_tree(),"idle_frame")
+	await get_tree().idle_frame
 	cenBgLaunch.show()
 	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3)
-	immediateTween.interpolate_property(dvdLauBg,"rect_scale",Vector2(.5,.5),Vector2(1,1),.3)
+	immediateTween.interpolate_property(dvdLauBg,"scale",Vector2(.5,.5),Vector2(1,1),.3)
 	LoadingPopup.SpawnLoading()
 	dvdSelBg.hide()
 	dvdSelTr.hide()
@@ -116,7 +116,7 @@ func interceptFiftConsole(path:String):
 	timerer.one_shot = true
 	timerer.start(1.0)
 	while not resourceQueued.is_ready(path) or not timerer.is_stopped():
-		yield(get_tree(),"idle_frame")
+		await get_tree().idle_frame
 		#print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
 		#print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
 		LoadingPopup.ManageLoading(resourceQueued.get_progress(path) * 100, path, true if resourceQueued.get_progress(path) == 1.0 else false)
@@ -144,7 +144,7 @@ func postInterception():
 	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	dvdSelBg.hide()
 	immediateTween.start()
-	yield(immediateTween,"tween_all_completed")
+	await immediateTween.tween_all_completed
 	LoadingPopup.DespawnLoading()
 	cenBgLaunch.hide()
 	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -201,7 +201,7 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 func _on_ChangeDVDMenu_ItemClickEnterName(loadName, ExclusiveBootStatement):
 	print("Receive DVD Click Name " + loadName," Which " + "Does" if ExclusiveBootStatement else "Doesn't", " Exclusive Boot.")
-	yield(interceptFiftConsole(loadName),"completed")
+	await interceptFiftConsole(loadName).completed
 	postInterception()
 	if ExclusiveBootStatement:
 		# Singletoner.hereTakeThisLoadedResource = LoadDVD
@@ -296,7 +296,7 @@ func checkForResetMe():
 		SelectDialogReason = DialogReason.ResetMe
 		var theDialog = $MetaMenu/AreYouSureDialog
 		theDialog.SpawnDialogWithText(ResetSay)
-		var whatAnswer = yield(theDialog, "YesOrNoo")
+		var whatAnswer = await theDialog.YesOrNoo
 		if whatAnswer:
 			Settingers.engageFactoryReset()
 		else:
@@ -318,7 +318,7 @@ func _on_AreYouSureDialog_YesOrNoo(which):
 func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 	print("Custom load this ", path, " right here")
 	#LoadDVD = load(path)
-	yield(interceptFiftConsole(path),"completed")
+	await interceptFiftConsole(path).completed
 	postInterception()
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	isRunningDVD = true

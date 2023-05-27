@@ -1,8 +1,8 @@
-extends VehicleBody
+extends VehicleBody3D
 
-export var Accelerations : float = 100
-export var Steerings : float = .75
-export var Braker : float = 1
+@export var Accelerations : float = 100
+@export var Steerings : float = .75
+@export var Braker : float = 1
 var steereo = 0
 
 # Declare member variables here. Examples:

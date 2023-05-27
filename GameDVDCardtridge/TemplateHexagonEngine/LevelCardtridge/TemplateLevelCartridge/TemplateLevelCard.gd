@@ -1,21 +1,21 @@
-tool
+@tool
 extends Panel
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(PackedScene) var Your3DSpaceLevel
-export(PackedScene) var Your2DSpaceLevel
-export(Texture) var LevelBannerThumbnail
-export(String) var LevelTitleg
-export(String) var LoadThisCardButton
-export(bool) var a2DSpaceReportHP = false
-export(bool) var a3DSpaceReportHP = false
-export(bool) var a2DSpaceReportScore = false
-export(bool) var a3DSpaceReportScore = false
-export(bool) var KeepPlayingEvenOutOfFocus = false
+@export var Your3DSpaceLevel: PackedScene
+@export var Your2DSpaceLevel: PackedScene
+@export var LevelBannerThumbnail: Texture2D
+@export var LevelTitleg: String
+@export var LoadThisCardButton: String
+@export var a2DSpaceReportHP: bool = false
+@export var a3DSpaceReportHP: bool = false
+@export var a2DSpaceReportScore: bool = false
+@export var a3DSpaceReportScore: bool = false
+@export var KeepPlayingEvenOutOfFocus: bool = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-export(String, MULTILINE) var LevelDescription
+@export var LevelDescription # (String, MULTILINE)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +25,7 @@ func _ready():
 func UpdateDetails():
 	$LevelCardContainer/ImagePanel/LevelIconImage.texture = LevelBannerThumbnail
 	$LevelCardContainer/TitleScroll/Title.text = LevelTitleg
-	$LevelCardContainer/DescriptionScroll/RichTextLabel.bbcode_text = LevelDescription
+	$LevelCardContainer/DescriptionScroll/RichTextLabel.text = LevelDescription
 	$LevelCardContainer/PlayTheLevelButton.text = LoadThisCardButton
 	pass
 

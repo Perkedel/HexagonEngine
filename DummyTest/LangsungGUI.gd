@@ -2,7 +2,7 @@ extends Control
 # https://github.com/VolodyaKEK/godot-immediate-gui
 var show = false;
 var text = "text";
-var color = Color.white;
+var color = Color.WHITE;
 var integer := 0;
 var float_value := 0.2;
 var option = 0;
@@ -54,10 +54,10 @@ func _gui(delta):
 	option = GUI.options(option, ["option 1", "option 2", "option 3"]);
 	
 	#Progress bar
-	GUI.property.rect_min_size = Vector2(200, 0);
+	GUI.property.custom_minimum_size = Vector2(200, 0);
 	GUI.progress(float_value);
 	
 	#Tooltip
-	GUI.property.rect_min_size = Vector2(200, 0);
-	GUI.property.hint_tooltip = "Tooltip";
+	GUI.property.custom_minimum_size = Vector2(200, 0);
+	GUI.property.tooltip_text = "Tooltip";
 	GUI.button("Button with tooltip");

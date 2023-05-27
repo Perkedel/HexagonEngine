@@ -13,8 +13,8 @@ var aDokumente = {
 	an = "a",
 	tand = "12.4a",
 }
-onready var aStoreg = Firebase.Storage
-onready var FileAccessModed: int = 0
+@onready var aStoreg = Firebase.Storage
+@onready var FileAccessModed: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,9 +29,9 @@ func _ready():
 #	pass
 
 func saveToFile(theAuth):
-	var jsonify = JSONBeautifier.beautify_json(to_json(theAuth))
+	var jsonify = JSONBeautifier.beautify_json(JSON.new().stringify(theAuth))
 	var jsonfile = File.new()
-	var jsondir = Directory.new()
+	var jsondir = DirAccess.new()
 	if !jsondir.dir_exists(saveToDir):
 		jsondir.make_dir_recursive(saveToDir)
 	if jsonfile.open(saveToPath, File.WRITE) == OK:
@@ -40,9 +40,9 @@ func saveToFile(theAuth):
 	pass
 
 func saveUserData(userData):
-	var jsonify = JSONBeautifier.beautify_json(to_json(userData))
+	var jsonify = JSONBeautifier.beautify_json(JSON.new().stringify(userData))
 	var jsonfile = File.new()
-	var jsondir = Directory.new()
+	var jsondir = DirAccess.new()
 	if !jsondir.dir_exists(saveToDir):
 		jsondir.make_dir_recursive(saveToDir)
 	if jsonfile.open(saveUserPath, File.WRITE) == OK:

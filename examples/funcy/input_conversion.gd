@@ -1,4 +1,4 @@
-tool
+@tool
 extends EditorScript
 
 const ex_util = preload("example_utils.gd")

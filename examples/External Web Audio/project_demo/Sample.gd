@@ -1,8 +1,8 @@
 extends Panel
 signal add_log
 
-var _list_group =[] setget update_group_list
-var _list_audio =[] setget update_audio_list
+var _list_group =[]: set = update_group_list
+var _list_audio =[]: set = update_audio_list
 var selected_audio = ""
 var group_select = ""
 var _config = {"mute":false}
@@ -39,7 +39,7 @@ func _on_groupList_item_selected(index):
 	_config = group_object_config;
 	
 	owner.addLog(str(group_object_config))
-	$Control/Loop.pressed = group_object_config["loop"]
+	$Control/Loop.button_pressed = group_object_config["loop"]
 	$Control/Pan.value = group_object_config["pan"]
 	$Control/Vollume.value = group_object_config["volume"]
 	$Control/Pitch.value = group_object_config["pitch"]

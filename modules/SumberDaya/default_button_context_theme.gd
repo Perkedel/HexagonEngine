@@ -4,10 +4,10 @@ class_name ButtonContextTheme
 Theme for your button context prompts & bar
 """
 
-export(String) var themeName:String = "Dasandimian choice"
-export(String) var themeDescription:String = "Default Dasandimian button theme used in A Hat in Time"
-export(String) var pathToJSON:String = "res://modules/SumberDaya/default_button_context_theme.json"
-export(Dictionary) var buttonImages:Dictionary
+@export var themeName: String:String = "Dasandimian choice"
+@export var themeDescription: String:String = "Default Dasandimian button theme used in A Hat in Time"
+@export var pathToJSON: String:String = "res://modules/SumberDaya/default_button_context_theme.json"
+@export var buttonImages: Dictionary:Dictionary
 
 func _loadJSON():
 	var Filer:File
@@ -22,7 +22,9 @@ func _loadJSON():
 	pass
 
 func _parseData(handOverFile:File):
-	var data:Dictionary = parse_json(handOverFile.get_as_text())
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(handOverFile.get_as_text())
+	var data:Dictionary = test_json_conv.get_data()
 	buttonImages = data.duplicate(true)
 	themeName = buttonImages["name"]
 	themeDescription = buttonImages["description"]

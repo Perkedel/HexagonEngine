@@ -3,8 +3,8 @@
 [ext_resource path="res://player/abilities/laser/Dot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/abilities/laser/Laser.gd" type="Script" id=2]
 
-[node name="Laser" type="RayCast"]
+[node name="Laser" type="RayCast3D"]
 enabled = true
-cast_to = Vector3( 0, 0, -100 )
+target_position = Vector3( 0, 0, -100 )
 script = ExtResource( 2 )
 dot = ExtResource( 1 )

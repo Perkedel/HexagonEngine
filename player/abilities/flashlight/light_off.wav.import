@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/light_off.wav-dc2ba708f82782c2250a752912fffc00.sample"
+type="AudioStreamWAV"
+uid="uid://du1cvgf6v0yfx"
+path="res://.godot/imported/light_off.wav-dc2ba708f82782c2250a752912fffc00.sample"
 
 [deps]
 
 source_file="res://player/abilities/flashlight/light_off.wav"
-dest_files=[ "res://.import/light_off.wav-dc2ba708f82782c2250a752912fffc00.sample" ]
+dest_files=["res://.godot/imported/light_off.wav-dc2ba708f82782c2250a752912fffc00.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

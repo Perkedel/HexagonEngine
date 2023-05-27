@@ -1,16 +1,16 @@
-tool
+@tool
 extends Node
 
 # JOELwindows7: this is empty node just to make sure everything loads first
 # then go to the main node.
-export(PackedScene) var LoadThis:PackedScene = load("res://HexagonEngineCore.tscn")
+@export var LoadThis: PackedScene = load("res://HexagonEngineCore.tscn")
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 func justStart():
-	yield(get_tree().create_timer(5), "timeout")
+	await get_tree().create_timer(5).timeout
 	Singletoner.ExclusiveBoot(LoadThis)
 	pass
 
@@ -25,7 +25,7 @@ func _ready():
 #	pass
 
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_WM_FOCUS_IN:
+	if what == NOTIFICATION_APPLICATION_FOCUS_IN:
 		print("refocused")
 		pass
 	pass

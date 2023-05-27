@@ -1,4 +1,4 @@
-tool
+@tool
 extends Control
 
 #emitted when pressed state changes
@@ -10,24 +10,24 @@ const DEBUG = false
 const INACTIVE_IDX = -100
 
 #distance from center to get to maximum force
-export var radius:float = 64.0 setget _set_radius
+@export var radius:float = 64.0: set = _set_radius
 #distances from center shorter than deadzone count as zero force
-export var deadzone:float = 8.0 setget _set_deadzone
+@export var deadzone:float = 8.0: set = _set_deadzone
 #maximum distance from center that accepts touches, should be a bit larger than radius
-export var proximity:float = 96.0 setget _set_proximity
-export var background_texture:Texture = preload("background.png") setget _set_bg_tex
-export var ball_texture:Texture = preload("ball.png") setget _set_ball_tex
+@export var proximity:float = 96.0: set = _set_proximity
+@export var background_texture:Texture2D = preload("background.png"): set = _set_bg_tex
+@export var ball_texture:Texture2D = preload("ball.png"): set = _set_ball_tex
 
 #action names to use for different axis
-export var action_left:String = "ui_left"	# -X Axis
-export var action_right:String = "ui_right"	# +X Axis
-export var action_up:String = "ui_up"		# -Y Axis
-export var action_down:String = "ui_down"	# +Y Axis
+@export var action_left:String = "ui_left"	# -X Axis
+@export var action_right:String = "ui_right"	# +X Axis
+@export var action_up:String = "ui_up"		# -Y Axis
+@export var action_down:String = "ui_down"	# +Y Axis
 
 #background texture
 var bg:TextureRect
 #handle texture
-var ball:Sprite
+var ball:Sprite2D
 
 var touches:Array = []
 
@@ -51,29 +51,29 @@ func _init():
 	bg.texture = background_texture
 	container.add_child(bg)
 	
-	ball = Sprite.new()
+	ball = Sprite2D.new()
 	ball.texture = ball_texture
 	container.add_child(ball)
 	
-	if Engine.editor_hint: _setup_visual_hints(container)
+	if Engine.is_editor_hint(): _setup_visual_hints(container)
 
 func _set_radius(value:float):
 	radius = value 
-	if Engine.editor_hint: radius_v.radius = radius
+	if Engine.is_editor_hint(): radius_v.radius = radius
 
 func _set_deadzone(value:float):
 	deadzone = value
-	if Engine.editor_hint: deadzone_v.radius = value
+	if Engine.is_editor_hint(): deadzone_v.radius = value
 
 func _set_proximity(value:float):
 	proximity = value
-	if Engine.editor_hint: proximity_v.radius = value
+	if Engine.is_editor_hint(): proximity_v.radius = value
 
-func _set_bg_tex(tex:Texture):
+func _set_bg_tex(tex:Texture2D):
 	background_texture = tex
 	bg.texture = tex
 
-func _set_ball_tex(tex:Texture):
+func _set_ball_tex(tex:Texture2D):
 	ball_texture = tex
 	ball.texture = tex
 
@@ -101,7 +101,7 @@ func _process_input(event):
 	if captured:
 		if pressed:
 			var in_dedzone:bool = event.position.length() <= deadzone
-			var shift:Vector2 = event.position.clamped(radius)
+			var shift:Vector2 = event.position.limit_length(radius)
 			ball.position = shift
 			_update_force(Vector2.ZERO if in_dedzone else shift/radius)
 		elif was_pressed:

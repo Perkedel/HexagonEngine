@@ -14,8 +14,8 @@
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -1080.0
-margin_bottom = -755.0
+offset_top = -1080.0
+offset_bottom = -755.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -26,36 +26,36 @@ __meta__ = {
 }
 
 [node name="FocusArea" type="HBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 121.0
+offset_right = 1920.0
+offset_bottom = 121.0
 alignment = 1
 
 [node name="SpaceLeft" parent="FocusArea" instance=ExtResource( 2 )]
-margin_right = 456.0
-margin_bottom = 121.0
+offset_right = 456.0
+offset_bottom = 121.0
 
 [node name="SamPlayArea" parent="FocusArea" instance=ExtResource( 3 )]
-margin_bottom = 121.0
+offset_bottom = 121.0
 MenuAnimating = NodePath("../../MenuButtonAnimations")
 MoreMenuSelectFirst = NodePath("../../MoreMenu/BoxMenuContainings/SettingButton")
 
 [node name="SpaceLeft2" parent="FocusArea" instance=ExtResource( 2 )]
-margin_left = 1464.0
-margin_right = 1920.0
-margin_bottom = 121.0
+offset_left = 1464.0
+offset_right = 1920.0
+offset_bottom = 121.0
 
 [node name="MoreMenu" type="CenterContainer" parent="."]
-margin_top = 125.0
-margin_right = 1920.0
-margin_bottom = 325.0
+offset_top = 125.0
+offset_right = 1920.0
+offset_bottom = 325.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BoxMenuContainings" type="HBoxContainer" parent="MoreMenu"]
-margin_left = 202.0
-margin_right = 1718.0
-margin_bottom = 200.0
+offset_left = 202.0
+offset_right = 1718.0
+offset_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -64,45 +64,45 @@ alignment = 1
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 0.0
-margin_right = 300.0
-margin_bottom = 200.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 200.0
 
 [node name="UnknownButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 5 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 304.0
-margin_top = 0.0
-margin_right = 604.0
-margin_bottom = 200.0
+offset_left = 304.0
+offset_top = 0.0
+offset_right = 604.0
+offset_bottom = 200.0
 
 [node name="ExtrasButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 6 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 608.0
-margin_top = 0.0
-margin_right = 908.0
-margin_bottom = 200.0
+offset_left = 608.0
+offset_top = 0.0
+offset_right = 908.0
+offset_bottom = 200.0
 
 [node name="ChangeDVDButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 7 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 912.0
-margin_top = 0.0
-margin_right = 1212.0
-margin_bottom = 200.0
+offset_left = 912.0
+offset_top = 0.0
+offset_right = 1212.0
+offset_bottom = 200.0
 
 [node name="ExitButton" parent="MoreMenu/BoxMenuContainings" instance=ExtResource( 8 )]
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1216.0
-margin_top = 0.0
-margin_right = 1516.0
-margin_bottom = 200.0
+offset_left = 1216.0
+offset_top = 0.0
+offset_right = 1516.0
+offset_bottom = 200.0
 
 [node name="MenuButtonAnimations" parent="." instance=ExtResource( 9 )]
 

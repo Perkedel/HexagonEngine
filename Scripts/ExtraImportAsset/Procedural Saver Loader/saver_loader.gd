@@ -52,7 +52,7 @@
 #       same object. The old (pre-load) object will still be there in the non-
 #       persist reference after load.
 
-extends Reference
+extends RefCounted
 class_name SaverLoader
 
 const DPRINT := false # true for debug print
@@ -89,7 +89,7 @@ var debug_print_tree := false
 # **************************** PRIVATE VARS ***********************************
 
 var _tree: SceneTree
-var _root: Viewport
+var _root: SubViewport
 var _thread: Thread
 
 # save file
@@ -121,7 +121,7 @@ static func make_object_or_scene(script: Script) -> Object:
 	# "SCENE_OVERRIDE". We create the scene and return the root node.
 	var scene_path: String = script.SCENE_OVERRIDE if "SCENE_OVERRIDE" in script else script.SCENE
 	var pkd_scene: PackedScene = load(scene_path)
-	var root_node: Node = pkd_scene.instance()
+	var root_node: Node = pkd_scene.instantiate()
 	if root_node.script != script: # root_node.script may be parent class
 		root_node.set_script(script)
 	return root_node
@@ -133,7 +133,7 @@ static func free_procedural_nodes(node: Node, is_root := true) -> void:
 			node.queue_free() # children will also be freed!
 			return
 	else:
-		assert(node is Viewport)
+		assert(node is SubViewport)
 	for child in node.get_children():
 		if "PERSIST_AS_PROCEDURAL_OBJECT" in child:
 			free_procedural_nodes(child, false)
@@ -151,7 +151,7 @@ func save_game(save_file: File, tree: SceneTree) -> void: # Assumes save_file al
 	if use_thread:
 		_thread = Thread.new()
 		# warning-ignore:return_value_discarded
-		_thread.start(self, "_threaded_save", save_file)
+		_thread.start(Callable(self, "_threaded_save").bind(save_file))
 	else:
 		_threaded_save(save_file)
 
@@ -161,7 +161,7 @@ func load_game(save_file: File, tree: SceneTree) -> void:
 	_tag_size = object_tag.length()
 	progress = 0
 	_prog_deserialized = 0
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
 	free_procedural_nodes(_root)
 	# The reason for the delay below is to make sure that objects from previous
 	# game have completely freed themselves (after queue_free call) before we
@@ -173,16 +173,16 @@ func load_game(save_file: File, tree: SceneTree) -> void:
 	# "destructor" methods with extensive disconnect() statements in our
 	# procedural nodes; however, after much pain I still recommend explicit
 	# disconnection of signals in procedural objects about to be deleted.
-	yield(_tree, "idle_frame")
-	yield(_tree, "idle_frame")
-	yield(_tree, "idle_frame")
-	yield(_tree, "idle_frame")
-	yield(_tree, "idle_frame")
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
+	await _tree.idle_frame
+	await _tree.idle_frame
+	await _tree.idle_frame
+	await _tree.idle_frame
+	await _tree.idle_frame
 	if use_thread:
 		_thread = Thread.new()
 		# warning-ignore:return_value_discarded
-		_thread.start(self, "_threaded_load", save_file)
+		_thread.start(Callable(self, "_threaded_load").bind(save_file))
 	else:
 		_threaded_load(save_file)
 
@@ -199,7 +199,7 @@ func debug_log(tree: SceneTree) -> String:
 	# This doesn't work: OS.dump_memory_to_file(mem_dump_path)
 	if debug_print_stray_nodes:
 		print("Stray Nodes:")
-		_root.print_stray_nodes()
+		_root.print_orphan_nodes()
 		print("***********************")
 	if debug_print_tree:
 		print("Tree:")
@@ -272,10 +272,10 @@ func _threaded_save(save_file: File) -> void:
 func _finish_save() -> void:
 	if use_thread:
 		_thread.wait_to_finish()
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
 	print("Objects saved: ", _sfile_n_objects)
 	_clear()
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
 	emit_signal("finished")
 
 func _threaded_load(save_file: File) -> void:
@@ -294,12 +294,12 @@ func _threaded_load(save_file: File) -> void:
 func _finish_load() -> void:
 	if use_thread:
 		_thread.wait_to_finish()
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
 	_build_tree()
 	_set_current_scene()
 	print("Objects loaded: ", _sfile_n_objects)
 	_clear()
-	yield(_tree, "idle_frame")
+	await _tree.idle_frame
 	emit_signal("finished")
 
 # Procedural save
@@ -350,7 +350,7 @@ func _register_and_instance_load_objects() -> void:
 		var save_id: int = serialized_reference[0]
 		var script_id: int = serialized_reference[1]
 		var script: Script = scripts[script_id]
-		var reference: Reference = script.new()
+		var reference: RefCounted = script.new()
 		assert(reference)
 		_objects[save_id] = reference
 		assert(DPRINT and prints(save_id, reference, script_id, _sfile_script_paths[script_id]) or true)
@@ -408,7 +408,7 @@ func _serialize_node(node: Node):
 	# warning-ignore:integer_division
 	progress = progress_multiplier * _prog_serialized / _sfile_n_objects
 
-func _register_and_serialize_reference(reference: Reference) -> int:
+func _register_and_serialize_reference(reference: RefCounted) -> int:
 	assert(reference.PERSIST_AS_PROCEDURAL_OBJECT) # must be true for References
 	var save_id := _sfile_n_objects
 	_sfile_n_objects += 1
@@ -438,7 +438,7 @@ func _get_or_create_script_id(object: Object) -> int:
 	return script_id
 
 func _serialize_object_data(object: Object, serialized_object: Array) -> void:
-	assert(object is Node or object is Reference)
+	assert(object is Node or object is RefCounted)
 	# serialized_object already has some header info. We now append the size of
 	# each persist array followed by data.
 	var n_properties: int
@@ -584,7 +584,7 @@ func _encode_object(object: Object) -> String:
 	if _ids.has(object): # always true for Node
 		save_id = _ids[object]
 	else:
-		assert(object is Reference)
+		assert(object is RefCounted)
 		save_id = _register_and_serialize_reference(object)
 	if is_weak_ref:
 		return object_tag + "w" + str(save_id)

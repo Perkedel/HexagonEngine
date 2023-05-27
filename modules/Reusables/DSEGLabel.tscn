@@ -1,65 +1,65 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=54 format=3]
 
-[ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.tres" type="DynamicFont" id=1]
-[ext_resource path="res://modules/Reusables/DSEGLabel.gd" type="Script" id=2]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-BoldItalic.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-LightItalic.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Regular.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-LightItalic.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Regular.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" type="DynamicFontData" id=14]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Bold.ttf" type="DynamicFontData" id=15]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" type="DynamicFontData" id=16]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-BoldItalic.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Regular.ttf" type="DynamicFontData" id=19]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Regular.ttf" type="DynamicFontData" id=20]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Bold.ttf" type="DynamicFontData" id=21]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Bold.ttf" type="DynamicFontData" id=22]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-BoldItalic.ttf" type="DynamicFontData" id=23]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light.ttf" type="DynamicFontData" id=24]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-LightItalic.ttf" type="DynamicFontData" id=25]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-BoldItalic.ttf" type="DynamicFontData" id=26]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Bold.ttf" type="DynamicFontData" id=27]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Italic.ttf" type="DynamicFontData" id=28]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf" type="DynamicFontData" id=29]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-LightItalic.ttf" type="DynamicFontData" id=30]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Italic.ttf" type="DynamicFontData" id=31]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Italic.ttf" type="DynamicFontData" id=32]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHANMINI-Regular.ttf" type="DynamicFontData" id=33]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light.ttf" type="DynamicFontData" id=34]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" type="DynamicFontData" id=35]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Bold.ttf" type="DynamicFontData" id=36]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-LightItalic.ttf" type="DynamicFontData" id=37]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" type="DynamicFontData" id=38]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-BoldItalic.ttf" type="DynamicFontData" id=39]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light.ttf" type="DynamicFontData" id=40]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-LightItalic.ttf" type="DynamicFontData" id=41]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-BoldItalic.ttf" type="DynamicFontData" id=42]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-LightItalic.ttf" type="DynamicFontData" id=43]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" type="DynamicFontData" id=44]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.ttf" type="DynamicFontData" id=45]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Bold.ttf" type="DynamicFontData" id=46]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light.ttf" type="DynamicFontData" id=47]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Italic.ttf" type="DynamicFontData" id=48]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf" type="DynamicFontData" id=49]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-LightItalic.ttf" type="DynamicFontData" id=50]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light.ttf" type="DynamicFontData" id=51]
-[ext_resource path="res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf" type="DynamicFontData" id=52]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Bold.ttf" type="DynamicFontData" id=53]
+[ext_resource type="FontFile" path="res://fonts/kashikan-DSEG/kashikan-DSEG.tres" id="1"]
+[ext_resource type="Script" path="res://modules/Reusables/DSEGLabel.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dyw5tb160b36i" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://1rag7bppnmjk" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-BoldItalic.ttf" id="4"]
+[ext_resource type="FontFile" uid="uid://by0tbid1r1k1e" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light.ttf" id="5"]
+[ext_resource type="FontFile" uid="uid://hpqlis2b5ixy" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-LightItalic.ttf" id="6"]
+[ext_resource type="FontFile" uid="uid://cesm3tyfnmg57" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Regular.ttf" id="7"]
+[ext_resource type="FontFile" uid="uid://cqt77y1mig8nc" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf" id="8"]
+[ext_resource type="FontFile" uid="uid://by5yc2yibtd75" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" id="9"]
+[ext_resource type="FontFile" uid="uid://c41h1i3dgrqiy" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light.ttf" id="10"]
+[ext_resource type="FontFile" uid="uid://vutt1surn1al" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-LightItalic.ttf" id="11"]
+[ext_resource type="FontFile" uid="uid://cd7efa7l15a4q" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Regular.ttf" id="12"]
+[ext_resource type="FontFile" uid="uid://c4c0lxtmpqqx" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.ttf" id="13"]
+[ext_resource type="FontFile" uid="uid://dfrjenoisv30t" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf" id="14"]
+[ext_resource type="FontFile" uid="uid://cg22ub37i0dfh" path="res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Bold.ttf" id="15"]
+[ext_resource type="FontFile" uid="uid://jadq5vvq880w" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" id="16"]
+[ext_resource type="FontFile" uid="uid://ce1kfp0j42jrk" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light.ttf" id="17"]
+[ext_resource type="FontFile" uid="uid://1sflew0q7iiu" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-BoldItalic.ttf" id="18"]
+[ext_resource type="FontFile" uid="uid://ck3o0c4wommlw" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Regular.ttf" id="19"]
+[ext_resource type="FontFile" uid="uid://cho2xd10t8n61" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Regular.ttf" id="20"]
+[ext_resource type="FontFile" uid="uid://ctha1s2mabbky" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Bold.ttf" id="21"]
+[ext_resource type="FontFile" uid="uid://b3d8ighuom8b6" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Bold.ttf" id="22"]
+[ext_resource type="FontFile" uid="uid://bpbq5bvcjq1af" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-BoldItalic.ttf" id="23"]
+[ext_resource type="FontFile" uid="uid://bkhs74ntxqvlw" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light.ttf" id="24"]
+[ext_resource type="FontFile" uid="uid://c3irb83vmq3fs" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-LightItalic.ttf" id="25"]
+[ext_resource type="FontFile" uid="uid://ctn6hb0p2yhl0" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-BoldItalic.ttf" id="26"]
+[ext_resource type="FontFile" uid="uid://dmwfkh3fg02cu" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Bold.ttf" id="27"]
+[ext_resource type="FontFile" uid="uid://cc6hudtrsy6my" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Italic.ttf" id="28"]
+[ext_resource type="FontFile" uid="uid://b7yuw24yq4fx7" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf" id="29"]
+[ext_resource type="FontFile" uid="uid://dwkdpp3s5psrd" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-LightItalic.ttf" id="30"]
+[ext_resource type="FontFile" uid="uid://de5gg7atgbg2m" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Italic.ttf" id="31"]
+[ext_resource type="FontFile" uid="uid://0tnj57sf3kcd" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Italic.ttf" id="32"]
+[ext_resource type="FontFile" uid="uid://bxme7p86bkxej" path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHANMINI-Regular.ttf" id="33"]
+[ext_resource type="FontFile" uid="uid://c46n8hwhgkee3" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light.ttf" id="34"]
+[ext_resource type="FontFile" uid="uid://5caadhmmuwes" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" id="35"]
+[ext_resource type="FontFile" uid="uid://8d8sq4eoh48t" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Bold.ttf" id="36"]
+[ext_resource type="FontFile" uid="uid://cahf46prka4xj" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-LightItalic.ttf" id="37"]
+[ext_resource type="FontFile" uid="uid://bujn7awtgf3bo" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" id="38"]
+[ext_resource type="FontFile" uid="uid://ckjk2rljmpojr" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-BoldItalic.ttf" id="39"]
+[ext_resource type="FontFile" uid="uid://3y7fqo0hyh68" path="res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light.ttf" id="40"]
+[ext_resource type="FontFile" uid="uid://df7usg8kr6fya" path="res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-LightItalic.ttf" id="41"]
+[ext_resource type="FontFile" uid="uid://b2povnxllk8g4" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-BoldItalic.ttf" id="42"]
+[ext_resource type="FontFile" uid="uid://d2h0a4prhmgfl" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-LightItalic.ttf" id="43"]
+[ext_resource type="FontFile" uid="uid://bde54mab883au" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" id="44"]
+[ext_resource type="FontFile" uid="uid://dmtkbkmrhgylj" path="res://font/fonts-DSEG/DSEG7-7SEGG-CHAN/DSEG7SEGGCHAN-Regular.ttf" id="45"]
+[ext_resource type="FontFile" uid="uid://csb1tm6x3tf63" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Bold.ttf" id="46"]
+[ext_resource type="FontFile" uid="uid://bttc0h3vmbclo" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light.ttf" id="47"]
+[ext_resource type="FontFile" uid="uid://caq1h2n4rd6pq" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Italic.ttf" id="48"]
+[ext_resource type="FontFile" uid="uid://dwqc1rycerigx" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf" id="49"]
+[ext_resource type="FontFile" uid="uid://utejw8mhqloi" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-LightItalic.ttf" id="50"]
+[ext_resource type="FontFile" uid="uid://bblfpwnioixai" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light.ttf" id="51"]
+[ext_resource type="FontFile" uid="uid://dh7j5vpccv5bc" path="res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf" id="52"]
+[ext_resource type="FontFile" uid="uid://ciwah1s7i0ppt" path="res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Bold.ttf" id="53"]
 
 [node name="DSEGLabel" type="Label"]
-margin_top = 528.0
-margin_right = 1920.0
-margin_bottom = 552.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = ExtResource( 1 )
+offset_top = 528.0
+offset_right = 1920.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color( 1, 1, 1, 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "1234567890!abcdefghijklmnopqrstuvwxyz"
 script = ExtResource( 2 )
 Fonts = {
@@ -69,7 +69,7 @@ Fonts = {
 "Bold": ExtResource( 27 ),
 "BoldItalic": ExtResource( 39 ),
 "Italic": ExtResource( 32 ),
-"Light": ExtResource( 40 ),
+"Light3D": ExtResource( 40 ),
 "LightItalic": ExtResource( 30 ),
 "Regular": ExtResource( 29 )
 },
@@ -77,7 +77,7 @@ Fonts = {
 "Bold": ExtResource( 22 ),
 "BoldItalic": ExtResource( 18 ),
 "Italic": ExtResource( 31 ),
-"Light": ExtResource( 34 ),
+"Light3D": ExtResource( 34 ),
 "LightItalic": ExtResource( 41 ),
 "Regular": ExtResource( 20 )
 }
@@ -87,7 +87,7 @@ Fonts = {
 "Bold": ExtResource( 36 ),
 "BoldItalic": ExtResource( 42 ),
 "Italic": ExtResource( 35 ),
-"Light": ExtResource( 17 ),
+"Light3D": ExtResource( 17 ),
 "LightItalic": ExtResource( 43 ),
 "Regular": ExtResource( 3 )
 },
@@ -95,7 +95,7 @@ Fonts = {
 "Bold": ExtResource( 53 ),
 "BoldItalic": ExtResource( 49 ),
 "Italic": ExtResource( 48 ),
-"Light": ExtResource( 51 ),
+"Light3D": ExtResource( 51 ),
 "LightItalic": ExtResource( 50 ),
 "Regular": ExtResource( 19 )
 }
@@ -107,7 +107,7 @@ Fonts = {
 "Bold": ExtResource( 8 ),
 "BoldItalic": ExtResource( 16 ),
 "Italic": ExtResource( 9 ),
-"Light": ExtResource( 10 ),
+"Light3D": ExtResource( 10 ),
 "LightItalic": ExtResource( 11 ),
 "Regular": ExtResource( 14 )
 },
@@ -115,7 +115,7 @@ Fonts = {
 "Bold": ExtResource( 15 ),
 "BoldItalic": ExtResource( 4 ),
 "Italic": ExtResource( 13 ),
-"Light": ExtResource( 5 ),
+"Light3D": ExtResource( 5 ),
 "LightItalic": ExtResource( 6 ),
 "Regular": ExtResource( 12 )
 }
@@ -133,7 +133,7 @@ Fonts = {
 "Bold": ExtResource( 46 ),
 "BoldItalic": ExtResource( 23 ),
 "Italic": ExtResource( 44 ),
-"Light": ExtResource( 24 ),
+"Light3D": ExtResource( 24 ),
 "LightItalic": ExtResource( 37 ),
 "Regular": ExtResource( 7 )
 },
@@ -141,7 +141,7 @@ Fonts = {
 "Bold": ExtResource( 21 ),
 "BoldItalic": ExtResource( 26 ),
 "Italic": ExtResource( 28 ),
-"Light": ExtResource( 47 ),
+"Light3D": ExtResource( 47 ),
 "LightItalic": ExtResource( 25 ),
 "Regular": ExtResource( 38 )
 }

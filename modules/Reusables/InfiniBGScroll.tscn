@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture2D" id=1]
 [ext_resource path="res://modules/Reusables/InfiniBGScroll.gd" type="Script" id=2]
 [ext_resource path="res://modules/ShadeMaterials/infiniBGScrollMaterial.tres" type="Material" id=3]
 

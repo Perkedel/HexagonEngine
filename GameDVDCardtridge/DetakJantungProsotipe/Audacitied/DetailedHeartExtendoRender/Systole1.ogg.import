@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Systole1.ogg-8a0fc2cede538344ceb90a608385d083.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmiix4w7kr7av"
+path="res://.godot/imported/Systole1.ogg-8a0fc2cede538344ceb90a608385d083.oggvorbisstr"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Systole1.ogg"
-dest_files=[ "res://.import/Systole1.ogg-8a0fc2cede538344ceb90a608385d083.oggstr" ]
+dest_files=["res://.godot/imported/Systole1.ogg-8a0fc2cede538344ceb90a608385d083.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

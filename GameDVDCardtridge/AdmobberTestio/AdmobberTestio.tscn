@@ -2,7 +2,7 @@
 
 [ext_resource path="res://admob-lib/admob.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/AdmobberTestio/AdmobberTestio.gd" type="Script" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=3]
 [ext_resource path="res://GameDVDCardtridge/AdmobberTestio/QuitDialoguer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/AdmobberTestio/LEDs.tscn" type="PackedScene" id=5]
 
@@ -28,30 +28,30 @@ __meta__ = {
 }
 
 [node name="PastaGigi" type="HBoxContainer" parent="UIman/Control/PreControl"]
-margin_top = 285.0
-margin_right = 1920.0
-margin_bottom = 795.0
-rect_min_size = Vector2( 0, 510 )
+offset_top = 285.0
+offset_right = 1920.0
+offset_bottom = 795.0
+custom_minimum_size = Vector2( 0, 510 )
 
 [node name="RemotIklan" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi"]
-margin_right = 1216.0
-margin_bottom = 510.0
+offset_right = 1216.0
+offset_bottom = 510.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Statuser" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan"]
-margin_right = 1216.0
-margin_bottom = 121.0
+offset_right = 1216.0
+offset_bottom = 121.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Statuser"]
-margin_right = 1216.0
-margin_bottom = 49.0
+offset_right = 1216.0
+offset_bottom = 49.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Status LEDs"
 align = 1
 valign = 1
@@ -59,135 +59,135 @@ valign = 1
 [node name="LEDs" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Statuser" instance=ExtResource( 5 )]
 
 [node name="Loader" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan"]
-margin_top = 129.0
-margin_right = 1216.0
-margin_bottom = 250.0
+offset_top = 129.0
+offset_right = 1216.0
+offset_bottom = 250.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Loader"]
-margin_right = 1216.0
-margin_bottom = 49.0
+offset_right = 1216.0
+offset_bottom = 49.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Load Iklan Right now! (already autoloaded!)"
 align = 1
 valign = 1
 
 [node name="ButtonActionsLoad" type="HBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Loader"]
-margin_top = 57.0
-margin_right = 1216.0
-margin_bottom = 121.0
+offset_top = 57.0
+offset_right = 1216.0
+offset_bottom = 121.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Banner" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Loader/ButtonActionsLoad"]
-margin_right = 288.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_right = 288.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Banner Load"
 
 [node name="Interstitial" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Loader/ButtonActionsLoad"]
-margin_left = 296.0
-margin_right = 728.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 296.0
+offset_right = 728.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Interstitial Load"
 
 [node name="RewardedVideo" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Loader/ButtonActionsLoad"]
-margin_left = 736.0
-margin_right = 1216.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 736.0
+offset_right = 1216.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Video Rewarded Load"
 
 [node name="Shower" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan"]
-margin_top = 258.0
-margin_right = 1216.0
-margin_bottom = 379.0
+offset_top = 258.0
+offset_right = 1216.0
+offset_bottom = 379.0
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Shower"]
-margin_right = 1216.0
-margin_bottom = 49.0
+offset_right = 1216.0
+offset_bottom = 49.0
 size_flags_vertical = 5
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Show Iklan Now!"
 align = 1
 valign = 1
 
 [node name="ButtonActionsLoad" type="HBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Shower"]
-margin_top = 57.0
-margin_right = 1216.0
-margin_bottom = 121.0
+offset_top = 57.0
+offset_right = 1216.0
+offset_bottom = 121.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="BannerSHow" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Shower/ButtonActionsLoad"]
-margin_right = 288.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_right = 288.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Banner Show"
 
 [node name="InterstitialSHow" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Shower/ButtonActionsLoad"]
-margin_left = 296.0
-margin_right = 728.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 296.0
+offset_right = 728.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Interstitial Show"
 
 [node name="RewardedVideoSHow" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Shower/ButtonActionsLoad"]
-margin_left = 736.0
-margin_right = 1216.0
-margin_bottom = 64.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 736.0
+offset_right = 1216.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Video Rewarded Show"
 
 [node name="Hider" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan"]
-margin_top = 387.0
-margin_right = 1216.0
-margin_bottom = 510.0
+offset_top = 387.0
+offset_right = 1216.0
+offset_bottom = 510.0
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Hider"]
-margin_right = 1216.0
-margin_bottom = 49.0
+offset_right = 1216.0
+offset_bottom = 49.0
 size_flags_vertical = 5
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Hide Iklan Now!"
 align = 1
 valign = 1
 
 [node name="ButtonActionsLoad" type="HBoxContainer" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Hider"]
-margin_top = 57.0
-margin_right = 1216.0
-margin_bottom = 123.0
+offset_top = 57.0
+offset_right = 1216.0
+offset_bottom = 123.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="BannerHide" type="Button" parent="UIman/Control/PreControl/PastaGigi/RemotIklan/Hider/ButtonActionsLoad"]
-margin_left = 476.0
-margin_right = 740.0
-margin_bottom = 66.0
-custom_fonts/font = ExtResource( 3 )
+offset_left = 476.0
+offset_right = 740.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "BannerHide"
 
 [node name="RemotQUit" type="VBoxContainer" parent="UIman/Control/PreControl/PastaGigi"]
-margin_left = 1224.0
-margin_right = 1920.0
-margin_bottom = 510.0
+offset_left = 1224.0
+offset_right = 1920.0
+offset_bottom = 510.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="CoinRewardShow" type="Label" parent="UIman/Control/PreControl/PastaGigi/RemotQUit"]
-margin_right = 696.0
-margin_bottom = 49.0
-custom_fonts/font = ExtResource( 3 )
+offset_right = 696.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Ad Reward = 12345 Kvz"
 align = 1
 valign = 1
@@ -196,9 +196,9 @@ autowrap = true
 [node name="QuitDialoguer" parent="UIman/Control/PreControl/PastaGigi/RemotQUit" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 696.0
-margin_bottom = 510.0
+offset_top = 57.0
+offset_right = 696.0
+offset_bottom = 510.0
 
 [node name="Admob" type="Node" parent="."]
 script = ExtResource( 1 )

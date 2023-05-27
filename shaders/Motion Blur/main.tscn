@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://tile_tex.png" type="Texture" id=1]
+[ext_resource path="res://tile_tex.png" type="Texture2D" id=1]
 [ext_resource path="res://shaders/Motion Blur/motion_blur/motion_blur.tscn" type="PackedScene" id=2]
 
 
@@ -35,11 +35,11 @@ auto_exposure_scale = 0.4
 auto_exposure_min_luma = 0.05
 auto_exposure_max_luma = 8.0
 auto_exposure_speed = 0.5
-ss_reflections_enabled = false
-ss_reflections_max_steps = 64
-ss_reflections_fade_in = 0.15
-ss_reflections_fade_out = 2.0
-ss_reflections_depth_tolerance = 0.2
+ssr_enabled = false
+ssr_max_steps = 64
+ssr_fade_in = 0.15
+ssr_fade_out = 2.0
+ssr_depth_tolerance = 0.2
 ss_reflections_roughness = true
 ssao_enabled = false
 ssao_radius = 4.1
@@ -81,16 +81,16 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Auto Exposure", "Background", "Fog", "Glow", "SS Reflections", "SSAO", "Tonemap" ]
+_sections_unfolded = [ "Ambient Light3D", "Auto Exposure", "Background", "Fog", "Glow", "SS Reflections", "SSAO", "Tonemap" ]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="BoxMesh" id=2]
 
 size = Vector3( 100, 100, 100 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="StandardMaterial3D" id=3]
 
 render_priority = 0
 flags_transparent = false
@@ -139,7 +139,7 @@ uv2_scale = Vector3( 1, 1, 1 )
 uv2_offset = Vector3( 0, 0, 0 )
 uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
+proximity_fade_enabled = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Flags", "Parameters", "UV1", "Vertex Color" ]
 
@@ -150,14 +150,14 @@ length = 13.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("cam:translation")
+tracks/0/path = NodePath("cam:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 5.85025 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1, 2, 3, 4, 5, 5.85025 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 5, 0, 0 ), Vector3( 5, 0, 5 ), Vector3( 5, 40, 5 ), Vector3( 5, -15, 5 ), Vector3( 0, -50, 5 ), Vector3( -0.237464, -48.0414, 4.65558 ) ]
 }
@@ -168,13 +168,13 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.7, 11.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.7, 11.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 1.9e-05, 0, 90 ), Vector3( 0, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 180, 0 ), Vector3( 90, 180, 0 ), Vector3( 1.9e-05, 0, 90 ), Vector3( 0, 0, 90 ), Vector3( 360, 0, 90 ), Vector3( 0, 0, 90 ) ]
 }
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticleProcessMaterial" id=5]
 
 render_priority = 0
 trail_divisor = 1
@@ -210,9 +210,9 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Emission Shape", "Gravity", "Initial Velocity", "Linear Accel", "Spread", "Trail" ]
+_sections_unfolded = [ "Emission Shape3D", "Gravity", "Initial Velocity", "Linear Accel", "Spread", "Trail" ]
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="StandardMaterial3D" id=6]
 
 render_priority = 0
 flags_transparent = false
@@ -261,7 +261,7 @@ uv2_scale = Vector3( 1, 1, 1 )
 uv2_offset = Vector3( 0, 0, 0 )
 uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
+proximity_fade_enabled = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Emission", "UV1" ]
 
@@ -279,7 +279,7 @@ is_hemisphere = false
 environment = SubResource( 1 )
 _sections_unfolded = [ "material" ]
 
-[node name="floor" type="MeshInstance" parent="." index="0"]
+[node name="floor" type="MeshInstance3D" parent="." index="0"]
 
 layers = 1
 material_override = null
@@ -306,9 +306,9 @@ anims/cam_move = SubResource( 4 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
-[node name="cam" type="Camera" parent="." index="2"]
+[node name="cam" type="Camera3D" parent="." index="2"]
 
-transform = Transform( -1.00014, -0.0017792, 7.03341e-07, 3.51365e-07, -0.000592769, -1.00009, 0.00177939, -1.00003, 0.000592807, -0.238272, -47.4904, 4.60064 )
+transform = Transform3D( -1.00014, -0.0017792, 7.03341e-07, 3.51365e-07, -0.000592769, -1.00009, 0.00177939, -1.00003, 0.000592807, -0.238272, -47.4904, 4.60064 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -321,7 +321,7 @@ fov = 62.3
 size = 19.79
 near = 0.01
 far = 1000.0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform3D" ]
 
 [node name="motion_blur" parent="cam" index="0" instance=ExtResource( 2 )]
 
@@ -354,9 +354,9 @@ draw_passes = 1
 draw_pass_1 = SubResource( 7 )
 _sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time" ]
 
-[node name="light" type="DirectionalLight" parent="." index="4"]
+[node name="light" type="DirectionalLight3D" parent="." index="4"]
 
-transform = Transform( 0.543656, 0.837884, -0.0488815, -0.446137, 0.337822, 0.828757, 0.710915, -0.428751, 0.55747, 0, 3.82309, 0 )
+transform = Transform3D( 0.543656, 0.837884, -0.0488815, -0.446137, 0.337822, 0.828757, 0.710915, -0.428751, 0.55747, 0, 3.82309, 0 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0

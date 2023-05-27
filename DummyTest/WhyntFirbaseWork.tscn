@@ -16,9 +16,9 @@ __meta__ = {
 [node name="FireBaseAuther" parent="Control" instance=ExtResource( 1 )]
 
 [node name="Button" type="Button" parent="Control"]
-margin_left = 820.0
-margin_top = 227.0
-margin_right = 1485.0
-margin_bottom = 536.0
+offset_left = 820.0
+offset_top = 227.0
+offset_right = 1485.0
+offset_bottom = 536.0
 text = "whynt work"
 [connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]

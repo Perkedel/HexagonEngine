@@ -1,22 +1,22 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/DetakJantungProsotipe.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="FontFile" id=2]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Systole1.ogg" type="AudioStream" id=3]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartExtendoRender/Diastole2.ogg" type="AudioStream" id=4]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-MI.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://font/ubuntu-font-family-0.83/UbuntuMono-R.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-MI.ttf" type="FontFile" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="FontFile" id=6]
+[ext_resource path="res://font/ubuntu-font-family-0.83/UbuntuMono-R.ttf" type="FontFile" id=7]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="FontFile" id=8]
 [ext_resource path="res://GameDVDCardtridge/DetakJantungProsotipe/DescriptionTextLabel.tscn" type="PackedScene" id=9]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=10]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=12]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=10]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=11]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture2D" id=12]
 [ext_resource path="res://Theme/Perkedel_Tema_BigFon.tres" type="Theme" id=13]
-[ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/AudioSetting.png" type="Texture" id=15]
+[ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture2D" id=14]
+[ext_resource path="res://Sprites/AudioSetting.png" type="Texture2D" id=15]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Monospace 48"
 size = 48
@@ -24,7 +24,7 @@ outline_size = 1
 outline_color = Color( 0.215686, 0.219608, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 size = 48
@@ -32,7 +32,7 @@ outline_size = 1
 outline_color = Color( 0.168627, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 resource_local_to_scene = true
 resource_name = "Ubuntu Italic 48"
 size = 28
@@ -40,7 +40,7 @@ outline_size = 1
 outline_color = Color( 0, 0.113725, 0, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 size = 48
@@ -69,28 +69,28 @@ __meta__ = {
 }
 
 [node name="BPM" type="HBoxContainer" parent="CanvasLayer/UIsoWe/Listoid"]
-margin_top = 82.0
-margin_right = 1920.0
-margin_bottom = 182.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 82.0
+offset_right = 1920.0
+offset_bottom = 182.0
+custom_minimum_size = Vector2( 0, 100 )
 alignment = 1
 
 [node name="TitleBPM" type="Label" parent="CanvasLayer/UIsoWe/Listoid/BPM"]
-margin_right = 958.0
-margin_bottom = 100.0
+offset_right = 958.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "Heart Rate"
 align = 2
 valign = 1
 
 [node name="BPMSpinBox" type="SpinBox" parent="CanvasLayer/UIsoWe/Listoid/BPM"]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
-hint_tooltip = "Set how fast the heart beats"
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 0, 100 )
+tooltip_text = "Set how fast the heart beats"
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 13 )
@@ -100,66 +100,66 @@ rounded = true
 suffix = " BPM"
 
 [node name="Settings" type="HBoxContainer" parent="CanvasLayer/UIsoWe/Listoid"]
-margin_top = 186.0
-margin_right = 1920.0
-margin_bottom = 286.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 186.0
+offset_right = 1920.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2( 0, 100 )
 alignment = 1
 
 [node name="LeftSetting" type="VBoxContainer" parent="CanvasLayer/UIsoWe/Listoid/Settings"]
-margin_right = 958.0
-margin_bottom = 100.0
+offset_right = 958.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="HeartProgress" type="ProgressBar" parent="CanvasLayer/UIsoWe/Listoid/Settings/LeftSetting"]
-margin_right = 958.0
-margin_bottom = 100.0
+offset_right = 958.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 10 )
+theme_override_fonts/font = ExtResource( 10 )
 step = 0.001
 
 [node name="RightSetting" type="VBoxContainer" parent="CanvasLayer/UIsoWe/Listoid/Settings"]
-margin_left = 962.0
-margin_right = 1920.0
-margin_bottom = 100.0
+offset_left = 962.0
+offset_right = 1920.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/UIsoWe/Listoid/Settings/RightSetting"]
-margin_top = 18.0
-margin_right = 958.0
-margin_bottom = 81.0
-hint_tooltip = "Whether Enable or Mute the sound of the hearbeat organ"
-custom_fonts/font = ExtResource( 10 )
+offset_top = 18.0
+offset_right = 958.0
+offset_bottom = 81.0
+tooltip_text = "Whether Enable or Mute the sound of the hearbeat organ"
+theme_override_fonts/font = ExtResource( 10 )
 pressed = true
 text = "Stethoscope"
 icon = ExtResource( 15 )
 expand_icon = true
 
 [node name="ToggleDebugButton" type="Button" parent="CanvasLayer/UIsoWe/Listoid"]
-margin_top = 290.0
-margin_right = 1920.0
-margin_bottom = 390.0
-rect_min_size = Vector2( 0, 100 )
-hint_tooltip = "Status of the heartbeat organ"
-custom_fonts/font = ExtResource( 10 )
+offset_top = 290.0
+offset_right = 1920.0
+offset_bottom = 390.0
+custom_minimum_size = Vector2( 0, 100 )
+tooltip_text = "Status of the heartbeat organ"
+theme_override_fonts/font = ExtResource( 10 )
 toggle_mode = true
 text = "Heartbeat"
 icon = ExtResource( 14 )
 expand_icon = true
 
 [node name="DescriptionTextLabel" parent="CanvasLayer/UIsoWe/Listoid" instance=ExtResource( 9 )]
-margin_top = 394.0
-margin_bottom = 894.0
-custom_fonts/mono_font = SubResource( 1 )
-custom_fonts/bold_italics_font = SubResource( 2 )
-custom_fonts/italics_font = SubResource( 3 )
-custom_fonts/bold_font = SubResource( 4 )
-bbcode_text = "[b]Detak Jantung Prosotipe[/b]
+offset_top = 394.0
+offset_bottom = 894.0
+theme_override_fonts/mono_font = SubResource( 1 )
+theme_override_fonts/bold_italics_font = SubResource( 2 )
+theme_override_fonts/italics_font = SubResource( 3 )
+theme_override_fonts/bold_font = SubResource( 4 )
+text = "[b]Detak Jantung Prosotipe[/b]
 by [b][color=#00ffff]JOELwindows7[/color][/b]
 [color=#ff5500]Perkedel Technologies[/color]
 [b][color=green]GNU GPL v3[/color][/b]
@@ -281,30 +281,30 @@ Accepts
 "
 
 [node name="QuitButtons" type="HBoxContainer" parent="CanvasLayer/UIsoWe/Listoid"]
-margin_top = 898.0
-margin_right = 1920.0
-margin_bottom = 998.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 898.0
+offset_right = 1920.0
+offset_bottom = 998.0
+custom_minimum_size = Vector2( 0, 100 )
 alignment = 1
 
 [node name="ChangeDVD" type="Button" parent="CanvasLayer/UIsoWe/Listoid/QuitButtons"]
-margin_left = 458.0
-margin_right = 958.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-hint_tooltip = "Close this software and open DVD carousel"
-custom_fonts/font = ExtResource( 10 )
+offset_left = 458.0
+offset_right = 958.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+tooltip_text = "Close this software and open DVD carousel"
+theme_override_fonts/font = ExtResource( 10 )
 text = "Change DVD"
 icon = ExtResource( 12 )
 expand_icon = true
 
 [node name="Shutdown" type="Button" parent="CanvasLayer/UIsoWe/Listoid/QuitButtons"]
-margin_left = 962.0
-margin_right = 1462.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-hint_tooltip = "Close this software and terminate Hexagon Engine"
-custom_fonts/font = ExtResource( 10 )
+offset_left = 962.0
+offset_right = 1462.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+tooltip_text = "Close this software and terminate Hexagon Engine"
+theme_override_fonts/font = ExtResource( 10 )
 text = "Shutdown"
 icon = ExtResource( 11 )
 expand_icon = true
@@ -315,10 +315,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -483.0
-margin_top = -227.0
-margin_right = 483.0
-margin_bottom = 228.0
+offset_left = -483.0
+offset_top = -227.0
+offset_right = 483.0
+offset_bottom = 228.0
 theme = ExtResource( 13 )
 window_title = "Wait!"
 dialog_text = "Are you sure to"

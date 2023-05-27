@@ -3,14 +3,14 @@ extends CenterContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(String) var callTheFunction
-export(String) var GoToMenuSceneOf
-export(String) var ButtonLabelName = "Label"
+@export var callTheFunction: String
+@export var GoToMenuSceneOf: String
+@export var ButtonLabelName: String = "Label"
 signal Button_Pressingated()
 signal Button_Hoverated()
 signal Button_Dehoverated()
-export(NodePath) var FocusNextMenuCollumn
-export(NodePath) var FocusPrevMenuCollumn
+@export var FocusNextMenuCollumn: NodePath
+@export var FocusPrevMenuCollumn: NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,7 +22,7 @@ func _ready():
 	pass # Replace with function body.
 
 func GoToNextMenuOf():
-	get_node("../../../../../").get_tree().change_scene(GoToMenuSceneOf)
+	get_node("../../../../../").get_tree().change_scene_to_file(GoToMenuSceneOf)
 	pass
 
 func QuitButton():

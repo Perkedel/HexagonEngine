@@ -1,35 +1,35 @@
-tool
-extends Spatial
+@tool
+extends Node3D
 class_name healthbar3D, "res://modules/ExtraImport/night-glider\HealthBar3D/class_icon.png"
 
 
-export(float, 0, 1) var value = 1 setget value_set
-export(Color) var full_color = Color.green setget full_set
-export(Color) var empty_color = Color.red setget empty_set
-export(Color) var outline_color = Color.black setget outline_color_set
-export(Vector3) var size = Vector3(2,1,0.5) setget size_set
-export(float) var outline_size = 0.1 setget outline_size_set
-export(int,"enabled","y-fixed", "disabled") var billboard_mode = 2 setget billboard_set
-export(bool) var unshaded = true setget unshaded_set
+@export var value = 1: set = value_set
+@export var full_color: Color = Color.GREEN: set = full_set
+@export var empty_color: Color = Color.RED: set = empty_set
+@export var outline_color: Color = Color.BLACK: set = outline_color_set
+@export var size: Vector3 = Vector3(2,1,0.5): set = size_set
+@export var outline_size: float = 0.1: set = outline_size_set
+@export var billboard_mode = 2: set = billboard_set
+@export var unshaded: bool = true: set = unshaded_set
 
-var progress:MeshInstance
-var under:MeshInstance
-var origin:Spatial
-var progress_origin:Spatial
+var progress:MeshInstance3D
+var under:MeshInstance3D
+var origin:Node3D
+var progress_origin:Node3D
 
 func _init():
-	progress = MeshInstance.new()
-	under = MeshInstance.new()
-	origin = Spatial.new()
-	progress_origin = Spatial.new()
+	progress = MeshInstance3D.new()
+	under = MeshInstance3D.new()
+	origin = Node3D.new()
+	progress_origin = Node3D.new()
 	add_child(origin)
 	origin.add_child(under)
 	origin.add_child(progress_origin)
 	progress_origin.add_child(progress)
-	progress.mesh = CubeMesh.new()
-	under.mesh = CubeMesh.new()
-	progress.material_override = SpatialMaterial.new()
-	under.material_override = SpatialMaterial.new()
+	progress.mesh = BoxMesh.new()
+	under.mesh = BoxMesh.new()
+	progress.material_override = StandardMaterial3D.new()
+	under.material_override = StandardMaterial3D.new()
 	progress.material_override.params_billboard_keep_scale = true
 	under.material_override.params_billboard_keep_scale = true
 	
@@ -42,7 +42,7 @@ func _init():
 func value_set(val):
 	value = val
 	progress_origin.scale.x = value
-	progress.material_override.albedo_color = empty_color.linear_interpolate(full_color, value)
+	progress.material_override.albedo_color = empty_color.lerp(full_color, value)
 
 
 func full_set(val):
@@ -72,11 +72,11 @@ func billboard_set(val):
 	billboard_mode = val
 	match billboard_mode:
 		0:
-			progress.material_override.params_billboard_mode = SpatialMaterial.BILLBOARD_ENABLED
+			progress.material_override.params_billboard_mode = StandardMaterial3D.BILLBOARD_ENABLED
 		1:
-			progress.material_override.params_billboard_mode = SpatialMaterial.BILLBOARD_FIXED_Y
+			progress.material_override.params_billboard_mode = StandardMaterial3D.BILLBOARD_FIXED_Y
 		2:
-			progress.material_override.params_billboard_mode = SpatialMaterial.BILLBOARD_DISABLED
+			progress.material_override.params_billboard_mode = StandardMaterial3D.BILLBOARD_DISABLED
 	under.material_override.params_billboard_mode = progress.material_override.params_billboard_mode
 
 func unshaded_set(val):

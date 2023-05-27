@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MoreButtonCollumnArea.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=2]
 
 [node name="ExitButton" instance=ExtResource( 1 )]
 ButtonLabelName = "Exit"
 
 [node name="Button" parent="." index="0"]
-hint_tooltip = "Shutdown entire Hexagon Engine processes"
+tooltip_text = "Shutdown entire Hexagon Engine processes"
 
 [node name="BackgroundPanel" parent="Button" index="0"]
 modulate = Color( 1, 0.254902, 0.254902, 1 )

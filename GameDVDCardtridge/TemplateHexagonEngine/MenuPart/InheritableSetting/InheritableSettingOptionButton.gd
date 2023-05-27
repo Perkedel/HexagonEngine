@@ -1,9 +1,9 @@
 extends HBoxContainer
 
-export (String) var VariableName = "OptionButton"
-export (int) var Selected = 0
+@export (String) var VariableName = "OptionButton"
+@export (int) var Selected = 0
 enum OptionsAvailable {A, B, C, D}
-export (OptionsAvailable) var OptionsInIt
+@export (OptionsAvailable) var OptionsInIt
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

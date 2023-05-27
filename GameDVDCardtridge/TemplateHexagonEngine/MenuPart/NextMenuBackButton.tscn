@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Sprites/KembaliButton.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
+[ext_resource path="res://Sprites/KembaliButton.png" type="Texture2D" id=2]
 
 
 [node name="BackButton" type="Button"]
-margin_right = 250.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 250, 0 )
+offset_right = 250.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 250, 0 )
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,8 +20,8 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="Icon" type="TextureRect" parent="HBoxContainer"]
-margin_right = 123.0
-margin_bottom = 100.0
+offset_right = 123.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
@@ -29,13 +29,13 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-margin_left = 127.0
-margin_top = 18.0
-margin_right = 250.0
-margin_bottom = 81.0
+offset_left = 127.0
+offset_top = 18.0
+offset_right = 250.0
+offset_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Back"
 align = 1
 valign = 1

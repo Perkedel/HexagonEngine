@@ -1,22 +1,22 @@
 extends Node2D
 
-export var field_of_view = 60
-export var radius_warn = 500
-export var radius_danger = 200
+@export var field_of_view = 60
+@export var radius_warn = 500
+@export var radius_danger = 200
 
-export var show_circle = false
-export var show_fov = true
-export var show_target_line = true
+@export var show_circle = false
+@export var show_fov = true
+@export var show_target_line = true
 
-export var circle_color = Color("#9f185c0b")
+@export var circle_color = Color("#9f185c0b")
 
-export var fov_color = Color("#b23d7f0b")
-export var fov_warn_color = Color("#b1eedf0b")
-export var fov_danger_color = Color("#9dfb320b")
+@export var fov_color = Color("#b23d7f0b")
+@export var fov_warn_color = Color("#b1eedf0b")
+@export var fov_danger_color = Color("#9dfb320b")
 
-export var view_detail = 60
+@export var view_detail = 60
 
-export var enemy_groups = ["Enemy"]
+@export var enemy_groups = ["Enemy"]
 
 var in_danger_area = []
 var in_warn_area = []
@@ -51,10 +51,10 @@ func draw_circle_arc():
 		else:
 				draw_line(get_position(), aux.pos , fov_color)
 func deg_to_vector(deg):
-	return Vector2( cos(deg2rad(deg)), sin(deg2rad(deg)) )
+	return Vector2( cos(deg_to_rad(deg)), sin(deg_to_rad(deg)) )
 
 func check_view():
-	var dir_deg = rad2deg(transform.get_rotation())
+	var dir_deg = rad_to_deg(transform.get_rotation())
 	var start_angle = dir_deg - (field_of_view * 0.5)
 	var end_angle = start_angle + field_of_view
 	points_arc = []
@@ -96,7 +96,7 @@ func check_view():
 					var tgt_pos = result.collider.get_global_transform().origin
 					var this_pos = get_global_transform().origin
 					var tgt_dir = (tgt_pos - this_pos).normalized()
-					var view_angle = rad2deg(deg_to_vector(rad2deg(get_global_transform().get_rotation())+90).angle_to(tgt_dir))
+					var view_angle = rad_to_deg(deg_to_vector(rad_to_deg(get_global_transform().get_rotation())+90).angle_to(tgt_dir))
 	
 					if view_angle > start_angle && view_angle < end_angle:
 						var result2 = space_state.intersect_ray(this_pos, tgt_pos, [get_parent()])

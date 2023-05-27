@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample"
+type="AudioStreamWAV"
+uid="uid://buue422x6lw6m"
+path="res://.godot/imported/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Side_Left.wav"
-dest_files=[ "res://.import/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample" ]
+dest_files=["res://.godot/imported/Side_Left.wav-68aa48fa4ac2666cc3ba87fc7109241b.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -20,7 +20,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func ReceiveZetrixViewport(getIt:Viewport):
+func ReceiveZetrixViewport(getIt:SubViewport):
 	zetrixViewport = getIt
 	$JustZetrixVRViewer.ReceiveZetrixViewport(zetrixViewport)
 	pass
@@ -62,7 +62,7 @@ func ImportThatDVDToday(path):
 		# https://github.com/godotengine/godot-docs/issues/154#issuecomment-221551632
 		print("\n\nPCK Packer add file\n\n")
 		var packer = PCKPacker.new()
-		packer.pck_start(path,0)
+		packer.pck_start(Callable(path, 0))
 		packer.add_file("GameDVDCartridge","res://ImportDVDCartridge/")
 		packer.flush(true)
 	pass
@@ -98,7 +98,7 @@ func _notification(what): #add heurestic of changeDVD menu! check visible of cha
 				$JustWorkingAreYouSure.popup()
 				pass
 			pass
-		if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+		if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
 			pass
 		pass
 	pass
@@ -133,13 +133,13 @@ func _on_SelectFileLoadingMode_FileAccessModeSelected(Which):
 	$JustAFileDialog.access = Which
 	match LoadWhichContext:
 		LoadInContext.ImportDVD:
-			$JustAFileDialog.set_filters(PoolStringArray([
+			$JustAFileDialog.set_filters(PackedStringArray([
 				"*.pck; Godot Resource Pack",
 				"*.zip; Godot Resource ZIP"
 			]))
 			pass
 		LoadInContext.LoadCustomDVD:
-			$JustAFileDialog.set_filters(PoolStringArray([
+			$JustAFileDialog.set_filters(PackedStringArray([
 				"*.tscn; Godot Tscene",
 				"*.scn; Godot scene"
 			]))

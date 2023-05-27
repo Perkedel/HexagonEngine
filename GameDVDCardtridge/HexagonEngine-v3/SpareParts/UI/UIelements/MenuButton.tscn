@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="FontFile" id=3]
 [ext_resource path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" type="AudioStream" id=4]
 [ext_resource path="res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav" type="AudioStream" id=5]
 
 [node name="MenuButton" type="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 400, 0 )
+custom_minimum_size = Vector2( 400, 0 )
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 expand_icon = true
 script = ExtResource( 1 )
 __meta__ = {
@@ -31,8 +31,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="VertImaging"]
-margin_right = 1920.0
-margin_bottom = 1040.0
+offset_right = 1920.0
+offset_bottom = 1040.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
@@ -40,10 +40,10 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="VertImaging"]
-margin_top = 1044.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-custom_fonts/font = ExtResource( 3 )
+offset_top = 1044.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "MenuButton"
 align = 1
 
@@ -56,8 +56,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="HoriImaging"]
-margin_right = 198.0
-margin_bottom = 250.0
+offset_right = 198.0
+offset_bottom = 250.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
@@ -65,23 +65,23 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="HoriImaging"]
-margin_left = 202.0
-margin_top = 107.0
-margin_right = 400.0
-margin_bottom = 143.0
+offset_left = 202.0
+offset_top = 107.0
+offset_right = 400.0
+offset_bottom = 143.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "MenuButton"
 align = 1
 
 [node name="ButtonSpeaker" type="AudioStreamPlayer" parent="."]
-pause_mode = 2
+process_mode = 2
 stream = ExtResource( 4 )
 bus = "SoundEffect"
 
 [node name="ButtonSpeaker2D" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 2
+process_mode = 2
 position = Vector2( 960, 540 )
 stream = ExtResource( 4 )
 bus = "SoundEffect"

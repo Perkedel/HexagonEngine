@@ -3,8 +3,8 @@ extends AudioStreamPlayer
 var externalMusicPopName
 
 var _insertMediaHere:MediaCardtridge
-var FLMmusic = FLMusicLib.new()
-var MusicNamePopup = MusicNamePop.new()
+# var FLMmusic = FLMusicLib.new()
+# var MusicNamePopup = MusicNamePop.new()
 var AutoSFX = AudioStreamPlayer.new()
 var AutoMusic = AudioStreamPlayer.new()
 var startTimer = Timer.new()
@@ -19,8 +19,8 @@ var ButtonHoverFX : String = "res://Audio/EfekSuara/166186__drminky__menu-screen
 
 # Rhythm sTILEr
 ## Tracking positon
-export(float) var BPM = 120
-export(int) var timeMeasures = 4
+@export var BPM: float = 120
+@export var timeMeasures: int = 4
 var initBPM = 120
 var initTimeMeasures = 4
 var song_position:float = 0.0
@@ -28,7 +28,7 @@ var song_position_in_beats:int = 1
 var sec_per_beat:float = 60.0 / BPM
 var last_reported_beat:int = 0
 var beats_before_start:int = 0
-var measure:int = 1
+var measureo:int = 1
 ## Determining how close to the beat an event is
 var closest:int = 0
 var time_off_beat:float = 0.0
@@ -46,12 +46,12 @@ signal measure(position)
 ## func
 func _report_beat():
 	if last_reported_beat < song_position_in_beats:
-		if measure > timeMeasures:
-			measure = 1
+		if measureo > timeMeasures:
+			measureo = 1
 		emit_signal("beat", song_position_in_beats)
-		emit_signal("measure", measure)
+		emit_signal("measure", measureo)
 		last_reported_beat = song_position_in_beats
-		measure += 1
+		measureo += 1
 
 func play_with_beat_offset(num):
 	beats_before_start = num
@@ -66,7 +66,7 @@ func _reset_rhythm():
 	sec_per_beat = 60.0 / BPM
 	last_reported_beat = 0
 	beats_before_start = 0
-	measure = 1
+	measureo = 1
 	closest = 0
 	time_off_beat = 0.0
 	pass
@@ -80,7 +80,7 @@ func play_from_beat(beat, offset):
 	AutoMusic.play()
 	seek(beat * sec_per_beat)
 	beats_before_start = offset
-	measure = beat % timeMeasures
+	measureo = beat % timeMeasures
 
 func setInitBPMMeasure(Sbpm:float=BPM,Smeasures:int=timeMeasures):
 	initBPM = Sbpm
@@ -135,7 +135,7 @@ func playTheMusic(offset = 0):
 		#play_with_beat_offset(offset)
 		play_from_beat(1,offset)
 		#MusicNamePopup.popTheName()
-	MusicNamePopup.show()
+	# MusicNamePopup.show()
 	if externalMusicPopName:
 		externalMusicPopName.show()
 	pass
@@ -173,7 +173,7 @@ func get_musicName():
 		title = String(_insertMediaHere.title),
 		artist = String(_insertMediaHere.artist),
 		license = String(_insertMediaHere.license),
-		source = String(_insertMediaHere.source),
+		source = String(_insertMediaHere.source[0]),
 		albumPic = _insertMediaHere.albumPic
 	}
 
@@ -188,15 +188,15 @@ func _init():
 	# add timer
 	add_child(startTimer)
 	startTimer.one_shot = true
-	startTimer.connect("timeout",self,"_on_StartTimer_timeout")
+	startTimer.connect("timeout", Callable(self, "_on_StartTimer_timeout"))
 	
 	# https://github.com/MightyPrinny/godot-FLMusicLib/blob/demo/global.gd
-	add_child(FLMmusic)
-	FLMmusic.set_gme_buffer_size(2048*5)
+#	add_child(FLMmusic)
+#	FLMmusic.set_gme_buffer_size(2048*5)
 	
 	# add Music Name Popup
-	add_child(MusicNamePopup)
-	MusicNamePopup.show()
+	# add_child(MusicNamePopup)
+	# MusicNamePopup.show()
 	pass
 
 func giveMe_MusicPopName(theThing):
@@ -280,7 +280,7 @@ func _process(delta):
 						_updateBeat()
 						doStepHit()
 				elif ste < curStep:
-					print("Reset steps for some reason?? at " + String(AutoConductor.songPosition))
+					print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
 					# song reset????
 					_updateBeat()
 					doStepHit()
@@ -293,7 +293,7 @@ func _process(delta):
 					_updateBeat()
 					doStepHit()
 			elif nextStep < curStep:
-				print("Reset steps for some reason?? at " + String(AutoConductor.songPosition))
+				print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
 				# song reset ????
 				curStep = nextStep
 				_updateBeat()

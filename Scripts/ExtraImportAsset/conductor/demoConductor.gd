@@ -14,15 +14,15 @@ var Track3: AudioStream = preload("res://assets/godot-conductor/demo_loop_t3.ogg
 
 var _rhythm: Rhythm
 
-onready var Anim1: AnimationPlayer = $AnimationPlayer
-onready var Anim2: AnimationPlayer = $AnimationPlayer2
+@onready var Anim1: AnimationPlayer = $AnimationPlayer
+@onready var Anim2: AnimationPlayer = $AnimationPlayer2
 
-onready var Slider1: HSlider = $VBoxContainer/HSlider
-onready var Slider2: HSlider = $VBoxContainer/HSlider2
-onready var Slider3: HSlider = $VBoxContainer/HSlider3
-onready var Slider4: HSlider = $VBoxContainer/HSlider4
+@onready var Slider1: HSlider = $VBoxContainer/HSlider
+@onready var Slider2: HSlider = $VBoxContainer/HSlider2
+@onready var Slider3: HSlider = $VBoxContainer/HSlider3
+@onready var Slider4: HSlider = $VBoxContainer/HSlider4
 
-onready var Sprite2: Sprite = $Sprite2
+@onready var Sprite2: Sprite2D = $Sprite2
 
 
 func _ready() -> void:
@@ -75,7 +75,7 @@ func _ready() -> void:
 	
 	# To connect the conductor to your game events, just use the beat_played
 	# signal.
-	assert(Conductor.connect("beat_played", self, "_on_beat") == 0,
+	assert(Conductor.connect("beat_played", Callable(self, "_on_beat")) == 0,
 			"Could not connect to beat_played signal!")
 	
 	# You can generate more complex signals using the Rhythm abstraction.
@@ -96,7 +96,7 @@ func _ready() -> void:
 	
 	# The rhythm will pass the above enum values to the signal handler, which
 	# we use in this demo to control the color of the rhythm beat object.
-	assert(_rhythm.connect("rhythm_advanced", self, "_on_rhythm_advanced") == 0,
+	assert(_rhythm.connect("rhythm_advanced", Callable(self, "_on_rhythm_advanced")) == 0,
 			"Could not connect to rhythm_advanced signal!")
 
 

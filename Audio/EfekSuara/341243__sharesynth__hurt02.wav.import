@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/341243__sharesynth__hurt02.wav-d155454d22731a98891fad9635fa7bde.sample"
+type="AudioStreamWAV"
+uid="uid://rq3mg3vbou6n"
+path="res://.godot/imported/341243__sharesynth__hurt02.wav-d155454d22731a98891fad9635fa7bde.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/341243__sharesynth__hurt02.wav"
-dest_files=[ "res://.import/341243__sharesynth__hurt02.wav-d155454d22731a98891fad9635fa7bde.sample" ]
+dest_files=["res://.godot/imported/341243__sharesynth__hurt02.wav-d155454d22731a98891fad9635fa7bde.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

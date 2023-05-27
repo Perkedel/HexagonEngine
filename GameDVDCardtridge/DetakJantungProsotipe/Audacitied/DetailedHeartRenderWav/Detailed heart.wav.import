@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Detailed heart.wav-e3a3ae4e1fb03b05c7907667cab07549.sample"
+type="AudioStreamWAV"
+uid="uid://cb671bbpwwvvt"
+path="res://.godot/imported/Detailed heart.wav-e3a3ae4e1fb03b05c7907667cab07549.sample"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRenderWav/Detailed heart.wav"
-dest_files=[ "res://.import/Detailed heart.wav-e3a3ae4e1fb03b05c7907667cab07549.sample" ]
+dest_files=["res://.godot/imported/Detailed heart.wav-e3a3ae4e1fb03b05c7907667cab07549.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

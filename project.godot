@@ -6,1385 +6,7 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Node",
-"class": "AdMob",
-"language": "GDScript",
-"path": "res://admob-lib/admob.gd"
-}, {
-"base": "Reference",
-"class": "AnimaEasing",
-"language": "GDScript",
-"path": "res://addons/anima/core/easings.gd"
-}, {
-"base": "Node",
-"class": "AnimaNode",
-"language": "GDScript",
-"path": "res://addons/anima/core/node.gd"
-}, {
-"base": "Reference",
-"class": "AnimaNodesProperties",
-"language": "GDScript",
-"path": "res://addons/anima/utils/node_properties.gd"
-}, {
-"base": "Reference",
-"class": "AnimaStrings",
-"language": "GDScript",
-"path": "res://addons/anima/utils/strings.gd"
-}, {
-"base": "Tween",
-"class": "AnimaTween",
-"language": "GDScript",
-"path": "res://addons/anima/core/tween.gd"
-}, {
-"base": "Reference",
-"class": "ArrayUtils",
-"language": "GDScript",
-"path": "res://addons/SIsilicon.3d.text/array_utils.gd"
-}, {
-"base": "Node",
-"class": "AudioManage",
-"language": "GDScript",
-"path": "res://addons/WebAudioExternal/AudioManager.gd"
-}, {
-"base": "Node2D",
-"class": "AudioSpacial2D",
-"language": "GDScript",
-"path": "res://addons/WebAudioExternal/AudioSpacial2D.gd"
-}, {
-"base": "AudioStreamPlayer",
-"class": "AudioStreamPlayerADSR",
-"language": "GDScript",
-"path": "res://addons/midi/ADSR.gd"
-}, {
-"base": "Node",
-"class": "BCPServer",
-"language": "GDScript",
-"path": "res://addons/godot_bcp_server/bcp_server.gd"
-}, {
-"base": "Reference",
-"class": "Bank",
-"language": "GDScript",
-"path": "res://addons/midi/Bank.gd"
-}, {
-"base": "Resource",
-"class": "BaseGameObject",
-"language": "GDScript",
-"path": "res://addons/gcs/baseGameObject.gd"
-}, {
-"base": "Resource",
-"class": "BaseGameSystem",
-"language": "GDScript",
-"path": "res://addons/gcs/baseGameSystem.gd"
-}, {
-"base": "Resource",
-"class": "BaseGameWorld",
-"language": "GDScript",
-"path": "res://addons/gcs/baseGameWorld.gd"
-}, {
-"base": "Reference",
-"class": "BatchIter",
-"language": "GDScript",
-"path": "res://addons/nylon/core/batch_iter.gd"
-}, {
-"base": "AudioStreamPlayer",
-"class": "BeatPlayer",
-"language": "GDScript",
-"path": "res://addons/beatplayer/beatplayer.gd"
-}, {
-"base": "Resource",
-"class": "ButtonContextTheme",
-"language": "GDScript",
-"path": "res://modules/SumberDaya/default_button_context_theme.gd"
-}, {
-"base": "Control",
-"class": "CSVEditor",
-"language": "GDScript",
-"path": "res://addons/file-editor/scripts/CSVEditor.gd"
-}, {
-"base": "Reference",
-"class": "Calendar",
-"language": "GDScript",
-"path": "res://addons/calendar_button/class/Calendar.gd"
-}, {
-"base": "Reference",
-"class": "CalendarButtons",
-"language": "GDScript",
-"path": "res://addons/calendar_button/scripts/calendar_buttons.gd"
-}, {
-"base": "Object",
-"class": "ChannelController",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/channel_controller.gd"
-}, {
-"base": "Object",
-"class": "ChannelGroup",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/channel_group.gd"
-}, {
-"base": "Object",
-"class": "ChannelGroupDefinition",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/channel_group_definition.gd"
-}, {
-"base": "Node",
-"class": "Colorblindness",
-"language": "GDScript",
-"path": "res://addons/paulloz.colorblindness/colorblindness.gd"
-}, {
-"base": "Resource",
-"class": "Component",
-"language": "GDScript",
-"path": "res://addons/gcs/component.gd"
-}, {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "Reference",
-"class": "Coroutine",
-"language": "GDScript",
-"path": "res://addons/nylon/core/coroutine.gd"
-}, {
-"base": "Resource",
-"class": "CubicBezierCurve",
-"language": "GDScript",
-"path": "res://addons/cubic_bezier_controls/cubic_bezier_curve.gd"
-}, {
-"base": "CubicBezierRect",
-"class": "CubicBezierEdit",
-"language": "GDScript",
-"path": "res://addons/cubic_bezier_controls/cubic_bezier_edit.gd"
-}, {
-"base": "Control",
-"class": "CubicBezierRect",
-"language": "GDScript",
-"path": "res://addons/cubic_bezier_controls/cubic_bezier_rect.gd"
-}, {
-"base": "Reference",
-"class": "DTS",
-"language": "GDScript",
-"path": "res://addons/dialogic/Localization/translation_service.gd"
-}, {
-"base": "Reference",
-"class": "Date",
-"language": "GDScript",
-"path": "res://addons/calendar_button/class/Date.gd"
-}, {
-"base": "Reference",
-"class": "Delaunay",
-"language": "GDScript",
-"path": "res://addons/gdDelaunay/Delaunay.gd"
-}, {
-"base": "Node",
-"class": "Dialogic",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicClass.gd"
-}, {
-"base": "Control",
-"class": "DialogicBackgroundMusic",
-"language": "GDScript",
-"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
-}, {
-"base": "Node",
-"class": "DialogicDefinitionsUtil",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
-}, {
-"base": "Reference",
-"class": "DialogicResources",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicResources.gd"
-}, {
-"base": "Reference",
-"class": "DialogicUtil",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicUtil.gd"
-}, {
-"base": "Node",
-"class": "FLMusicLib",
-"language": "NativeScript",
-"path": "res://FLMusicLib/FLMusic.gdns"
-}, {
-"base": "HTTPRequest",
-"class": "FirebaseAuth",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/auth.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabase",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/database.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabaseReference",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/reference.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabaseStore",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/database_store.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDynamicLinks",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/dynamiclinks/dynamiclinks.gd"
-}, {
-"base": "Node",
-"class": "FirebaseFirestore",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore.gd"
-}, {
-"base": "Reference",
-"class": "FirebaseResource",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/resource.gd"
-}, {
-"base": "Reference",
-"class": "FirebaseStorage",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage.gd"
-}, {
-"base": "Reference",
-"class": "FirebaseUserData",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/user_data.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreCollection",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_collection.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreDocument",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_document.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreQuery",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_query.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreTask",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_task.gd"
-}, {
-"base": "CanvasLayer",
-"class": "FpsLabel",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/FPSLabel.gd"
-}, {
-"base": "Reference",
-"class": "FrustumAABBIntersection",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/frustum_aabb_intersection.gd"
-}, {
-"base": "Reference",
-"class": "Funcy",
-"language": "GDScript",
-"path": "res://addons/funcy/Funcy.gd"
-}, {
-"base": "GDDlg_AttributeBase",
-"class": "GDDlg_AttributeArray",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeArray.gd"
-}, {
-"base": "Object",
-"class": "GDDlg_AttributeBase",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/GDDlg_AttributeBase.gd"
-}, {
-"base": "GDDlg_AttributeBase",
-"class": "GDDlg_AttributeBool",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeBool.gd"
-}, {
-"base": "GDDlg_AttributeBase",
-"class": "GDDlg_AttributeInteger",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeInteger.gd"
-}, {
-"base": "GDDlg_AttributeBase",
-"class": "GDDlg_AttributeMap",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeMap.gd"
-}, {
-"base": "GDDlg_AttributeBase",
-"class": "GDDlg_AttributeString",
-"language": "GDScript",
-"path": "res://addons/gddlg/attributes/basic_types/GDDlg_AttributeString.gd"
-}, {
-"base": "GDDlg_ConditionOr",
-"class": "GDDlg_ConditionAnd",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionAnd.gd"
-}, {
-"base": "Object",
-"class": "GDDlg_ConditionBase",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/GDDlg_ConditionBase.gd"
-}, {
-"base": "GDDlg_ConditionBase",
-"class": "GDDlg_ConditionFalse",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionFalse.gd"
-}, {
-"base": "GDDlg_ConditionOr",
-"class": "GDDlg_ConditionNor",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionNor.gd"
-}, {
-"base": "GDDlg_ConditionBase",
-"class": "GDDlg_ConditionNot",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionNot.gd"
-}, {
-"base": "GDDlg_ConditionBase",
-"class": "GDDlg_ConditionOr",
-"language": "GDScript",
-"path": "res://addons/gddlg/conditions/basic_logic/GDDlg_ConditionOr.gd"
-}, {
-"base": "Object",
-"class": "GDDlg_DialogDefinition",
-"language": "GDScript",
-"path": "res://addons/gddlg/GDDlg_DialogDefinition.gd"
-}, {
-"base": "Node",
-"class": "GDDlg_DialogPlayer",
-"language": "GDScript",
-"path": "res://addons/gddlg/GDDlg_DialogPlayer.gd"
-}, {
-"base": "Object",
-"class": "GDInv_Inventory",
-"language": "GDScript",
-"path": "res://addons/gdinv/GDInv_Inventory.gd"
-}, {
-"base": "Object",
-"class": "GDInv_ItemDefinition",
-"language": "GDScript",
-"path": "res://addons/gdinv/GDInv_ItemDefinition.gd"
-}, {
-"base": "Object",
-"class": "GDInv_ItemStack",
-"language": "GDScript",
-"path": "res://addons/gdinv/GDInv_ItemStack.gd"
-}, {
-"base": "ColorRect",
-"class": "GDQTransitionColor",
-"language": "GDScript",
-"path": "res://modules/Reusables/GDQTransitionColor.gd"
-}, {
-"base": "BaseGameObject",
-"class": "GameObject",
-"language": "GDScript",
-"path": "res://addons/gcs/gameObject.gd"
-}, {
-"base": "BaseGameSystem",
-"class": "GameSystem",
-"language": "GDScript",
-"path": "res://addons/gcs/gameSystem.gd"
-}, {
-"base": "BaseGameWorld",
-"class": "GameWorld",
-"language": "GDScript",
-"path": "res://addons/gcs/gameWorld.gd"
-}, {
-"base": "Reference",
-"class": "GaussianRandom",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/GaussianRandom.gd"
-}, {
-"base": "TextureRect",
-"class": "GeneralistInfiniBGScroll",
-"language": "GDScript",
-"path": "res://modules/Reusables/InfiniBGScroll.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "EditorPlugin",
-"class": "GodotSfxr",
-"language": "GDScript",
-"path": "res://addons/godot_sfxr/GodotSfxr.gd"
-}, {
-"base": "HTTPRequest",
-"class": "GoogleTranslateAPI",
-"language": "GDScript",
-"path": "res://addons/file-editor/scripts/GoogleTranslatorAPI.gd"
-}, {
-"base": "ResourceFormatLoader",
-"class": "HTerrainDataLoader",
-"language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_loader.gd"
-}, {
-"base": "ResourceFormatSaver",
-"class": "HTerrainDataSaver",
-"language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
-}, {
-"base": "Reference",
-"class": "Halton",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/halton.gd"
-}, {
-"base": "KinematicBody",
-"class": "HeroicPlayer",
-"language": "GDScript",
-"path": "res://GameDVDCardtridge/ManOfCoyote/ProsotipePlatformerGuy.gd"
-}, {
-"base": "Control",
-"class": "HexagonDisplay2D",
-"language": "GDScript",
-"path": "res://addons/HexagonDisplay2D/hexagonDisplay.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventMultiScreenDrag",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventMultiScreenDrag.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventScreenPinch",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventScreenPinch.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventScreenTwist",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventScreenTwist.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenDrag",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenDrag.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenTap",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenTap.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenTouch",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
-}, {
-"base": "StaticBody",
-"class": "InteractMe",
-"language": "GDScript",
-"path": "res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAMellinda/InteractThisA.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
-"base": "Control",
-"class": "IsoCube",
-"language": "GDScript",
-"path": "res://addons/IsoCube/IsoCube.gd"
-}, {
-"base": "Reference",
-"class": "JSONBeautifier",
-"language": "GDScript",
-"path": "res://addons/json_beautifier/json_beautifier.gd"
-}, {
-"base": "Reference",
-"class": "JSONMinifier",
-"language": "GDScript",
-"path": "res://addons/json_minifier/json_minifier.gd"
-}, {
-"base": "Node",
-"class": "JavascriptManage",
-"language": "GDScript",
-"path": "res://addons/WebAudioExternal/JavascriptManager.gd"
-}, {
-"base": "Control",
-"class": "Joystick",
-"language": "GDScript",
-"path": "res://addons/MarcoFazio-VirtualJoystick/Joystick/Joystick.gd"
-}, {
-"base": "LiquidLayer",
-"class": "LavaLayer",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/lava.gd"
-}, {
-"base": "Reference",
-"class": "LayerGroup",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/Gaspi/LayerGroup.gd"
-}, {
-"base": "Reference",
-"class": "LayeredSprite",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/Gaspi/LayeredSprite.gd"
-}, {
-"base": "Reference",
-"class": "LayeredSpriteCloset",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/Gaspi/LayeredSpriteCloset.gd"
-}, {
-"base": "Area",
-"class": "LiquidLayer",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid.gd"
-}, {
-"base": "Object",
-"class": "MMCurve",
-"language": "GDScript",
-"path": "res://addons/material_maker/types/curve.gd"
-}, {
-"base": "Node",
-"class": "MMGenBase",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_base.gd"
-}, {
-"base": "MMGenShader",
-"class": "MMGenBrush",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_brush.gd"
-}, {
-"base": "MMGenTexture",
-"class": "MMGenBuffer",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_buffer.gd"
-}, {
-"base": "MMGenTexture",
-"class": "MMGenComment",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_comment.gd"
-}, {
-"base": "Object",
-"class": "MMGenContext",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_context.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenDebug",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_debug.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenExport",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_export.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenGraph",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_graph.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenIOs",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_ios.gd"
-}, {
-"base": "MMGenTexture",
-"class": "MMGenImage",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_image.gd"
-}, {
-"base": "MMGenTexture",
-"class": "MMGenIterateBuffer",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_iterate_buffer.gd"
-}, {
-"base": "MMGenShader",
-"class": "MMGenMaterial",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_material.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenRemote",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_remote.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenReroute",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_reroute.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenShader",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_shader.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenSwitch",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_switch.gd"
-}, {
-"base": "MMGenTexture",
-"class": "MMGenText",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_text.gd"
-}, {
-"base": "MMGenBase",
-"class": "MMGenTexture",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/gen_texture.gd"
-}, {
-"base": "Object",
-"class": "MMGradient",
-"language": "GDScript",
-"path": "res://addons/material_maker/types/gradient.gd"
-}, {
-"base": "Reference",
-"class": "MMPaths",
-"language": "GDScript",
-"path": "res://addons/material_maker/engine/paths.gd"
-}, {
-"base": "Object",
-"class": "MMPolygon",
-"language": "GDScript",
-"path": "res://addons/material_maker/types/polygon.gd"
-}, {
-"base": "Node",
-"class": "MMType",
-"language": "GDScript",
-"path": "res://addons/material_maker/types/types.gd"
-}, {
-"base": "Node",
-"class": "MPFGame",
-"language": "GDScript",
-"path": "res://addons/godot_bcp_server/game.gd"
-}, {
-"base": "Reference",
-"class": "Matrix4",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/matrix4.gd"
-}, {
-"base": "Resource",
-"class": "MediaCardtridge",
-"language": "GDScript",
-"path": "res://Audio/MusicCardtridge/MusicCardtridge.gd"
-}, {
-"base": "Node",
-"class": "MidiPlayer",
-"language": "GDScript",
-"path": "res://addons/midi/MidiPlayer.gd"
-}, {
-"base": "Resource",
-"class": "MixMode",
-"language": "GDScript",
-"path": "res://addons/modifiers/mix_mode.gd"
-}, {
-"base": "Resource",
-"class": "MixModesCollection",
-"language": "GDScript",
-"path": "res://addons/modifiers/mix_modes_collection.gd"
-}, {
-"base": "Node",
-"class": "ModPlayer",
-"language": "GDScript",
-"path": "res://addons/modplayer/ModPlayer.gd"
-}, {
-"base": "Node",
-"class": "Modifiers",
-"language": "GDScript",
-"path": "res://addons/modifiers/modifiers.gd"
-}, {
-"base": "Popup",
-"class": "MusicNamePop",
-"language": "GDScript",
-"path": "res://modules/Component/MusicNamePop.gd"
-}, {
-"base": "Node",
-"class": "Network",
-"language": "GDScript",
-"path": "res://addons/godot-voip/demo/Network.gd"
-}, {
-"base": "Control",
-"class": "NewInstanceDocker",
-"language": "GDScript",
-"path": "res://addons/GhodBase.RunInstance/NewInstanceDocker.gd"
-}, {
-"base": "AudioStreamPlayer",
-"class": "OneShotSpeaker",
-"language": "GDScript",
-"path": "res://modules/Reusables/parts/OneShotSpeaker.gd"
-}, {
-"base": "ConfirmationDialog",
-"class": "OptionsDialog",
-"language": "GDScript",
-"path": "res://addons/GhodBase.RunInstance/OptionsDialog.gd"
-}, {
-"base": "Spatial",
-"class": "OrbitArm",
-"language": "GDScript",
-"path": "res://addons/qodot/example_scenes/2-miscallaneous/1-runtime-map-building/orbit_arm.gd"
-}, {
-"base": "PhysicsEntity",
-"class": "PhysicsBall",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd"
-}, {
-"base": "RigidBody",
-"class": "PhysicsEntity",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/fgd/solid_classes/physics.gd"
-}, {
-"base": "HBoxContainer",
-"class": "PidContainer",
-"language": "GDScript",
-"path": "res://addons/GhodBase.RunInstance/PidContainer.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://examples/MarcoFazio-VirtualJoysticker/Test/Player.gd"
-}, {
-"base": "Reference",
-"class": "PoissonDiscSampling",
-"language": "GDScript",
-"path": "res://addons/PoissonDiscSampling/PoissonDiscSampling.gd"
-}, {
-"base": "PackedScene",
-"class": "Prefab",
-"language": "GDScript",
-"path": "res://addons/Prefab/Prefab.gd"
-}, {
-"base": "Reference",
-"class": "QodotDependencies",
-"language": "GDScript",
-"path": "res://addons/qodot/src/util/qodot_dependencies.gd"
-}, {
-"base": "QodotSpatial",
-"class": "QodotEntity",
-"language": "GDScript",
-"path": "res://addons/qodot/src/nodes/qodot_entity.gd"
-}, {
-"base": "QodotFGDClass",
-"class": "QodotFGDBaseClass",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_base_class.gd"
-}, {
-"base": "Resource",
-"class": "QodotFGDClass",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_class.gd"
-}, {
-"base": "Resource",
-"class": "QodotFGDFile",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd"
-}, {
-"base": "QodotFGDClass",
-"class": "QodotFGDPointClass",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd"
-}, {
-"base": "QodotFGDClass",
-"class": "QodotFGDSolidClass",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd"
-}, {
-"base": "QodotEntity",
-"class": "QodotLight",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/fgd/point_classes/light.gd"
-}, {
-"base": "QodotSpatial",
-"class": "QodotMap",
-"language": "GDScript",
-"path": "res://addons/qodot/src/nodes/qodot_map.gd"
-}, {
-"base": "EditorPlugin",
-"class": "QodotPlugin",
-"language": "GDScript",
-"path": "res://addons/qodot/src/qodot_plugin.gd"
-}, {
-"base": "KinematicBody",
-"class": "QodotRotateEntity",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/fgd/solid_classes/rotate.gd"
-}, {
-"base": "Spatial",
-"class": "QodotSpatial",
-"language": "GDScript",
-"path": "res://addons/qodot/src/nodes/qodot_spatial.gd"
-}, {
-"base": "Reference",
-"class": "QodotTextureLoader",
-"language": "GDScript",
-"path": "res://addons/qodot/src/util/qodot_texture_loader.gd"
-}, {
-"base": "Reference",
-"class": "QodotUtil",
-"language": "GDScript",
-"path": "res://addons/qodot/src/util/qodot_util.gd"
-}, {
-"base": "Resource",
-"class": "QodotWorldspawnLayer",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/worldspawn_layer.gd"
-}, {
-"base": "Resource",
-"class": "QuakeMapFile",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/quake_map_file.gd"
-}, {
-"base": "EditorImportPlugin",
-"class": "QuakeMapImportPlugin",
-"language": "GDScript",
-"path": "res://addons/qodot/src/import_plugins/quake_map_import_plugin.gd"
-}, {
-"base": "Resource",
-"class": "QuakePaletteFile",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/quake_palette_file.gd"
-}, {
-"base": "EditorImportPlugin",
-"class": "QuakePaletteImportPlugin",
-"language": "GDScript",
-"path": "res://addons/qodot/src/import_plugins/quake_palette_import_plugin.gd"
-}, {
-"base": "Resource",
-"class": "QuakeWadFile",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/quake_wad_file.gd"
-}, {
-"base": "EditorImportPlugin",
-"class": "QuakeWadImportPlugin",
-"language": "GDScript",
-"path": "res://addons/qodot/src/import_plugins/quake_wad_import_plugin.gd"
-}, {
-"base": "Node2D",
-"class": "RMSmartShape2D",
-"language": "GDScript",
-"path": "res://addons/rmsmartshape/RMSmartShape2D.gd"
-}, {
-"base": "Node2D",
-"class": "RMSmartShapeAnchor2D",
-"language": "GDScript",
-"path": "res://addons/rmsmartshape/RMSmartShapeAnchor2D.gd"
-}, {
-"base": "Resource",
-"class": "RMSmartShapeMaterial",
-"language": "GDScript",
-"path": "res://addons/rmsmartshape/RMSmartShapeMaterial.gd"
-}, {
-"base": "Node",
-"class": "RandomSound",
-"language": "GDScript",
-"path": "res://addons/RandomSound/RandomSound.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
-}, {
-"base": "Object",
-"class": "Rhythm",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/rhythm.gd"
-}, {
-"base": "Object",
-"class": "RhythmElement",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/rhythm_element.gd"
-}, {
-"base": "Reference",
-"class": "SMF",
-"language": "GDScript",
-"path": "res://addons/midi/SMF.gd"
-}, {
-"base": "Reference",
-"class": "SaverLoader",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/Procedural Saver Loader/saver_loader.gd"
-}, {
-"base": "Node",
-"class": "SceneBounds",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/scene_bounds.gd"
-}, {
-"base": "Spatial",
-"class": "SceneMap",
-"language": "GDScript",
-"path": "res://addons/scene_map/scene_map.gd"
-}, {
-"base": "Resource",
-"class": "ScenePalette",
-"language": "GDScript",
-"path": "res://addons/scene_map/scene_palette.gd"
-}, {
-"base": "TextureRect",
-"class": "ScrollingTextureRect",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/Gaspi/ScrollingTextureRect.gd"
-}, {
-"base": "FileDialog",
-"class": "SelectScene",
-"language": "GDScript",
-"path": "res://addons/GhodBase.RunInstance/SelectScene.gd"
-}, {
-"base": "Node",
-"class": "ServerAdvertiser",
-"language": "GDScript",
-"path": "res://addons/LANServerBroadcast/server_advertiser/ServerAdvertiser.gd"
-}, {
-"base": "Node",
-"class": "ServerListener",
-"language": "GDScript",
-"path": "res://addons/LANServerBroadcast/server_listener/ServerListener.gd"
-}, {
-"base": "Object",
-"class": "SfxrGenerator",
-"language": "GDScript",
-"path": "res://addons/godot_sfxr/SfxrGenerator.gd"
-}, {
-"base": "Object",
-"class": "SfxrGlobals",
-"language": "GDScript",
-"path": "res://addons/godot_sfxr/SfxrGlobals.gd"
-}, {
-"base": "AudioStreamPlayer",
-"class": "SfxrStreamPlayer",
-"language": "GDScript",
-"path": "res://addons/godot_sfxr/SfxrStreamPlayer.gd"
-}, {
-"base": "Reference",
-"class": "Silk",
-"language": "GDScript",
-"path": "res://addons/nylon/common/silk.gd"
-}, {
-"base": "RigidBody2D",
-"class": "Sliceable2D",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/Sliceable2D.gd"
-}, {
-"base": "Node2D",
-"class": "Slicer2D",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/Slicer2D.gd"
-}, {
-"base": "LiquidLayer",
-"class": "SlimeLayer",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/slime.gd"
-}, {
-"base": "AudioStreamPlayer3D",
-"class": "SmartAudioStream",
-"language": "GDScript",
-"path": "res://addons/smart_audio_stream/SmartAudioStream.gd"
-}, {
-"base": "Reference",
-"class": "SoundFont",
-"language": "GDScript",
-"path": "res://addons/midi/SoundFont.gd"
-}, {
-"base": "Node",
-"class": "SoundManagerModule",
-"language": "GDScript",
-"path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
-}, {
-"base": "ReferenceRect",
-"class": "SpriteText",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/SpriteTextScript/SpriteText.gd"
-}, {
-"base": "Reference",
-"class": "StorageReference",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage_reference.gd"
-}, {
-"base": "Reference",
-"class": "StorageTask",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage_task.gd"
-}, {
-"base": "Node",
-"class": "Tello",
-"language": "GDScript",
-"path": "res://addons/TelloDroneNode/TelloDroneNode.gd"
-}, {
-"base": "BitmapFont",
-"class": "TextureFont",
-"language": "GDScript",
-"path": "res://addons/texture_fonts/Classes/TextureFont.gd"
-}, {
-"base": "Spatial",
-"class": "TextureLayeredMesh",
-"language": "GDScript",
-"path": "res://addons/texture-layered-mesh/src/texture_layered_mesh.gd"
-}, {
-"base": "Reference",
-"class": "TimedCallable",
-"language": "GDScript",
-"path": "res://addons/nylon/core/timed_callable.gd"
-}, {
-"base": "Reference",
-"class": "TimedIter",
-"language": "GDScript",
-"path": "res://addons/nylon/core/timed_iter.gd"
-}, {
-"base": "Reference",
-"class": "TimedResume",
-"language": "GDScript",
-"path": "res://addons/nylon/core/timed_resume.gd"
-}, {
-"base": "Object",
-"class": "TimingDefinition",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/timing_definition.gd"
-}, {
-"base": "Object",
-"class": "TimingElement",
-"language": "GDScript",
-"path": "res://Scripts/ExtraImportAsset/conductor/timing_element.gd"
-}, {
-"base": "Node",
-"class": "TimingStruct",
-"language": "GDScript",
-"path": "res://Scripts/AutoKadeTimingStruct.gd"
-}, {
-"base": "Control",
-"class": "Toast",
-"language": "GDScript",
-"path": "res://addons/toast/toast_script.gd"
-}, {
-"base": "Resource",
-"class": "ToastStyle",
-"language": "GDScript",
-"path": "res://addons/toast/style_resource/toast_style.gd"
-}, {
-"base": "ShaderMaterial",
-"class": "TransparentVolumeOverlay",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/material/transparent_volume_overlayer.gd"
-}, {
-"base": "Resource",
-"class": "TrenchBroomFaceAttrib",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_face_attrib.gd"
-}, {
-"base": "Resource",
-"class": "TrenchBroomGameConfigFile",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_game_config_file.gd"
-}, {
-"base": "Resource",
-"class": "TrenchBroomGameConfigFolder",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_game_config_folder.gd"
-}, {
-"base": "Resource",
-"class": "TrenchBroomTag",
-"language": "GDScript",
-"path": "res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_tag.gd"
-}, {
-"base": "Object",
-"class": "TypeFormattingLogic",
-"language": "GDScript",
-"path": "res://addons/metadata_inspector/TypeFormattingLogic.gd"
-}, {
-"base": "Resource",
-"class": "VectorResource",
-"language": "GDScript",
-"path": "res://addons/vector_resource/vector_resource.gd"
-}, {
-"base": "Control",
-"class": "VirtualJoystick",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/MarcoFazioRandom/Virtual Joystick/joystick/virtual_joystick.gd"
-}, {
-"base": "Node",
-"class": "VoiceInstance",
-"language": "GDScript",
-"path": "res://addons/godot-voip/scripts/voice_instance.gd"
-}, {
-"base": "AudioStreamPlayer",
-"class": "VoiceMic",
-"language": "GDScript",
-"path": "res://addons/godot-voip/scripts/voice_mic.gd"
-}, {
-"base": "Node",
-"class": "VoiceOrchestrator",
-"language": "GDScript",
-"path": "res://addons/godot-voip/scripts/voice_orchestrator.gd"
-}, {
-"base": "Resource",
-"class": "VolumetricMaterial",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/material/volumetric_material.gd"
-}, {
-"base": "LiquidLayer",
-"class": "WaterLayer",
-"language": "GDScript",
-"path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/water.gd"
-}, {
-"base": "Reference",
-"class": "WeakCallable",
-"language": "GDScript",
-"path": "res://addons/nylon/core/weak_callable.gd"
-}, {
-"base": "Reference",
-"class": "WindowRestrictor",
-"language": "GDScript",
-"path": "res://addons/calendar_button/scripts/window_restrictor.gd"
-}, {
-"base": "Area",
-"class": "XRToolsInteractableArea",
-"language": "GDScript",
-"path": "res://addons/godot-xr-tools/objects/Interactable_area.gd"
-}, {
-"base": "PhysicsBody",
-"class": "XRToolsInteractableBody",
-"language": "GDScript",
-"path": "res://addons/godot-xr-tools/objects/Interactable_body.gd"
-}, {
-"base": "RigidBody",
-"class": "XRToolsPickable",
-"language": "GDScript",
-"path": "res://addons/godot-xr-tools/objects/Object_pickable.gd"
-}, {
-"base": "GDScript",
-"class": "dice_syntax",
-"language": "GDScript",
-"path": "res://addons/dice_syntax/dice_syntax.gd"
-}, {
-"base": "Spatial",
-"class": "healthbar3D",
-"language": "GDScript",
-"path": "res://modules/ExtraImport/night-glider/HealthBar3D/Healthbar3D.gd"
-} ]
-_global_script_class_icons={
-"AdMob": "res://admob-lib/icon.png",
-"AnimaEasing": "",
-"AnimaNode": "",
-"AnimaNodesProperties": "",
-"AnimaStrings": "",
-"AnimaTween": "",
-"ArrayUtils": "",
-"AudioManage": "",
-"AudioSpacial2D": "",
-"AudioStreamPlayerADSR": "",
-"BCPServer": "",
-"Bank": "",
-"BaseGameObject": "",
-"BaseGameSystem": "",
-"BaseGameWorld": "",
-"BatchIter": "",
-"BeatPlayer": "",
-"ButtonContextTheme": "",
-"CSVEditor": "",
-"Calendar": "",
-"CalendarButtons": "",
-"ChannelController": "",
-"ChannelGroup": "",
-"ChannelGroupDefinition": "",
-"Colorblindness": "",
-"Component": "",
-"ContributorClass": "",
-"Coroutine": "",
-"CubicBezierCurve": "",
-"CubicBezierEdit": "",
-"CubicBezierRect": "",
-"DTS": "",
-"Date": "",
-"Delaunay": "",
-"Dialogic": "",
-"DialogicBackgroundMusic": "",
-"DialogicDefinitionsUtil": "",
-"DialogicResources": "",
-"DialogicUtil": "",
-"FLMusicLib": "",
-"FirebaseAuth": "",
-"FirebaseDatabase": "",
-"FirebaseDatabaseReference": "",
-"FirebaseDatabaseStore": "",
-"FirebaseDynamicLinks": "",
-"FirebaseFirestore": "",
-"FirebaseResource": "",
-"FirebaseStorage": "",
-"FirebaseUserData": "",
-"FirestoreCollection": "",
-"FirestoreDocument": "",
-"FirestoreQuery": "",
-"FirestoreTask": "",
-"FpsLabel": "",
-"FrustumAABBIntersection": "",
-"Funcy": "",
-"GDDlg_AttributeArray": "",
-"GDDlg_AttributeBase": "",
-"GDDlg_AttributeBool": "",
-"GDDlg_AttributeInteger": "",
-"GDDlg_AttributeMap": "",
-"GDDlg_AttributeString": "",
-"GDDlg_ConditionAnd": "",
-"GDDlg_ConditionBase": "",
-"GDDlg_ConditionFalse": "",
-"GDDlg_ConditionNor": "",
-"GDDlg_ConditionNot": "",
-"GDDlg_ConditionOr": "",
-"GDDlg_DialogDefinition": "",
-"GDDlg_DialogPlayer": "",
-"GDInv_Inventory": "",
-"GDInv_ItemDefinition": "",
-"GDInv_ItemStack": "",
-"GDQTransitionColor": "res://modules/ShadeMask/GDQuestShadeMask/shards.png",
-"GameObject": "",
-"GameSystem": "",
-"GameWorld": "",
-"GaussianRandom": "",
-"GeneralistInfiniBGScroll": "",
-"GistItem": "",
-"GodotSfxr": "",
-"GoogleTranslateAPI": "",
-"HTerrainDataLoader": "",
-"HTerrainDataSaver": "",
-"Halton": "",
-"HeroicPlayer": "",
-"HexagonDisplay2D": "res://addons/HexagonDisplay2D/icon.png",
-"InputEventMultiScreenDrag": "",
-"InputEventScreenPinch": "",
-"InputEventScreenTwist": "",
-"InputEventSingleScreenDrag": "",
-"InputEventSingleScreenTap": "",
-"InputEventSingleScreenTouch": "",
-"InteractMe": "",
-"InvitationItem": "",
-"IsoCube": "",
-"JSONBeautifier": "",
-"JSONMinifier": "",
-"JavascriptManage": "",
-"Joystick": "res://addons/MarcoFazio-VirtualJoystick/preview_icon.png",
-"LavaLayer": "",
-"LayerGroup": "",
-"LayeredSprite": "",
-"LayeredSpriteCloset": "",
-"LiquidLayer": "",
-"MMCurve": "",
-"MMGenBase": "",
-"MMGenBrush": "",
-"MMGenBuffer": "",
-"MMGenComment": "",
-"MMGenContext": "",
-"MMGenDebug": "",
-"MMGenExport": "",
-"MMGenGraph": "",
-"MMGenIOs": "",
-"MMGenImage": "",
-"MMGenIterateBuffer": "",
-"MMGenMaterial": "",
-"MMGenRemote": "",
-"MMGenReroute": "",
-"MMGenShader": "",
-"MMGenSwitch": "",
-"MMGenText": "",
-"MMGenTexture": "",
-"MMGradient": "",
-"MMPaths": "",
-"MMPolygon": "",
-"MMType": "",
-"MPFGame": "",
-"Matrix4": "",
-"MediaCardtridge": "",
-"MidiPlayer": "",
-"MixMode": "res://addons/modifiers/icon_modifiers.svg",
-"MixModesCollection": "res://addons/modifiers/icon_modifiers.svg",
-"ModPlayer": "",
-"Modifiers": "res://addons/modifiers/icon_modifiers.svg",
-"MusicNamePop": "",
-"Network": "",
-"NewInstanceDocker": "",
-"OneShotSpeaker": "",
-"OptionsDialog": "",
-"OrbitArm": "",
-"PhysicsBall": "",
-"PhysicsEntity": "",
-"PidContainer": "",
-"Player": "",
-"PoissonDiscSampling": "",
-"Prefab": "",
-"QodotDependencies": "",
-"QodotEntity": "",
-"QodotFGDBaseClass": "",
-"QodotFGDClass": "",
-"QodotFGDFile": "",
-"QodotFGDPointClass": "",
-"QodotFGDSolidClass": "",
-"QodotLight": "",
-"QodotMap": "",
-"QodotPlugin": "",
-"QodotRotateEntity": "",
-"QodotSpatial": "res://addons/qodot/icons/icon_qodot_spatial.svg",
-"QodotTextureLoader": "",
-"QodotUtil": "",
-"QodotWorldspawnLayer": "",
-"QuakeMapFile": "",
-"QuakeMapImportPlugin": "",
-"QuakePaletteFile": "",
-"QuakePaletteImportPlugin": "",
-"QuakeWadFile": "",
-"QuakeWadImportPlugin": "",
-"RMSmartShape2D": "res://addons/rmsmartshape/shape.png",
-"RMSmartShapeAnchor2D": "res://addons/rmsmartshape/shape_anchor.png",
-"RMSmartShapeMaterial": "",
-"RandomSound": "res://addons/RandomSound/icon_random_sound.svg",
-"RepositoryItem": "",
-"Rhythm": "",
-"RhythmElement": "",
-"SMF": "",
-"SaverLoader": "",
-"SceneBounds": "",
-"SceneMap": "res://addons/scene_map/scene_map.svg",
-"ScenePalette": "res://addons/scene_map/scene_palette.svg",
-"ScrollingTextureRect": "",
-"SelectScene": "",
-"ServerAdvertiser": "res://addons/LANServerBroadcast/server_advertiser/ServerAdvertiser.png",
-"ServerListener": "res://addons/LANServerBroadcast/server_listener/ServerListener.png",
-"SfxrGenerator": "",
-"SfxrGlobals": "",
-"SfxrStreamPlayer": "",
-"Silk": "",
-"Sliceable2D": "",
-"Slicer2D": "",
-"SlimeLayer": "",
-"SmartAudioStream": "",
-"SoundFont": "",
-"SoundManagerModule": "",
-"SpriteText": "",
-"StorageReference": "",
-"StorageTask": "",
-"Tello": "res://addons/TelloDroneNode/drone_icon.png",
-"TextureFont": "res://addons/texture_fonts/Assets/TextureFont.svg",
-"TextureLayeredMesh": "res://addons/texture-layered-mesh/icons/texture_layered_mesh.svg",
-"TimedCallable": "",
-"TimedIter": "",
-"TimedResume": "",
-"TimingDefinition": "",
-"TimingElement": "",
-"TimingStruct": "",
-"Toast": "",
-"ToastStyle": "",
-"TransparentVolumeOverlay": "",
-"TrenchBroomFaceAttrib": "",
-"TrenchBroomGameConfigFile": "",
-"TrenchBroomGameConfigFolder": "",
-"TrenchBroomTag": "",
-"TypeFormattingLogic": "",
-"VectorResource": "",
-"VirtualJoystick": "",
-"VoiceInstance": "",
-"VoiceMic": "",
-"VoiceOrchestrator": "",
-"VolumetricMaterial": "res://addons/silicon.vfx.volumetrics/material/volumetric_material.svg",
-"WaterLayer": "",
-"WeakCallable": "",
-"WindowRestrictor": "",
-"XRToolsInteractableArea": "",
-"XRToolsInteractableBody": "",
-"XRToolsPickable": "",
-"dice_syntax": "",
-"healthbar3D": ""
-}
+config_version=5
 
 [Google]
 
@@ -1403,11 +25,11 @@ Python="C:/Users/joelr/AppData/Local/Programs/Python/Python39/python.exe"
 
 [PluginSettings]
 
-gddlg/DialogJsonPaths=PoolStringArray( "res://Datas/Totaling/GDDialog/" )
+gddlg/DialogJsonPaths=PackedStringArray("res://Datas/Totaling/GDDialog/")
 gddlg/LoadOnReady=true
 gddlg/StrictDialogAttributes=false
 gddlg/StrictOptionAttributes=false
-gdinv/ItemJsonPaths=PoolStringArray( "res://Datas/Totaling/GDInventory/" )
+gdinv/ItemJsonPaths=PackedStringArray("res://Datas/Totaling/GDInventory/")
 gdinv/LoadOnReady=true
 
 [WAT]
@@ -1417,9 +39,9 @@ Test_Directory="res://Datas/Totaling/WAT-Tests"
 [addons]
 
 quick_scenes/selected_scene=-1
-quick_scenes/quick_run_shortcut=Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":true,"scancode":16777252,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+quick_scenes/quick_run_shortcut=Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 
-quick_scenes/scene_list=PoolStringArray( "res://DummyTest/firebasetonl.tscn" )
+quick_scenes/scene_list=PackedStringArray("res://DummyTest/firebasetonl.tscn")
 
 [android]
 
@@ -1432,12 +54,13 @@ config/description="Cinema enters game console"
 run/main_scene="res://Namety.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Perkedel Technologies/Hexagon Engine"
-boot_splash/image="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png"
-boot_splash/bg_color=Color( 0, 0, 0.25098, 1 )
-config/icon="res://Sprites/HexagonEngineSign.png"
-config/windows_native_icon="res://Sprites/HexagonEngineSign.ico"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
+config/features=PackedStringArray("4.0")
+boot_splash/bg_color=Color(0, 0, 0.25098, 1)
+boot_splash/image="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png"
+config/icon="res://Sprites/HexagonEngineSign.png"
+config/windows_native_icon="res://Sprites/HexagonEngineSign.ico"
 
 [audio]
 
@@ -1491,23 +114,22 @@ gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/dpi/allow_hidpi=true
-window/per_pixel_transparency/enabled=true
-mouse_cursor/custom_image="res://Sprites/GameCursorVacuumSkollNano.png"
-mouse_cursor/tooltip_position_offset=Vector2( 30, 30 )
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="res://Sprites/GameCursorVacuumSkollNano.png"
+mouse_cursor/tooltip_position_offset=Vector2(30, 30)
+window/per_pixel_transparency/enabled=true
 window/per_pixel_transparency/splash=true
 
 [editor]
 
-search_in_file_extensions=PoolStringArray( "gd", "gdshader", "shader", "json" )
+search_in_file_extensions=PackedStringArray("gd", "gdshader", "shader", "json")
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/ActionIcon/plugin.cfg", "res://addons/AudioEffectInspector/plugin.cfg", "res://addons/Extended Kinematic Body/plugin.cfg", "res://addons/Flare/plugin.cfg", "res://addons/FontAwesome5/plugin.cfg", "res://addons/GDBehavior/plugin.cfg", "res://addons/GhodBase.RunInstance/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/Holepunch/plugin.cfg", "res://addons/KOBUGE-games.CircularContainer/plugin.cfg", "res://addons/SIsilicon.3d.text/plugin.cfg", "res://addons/WebAudioExternal/plugin.cfg", "res://addons/alanscodelog.gimbalcontrol/plugin.cfg", "res://addons/anima/plugin.cfg", "res://addons/animated_grid_container_plugin/plugin.cfg", "res://addons/arabic-text/plugin.cfg", "res://addons/balloon/plugin.cfg", "res://addons/branch/plugin.cfg", "res://addons/build-and-deploy/plugin.cfg", "res://addons/calendar_button/plugin.cfg", "res://addons/csv-data-importer/plugin.cfg", "res://addons/cubic_bezier_controls/plugin.cfg", "res://addons/destruction/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/dice_syntax/plugin.cfg", "res://addons/dockable_container/plugin.cfg", "res://addons/editor_physics/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/extend/plugin.cfg", "res://addons/file-editor/plugin.cfg", "res://addons/funcy/plugin.cfg", "res://addons/gdDelaunay/plugin.cfg", "res://addons/gddlg/plugin.cfg", "res://addons/gdfxr/plugin.cfg", "res://addons/gdinv/plugin.cfg", "res://addons/gdsam/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/godot-firebase/plugin.cfg", "res://addons/godot-kra-psd-importer/plugin.cfg", "res://addons/godot-openxr/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/godot-stopwatch-master/plugin.cfg", "res://addons/godot-voip/plugin.cfg", "res://addons/godot_bcp_server/plugin.cfg", "res://addons/godot_piskel_importer/plugin.cfg", "res://addons/godot_pixelorama_importer/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/godot_sheets/plugin.cfg", "res://addons/gui_in_vr/plugin.cfg", "res://addons/linear_stairs/plugin.cfg", "res://addons/makefile_launcher/plugin.cfg", "res://addons/metadata_inspector/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/mixing-desk/plugin.cfg", "res://addons/modifiers/plugin.cfg", "res://addons/modplayer/plugin.cfg", "res://addons/nativelib-export/plugin.cfg", "res://addons/notes_tab/plugin.cfg", "res://addons/nylon/plugin.cfg", "res://addons/opus/plugin.cfg", "res://addons/paulloz.colorblindness/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_maker/plugin.cfg", "res://addons/qodot/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg", "res://addons/radial_menu/plugin.cfg", "res://addons/radial_progress/plugin.cfg", "res://addons/randomAudioStreamPlayer/plugin.cfg", "res://addons/scale_importer/plugin.cfg", "res://addons/scene_map/plugin.cfg", "res://addons/screencast_keys/plugin.cfg", "res://addons/shell_fur/plugin.cfg", "res://addons/silicon.vfx.volumetrics/plugin.cfg", "res://addons/sketchfab/plugin.cfg", "res://addons/smart_audio_stream/plugin.cfg", "res://addons/sparrowatlas_editor/plugin.cfg", "res://addons/string_keys/plugin.cfg", "res://addons/task_dispatcher/plugin.cfg", "res://addons/terminal/plugin.cfg", "res://addons/textureRectUrl/textureRectUrl/plugin.cfg", "res://addons/texture_fonts/plugin.cfg", "res://addons/tile_spawner/plugin.cfg", "res://addons/toast/plugin.cfg", "res://addons/tool_button/plugin.cfg", "res://addons/transitions/plugin.cfg", "res://addons/vector_resource/plugin.cfg", "res://addons/vpainter/plugin.cfg", "res://addons/wakatime/plugin.cfg", "res://addons/water2d/plugin.cfg", "res://addons/waterways/plugin.cfg", "res://addons/zylann.editor_light/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg", "res://addons/zylann.sdf_blender/plugin.cfg", "res://addons/zylann.treegen/plugin.cfg" )
+enabled=PackedStringArray("res://addons/perkedeltestmakeplugin/plugin.cfg")
 
 [filesystem]
 
@@ -1528,14 +150,14 @@ environment_variables/clientSecret="FY3272m2sEiUniJXT-y7LuRC"
 
 [gdnative]
 
-singletons=[ "res://addons/godot-openxr/config/godot_openxr.gdnlib", "res://addons/godot-openxr/godot_openxr.gdnlib" ]
-singletons_disabled=[  ]
+singletons=["res://addons/godot-openxr/config/godot_openxr.gdnlib", "res://addons/godot-openxr/godot_openxr.gdnlib"]
+singletons_disabled=[]
 
 [gui]
 
-theme/use_hidpi=true
 theme/custom="res://Theme/Perkedel_Tema.tres"
 theme/custom_font="res://fonts/Built/Ubuntu_R_16tred.tres"
+theme/use_hidpi=true
 
 [input]
 
@@ -1545,357 +167,357 @@ minecraft_Meletakkan={
 }
 ui_mouse_right={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
+]
 }
 ui_mouse_left={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
 }
 Loncat={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
 }
 Serang={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+]
 }
 Pindai={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+]
 }
 Jongkok={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+]
 }
 AnalogKiri_x={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+]
 }
 AnalogKiri_x-={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+]
 }
 AnalogKiri_y={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+]
 }
 AnalogKiri_y-={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+]
 }
 AnalogKanan_x={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
+]
 }
 AnalogKanan_x-={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
+]
 }
 AnalogKanan_y={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
+]
 }
 AnalogKanan_y-={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+]
 }
 TembakKiri={
 "deadzone": 0.0,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":6,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":6,"axis_value":1.0,"script":null)
+]
 }
 TembakKanan={
 "deadzone": 0.0,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":7,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":7,"axis_value":1.0,"script":null)
+]
 }
 DaftarPauso={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 EscapeButton={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 clic_kiri={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
 }
 clic_kanan={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
+]
 }
 Jalan_Depan={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
- ]
+]
 }
 Jalan_Belakang={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
- ]
+]
 }
 Jalan_Kiri={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
- ]
+]
 }
 Jalan_Kanan={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
- ]
+]
 }
 Melompat={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 Ganti_Topi={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 Menyelam_Whoosh={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 Valve_Interaksi={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 Nyalakan_Topi={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 Tunda={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 Keyboard_Space={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 debug_showZetrixView={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":true,"meta":false,"command":true,"pressed":false,"scancode":84,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 quentincaffeino_console_toggle={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":96,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 quentincaffeino_console_autocomplete={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 quentincaffeino_console_history_up={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 quentincaffeino_console_history_down={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 debug={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":true,"meta":false,"command":true,"pressed":false,"scancode":96,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 gem_swap_up={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 gem_swap_left={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 gem_swap_down={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 gem_swap_right={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 sample_player0={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 sample_player1={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":76,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 Kamera_Atas={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
+]
 }
 Kamera_Kiri={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
+]
 }
 Kamera_Kanan={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
+]
 }
 Kamera_Bawah={
 "deadzone": 0.15,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+]
 }
 miner_Menambang={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 minecraft_Menambang={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 media_Mainkan={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":33554431,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 media_Tunda={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 media_Hentikan={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 media_MajuCepat={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 media_MundurCepat={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 media_Mundur={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 media_Selanjutnya={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777295,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 media_Sebelumnya={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777294,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 pinball_PaddleKiri={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 pinball_PaddleKanan={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":47,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
- ]
+]
 }
 pinball_Plunger={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
- ]
+]
 }
 pinball_miringDepan={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 pinball_miringKiri={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 pinball_miringKanan={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 pinball_miringBawah={
 "deadzone": 0.5,
-"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
 test_morgir={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
- ]
+]
 }
 
 [layer_names]
@@ -1906,7 +528,7 @@ test_morgir={
 
 [locale]
 
-locale_filter=[ 0, [  ] ]
+locale_filter=[0, []]
 
 [memory]
 
@@ -1915,21 +537,21 @@ limits/message_queue/max_size_kb=4255
 
 [physics]
 
-common/physics_fps=500
 3d/physics_engine="Bullet"
-2d/thread_model=2
+common/physics_fps=500
+2d/run_on_thread=2
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0.0392157, 0.0509804, 0.360784, 1)
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/fallback_to_gles2=true
 quality/intended_usage/framebuffer_allocation.mobile=2
 threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_pvrtc=true
 quality/subsurface_scattering/quality=2
-environment/default_clear_color=Color( 0.0392157, 0.0509804, 0.360784, 1 )
 quality/depth/hdr.mobile=true
-environment/default_environment="res://default_env.tres"
 
 [tiled_importer]
 

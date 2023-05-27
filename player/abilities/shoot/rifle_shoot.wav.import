@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/rifle_shoot.wav-f5b378dfbef29be3cbd89c1358851706.sample"
+type="AudioStreamWAV"
+uid="uid://ce84wqddlid6l"
+path="res://.godot/imported/rifle_shoot.wav-f5b378dfbef29be3cbd89c1358851706.sample"
 
 [deps]
 
 source_file="res://player/abilities/shoot/rifle_shoot.wav"
-dest_files=[ "res://.import/rifle_shoot.wav-f5b378dfbef29be3cbd89c1358851706.sample" ]
+dest_files=["res://.godot/imported/rifle_shoot.wav-f5b378dfbef29be3cbd89c1358851706.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

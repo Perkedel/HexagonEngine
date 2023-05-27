@@ -6,11 +6,11 @@
 [ext_resource path="res://modules/Reusables/SuperLabel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://modules/Component/MusicNamePop.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 font_path = "res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 resource_name = "SuperLabel"
 size = 24
@@ -21,8 +21,8 @@ font_data = SubResource( 1 )
 [node name="RhythmTestoid" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.49829
-margin_right = 1.49829
+offset_left = 1.49829
+offset_right = 1.49829
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -898.597
-margin_top = -478.597
-margin_right = -246.597
-margin_bottom = -300.597
+offset_left = -898.597
+offset_top = -478.597
+offset_right = -246.597
+offset_bottom = -300.597
 MenuName = "Play"
 ChooseOrientation = 2
 
@@ -52,10 +52,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -231.851
-margin_top = -471.106
-margin_right = 420.149
-margin_bottom = -293.106
+offset_left = -231.851
+offset_top = -471.106
+offset_right = 420.149
+offset_bottom = -293.106
 MenuName = "Stop"
 ChooseOrientation = 2
 
@@ -64,11 +64,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -459.5
-margin_top = -129.5
-margin_right = 459.5
-margin_bottom = 129.5
-custom_fonts/font = SubResource( 2 )
+offset_left = -459.5
+offset_top = -129.5
+offset_right = 459.5
+offset_bottom = 129.5
+theme_override_fonts/font = SubResource( 2 )
 text = "Labelle"
 fontFile = SubResource( 1 )
 

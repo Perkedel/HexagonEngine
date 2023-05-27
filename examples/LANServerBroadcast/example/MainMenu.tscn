@@ -7,10 +7,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -256.0
-margin_top = -256.0
-margin_right = 256.0
-margin_bottom = 256.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 alignment = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -18,24 +18,24 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 200.0
-margin_right = 512.0
-margin_bottom = 249.0
+offset_top = 200.0
+offset_right = 512.0
+offset_bottom = 249.0
 text = "Main Menu
 "
 align = 1
 valign = 1
 
 [node name="HostButton" type="Button" parent="."]
-margin_top = 253.0
-margin_right = 512.0
-margin_bottom = 280.0
+offset_top = 253.0
+offset_right = 512.0
+offset_bottom = 280.0
 text = "Host Game"
 
 [node name="BrowseButton" type="Button" parent="."]
-margin_top = 284.0
-margin_right = 512.0
-margin_bottom = 311.0
+offset_top = 284.0
+offset_right = 512.0
+offset_bottom = 311.0
 text = "Browse LAN Games"
 [connection signal="pressed" from="HostButton" to="." method="_on_HostButton_pressed"]
 [connection signal="pressed" from="BrowseButton" to="." method="_on_BrowseButton_pressed"]

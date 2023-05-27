@@ -1,7 +1,7 @@
-tool
+@tool
 extends HBoxContainer
 
-export (String) var VariableName = "CheckButton"
+@export (String) var VariableName = "CheckButton"
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,7 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 func ForceValue(value: bool):
-	$HBoxContainer/CheckButton.pressed = value
+	$HBoxContainer/CheckButton.button_pressed = value
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

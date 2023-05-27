@@ -2,20 +2,20 @@ extends Popup
 
 class_name MusicNamePop
 
-export(Texture) var albumPic:Texture = load("res://Sprites/MavrickleIcon.png")
-export(String) var title = "Title"
-export(String) var artist = "Artist"
-export(String) var license = "CC4.0-BY-SA"
-export(String) var source = "https://cointr.ee/joelwindows7"
-export(float) var howLong = .5
-export(float) var hideAfterIn = 5
+@export var albumPic: Texture2D:Texture2D = load("res://Sprites/MavrickleIcon.png")
+@export var title: String = "Title"
+@export var artist: String = "Artist"
+@export var license: String = "CC4.0-BY-SA"
+@export var source: String = "https://cointr.ee/joelwindows7"
+@export var howLong: float = .5
+@export var hideAfterIn: float = 5
 
-onready var tween = $Tween
-onready var AlbumPic = $HBoxContainer/AlbumPicture
-onready var Title = $HBoxContainer/TextLabels/Title
-onready var Artist = $HBoxContainer/TextLabels/Artist
-onready var License = $HBoxContainer/TextLabels/License
-onready var Source = $HBoxContainer/TextLabels/Source
+@onready var tween = $Tween
+@onready var AlbumPic = $HBoxContainer/AlbumPicture
+@onready var Title = $HBoxContainer/TextLabels/Title
+@onready var Artist = $HBoxContainer/TextLabels/Artist
+@onready var License = $HBoxContainer/TextLabels/License
+@onready var Source = $HBoxContainer/TextLabels/Source
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -24,7 +24,7 @@ onready var Source = $HBoxContainer/TextLabels/Source
 func _ready():
 	pass # Replace with function body.
 
-func processTheName(theTitle:String="Untitled",theArtist:String="Unknown",theLicense="??? license",theSource:String="??? sourced",theImage:Texture=preload("res://Sprites/MavrickleIcon.png")):
+func processTheName(theTitle:String="Untitled",theArtist:String="Unknown",theLicense="??? license",theSource:String="??? sourced",theImage:Texture2D=preload("res://Sprites/MavrickleIcon.png")):
 	title = theTitle
 	artist = theArtist
 	license = theLicense
@@ -50,14 +50,14 @@ func popTheName(forHowLong:float = 5.0,NoAnimation:bool = false):
 	hideAfterIn = forHowLong
 	show()
 	if not NoAnimation:
-		tween.interpolate_property(self,"rect_position",Vector2(-rect_size.x,rect_position.y),Vector2(0,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
+		tween.interpolate_property(self,"position",Vector2(-size.x,position.y),Vector2(0,position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
 		tween.start()
-		yield(tween,"tween_completed")
-	yield(get_tree().create_timer(hideAfterIn),"timeout")
+		await tween.tween_completed
+	await get_tree().create_timer(hideAfterIn).timeout
 	if not NoAnimation:
-		tween.interpolate_property(self,"rect_position",Vector2(0,rect_position.y),Vector2(-rect_size.x,rect_position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
+		tween.interpolate_property(self,"position",Vector2(0,position.y),Vector2(-size.x,position.y),howLong,Tween.TRANS_LINEAR,Tween.EASE_IN )
 		tween.start()
-		yield(tween,"tween_completed")
+		await tween.tween_completed
 	hide()
 	pass
 

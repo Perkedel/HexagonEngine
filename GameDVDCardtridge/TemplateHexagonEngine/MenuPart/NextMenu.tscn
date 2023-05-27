@@ -1,22 +1,22 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/SettingIcon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/SettingIcon.png" type="Texture2D" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MainMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/SettingArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sprites/UnkownIcon.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/PlayIcon.png" type="Texture" id=7]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Sprites/UnkownIcon.png" type="Texture2D" id=5]
+[ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture2D" id=6]
+[ext_resource path="res://Sprites/PlayIcon.png" type="Texture2D" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=8]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableMenuArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/UnknownArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/ExtrasArea.tscn" type="PackedScene" id=11]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/LevelSelectArea.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/GameplayLevelLoadingInfoArea.tscn" type="PackedScene" id=13]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=14]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=15]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -48,24 +48,24 @@ __meta__ = {
 }
 
 [node name="HeadingBar" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 0, 150 )
+offset_right = 1920.0
+offset_bottom = 150.0
+custom_minimum_size = Vector2( 0, 150 )
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="IconArea" type="CenterContainer" parent="VBoxContainer/HeadingBar"]
-margin_right = 150.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 150, 150 )
+offset_right = 150.0
+offset_bottom = 150.0
+custom_minimum_size = Vector2( 150, 150 )
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HeadingBar/IconArea"]
-margin_left = 25.0
-margin_top = 25.0
-margin_right = 125.0
-margin_bottom = 125.0
-rect_min_size = Vector2( 100, 100 )
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 125.0
+offset_bottom = 125.0
+custom_minimum_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
@@ -73,29 +73,29 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleBarArea" type="HBoxContainer" parent="VBoxContainer/HeadingBar"]
-margin_left = 154.0
-margin_right = 1920.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 1760, 150 )
+offset_left = 154.0
+offset_right = 1920.0
+offset_bottom = 150.0
+custom_minimum_size = Vector2( 1760, 150 )
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/HeadingBar/TitleBarArea"]
-margin_right = 1766.0
-margin_bottom = 150.0
+offset_right = 1766.0
+offset_bottom = 150.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 8 )
+theme_override_fonts/font = ExtResource( 8 )
 text = "Next Menu TitleBar!"
 valign = 1
 autowrap = true
 clip_text = true
 
 [node name="MenuSpaceArea" type="Control" parent="VBoxContainer"]
-margin_top = 154.0
-margin_right = 1920.0
-margin_bottom = 976.0
+offset_top = 154.0
+offset_right = 1920.0
+offset_bottom = 976.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -118,14 +118,14 @@ visible = false
 visible = false
 
 [node name="ButtonNavigateArea" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 
 [node name="BackButton" parent="VBoxContainer/ButtonNavigateArea" instance=ExtResource( 14 )]
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 [connection signal="LeaveAndBackToMenu" from="VBoxContainer/MenuSpaceArea/UnknownArea" to="." method="_on_UnknownArea_LeaveAndBackToMenu"]
 [connection signal="AlsoPlsConnectThisReportStatus" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_AlsoPlsConnectThisReportStatus"]
 [connection signal="PleaseLoadThisLevelOf" from="VBoxContainer/MenuSpaceArea/LevelSelectArea" to="." method="_on_LevelSelectArea_PleaseLoadThisLevelOf"]

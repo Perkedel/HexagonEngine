@@ -1,10 +1,10 @@
 [gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://DummyTest/CenterSpeaker.tscn" type="PackedScene" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_B_128tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_128tred.tres" type="FontFile" id=2]
 [ext_resource path="res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd" type="Script" id=3]
 [ext_resource path="res://DummyTest/TestDaSpeakerNowButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=5]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Front_Left.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Front_Right.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/Side_Left.wav" type="AudioStream" id=8]
@@ -14,7 +14,7 @@
 [ext_resource path="res://DummyTest/SurroundTestEnvironment.gd" type="Script" id=12]
 [ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/RAW/LFE-Front_Center-raw.wav" type="AudioStream" id=13]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -22,7 +22,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -30,7 +30,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -38,7 +38,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -46,7 +46,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="FontFile" id=5]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -54,7 +54,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="FontFile" id=6]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -62,7 +62,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="FontFile" id=7]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -70,7 +70,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="FontFile" id=8]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -78,43 +78,43 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 5 )
 
-[node name="SurroundTestEnvironment" type="Spatial"]
+[node name="SurroundTestEnvironment" type="Node3D"]
 script = ExtResource( 12 )
 
-[node name="Speaker" type="Spatial" parent="."]
+[node name="Speaker" type="Node3D" parent="."]
 
 [node name="CenterSpeaker" parent="Speaker" instance=ExtResource( 1 )]
 
 [node name="LeftSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -50, 0, -50 )
+transform = Transform3D( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -50, 0, -50 )
 stream = ExtResource( 6 )
 
 [node name="SideLeftSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( 5.96047e-08, 0, -1, 0, 1, 0, 1, 0, 5.96047e-08, -50, 0, 0 )
+transform = Transform3D( 5.96047e-08, 0, -1, 0, 1, 0, 1, 0, 5.96047e-08, -50, 0, 0 )
 stream = ExtResource( 8 )
 
 [node name="RearLeftSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -50, 0, 50 )
+transform = Transform3D( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -50, 0, 50 )
 stream = ExtResource( 9 )
 
 [node name="RearRightSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 50, 0, 50 )
+transform = Transform3D( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 50, 0, 50 )
 stream = ExtResource( 11 )
 
 [node name="SideRightSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, 50, 0, 0 )
+transform = Transform3D( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, 50, 0, 0 )
 stream = ExtResource( 10 )
 
 [node name="RightSpeaker" parent="Speaker" instance=ExtResource( 1 )]
-transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 50, 0, -50 )
+transform = Transform3D( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 50, 0, -50 )
 stream = ExtResource( 7 )
 
-[node name="Subwoofer" type="Spatial" parent="."]
+[node name="Subwoofer" type="Node3D" parent="."]
 
 [node name="CenterLFE" parent="Subwoofer" instance=ExtResource( 1 )]
 stream = ExtResource( 13 )
 
-[node name="Camera" type="Camera" parent="."]
+[node name="Camera3D" type="Camera3D" parent="."]
 
 [node name="SpeakerPanel" type="Control" parent="."]
 anchor_right = 1.0
@@ -132,25 +132,25 @@ __meta__ = {
 }
 
 [node name="Labelrer" type="Label" parent="SpeakerPanel/VBoxContainer"]
-margin_top = 211.0
-margin_right = 1920.0
-margin_bottom = 364.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 211.0
+offset_right = 1920.0
+offset_bottom = 364.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Speaker Test"
 align = 1
 valign = 1
 
 [node name="SpeakerContains" type="HBoxContainer" parent="SpeakerPanel/VBoxContainer"]
-margin_top = 368.0
-margin_right = 1920.0
-margin_bottom = 868.0
-rect_min_size = Vector2( 0, 500 )
+offset_top = 368.0
+offset_right = 1920.0
+offset_bottom = 868.0
+custom_minimum_size = Vector2( 0, 500 )
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="MainSpeaker" type="Container" parent="SpeakerPanel/VBoxContainer/SpeakerContains"]
-margin_right = 637.0
-margin_bottom = 500.0
+offset_right = 637.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )
@@ -163,60 +163,60 @@ animate/percent_visible = 1.0
 animate/all_at_once = false
 
 [node name="TestDaSpeakerNowC" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="TestDaSpeakerNowL" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 112.134
-margin_top = 75.3021
-margin_right = 212.134
-margin_bottom = 175.302
-custom_fonts/font = SubResource( 2 )
+offset_left = 112.134
+offset_top = 75.3021
+offset_right = 212.134
+offset_bottom = 175.302
+theme_override_fonts/font = SubResource( 2 )
 text = "L"
 
 [node name="TestDaSpeakerNowSL" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 73.5144
-margin_top = 244.504
-margin_right = 173.514
-margin_bottom = 344.504
-custom_fonts/font = SubResource( 3 )
+offset_left = 73.5144
+offset_top = 244.504
+offset_right = 173.514
+offset_bottom = 344.504
+theme_override_fonts/font = SubResource( 3 )
 text = "SL"
 
 [node name="TestDaSpeakerNowRL" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 181.723
-margin_top = 380.194
-margin_right = 281.723
-margin_bottom = 480.194
-custom_fonts/font = SubResource( 4 )
+offset_left = 181.723
+offset_top = 380.194
+offset_right = 281.723
+offset_bottom = 480.194
+theme_override_fonts/font = SubResource( 4 )
 text = "RL"
 
 [node name="TestDaSpeakerNowRR" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 355.277
-margin_top = 380.194
-margin_right = 455.277
-margin_bottom = 480.194
-custom_fonts/font = SubResource( 5 )
+offset_left = 355.277
+offset_top = 380.194
+offset_right = 455.277
+offset_bottom = 480.194
+theme_override_fonts/font = SubResource( 5 )
 text = "RR"
 
 [node name="TestDaSpeakerNowSR" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 463.486
-margin_top = 244.504
-margin_right = 563.486
-margin_bottom = 344.504
-custom_fonts/font = SubResource( 6 )
+offset_left = 463.486
+offset_top = 244.504
+offset_right = 563.486
+offset_bottom = 344.504
+theme_override_fonts/font = SubResource( 6 )
 text = "SR"
 
 [node name="TestDaSpeakerNowR" parent="SpeakerPanel/VBoxContainer/SpeakerContains/MainSpeaker" instance=ExtResource( 4 )]
-margin_left = 424.866
-margin_top = 75.302
-margin_right = 524.866
-margin_bottom = 175.302
-custom_fonts/font = SubResource( 7 )
+offset_left = 424.866
+offset_top = 75.302
+offset_right = 524.866
+offset_bottom = 175.302
+theme_override_fonts/font = SubResource( 7 )
 text = "R"
 
 [node name="LFESpeaker" type="Container" parent="SpeakerPanel/VBoxContainer/SpeakerContains"]
-margin_left = 641.0
-margin_right = 1278.0
-margin_bottom = 500.0
+offset_left = 641.0
+offset_right = 1278.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )
@@ -229,13 +229,13 @@ animate/percent_visible = 1.0
 animate/all_at_once = false
 
 [node name="TestDaSpeakerNowLFE" parent="SpeakerPanel/VBoxContainer/SpeakerContains/LFESpeaker" instance=ExtResource( 4 )]
-custom_fonts/font = SubResource( 8 )
+theme_override_fonts/font = SubResource( 8 )
 text = "LFE"
 
 [node name="HeightSpeaker" type="Container" parent="SpeakerPanel/VBoxContainer/SpeakerContains"]
-margin_left = 1282.0
-margin_right = 1920.0
-margin_bottom = 500.0
+offset_left = 1282.0
+offset_right = 1920.0
+offset_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 3 )

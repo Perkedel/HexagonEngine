@@ -29,8 +29,8 @@ func ConnectCartridge():
 	# Connect important signals of basically every DVD Cartridge
 	if(InstanceDVD):
 		print("Connect Cartridge!") #cartride connecc say
-		InstanceDVD.connect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
-		InstanceDVD.connect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		InstanceDVD.connect("ChangeDVD_Exec", Callable(self, "_on_ChangeDVD_Exec"))
+		InstanceDVD.connect("Shutdown_Exec", Callable(self, "_on_Shutdown_Exec"))
 		pass
 	else:
 		print("No Connect Cartridge, DVD slot empty!")
@@ -55,10 +55,10 @@ func ExecuteShutdown():
 	pass
 func ExecuteRemoveAllDVDs():
 	for leftovers in get_children():
-		if leftovers.is_connected("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec"):
-			leftovers.disconnect("ChangeDVD_Exec", self, "_on_ChangeDVD_Exec")
-		if leftovers.is_connected("Shutdown_Exec", self, "_on_Shutdown_Exec"):
-			leftovers.disconnect("Shutdown_Exec", self, "_on_Shutdown_Exec")
+		if leftovers.is_connected("ChangeDVD_Exec", Callable(self, "_on_ChangeDVD_Exec")):
+			leftovers.disconnect("ChangeDVD_Exec", Callable(self, "_on_ChangeDVD_Exec"))
+		if leftovers.is_connected("Shutdown_Exec", Callable(self, "_on_Shutdown_Exec")):
+			leftovers.disconnect("Shutdown_Exec", Callable(self, "_on_Shutdown_Exec"))
 		remove_child(leftovers)
 		leftovers.queue_free()
 		#leftovers.free()
@@ -68,7 +68,7 @@ func ExecuteRemoveAllDVDs():
 signal DVDTryLoad
 func PlayDVD(LoadDVD):
 	emit_signal("DVDTryLoad")
-	InstanceDVD = LoadDVD.instance()
+	InstanceDVD = LoadDVD.instantiate()
 	add_child(InstanceDVD)
 	ConnectCartridge()
 	pass

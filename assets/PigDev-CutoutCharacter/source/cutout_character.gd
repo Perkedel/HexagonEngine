@@ -1,5 +1,5 @@
 extends Node2D
-onready var initial_scale = get_scale()
+@onready var initial_scale = get_scale()
 
 enum directions {RIGHT, LEFT}
 

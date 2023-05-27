@@ -1,21 +1,21 @@
-tool
+@tool
 extends Resource
 class_name MediaCardtridge
 # Damn it is was supposed to be named Media Cardtridge
 
 #resource_name = "Music Cardtridge"
-export(Texture) var albumPic = load("res://Sprites/MavrickleIcon.png")
-export(String) var title = "MediaCardtridge"
-export(String) var artist = "JOELwindows7"
-export(String) var license = "CC4.0-BY-SA"
-export(float) var tempo = 120.0
-export(int) var timeMeasures = 4
-export(Array,String) var source = ["https://cointr.ee/joelwindows7","https://odysee.com/@JOELwindows7"]
-export(Array,AudioStream) var Audios
-export(Array,VideoStream) var Videos
-export(Array,String) var MIDIfiles
-export(String) var sTILEStepsFile # Rhythm JSON file
-export(Dictionary) var coreEvents # tempo, time measure changes
+@export var albumPic: Texture2D = load("res://Sprites/MavrickleIcon.png")
+@export var title: String = "MediaCardtridge"
+@export var artist: String = "JOELwindows7"
+@export var license: String = "CC4.0-BY-SA"
+@export var tempo: float = 120.0
+@export var timeMeasures: int = 4
+@export var source:Array = ["https://cointr.ee/joelwindows7","https://odysee.com/@JOELwindows7"] # (Array,String)
+@export var Audios:Array # (Array,AudioStream)
+@export var Videos:Array # (Array,VideoStream)
+@export var MIDIfiles:Array # (Array,String)
+@export var sTILEStepsFile: String # Rhythm JSON file
+@export var coreEvents: Dictionary # tempo, time measure changes
 
 func get_audio(which:int) -> AudioStream:
 	return Audios[which]

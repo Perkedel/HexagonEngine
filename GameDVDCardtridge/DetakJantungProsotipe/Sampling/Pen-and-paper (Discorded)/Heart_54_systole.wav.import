@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample"
+type="AudioStreamWAV"
+uid="uid://dp33rjnuqyn2w"
+path="res://.godot/imported/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Sampling/Pen-and-paper (Discorded)/Heart_54_systole.wav"
-dest_files=[ "res://.import/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample" ]
+dest_files=["res://.godot/imported/Heart_54_systole.wav-4e8c5d6a92bfbe90d5a581f0561f18ac.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

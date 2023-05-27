@@ -1,4 +1,4 @@
-tool
+@tool
 # https://youtu.be/K9FBpJ2Ypb4
 # https://github.com/GDQuest/godot-demos/tree/master/2018/09-20-shaders/shaders/masks
 # https://github.com/GDQuest/godot-demos
@@ -8,10 +8,10 @@ tool
 extends ColorRect
 class_name GDQTransitionColor, "res://modules/ShadeMask/GDQuestShadeMask/shards.png"
 
-export(float,0,1) var cutoff = 0.0 setget set_cutoff
-export(float,0,1) var smooth_size = .005 setget set_smooth_size
-export(Texture) var mask setget set_mask
-export(Color) var warna setget set_warna
+@export var cutoff = 0.0: set = set_cutoff
+@export var smooth_size = .005: set = set_smooth_size
+@export var mask: Texture2D: set = set_mask
+@export var warna: Color: set = set_warna
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -24,7 +24,7 @@ func set_smooth_size(howBig:float = .005):
 	smooth_size = howBig
 	_syncParams()
 
-func set_mask(withImage:Texture):
+func set_mask(withImage:Texture2D):
 	mask = withImage
 	_syncParams()
 
@@ -37,10 +37,10 @@ func _ready():
 	pass # Replace with function body.
 
 func _syncParams():
-	material.set_shader_param("cutoff",cutoff)
-	material.set_shader_param("smooth_size",smooth_size)
-	material.set_shader_param("mask",mask)
-	material.set_shader_param("color",warna)
+	material.set_shader_parameter("cutoff",cutoff)
+	material.set_shader_parameter("smooth_size",smooth_size)
+	material.set_shader_parameter("mask",mask)
+	material.set_shader_parameter("color",warna)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

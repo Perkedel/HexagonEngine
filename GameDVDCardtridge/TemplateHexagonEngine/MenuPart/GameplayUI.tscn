@@ -2,12 +2,12 @@
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -31,56 +31,56 @@ mouse_filter = 2
 alignment = 1
 
 [node name="TopVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 354.0
+offset_right = 1920.0
+offset_bottom = 354.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TopButtonings" type="HBoxContainer" parent="TotalVBoxContainer/TopVBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 50 )
+offset_right = 1920.0
+offset_bottom = 67.0
+custom_minimum_size = Vector2( 0, 50 )
 mouse_filter = 2
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="PauseButton" parent="TotalVBoxContainer/TopVBoxContainer/TopButtonings" instance=ExtResource( 2 )]
-margin_left = 835.0
-margin_right = 1085.0
-margin_bottom = 67.0
+offset_left = 835.0
+offset_right = 1085.0
+offset_bottom = 67.0
 mouse_filter = 1
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="TotalVBoxContainer"]
-margin_top = 362.0
-margin_right = 1920.0
-margin_bottom = 716.0
+offset_top = 362.0
+offset_right = 1920.0
+offset_bottom = 716.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CrossHaire" type="TextureRect" parent="TotalVBoxContainer/CenterContainer"]
-margin_left = 960.0
-margin_top = 177.0
-margin_right = 960.0
-margin_bottom = 177.0
+offset_left = 960.0
+offset_top = 177.0
+offset_right = 960.0
+offset_bottom = 177.0
 mouse_filter = 2
 
 [node name="BottomVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
-margin_top = 724.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_top = 724.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
 
 [node name="MeserckanStatus" type="HBoxContainer" parent="TotalVBoxContainer/BottomVBoxContainer"]
-margin_top = 243.0
-margin_right = 1920.0
-margin_bottom = 298.0
-rect_min_size = Vector2( 0, 50 )
+offset_top = 243.0
+offset_right = 1920.0
+offset_bottom = 298.0
+custom_minimum_size = Vector2( 0, 50 )
 mouse_filter = 2
 size_flags_horizontal = 3
 alignment = 1
@@ -89,9 +89,9 @@ alignment = 1
 mouse_filter = 2
 
 [node name="MeserckSpacer" type="Control" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
-margin_left = 408.0
-margin_right = 1512.0
-margin_bottom = 55.0
+offset_left = 408.0
+offset_right = 1512.0
+offset_bottom = 55.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

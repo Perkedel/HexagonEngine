@@ -2,7 +2,8 @@ extends "res://addons/GDBehavior/Base/BTCondition.gd"
 
 # random
 
-func _init().("random-condition"):
+func _init():
+	super("random-condition")
 	pass
 
 func _validate(tick):

@@ -1,23 +1,23 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/UI.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Oswald_B_72.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Oswald_B_36.tres" type="DynamicFont" id=3]
-[ext_resource path="res://fonts/Built/Oswald_B_48.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Built/Oswald_B_72.tres" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Oswald_B_36.tres" type="FontFile" id=3]
+[ext_resource path="res://fonts/Built/Oswald_B_48.tres" type="FontFile" id=4]
 [ext_resource path="res://GameDVDCardtridge/ParlorClassic/Tscene/GamePlayUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=6]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" type="Texture" id=9]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustTitleParlor.png" type="Texture" id=10]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" type="Texture2D" id=9]
+[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Photoshop/Septesen/JOELwindows7_edit_JustTitleParlor.png" type="Texture2D" id=10]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenu.tscn" type="PackedScene" id=12]
 
 
 [node name="UI" type="CanvasLayer"]
-pause_mode = 2
-follow_viewport_enable = true
+process_mode = 2
+follow_viewport_enabled = true
 script = ExtResource( 1 )
 
 [node name="MasterMindUI" type="Control" parent="."]
-pause_mode = 2
+process_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -26,7 +26,7 @@ __meta__ = {
 }
 
 [node name="MainMenu" type="Control" parent="MasterMindUI"]
-pause_mode = 2
+process_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -43,25 +43,25 @@ __meta__ = {
 }
 
 [node name="TitleBanner" type="HBoxContainer" parent="MasterMindUI/MainMenu/SpakBox"]
-margin_right = 1920.0
-margin_bottom = 250.0
+offset_right = 1920.0
+offset_bottom = 250.0
 mouse_filter = 2
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="MasterMindUI/MainMenu/SpakBox/TitleBanner"]
-margin_left = 560.0
-margin_right = 1360.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 800, 250 )
+offset_left = 560.0
+offset_right = 1360.0
+offset_bottom = 250.0
+custom_minimum_size = Vector2( 800, 250 )
 mouse_filter = 2
 texture = ExtResource( 10 )
 expand = true
 stretch_mode = 6
 
 [node name="MenuButton" type="HBoxContainer" parent="MasterMindUI/MainMenu/SpakBox"]
-margin_top = 258.0
-margin_right = 1920.0
-margin_bottom = 922.0
+offset_top = 258.0
+offset_right = 1920.0
+offset_bottom = 922.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -70,17 +70,17 @@ __meta__ = {
 }
 
 [node name="SideBar" type="VBoxContainer" parent="MasterMindUI/MainMenu/SpakBox/MenuButton"]
-margin_right = 200.0
-margin_bottom = 664.0
-rect_min_size = Vector2( 200, 0 )
+offset_right = 200.0
+offset_bottom = 664.0
+custom_minimum_size = Vector2( 200, 0 )
 mouse_filter = 2
 alignment = 1
 
 [node name="SettingNow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar"]
-margin_top = 61.0
-margin_right = 200.0
-margin_bottom = 236.0
-rect_min_size = Vector2( 0, 175 )
+offset_top = 61.0
+offset_right = 200.0
+offset_bottom = 236.0
+custom_minimum_size = Vector2( 0, 175 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -88,9 +88,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/SettingNow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Setting"
 align = 1
 valign = 1
@@ -100,10 +100,10 @@ __meta__ = {
 }
 
 [node name="AboutCreditNow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar"]
-margin_top = 244.0
-margin_right = 200.0
-margin_bottom = 419.0
-rect_min_size = Vector2( 0, 175 )
+offset_top = 244.0
+offset_right = 200.0
+offset_bottom = 419.0
+custom_minimum_size = Vector2( 0, 175 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -111,9 +111,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/AboutCreditNow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "About 
 & 
 Credit"
@@ -125,10 +125,10 @@ __meta__ = {
 }
 
 [node name="ChangeDVDnow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar"]
-margin_top = 427.0
-margin_right = 200.0
-margin_bottom = 602.0
-rect_min_size = Vector2( 0, 175 )
+offset_top = 427.0
+offset_right = 200.0
+offset_bottom = 602.0
+custom_minimum_size = Vector2( 0, 175 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -136,9 +136,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/SideBar/ChangeDVDnow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Change
 DVD"
 align = 1
@@ -149,26 +149,26 @@ __meta__ = {
 }
 
 [node name="MainMenuSelections" type="CenterContainer" parent="MasterMindUI/MainMenu/SpakBox/MenuButton"]
-margin_left = 208.0
-margin_right = 1712.0
-margin_bottom = 664.0
+offset_left = 208.0
+offset_right = 1712.0
+offset_bottom = 664.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="InsideContainsThese" type="VBoxContainer" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections"]
-margin_left = 527.0
-margin_top = 99.0
-margin_right = 977.0
-margin_bottom = 565.0
-rect_min_size = Vector2( 400, 400 )
+offset_left = 527.0
+offset_top = 99.0
+offset_right = 977.0
+offset_bottom = 565.0
+custom_minimum_size = Vector2( 400, 400 )
 mouse_filter = 2
 alignment = 1
 
 [node name="PlayNow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese"]
-margin_right = 450.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 450, 150 )
+offset_right = 450.0
+offset_bottom = 150.0
+custom_minimum_size = Vector2( 450, 150 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -176,9 +176,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/PlayNow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Play"
 align = 1
 valign = 1
@@ -188,10 +188,10 @@ __meta__ = {
 }
 
 [node name="InstructionNow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese"]
-margin_top = 158.0
-margin_right = 450.0
-margin_bottom = 308.0
-rect_min_size = Vector2( 450, 150 )
+offset_top = 158.0
+offset_right = 450.0
+offset_bottom = 308.0
+custom_minimum_size = Vector2( 450, 150 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -199,9 +199,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/InstructionNow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Instructions"
 align = 1
 valign = 1
@@ -211,10 +211,10 @@ __meta__ = {
 }
 
 [node name="ExitNow" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese"]
-margin_top = 316.0
-margin_right = 450.0
-margin_bottom = 466.0
-rect_min_size = Vector2( 450, 150 )
+offset_top = 316.0
+offset_right = 450.0
+offset_bottom = 466.0
+custom_minimum_size = Vector2( 450, 150 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -222,9 +222,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/MenuButton/MainMenuSelections/InsideContainsThese/ExitNow"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Exit"
 align = 1
 valign = 1
@@ -234,27 +234,27 @@ __meta__ = {
 }
 
 [node name="SideBar2" type="VBoxContainer" parent="MasterMindUI/MainMenu/SpakBox/MenuButton"]
-margin_left = 1720.0
-margin_right = 1920.0
-margin_bottom = 664.0
-rect_min_size = Vector2( 200, 0 )
+offset_left = 1720.0
+offset_right = 1920.0
+offset_bottom = 664.0
+custom_minimum_size = Vector2( 200, 0 )
 mouse_filter = 2
 
 [node name="SpecialButton" type="HBoxContainer" parent="MasterMindUI/MainMenu/SpakBox"]
-margin_top = 930.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 150 )
+offset_top = 930.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 150 )
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ShopButton" type="TextureButton" parent="MasterMindUI/MainMenu/SpakBox/SpecialButton"]
-margin_left = 1745.0
-margin_right = 1920.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 175, 0 )
+offset_left = 1745.0
+offset_right = 1920.0
+offset_bottom = 150.0
+custom_minimum_size = Vector2( 175, 0 )
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 expand = true
@@ -262,9 +262,9 @@ expand = true
 [node name="Label" type="Label" parent="MasterMindUI/MainMenu/SpakBox/SpecialButton/ShopButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 1, 0.482353, 0, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_outline_color = Color( 1, 0.482353, 0, 1 )
 text = "Shop"
 align = 1
 valign = 1

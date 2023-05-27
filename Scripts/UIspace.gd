@@ -5,30 +5,30 @@ extends Control
 # var b = "text"
 var PassMenuScene = "res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/SettingMenu.tscn"
 enum SelectMenuList {MainMenu=-1, Setting=0,Unknown=1,Extras=2, Gameplay = 3, LevelSelect = 4}
-export(SelectMenuList) var NextMenuScene = SelectMenuList.MainMenu
+@export var NextMenuScene: SelectMenuList = SelectMenuList.MainMenu
 var NextMenuSceneIsNow
-export(SelectMenuList) var WhereMenuIsNow = SelectMenuList.MainMenu
+@export var WhereMenuIsNow: SelectMenuList = SelectMenuList.MainMenu
 enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3}
-export(DialogConfirmsFor) var DialogSelectAction
-export(NodePath) var MainMenuNode
-export(NodePath) var NextMenuNode
-export(NodePath) var GameplayUINode
-export(bool) var ReadyToPlayGame = false
-export(bool) var isPlayingGameNow = false
-export(bool) var isPausingGame = false
-export(bool) var isMainMenuing = true
-export(bool) var isNextMenuing = false
+@export var DialogSelectAction: DialogConfirmsFor
+@export var MainMenuNode: NodePath
+@export var NextMenuNode: NodePath
+@export var GameplayUINode: NodePath
+@export var ReadyToPlayGame: bool = false
+@export var isPlayingGameNow: bool = false
+@export var isPausingGame: bool = false
+@export var isMainMenuing: bool = true
+@export var isNextMenuing: bool = false
 
-export(bool) var a2DSpaceReportHP = false
-export(bool) var a3DSpaceReportHP = false
-export(bool) var a2DSpaceReportScore = false
-export(bool) var a3DSpaceReportScore = false
+@export var a2DSpaceReportHP: bool = false
+@export var a3DSpaceReportHP: bool = false
+@export var a2DSpaceReportScore: bool = false
+@export var a3DSpaceReportScore: bool = false
 
-export (float, 0, 100) var HPlevel = 100
-export (Texture) var ScoreIcon
-export (float) var ScoreNumber = 2000
+@export (float, 0, 100) var HPlevel = 100
+@export (Texture2D) var ScoreIcon
+@export (float) var ScoreNumber = 2000
 
-export(bool) var KeepPlayingEvenOutOfFocus = false
+@export var KeepPlayingEvenOutOfFocus: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -207,7 +207,7 @@ func _notification(what):
 		print("Quit Request")
 		AttempTheQuitGame()
 		pass
-	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+	if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
 		if isPlayingGameNow and not KeepPlayingEvenOutOfFocus:
 			#  https://docs.godotengine.org/en/3.2/tutorials/inputs/inputevent.html
 			# https://docs.godotengine.org/en/3.2/classes/class_inputeventkey.html#class-inputeventkey

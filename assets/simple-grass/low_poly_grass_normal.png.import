@@ -1,35 +1,35 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.stex"
+type="CompressedTexture2D"
+uid="uid://b0v8mlq6c3d73"
+path.s3tc="res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/simple-grass/low_poly_grass_normal.png"
-dest_files=[ "res://.import/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.stex" ]
+dest_files=["res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=1
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=2
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=false
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

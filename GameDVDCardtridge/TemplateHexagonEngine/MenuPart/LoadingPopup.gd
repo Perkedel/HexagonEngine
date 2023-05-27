@@ -3,13 +3,13 @@ extends Popup
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(float, 0, 100) var ProgressMeterValue = 0
-export(String) var ProgressWording
+@export var ProgressMeterValue = 0 # (float, 0, 100)
+@export var ProgressWording: String
 var Dots = "......."
-export(bool) var LoadingCompleted = false
-export(Color) var IncompleteLoadingColor
-export(Color) var CompleteLoadingColor
-export(float,0,360) var HourglassRotateDegree
+@export var LoadingCompleted: bool = false
+@export var IncompleteLoadingColor: Color
+@export var CompleteLoadingColor: Color
+@export var HourglassRotateDegree: float # (float,0,360)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,7 +44,7 @@ func DeCompleteTheLoadingNow():
 	LoadingCompleted = false
 	#$LoadingAnimates.play("GravityHourGlassRotate")
 	$Timerout.stop()
-	$HBoxContainer/SpaceContain/GravityHourGlass.rotating = true;
+	$HBoxContainer/SpaceContain/GravityHourGlass.ignore_rotation =true # reversed "rotating" for Camera2D
 	#$DotFramePerSec.start()
 	#$HourglassFramesPerSec.start()
 	#ProgressWording = "Now Loading!"
@@ -55,7 +55,7 @@ func CompleteTheLoadingNow():
 	LoadingCompleted = true
 	#$LoadingAnimates.play("GravityHourGlassStonp")
 	$Timerout.start()
-	$HBoxContainer/SpaceContain/GravityHourGlass.rotating = false;
+	$HBoxContainer/SpaceContain/GravityHourGlass.ignore_rotation =true # reversed "rotating" for Camera2D
 	$DotFramePerSec.stop()
 	$HourglassFramesPerSec.stop()
 	ProgressWording = "Loading Completed!"

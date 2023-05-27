@@ -1,13 +1,13 @@
 [gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture2D" id=1]
 [ext_resource path="res://DummyTest/spoint.gd" type="Script" id=2]
 
 [sub_resource type="VisualShaderNodeVectorOp" id=9]
 output_port_for_preview = 0
 operator = 2
 
-[sub_resource type="VisualShaderNodeVec3Uniform" id=10]
+[sub_resource type="VisualShaderNodeVec3Parameter" id=10]
 uniform_name = "skrolspeed"
 
 [sub_resource type="VisualShaderNodeInput" id=1]
@@ -29,21 +29,21 @@ source = 2
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id=14]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=15]
+[sub_resource type="VisualShaderNodeFloatOp" id=15]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=16]
+[sub_resource type="VisualShaderNodeFloatOp" id=16]
 operator = 1
 
-[sub_resource type="VisualShaderNodeScalarOp" id=17]
+[sub_resource type="VisualShaderNodeFloatOp" id=17]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=23]
+[sub_resource type="VisualShaderNodeFloatOp" id=23]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=24]
+[sub_resource type="VisualShaderNodeFloatOp" id=24]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=25]
+[sub_resource type="VisualShaderNodeFloatOp" id=25]
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorOp" id=26]
@@ -54,7 +54,7 @@ input_name = "time"
 [sub_resource type="VisualShaderNodeVectorOp" id=28]
 operator = 3
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=12]
+[sub_resource type="VisualShaderNodeFloatFunc" id=12]
 function = 0
 
 [sub_resource type="VisualShaderNodeInput" id=29]
@@ -66,19 +66,19 @@ constant = Vector3( 0.5, 0.5, 0.5 )
 [sub_resource type="VisualShaderNodeInput" id=31]
 input_name = "vertex"
 
-[sub_resource type="VisualShaderNodeScalarUniform" id=32]
+[sub_resource type="VisualShaderNodeFloatParameter" id=32]
 uniform_name = "spedrotate"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=33]
+[sub_resource type="VisualShaderNodeFloatOp" id=33]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarUniform" id=13]
+[sub_resource type="VisualShaderNodeFloatParameter" id=13]
 uniform_name = "rotate"
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=18]
+[sub_resource type="VisualShaderNodeFloatFunc" id=18]
 function = 1
 
-[sub_resource type="VisualShaderNodeVec3Uniform" id=19]
+[sub_resource type="VisualShaderNodeVec3Parameter" id=19]
 uniform_name = "pivot"
 
 [sub_resource type="VisualShaderNodeVectorOp" id=20]
@@ -247,7 +247,7 @@ nodes/vertex/23/node = SubResource( 32 )
 nodes/vertex/23/position = Vector2( -960, 360 )
 nodes/vertex/24/node = SubResource( 33 )
 nodes/vertex/24/position = Vector2( -660, 40 )
-nodes/vertex/connections = PoolIntArray( 2, 0, 11, 0, 10, 1, 11, 1, 10, 0, 13, 1, 4, 0, 13, 0, 13, 0, 12, 0, 11, 0, 12, 1, 12, 0, 8, 0, 15, 0, 8, 1, 4, 0, 14, 0, 10, 1, 14, 1, 2, 0, 16, 0, 10, 0, 16, 1, 16, 0, 15, 1, 14, 0, 15, 0, 8, 0, 17, 0, 6, 0, 10, 0, 20, 0, 19, 1, 21, 0, 19, 0, 22, 0, 6, 0, 18, 0, 24, 0, 23, 0, 24, 1, 24, 0, 2, 0, 24, 0, 4, 0, 17, 0, 0, 0, 19, 0, 6, 1, 19, 0, 17, 1 )
+nodes/vertex/connections = PackedInt32Array( 2, 0, 11, 0, 10, 1, 11, 1, 10, 0, 13, 1, 4, 0, 13, 0, 13, 0, 12, 0, 11, 0, 12, 1, 12, 0, 8, 0, 15, 0, 8, 1, 4, 0, 14, 0, 10, 1, 14, 1, 2, 0, 16, 0, 10, 0, 16, 1, 16, 0, 15, 1, 14, 0, 15, 0, 8, 0, 17, 0, 6, 0, 10, 0, 20, 0, 19, 1, 21, 0, 19, 0, 22, 0, 6, 0, 18, 0, 24, 0, 23, 0, 24, 1, 24, 0, 2, 0, 24, 0, 4, 0, 17, 0, 0, 0, 19, 0, 6, 1, 19, 0, 17, 1 )
 nodes/fragment/0/position = Vector2( 480, 140 )
 nodes/fragment/2/node = SubResource( 1 )
 nodes/fragment/2/position = Vector2( -500, -20 )
@@ -263,7 +263,7 @@ nodes/fragment/10/node = SubResource( 9 )
 nodes/fragment/10/position = Vector2( -320, 180 )
 nodes/fragment/11/node = SubResource( 10 )
 nodes/fragment/11/position = Vector2( -500, 340 )
-nodes/fragment/connections = PoolIntArray( 8, 0, 0, 0, 7, 0, 8, 2, 9, 0, 8, 0, 10, 0, 9, 1, 5, 0, 10, 0, 11, 0, 10, 1, 2, 0, 9, 0 )
+nodes/fragment/connections = PackedInt32Array( 8, 0, 0, 0, 7, 0, 8, 2, 9, 0, 8, 0, 10, 0, 9, 1, 5, 0, 10, 0, 11, 0, 10, 1, 2, 0, 9, 0 )
 
 [sub_resource type="ShaderMaterial" id=6]
 shader = SubResource( 5 )

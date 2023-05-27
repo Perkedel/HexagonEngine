@@ -1,8 +1,8 @@
 extends Node
 
-export (String) var Inters = "Interstitial"
-export (String) var Banner = "Banner"
-export (String) var RewVid = "RewardedVideo"
+@export (String) var Inters = "Interstitial"
+@export (String) var Banner = "Banner"
+@export (String) var RewVid = "RewardedVideo"
 enum StatusLED {LED_OFF, LED_OK, LED_FAILED}
 #export (String) var KixlonzWalletPath = "user://Currency/Kixlonz.txt"
 #var KixlonzFile

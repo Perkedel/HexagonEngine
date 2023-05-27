@@ -1,18 +1,18 @@
 [gd_resource type="VisualShader" load_steps=14 format=2]
 
-[ext_resource path="res://Shader/NoiseTexture/GDquestDissolved_noise.tres" type="Texture" id=1]
+[ext_resource path="res://Shader/NoiseTexture/GDquestDissolved_noise.tres" type="Texture2D" id=1]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=9]
+[sub_resource type="VisualShaderNodeFloatOp" id=9]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 0.005 ]
 operator = 1
 
-[sub_resource type="VisualShaderNodeScalarOp" id=10]
+[sub_resource type="VisualShaderNodeFloatOp" id=10]
 output_port_for_preview = 0
 default_input_values = [ 0, 1.0, 1, 0.005 ]
 operator = 1
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=11]
+[sub_resource type="VisualShaderNodeFloatFunc" id=11]
 output_port_for_preview = 0
 function = 15
 
@@ -32,11 +32,11 @@ input_name = "time"
 output_port_for_preview = 0
 input_name = "uv"
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=3]
+[sub_resource type="VisualShaderNodeFloatFunc" id=3]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=4]
+[sub_resource type="VisualShaderNodeFloatOp" id=4]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 2.0 ]
 operator = 3
@@ -44,17 +44,17 @@ operator = 3
 [sub_resource type="VisualShaderNodeTexture" id=6]
 texture = ExtResource( 1 )
 
-[sub_resource type="VisualShaderNodeScalarOp" id=7]
+[sub_resource type="VisualShaderNodeFloatOp" id=7]
 output_port_for_preview = 0
 operator = 1
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=8]
+[sub_resource type="VisualShaderNodeFloatFunc" id=8]
 output_port_for_preview = 0
 function = 15
 
 [resource]
 code = "shader_type spatial;
-render_mode depth_draw_alpha_prepass, cull_disabled;
+render_mode depth_draw_opaque, cull_disabled;
 
 uniform sampler2D tex_frg_7;
 
@@ -147,4 +147,4 @@ nodes/fragment/13/node = SubResource( 12 )
 nodes/fragment/13/position = Vector2( 600, 160 )
 nodes/fragment/14/node = SubResource( 13 )
 nodes/fragment/14/position = Vector2( 380, 380 )
-nodes/fragment/connections = PoolIntArray( 2, 0, 4, 0, 4, 0, 5, 0, 3, 0, 7, 0, 7, 0, 8, 0, 5, 0, 8, 1, 9, 0, 0, 1, 8, 0, 9, 0, 8, 0, 10, 0, 10, 0, 11, 1, 11, 0, 12, 0, 12, 0, 13, 0, 14, 0, 13, 1, 13, 0, 0, 5 )
+nodes/fragment/connections = PackedInt32Array( 2, 0, 4, 0, 4, 0, 5, 0, 3, 0, 7, 0, 7, 0, 8, 0, 5, 0, 8, 1, 9, 0, 0, 1, 8, 0, 9, 0, 8, 0, 10, 0, 10, 0, 11, 1, 11, 0, 12, 0, 12, 0, 13, 0, 14, 0, 13, 1, 13, 0, 0, 5 )

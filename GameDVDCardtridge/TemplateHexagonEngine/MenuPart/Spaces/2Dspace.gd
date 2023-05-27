@@ -3,14 +3,14 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var LevelLoadRoot = $Level2DCartridgeSlot
+@onready var LevelLoadRoot = $Level2DCartridgeSlot
 var a2DResource
-export(PackedScene) var Your2DSpaceLevel
-export(String) var Raw2DSpaceLevelPath = ""
+@export var Your2DSpaceLevel: PackedScene
+@export var Raw2DSpaceLevelPath: String = ""
 var Prev2DSpaceLevel
 var Now2DSpaceLevel
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+@onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a2D_Loading_ProgressBar(valuet)
 var ProgressValue
@@ -86,7 +86,7 @@ func despawnTheScene():
 signal hasLoadingCompleted
 signal readyToPlayNow
 func InitiateThatScene(scene_resource):
-	a2DResource = scene_resource.instance()
+	a2DResource = scene_resource.instantiate()
 	# https://docs.godotengine.org/en/3.1/tutorials/threads/thread_safe_apis.html#doc-thread-safe-apis
 	#LevelLoadRoot.call_deferred("add_child", a2DResource)
 	LevelLoadRoot.add_child(a2DResource)
@@ -124,8 +124,8 @@ func DisconnecStatusSignal():
 	#		if Now2DSpaceLevel.is_connected("reportScore",self,"_EmitStatuso_Score"):
 	#			Now2DSpaceLevel.disconnect("reportScore",self,"_EmitStatuso_Score")
 	#			pass
-			Now2DSpaceLevel.disconnect("reportHP",self,"_EmitStatuso_HP")
-			Now2DSpaceLevel.disconnect("reportScore",self,"_EmitStatuso_Score")
+			Now2DSpaceLevel.disconnect("reportHP", Callable(self, "_EmitStatuso_HP"))
+			Now2DSpaceLevel.disconnect("reportScore", Callable(self, "_EmitStatuso_Score"))
 			ConnectedSignal = false
 			pass
 		else:
@@ -137,8 +137,8 @@ func DisconnecStatusSignal():
 func DisconnecStatusSignalPrevious():
 	if ConnectedSignal:
 		if Prev2DSpaceLevel:
-			Prev2DSpaceLevel.disconnect("reportHP",self,"_EmitStatuso_HP")
-			Prev2DSpaceLevel.disconnect("reportScore",self,"_EmitStatuso_Score")
+			Prev2DSpaceLevel.disconnect("reportHP", Callable(self, "_EmitStatuso_HP"))
+			Prev2DSpaceLevel.disconnect("reportScore", Callable(self, "_EmitStatuso_Score"))
 			ConnectedSignal = false
 			pass
 		else:
@@ -168,9 +168,9 @@ func ConnecStatusSignal():
 #				Now2DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
 #				pass
 			var werrorSignal
-			Now2DSpaceLevel.connect("reportHP",self,"_EmitStatuso_HP")
-			Now2DSpaceLevel.connect("reportScore",self,"_EmitStatuso_Score")
-			werrorSignal = Now2DSpaceLevel.connect("reportNextLevel", self, "_On_TellNextLevel")
+			Now2DSpaceLevel.connect("reportHP", Callable(self, "_EmitStatuso_HP"))
+			Now2DSpaceLevel.connect("reportScore", Callable(self, "_EmitStatuso_Score"))
+			werrorSignal = Now2DSpaceLevel.connect("reportNextLevel", Callable(self, "_On_TellNextLevel"))
 			ConnectedSignal = true
 			pass
 		else:

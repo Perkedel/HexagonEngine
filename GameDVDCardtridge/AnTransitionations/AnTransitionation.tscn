@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/AnTransitionations/AnTransitionation.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=2]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture2D" id=3]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=4]
 
 
 [node name="AnTransitionation" type="Node"]
@@ -27,12 +27,12 @@ __meta__ = {
 }
 
 [node name="Button1" type="Button" parent="UIixef/BaseOf/Scene1"]
-margin_left = 508.542
-margin_top = 311.482
-margin_right = 1050.54
-margin_bottom = 395.482
-focus_neighbour_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 508.542
+offset_top = 311.482
+offset_right = 1050.54
+offset_bottom = 395.482
+focus_neighbor_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
+theme_override_fonts/font = ExtResource( 2 )
 text = "An Button to Next Scene"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -47,12 +47,12 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="UIixef/BaseOf/Scene2"]
-margin_left = 700.0
-margin_top = 640.0
-margin_right = 1694.0
-margin_bottom = 829.0
-focus_neighbour_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 700.0
+offset_top = 640.0
+offset_right = 1694.0
+offset_bottom = 829.0
+focus_neighbor_bottom = NodePath("../../../../UIMeta/QuitButtons/TheyContains/ChangeDVD")
+theme_override_fonts/font = ExtResource( 2 )
 text = "An Button to go back to scene 1"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -63,11 +63,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -811.44
-margin_top = -423.826
-margin_right = 951.56
-margin_bottom = 45.1738
-custom_fonts/font = ExtResource( 2 )
+offset_left = -811.44
+offset_top = -423.826
+offset_right = 951.56
+offset_bottom = 45.1738
+theme_override_fonts/font = ExtResource( 2 )
 text = "This, is a big step forward for 3D Platformer game that uses transitions like this:
 M tendo Copyright strike
 A Hat in Time
@@ -106,31 +106,31 @@ __meta__ = {
 }
 
 [node name="TheyContains" type="HBoxContainer" parent="UIMeta/QuitButtons"]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 100 )
 mouse_filter = 2
 alignment = 1
 
 [node name="ChangeDVD" type="Button" parent="UIMeta/QuitButtons/TheyContains"]
-margin_left = 458.0
-margin_right = 958.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-focus_neighbour_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 458.0
+offset_right = 958.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+focus_neighbor_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
+theme_override_fonts/font = ExtResource( 2 )
 text = "Change DVD"
 icon = ExtResource( 3 )
 expand_icon = true
 
 [node name="Shutdown" type="Button" parent="UIMeta/QuitButtons/TheyContains"]
-margin_left = 962.0
-margin_right = 1462.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-focus_neighbour_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
-custom_fonts/font = ExtResource( 2 )
+offset_left = 962.0
+offset_right = 1462.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+focus_neighbor_top = NodePath("../../../../UIixef/BaseOf/Scene1/Button1")
+theme_override_fonts/font = ExtResource( 2 )
 text = "Shutdown"
 icon = ExtResource( 4 )
 expand_icon = true

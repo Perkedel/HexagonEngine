@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/light_on.wav-7b4825588f57e204b88931948164afcf.sample"
+type="AudioStreamWAV"
+uid="uid://8n6g86n6d5yp"
+path="res://.godot/imported/light_on.wav-7b4825588f57e204b88931948164afcf.sample"
 
 [deps]
 
 source_file="res://player/abilities/flashlight/light_on.wav"
-dest_files=[ "res://.import/light_on.wav-7b4825588f57e204b88931948164afcf.sample" ]
+dest_files=["res://.godot/imported/light_on.wav-7b4825588f57e204b88931948164afcf.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

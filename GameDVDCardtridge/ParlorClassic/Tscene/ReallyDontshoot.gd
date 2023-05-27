@@ -1,12 +1,12 @@
 extends Node2D
 
-export (PackedScene) var BulletSceneFile = load("res://GameDVDCardtridge/ParlorClassic/Tscene/Peluru.tscn")
+@export (PackedScene) var BulletSceneFile = load("res://GameDVDCardtridge/ParlorClassic/Tscene/Peluru.tscn")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 func SpawnBullet(positione:Vector2):
-	var InstanceBullet = BulletSceneFile.instance()
+	var InstanceBullet = BulletSceneFile.instantiate()
 	InstanceBullet.position = positione
 	#$GameField/GamePlay/Bullets.add_child(InstanceBullet)
 	#$GameField/GamePlay/Targets.add_child(InstanceBullet)

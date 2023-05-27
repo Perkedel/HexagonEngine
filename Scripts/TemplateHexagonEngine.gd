@@ -12,44 +12,44 @@ signal Shutdown_Exec()
 enum CanvasLayerMode {Usual = 1, Priority = 10}
 
 enum MenuLists {Main_menu = 0, Setting_Menu = 1, Extras_Menu = 2, Unknown_Menu = 3, ChangeDVD_Menu = 3, GameplayUI_Menu = 4}
-export(MenuLists) var MenuIsRightNow = 0
-export(bool) var isPlayingTheGameNow = false
-export(bool) var LoadingHasCompleted
-export(bool) var PauseTheGame = false
+@export var MenuIsRightNow: MenuLists = 0
+@export var isPlayingTheGameNow: bool = false
+@export var LoadingHasCompleted: bool
+@export var PauseTheGame: bool = false
 #export (bool) var isGamePaused = false
 
-export(String) var ExitGameName = "Exit"
-export(String) var LeaveLevelName = "Leave Level"
+@export var ExitGameName: String = "Exit"
+@export var LeaveLevelName: String = "Leave Level"
 
 # https://www.youtube.com/watch?v=9sHKaQBcgO8&t=14s
 # https://www.youtube.com/watch?v=-x0M17IwG0s
-onready var aThread = Thread.new()
+@onready var aThread = Thread.new()
 
 
-export(float) var loadValue
-export(PackedScene) var Your3DSpaceLevel
+@export var loadValue: float
+@export var Your3DSpaceLevel: PackedScene
 var Prev3DSpaceLevel
-export(PackedScene) var Your2DSpaceLevel
+@export var Your2DSpaceLevel: PackedScene
 var Prev2DSpaceLevel
-export(Texture) var LevelBannerThumbnail
-export(String) var LevelTitleg
+@export var LevelBannerThumbnail: Texture2D
+@export var LevelTitleg: String
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-export(String, MULTILINE) var LevelDescription
+@export var LevelDescription # (String, MULTILINE)
 
 #Stop here. Pls manage Status HUD Bar now!
-export(bool) var a2DSpaceReportHP = false
-export(bool) var a3DSpaceReportHP = false
-export(bool) var a2DSpaceReportScore = false
-export(bool) var a3DSpaceReportScore = false
+@export var a2DSpaceReportHP: bool = false
+@export var a3DSpaceReportHP: bool = false
+@export var a2DSpaceReportScore: bool = false
+@export var a3DSpaceReportScore: bool = false
 
-export (float) var See3DHP = 100
-export (float) var See2DHP = 100
-export (float) var See3DScore = 0
-export (float) var See2DScore = 0
+@export (float) var See3DHP = 100
+@export (float) var See2DHP = 100
+@export (float) var See3DScore = 0
+@export (float) var See2DScore = 0
 
-export (float) var emitHP = 100
-export (float) var emitScore = 2000
-export (Texture) var emitScoreIcon
+@export (float) var emitHP = 100
+@export (float) var emitScore = 2000
+@export (Texture2D) var emitScoreIcon
 
 var Sub3DLoadValue
 var Sub3DLoadInclude = false

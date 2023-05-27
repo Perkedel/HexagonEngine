@@ -1,18 +1,18 @@
-tool
+@tool
 
 extends HBoxContainer
 
-const fellbackBackButtonImage:Texture = preload("res://Sprites/KembaliButton.png")
+const fellbackBackButtonImage:Texture2D = preload("res://Sprites/KembaliButton.png")
 
-export(Texture) var BackButtonIcon = fellbackBackButtonImage setget set_back_button_icon
-export(bool) var showBackButton = false setget set_show_back_button
-export(String) var TitleBar:String = "Darn Label" setget set_title_bar
+@export var BackButtonIcon: Texture2D = fellbackBackButtonImage: set = set_back_button_icon
+@export var showBackButton: bool = false: set = set_show_back_button
+@export var TitleBar: String:String = "Darn Label": set = set_title_bar
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal letsGoBack
 
-func set_back_button_icon(withTexture:Texture = fellbackBackButtonImage):
+func set_back_button_icon(withTexture:Texture2D = fellbackBackButtonImage):
 	BackButtonIcon = withTexture
 	_sync_parameter()
 

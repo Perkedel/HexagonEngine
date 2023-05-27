@@ -1,4 +1,4 @@
-tool
+@tool
 extends Button
 
 # KoBeWi's Button context a.k.a. Action Icon
@@ -9,14 +9,14 @@ enum JoypadMode {ADAPTIVE, FORCE_KEYBOARD, FORCE_JOYPAD}
 enum FitMode {NONE, MATCH_WIDTH, MATCH_HEIGHT}
 enum JoypadModel {AUTO, XBOX, DUALSHOCK, JOY_CON}
 
-onready var actionIcon = $ContainsThese/ActionIcon
-onready var actionLabel = $ContainsThese/ActionLabel
-export var action_title: String = "" setget set_action_title
-export var action_name: String = "" setget set_action_name
-export(JoypadMode) var joypad_mode: int = 0 setget set_joypad_mode
-export(JoypadModel) var joypad_model setget set_joypad_model
-export var favor_mouse: bool = true setget set_favor_mouse
-export(FitMode) var fit_mode: int = 1 setget set_fit_mode
+@onready var actionIcon = $ContainsThese/ActionIcon
+@onready var actionLabel = $ContainsThese/ActionLabel
+@export var action_title: String = "": set = set_action_title
+@export var action_name: String = "": set = set_action_name
+@export var joypad_mode: JoypadMode: int = 0: set = set_joypad_mode
+@export var joypad_model: JoypadModel: set = set_joypad_model
+@export var favor_mouse: bool = true: set = set_favor_mouse
+@export var fit_mode: FitMode: int = 1: set = set_fit_mode
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
@@ -62,7 +62,7 @@ func set_fit_mode(mode: int):
 	fit_mode = mode
 	actionIcon.fit_mode = fit_mode
 
-func get_keyboard(key: int) -> Texture:
+func get_keyboard(key: int) -> Texture2D:
 	return actionIcon.get_keyboard(key)
 
 func get_joypad_model(device: int) -> String:
@@ -70,7 +70,7 @@ func get_joypad_model(device: int) -> String:
 	pass
 
 func get_joypad_model_raw(device: int) -> String:
-	if not debug_deviceName.empty():
+	if not debug_deviceName.is_empty():
 		return debug_deviceName
 	
 	var rawModel:= "Xbox"
@@ -80,20 +80,20 @@ func get_joypad_model_raw(device: int) -> String:
 	return rawModel
 	pass
 
-func get_joypad(button: int, device: int) -> Texture:
+func get_joypad(button: int, device: int) -> Texture2D:
 	var model := get_joypad_model_raw(device)
 	return actionIcon.get_joypad(button, device)
 	pass
 
-func get_joypad_axis(axis: int, value: float, device: int) -> Texture:
+func get_joypad_axis(axis: int, value: float, device: int) -> Texture2D:
 	var model := get_joypad_model_raw(device)
 	return actionIcon.get_joypad_axis(axis, value, device)
 	pass
 
-func get_mouse(button: int) -> Texture:
+func get_mouse(button: int) -> Texture2D:
 	return actionIcon.get_mouse(button)
 
-func get_image(type: int, image: String) -> Texture:
+func get_image(type: int, image: String) -> Texture2D:
 	return actionIcon.get_image(type, image)
 
 func get_use_joypad():
@@ -134,9 +134,9 @@ func _refresh():
 	var joypad_axis_value: float
 	var joypad_id: int
 	
-	for event in InputMap.get_action_list(action_name):
+	for event in InputMap.action_get_events(action_name):
 		if event is InputEventKey and keyboard == -1:
-			keyboard = event.scancode
+			keyboard = event.keycode
 		elif event is InputEventMouseButton and mouse == -1:
 			mouse = event.button_index
 		elif event is InputEventJoypadButton and joypad == -1:

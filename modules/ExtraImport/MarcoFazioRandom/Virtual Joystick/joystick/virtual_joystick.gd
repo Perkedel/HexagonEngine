@@ -7,56 +7,56 @@ class_name VirtualJoystick
 #### EXPORTED VARIABLE ####
 
 # The color of the button when the joystick is in use.
-export(Color) var _pressed_color := Color.gray
+@export var _pressed_color: Color := Color.GRAY
 
 # If the input is inside this range, the output is zero.
-export(float, 0, 100, 1) var deadzone_size : float = 10
+@export var deadzone_size : float = 10 # (float, 0, 100, 1)
 
 # The max distance the handle can reach.
-export(float, 0, 300, 1) var clampzone_size : float = 75
+@export var clampzone_size : float = 75 # (float, 0, 300, 1)
 
 # FIXED: The joystick doesn't move.
 # DYNAMIC: Every time the joystick area is pressed, the joystick position is set on the touched position.
 enum JoystickMode {FIXED, DYNAMIC}
 
-export(JoystickMode) var joystick_mode := JoystickMode.FIXED
+@export var joystick_mode: JoystickMode := JoystickMode.FIXED
 
 # VISIBILITY_ALWAYS = Always visible.
 # VISIBILITY_TOUCHSCREEN_ONLY = Visible on touch screens only.
 enum VisibilityMode {ALWAYS , TOUCHSCREEN_ONLY }
 
-export(VisibilityMode) var visibility_mode := VisibilityMode.ALWAYS
+@export var visibility_mode: VisibilityMode := VisibilityMode.ALWAYS
 
 # Use Input Actions
-export var use_input_actions := true
+@export var use_input_actions := true
 
 # Project -> Project Settings -> Input Map
-export var action_left := "ui_left"
-export var action_right := "ui_right"
-export var action_up := "ui_up"
-export var action_down := "ui_down"
+@export var action_left := "ui_left"
+@export var action_right := "ui_right"
+@export var action_up := "ui_up"
+@export var action_down := "ui_down"
 
 #### OUTPUT VARIABLES ####
 
 # If the joystick is receiving inputs.
-var _pressed := false setget , is_pressed
+var _pressed := false: get = is_pressed
 
 func is_pressed() -> bool:
 	return _pressed
 
 # The joystick output.
-var _output := Vector2.ZERO setget , get_output
+var _output := Vector2.ZERO: get = get_output
 
 func get_output() -> Vector2:
 	return _output
 
 #### PRIVATE VARIABLES ####
 
-onready var _base := $Base
-onready var _tip := $Base/Tip
-onready var _base_texture_ray_size : float = $Base/TextureRect.rect_size.x / 2
-onready var _original_color : Color = _tip.modulate
-onready var _new_tip_position : Vector2 = _tip.rect_position
+@onready var _base := $Base
+@onready var _tip := $Base/Tip
+@onready var _base_texture_ray_size : float = $Base/TextureRect.size.x / 2
+@onready var _original_color : Color = _tip.modulate
+@onready var _new_tip_position : Vector2 = _tip.position
 
 var _touch_index : int = -1
 
@@ -70,7 +70,7 @@ func _gui_input(event):
 	if event is InputEventScreenTouch:
 		if event.pressed and _touch_index == -1:
 			if joystick_mode == JoystickMode.DYNAMIC:
-				_base.rect_position = event.position
+				_base.position = event.position
 			if joystick_mode == JoystickMode.DYNAMIC or (joystick_mode == JoystickMode.FIXED and _is_touch_inside_base(event.position)):
 				accept_event()
 				_touch_index = event.index
@@ -84,15 +84,15 @@ func _gui_input(event):
 		_update_joystick(event.position)
 
 func _is_touch_inside_base(touch_position: Vector2) -> bool:
-	var vector : Vector2 = (touch_position - _base.rect_position) / _base.rect_scale
+	var vector : Vector2 = (touch_position - _base.position) / _base.scale
 	if vector.length_squared() <= _base_texture_ray_size * _base_texture_ray_size:
 		return true
 	else:
 		return false
 
 func _update_joystick(touch_position: Vector2) -> void:
-	var vector = (touch_position - _base.rect_position) / _base.rect_scale
-	vector = vector.clamped(clampzone_size)
+	var vector = (touch_position - _base.position) / _base.scale
+	vector = vector.limit_length(clampzone_size)
 	_new_tip_position = vector
 	_output = vector / clampzone_size
 	if vector.length_squared() >= deadzone_size * deadzone_size:
@@ -126,7 +126,7 @@ func _reset():
 	_pressed = false
 	_output = Vector2.ZERO
 	_new_tip_position = Vector2.ZERO
-	_tip.rect_position = Vector2.ZERO
+	_tip.position = Vector2.ZERO
 	_touch_index = -1
 	_tip.modulate = _original_color
 	if use_input_actions:
@@ -140,4 +140,4 @@ func _reset():
 			Input.action_release(action_up)
 
 func _process(_delta):
-	_tip.rect_position = _new_tip_position
+	_tip.position = _new_tip_position

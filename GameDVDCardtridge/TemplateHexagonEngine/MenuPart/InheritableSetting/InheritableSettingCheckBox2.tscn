@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=3]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckBox2.gd" type="Script" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/CustomButtonGroup2.tres" type="ButtonGroup" id=6]
 
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -15,7 +15,7 @@ outline_size = 1
 outline_color = Color( 0.129412, 0, 0.219608, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 size = 48
@@ -29,18 +29,18 @@ RadioMode = true
 ButtonGrouper = ExtResource( 6 )
 
 [node name="Label" parent="." index="0"]
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource( 1 )
 
 [node name="CheckBox" parent="HBoxContainer" index="0"]
-margin_right = 475.0
-custom_fonts/font = SubResource( 2 )
+offset_right = 475.0
+theme_override_fonts/font = SubResource( 2 )
 
 [node name="CheckBox2" type="CheckBox" parent="HBoxContainer" index="1"]
-margin_left = 483.0
-margin_right = 958.0
-margin_bottom = 71.0
+offset_left = 483.0
+offset_right = 958.0
+offset_bottom = 71.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "Status 2"
 [connection signal="toggled" from="HBoxContainer/CheckBox2" to="." method="_on_CheckBox2_toggled"]

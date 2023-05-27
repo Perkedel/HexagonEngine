@@ -1,7 +1,7 @@
 extends Popup
 
 enum FileAccessModes {Resourcer = 0, Userer = 1, FileSystemer = 2, Canceler = -1}
-export (FileAccessModes) var SelectAccessMode
+@export (FileAccessModes) var SelectAccessMode
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

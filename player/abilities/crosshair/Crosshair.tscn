@@ -4,30 +4,30 @@
 [ext_resource path="res://player/abilities/crosshair/Crosshair.gd" type="Script" id=2]
 [ext_resource path="res://player/abilities/crosshair/Center_Dot.tscn" type="PackedScene" id=3]
 
-[node name="Crosshair" type="RayCast"]
+[node name="Crosshair" type="RayCast3D"]
 enabled = true
-cast_to = Vector3( 0, 0, -100 )
+target_position = Vector3( 0, 0, -100 )
 script = ExtResource( 2 )
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="CenterDot" parent="Position2D" instance=ExtResource( 3 )]
+[node name="CenterDot" parent="Marker2D" instance=ExtResource( 3 )]
 visible = false
 
-[node name="Lines" type="Position2D" parent="Position2D"]
+[node name="Lines" type="Marker2D" parent="Marker2D"]
 
-[node name="Line1" parent="Position2D/Lines" instance=ExtResource( 1 )]
+[node name="Line1" parent="Marker2D/Lines" instance=ExtResource( 1 )]
 position = Vector2( -53.5, 0 )
 
-[node name="Line2" parent="Position2D/Lines" instance=ExtResource( 1 )]
+[node name="Line2" parent="Marker2D/Lines" instance=ExtResource( 1 )]
 position = Vector2( 0, -53.5 )
 rotation = 1.5708
 
-[node name="Line3" parent="Position2D/Lines" instance=ExtResource( 1 )]
+[node name="Line3" parent="Marker2D/Lines" instance=ExtResource( 1 )]
 position = Vector2( 53.5, 0 )
 rotation = 3.14159
 
-[node name="Line4" parent="Position2D/Lines" instance=ExtResource( 1 )]
+[node name="Line4" parent="Marker2D/Lines" instance=ExtResource( 1 )]
 position = Vector2( 0, 53.5 )
 rotation = -1.5708
 

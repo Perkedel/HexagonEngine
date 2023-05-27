@@ -6,6 +6,6 @@
 editor/display_folded = false
 
 [node name="Button" parent="." index="0"]
-margin_left = 910.0
-margin_right = 1010.0
+offset_left = 910.0
+offset_right = 1010.0
 text = "Zexxle"

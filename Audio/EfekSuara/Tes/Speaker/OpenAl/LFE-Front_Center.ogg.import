@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/LFE-Front_Center.ogg-a30b3ba12bead4fa8e6c1aa421e3bccd.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bu6c0r0gwsa20"
+path="res://.godot/imported/LFE-Front_Center.ogg-a30b3ba12bead4fa8e6c1aa421e3bccd.oggvorbisstr"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Tes/Speaker/OpenAl/LFE-Front_Center.ogg"
-dest_files=[ "res://.import/LFE-Front_Center.ogg-a30b3ba12bead4fa8e6c1aa421e3bccd.oggstr" ]
+dest_files=["res://.godot/imported/LFE-Front_Center.ogg-a30b3ba12bead4fa8e6c1aa421e3bccd.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

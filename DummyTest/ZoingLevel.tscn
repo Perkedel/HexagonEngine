@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape3D" id=1]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="BoxMesh" id=2]
 
-[node name="ZoingLevel" type="Spatial"]
+[node name="ZoingLevel" type="Node3D"]
 
-[node name="ZoingCube" type="RigidBody" parent="."]
+[node name="ZoingCube" type="RigidBody3D" parent="."]
 mode = 1
 
-[node name="CollisionShape" type="CollisionShape" parent="ZoingCube"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ZoingCube"]
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="ZoingCube"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ZoingCube"]
 mesh = SubResource( 2 )
 material/0 = null

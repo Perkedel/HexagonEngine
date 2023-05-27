@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/ActionIcon/ActionIcon.gd" type="Script" id=1]
-[ext_resource path="res://addons/ActionIcon/Keyboard/Blank.png" type="Texture" id=2]
+[ext_resource path="res://addons/ActionIcon/Keyboard/Blank.png" type="Texture2D" id=2]
 
 [node name="ActionIcon" type="TextureRect"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 40, 0 )
+offset_right = 40.0
+offset_bottom = 40.0
+custom_minimum_size = Vector2( 40, 0 )
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6

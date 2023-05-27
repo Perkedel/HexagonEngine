@@ -1,35 +1,35 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="FontFile" id=1]
+[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=2]
+[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture2D" id=3]
 
 [node name="Menu404" type="HBoxContainer"]
-margin_top = 980.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 980.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 100 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeDVDButton" type="Button" parent="."]
-margin_left = 458.0
-margin_right = 958.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-custom_fonts/font = ExtResource( 1 )
+offset_left = 458.0
+offset_right = 958.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Change DVD"
 icon = ExtResource( 3 )
 expand_icon = true
 
 [node name="ExitGameButton" type="Button" parent="."]
-margin_left = 962.0
-margin_right = 1462.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 0 )
-custom_fonts/font = ExtResource( 1 )
+offset_left = 962.0
+offset_right = 1462.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 500, 0 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Shutdown Quit"
 icon = ExtResource( 2 )
 expand_icon = true

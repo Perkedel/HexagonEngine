@@ -35,7 +35,7 @@ const StopSpeaking = preload("res://examples/SaveLoad/Actions/StopSpeaking.gd")
 const Utils = preload("res://addons/GDBehavior/Utils.gd")
 const SaveLoad = preload("res://addons/GDBehavior/SaveLoad.gd")
 
-onready var actors = $Actors.get_children()
+@onready var actors = $Actors.get_children()
 
 var ticks = []
 var tree_runner: BTRunner
@@ -91,7 +91,7 @@ func setup_behavior():
 	var fldr_path = "user://gdbehavior/example/"
 	var test_filename =  fldr_path + "bt_save_test.bt"
 	
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	if not dir.dir_exists(fldr_path):
 		dir.make_dir_recursive(fldr_path)
 		

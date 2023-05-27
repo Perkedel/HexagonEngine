@@ -1,28 +1,28 @@
-tool
+@tool
 extends Label
 
 # fonts by https://www.keshikan.net/fonts-e.html, OpenFont SIL 1.1
 # built the Label for Godot by JOELwindows7, GNU GPL v3
 const fellbackChooseMode:String = "7Seg"
 const fellbackChooseForm:String = "Classic"
-const fellbackFont:DynamicFont = preload("res://fonts/kashikan-DSEG/kashikan-DSEG.tres")
+const fellbackFont:FontFile = preload("res://fonts/kashikan-DSEG/kashikan-DSEG.tres")
 
-export(float) var size = 16.0
-onready var fonto:DynamicFont = get_font("font")
-export(String,"7Seg","14Seg","Weather") var chooseMode = fellbackChooseMode setget set_choose_mode
-export(String,"Classic","Modern","Egg") var chooseForm = fellbackChooseForm setget set_choose_form
-export(bool) var miniForm = false setget set_mini_form
-export(String,"Regular","Italic","Bold","BoldItalic", "Light", "LightItalic") var fontWeight = "Regular" setget set_font_weight
-export(Color) var fontColor = Color.white setget set_font_color
-export(Dictionary) var Fonts = _defaultFont setget set_fonts_dictionary
+@export var size: float = 16.0
+@onready var fonto:FontFile = get_font("font")
+@export var chooseMode = fellbackChooseMode: set = set_choose_mode
+@export var chooseForm = fellbackChooseForm: set = set_choose_form
+@export var miniForm: bool = false: set = set_mini_form
+@export var fontWeight = "Regular": set = set_font_weight
+@export var fontColor: Color = Color.WHITE: set = set_font_color
+@export var Fonts: Dictionary = _defaultFont: set = set_fonts_dictionary
 
-const fellBackClassic:DynamicFontData = preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf")
-const fellBackModern:DynamicFontData = preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
-onready var fellBackClassic7:DynamicFontData = preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf")
-const fellBackModern7:DynamicFontData = preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Regular.ttf")
-const fellBackWeather:DynamicFontData = preload("res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf")
-export(bool) var justUseFellBackCustomInstead = false
-export(DynamicFontData) var fellBackPleaseAssignCustom = load("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
+const fellBackClassic:FontFile = preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Regular.ttf")
+const fellBackModern:FontFile = preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
+@onready var fellBackClassic7:FontFile = preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf")
+const fellBackModern7:FontFile = preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Regular.ttf")
+const fellBackWeather:FontFile = preload("res://font/fonts-DSEG/DSEGWeather/DSEGWeather.ttf")
+@export var justUseFellBackCustomInstead: bool = false
+@export var fellBackPleaseAssignCustom: FontFile = load("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Regular.ttf")
 
 const _defaultFont:Dictionary = {
 	"7Seg":{
@@ -32,7 +32,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -40,7 +40,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -50,7 +50,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -58,7 +58,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-LightItalic.ttf")
 			}
 		},
@@ -88,7 +88,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -96,7 +96,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -106,7 +106,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -114,7 +114,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf"),
-				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light.ttf"),
+				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light3D.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-LightItalic.ttf")
 			}
 		},
@@ -167,7 +167,7 @@ func _updateFont():
 func replaceColor(value:Color=fontColor):
 	if value:
 		fontColor = value
-	add_color_override("font_color",fontColor)
+	add_theme_color_override("font_color",fontColor)
 	pass
 
 # Called when the node enters the scene tree for the first time.

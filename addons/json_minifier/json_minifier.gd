@@ -20,7 +20,7 @@ static func minify_json(string : String, strip_space: bool = true) -> String:
 	var in_multi := false
 	var in_single := false
 
-	var new_str := PoolStringArray()
+	var new_str := PackedStringArray()
 	var index := 0
 
 	for reg_ex_match in tokenizer.search_all(string):
@@ -44,7 +44,7 @@ static func minify_json(string : String, strip_space: bool = true) -> String:
 			var escaped : RegExMatch = end_slashes_re.search(string, 0, reg_ex_match.get_start())
 
 			# start of string or unescaped quote character to end string
-			if not in_string or (escaped.get_string().empty() or len(escaped.get_string()) % 2 == 0):  # noqa
+			if not in_string or (escaped.get_string().is_empty() or len(escaped.get_string()) % 2 == 0):  # noqa
 				in_string = not in_string
 			index -= 1  # include " character in next catch
 		elif not (in_string or in_multi or in_single):
@@ -68,4 +68,4 @@ static func minify_json(string : String, strip_space: bool = true) -> String:
 				new_str.append(' '.repeat(val.length()))
 
 	new_str.append(string.substr(index))
-	return new_str.join('')
+	return ''.join(new_str)

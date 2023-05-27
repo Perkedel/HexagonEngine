@@ -7,10 +7,10 @@
 script = ExtResource( 1 )
 ZoingLoad = ExtResource( 2 )
 
-[node name="Spatial" type="Spatial" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="Camera" type="Camera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -18,4 +18,4 @@ anchor_bottom = 1.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
 anchor_right = 1.0
-margin_bottom = 175.0
+offset_bottom = 175.0

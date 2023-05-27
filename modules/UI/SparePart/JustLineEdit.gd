@@ -1,19 +1,19 @@
-tool
+@tool
 extends HBoxContainer
 
-export(String) var VariableTitle:String = "Just a LineEdit"
-export(String) var PrefilledWith:String
-export(String) var PlaceHolderer:String = "Just a Placeholder"
-export(float,0,1) var PlaceHoldererAlpha = .6
-export(bool) var Secret:bool = false
-export(String) var SecretChar:String = "*"
-export(bool) var clearButton = false
-export(bool) var enableContextMenu = true
-export(bool) var enableShortcutKeys = true
-export(bool) var enableSelecting = true
-export(bool) var BlinkCaret = true
-export(float) var BlinkCaretSpeed = .65
-export(int) var BlinkCaretPosition = 0
+@export var VariableTitle: String:String = "Just a LineEdit"
+@export var PrefilledWith: String:String
+@export var PlaceHolderer: String:String = "Just a Placeholder"
+@export var PlaceHoldererAlpha = .6 # (float,0,1)
+@export var Secret: bool:bool = false
+@export var SecretChar: String:String = "*"
+@export var clearButton: bool = false
+@export var enableContextMenu: bool = true
+@export var enableShortcutKeys: bool = true
+@export var enableSelecting: bool = true
+@export var BlinkCaret: bool = true
+@export var BlinkCaretSpeed: float = .65
+@export var BlinkCaretPosition: int = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -33,8 +33,8 @@ func _syncParameter():
 	$LineEdit.shortcut_keys_enabled = enableShortcutKeys
 	$LineEdit.selecting_enabled = enableSelecting
 	$LineEdit.caret_blink = BlinkCaret
-	$LineEdit.caret_blink_speed = BlinkCaretSpeed
-	$LineEdit.caret_position = BlinkCaretPosition
+	$LineEdit.caret_blink_interval = BlinkCaretSpeed
+	$LineEdit.caret_column = BlinkCaretPosition
 	pass
 
 # Called when the node enters the scene tree for the first time.

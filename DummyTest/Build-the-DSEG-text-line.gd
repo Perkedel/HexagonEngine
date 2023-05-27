@@ -1,8 +1,8 @@
 extends Control
 
-onready var Dsegs = $VBoxContainer/DSEGs
+@onready var Dsegs = $VBoxContainer/DSEGs
 var Dseg
-onready var textEdit = $VBoxContainer/VBoxContainer3/TextEdit
+@onready var textEdit = $VBoxContainer/VBoxContainer3/TextEdit
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

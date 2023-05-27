@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/MoreButtonCollumnArea.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/UnkownIcon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/UnkownIcon.png" type="Texture2D" id=2]
 
 [node name="UnknownButton" instance=ExtResource( 1 )]
 ButtonLabelName = "Unknown"
 
 [node name="Button" parent="." index="0"]
-hint_tooltip = "Unknown purpose button"
+tooltip_text = "Unknown purpose button"
 
 [node name="BackgroundPanel" parent="Button" index="0"]
 self_modulate = Color( 0.662745, 0.662745, 0.662745, 1 )

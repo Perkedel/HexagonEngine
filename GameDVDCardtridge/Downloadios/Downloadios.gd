@@ -9,15 +9,15 @@ extends Node
 var loaded = false
 var doDownload = false
 var werror
-onready var statusBox = $Control/VBoxContainer/Splitron/StatusBox
-onready var imager = $Control/VBoxContainer/Splitron/Gambar
-onready var http = $HTTPRequest
-onready var httpJust = $HTTPRequestJustDownload
-onready var lineEditURL = $Control/VBoxContainer/URL/LineEditURL
-onready var lineEditDownload = $Control/VBoxContainer/DownloadInto/LineEditDownload
-onready var dialogDownload = $Control/DownloadFileDialog
-export(String) var urlIs = "https://example.com"
-export(String) var downloadInto = OS.get_system_dir(OS.SYSTEM_DIR_DOWNLOADS) + "/file" # folder
+@onready var statusBox = $Control/VBoxContainer/Splitron/StatusBox
+@onready var imager = $Control/VBoxContainer/Splitron/Gambar
+@onready var http = $HTTPRequest
+@onready var httpJust = $HTTPRequestJustDownload
+@onready var lineEditURL = $Control/VBoxContainer/URL/LineEditURL
+@onready var lineEditDownload = $Control/VBoxContainer/DownloadInto/LineEditDownload
+@onready var dialogDownload = $Control/DownloadFileDialog
+@export var urlIs: String = "https://example.com"
+@export var downloadInto: String = OS.get_system_dir(OS.SYSTEM_DIR_DOWNLOADS) + "/file" # folder
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -85,7 +85,9 @@ func _on_LineEditURL_text_entered(new_text):
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	var outputo = "\nResult: " + String(result) + "\nResponse:" + String(response_code) + "\nHeader: " + String(headers) + "\nBody: \n" + String(body) + "\nHex: \n" + String(body.hex_encode()) + "\nUTF-8: \n" + String(body.get_string_from_utf8()) + "\nJSON: \n"
-	var jsoning = JSON.parse(body.get_string_from_utf8())
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(body.get_string_from_utf8())
+	var jsoning = test_json_conv.get_data()
 	var byteArray = body
 	var imaging = Image.new()
 	var image_werror = imaging.load_png_from_buffer(body)

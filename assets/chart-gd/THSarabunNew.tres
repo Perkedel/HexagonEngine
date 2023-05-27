@@ -1,6 +1,6 @@
-[gd_resource type="DynamicFont" load_steps=1 format=2]
+[gd_resource type="FontFile" load_steps=1 format=3]
 
-[ext_resource path="res://assets/THSarabunNew.ttf" type="DynamicFontData" id=1]
+[ext_resource type="FontFile" path="res://assets/chart-gd/THSarabunNew.tres" id="1"]
 
 [resource]
 

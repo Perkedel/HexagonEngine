@@ -1,44 +1,44 @@
-extends KinematicBody
+extends CharacterBody3D
 
 # Pls walk
 
 # https://godotengine.org/article/godot-3-4-is-released#input
 # https://youtu.be/UpF7wm0186Q GDQuest how to 3D kinematic character
 
-export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
-export(bool) var autoCheckCam:bool = false
-export(NodePath) var catchCamera:NodePath
-export(float) var WALK_SPEED:float = 5
-export(float) var SPRINT_SPEED:float = 10
-export(float) var CROUCH_SPEED:float = 2.5
-export(float) var DIVE_SPEED:float = 20
-export(float) var BONUS_UNDIVE_SPEED:float = 30 # when just right when diven to floor then undive, just like Hat Kid
-export(float) var DIVE_VEER_SPEED:float = 4
-export(float) var DIVE_SLIDE_TIME:float = 3
-export(float) var WALK_DEADZONE:float = .25
-export(float) var JUMP_STRENGTH:float = 20.0
-export(float) var JUMP_TOKEN:int = 1
-export(float) var GRAVITATION:float = 50
-export(float) var FALL_DAMAGE_VELOCITY:float = 1000
-export(float) var PUSH_STRENGTH:float = 10 # inertia for pushing rigidbody or whatever
-export(bool) var smoothCharRotate:bool = true
-export(float) var smoothRotateSpeed:float = 10
-export(bool) var rotateOnFloorOnly:bool = false #if true the form rotates only if on floor
+@export var current: bool:bool = false: get = get_current, set = set_current # Is this the one that active?
+@export var autoCheckCam: bool:bool = false
+@export var catchCamera: NodePath:NodePath
+@export var WALK_SPEED: float:float = 5
+@export var SPRINT_SPEED: float:float = 10
+@export var CROUCH_SPEED: float:float = 2.5
+@export var DIVE_SPEED: float:float = 20
+@export var BONUS_UNDIVE_SPEED: float:float = 30 # when just right when diven to floor then undive, just like Hat Kid
+@export var DIVE_VEER_SPEED: float:float = 4
+@export var DIVE_SLIDE_TIME: float:float = 3
+@export var WALK_DEADZONE: float:float = .25
+@export var JUMP_STRENGTH: float:float = 20.0
+@export var JUMP_TOKEN: float:int = 1
+@export var GRAVITATION: float:float = 50
+@export var FALL_DAMAGE_VELOCITY: float:float = 1000
+@export var PUSH_STRENGTH: float:float = 10 # inertia for pushing rigidbody or whatever
+@export var smoothCharRotate: bool:bool = true
+@export var smoothRotateSpeed: float:float = 10
+@export var rotateOnFloorOnly: bool:bool = false #if true the form rotates only if on floor
 
 # Artindi's Special Coyote Time
 var shouldCoyoteJump:bool = false
 var _sparseCoyoteTimed:bool = false
-export(float) var howLongCoyoteTime:float = .5
-export(float) var howLongStickyLoncatButton:float = .1
+@export var howLongCoyoteTime: float:float = .5
+@export var howLongStickyLoncatButton: float:float = .1
 
-onready var useSpeed:float = 5
-onready var jalan:Vector2 = Vector2.ZERO # walk right now
-onready var loncatRightNow:int = 1 # jump token right now 
-onready var floored:bool = true
-onready var is_jumping:bool = false
-onready var is_crouching:bool = false
-onready var _press_crouch:bool = false
-onready var _just_press_crouch:bool = false
+@onready var useSpeed:float = 5
+@onready var jalan:Vector2 = Vector2.ZERO # walk right now
+@onready var loncatRightNow:int = 1 # jump token right now 
+@onready var floored:bool = true
+@onready var is_jumping:bool = false
+@onready var is_crouching:bool = false
+@onready var _press_crouch:bool = false
+@onready var _just_press_crouch:bool = false
 
 var _mode:int = 0
 # 0 = walk
@@ -61,10 +61,10 @@ var _divePhase:int = 0
 # 4 = finished
 var _airborne_for:float = 0
 
-onready var _collider:CollisionShape = $CollideMe
-onready var _springArm:SpringArm = $SpringCamArm
-onready var _form:Spatial = $FormSlot 
-onready var _frontRef = $FrontRef
+@onready var _collider:CollisionShape3D = $CollideMe
+@onready var _springArm:SpringArm3D = $SpringCamArm
+@onready var _form:Node3D = $FormSlot 
+@onready var _frontRef = $FrontRef
 
 func set_current(value:bool):
 	current = value
@@ -112,7 +112,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# make spring arm also follow this thing translation
-	_springArm.translation = translation
+	_springArm.position = position
 #	_frontRef.rotation_degrees.y = _springArm.rotation_degrees.y
 	
 	pass
@@ -229,9 +229,17 @@ func _physics_process(delta):
 			pass
 		pass
 	
-	_velocity = move_and_slide_with_snap(_velocity, _snap_vector, Vector3.UP, true, 4, PI/4, false)
+	set_velocity(_velocity)
+	# TODOConverter40 looks that snap in Godot 4.0 is float, not vector like in Godot 3 - previous value `_snap_vector`
+	set_up_direction(Vector3.UP)
+	set_floor_stop_on_slope_enabled(true)
+	set_max_slides(4)
+	set_floor_max_angle(PI/4)
+	# TODOConverter40 infinite_inertia were removed in Godot 4.0 - previous value `false`
+	move_and_slide()
+	_velocity = velocity
 	# KidsCanCode. infinite inertia false it!
-	for index in get_slide_count():
+	for index in get_slide_collision_count():
 		var collision = get_slide_collision(index)
 		if collision.collider.is_in_group("pushening"):
 			collision.collider.apply_central_impulse(-collision.normal * PUSH_STRENGTH)
@@ -289,7 +297,7 @@ func reset_dive():
 func coyoteTime():
 	if shouldCoyoteJump and not _sparseCoyoteTimed:
 		_sparseCoyoteTimed = true
-		yield(get_tree().create_timer(howLongCoyoteTime), "timeout")
+		await get_tree().create_timer(howLongCoyoteTime).timeout
 #		print('Coyote timed')
 		shouldCoyoteJump = false
 	pass

@@ -1,11 +1,11 @@
 extends Node
 
-onready var http = $HTTPRequest
-onready var notif = $Label
+@onready var http = $HTTPRequest
+@onready var notif = $Label
 
-onready var logined = false
-onready var new_profile = false
-onready var information_sent = false
+@onready var logined = false
+@onready var new_profile = false
+@onready var information_sent = false
 
 var result_body_http
 
@@ -39,8 +39,12 @@ func _on_Regist_pressed():
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
-	var response_body := JSON.parse(body.get_string_from_ascii())
-	result_body_http = JSON.parse(body.get_string_from_ascii()).result as Dictionary
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(body.get_string_from_ascii())
+	var response_body := test_json_conv.get_data()
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(body.get_string_from_ascii()).result as Dictionary
+	result_body_http = test_json_conv.get_data()
 	
 	if not logined:
 		if response_code != 200:
@@ -85,7 +89,7 @@ func _on_PUSH_pressed():
 func _on_refreshClip_pressed():
 	if logined:
 		FirebaseQuest.get_document("pengguna/%s" % FirebaseQuest.user_info.id,http)
-		yield(http,"request_completed")
+		await http.request_completed
 		if logined:
 			Datapush = result_body_http.fields
 			notif.text = "Fields are:\n" + String(Datapush)

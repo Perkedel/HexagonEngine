@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=1]
 [ext_resource path="res://DummyTest/Bept.gd" type="Script" id=2]
 
 [node name="Bept" type="Control"]
@@ -16,10 +16,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -820.0
-margin_top = -189.0
-margin_right = 821.0
-margin_bottom = 273.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = -820.0
+offset_top = -189.0
+offset_right = 821.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "Bespt"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

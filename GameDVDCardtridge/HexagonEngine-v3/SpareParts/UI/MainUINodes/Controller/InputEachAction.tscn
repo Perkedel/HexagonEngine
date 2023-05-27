@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=2]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Controller/InputEachAction.gd" type="Script" id=3]
 
 
@@ -10,46 +10,46 @@ bg_color = Color( 0.556863, 0, 0.607843, 0.686275 )
 
 [node name="InputEachAction" type="PanelContainer"]
 anchor_right = 1.0
-margin_bottom = 100.0
-custom_styles/panel = SubResource( 1 )
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HasIn" type="VBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 104.0
+offset_right = 1920.0
+offset_bottom = 104.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Titler" type="HBoxContainer" parent="HasIn"]
-margin_right = 1920.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 0, 100 )
+offset_right = 1920.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Title" type="Label" parent="HasIn/Titler"]
-margin_right = 1766.0
-margin_bottom = 100.0
+offset_right = 1766.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Jump"
 align = 1
 valign = 1
 
 [node name="AddButton" type="Button" parent="HasIn/Titler"]
-margin_left = 1770.0
-margin_right = 1920.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 150, 0 )
+offset_left = 1770.0
+offset_right = 1920.0
+offset_bottom = 100.0
+custom_minimum_size = Vector2( 150, 0 )
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "+"
 
 [node name="ControlButtons" type="VBoxContainer" parent="HasIn"]
-margin_top = 104.0
-margin_right = 1920.0
-margin_bottom = 104.0
+offset_top = 104.0
+offset_right = 1920.0
+offset_bottom = 104.0

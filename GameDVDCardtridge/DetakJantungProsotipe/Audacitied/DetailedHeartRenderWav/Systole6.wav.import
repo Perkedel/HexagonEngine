@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Systole6.wav-94e1109691cea63b1733cb8341d995f5.sample"
+type="AudioStreamWAV"
+uid="uid://2qit3i8oj8pd"
+path="res://.godot/imported/Systole6.wav-94e1109691cea63b1733cb8341d995f5.sample"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRenderWav/Systole6.wav"
-dest_files=[ "res://.import/Systole6.wav-94e1109691cea63b1733cb8341d995f5.sample" ]
+dest_files=["res://.godot/imported/Systole6.wav-94e1109691cea63b1733cb8341d995f5.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

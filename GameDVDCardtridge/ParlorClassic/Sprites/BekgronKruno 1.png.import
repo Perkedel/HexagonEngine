@@ -2,12 +2,13 @@
 
 importer="image"
 type="Image"
-path="res://.import/BekgronKruno 1.png-4092efaa23b761eb0fecc9fcf02b3f89.image"
+uid="uid://4tooy5vj2jih"
+path="res://.godot/imported/BekgronKruno 1.png-4092efaa23b761eb0fecc9fcf02b3f89.image"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/ParlorClassic/Sprites/BekgronKruno 1.png"
-dest_files=[ "res://.import/BekgronKruno 1.png-4092efaa23b761eb0fecc9fcf02b3f89.image" ]
+dest_files=["res://.godot/imported/BekgronKruno 1.png-4092efaa23b761eb0fecc9fcf02b3f89.image"]
 
 [params]
 

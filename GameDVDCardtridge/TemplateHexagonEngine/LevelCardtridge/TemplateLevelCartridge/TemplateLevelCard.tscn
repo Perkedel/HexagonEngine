@@ -3,16 +3,16 @@
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/TemplateLevelCard.gd" type="Script" id=1]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/Template3DSpace.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/Template2DSpace.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture" id=4]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=5]
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="DynamicFont" id=6]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://fonts/Built/Ubuntu_MI_28tred.tres" type="DynamicFont" id=8]
-[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="DynamicFont" id=9]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=5]
+[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=6]
+[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-BI.ttf" type="FontFile" id=7]
+[ext_resource path="res://fonts/Built/Ubuntu_MI_28tred.tres" type="FontFile" id=8]
+[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="FontFile" id=9]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=10]
 
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold Italic 48"
 size = 48
@@ -22,9 +22,9 @@ font_data = ExtResource( 7 )
 
 [node name="TemplateLevelCard" type="Panel"]
 self_modulate = Color( 0, 1, 0.0352941, 0.517647 )
-margin_right = 800.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 800, 0 )
+offset_right = 800.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 800, 0 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -47,12 +47,12 @@ ahuihahuhahuhahuhahu"
 [node name="LevelCardContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 800, 0 )
+custom_minimum_size = Vector2( 800, 0 )
 
 [node name="ImagePanel" type="Panel" parent="LevelCardContainer"]
 self_modulate = Color( 0, 0.27451, 1, 0.65098 )
-margin_right = 800.0
-margin_bottom = 433.0
+offset_right = 800.0
+offset_bottom = 433.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -66,37 +66,37 @@ expand = true
 stretch_mode = 6
 
 [node name="TitleScroll" type="ScrollContainer" parent="LevelCardContainer"]
-margin_top = 437.0
-margin_right = 800.0
-margin_bottom = 539.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 437.0
+offset_right = 800.0
+offset_bottom = 539.0
+custom_minimum_size = Vector2( 0, 100 )
 scroll_vertical_enabled = false
 
 [node name="Title" type="Label" parent="LevelCardContainer/TitleScroll"]
-margin_right = 1399.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 5 )
+offset_right = 1399.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource( 5 )
 text = "Template Titleg of Level HUEUEUEUEUE"
 
 [node name="DescriptionScroll" type="ScrollContainer" parent="LevelCardContainer"]
-margin_top = 543.0
-margin_right = 800.0
-margin_bottom = 976.0
+offset_top = 543.0
+offset_right = 800.0
+offset_bottom = 976.0
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LevelCardContainer/DescriptionScroll"]
-margin_right = 800.0
-margin_bottom = 433.0
+offset_right = 800.0
+offset_bottom = 433.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/mono_font = ExtResource( 6 )
-custom_fonts/bold_italics_font = SubResource( 1 )
-custom_fonts/italics_font = ExtResource( 8 )
-custom_fonts/bold_font = ExtResource( 9 )
-custom_fonts/normal_font = ExtResource( 10 )
+theme_override_fonts/mono_font = ExtResource( 6 )
+theme_override_fonts/bold_italics_font = SubResource( 1 )
+theme_override_fonts/italics_font = ExtResource( 8 )
+theme_override_fonts/bold_font = ExtResource( 9 )
+theme_override_fonts/normal_font = ExtResource( 10 )
 bbcode_enabled = true
-bbcode_text = "Descriptioner
+text = "Descriptioner
 [b]WEEEW[/b]
 [i]OUOUOUOUOUOUO[/i]
 [code]if this then that[/code]
@@ -116,11 +116,11 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 ahuihahuhahuhahuhahu"
 
 [node name="PlayTheLevelButton" type="Button" parent="LevelCardContainer"]
-margin_top = 980.0
-margin_right = 800.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 100 )
-custom_fonts/font = ExtResource( 5 )
+offset_top = 980.0
+offset_right = 800.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 100 )
+theme_override_fonts/font = ExtResource( 5 )
 text = "Load This Card"
 [connection signal="meta_clicked" from="LevelCardContainer/DescriptionScroll/RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="pressed" from="LevelCardContainer/PlayTheLevelButton" to="." method="_on_PlayTheLevelButton_pressed"]

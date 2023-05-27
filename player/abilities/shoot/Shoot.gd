@@ -1,13 +1,13 @@
-extends Spatial
+extends Node3D
 
-export (PackedScene) var impact
-export (PackedScene) var muzzle_flash
-export (PackedScene) var shell_mesh
-export (PackedScene) var magazine
+@export (PackedScene) var impact
+@export (PackedScene) var muzzle_flash
+@export (PackedScene) var shell_mesh
+@export (PackedScene) var magazine
 
-export (Resource) var shoot_sound
-export (Resource) var reload_sound
-export (Resource) var empty_sound
+@export (Resource) var shoot_sound
+@export (Resource) var reload_sound
+@export (Resource) var empty_sound
 
 var damage = 100
 
@@ -24,23 +24,23 @@ var ammo = 30
 
 var accuracy = 1
 
-onready var shoulder = $Shoulder
-onready var hand = $Shoulder/Hand
-onready var weapon = $Shoulder/Hand/Weapon
-onready var weapon_model = $Shoulder/Hand/Weapon/WeaponModel
-onready var muzzle = $Shoulder/Hand/Weapon/WeaponModel/Muzzle
-onready var shell = $Shoulder/Hand/Weapon/WeaponModel/Shell
-onready var magazine_position = $Shoulder/Hand/Weapon/WeaponModel/AmmoPosition
+@onready var shoulder = $Shoulder
+@onready var hand = $Shoulder/Hand
+@onready var weapon = $Shoulder/Hand/Weapon
+@onready var weapon_model = $Shoulder/Hand/Weapon/WeaponModel
+@onready var muzzle = $Shoulder/Hand/Weapon/WeaponModel/Muzzle
+@onready var shell = $Shoulder/Hand/Weapon/WeaponModel/Shell
+@onready var magazine_position = $Shoulder/Hand/Weapon/WeaponModel/AmmoPosition
 
-onready var player = get_tree().get_root().find_node("Player", true, false)
-onready var camera = get_tree().get_root().find_node("Camera", true, false)
+@onready var player = get_tree().get_root().find_child("Player", true, false)
+@onready var camera = get_tree().get_root().find_child("Camera3D", true, false)
 
 func _input(event):
 	if event is InputEventMouseMotion: # Getting the mouse movement for the weapon sway in the physics process
 		mouse_relative_x = clamp(event.relative.x, -50, 50)
 		mouse_relative_y = clamp(event.relative.y, -50, 10)
 
-	if Input.is_key_pressed(KEY_R) and not Input.is_mouse_button_pressed(BUTTON_RIGHT): # Reloading
+	if Input.is_key_pressed(KEY_R) and not Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT): # Reloading
 		if not $ReloadTween.is_active() and ammo != max_ammo:
 			ammo = max_ammo
 			$AmmoText.text = str(ammo)
@@ -52,15 +52,15 @@ func _input(event):
 
 func _process(delta):
 	# Position the ammo text dynamically at any screen resolution
-	$AmmoText.margin_top = get_viewport().size.y / 10 * -1
-	$AmmoText.margin_left = get_viewport().size.y / 10 * -1
-	$AmmoText.margin_right = $AmmoText.margin_left + 16
-	$AmmoText.margin_bottom = $AmmoText.margin_top + 12
+	$AmmoText.offset_top = get_viewport().size.y / 10 * -1
+	$AmmoText.offset_left = get_viewport().size.y / 10 * -1
+	$AmmoText.offset_right = $AmmoText.offset_left + 16
+	$AmmoText.offset_bottom = $AmmoText.offset_top + 12
 	
-	$BackgroundText.margin_top = $AmmoText.margin_top
-	$BackgroundText.margin_left = $AmmoText.margin_left
-	$BackgroundText.margin_right = $AmmoText.margin_right
-	$BackgroundText.margin_bottom = $AmmoText.margin_bottom
+	$BackgroundText.offset_top = $AmmoText.offset_top
+	$BackgroundText.offset_left = $AmmoText.offset_left
+	$BackgroundText.offset_right = $AmmoText.offset_right
+	$BackgroundText.offset_bottom = $AmmoText.offset_bottom
 	
 	# If sprinting orient the weapon
 	if player.speed_multiplier == 2 and not $ReloadTween.is_active() and not player.get_node("CrouchTween").is_active():
@@ -73,27 +73,27 @@ func _process(delta):
 	if player.direction != Vector3():
 		if not $HBobbingTween.is_active():
 			var animation_speed = clamp(0.4 / player.speed_multiplier, 0.4/1.6, 0.4)
-			$HBobbingTween.interpolate_property(weapon, "translation:x", 0, -0.01 * player.speed_multiplier, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-			$HBobbingTween.interpolate_property(weapon, "translation:x", -0.01 * player.speed_multiplier, 0, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, animation_speed)
+			$HBobbingTween.interpolate_property(weapon, "position:x", 0, -0.01 * player.speed_multiplier, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			$HBobbingTween.interpolate_property(weapon, "position:x", -0.01 * player.speed_multiplier, 0, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, animation_speed)
 			$HBobbingTween.start()
 		if not $VBobbingTween.is_active(): 
 			var animation_speed = clamp(0.25 / player.speed_multiplier, 0.25/1.6, 0.25)
-			$VBobbingTween.interpolate_property(weapon, "translation:y", 0, -0.01 * player.speed_multiplier, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-			$VBobbingTween.interpolate_property(weapon, "translation:y", -0.01 * player.speed_multiplier, 0, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT, animation_speed)
+			$VBobbingTween.interpolate_property(weapon, "position:y", 0, -0.01 * player.speed_multiplier, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			$VBobbingTween.interpolate_property(weapon, "position:y", -0.01 * player.speed_multiplier, 0, animation_speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT, animation_speed)
 			$VBobbingTween.start()
 	
 	# When aiming with the right-click the weapon is centered and the accuracy set to 2 for the bullet spread calculation
-	if Input.is_mouse_button_pressed(BUTTON_RIGHT) and player.is_on_floor() and not $ReloadTween.is_active():
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and player.is_on_floor() and not $ReloadTween.is_active():
 		accuracy = 2
-		hand.translation = lerp(hand.translation, Vector3(0, -0.13, -0.12), 10 * delta)
+		hand.position = lerp(hand.position, Vector3(0, -0.13, -0.12), 10 * delta)
 		hand.rotation_degrees = lerp(hand.rotation_degrees, Vector3(), 10 * delta)
 	else:
 		accuracy = 1
 		if player.direction == Vector3(): # The weapon is slightly lower when walking
-			hand.translation = lerp(hand.translation, Vector3(0.15, -0.15, -0.2), 10 * delta)
+			hand.position = lerp(hand.position, Vector3(0.15, -0.15, -0.2), 10 * delta)
 			hand.rotation_degrees.x = lerp(hand.rotation_degrees.x, 0, 10 * delta)
 		else:
-			hand.translation = lerp(hand.translation, Vector3(0.14, -0.17, -0.2), 10 * delta)
+			hand.position = lerp(hand.position, Vector3(0.14, -0.17, -0.2), 10 * delta)
 			hand.rotation_degrees.x = lerp(hand.rotation_degrees.x, 2, 10 * delta)
 	
 	# Weapon sway
@@ -101,7 +101,7 @@ func _process(delta):
 	hand.rotation_degrees.y = lerp(hand.rotation_degrees.y, mouse_relative_x / 20, weapon_sway * delta)
 	hand.rotation_degrees.x = lerp(hand.rotation_degrees.x, -mouse_relative_y / 10, weapon_sway * delta)
 	
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) and $FireRate.is_stopped() and player.is_on_floor():
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and $FireRate.is_stopped() and player.is_on_floor():
 		if not player.speed_multiplier == 2 and not $ReloadTween.is_active() and weapon.rotation_degrees.y < 5:
 			$FireRate.start()
 			if ammo > 0:
@@ -115,7 +115,7 @@ func _process(delta):
 			
 	# Animation when falling on the ground
 	if player.is_on_floor() and not player.on_ground:
-		var max_rotation = clamp(player.gravity_vec.y * 2, -30, 0) # Use the impact velocity for the angle and clamp the value
+		var max_rotation = clamp(player.gravity_direction.y * 2, -30, 0) # Use the impact velocity for the angle and clamp the value
 		$LandingTween.interpolate_property($Shoulder, "rotation_degrees:x", 0, max_rotation, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0)
 		$LandingTween.interpolate_property($Shoulder, "rotation_degrees:x", max_rotation, 0, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
 		$LandingTween.start()
@@ -125,10 +125,10 @@ func shoot_animation():
 	$WeaponTween.stop_all()
 	
 	# Weapon animation
-	$WeaponTween.interpolate_property(weapon, "translation:z", 0, 0.03 * strength, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-	$WeaponTween.interpolate_property(weapon, "translation:z", 0.03 * strength, -0.02 * strength, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.1)
-	$WeaponTween.interpolate_property(weapon, "translation:z", -0.02 * strength, 0.01 * strength, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
-	$WeaponTween.interpolate_property(weapon, "translation:z", 0.01 * strength, 0, 0.6, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.4)
+	$WeaponTween.interpolate_property(weapon, "position:z", 0, 0.03 * strength, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$WeaponTween.interpolate_property(weapon, "position:z", 0.03 * strength, -0.02 * strength, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.1)
+	$WeaponTween.interpolate_property(weapon, "position:z", -0.02 * strength, 0.01 * strength, 0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
+	$WeaponTween.interpolate_property(weapon, "position:z", 0.01 * strength, 0, 0.6, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.4)
 
 	$WeaponTween.interpolate_property(weapon, "rotation_degrees:x", 0, -2, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$WeaponTween.interpolate_property(weapon, "rotation_degrees:x", -2, 3, 0.1, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.15)
@@ -161,8 +161,8 @@ func shoot():
 	else:
 		recoil = $RecoilTimer.time_left * bullet_spread_angle * 1.5 / accuracy
 	
-	$BulletSpread.rotation_degrees.z = rand_range(0, 360)
-	$BulletSpread/RayCast.rotation_degrees.y = rand_range(-recoil, recoil)
+	$BulletSpread.rotation_degrees.z = randf_range(0, 360)
+	$BulletSpread/RayCast3D.rotation_degrees.y = randf_range(-recoil, recoil)
 	$RecoilTimer.start()
 	
 	# Spawn instances
@@ -183,37 +183,37 @@ func shoot():
 
 
 func spawn_muzzle_flash():
-	var muzzle_flash_instance = muzzle_flash.instance()
+	var muzzle_flash_instance = muzzle_flash.instantiate()
 	get_tree().get_root().add_child(muzzle_flash_instance)
 	muzzle_flash_instance.global_transform = muzzle.global_transform
 
 func spawn_impact():
-	if $BulletSpread/RayCast.is_colliding():
-		var impact_instance = impact.instance()
+	if $BulletSpread/RayCast3D.is_colliding():
+		var impact_instance = impact.instantiate()
 		get_tree().get_root().add_child(impact_instance)
-		impact_instance.global_transform.origin = $BulletSpread/RayCast.get_collision_point()
-		impact_instance.look_at($BulletSpread/RayCast.get_collision_point() - $BulletSpread/RayCast.get_collision_normal(), Vector3.UP)
+		impact_instance.global_transform.origin = $BulletSpread/RayCast3D.get_collision_point()
+		impact_instance.look_at($BulletSpread/RayCast3D.get_collision_point() - $BulletSpread/RayCast3D.get_collision_normal(), Vector3.UP)
 		impact_instance.get_node("Particles").emitting = true
-		impact_instance.get_node("ImpactSound").pitch_scale = rand_range(0.95, 1.05)
+		impact_instance.get_node("ImpactSound").pitch_scale = randf_range(0.95, 1.05)
 			
-		if $BulletSpread/RayCast.get_collider() is RigidBody:
-			$BulletSpread/RayCast.get_collider().apply_central_impulse(-$BulletSpread/RayCast.get_collision_normal() * damage)
+		if $BulletSpread/RayCast3D.get_collider() is RigidBody3D:
+			$BulletSpread/RayCast3D.get_collider().apply_central_impulse(-$BulletSpread/RayCast3D.get_collision_normal() * damage)
 			impact_instance.hide_bullet()
 
 func spawn_shell():
-	var shell_instance = shell_mesh.instance()
+	var shell_instance = shell_mesh.instantiate()
 	get_tree().get_root().add_child(shell_instance)
 	shell_instance.global_transform = shell.global_transform
 	shell_instance.linear_velocity = shell.global_transform.basis.x * 2.5
-	shell_instance.get_node("ImpactSound").pitch_scale = rand_range(0.95, 1.05)
-	yield(get_tree().create_timer(0.75), "timeout") # We add a delay before playing the sound to simulate the time of the shell to fall on the ground
+	shell_instance.get_node("ImpactSound").pitch_scale = randf_range(0.95, 1.05)
+	await get_tree().create_timer(0.75).timeout # We add a delay before playing the sound to simulate the time of the shell to fall on the ground
 	shell_instance.get_node("ImpactSound").play()
-	yield(get_tree().create_timer(10), "timeout")
+	await get_tree().create_timer(10).timeout
 	shell_instance.queue_free()
 
 func spawn_magazine():
-	var magazine_instance = magazine.instance()
-	yield(get_tree().create_timer(0.5), "timeout")
+	var magazine_instance = magazine.instantiate()
+	await get_tree().create_timer(0.5).timeout
 	get_tree().get_root().add_child(magazine_instance)
 	magazine_instance.global_transform = magazine_position.global_transform
 	magazine_instance.linear_velocity = magazine_position.global_transform.basis.z * 3
@@ -222,9 +222,9 @@ func play_sound(sound, dB, delay):
 	var audio_node = AudioStreamPlayer.new()
 	audio_node.stream = sound
 	audio_node.volume_db = dB
-	audio_node.pitch_scale = rand_range(0.95, 1.05)
+	audio_node.pitch_scale = randf_range(0.95, 1.05)
 	get_tree().get_root().add_child(audio_node)
-	yield(get_tree().create_timer(delay), "timeout")
+	await get_tree().create_timer(delay).timeout
 	audio_node.play()
-	yield(get_tree().create_timer(10.0), "timeout")
+	await get_tree().create_timer(10.0).timeout
 	audio_node.queue_free()

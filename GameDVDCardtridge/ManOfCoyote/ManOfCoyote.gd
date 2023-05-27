@@ -12,7 +12,7 @@ extends Node
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 
-onready var captureMouse = true
+@onready var captureMouse = true
 
 
 # Called when the node enters the scene tree for the first time.

@@ -1,25 +1,25 @@
-extends SpringArm
+extends SpringArm3D
 
 # 3rd person camera arm joint
 # https://youtu.be/UpF7wm0186Q
 
-export(bool) var current:bool = false setget set_current, get_current # Is this the one that active?
-export(bool) var autoCheckCam:bool = false
-export(float) var mouseSensitivity = 0.05
-export(float) var analogSensitivity = 1
-export(float) var maxTop = 30
-export(float) var minBottom = -90
-export(bool) var limitLeftRight:bool = false
-export(float) var minLeft = 0
-export(float) var maxRight = 360
-export(float) var deadzoning = .15
+@export var current: bool:bool = false: get = get_current, set = set_current # Is this the one that active?
+@export var autoCheckCam: bool:bool = false
+@export var mouseSensitivity: float = 0.05
+@export var analogSensitivity: float = 1
+@export var maxTop: float = 30
+@export var minBottom: float = -90
+@export var limitLeftRight: bool:bool = false
+@export var minLeft: float = 0
+@export var maxRight: float = 360
+@export var deadzoning: float = .15
 
 var _joyMoveX:float
 var _joyMoveY:float
-var _camCurrent:bool setget set_camCurrent, get_camCurrent
+var _camCurrent:bool: get = get_camCurrent, set = set_camCurrent
 var _lastCamCurrent:bool = false
 var _lastCurrent:bool = false
-onready var theCam = $Camera
+@onready var theCam = $Camera3D
 
 signal on_camCurrent(value)
 
@@ -72,7 +72,7 @@ func _ready():
 	_lastCamCurrent = theCam.current
 	_lastCurrent = current
 	checkCamCurrent()
-	set_as_toplevel(true)
+	set_as_top_level(true)
 	#TODO: enable only if focused
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	

@@ -1,6 +1,6 @@
-tool
+@tool
 
-extends PopupDialog
+extends Popup
 
 
 # Declare member variables here. Examples:
@@ -9,20 +9,20 @@ extends PopupDialog
 signal BackMenuButton
 signal ResetButton
 signal NextLevelButton
-export var ContentWindow = "Yay, you've completed just golf! congrats"
+@export var ContentWindow = "Yay, you've completed just golf! congrats"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func PopThisDialogWith(var sayWha:String):
+func PopThisDialogWith(sayWha:String):
 	if sayWha != "":
 		setDialogText(sayWha)
 	popup()
 	pass
 
-func setDialogText(var sayWha:String):
+func setDialogText(sayWha:String):
 	ContentWindow = sayWha
 	#$Contains/Say.text = sayWha
 	pass

@@ -26,7 +26,7 @@ SetSpawnIn = 1.0
 
 [node name="BalonAtas" parent="." instance=ExtResource( 5 )]
 position = Vector2( 963.111, 830.977 )
-contacts_reported = 0
+max_contacts_reported = 0
 contact_monitor = false
 
 [node name="RigidBody2D" parent="." instance=ExtResource( 6 )]

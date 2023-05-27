@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Diastole2.ogg-72c1252dc04e15a712efcaafc0e3f1e9.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnf4rdfvj74wy"
+path="res://.godot/imported/Diastole2.ogg-72c1252dc04e15a712efcaafc0e3f1e9.oggvorbisstr"
 
 [deps]
 
 source_file="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRender/Diastole2.ogg"
-dest_files=[ "res://.import/Diastole2.ogg-72c1252dc04e15a712efcaafc0e3f1e9.oggstr" ]
+dest_files=["res://.godot/imported/Diastole2.ogg-72c1252dc04e15a712efcaafc0e3f1e9.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,15 +1,15 @@
 extends Node
 
-export (bool) var isPlayingGameNow:bool = false
-export (bool) var isGamePaused:bool = false
-export (bool) var activateBackButton:bool = true
+@export var isPlayingGameNow:bool = false
+@export var isGamePaused:bool = false
+@export var activateBackButton:bool = true
 var hereTakeThisLoadedResource
 var andScronchMe
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export (NodePath) var daLoadedDVD
-export (NodePath) var mainNode
+@export var daLoadedDVD:Node
+@export var mainNode:Node
 
 # Singleton. Ahlinya Intinya inti, Core of the core. 
 
@@ -20,7 +20,7 @@ func iAmTheMainNode(theThing:Node):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SceneLoader.connect("on_scene_loaded", self, "_BiosLoaded")
+	SceneLoader.connect("on_scene_loaded", Callable(self, "_BiosLoaded"))
 	#AutoSpeaker.stream = preload("res://Audio/EfekSuara/425728__moogy73__click01.wav")
 	#AutoSpeaker.play()
 	AutoSpeaker.playSFXNow(load("res://Audio/EfekSuara/425728__moogy73__click01.wav"))
@@ -30,7 +30,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func assignLoadedDVD(thisThingRightHere:NodePath):
+func assignLoadedDVD(thisThingRightHere:Node):
 	daLoadedDVD = thisThingRightHere
 
 func changeDVD():
@@ -73,7 +73,7 @@ func ResumeGameNow():
 	pass
 
 func change_scene_with_resource(thisOne):
-	var pleaseInstanceThis = thisOne.instance()
+	var pleaseInstanceThis = thisOne.instantiate()
 	get_tree().current_scene.free()
 	get_tree().current_scene = null
 	get_tree().root.add_child(pleaseInstanceThis)
@@ -114,7 +114,7 @@ func _notification(what: int) -> void:
 		if activateBackButton:
 			var a = InputEventAction.new()
 			a.action = "ui_cancel"
-			a.pressed = true
+			a.button_pressed = true
 			Input.parse_input_event(a)
 		pass
 	pass

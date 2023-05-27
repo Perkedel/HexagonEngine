@@ -1,6 +1,6 @@
 extends Node
 
-export var bootJsonPatho : String = "res://GameDVDCardtridge/ExtAppOpener/boot.json"
+@export var bootJsonPatho : String = "res://GameDVDCardtridge/ExtAppOpener/boot.json"
 var bootFile : File
 enum OpenModes {shellOpen,OSExecute}
 var open_mode
@@ -17,7 +17,9 @@ func _ready():
 	bootFile = File.new()
 	var tryeCode = bootFile.open(bootJsonPatho,File.READ)
 	if tryeCode == OK:
-		var jsonContent = parse_json(bootFile.get_as_text())
+		var test_json_conv = JSON.new()
+		test_json_conv.parse(bootFile.get_as_text())
+		var jsonContent = test_json_conv.get_data()
 		if jsonContent["args"][0] == "shellOpen":
 			print("\n\nOpen Shell url now!")
 			open_mode = OpenModes.shellOpen
@@ -35,7 +37,7 @@ func _ready():
 	else:
 		printerr("Fatal error! boot.json cannot open!!! Code ", tryeCode)
 	bootFile.close()
-	yield(get_tree().create_timer(1),"timeout")
+	await get_tree().create_timer(1).timeout
 	emit_signal("ChangeDVD_Exec")
 	pass # Replace with function body.
 

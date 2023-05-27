@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=3]
 [ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -14,10 +14,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -567.0
-margin_top = -281.0
-margin_right = 567.0
-margin_bottom = 280.0
+offset_left = -567.0
+offset_top = -281.0
+offset_right = 567.0
+offset_bottom = 280.0
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -28,18 +28,18 @@ __meta__ = {
 self_modulate = Color( 1, 1, 1, 0.364706 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+theme_override_styles/panel = SubResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
-margin_right = 1134.0
-margin_bottom = 457.0
+offset_right = 1134.0
+offset_bottom = 457.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource( 2 )
 text = "Are you sure?sdfffffffffffffffffffffffds"
 align = 1
 valign = 1
@@ -47,32 +47,32 @@ autowrap = true
 clip_text = true
 
 [node name="ButtonConfirmations" type="HBoxContainer" parent="Panel/VBoxContainer"]
-margin_top = 461.0
-margin_right = 1134.0
-margin_bottom = 561.0
-rect_min_size = Vector2( 0, 100 )
+offset_top = 461.0
+offset_right = 1134.0
+offset_bottom = 561.0
+custom_minimum_size = Vector2( 0, 100 )
 
 [node name="Yes" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
-margin_right = 565.0
-margin_bottom = 100.0
+offset_right = 565.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.494118, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0.0901961, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 1, 0, 0, 1 )
+theme_override_colors/font_hover_color = Color( 0.494118, 0, 0, 1 )
+theme_override_colors/font_pressed_color = Color( 0.0901961, 0, 0, 1 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "YES"
 
 [node name="No" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
-margin_left = 569.0
-margin_right = 1134.0
-margin_bottom = 100.0
+offset_left = 569.0
+offset_right = 1134.0
+offset_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0, 1, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 1, 1 )
-custom_colors/font_color_pressed = Color( 0, 1, 1, 1 )
-custom_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 1, 0, 1 )
+theme_override_colors/font_hover_color = Color( 0, 0, 1, 1 )
+theme_override_colors/font_pressed_color = Color( 0, 1, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
 text = "NO"
 
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/Yes" to="." method="_on_Yes_pressed"]

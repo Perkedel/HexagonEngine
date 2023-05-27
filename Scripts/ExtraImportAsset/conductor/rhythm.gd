@@ -13,7 +13,7 @@ signal rhythm_advanced(rhythm_element_id)
 # The ID of the active rhythm element.  This isn't a position in the rhythm
 # array, but rather the ID assigned to that rhythm section and emitted by the
 # rhythm_advanced signal when that section was activated.
-var current_element_id: int setget , _get_current_element_id
+var current_element_id: int: get = _get_current_element_id
 
 var _beat_offset: int
 var _current_element: RhythmElement
@@ -36,7 +36,7 @@ func _init(elements: Array, start_element: int, beat_offset: int) -> void:
 	current_element_id = _current_element.id
 	_remaining_beats = _current_element.minimum_beats
 	_beat_offset = beat_offset
-	assert(Conductor.connect("beat_played", self, "_on_beat") == 0,
+	assert(Conductor.connect("beat_played", Callable(self, "_on_beat")) == 0,
 			"Rhythm could not connect to the conductor beat_played signal.")
 
 

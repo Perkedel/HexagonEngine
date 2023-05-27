@@ -8,79 +8,79 @@
 [node name="ButtonPromptContext" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="ButtonPromptContext2" parent="." index="1" instance=ExtResource( 2 )]
-margin_left = 204.0
-margin_right = 404.0
+offset_left = 204.0
+offset_right = 404.0
 text = "Accept"
-contextInputMapName = PoolStringArray( "ui_accept" )
+contextInputMapName = PackedStringArray( "ui_accept" )
 
 [node name="ButtonPromptContext3" parent="." index="2" instance=ExtResource( 2 )]
-margin_left = 408.0
-margin_right = 608.0
+offset_left = 408.0
+offset_right = 608.0
 text = "Left Click"
-contextInputMapName = PoolStringArray( "clic_kiri" )
+contextInputMapName = PackedStringArray( "clic_kiri" )
 _debug_printNow = true
 
 [node name="ButtonPromptContext4" parent="." index="3" instance=ExtResource( 2 )]
-margin_left = 612.0
-margin_right = 812.0
+offset_left = 612.0
+offset_right = 812.0
 text = "Steal NFT"
-contextInputMapName = PoolStringArray( "clic_kanan" )
+contextInputMapName = PackedStringArray( "clic_kanan" )
 _debug_printNow = true
 
 [node name="ButtonPromptContext5" parent="." index="4" instance=ExtResource( 2 )]
 visible = false
-margin_left = 816.0
-margin_right = 1016.0
+offset_left = 816.0
+offset_right = 1016.0
 text = "Crouch"
-contextInputMapName = PoolStringArray( "Jongkok" )
+contextInputMapName = PackedStringArray( "Jongkok" )
 
 [node name="ButtonPromptContext6" parent="." index="5" instance=ExtResource( 2 )]
 visible = false
-margin_left = 816.0
-margin_right = 1016.0
+offset_left = 816.0
+offset_right = 1016.0
 text = "Jump"
-contextInputMapName = PoolStringArray( "Loncat" )
+contextInputMapName = PackedStringArray( "Loncat" )
 
 [node name="ButtonPromptContext7" parent="." index="6" instance=ExtResource( 2 )]
 visible = false
-margin_left = 816.0
-margin_right = 1016.0
+offset_left = 816.0
+offset_right = 1016.0
 text = "Scan"
-contextInputMapName = PoolStringArray( "Pindai" )
+contextInputMapName = PackedStringArray( "Pindai" )
 
 [node name="ButtonPromptContext8" parent="." index="7" instance=ExtResource( 2 )]
 visible = false
-margin_left = 816.0
-margin_right = 1016.0
+offset_left = 816.0
+offset_right = 1016.0
 text = "Attack"
-contextInputMapName = PoolStringArray( "Serang" )
+contextInputMapName = PackedStringArray( "Serang" )
 
 [node name="ButtonPromptContext9" parent="." index="8" instance=ExtResource( 2 )]
-margin_left = 816.0
-margin_right = 1016.0
+offset_left = 816.0
+offset_right = 1016.0
 text = "Go"
-contextInputMapName = PoolStringArray( "Jalan_Depan" )
+contextInputMapName = PackedStringArray( "Jalan_Depan" )
 
 [node name="ButtonPromptContext10" parent="." index="9" instance=ExtResource( 2 )]
-margin_left = 1020.0
-margin_right = 1220.0
+offset_left = 1020.0
+offset_right = 1220.0
 text = "Reverse"
-contextInputMapName = PoolStringArray( "Jalan_Belakang" )
+contextInputMapName = PackedStringArray( "Jalan_Belakang" )
 
 [node name="ButtonPromptContext11" parent="." index="10" instance=ExtResource( 2 )]
-margin_left = 1224.0
-margin_right = 1424.0
+offset_left = 1224.0
+offset_right = 1424.0
 text = "Strafe"
-contextInputMapName = PoolStringArray( "Jalan_Kiri" )
+contextInputMapName = PackedStringArray( "Jalan_Kiri" )
 
 [node name="ButtonPromptContext12" parent="." index="11" instance=ExtResource( 2 )]
-margin_left = 1428.0
-margin_right = 1628.0
+offset_left = 1428.0
+offset_right = 1628.0
 text = "Strafo"
-contextInputMapName = PoolStringArray( "Jalan_Kanan" )
+contextInputMapName = PackedStringArray( "Jalan_Kanan" )
 
 [node name="ButtonPromptContext13" parent="." index="12" instance=ExtResource( 2 )]
-margin_left = 1632.0
-margin_right = 1832.0
+offset_left = 1632.0
+offset_right = 1832.0
 text = "Morgir"
-contextInputMapName = PoolStringArray( "test_morgir" )
+contextInputMapName = PackedStringArray( "test_morgir" )

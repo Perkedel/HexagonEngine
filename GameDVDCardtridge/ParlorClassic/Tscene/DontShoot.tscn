@@ -9,11 +9,11 @@ input_pickable = true
 collision_layer = 2
 collision_mask = 16
 mode = 3
-contacts_reported = 1
+max_contacts_reported = 1
 can_sleep = false
 script = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -958.857, -438.641, 961.283, -437.701, 958.913, 423.592, 77.4323, 431.96, 77.4323, 535.172, -106.674, 535.172, -106.674, 426.381, -957.471, 429.171 )
+polygon = PackedVector2Array( -958.857, -438.641, 961.283, -437.701, 958.913, 423.592, 77.4323, 431.96, 77.4323, 535.172, -106.674, 535.172, -106.674, 426.381, -957.471, 429.171 )
 [connection signal="body_entered" from="." to="." method="_on_DontShoot_body_entered"]
 [connection signal="input_event" from="." to="." method="_on_DontShoot_input_event"]

@@ -3,8 +3,8 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var ScrollCategory = $HBoxContainer/CategoryScrolling
-onready var ScrollContainings = $HBoxContainer/ScrollContainer
+@onready var ScrollCategory = $HBoxContainer/CategoryScrolling
+@onready var ScrollContainings = $HBoxContainer/ScrollContainer
 const ScrollSensitive = 2
 var mouse_button_down = false
 

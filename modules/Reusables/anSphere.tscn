@@ -2,16 +2,16 @@
 
 [ext_resource path="res://modules/Meshening/anSphere.tres" type="SphereMesh" id=1]
 
-[sub_resource type="SphereShape" id=1]
+[sub_resource type="SphereShape3D" id=1]
 
 [sub_resource type="Skin" id=3]
 
-[node name="anSphere" type="RigidBody" groups=["pushening"]]
+[node name="anSphere" type="RigidBody3D" groups=["pushening"]]
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource( 1 )
 skin = SubResource( 3 )
 material/0 = null

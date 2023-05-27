@@ -1,4 +1,4 @@
-tool
+@tool
 extends TextureRect
 # https://generalistprogrammer.com/godot/godot-infinite-scrolling-background-how-to/
 # https://youtu.be/HnqBeqoTwJ8
@@ -9,14 +9,14 @@ extends TextureRect
 class_name GeneralistInfiniBGScroll
 
 #export(float) var scroll_speed_x = 0.4
-export(Vector2) var scroll_speed = Vector2(0.4,0) setget set_scroll_speed
+@export var scroll_speed: Vector2 = Vector2(0.4,0): set = set_scroll_speed
 
 func set_scroll_speed(howFast:Vector2 = Vector2(0.4,0)):
 	scroll_speed = howFast
 	_syncParams()
 
 func _syncParams():
-	self.material.set_shader_param("scroll_speed", scroll_speed)
+	self.material.set_shader_parameter("scroll_speed", scroll_speed)
 
 func _ready():
 	_syncParams()

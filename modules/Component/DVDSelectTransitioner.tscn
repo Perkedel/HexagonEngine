@@ -2,8 +2,8 @@
 
 [ext_resource path="res://DummyTest/AnimashaMaterial.tres" type="Material" id=1]
 [ext_resource path="res://modules/Component/DVDSelectTransitioner.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/ConsoleHover.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/ConsoleHover.png" type="Texture2D" id=3]
+[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture2D" id=4]
 
 [node name="DVDSelectTransitioner" type="ColorRect"]
 visible = false

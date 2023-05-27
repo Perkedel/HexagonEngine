@@ -1,7 +1,7 @@
 extends Area2D
 
-export (float) var setTimer = .2
-export (bool) var isStarted = false
+@export (float) var setTimer = .2
+@export (bool) var isStarted = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

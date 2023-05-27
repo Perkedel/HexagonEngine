@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameDVDCardtridge/ExclusiveBootTest/ExclusiveBootTest.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="DynamicFont" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=3]
 
 [node name="ExclusiveBootTest" type="Node"]
 script = ExtResource( 1 )
@@ -23,35 +23,35 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="UI/VBoxContainer"]
-margin_top = 398.0
-margin_right = 1920.0
-margin_bottom = 488.0
-custom_fonts/font = ExtResource( 3 )
+offset_top = 398.0
+offset_right = 1920.0
+offset_bottom = 488.0
+theme_override_fonts/font = ExtResource( 3 )
 text = "Exclusive Boot Test"
 align = 1
 valign = 1
 
 [node name="SubLabel" type="Label" parent="UI/VBoxContainer"]
-margin_top = 492.0
-margin_right = 1920.0
-margin_bottom = 555.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 492.0
+offset_right = 1920.0
+offset_bottom = 555.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Loading the"
 align = 1
 valign = 1
 autowrap = true
 
 [node name="ReturnButton" type="Button" parent="UI/VBoxContainer"]
-margin_top = 559.0
-margin_right = 1920.0
-margin_bottom = 622.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 559.0
+offset_right = 1920.0
+offset_bottom = 622.0
+theme_override_fonts/font = ExtResource( 2 )
 text = "Return"
 
 [node name="ProgressBar" type="ProgressBar" parent="UI/VBoxContainer"]
-margin_top = 626.0
-margin_right = 1920.0
-margin_bottom = 681.0
-custom_fonts/font = ExtResource( 2 )
+offset_top = 626.0
+offset_right = 1920.0
+offset_bottom = 681.0
+theme_override_fonts/font = ExtResource( 2 )
 value = 10.0
 [connection signal="pressed" from="UI/VBoxContainer/ReturnButton" to="." method="_on_ReturnButton_pressed"]

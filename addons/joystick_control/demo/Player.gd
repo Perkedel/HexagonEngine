@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const SPEED = 350
 var move_direction:Vector2 = Vector2.RIGHT
@@ -9,7 +9,7 @@ func _physics_process(delta):
 	var move_input = Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	).clamped(1) #just in case someone uses buttons - Joystick already returns clamped value
+	).limit_length(1) #just in case someone uses buttons - Joystick already returns limit_length value
 	
 	if move_input != Vector2.ZERO: move_direction = move_input
 	
@@ -25,7 +25,8 @@ func _physics_process(delta):
 	$base.rotation = move_direction.angle()
 	$cannon.rotation = aim_direction.angle()
 	
-	move_and_slide(move_input * SPEED)
+	set_velocity(move_input * SPEED)
+	move_and_slide()
 
 func _on_aim_pressed(pressed):
 	aiming = pressed

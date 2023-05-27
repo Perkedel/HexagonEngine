@@ -1,4 +1,4 @@
-tool
+@tool
 extends EditorScript
 
 # ==============================================================	
@@ -174,7 +174,7 @@ func open_operators():
 			msg='who has food?',
 			tdx=F.map(
 				F.dict_apply(
-					{has_food='not _x.inv.food.empty()'},
+					{has_food='not _x.inv.food.is_empty()'},
 					['name', 'inv/food'], true))
 		},
 	]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 1, 20, 50 )
+[sub_resource type="BoxShape3D" id=1]
+size = Vector3( 1, 20, 50 )
 
-[node name="TembokExample" type="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
+[node name="TembokExample" type="StaticBody3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, 0 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, 0 )
 shape = SubResource( 1 )

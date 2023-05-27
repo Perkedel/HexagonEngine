@@ -4,11 +4,11 @@
 [ext_resource path="res://DummyTest/Zexxle.tscn" type="PackedScene" id=2]
 
 [node name="CrondleDamage" type="HBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 670.0
+offset_right = 1920.0
+offset_bottom = 670.0
 
 [node name="Gexxle" parent="." instance=ExtResource( 1 )]
-margin_right = 956.0
+offset_right = 956.0
 
 [node name="Zexxle" parent="." instance=ExtResource( 2 )]
-margin_left = 964.0
+offset_left = 964.0

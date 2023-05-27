@@ -3,9 +3,9 @@ extends HBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(float, 0,100) var HPvalue = 100
+@export var HPvalue = 100 # (float, 0,100)
 var HPformat
-export(Color) var HPcolor = Color.blue
+@export var HPcolor: Color = Color.BLUE
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,19 +23,19 @@ func _process(delta):
 	$TextureProgressRight.value = HPvalue
 	
 	if HPvalue >= 0 and HPvalue < 25:
-		HPcolor = Color.red
+		HPcolor = Color.RED
 		pass
 	elif HPvalue >= 25 and HPvalue < 50:
-		HPcolor = Color.orange
+		HPcolor = Color.ORANGE
 		pass
 	elif HPvalue >= 50 and HPvalue < 75:
-		HPcolor = Color.yellow
+		HPcolor = Color.YELLOW
 		pass
 	elif HPvalue >= 75 and HPvalue < 100:
-		HPcolor = Color.green
+		HPcolor = Color.GREEN
 		pass
 	elif HPvalue >= 100:
-		HPcolor = Color.blue
+		HPcolor = Color.BLUE
 		pass
 	
 	$TextureProgressLeft.tint_progress = HPcolor

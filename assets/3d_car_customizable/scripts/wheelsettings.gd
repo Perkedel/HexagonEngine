@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 # The dictionary that contains binded Wheel nodes
-var WheelNode : Dictionary setget _set_wheel
+var WheelNode : Dictionary: set = _set_wheel
 
 var BindedTarget
 
@@ -115,8 +115,8 @@ func _on_BindedTo_item_selected(ID):
 
 func FillNodesFromWheelInfo():
 	for Wheel in WheelNode:
-		get_node("General/UseAsTraction").pressed = WheelNode[Wheel].use_as_traction
-		get_node("General/UseAsSteering").pressed = WheelNode[Wheel].use_as_steering
+		get_node("General/UseAsTraction").button_pressed = WheelNode[Wheel].use_as_traction
+		get_node("General/UseAsSteering").button_pressed = WheelNode[Wheel].use_as_steering
 		get_node("Wheel/RollInfluence/WheelRollInfluence").value = WheelNode[Wheel].wheel_roll_influence
 		get_node("Wheel/WheelRadius/WheelRadius").value = WheelNode[Wheel].wheel_radius
 		get_node("Wheel/RestLength/WheelRestLength").value = WheelNode[Wheel].wheel_rest_length
@@ -148,8 +148,8 @@ func save():
 	return save_dict
 
 func LoadPreset(value):
-	$General/UseAsTraction.pressed = value["use_as_traction"]
-	$General/UseAsSteering.pressed = value["use_as_steering"]
+	$General/UseAsTraction.button_pressed = value["use_as_traction"]
+	$General/UseAsSteering.button_pressed = value["use_as_steering"]
 	$Wheel/RollInfluence/WheelRollInfluence.value = value["wheel_roll_influence"]
 	$Wheel/WheelRadius/WheelRadius.value = value["wheel_radius"]
 	$Wheel/RestLength/WheelRestLength.value = value["wheel_rest_length"]

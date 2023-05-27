@@ -36,9 +36,9 @@ func _on_Unload_pressed():
 func _on_Level_1_pressed():
 	if $LevelSlot.get_children(): $LevelSlot.remove_child($LevelSlot.get_child(0))
 	loadTheLevel = load("res://GameDVDCardtridge/TostLeveling/Level 1.tscn")
-	levelInstance = loadTheLevel.instance()
+	levelInstance = loadTheLevel.instantiate()
 	$LevelSlot.add_child(levelInstance)
-	$LevelSlot.get_child(0).connect("goNextLevel", self,"_on_NextLevel")
+	$LevelSlot.get_child(0).connect("goNextLevel", Callable(self, "_on_NextLevel"))
 	pass # Replace with function body.
 
 
@@ -48,16 +48,16 @@ func _on_Level_3_pressed():
 func _on_NextLevel(whata):
 	$LevelSlot.remove_child($LevelSlot.get_child(0))
 	loadTheLevel = load(whata)
-	levelInstance = loadTheLevel.instance()
+	levelInstance = loadTheLevel.instantiate()
 	$LevelSlot.add_child(levelInstance)
-	$LevelSlot.get_child(0).connect("goNextLevel", self,"_on_NextLevel")
+	$LevelSlot.get_child(0).connect("goNextLevel", Callable(self, "_on_NextLevel"))
 	pass
 
 
 func _on_Level_2_pressed():
 	if $LevelSlot.get_children(): $LevelSlot.remove_child($LevelSlot.get_child(0))
 	loadTheLevel = load("res://GameDVDCardtridge/TostLeveling/Level 2.tscn")
-	levelInstance = loadTheLevel.instance()
+	levelInstance = loadTheLevel.instantiate()
 	$LevelSlot.add_child(levelInstance)
-	$LevelSlot.get_child(0).connect("goNextLevel", self,"_on_NextLevel")
+	$LevelSlot.get_child(0).connect("goNextLevel", Callable(self, "_on_NextLevel"))
 	pass # Replace with function body.

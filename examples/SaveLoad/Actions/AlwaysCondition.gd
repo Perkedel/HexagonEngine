@@ -4,7 +4,8 @@ extends "res://addons/GDBehavior/Base/BTCondition.gd"
 
 var result: bool
 
-func _init(result:bool=true).("always-condition"):
+func _init(result:bool=true):
+	super("always-condition")
 	self.result = result
 
 func _validate(tick):

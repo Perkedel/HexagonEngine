@@ -1,8 +1,8 @@
 extends Control
 
 var effect: AudioEffectRecord
-var recording: AudioStreamSample = null
-var opusEncoded: PoolByteArray
+var recording: AudioStreamWAV = null
+var opusEncoded: PackedByteArray
 
 
 func _ready():
@@ -49,7 +49,7 @@ func _on_PlayButton_pressed():
 
 func update_opus_buttons():
 	$EncodeButton.disabled = (recording == null)
-	$DecodeButton.disabled = (opusEncoded.empty())
+	$DecodeButton.disabled = (opusEncoded.is_empty())
 
 
 func _on_EncodeButton_pressed():
@@ -75,15 +75,15 @@ func _on_EncodeButton_pressed():
 
 
 func _on_DecodeButton_pressed():
-	if not opusEncoded.empty():
+	if not opusEncoded.is_empty():
 		var pcm = $OpusDecoder.decode(opusEncoded)
 		print(pcm)
 		print(pcm.size())
 		
 		opusEncoded.resize(0)
 		
-		var sample = AudioStreamSample.new()
-		sample.format = AudioStreamSample.FORMAT_16_BITS
+		var sample = AudioStreamWAV.new()
+		sample.format = AudioStreamWAV.FORMAT_16_BITS
 		sample.mix_rate = 44100
 		sample.stereo = true
 		sample.data = pcm

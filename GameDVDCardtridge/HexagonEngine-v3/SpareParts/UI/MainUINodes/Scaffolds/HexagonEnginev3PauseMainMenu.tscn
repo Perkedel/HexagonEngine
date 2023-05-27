@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Sprites/HexagonEngineSymbolVeryLarge.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=1]
+[ext_resource path="res://Sprites/HexagonEngineSymbolVeryLarge.png" type="Texture2D" id=2]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd" type="Script" id=3]
 [ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=4]
 
@@ -22,40 +22,40 @@ __meta__ = {
 }
 
 [node name="TitleHeader" type="HBoxContainer" parent="KonMenu"]
-margin_right = 1920.0
-margin_bottom = 125.0
+offset_right = 1920.0
+offset_bottom = 125.0
 
 [node name="Icon" type="TextureRect" parent="KonMenu/TitleHeader"]
-margin_right = 200.0
-margin_bottom = 125.0
-rect_min_size = Vector2( 200, 125 )
+offset_right = 200.0
+offset_bottom = 125.0
+custom_minimum_size = Vector2( 200, 125 )
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 
 [node name="Title" type="Label" parent="KonMenu/TitleHeader"]
-margin_left = 204.0
-margin_right = 1920.0
-margin_bottom = 125.0
-rect_min_size = Vector2( 0, 125 )
+offset_left = 204.0
+offset_right = 1920.0
+offset_bottom = 125.0
+custom_minimum_size = Vector2( 0, 125 )
 size_flags_horizontal = 3
 size_flags_vertical = 7
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Hexagon Engine"
 valign = 1
 
 [node name="Spacing" type="Control" parent="KonMenu"]
-margin_top = 129.0
-margin_right = 1920.0
-margin_bottom = 826.0
+offset_top = 129.0
+offset_right = 1920.0
+offset_bottom = 826.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MenuNavigation" type="Control" parent="KonMenu"]
-margin_top = 830.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 0, 250 )
+offset_top = 830.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+custom_minimum_size = Vector2( 0, 250 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="KonMenu/MenuNavigation"]
 anchor_right = 1.0
@@ -67,8 +67,8 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="KonMenu/MenuNavigation/ScrollContainer"]
-margin_right = 1920.0
-margin_bottom = 250.0
+offset_right = 1920.0
+offset_bottom = 250.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -78,9 +78,9 @@ __meta__ = {
 [node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/GridContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 500.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 500, 0 )
+offset_right = 500.0
+offset_bottom = 250.0
+custom_minimum_size = Vector2( 500, 0 )
 MenuName = "MenuButton add"
 ChooseOrientation = 2
 minHoriSize = 500.0

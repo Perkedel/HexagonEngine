@@ -31,9 +31,10 @@
 extends Node
 
 var thread
-var scene_queue = {}
-var file = File.new()
-var cache = {}
+var scene_queue:Dictionary = {}
+#var file = File.new()
+var file:FileAccess
+var cache:Dictionary = {}
 var awaiters = []
 
 signal on_progress
@@ -41,7 +42,7 @@ signal on_scene_loaded
 
 func _ready():
 	thread = Thread.new()
-	thread.start(self, "_thread_runner", null)
+	thread.start(Callable(self, "_thread_runner").bind(null))
 
 func _thread_runner(o):
 	while true:
@@ -54,7 +55,7 @@ func _thread_runner(o):
 				
 				if err == ERR_FILE_EOF:
 					scene_queue[i].loader = scene_queue[i].loader.get_resource()
-					scene_queue[i].instance = scene_queue[i].loader.instance()
+					scene_queue[i].instance = scene_queue[i].loader.instantiate()
 					cache[scene_queue[i].path] = scene_queue[i]
 					call_deferred("emit_signal", "on_scene_loaded", scene_queue[i])
 					scene_queue.erase(scene_queue[i].path)
@@ -76,11 +77,11 @@ func load_scene(path, props = null):
 		return
 	
 	if cache.has(path):
-		call_deferred("emit_signal", "on_scene_loaded", { path = path, loader = cache[path].loader, instance = cache[path].loader.instance(), props = props })
+		call_deferred("emit_signal", "on_scene_loaded", { path = path, loader = cache[path].loader, instance = cache[path].loader.instantiate(), props = props })
 		return
 	
 	if !scene_queue.has(path):
-		scene_queue[path] = { path = path, loader = ResourceLoader.load_interactive(path), instance = null, props = props }
+		scene_queue[path] = { path = path, loader = ResourceLoader.load_threaded_request(path), instance = null, props = props }
 	else:
 		awaiters.push_back({ path = path, loader = null, instance = null, props = props })
 

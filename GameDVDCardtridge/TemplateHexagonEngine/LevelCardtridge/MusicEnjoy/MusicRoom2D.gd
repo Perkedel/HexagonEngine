@@ -1,27 +1,27 @@
 extends Node2D
 
-export (int) var CrackleCounter
-export (bool) var AllCracklesAreGone = false
-export (float) var Y_initPos
-export (float) var Y_AddPos
-export (int) var VU_counts = 16
-export (int) var VU_coints = 16
-export (float) var FrequencyMax = 11050.0
-export (float) var min_dB = 60
-export (float) var MultiplyPower = 500
-export (String) var AnalyzeBus = "Master"
-export (int) var WhereIsSpectrumAnalyzerEffect = 0
+@export (int) var CrackleCounter
+@export (bool) var AllCracklesAreGone = false
+@export (float) var Y_initPos
+@export (float) var Y_AddPos
+@export (int) var VU_counts = 16
+@export (int) var VU_coints = 16
+@export (float) var FrequencyMax = 11050.0
+@export (float) var min_dB = 60
+@export (float) var MultiplyPower = 500
+@export (String) var AnalyzeBus = "Master"
+@export (int) var WhereIsSpectrumAnalyzerEffect = 0
 var spectrum
-export (String) var FilePath = ""
-export (String) var FileReversal = "../../../../../../../../../../"
+@export (String) var FilePath = ""
+@export (String) var FileReversal = "../../../../../../../../../../"
 var openFile
-export (AudioStream) var FileAudio
+@export (AudioStream) var FileAudio
 enum FileAccessModes {Resourcer = 0, Userer = 1, FileSystemer = 2, Canceler = -1}
-export (int) var SelectedFileAccess
-onready var GMEPlayer = AutoSpeaker.FLMmusic
+@export (int) var SelectedFileAccess
+@onready var GMEPlayer = AutoSpeaker.FLMmusic
 var useGME = false
 var GMEplayed = false
-onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
+@onready var ArlezMidi = $MusicController/MusicUI/GodotMIDIPlayer
 var useArlezMidi = false
 #var Dau = DauMainLooper
 
@@ -52,14 +52,14 @@ func TestoidDummyFileMake():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().connect("files_dropped",self,"_drag_drop")
+	get_tree().connect("files_dropped", Callable(self, "_drag_drop"))
 	SetPath(FileAudio.get_path())
 	TestoidDummyFileMake()
 	#LoadFile(FileAudio)
 	SetAudioStream(FileAudio)
 	spectrum = AudioServer.get_bus_effect_instance(AudioServer.get_bus_index(AnalyzeBus), WhereIsSpectrumAnalyzerEffect)
-	GMEPlayer.connect("track_ended",self,"_GMEtrack_ended")
-	ArlezMidi.connect("appeared_lyric",self, "_ArlezMIDI_lyric")
+	GMEPlayer.connect("track_ended", Callable(self, "_GMEtrack_ended"))
+	ArlezMidi.connect("appeared_lyric", Callable(self, "_ArlezMIDI_lyric"))
 	pass # Replace with function body.
 
 func Spectruder():
@@ -68,7 +68,7 @@ func Spectruder():
 	for i in range(1, VU_counts+1):
 		var hz = i * FrequencyMax / VU_counts
 		var magnitude: float = spectrum.get_magnitude_for_frequency_range(prev_Hz, hz).length()
-		var energy = clamp((min_dB + linear2db(magnitude)) / min_dB, 0,1)
+		var energy = clamp((min_dB + linear_to_db(magnitude)) / min_dB, 0,1)
 		
 		$SpectrumPillars.get_node("VU Pillar"+String(i)).SetAddHeight(energy * MultiplyPower)
 		
@@ -83,7 +83,7 @@ func Spectrader(): # UpsideDown Spectruder Spectrum Pillar
 	for i in range(1, VU_coints+1):
 		var hz = i * FrequencyMax / VU_coints
 		var magnitude: float = spectrum.get_magnitude_for_frequency_range(prev_Hz, hz).length()
-		var energy = clamp((min_dB + linear2db(magnitude)) / min_dB, 0,1)
+		var energy = clamp((min_dB + linear_to_db(magnitude)) / min_dB, 0,1)
 		
 		$SpectrumPillars2.get_node("VU Pillar"+String(i)).SetAddHeight(energy * MultiplyPower)
 		
@@ -94,7 +94,7 @@ func Spectrader(): # UpsideDown Spectruder Spectrum Pillar
 
 func VUmanner():
 	var Magnitude:float = spectrum.get_magnitude_for_frequency_range(0,FrequencyMax).length()
-	var energy = clamp((min_dB + linear2db(Magnitude)) / min_dB, 0, 1)
+	var energy = clamp((min_dB + linear_to_db(Magnitude)) / min_dB, 0, 1)
 	#emit_signal("reportHP",clamp(energy*100,0,100))
 	EmitNowHP(clamp(energy*100,0,100))
 	pass
@@ -113,13 +113,13 @@ func CountCrackleCounts():
 	pass
 
 func DeTogglePlay():
-	$MusicController/MusicUI/MainContains/ControllingMusic/Play.pressed = false
+	$MusicController/MusicUI/MainContains/ControllingMusic/Play.button_pressed = false
 	#$MusicUI/MainContains/ControllingMusic/Play.pressed = false
 	#GMEPlayer.stop_music()
 	pass
 
 func ReTogglePlay():
-	$MusicController/MusicUI/MainContains/ControllingMusic/Play.pressed = true
+	$MusicController/MusicUI/MainContains/ControllingMusic/Play.button_pressed = true
 	#$MusicUI/MainContains/ControllingMusic/Play.pressed = true
 	pass
 
@@ -197,7 +197,7 @@ func SetPath(path):
 #	return data
 #	pass
 
-func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = true, ConvertFormat = AudioStreamSample.FORMAT_16_BITS, ConvertFreqRate:float = 44100, ConvertStereo:bool = true):
+func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = true, ConvertFormat = AudioStreamWAV.FORMAT_16_BITS, ConvertFreqRate:float = 44100, ConvertStereo:bool = true):
 	DeTogglePlay()
 	
 	# Cut Noise Version
@@ -211,14 +211,14 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 	openFile.open(path,File.READ)
 	SetPath(path)
 	print("openFile = " + openFile.get_path_absolute())
-	var Buffering = openFile.get_buffer(openFile.get_len())
+	var Buffering = openFile.get_buffer(openFile.get_length())
 	var streamSample
 	#streamSample.data = ProcessAudio(Buffering,path)
 	useGME = false
 	useArlezMidi = false
 	
 	if path.ends_with(".wav") or path.ends_with(".WAV"): #Oh no, elseifs!!!
-		streamSample = AudioStreamSample.new()
+		streamSample = AudioStreamWAV.new()
 		if cutNoise:
 			print("Cutting Noise...")
 			for i in 200:
@@ -237,7 +237,7 @@ func ComplicatedLoadFile(path: String, convertData:bool = true, cutNoise:bool = 
 		pass
 	elif path.ends_with(".ogg") or path.ends_with(".OGG"):
 		# # https://github.com/godotengine/godot/issues/17748#issuecomment-376320424
-		streamSample = AudioStreamOGGVorbis.new()
+		streamSample = AudioStreamOggVorbis.new()
 		pass
 	elif path.capitalize().ends_with(".MP3"):
 		streamSample = AudioStreamMP3.new()
@@ -327,7 +327,7 @@ func _GMEtrack_ended():
 	print("GME end of track")
 	pass
 
-func _ArlezMIDI_lyric(var lyric):
+func _ArlezMIDI_lyric(lyric):
 	##printraw(lyric)
 	print(lyric)
 	pass
@@ -391,7 +391,7 @@ func _on_Scroncher_body_entered(body):
 # https://github.com/godotengine/godot/issues/5625
 # https://www.reddit.com/r/godot/comments/46em5w/minimal_drag_and_drop_example/
 # https://godotforums.org/discussion/20252/drag-and-drop-files-to-game-at-runtime
-func _drag_drop(filePaths:PoolStringArray,screenOf:int):
+func _drag_drop(filePaths:PackedStringArray,screenOf:int):
 	print("Drag Drop the ", filePaths[0], " to screen ", String(screenOf))
 	SelectedFileAccess = FileAccessModes.FileSystemer
 	_on_FileDialog_file_selected(filePaths[0])

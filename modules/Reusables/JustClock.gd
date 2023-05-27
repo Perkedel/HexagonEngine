@@ -1,33 +1,33 @@
-tool
+@tool
 extends Control
 # https://www.keshikan.net/fonts-e.html
 # JOELwindows7 remake the clock again in Godot, add Unix time too!
 
-export(Color) var textColor = Color.greenyellow setget set_text_color
-export(Color) var offColor = Color(0.1,0.1,0.1) setget set_off_color
-export(Color) var bekgronColor = Color.black setget set_bekgron_color
-onready var bekgron = $Bekgron
-onready var dayText = $ThoughFields/topField/Day
-onready var dateText = $ThoughFields/topField/Date
-onready var hourMinText = $ThoughFields/bottomField/HourMin
-onready var secondText = $ThoughFields/bottomField/Second
-onready var unixTimeText = $ThoughFields/underField/UnixTime
+@export var textColor: Color = Color.GREEN_YELLOW: set = set_text_color
+@export var offColor: Color = Color(0.1,0.1,0.1): set = set_off_color
+@export var bekgronColor: Color = Color.BLACK: set = set_bekgron_color
+@onready var bekgron = $Bekgron
+@onready var dayText = $ThoughFields/topField/Day
+@onready var dateText = $ThoughFields/topField/Date
+@onready var hourMinText = $ThoughFields/bottomField/HourMin
+@onready var secondText = $ThoughFields/bottomField/Second
+@onready var unixTimeText = $ThoughFields/underField/UnixTime
 
-onready var dayTextFake = $BehindFields/topField/Day
-onready var dateTextFake = $BehindFields/topField/Date
-onready var hourMinTextFake = $BehindFields/bottomField/HourMin
-onready var secondTextFake = $BehindFields/bottomField/Second
-onready var unixTimeTextFake = $BehindFields/underField/UnixTime
+@onready var dayTextFake = $BehindFields/topField/Day
+@onready var dateTextFake = $BehindFields/topField/Date
+@onready var hourMinTextFake = $BehindFields/bottomField/HourMin
+@onready var secondTextFake = $BehindFields/bottomField/Second
+@onready var unixTimeTextFake = $BehindFields/underField/UnixTime
 
 var weekdayName = "SEN"
 
-var datetime = OS.get_datetime()
-var unixtime = OS.get_unix_time()
+var datetime = Time.get_datetime_dict_from_system()
+var unixtime = Time.get_unix_time_from_system()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-func set_text_color(with:Color = Color.greenyellow):
+func set_text_color(with:Color = Color.GREEN_YELLOW):
 	textColor = with
 	_syncParameter()
 
@@ -35,7 +35,7 @@ func set_off_color(with:Color = Color(0.1,0.1,0.1)):
 	offColor = with
 	_syncParameter()
 
-func set_bekgron_color(with:Color = Color.black):
+func set_bekgron_color(with:Color = Color.BLACK):
 	bekgronColor = with
 	_syncParameter()
 
@@ -63,8 +63,8 @@ func _syncParameter():
 	pass
 
 func _updateClock():
-	datetime = OS.get_datetime()
-	unixtime = OS.get_unix_time()
+	datetime = Time.get_datetime_dict_from_system()
+	unixtime = Time.get_unix_time_from_system()
 	if bekgron != null:
 		bekgron.self_modulate = bekgronColor
 #		bekgron.set_deferred("self_modulate", bekgron)

@@ -6,15 +6,15 @@
 [ext_resource path="res://ChangeDVDMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/JustZetrixVRViewer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture2D" id=8]
+[ext_resource path="res://Sprites/ConsoleLaunch.png" type="Texture2D" id=9]
 [ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" type="PackedScene" id=10]
 [ext_resource path="res://modules/Component/DVDSelectTransitioner.tscn" type="PackedScene" id=11]
 [ext_resource path="res://addons/gcode/GCode.gd" type="Script" id=12]
 [ext_resource path="res://modules/Component/MusicNamePop.tscn" type="PackedScene" id=13]
 
 [node name="HexagonEngineCore" type="Node"]
-pause_mode = 2
+process_mode = 2
 script = ExtResource( 1 )
 __meta__ = {
 "GNU GPL v3": "Yess",
@@ -56,9 +56,9 @@ __meta__ = {
 }
 
 [node name="DVDLaunchBackground" type="TextureRect" parent="MetaMenu/CenterBgLaunch"]
-margin_right = 1920.0
-margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 960, 540 )
+offset_right = 1920.0
+offset_bottom = 1080.0
+pivot_offset = Vector2( 960, 540 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 9 )
@@ -70,9 +70,9 @@ __meta__ = {
 
 [node name="LoadingPopup" parent="MetaMenu" instance=ExtResource( 10 )]
 anchor_right = 0.0
-margin_top = 79.0
-margin_right = 1920.0
-margin_bottom = 79.0
+offset_top = 79.0
+offset_right = 1920.0
+offset_bottom = 79.0
 mouse_filter = 2
 
 [node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource( 5 )]
@@ -82,17 +82,17 @@ mouse_filter = 2
 [node name="MusicNamePop" parent="MetaMenu" instance=ExtResource( 13 )]
 
 [node name="SystemGut" type="Node" parent="."]
-pause_mode = 2
+process_mode = 2
 
 [node name="Speaker" type="AudioStreamPlayer" parent="SystemGut"]
-pause_mode = 2
+process_mode = 2
 mix_target = 1
 
 [node name="Timer" type="Timer" parent="SystemGut"]
 one_shot = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
-pause_mode = 2
+process_mode = 2
 use_threads = true
 
 [node name="aTweens" type="Node" parent="SystemGut"]

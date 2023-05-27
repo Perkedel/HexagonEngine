@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Collision.wav-e5229d4e801b0b8518cb7e3942e14e11.sample"
+type="AudioStreamWAV"
+uid="uid://dl16sw3xyu7jm"
+path="res://.godot/imported/Collision.wav-e5229d4e801b0b8518cb7e3942e14e11.sample"
 
 [deps]
 
 source_file="res://Audio/EfekSuara/Collision.wav"
-dest_files=[ "res://.import/Collision.wav-e5229d4e801b0b8518cb7e3942e14e11.sample" ]
+dest_files=["res://.godot/imported/Collision.wav-e5229d4e801b0b8518cb7e3942e14e11.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

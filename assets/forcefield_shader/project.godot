@@ -17,4 +17,4 @@ config/icon="res://icon.png"
 [rendering]
 
 quality/filters/msaa=3
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://default_env.tres"

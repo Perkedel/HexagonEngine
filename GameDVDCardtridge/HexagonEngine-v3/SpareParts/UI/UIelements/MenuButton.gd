@@ -1,28 +1,28 @@
-tool
+@tool
 
 extends Button
 
 var WhatOrientationIsNow
 enum Orientationer {Internal, Vertical, Horizontal}
-export(Texture) var MenuIcons
-export(String) var MenuName
-export(Orientationer) var ChooseOrientation = Orientationer.Vertical
-export(float) var minHoriSize = 400.0
+@export var MenuIcons: Texture2D
+@export var MenuName: String
+@export var ChooseOrientation: Orientationer = Orientationer.Vertical
+@export var minHoriSize: float = 400.0
 
 
-onready var Vert = $VertImaging
-onready var VertIconer = $VertImaging/TextureRect
-onready var VertNamer = $VertImaging/Label
+@onready var Vert = $VertImaging
+@onready var VertIconer = $VertImaging/TextureRect
+@onready var VertNamer = $VertImaging/Label
 
-onready var Hori = $HoriImaging
-onready var HoriIconer = $HoriImaging/TextureRect
-onready var HoriNamer = $HoriImaging/Label
+@onready var Hori = $HoriImaging
+@onready var HoriIconer = $HoriImaging/TextureRect
+@onready var HoriNamer = $HoriImaging/Label
 
-export(bool) var SoundsSpatially = true
-export(AudioStream) var buttonSounded = load("res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav")
-export(AudioStream) var buttonHovered = load("res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav")
-onready var buttonSpk = $ButtonSpeaker
-onready var buttonSpk2d = $ButtonSpeaker2D
+@export var SoundsSpatially: bool = true
+@export var buttonSounded: AudioStream = load("res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav")
+@export var buttonHovered: AudioStream = load("res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav")
+@onready var buttonSpk = $ButtonSpeaker
+@onready var buttonSpk2d = $ButtonSpeaker2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -35,7 +35,7 @@ func _refreshStatusoid():
 	VertNamer.text = MenuName
 	HoriNamer.text = MenuName
 	
-	rect_min_size.x = minHoriSize
+	custom_minimum_size.x = minHoriSize
 	
 	buttonSpk.stream = buttonSounded
 	

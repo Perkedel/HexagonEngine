@@ -1,4 +1,4 @@
-extends Viewport
+extends SubViewport
 
 # https://youtu.be/07euJhZbeSc
 # https://youtu.be/IijlGjDh8lk
@@ -8,10 +8,10 @@ extends Viewport
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var ownWorldItself = preload("res://Scenes/Zetrix/ZetrixWorld.tres")
+@onready var ownWorldItself = preload("res://Scenes/Zetrix/ZetrixWorld.tres")
 var rootViewport
 
-func ReceiveRootViewport(getIt:Viewport):
+func ReceiveRootViewport(getIt:SubViewport):
 	rootViewport = getIt
 	$PortScreen.ReceiveRootViewport(rootViewport)
 

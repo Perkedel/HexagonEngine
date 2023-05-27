@@ -1,10 +1,10 @@
-tool
+@tool
 extends HBoxContainer
 
-export (String) var VariableName = "Testoid Progress"
-export (float) var minimum = 0
-export (float) var maximum = 100
-export (float) var stepp = 0.01
+@export (String) var VariableName = "Testoid Progress"
+@export (float) var minimum = 0
+@export (float) var maximum = 100
+@export (float) var stepp = 0.01
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

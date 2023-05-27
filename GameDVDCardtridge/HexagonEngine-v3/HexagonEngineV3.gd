@@ -1,12 +1,12 @@
 extends Node
 
-onready var LevelSpace = $LevelSpace
-onready var UIplace = $UICanvas/UIplace
-export(PackedScene) var PauseMainMenuFile
-export(PackedScene) var GameplayHUDMenuFile
-export(PackedScene) var JustPauseMenuFile
+@onready var LevelSpace = $LevelSpace
+@onready var UIplace = $UICanvas/UIplace
+@export var PauseMainMenuFile: PackedScene
+@export var GameplayHUDMenuFile: PackedScene
+@export var JustPauseMenuFile: PackedScene
 
-export(bool) var StartFromGameHUD = true
+@export var StartFromGameHUD: bool = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
