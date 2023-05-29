@@ -10,7 +10,7 @@ var a2DResource
 var Prev2DSpaceLevel
 var Now2DSpaceLevel
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-@onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+#@onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a2D_Loading_ProgressBar(valuet)
 var ProgressValue
@@ -18,6 +18,8 @@ var hasMeLoading = false
 var StartLoadScene = true
 var SceneHasLoaded = true
 var ConnectedSignal = false
+var loadingProgressPointer: Array = [0]
+
 signal TellHP(Level)
 signal TellScore(value)
 signal TellLevelCard(path)
@@ -27,7 +29,7 @@ signal TellLevelCard(path)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#ConnecStatusSignal()
-	custom_Resource_Queue.start()
+#	custom_Resource_Queue.start()
 	Now2DSpaceLevel = LevelLoadRoot.get_child(0)
 	Prev2DSpaceLevel = Now2DSpaceLevel
 	pass # Replace with function body.
@@ -48,7 +50,7 @@ func spawnAScene(pathO):
 	Your2DSpaceLevel = pathO
 	Raw2DSpaceLevelPath = pathO
 	print("Queueing Scene " + Raw2DSpaceLevelPath)
-	custom_Resource_Queue.queue_resource(Raw2DSpaceLevelPath)
+	ResourceLoader.load_threaded_request(Raw2DSpaceLevelPath)
 	pass
 
 func clearTheScene():
@@ -99,7 +101,8 @@ func show_error():
 	pass
 
 func update_progress_threaded():
-	var progress = custom_Resource_Queue.get_progress(Raw2DSpaceLevelPath)
+#	var progress = custom_Resource_Queue.get_progress(Raw2DSpaceLevelPath)
+	var progress = loadingProgressPointer[0]
 	ProgressValue = progress * 100
 	#print(progress)
 	pass
@@ -181,7 +184,7 @@ func ConnecStatusSignal():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if custom_Resource_Queue.is_ready(Raw2DSpaceLevelPath):
+	if ResourceLoader.load_threaded_get_status(Raw2DSpaceLevelPath,loadingProgressPointer):
 		SceneHasLoaded = true
 		print("Queue is ready " + Raw2DSpaceLevelPath)
 		pass
@@ -201,7 +204,7 @@ func _process(delta):
 		emit_signal("hasLoadingCompleted")
 		if not StartLoadScene:
 			
-			InitiateThatScene(custom_Resource_Queue.get_resource(Raw2DSpaceLevelPath))
+			InitiateThatScene(ResourceLoader.load_threaded_get(Raw2DSpaceLevelPath))
 			#ConnecStatusSignal()
 			StartLoadScene = true
 			hasMeLoading = false

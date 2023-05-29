@@ -8,11 +8,11 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	isPressedNow = pressed
+	isPressedNow = button_pressed
 	pass # Replace with function body.
 
 func UnPressSectionButton():
-	pressed = false
+	button_pressed = false
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

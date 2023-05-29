@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://c74bpef5bbhg8"]
 
-[ext_resource path="res://modules/Reusables/SuperLabel.gd" type="Script" id=1]
-[ext_resource path="res://modules/Reusables/SuperLabelDynamicFont.tres" type="FontFile" id=2]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" type="FontFile" id=3]
+[ext_resource type="Script" path="res://modules/Reusables/SuperLabel.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://co4ywi3xymb4a" path="res://modules/Reusables/SuperLabelDynamicFont.tres" id="2"]
+[ext_resource type="FontFile" uid="uid://c6jj1mnc7clxw" path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" id="3"]
 
 [node name="SuperLabel" type="Label"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_colors/font_color = Color( 1, 1, 1, 1 )
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 0
 text = "Lorem Ipsum"
-script = ExtResource( 1 )
-fontFile = ExtResource( 3 )
+script = ExtResource("1")
+fontFile = ExtResource("3")

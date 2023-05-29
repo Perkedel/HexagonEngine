@@ -57,8 +57,9 @@ func _GoHome():
 func _checkSecretFile():
 	var filer = ConfigFile.new()
 	
-	var direr = DirAccess.new()
-	if direr.dir_exists(_dirSecret):
+#	var direr = DirAccess.new()
+	var direr:DirAccess
+	if DirAccess.dir_exists_absolute(_dirSecret):
 		pass
 	else:
 		direr.make_dir_recursive(_dirSecret)
@@ -95,10 +96,11 @@ func _deleteSecretFile():
 	filer.erase_section("Firebase")
 	filer.save_encrypted_pass(_fileSecret,_encryptFilePass)
 	filer = null
-	var direr = DirAccess.new()
+#	var direr = DirAccess.new()
+	var direr:DirAccess
 	# https://godotengine.org/qa/11098/how-to-delete-a-save-game
-	direr.remove(_fileSecret)
-	direr.remove(_dirSecret)
+	DirAccess.remove_absolute(_fileSecret)
+	DirAccess.remove_absolute(_dirSecret)
 
 func _preAuthenticate():
 	var didRemember = Settingers.getFirebaser("RememberMe")
@@ -131,10 +133,10 @@ func _authenticateNow():
 	Loadinger.show()
 	match AuthMode:
 		0:
-			FirebaseQuest.login(emailFill, passwordFill, http)
+#			FirebaseQuest.login(emailFill, passwordFill, http)
 			pass
 		1:
-			FirebaseQuest.register(emailFill, passwordFill, http)
+#			FirebaseQuest.register(emailFill, passwordFill, http)
 			pass
 		_:
 			pass
@@ -143,7 +145,7 @@ func _authenticateNow():
 	_hide_windows()
 	match result[1]:
 		200:
-			user_info = FirebaseQuest.user_info
+#			user_info = FirebaseQuest.user_info
 			
 			Logedin.show()
 			pass

@@ -7,8 +7,8 @@ const fellbackChooseMode:String = "7Seg"
 const fellbackChooseForm:String = "Classic"
 const fellbackFont:FontFile = preload("res://fonts/kashikan-DSEG/kashikan-DSEG.tres")
 
-@export var size: float = 16.0
-@onready var fonto:FontFile = get_font("font")
+@export var sized: float = 16.0
+@onready var fonto:FontFile = get_theme_font("font")
 @export var chooseMode = fellbackChooseMode: set = set_choose_mode
 @export var chooseForm = fellbackChooseForm: set = set_choose_form
 @export var miniForm: bool = false: set = set_mini_form
@@ -32,7 +32,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -40,7 +40,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -50,7 +50,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -58,7 +58,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-LightItalic.ttf")
 			}
 		},
@@ -88,7 +88,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -96,7 +96,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -106,7 +106,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -114,7 +114,7 @@ const _defaultFont:Dictionary = {
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-LightItalic.ttf")
 			}
 		},
@@ -143,7 +143,9 @@ func _updateFont():
 	fonto.chooseForm = chooseForm
 	fonto.miniForm = miniForm
 	fonto.fontWeight = fontWeight
-	fonto.size = size
+#	fonto.size = sized
+#	add_theme_font_size_override("font_size",sized)
+	set_font_size(sized)
 	if not justUseFellBackCustomInstead:
 		if _defaultFont:
 			fonto.font_data = _defaultFont[chooseMode][chooseForm if chooseMode != "Weather" else "Classic"]["mini" if miniForm && chooseMode != "Weather" else "beeg"][fontWeight if chooseMode != "Weather" else "Regular"]
@@ -185,6 +187,7 @@ func _process(delta):
 func set_font_size(value):
 	# https://godotengine.org/qa/42430/changing-font-size-of-theme-or-control-at-runtime?show=42430#q42430
 	#fonto.size = value
+	add_theme_font_size_override("font_size",value)
 	pass
 
 func set_font_color(whichColor:Color):

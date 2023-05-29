@@ -1,38 +1,31 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://d2a5r2utmwrcu"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckButton.gd" type="Script" id=2]
-
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/InheritableSettingCheckButton.gd" id="2"]
 
 [node name="InheritableSettingCheckButton" type="HBoxContainer"]
 offset_top = 347.0
 offset_right = 1924.0
 offset_bottom = 427.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("2")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 958.0
-offset_bottom = 80.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "CheckBox Button"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 966.0
-offset_right = 1924.0
-offset_bottom = 80.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
-offset_right = 958.0
-offset_bottom = 80.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Button"
+
 [connection signal="toggled" from="HBoxContainer/CheckButton" to="." method="_on_CheckButton_toggled"]

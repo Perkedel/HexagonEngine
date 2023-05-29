@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Namety.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b0832dn73om8t" path="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png" id="2"]
-[ext_resource type="PackedScene" path="res://HexagonEngineCore.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dwcww8je6jbfw" path="res://HexagonEngineCore.tscn" id="3"]
 
 [node name="Namety" type="Node"]
 script = ExtResource("1")

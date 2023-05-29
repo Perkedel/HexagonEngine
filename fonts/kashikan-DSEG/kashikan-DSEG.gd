@@ -4,7 +4,7 @@ extends FontFile
 @export var chooseForm = "Classic" # (String,"Classic","Modern","Egg")
 @export var miniForm: bool = false
 @export var fontWeight = "Regular" # (String,"Regular","Italic","Bold","BoldItalic", "Light3D", "LightItalic")
-@onready var _defaultFont:Dictionary = {
+var _defaultFont:Dictionary = {
 	"7Seg":{
 		"Classic":{
 			"beeg":{
@@ -12,7 +12,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -20,7 +20,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Classic-MINI/DSEG7ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -30,7 +30,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -38,7 +38,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-LightItalic.ttf")
 			}
 		},
@@ -68,7 +68,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic/DSEG14Classic-LightItalic.ttf")
 			},
 			"mini":{
@@ -76,7 +76,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Classic-MINI/DSEG14ClassicMini-LightItalic.ttf")
 			}
 		},
@@ -86,7 +86,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-LightItalic.ttf")
 			},
 			"mini":{
@@ -94,7 +94,7 @@ extends FontFile
 				"Italic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Italic.ttf"),
 				"Bold":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Bold.ttf"),
 				"BoldItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf"),
-				"Light3D":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light3D.ttf"),
+				"Light":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-Light.ttf"),
 				"LightItalic":preload("res://font/fonts-DSEG/DSEG14-Modern-MINI/DSEG14ModernMini-LightItalic.ttf")
 			}
 		},

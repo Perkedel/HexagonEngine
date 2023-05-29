@@ -11,9 +11,10 @@ signal Shutdown_Exec()
 
 func _loadTheModPCK(path:String,replaces:bool):
 	print("Load the Mod PCK \n", path)
-	print("\nReplace is ", String(replaces))
+#	print("\nReplace is ", String(replaces))
+#	print("\nReplace is ..${replaces}")
 	var succession = ProjectSettings.load_resource_pack(path,replaces)
-	print("Load the PCK is success ? ", String(succession))
+#	print("Load the PCK is success ? ", String(succession))
 	pass
 
 func _loadingBarNow():

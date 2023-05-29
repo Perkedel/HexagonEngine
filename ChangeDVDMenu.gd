@@ -62,7 +62,8 @@ func ImportThatDVDToday(path):
 		# https://github.com/godotengine/godot-docs/issues/154#issuecomment-221551632
 		print("\n\nPCK Packer add file\n\n")
 		var packer = PCKPacker.new()
-		packer.pck_start(Callable(path, 0))
+#		packer.pck_start(Callable(path, 0))
+		packer.pck_start(path)
 		packer.add_file("GameDVDCartridge","res://ImportDVDCartridge/")
 		packer.flush(true)
 	pass
@@ -90,7 +91,7 @@ func _input(event):
 
 func _notification(what): #add heurestic of changeDVD menu! check visible of change dvd menu
 	if visible:
-		if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		if what == NOTIFICATION_WM_CLOSE_REQUEST:
 			if $JustWorkingAreYouSure.visible:
 				$JustWorkingAreYouSure.hide()
 				pass

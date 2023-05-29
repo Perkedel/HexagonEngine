@@ -7,7 +7,7 @@ extends Node3D
 var hasMeLoading = false
 var a3DResource
 # https://docs.godotengine.org/en/3.1/tutorials/io/background_loading.html
-@onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+#@onready var custom_Resource_Queue = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 signal IncludeMeForYourLoading(MayI)
 signal a3D_Loading_ProgressBar(valuet)
 var ProgressValue
@@ -18,6 +18,7 @@ var Prev3DSpaceLevel
 var StartLoadSceneL = true
 var SceneHasLoaded = true
 var ConnectedSignal = false
+var loadingProgressPointer: Array = [0]
 
 signal TellHP(Level)
 signal TellScore(value)
@@ -28,7 +29,7 @@ signal TellLevelCard(path)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#ConnecStatusSignal()
-	custom_Resource_Queue.start()
+#	custom_Resource_Queue.start()
 	Now3DSpaceLevel = LevelLoadRoot.get_child(0)
 	Prev3DSpaceLevel = Now3DSpaceLevel
 	pass # Replace with function body.
@@ -52,7 +53,8 @@ func spawnAScene(pathO):
 	Your3DSpaceLevel = pathO
 	Raw3DSpaceLevelPath = pathO
 	print("Queueing Scene " + Raw3DSpaceLevelPath)
-	custom_Resource_Queue.queue_resource(Raw3DSpaceLevelPath)
+#	custom_Resource_Queue.queue_resource(Raw3DSpaceLevelPath)
+	ResourceLoader.load_threaded_request(Raw3DSpaceLevelPath)
 	pass
 
 func clearTheScene():
@@ -104,8 +106,10 @@ func show_error():
 	pass
 
 func update_progress_threaded():
-	var progress = custom_Resource_Queue.get_progress(Raw3DSpaceLevelPath)
-	ProgressValue = progress * 100
+#	var progress = custom_Resource_Queue.get_progress(Raw3DSpaceLevelPath)
+	var progress:float = loadingProgressPointer[0]
+#	ProgressValue = progress * 100
+	ProgressValue = progress 
 	#print(progress)
 	pass
 
@@ -187,7 +191,7 @@ func ConnecStatusSignal():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if custom_Resource_Queue.is_ready(Raw3DSpaceLevelPath):
+	if ResourceLoader.load_threaded_get_status(Raw3DSpaceLevelPath,loadingProgressPointer) == ResourceLoader.THREAD_LOAD_LOADED:
 		SceneHasLoaded = true
 		print("Queue is ready " + Raw3DSpaceLevelPath)
 		pass
@@ -207,7 +211,7 @@ func _process(delta):
 		emit_signal("hasLoadingCompleted")
 		if not StartLoadSceneL:
 			
-			InitiateThatScene(custom_Resource_Queue.get_resource(Raw3DSpaceLevelPath))
+			InitiateThatScene(ResourceLoader.load_threaded_get(Raw3DSpaceLevelPath))
 			#ConnecStatusSignal()
 			StartLoadSceneL = true
 			hasMeLoading = false

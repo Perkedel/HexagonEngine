@@ -13,10 +13,10 @@ func loadAllModsFolder():
 	var locate = OS.get_executable_path() + "/ModPCK"
 	
 #	var dirNow = DirAccess.new()
-	var dirNow:DirAccess
+	var dirNow:DirAccess = DirAccess.open(locate)
 	var modInFolder
 	
-	var try = dirNow.open(locate)
+	var try = DirAccess.get_open_error()
 	if try == OK:
 		dirNow.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		modInFolder = dirNow.get_next()
@@ -35,7 +35,7 @@ func loadAllModsFolder():
 			pass
 		pass
 	else:
-		printerr("Werror "+ try.to_string() +" cannot open ModPCK file!\ndid you deleted it?")
+		printerr("Werror "+ String.num(try) +" cannot open ModPCK file!\ndid you deleted it?")
 		pass
 	pass
 

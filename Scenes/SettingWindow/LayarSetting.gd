@@ -9,7 +9,7 @@ var LayarSettingLoaded = false
 func reload():
 	$FullSkren.button_pressed = ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN))
 	$Vsync.button_pressed = (DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED)
-	$VsyncCompositor.button_pressed = OS.vsync_via_compositor
+#	$VsyncCompositor.button_pressed = OS.vsync_via_compositor
 	LayarSettingLoaded = true
 	pass
 
@@ -48,6 +48,6 @@ func _on_Vsync_toggled(button_pressed):
 
 func _on_VsyncCompositor_toggled(button_pressed):
 	if LayarSettingLoaded:
-		OS.vsync_via_compositor = button_pressed
+#		OS.vsync_via_compositor = button_pressed
 		Settingers.setDisplay("Vsync_via_compositor",button_pressed)
 	pass # Replace with function body.

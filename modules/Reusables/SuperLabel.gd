@@ -3,8 +3,8 @@ extends Label
 
 #onready var superLabelFont:DynamicFont = preload("res://modules/Reusables/SuperLabelDynamicFont.tres")
 @export var fontFile: FontFile = load("res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf"): set = set_font_file
-@onready var fonto = get_font("font")
-@export var size: float = 24.0: set = set_font_size
+@onready var fonto = get_theme_font("font")
+@export var sized: float = 24.0: set = set_font_sized
 @export var fontColor: Color = Color.WHITE: set = set_font_color
 @export var outlineSize: float = 1.0: set = set_outline_size
 @export var OutlineColor: Color = Color.BLACK: set = set_outline_color
@@ -18,8 +18,8 @@ func set_font_file(theFont:FontFile):
 	fontFile = theFont
 	_updateFont()
 
-func set_font_size(howBig:float):
-	size = howBig
+func set_font_sized(howBig:float):
+	sized = howBig
 	_updateFont()
 
 func set_font_color(whichColor:Color):
@@ -51,10 +51,15 @@ func _updateFont():
 	#add_font_override("font",superLabelFont)
 	#add_color_override("font_color",fontColor)
 	fonto.font_data = fontFile
-	fonto.size = size
+#	fonto.size = sized
+#	set_font_size(sized)
+#	get_theme_font_size()
+	add_theme_font_size_override("font_size",sized)
 	
-	fonto.outline_size = outlineSize
-	fonto.outline_color = OutlineColor
+#	fonto.outline_size = outlineSize
+	add_theme_constant_override("outline_size",outlineSize)
+#	fonto.outline_color = OutlineColor
+	add_theme_color_override("font_outline_color",OutlineColor)
 	pass
 
 # Called when the node enters the scene tree for the first time.

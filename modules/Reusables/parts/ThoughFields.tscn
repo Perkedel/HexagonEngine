@@ -1,179 +1,263 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=13 format=3 uid="uid://cql47epxce3qy"]
 
-[ext_resource path="res://modules/Reusables/DSEGLabel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" type="Script" id=2]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" type="FontFile" id=4]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" type="FontFile" id=5]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" type="FontFile" id=6]
-[ext_resource path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" type="FontFile" id=7]
-[ext_resource path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" type="FontFile" id=8]
+[ext_resource type="PackedScene" uid="uid://diwyt2v0kr48d" path="res://modules/Reusables/DSEGLabel.tscn" id="1"]
+[ext_resource type="Script" path="res://fonts/kashikan-DSEG/kashikan-DSEG.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://jadq5vvq880w" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf" id="4"]
+[ext_resource type="FontFile" uid="uid://by5yc2yibtd75" path="res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf" id="5"]
+[ext_resource type="FontFile" uid="uid://bujn7awtgf3bo" path="res://font/fonts-DSEG/DSEG7-Modern-MINI/DSEG7ModernMini-Regular.ttf" id="6"]
+[ext_resource type="FontFile" uid="uid://5caadhmmuwes" path="res://font/fonts-DSEG/DSEG14-Modern/DSEG14Modern-Italic.ttf" id="7"]
+[ext_resource type="FontFile" uid="uid://bde54mab883au" path="res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Italic.ttf" id="8"]
 
-[sub_resource type="FontFile" id=1]
+[sub_resource type="FontFile" id="FontFile_k6711"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-size = 48
-font_data = ExtResource( 7 )
-script = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+script = ExtResource("2")
 chooseMode = "14Seg"
 chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
-Fonts = {
+Fonts = {}
 
-}
-
-[sub_resource type="FontFile" id=2]
+[sub_resource type="FontFile" id="FontFile_hvdw4"]
 resource_local_to_scene = true
-size = 48
-font_data = ExtResource( 8 )
-script = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+script = ExtResource("2")
 chooseMode = "7Seg"
 chooseForm = "Modern"
 miniForm = false
 fontWeight = "Italic"
-Fonts = {
+Fonts = {}
 
-}
-
-[sub_resource type="FontFile" id=3]
+[sub_resource type="FontFile" id="FontFile_pe8xs"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-size = 128
-font_data = ExtResource( 4 )
-script = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/72/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/72/0 = Vector2(0, 0)
+script = ExtResource("2")
 chooseMode = "7Seg"
 chooseForm = "Classic"
 miniForm = false
 fontWeight = "BoldItalic"
-Fonts = {
+Fonts = {}
 
-}
-
-[sub_resource type="FontFile" id=4]
+[sub_resource type="FontFile" id="FontFile_uw6gf"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-size = 48
-font_data = ExtResource( 5 )
-script = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/72/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/72/0 = Vector2(0, 0)
+script = ExtResource("2")
 chooseMode = "7Seg"
 chooseForm = "Classic"
 miniForm = false
 fontWeight = "Italic"
-Fonts = {
+Fonts = {}
 
-}
-
-[sub_resource type="FontFile" id=5]
+[sub_resource type="FontFile" id="FontFile_e1cyq"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-size = 32
-font_data = ExtResource( 6 )
-script = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+script = ExtResource("2")
 chooseMode = "7Seg"
 chooseForm = "Modern"
 miniForm = true
 fontWeight = "Regular"
-Fonts = {
-
-}
+Fonts = {}
 
 [node name="ThoughFields" type="VBoxContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="topField" type="HBoxContainer" parent="."]
-offset_top = 420.0
-offset_right = 1920.0
-offset_bottom = 476.0
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Day" parent="topField" instance=ExtResource( 1 )]
-offset_top = 0.0
-offset_right = 958.0
-offset_bottom = 56.0
+[node name="Day" parent="topField" instance=ExtResource("1")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("FontFile_k6711")
 text = "SEN."
-size = 48.0
 chooseMode = "14Seg"
 chooseForm = "Modern"
 fontWeight = "Italic"
-Fonts = {
+Fonts = {}
 
-}
-
-[node name="Date" parent="topField" instance=ExtResource( 1 )]
-offset_left = 962.0
-offset_top = 0.0
-offset_bottom = 56.0
+[node name="Date" parent="topField" instance=ExtResource("1")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = SubResource( 2 )
+theme_override_fonts/font = SubResource("FontFile_hvdw4")
 text = "12-04-2021"
-size = 48.0
 chooseForm = "Modern"
 fontWeight = "Italic"
-Fonts = {
-
-}
+Fonts = {}
 
 [node name="bottomField" type="HBoxContainer" parent="."]
-offset_top = 480.0
-offset_right = 1920.0
-offset_bottom = 616.0
-custom_minimum_size = Vector2( 0, 100 )
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HourMin" parent="bottomField" instance=ExtResource( 1 )]
-offset_top = 0.0
-offset_right = 958.0
-offset_bottom = 136.0
+[node name="HourMin" parent="bottomField" instance=ExtResource("1")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = SubResource( 3 )
+theme_override_fonts/font = SubResource("FontFile_pe8xs")
+theme_override_font_sizes/font_size = 72
 text = "23:23"
-size = 128.0
+sized = 72.0
 fontWeight = "BoldItalic"
-Fonts = {
+Fonts = {}
 
-}
-
-[node name="Second" parent="bottomField" instance=ExtResource( 1 )]
-offset_left = 962.0
-offset_top = 0.0
-offset_bottom = 136.0
+[node name="Second" parent="bottomField" instance=ExtResource("1")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = SubResource( 4 )
-text = "23"
-valign = 2
-size = 48.0
+theme_override_fonts/font = SubResource("FontFile_uw6gf")
+theme_override_font_sizes/font_size = 72
+text = ":23"
+sized = 72.0
 fontWeight = "Italic"
-Fonts = {
-
-}
+Fonts = {}
 
 [node name="underField" type="HBoxContainer" parent="."]
-offset_top = 620.0
-offset_right = 1920.0
-offset_bottom = 660.0
+layout_mode = 2
 
-[node name="UnixTime" parent="underField" instance=ExtResource( 1 )]
-offset_top = 0.0
-offset_bottom = 40.0
+[node name="UnixTime" parent="underField" instance=ExtResource("1")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
-theme_override_fonts/font = SubResource( 5 )
+theme_override_fonts/font = SubResource("FontFile_e1cyq")
 text = "1234567890"
-align = 2
-size = 32.0
 chooseForm = "Modern"
 miniForm = true
-Fonts = {
-
-}
+Fonts = {}

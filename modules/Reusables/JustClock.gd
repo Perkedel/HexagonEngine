@@ -95,25 +95,26 @@ func _updateClock():
 			hari = weekdayName
 		})
 		dateText.text = "{tanggal}-{bulan}-{tahun}".format({
-			tanggal = String(datetime.day).pad_zeros(2),
-			bulan = String(datetime.month).pad_zeros(2),
-			tahun = String(datetime.year).pad_zeros(4)
+			tanggal = String.num(datetime.day).pad_zeros(2),
+			bulan = String.num(datetime.month).pad_zeros(2),
+			tahun = String.num(datetime.year).pad_zeros(4)
 		})
 	
 	if hourMinText != null:
 		hourMinText.text = "{jam}:{menit}".format({
-			jam = String(datetime.hour).pad_zeros(2),
-			menit = String(datetime.minute).pad_zeros(2)
+			jam = String.num(datetime.hour).pad_zeros(2),
+			menit = String.num(datetime.minute).pad_zeros(2)
 		})
 	
 	if secondText != null:
-		secondText.text = "{detik}".format({
-			detik = String(datetime.second).pad_zeros(2)
+		secondText.text = "{coloning}{detik}".format({
+			detik = String.num(datetime.second).pad_zeros(2),
+			coloning = ":" if datetime.second % 2 == 0 else " "
 		})
 	
 	if unixTimeText != null:
 		unixTimeText.text = "{waktuUnix}".format({
-			waktuUnix = String(unixtime).pad_zeros(20)
+			waktuUnix = String.num_int64(unixtime).pad_zeros(20)
 		})
 	pass
 

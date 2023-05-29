@@ -1,50 +1,41 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dvykinyfm52b2"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
-[ext_resource path="res://Scenes/SettingWindow/LayarSetting.gd" type="Script" id=2]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
+[ext_resource type="Script" path="res://Scenes/SettingWindow/LayarSetting.gd" id="2"]
 
 [node name="LayarSetting" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 offset_top = 104.0
 offset_right = 1198.0
 offset_bottom = 167.0
-custom_minimum_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("2")
 
 [node name="FullSkren" type="CheckButton" parent="."]
-offset_right = 322.0
-offset_bottom = 63.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "FullScreen"
-align = 1
 expand_icon = true
 
 [node name="Vsync" type="CheckButton" parent="."]
-offset_left = 326.0
-offset_right = 648.0
-offset_bottom = 63.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Vsync"
-align = 1
 expand_icon = true
 
 [node name="VsyncCompositor" type="CheckButton" parent="."]
-offset_left = 652.0
-offset_right = 1198.0
-offset_bottom = 63.0
+visible = false
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Vsync Via Compositor"
-align = 1
 expand_icon = true
+
 [connection signal="visibility_changed" from="." to="." method="_on_LayarSetting_visibility_changed"]
 [connection signal="toggled" from="FullSkren" to="." method="_on_FullSkren_toggled"]
 [connection signal="toggled" from="Vsync" to="." method="_on_Vsync_toggled"]

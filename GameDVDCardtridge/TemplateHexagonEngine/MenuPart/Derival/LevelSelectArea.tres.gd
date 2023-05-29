@@ -13,7 +13,7 @@ extends Control
 @export var a2DSpaceReportScore: bool = false
 @export var a3DSpaceReportScore: bool = false
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-@export var LevelDescription # (String, MULTILINE)
+@export_multiline var LevelDescription:String # (String, MULTILINE)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

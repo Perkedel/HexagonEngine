@@ -1,7 +1,7 @@
 @tool
 extends HBoxContainer
 
-@export (String) var VariableName = "CheckButton"
+@export var VariableName:String = "CheckButton"
 
 # Declare member variables here. Examples:
 # var a = 2

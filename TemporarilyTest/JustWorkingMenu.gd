@@ -43,9 +43,11 @@ signal DVDListRefreshed()
 func refreshDVDs():
 	# documentation of "Directory"
 	print("DVD Cardtridges")
-	var GameDVDCardtridges = DirAccess.new()
-	var bootFile = File.new()
-	if GameDVDCardtridges.open("res://GameDVDCardtridge/") == OK:
+#	var GameDVDCardtridges = DirAccess.new()
+	var GameDVDCardtridges:DirAccess = DirAccess.open("res://GameDVDCardtridge/")
+#	var bootFile = File.new()
+	var bootFile:FileAccess
+	if DirAccess.get_open_error() == OK:
 		# Basic DVD loading
 		GameDVDCardtridges.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 		var file_name = GameDVDCardtridges.get_next()
@@ -54,11 +56,12 @@ func refreshDVDs():
 			if GameDVDCardtridges.current_is_dir():
 				print(file_name, " DirAccess")
 				# GameDVDCardtridges.get_current_dir()
-				if bootFile.open(GameDVDCardtridges.get_current_dir() + "/" + file_name + "/boot.json", File.READ) == OK:
+				bootFile = FileAccess.open(GameDVDCardtridges.get_current_dir() + "/" + file_name + "/boot.json", FileAccess.READ)
+				if FileAccess.get_open_error() == OK:
 					var test_json_conv = JSON.new()
 					test_json_conv.parse(bootFile.get_as_text())
 					var content = test_json_conv.get_data()
-					print("\n\nContent ", String(content))
+#					print("\n\nContent ", String(content))
 					emit_signal("shareBootInfoJson", content, bootFile.get_path())
 					DVDItemLists[content.id] = content
 					bootFile.close()

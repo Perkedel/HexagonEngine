@@ -29,18 +29,19 @@ serta plugin akan dirombak serentak.
 @onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
 @onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
 @onready var tweens = $SystemGut/aTweens.get_children()
-@onready var immediateTween = $SystemGut/aTweens/Tween1
-@onready var immediateTween2 = $SystemGut/aTweens/Tween2
+@onready var immediateTween = Tween.new()
+@onready var immediateTween2 = Tween.new()
 @onready var timerer = $SystemGut/Timer
 @onready var LoadingPopup = $MetaMenu/LoadingPopup
 var DVDCardtridgeLists
 @onready var isRunningDVD = false
 @onready var preloadDVD = 0
 @onready var doPreloadDVD = false
-@onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
+#@onready var resourceQueued = preload("res://Scripts/ExtraImportAsset/resource_queue.gd").new()
 @export var LoadDVD: PackedScene 
 #enum ListOfDVDsTemporarily {Template, AdmobTestoid}
 var LoadingProgressNum:float=0.0
+var LoadingProgressPointers:Array = []
 
 # demo of 3D in 2D official Godot
 func _zetrixInit():
@@ -57,7 +58,7 @@ func _sysInit():
 	print("Welcome to Hexagon Engine")
 	Singletoner.iAmTheMainNode(self)
 	print("Locate " + String(OS.get_executable_path()))
-	resourceQueued.start()
+#	resourceQueued.start()
 	_zetrixInit()
 	OS.request_permissions()
 	changeDVDMenu.RefreshDVDs()
@@ -112,14 +113,15 @@ func interceptFiftConsole(path:String):
 	dvdSelTr.hide()
 	dvdLauBg.show()
 	immediateTween.start()
-	resourceQueued.queue_resource(path)
+#	resourceQueued.queue_resource(path)
+	ResourceLoader.load_threaded_request(path)
 	timerer.one_shot = true
 	timerer.start(1.0)
-	while not resourceQueued.is_ready(path) or not timerer.is_stopped():
+	while not ResourceLoader.load_threaded_get_status(path, LoadingProgressPointers) == ResourceLoader.THREAD_LOAD_LOADED or not timerer.is_stopped():
 		await get_tree().idle_frame
 		#print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
 		#print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
-		LoadingPopup.ManageLoading(resourceQueued.get_progress(path) * 100, path, true if resourceQueued.get_progress(path) == 1.0 else false)
+		LoadingPopup.ManageLoading(LoadingProgressPointers[0], path, ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_LOADED)
 #		if resourceQueued.is_ready(path) && timerer.is_stopped():
 #			break
 		if Input.is_action_just_pressed("ui_mouse_left"):
@@ -130,8 +132,9 @@ func interceptFiftConsole(path:String):
 #		print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
 #		print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
 #		pass
-	if resourceQueued.is_ready(path):
-		LoadDVD = resourceQueued.get_resource(path)
+	if ResourceLoader.load_threaded_get_status(path,LoadingProgressPointers) == ResourceLoader.THREAD_LOAD_LOADED:
+#		LoadDVD = resourceQueued.get_resource(path)
+		LoadDVD = ResourceLoader.load_threaded_get(path)
 		pass
 	#yield(get_tree().create_timer(1),"timeout")
 	#dvdLauBg.hide()
@@ -154,8 +157,8 @@ func postInterception():
 func DoChangeDVDNow():
 	print("Change DVD!")
 	cenBgLaunch.hide()
-	immediateTween.interpolate_property(dvdSelBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
-	immediateTween.interpolate_property(dvdSelTr,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
+#	immediateTween.interpolate_property(dvdSelBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
+#	immediateTween.interpolate_property(dvdSelTr,"modulate",Color(1,1,1,0),Color(1,1,1,1),.75)
 	dvdSelBg.hide()
 	dvdSelTr.show()
 	dvdLauBg.hide()
