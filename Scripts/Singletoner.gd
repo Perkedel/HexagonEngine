@@ -51,7 +51,9 @@ func Nonaktifkan_Sistem():
 	#AutoSpeaker.stream = preload("res://GameDVDCardtridge/GeogonPolymetryHaventDoneYetSalvage/Audio/Explosion bin cropped.wav")
 	#AutoSpeaker.play()
 	Kixlonzing.SaveKixlonz()
-	Settingers.SettingSave()
+	if Engine.has_singleton("Settinger"):
+#		Settingers.SettingSave()
+		pass
 	print("Quit Game!")
 	#get_tree().queue_delete(get_tree())
 	#get_tree().queue_free()
@@ -112,9 +114,10 @@ func _notification(what: int) -> void:
 	if NOTIFICATION_WM_GO_BACK_REQUEST:
 		# PECKING FINALLY BACK BUTTON!!!
 		if activateBackButton:
-			var a = InputEventAction.new()
-			a.action = "ui_cancel"
-			a.button_pressed = true
-			Input.parse_input_event(a)
+#			var a = InputEventAction.new()
+#			a.action = "ui_cancel"
+#			a.button_pressed = true
+#			Input.parse_input_event(a)
+			pass
 		pass
 	pass

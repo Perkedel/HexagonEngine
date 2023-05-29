@@ -53,11 +53,12 @@ var _DefaultSetting:Dictionary = {
 		RecordingVolume = 0,
 	},
 	DisplaySetting = {
-		FullScreen = ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN)),
+#		FullScreen = ((get_window().get_mode() == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().get_mode() == Window.MODE_FULLSCREEN)),
+		FullScreen = false,
 		Vsync = (DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED),
 	},
 	ControllerMappings = {
-		
+
 	},
 	Firebasers = {
 		RememberMe = false
@@ -65,6 +66,7 @@ var _DefaultSetting:Dictionary = {
 	PleaseResetMe = false,
 	Eggsellents = {},
 }
+#var _DefaultSetting:Dictionary = {}
 
 "Total SettingData must be private! so do your save data! use _ to private. For security reason in case a mod PCK has malicious intents"
 "SettingData total harus pribadi! juga dengan data simpanmu! gunakan _ untuk mempribadikan. Demi keamanan jika seandainya sebuah mod PCK memiliki niat jahat."
@@ -149,8 +151,9 @@ func ApplySetting():
 
 func SettingLoad():
 #	SettingFile = FileAccess.new()
-	if SettingFile.file_exists(SettingPath) && not useJSON:
-		var werror = SettingFile.open(SettingPath, FileAccess.READ)
+	if FileAccess.file_exists(SettingPath) && not useJSON:
+		SettingFile = FileAccess.open(SettingPath, FileAccess.READ)
+		var werror = FileAccess.get_open_error()
 		match(werror):
 			OK:
 				TheFirstTime = false
@@ -166,8 +169,9 @@ func SettingLoad():
 				TheFirstTime = true
 				pass
 		pass
-	elif SettingFile.file_exists(SettingJson) && useJSON:
-		var werror = SettingFile.open(SettingJson, FileAccess.READ)
+	elif FileAccess.file_exists(SettingJson) && useJSON:
+		SettingFile = FileAccess.open(SettingJson, FileAccess.READ)
+		var werror = FileAccess.get_open_error()
 		match(werror):
 			OK:
 				TheFirstTime = false
@@ -244,12 +248,14 @@ func SettingSave():
 		pass
 	
 #	SettingFolder = DirAccess.new()
-	if !SettingFolder.dir_exists(SettingDirectory):
-		SettingFolder.make_dir_recursive(SettingDirectory)
+	var dataFolder = DirAccess.open("user://")
+	if !dataFolder.dir_exists(SettingDirectory):
+		dataFolder.make_dir_recursive(SettingDirectory)
 		pass
 	
 #	SettingFile = FileA.new()
-	var werror = SettingFile.open(SettingPath, FileAccess.WRITE)
+	SettingFile = FileAccess.open(SettingPath, FileAccess.WRITE)
+	var werror = FileAccess.get_open_error()
 	match(werror):
 		OK:
 			SettingFile.store_var(_SettingData)
@@ -260,7 +266,8 @@ func SettingSave():
 			print('Werror Saving File Bin code ', werror)
 			pass
 #	SettingFile = File.new()
-	werror = SettingFile.open(SettingJson, FileAccess.WRITE)
+	SettingFile = FileAccess.open(SettingJson, FileAccess.WRITE)
+	werror = FileAccess.get_open_error()
 	match(werror):
 		OK:
 			# https://godotengine.org/asset-library/asset/157

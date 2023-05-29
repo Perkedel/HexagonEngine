@@ -32,12 +32,12 @@ func get_full_user_data(FirebaseToken,http: HTTPRequest) -> Dictionary:
 	var body := {
 		"idToken": FirebaseToken
 	}
-	http.request(GET_USER_DATA_URL, [], false, HTTPClient.METHOD_POST, JSON.new().stringify(body))
+	http.request(GET_USER_DATA_URL, [], HTTPClient.METHOD_POST, JSON.new().stringify(body))
 	var result := await http.request_completed as Dictionary
 	if result[1] == 200:
 		return result
 	else:
-		return null
+		return {}
 	pass
 
 func _get_user_info(result: Array) -> Dictionary:

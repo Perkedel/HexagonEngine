@@ -175,7 +175,7 @@ func PatchedChangeDVDNow():
 	print("Patched Change DVD!")
 	Singletoner.ResumeGameNow()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	LoadDVD = "res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn"
+	LoadDVD = load("res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn")
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	pass
 
@@ -201,7 +201,7 @@ func _on_ChangeDVDMenu_ShutdownHexagonEngineNow():
 
 func _on_ChangeDVDMenu_ItemClickEnterName(loadName, ExclusiveBootStatement):
 	print("Receive DVD Click Name " + loadName," Which " + "Does" if ExclusiveBootStatement else "Doesn't", " Exclusive Boot.")
-	await interceptFiftConsole(loadName).completed
+	await interceptFiftConsole(loadName)
 	postInterception()
 	if ExclusiveBootStatement:
 		# Singletoner.hereTakeThisLoadedResource = LoadDVD
@@ -292,7 +292,7 @@ enum DialogReason {Nothing, ResetMe}
 var SelectDialogReason
 var ResetSay = "Reset Factory DIP switch is on! Reset setting?"
 func checkForResetMe():
-	if Settingers.checkForResetMe():
+	if await Settingers.checkForResetMe():
 		SelectDialogReason = DialogReason.ResetMe
 		var theDialog = $MetaMenu/AreYouSureDialog
 		theDialog.SpawnDialogWithText(ResetSay)
@@ -318,7 +318,7 @@ func _on_AreYouSureDialog_YesOrNoo(which):
 func _on_ChangeDVDMenu_CustomLoadMoreDVD(path):
 	print("Custom load this ", path, " right here")
 	#LoadDVD = load(path)
-	await interceptFiftConsole(path).completed
+	await interceptFiftConsole(path)
 	postInterception()
 	$DVDCartridgeSlot.PlayDVD(LoadDVD)
 	isRunningDVD = true

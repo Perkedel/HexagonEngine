@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://4g7pi1nwsoji" path="res://Theme/Perkedel_Tema.tres" id="4"]
 
 [node name="LoadingPopup" type="Popup"]
-size = Vector2i(213, 200)
+size = Vector2i(1920, 200)
 visible = true
 exclusive = true
 theme = ExtResource("4")

@@ -59,7 +59,7 @@ func wellLoadModsFolder():
 
 func loadAllMods():
 	wellLoadModsFolder()
-	modLists = Settingers.getModPCKs()
+#	modLists = Settingers.getModPCKs()
 #	print(String(modLists.values()))
 	print("\n\nMods List:")
 	
