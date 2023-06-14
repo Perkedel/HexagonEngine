@@ -1,4 +1,4 @@
-@tool
+# @tool
 extends TextureRect
 
 @export var rotating: bool = true
@@ -6,20 +6,22 @@ extends TextureRect
 # var a = 2
 # var b = "text"
 
-func set_ignore_rotation(val = true):
+func set_ignore_rotation(val:bool = true):
 #	ignore_rotation = val # reversed "rotating" for Camera2D
-	_refreshParams()
+#	_refreshParams()
+	pass
 
 func _refreshParams():
-	material.set_shader_parameter("rotating",rotating)
+#	material.set_shader_parameter("rotating",rotating)
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_refreshParams()
+#	_refreshParams()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	
-	pass
+#func _process(delta:float):
+#
+#	pass

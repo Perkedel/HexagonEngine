@@ -166,8 +166,8 @@ func InitMeSelf():
 func iHoverThisDVD():
 	AutoSpeaker.playButtonHover()
 	var keying = shownDVDItemLists.keys()
-	var checkering : Dictionary = shownDVDItemLists[keying[WhichItemSelected]]
-	print("Hovered DVD ", keying[WhichItemSelected])
+	var checkering : Dictionary = shownDVDItemLists[keying[whichItemSelected]]
+	print("Hovered DVD ", keying[whichItemSelected])
 	var selPath:String
 	var lauPath:String
 	var selImag : Texture2D 
@@ -200,10 +200,10 @@ func _on_PowerOffButton_pressed():
 	emit_signal("PressShutDown")
 	pass # Replace with function body.
 
-@export var WhichItemSelected = 0
+@export var whichItemSelected:int = 0
 func _on_ItemList_item_selected(index):
 	
-	WhichItemSelected = index
+	whichItemSelected = index
 	iHoverThisDVD()
 	pass # Replace with function body.
 

@@ -23,16 +23,16 @@ extends Node
 # https://docs.godotengine.org/en/3.2/classes/class_tween.html
 # https://godotengine.org/qa/2539/how-would-i-go-about-picking-a-random-number
 
-@export (PackedStringArray) var MusicSelections = ["res://GameDVDCardtridge/404/audacity/swfchan 404/The Other Side - Pendulum [HQ]-cut.ogg", "res://GameDVDCardtridge/404/audio/Spongebob Gagak (DJ Emkei).wav"]
-@export (bool) var UseRandomMusicInstead = true
-@export (int) var SelectFavouriteNumber = 0
-@export (AudioStream) var SelectMusicFile = load("res://GameDVDCardtridge/404/audacity/swfchan 404/The Other Side - Pendulum [HQ]-cut.ogg")
-@export (PackedStringArray) var VideoFilePaths = ["res://GameDVDCardtridge/404/videos/Sonne_Zeitraffer_-_Sun_Time_Lapse_3840x2160p_24FPS_CC_(Royalty_Free)_(Kostenlos)_10bit.webm"]
-@export (int) var IndexVideoFIle = 0
+@export var MusicSelections: Array = ["res://GameDVDCardtridge/404/audacity/swfchan 404/The Other Side - Pendulum [HQ]-cut.ogg", "res://GameDVDCardtridge/404/audio/Spongebob Gagak (DJ Emkei).wav"]
+@export var UseRandomMusicInstead: bool = true
+@export var SelectFavouriteNumber: int = 0
+@export var SelectMusicFile:AudioStream = load("res://GameDVDCardtridge/404/audacity/swfchan 404/The Other Side - Pendulum [HQ]-cut.ogg")
+@export var VideoFilePaths:Array = ["res://GameDVDCardtridge/404/videos/Sonne_Zeitraffer_-_Sun_Time_Lapse_3840x2160p_24FPS_CC_(Royalty_Free)_(Kostenlos)_10bit.webm"]
+@export var IndexVideoFIle:int = 0
 
-@onready var upTween = $"404ui/Control404/404Contains/Panel404/UpTween"
-@onready var downTween = $"404ui/Control404/404Contains/Menu404/DownTween"
-@onready var messTween = $"404ui/Control404/404Contains/DebugMessage/MessTween"
+@onready var upTween = get_tree().create_tween()
+@onready var downTween = get_tree().create_tween()
+@onready var messTween = get_tree().create_tween()
 @onready var LoadTheVideoNow = load(VideoFilePaths[IndexVideoFIle])
 @onready var werrorTitle = $"404ui/Control404/404Contains/Panel404/LEDscrolling/HBoxContainer/Label"
 @onready var werrorMessage = $"404ui/Control404/404Contains/DebugMessage/RichTextLabel"
@@ -50,15 +50,18 @@ func customMessage(writeTitle:String, writeMessage:String):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	upTween.interpolate_property($"404ui/Control404/404Contains/Panel404", "position", Vector2(0,-100), Vector2(0,0),1,Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	upTween.start()
+	$"404ui/Control404/404Contains/Panel404".position = Vector2(0,-100)
+	upTween.tween_property($"404ui/Control404/404Contains/Panel404", "position", Vector2(0,0),1).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
+	upTween.play()
 	
 	var y_pos_downMenu = $"404ui/Control404/404Contains/Menu404".position.y
-	downTween.interpolate_property($"404ui/Control404/404Contains/Menu404", "position", Vector2(0,y_pos_downMenu+100), Vector2(0,y_pos_downMenu),1,Tween.TRANS_LINEAR,Tween.EASE_OUT)
-	downTween.start()
+	$"404ui/Control404/404Contains/Menu404".position = Vector2(0,y_pos_downMenu+100)
+	downTween.tween_property($"404ui/Control404/404Contains/Menu404", "position", Vector2(0,y_pos_downMenu),1).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
+	downTween.play()
 	
-	messTween.interpolate_property($"404ui/Control404/404Contains/DebugMessage", "modulate", Color.TRANSPARENT, Color.WHITE, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	messTween.start()
+	$"404ui/Control404/404Contains/DebugMessage".modulate =  Color.TRANSPARENT
+	messTween.tween_property($"404ui/Control404/404Contains/DebugMessage", "modulate", Color.WHITE, 1).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
+#	messTween.start()
 	
 #	$VideoCanvas/VideoPlayer.stream = LoadTheVideoNow
 #	$VideoCanvas/VideoPlayer.play()

@@ -2,9 +2,9 @@ extends ColorRect
 # https://generalistprogrammer.com/godot/godot-infinite-scrolling-background-how-to/
 
 @export var Selector=0 # (float,0,1)
-@export var prevBG: Texture2D:Texture2D
-@export var nextBG: Texture2D:Texture2D
-@onready var tween = $Tweenek
+@export var prevBG: Texture2D
+@export var nextBG: Texture2D
+@onready var tween =  get_tree().create_tween()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -18,8 +18,8 @@ func transitionInto(thisImage:Texture2D):
 	prevBG = nextBG
 	nextBG = thisImage
 	
-	tween.interpolate_property(self,"Selector",0.0,1.0,.5)
-	tween.start()
+	tween.tween_property(self,"Selector",1.0,.5)
+#	tween.start()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

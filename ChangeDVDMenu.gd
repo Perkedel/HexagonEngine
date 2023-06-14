@@ -77,7 +77,7 @@ signal ItemClickEnterName(pathOfThis, ExclusiveBootStatement)
 func _on_JustWorkingMenu_ItemClickEnter(Index, pathOfThis, ExclusiveBootStatement):
 	emit_signal("ItemClickEnter",Index, pathOfThis, ExclusiveBootStatement)
 	emit_signal("ItemClickEnterName",pathOfThis, ExclusiveBootStatement)
-	print("Item Click Enter No. " + String(Index), " which is \n" + pathOfThis,"\nExclusiveBoot is " + String(ExclusiveBootStatement),"\nyeah")
+	# print("Item Click Enter No. " + String(Index), " which is \n" + pathOfThis,"\nExclusiveBoot is " + String(ExclusiveBootStatement),"\nyeah")
 	pass # Replace with function body.
 
 func _input(event):

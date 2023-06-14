@@ -12,7 +12,7 @@
 [sub_resource type="FontFile" id="1"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5")])
+fallbacks = Array[Font]([ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5")])
 face_index = null
 embolden = null
 transform = null
@@ -39,7 +39,7 @@ Fonts = {}
 
 [sub_resource type="FontFile" id="2"]
 resource_local_to_scene = true
-fallbacks = Array[Font]([ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6")])
+fallbacks = Array[Font]([ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6")])
 face_index = null
 embolden = null
 transform = null
@@ -67,7 +67,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="3"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4")])
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4")])
 face_index = null
 embolden = null
 transform = null
@@ -117,7 +117,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="4"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7")])
+fallbacks = Array[Font]([ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7")])
 face_index = null
 embolden = null
 transform = null
@@ -167,7 +167,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="5"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8")])
+fallbacks = Array[Font]([ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8")])
 face_index = null
 embolden = null
 transform = null
@@ -195,7 +195,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="6"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5")])
+fallbacks = Array[Font]([ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5"), ExtResource("5")])
 face_index = null
 embolden = null
 transform = null
@@ -222,7 +222,7 @@ Fonts = {}
 
 [sub_resource type="FontFile" id="7"]
 resource_local_to_scene = true
-fallbacks = Array[Font]([ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6")])
+fallbacks = Array[Font]([ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6"), ExtResource("6")])
 face_index = null
 embolden = null
 transform = null
@@ -250,7 +250,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="8"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4")])
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4"), ExtResource("4")])
 face_index = null
 embolden = null
 transform = null
@@ -300,7 +300,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="9"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7")])
+fallbacks = Array[Font]([ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7"), ExtResource("7")])
 face_index = null
 embolden = null
 transform = null
@@ -350,7 +350,7 @@ Fonts = {}
 [sub_resource type="FontFile" id="10"]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8")])
+fallbacks = Array[Font]([ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8"), ExtResource("8")])
 face_index = null
 embolden = null
 transform = null
@@ -460,13 +460,13 @@ fontColor = Color(0.678431, 1, 0.184314, 1)
 [node name="Date" parent="ThoughFields/topField" index="1"]
 theme_override_colors/font_color = Color(0.678431, 1, 0.184314, 1)
 theme_override_fonts/font = SubResource("7")
-text = "30-05-2023"
+text = "13-06-2023"
 fontColor = Color(0.678431, 1, 0.184314, 1)
 
 [node name="HourMin" parent="ThoughFields/bottomField" index="0"]
 theme_override_colors/font_color = Color(0.678431, 1, 0.184314, 1)
 theme_override_fonts/font = SubResource("8")
-text = "01:13"
+text = "21:51"
 fontColor = Color(0.678431, 1, 0.184314, 1)
 
 [node name="Second" parent="ThoughFields/bottomField" index="1"]
@@ -478,7 +478,7 @@ fontColor = Color(0.678431, 1, 0.184314, 1)
 [node name="UnixTime" parent="ThoughFields/underField" index="0"]
 theme_override_colors/font_color = Color(0.678431, 1, 0.184314, 1)
 theme_override_fonts/font = SubResource("10")
-text = "00000000001685384027"
+text = "00000000001686667907"
 fontColor = Color(0.678431, 1, 0.184314, 1)
 
 [editable path="BehindFields"]

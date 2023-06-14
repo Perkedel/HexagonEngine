@@ -68,6 +68,8 @@ func _updateClock():
 	if bekgron != null:
 		bekgron.self_modulate = bekgronColor
 #		bekgron.set_deferred("self_modulate", bekgron)
+
+	
 	
 	match(datetime["weekday"]):
 		0:
@@ -93,6 +95,7 @@ func _updateClock():
 	if dayText != null:
 		dayText.text = "{hari}.".format({
 			hari = weekdayName
+			# hari = String.num(datetime.weekday),
 		})
 		dateText.text = "{tanggal}-{bulan}-{tahun}".format({
 			tanggal = String.num(datetime.day).pad_zeros(2),

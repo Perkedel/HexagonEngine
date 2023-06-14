@@ -1,15 +1,15 @@
 extends RigidBody3D
 
-@export (float) var WanalogX = 0
-@export (float) var WanalogY = 0
-@export (float) var Cepatan = 20
+@export var WanalogX:float = 0
+@export var WanalogY:float = 0
+@export var Cepatan:float = 20
 var GayaLoncat = 0
-@export (float) var LoncatKuat = 5
-@export (bool) var BisaPegang = false
-@export (bool) var PegangBola = false
+@export var LoncatKuat:float = 5
+@export var BisaPegang:bool = false
+@export var PegangBola:bool = false
 var ManaBola
-@export (Vector3) var LemparArah = Vector3(10,10,0)
-@export (bool) var TweenSetNow = false
+@export var LemparArah:Vector3 = Vector3(10,10,0)
+@export var TweenSetNow:bool = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -27,12 +27,14 @@ var ManaBola
 #	pass
 
 func immanageInputs():
-	WanalogX = clamp(Input.get_action_strength("AnalogKiri_x") - Input.get_action_strength("AnalogKiri_x-"), -1,1) 
-	WanalogY = clamp(Input.get_action_strength("AnalogKiri_y-") - Input.get_action_strength("AnalogKiri_y"), -1,1)
-	print(String(WanalogX))
+#	WanalogX = clamp(Input.get_action_strength("AnalogKiri_x") - Input.get_action_strength("AnalogKiri_x-"), -1,1) 
+	WanalogX = clamp(Input.get_axis("Jalan_Kiri","Jalan_Kanan"),-1,1)
+#	WanalogY = clamp(Input.get_action_strength("AnalogKiri_y-") - Input.get_action_strength("AnalogKiri_y"), -1,1)
+	WanalogY = clamp(Input.get_axis("Jalan_Belakang","Jalan_Depan"), -1,1)
+#	print(String.num(WanalogX))
 	#apply_central_impulse(Vector3(WanalogX,0,0))
 	
-	if Input.is_action_just_pressed("Loncat") or Input.is_action_just_pressed("Keyboard_Space"):
+	if Input.is_action_just_pressed("Melompat"):
 		#apply_central_impulse(Vector3(0,LoncatKuat,0))
 		GayaLoncat = LoncatKuat
 		pass

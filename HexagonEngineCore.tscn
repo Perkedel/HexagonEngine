@@ -1,20 +1,19 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwcww8je6jbfw"]
+[gd_scene load_steps=12 format=3 uid="uid://dwcww8je6jbfw"]
 
 [ext_resource type="Script" path="res://Scripts/HexagonEngineCore.gd" id="1"]
 [ext_resource type="PackedScene" path="res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn" id="2"]
 [ext_resource type="Script" path="res://DVDCartridgeSlot.gd" id="3"]
-[ext_resource type="PackedScene" path="res://ChangeDVDMenu.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dhuumbglfhw3k" path="res://ChangeDVDMenu.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://yf6vc0jnw4l0" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://Scenes/JustZetrixVRViewer.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://egem5djf3tnj" path="res://Scenes/JustZetrixVRViewer.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://banki0pjvqf57" path="res://Sprites/DefaultBackground.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://48koph5dnp6j" path="res://Sprites/ConsoleLaunch.png" id="9"]
 [ext_resource type="PackedScene" uid="uid://bs2xtxubyes3w" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.tscn" id="10"]
-[ext_resource type="PackedScene" path="res://modules/Component/DVDSelectTransitioner.tscn" id="11"]
-[ext_resource type="Script" path="res://addons/gcode/GCode.gd" id="12"]
+[ext_resource type="PackedScene" uid="uid://b2hhay2xulb23" path="res://modules/Component/DVDSelectTransitioner.tscn" id="11"]
 [ext_resource type="PackedScene" path="res://modules/Component/MusicNamePop.tscn" id="13"]
 
 [node name="HexagonEngineCore" type="Node"]
-process_mode = 2
+process_mode = 3
 script = ExtResource("1")
 LoadDVD = ExtResource("2")
 
@@ -34,12 +33,9 @@ expand_mode = 1
 stretch_mode = 7
 
 [node name="DVDSelectTransitioner" parent="MetaMenu" instance=ExtResource("11")]
-anchors_preset = 15
 
 [node name="ChangeDVDMenu" parent="MetaMenu" instance=ExtResource("4")]
 visible = false
-layout_mode = 3
-anchors_preset = 15
 mouse_filter = 1
 
 [node name="CenterBgLaunch" type="VBoxContainer" parent="MetaMenu"]
@@ -58,15 +54,18 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="LoadingPopup" parent="MetaMenu" instance=ExtResource("10")]
+visible = false
 
 [node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource("5")]
+visible = false
 
 [node name="JustZetrixVRViewer" parent="MetaMenu" instance=ExtResource("7")]
+visible = false
 
 [node name="MusicNamePop" parent="MetaMenu" instance=ExtResource("13")]
 
 [node name="SystemGut" type="Node" parent="."]
-process_mode = 2
+process_mode = 3
 
 [node name="Speaker" type="AudioStreamPlayer" parent="SystemGut"]
 process_mode = 2
@@ -78,27 +77,6 @@ one_shot = true
 [node name="HTTPRequest" type="HTTPRequest" parent="SystemGut"]
 process_mode = 2
 use_threads = true
-
-[node name="aTweens" type="Node" parent="SystemGut"]
-
-[node name="Tween1" type="Tween" parent="SystemGut/aTweens"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-script = null
-
-[node name="Tween2" type="Tween" parent="SystemGut/aTweens"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-script = null
-
-[node name="GCode" type="Node" parent="."]
-script = ExtResource("12")
 
 [connection signal="ChangeDVD_Exec" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_ChangeDVD_Exec"]
 [connection signal="DVDTryLoad" from="DVDCartridgeSlot" to="." method="_on_DVDCartridgeSlot_DVDTryLoad"]

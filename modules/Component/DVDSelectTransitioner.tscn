@@ -1,20 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://b2hhay2xulb23"]
 
-[ext_resource path="res://DummyTest/AnimashaMaterial.tres" type="Material" id=1]
-[ext_resource path="res://modules/Component/DVDSelectTransitioner.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/ConsoleHover.png" type="Texture2D" id=3]
-[ext_resource path="res://Sprites/DefaultBackground.png" type="Texture2D" id=4]
+[ext_resource type="Material" uid="uid://dkfptivee45r4" path="res://DummyTest/AnimashaMaterial.tres" id="1"]
+[ext_resource type="Script" path="res://modules/Component/DVDSelectTransitioner.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b2shwowyb2y1l" path="res://Sprites/ConsoleHover.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://banki0pjvqf57" path="res://Sprites/DefaultBackground.png" id="4"]
 
 [node name="DVDSelectTransitioner" type="ColorRect"]
 visible = false
-material = ExtResource( 1 )
+material = ExtResource("1")
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-prevBG = ExtResource( 4 )
-nextBG = ExtResource( 3 )
+script = ExtResource("2")
+prevBG = ExtResource("4")
+nextBG = ExtResource("3")
 
 [node name="Tweenek" type="Tween" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+editor_description = ""
+script = null

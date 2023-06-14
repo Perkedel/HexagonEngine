@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://5477km2iucu8"]
+
+[ext_resource type="Texture2D" uid="uid://cwsfgyw7lwjdc" path="res://Piskel/Gravity_HourGlass_spriteSheet.png" id="1_n3p22"]
+
+[resource]
+atlas = ExtResource("1_n3p22")
+region = Rect2(0, 0, 32, 32)

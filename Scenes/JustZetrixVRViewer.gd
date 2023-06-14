@@ -5,7 +5,7 @@ extends Window
 # var a = 2
 # var b = "text"
 var zetrixViewport:SubViewport
-var images
+var images:Texture
 var ZetrixCheatAttempt:String
 
 # Called when the node enters the scene tree for the first time.
@@ -56,4 +56,9 @@ func _on_ZetrixCheatCode_text_entered(new_text):
 		#$ZetrixMonitorSpeaker.stream = load("res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav")
 		$ZetrixMonitorSpeaker.play()
 		pass
+	pass # Replace with function body.
+
+
+func _on_close_requested() -> void:
+	hide()
 	pass # Replace with function body.

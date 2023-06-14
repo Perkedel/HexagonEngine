@@ -28,9 +28,10 @@ serta plugin akan dirombak serentak.
 @onready var dvdSelTr= $MetaMenu/DVDSelectTransitioner
 @onready var dvdLauBg = $MetaMenu/CenterBgLaunch/DVDLaunchBackground
 @onready var cenBgLaunch = $MetaMenu/CenterBgLaunch
-@onready var tweens = $SystemGut/aTweens.get_children()
-@onready var immediateTween = Tween.new()
-@onready var immediateTween2 = Tween.new()
+# @onready var tweens = $SystemGut/aTweens.get_children()
+#@onready var tweens = [get_tree().create_tween(),get_tree().create_tween()]
+@onready var immediateTween = get_tree().create_tween()
+@onready var immediateTween2 = get_tree().create_tween()
 @onready var timerer = $SystemGut/Timer
 @onready var LoadingPopup = $MetaMenu/LoadingPopup
 var DVDCardtridgeLists
@@ -104,24 +105,26 @@ func JustRemoveDVDThatsIt():
 	pass
 
 func interceptFiftConsole(path:String):
-	await get_tree().idle_frame
+#	await get_tree().idle_frame
 	cenBgLaunch.show()
-	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3)
-	immediateTween.interpolate_property(dvdLauBg,"scale",Vector2(.5,.5),Vector2(1,1),.3)
+	dvdLauBg.modulate = Color(1,1,1,0)
+	dvdLauBg.scale = Vector2(.5,.5)
+	immediateTween.tween_property(dvdLauBg,"modulate",Color(1,1,1,1),.3)
+	immediateTween.tween_property(dvdLauBg,"scale",Vector2(1,1),.3)
 	LoadingPopup.SpawnLoading()
 	dvdSelBg.hide()
 	dvdSelTr.hide()
 	dvdLauBg.show()
-	immediateTween.start()
+#	immediateTween.start()
 #	resourceQueued.queue_resource(path)
 	ResourceLoader.load_threaded_request(path)
 	timerer.one_shot = true
 	timerer.start(1.0)
 	while not ResourceLoader.load_threaded_get_status(path, LoadingProgressPointers) == ResourceLoader.THREAD_LOAD_LOADED or not timerer.is_stopped():
-		await get_tree().idle_frame
+#		await get_tree().idle_frame
 		#print("Loading DVD ",path," Progress: ", resourceQueued.get_progress(path))
 		#print("Timer is ", "Stopped" if timerer.is_stopped() else "Starting", String(timerer.time_left))
-		LoadingPopup.ManageLoading(LoadingProgressPointers[0], path, ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_LOADED)
+		LoadingPopup.ManageLoading(LoadingProgressPointers[0]*100, path, ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_LOADED)
 #		if resourceQueued.is_ready(path) && timerer.is_stopped():
 #			break
 		if Input.is_action_just_pressed("ui_mouse_left"):
@@ -143,11 +146,12 @@ func interceptFiftConsole(path:String):
 	pass
 
 func postInterception():
-	immediateTween.interpolate_property(dvdLauBg,"modulate",Color(1,1,1,1),Color(1,1,1,0),.3)
+	dvdLauBg.modulate = Color(1,1,1,1)
+	immediateTween.tween_property(dvdLauBg,"modulate",Color(1,1,1,0),.3)
 	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	dvdSelBg.hide()
-	immediateTween.start()
-	await immediateTween.tween_all_completed
+	immediateTween.play()
+#	await immediateTween.finishedd
 	LoadingPopup.DespawnLoading()
 	cenBgLaunch.hide()
 	cenBgLaunch.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -162,7 +166,7 @@ func DoChangeDVDNow():
 	dvdSelBg.hide()
 	dvdSelTr.show()
 	dvdLauBg.hide()
-	immediateTween.start()
+#	immediateTween.start()
 	Singletoner.ResumeGameNow()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#$DVDCartridgeSlot.get_child(0).queue_free() #queue_free() leaves traces and may cause memory leak!
@@ -293,7 +297,7 @@ func _on_DVDCartridgeSlot_NoDisc():
 
 enum DialogReason {Nothing, ResetMe}
 var SelectDialogReason
-var ResetSay = "Reset Factory DIP switch is on! Reset setting?"
+var ResetSay:String = "Reset Factory DIP switch is on! Reset setting?"
 func checkForResetMe():
 	if await Settingers.checkForResetMe():
 		SelectDialogReason = DialogReason.ResetMe
@@ -345,8 +349,8 @@ func _on_ChangeDVDMenu_DVDListRefreshed():
 	pass # Replace with function body.
 
 
-func _on_GCode_done():
-	if not isRunningDVD:
-		print("CheatoCode done")
-		pass
-	pass # Replace with function body.
+# func _on_GCode_done():
+# 	if not isRunningDVD:
+# 		print("CheatoCode done")
+# 		pass
+# 	pass # Replace with function body.

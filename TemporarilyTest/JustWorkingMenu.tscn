@@ -1,300 +1,263 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=3 uid="uid://cwncpq3i0a70l"]
 
-[ext_resource path="res://TemporarilyTest/JustWorkingMenu.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_B_72.tres" type="FontFile" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="FontFile" id=3]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=4]
-[ext_resource path="res://admob-lib/icon.png" type="Texture2D" id=5]
-[ext_resource path="res://Sprites/QuitIcon.png" type="Texture2D" id=6]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=7]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Sprites/GooglePlayIcon.png" type="Texture2D" id=8]
-[ext_resource path="res://icon.png" type="Texture2D" id=9]
-[ext_resource path="res://addons/midi/icon.png" type="Texture2D" id=10]
-[ext_resource path="res://Sprites/ChangeDVDIcon.png" type="Texture2D" id=11]
-[ext_resource path="res://Sprites/PauseIcon.svg.png" type="Texture2D" id=12]
-[ext_resource path="res://Sprites/HexagonEngineSign.png" type="Texture2D" id=13]
-[ext_resource path="res://Inkscape/PostingImage/May_I_Have_One_Please_3.png" type="Texture2D" id=14]
-[ext_resource path="res://Sprites/Umbrella-Icon-Image.png" type="Texture2D" id=15]
-[ext_resource path="res://Inkscape/PostingImage/HeartIcon.png" type="Texture2D" id=16]
-[ext_resource path="res://Sprites/Star64x64.png" type="Texture2D" id=17]
-[ext_resource path="res://fonts/Built/Ubuntu_R_48tred.tres" type="FontFile" id=18]
-[ext_resource path="res://Sprites/HexagonEngineSign_Bekgrond.png" type="Texture2D" id=19]
-[ext_resource path="res://Sprites/MetererBekgron.png" type="Texture2D" id=20]
-[ext_resource path="res://Sprites/ExtrasIcon.png" type="Texture2D" id=21]
-[ext_resource path="res://Sprites/MetererOver.png" type="Texture2D" id=22]
-[ext_resource path="res://Sprites/DisplaySetting.png" type="Texture2D" id=23]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0313726, 0.0117647, 0.478431, 0.27451 )
+[ext_resource type="Script" path="res://TemporarilyTest/JustWorkingMenu.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://drpsbtsxbxayu" path="res://fonts/Built/Ubuntu_B_72.tres" id="2"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_B_48tred.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4sqfbtfve41n" path="res://Sprites/MavrickleIcon.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://3gpci4cev0yl" path="res://admob-lib/icon.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bhkhnhps8035w" path="res://Sprites/QuitIcon.png" id="6"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="7"]
+[ext_resource type="Texture2D" uid="uid://df2geh2j00e4u" path="res://GameDVDCardtridge/ParlorClassic/Sprites/GooglePlayIcon.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cdv7q6ym8dynn" path="res://icon.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cnjpdh6esmk3" path="res://addons/midi/icon.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://j8mgbe1cv3aj" path="res://Sprites/ChangeDVDIcon.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://df5vgorit1p4v" path="res://Sprites/PauseIcon.svg.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://duipyj6h63cq2" path="res://Sprites/HexagonEngineSign.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ck8r72yjppa2u" path="res://Inkscape/PostingImage/May_I_Have_One_Please_3.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://di0w73s8x7dyt" path="res://Sprites/Umbrella-Icon-Image.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://bibajss18j76i" path="res://Inkscape/PostingImage/HeartIcon.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://c6llg67p8qed4" path="res://Sprites/Star64x64.png" id="17"]
+[ext_resource type="FontFile" uid="uid://c1r0yg24w1ks2" path="res://fonts/Built/Ubuntu_R_48tred.tres" id="18"]
+[ext_resource type="Texture2D" uid="uid://csnkbw2gsxr3x" path="res://Sprites/HexagonEngineSign_Bekgrond.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://dtiiw7mrjriey" path="res://Sprites/MetererBekgron.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://dhkvnwcievi8g" path="res://Sprites/ExtrasIcon.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://chl5qqorfgfab" path="res://Sprites/MetererOver.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://dvrffteoqv3h5" path="res://Sprites/DisplaySetting.png" id="23"]
 
 [node name="JustWorkingMenu" type="VBoxContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")
 
 [node name="TitleBar" type="HBoxContainer" parent="."]
-offset_right = 1924.0
-offset_bottom = 82.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="TitleBar"]
-offset_right = 1416.0
-offset_bottom = 82.0
+layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource("2")
 text = "Hexagon DVD Select"
 
 [node name="AccountButton" type="Button" parent="TitleBar"]
-offset_left = 1424.0
-offset_right = 1924.0
-offset_bottom = 82.0
-custom_minimum_size = Vector2( 500, 0 )
-theme_override_fonts/font = ExtResource( 18 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18")
 text = "Nama On it"
-icon = ExtResource( 4 )
+icon = ExtResource("4")
 expand_icon = true
 
 [node name="ItemList" type="ItemList" parent="."]
-offset_top = 90.0
-offset_right = 1924.0
-offset_bottom = 972.0
-tooltip_text = "Select Game"
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_styles/bg = SubResource( 1 )
-items = [ "Template Hexagon", ExtResource( 4 ), false, "AdMobTestoid", ExtResource( 5 ), false, "Parlor, The Family Friendly Shooting Gallery Game", ExtResource( 8 ), false, "BasHeddBoll Prosotipe", ExtResource( 9 ), false, "Yone Arlez MIDI prositipe", ExtResource( 10 ), false, "invalid_item", ExtResource( 14 ), false, "Akselerometer Semangat", ExtResource( 11 ), false, "SplitScrin", ExtResource( 12 ), false, "New Change DVD v3", ExtResource( 13 ), false, "Prosotipe Platformer 3D Miziziz", ExtResource( 15 ), false, "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788", ExtResource( 16 ), false, "An Transitioning like AHiT & SM64", ExtResource( 17 ), false, "Tost Leveling", ExtResource( 19 ), false, "Quine", ExtResource( 20 ), false, "Workaround Loading Bar Function", ExtResource( 22 ), false ]
-fixed_icon_size = Vector2( 128, 128 )
+tooltip_text = "Select Game"
+theme_override_fonts/font = ExtResource("3")
+allow_reselect = true
+item_count = 15
+fixed_icon_size = Vector2i(128, 128)
+item_0/text = "Template Hexagon"
+item_0/icon = ExtResource("4")
+item_1/text = "AdMobTestoid"
+item_1/icon = ExtResource("5")
+item_2/text = "Parlor, The Family Friendly Shooting Gallery Game"
+item_2/icon = ExtResource("8")
+item_3/text = "BasHeddBoll Prosotipe"
+item_3/icon = ExtResource("9")
+item_4/text = "Yone Arlez MIDI prositipe"
+item_4/icon = ExtResource("10")
+item_5/text = "invalid_item"
+item_5/icon = ExtResource("14")
+item_6/text = "Akselerometer Semangat"
+item_6/icon = ExtResource("11")
+item_7/text = "SplitScrin"
+item_7/icon = ExtResource("12")
+item_8/text = "New Change DVD v3"
+item_8/icon = ExtResource("13")
+item_9/text = "Prosotipe Platformer 3D Miziziz"
+item_9/icon = ExtResource("15")
+item_10/text = "Cardiophile Heartbeat Lub Dub Emulator OpenSource version of ShinOn51788"
+item_10/icon = ExtResource("16")
+item_11/text = "An Transitioning like AHiT & SM64"
+item_11/icon = ExtResource("17")
+item_12/text = "Tost Leveling"
+item_12/icon = ExtResource("19")
+item_13/text = "Quine"
+item_13/icon = ExtResource("20")
+item_14/text = "Workaround Loading Bar Function"
+item_14/icon = ExtResource("22")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_top = 980.0
-offset_right = 1924.0
-offset_bottom = 1080.0
-custom_minimum_size = Vector2( 0, 100 )
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
 
 [node name="PowerOffButton" type="Button" parent="HBoxContainer"]
-offset_right = 400.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 400, 0 )
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PowerOffButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-offset_right = 169.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/PowerOffButton/HBoxContainer"]
-offset_left = 177.0
-offset_right = 400.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "Shutdown"
-align = 1
-valign = 1
 
 [node name="LoadMoreDVDsButton" type="Button" parent="HBoxContainer"]
 visible = false
-offset_left = 404.0
-offset_right = 904.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LoadMoreDVDsButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/LoadMoreDVDsButton/HBoxContainer"]
-offset_right = 81.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 21 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("21")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/LoadMoreDVDsButton/HBoxContainer"]
-offset_left = 85.0
-offset_right = 500.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "Load Custom DVD"
-align = 1
-valign = 1
 
 [node name="ImportModPackButton" type="Button" parent="HBoxContainer"]
 visible = false
-offset_left = 404.0
-offset_right = 904.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ImportModPackButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ImportModPackButton/HBoxContainer"]
-offset_right = 121.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 15 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("15")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/ImportModPackButton/HBoxContainer"]
-offset_left = 125.0
-offset_right = 500.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "Import Mod PCK"
-align = 1
-valign = 1
 
 [node name="RefreshDVDbutton" type="Button" parent="HBoxContainer"]
-offset_left = 408.0
-offset_right = 908.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RefreshDVDbutton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
-offset_right = 126.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 11 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("11")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbutton/HBoxContainer"]
-offset_left = 134.0
-offset_right = 500.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "Refresh DVD list"
-align = 1
-valign = 1
 
 [node name="RefreshDVDbuttonClean" type="Button" parent="HBoxContainer"]
-offset_left = 916.0
-offset_right = 1416.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RefreshDVDbuttonClean"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
-offset_right = 182.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 11 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("11")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/RefreshDVDbuttonClean/HBoxContainer"]
-offset_left = 190.0
-offset_right = 500.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "Clean Refresh"
-align = 1
-valign = 1
 
 [node name="ViewVRImage" type="Button" parent="HBoxContainer"]
-offset_left = 1424.0
-offset_right = 1924.0
-offset_bottom = 100.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 tooltip_text = "Terminate Hexagon Engine"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ViewVRImage"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/ViewVRImage/HBoxContainer"]
-offset_right = 159.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 23 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("23")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/ViewVRImage/HBoxContainer"]
-offset_left = 167.0
-offset_right = 500.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource("7")
 text = "View VR Image"
-align = 1
-valign = 1
 
 [connection signal="pressed" from="TitleBar/AccountButton" to="." method="_on_AccountButton_pressed"]
 [connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
-[connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
 [connection signal="pressed" from="HBoxContainer/PowerOffButton" to="." method="_on_PowerOffButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/LoadMoreDVDsButton" to="." method="_on_LoadMoreDVDsButton_pressed"]

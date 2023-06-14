@@ -12,20 +12,20 @@ extends Node
 # TODO in function of those systole and diastoles the heart.
 
 
-@export var SystoleSounds: PackedStringArray
-@export var DiastoleSounds: PackedStringArray
+@export var SystoleSounds: Array
+@export var DiastoleSounds: Array
 
 @export var HeartRate: float = 70
-@onready var Hertz = HeartRate / 60
-@onready var PeriodT = 1/Hertz
-@onready var remainPeriod = PeriodT
-@onready var remainPeriodMillisec = remainPeriod * 1000
+@onready var Hertz:float = HeartRate / 60
+@onready var PeriodT:float = 1/Hertz
+@onready var remainPeriod:float = PeriodT
+@onready var remainPeriodMillisec:float = remainPeriod * 1000
 @export var returnTime: float = .25
-@onready var startReturnTime = returnTime
-@onready var startReturnTimeMillisec = startReturnTime * 1000
+@onready var startReturnTime:float = returnTime
+@onready var startReturnTimeMillisec:float = startReturnTime * 1000
 
-var GlobalTimer = [0,0]
-var CatchGlobalTimer = [0,0]
+var GlobalTimer:PackedFloat64Array = [0,0]
+var CatchGlobalTimer:PackedFloat64Array = [0,0]
 var Lub:bool = false
 var stateIndex:int = 0
 var isBeating = true

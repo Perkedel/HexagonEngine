@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cufgaoeigs7dw"]
+
+[ext_resource type="Shader" uid="uid://ckjd18a84npbc" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass_shaderCode.tres" id="1_xj3t1"]
+
+[resource]
+shader = ExtResource("1_xj3t1")
+shader_parameter/speed = 1.0
+shader_parameter/ignore_rotation = true
+shader_parameter/rotating = true

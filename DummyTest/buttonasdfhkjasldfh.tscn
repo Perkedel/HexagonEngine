@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://e66a0iacaep4"]
+
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_B_16tred.tres" id="1_odlbi"]
+[ext_resource type="Texture2D" uid="uid://b4sqfbtfve41n" path="res://Sprites/MavrickleIcon.png" id="2_qdurw"]
+
+[node name="Buttonasdfasdfgsdfg" type="Button"]
+offset_right = 569.0
+offset_bottom = 182.0
+theme_override_fonts/font = ExtResource("1_odlbi")
+text = "sdfasdfsdgdfaf"
+icon = ExtResource("2_qdurw")

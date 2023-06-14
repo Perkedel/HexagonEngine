@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr68e7f3augti"]
+
+[ext_resource type="Texture2D" uid="uid://5477km2iucu8" path="res://DummyTest/grofuti_atlasTexture.tres" id="1_7ib4c"]
+
+[node name="grofuti" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7ib4c")

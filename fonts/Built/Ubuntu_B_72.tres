@@ -1,11 +1,17 @@
-[gd_resource type="FontFile" load_steps=2 format=2]
+[gd_resource type="FontFile" load_steps=2 format=3 uid="uid://drpsbtsxbxayu"]
 
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" type="FontFile" id=1]
+[ext_resource type="FontFile" uid="uid://bmsas4i35f4x0" path="res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf" id="1"]
 
 [resource]
 resource_local_to_scene = true
 resource_name = "Ubuntu 72 Bold"
-size = 72
-outline_size = 3
-outline_color = Color( 0.0862745, 0.0392157, 0.317647, 1 )
-font_data = ExtResource( 1 )
+fallbacks = Array[Font]([ExtResource("1")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)

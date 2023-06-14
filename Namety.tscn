@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bycbtl1sl8xwf"]
+[gd_scene load_steps=3 format=3 uid="uid://bycbtl1sl8xwf"]
 
 [ext_resource type="Script" path="res://Namety.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b0832dn73om8t" path="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png" id="2"]
-[ext_resource type="PackedScene" uid="uid://dwcww8je6jbfw" path="res://HexagonEngineCore.tscn" id="3"]
 
 [node name="Namety" type="Node"]
 script = ExtResource("1")
-LoadThis = ExtResource("3")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15

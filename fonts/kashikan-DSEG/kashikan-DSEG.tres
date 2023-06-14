@@ -6,7 +6,7 @@
 [resource]
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
-fallbacks = Array[Font]([ExtResource("2"), ExtResource("2"), ExtResource("2")])
+fallbacks = Array[Font]([ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2")])
 face_index = null
 embolden = null
 transform = null

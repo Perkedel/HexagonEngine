@@ -1,0 +1,124 @@
+[gd_resource type="AnimatedTexture" load_steps=39 format=3 uid="uid://dtke8qn12pes4"]
+
+[ext_resource type="Texture2D" uid="uid://cyvkuas3mti0t" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_00.png" id="1_xww7s"]
+[ext_resource type="Texture2D" uid="uid://xpinmi48vgrg" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_01.png" id="2_jc4w5"]
+[ext_resource type="Texture2D" uid="uid://beds2s6rcnlee" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_10.png" id="3_qx6iq"]
+[ext_resource type="Texture2D" uid="uid://cr1cdffgd1tl7" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_11.png" id="4_hr2vr"]
+[ext_resource type="Texture2D" uid="uid://b1vvkyumfrmek" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_12.png" id="5_k4d84"]
+[ext_resource type="Texture2D" uid="uid://rfhtnv0ibnkr" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_13.png" id="6_872d0"]
+[ext_resource type="Texture2D" uid="uid://b0sawu15xh7lw" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_14.png" id="7_57gjo"]
+[ext_resource type="Texture2D" uid="uid://b7gxp6qsvoe4o" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_15.png" id="8_vdo7u"]
+[ext_resource type="Texture2D" uid="uid://dvb6ttceow640" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_16.png" id="9_j0jni"]
+[ext_resource type="Texture2D" uid="uid://iajs1wjub0ba" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_17.png" id="10_ag4e1"]
+[ext_resource type="Texture2D" uid="uid://b51mtso2tqdtq" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_19.png" id="11_a5dgp"]
+[ext_resource type="Texture2D" uid="uid://dmlsv1nvadyme" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_02.png" id="12_p6542"]
+[ext_resource type="Texture2D" uid="uid://c2pw1id7aowmy" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_20.png" id="13_2gcuc"]
+[ext_resource type="Texture2D" uid="uid://bmbmawhb68q85" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_21.png" id="14_rn46u"]
+[ext_resource type="Texture2D" uid="uid://b7hynmewdefrj" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_22.png" id="15_hwy8r"]
+[ext_resource type="Texture2D" uid="uid://ch40b3t8fydux" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_23.png" id="16_xga0i"]
+[ext_resource type="Texture2D" uid="uid://b2f3ra1spesen" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_24.png" id="17_ubpdy"]
+[ext_resource type="Texture2D" uid="uid://btjdrvbvlf8d8" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_25.png" id="18_cehft"]
+[ext_resource type="Texture2D" uid="uid://byqpg6i3j1uhg" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_26.png" id="19_jvo4l"]
+[ext_resource type="Texture2D" uid="uid://kavkvwj4kvw7" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_27.png" id="20_045c3"]
+[ext_resource type="Texture2D" uid="uid://buyby8838a51k" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_28.png" id="21_i0iq0"]
+[ext_resource type="Texture2D" uid="uid://dn3gkknrf5kur" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_29.png" id="22_qak62"]
+[ext_resource type="Texture2D" uid="uid://d0r4npidmgpr4" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_03.png" id="23_agcj5"]
+[ext_resource type="Texture2D" uid="uid://dj86pucrxkchh" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_30.png" id="24_on8xk"]
+[ext_resource type="Texture2D" uid="uid://g2yqm08d3wq6" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_31.png" id="25_811nj"]
+[ext_resource type="Texture2D" uid="uid://byem66wkut7k5" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_32.png" id="26_85016"]
+[ext_resource type="Texture2D" uid="uid://wxtkasnub5un" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_33.png" id="27_nhqyk"]
+[ext_resource type="Texture2D" uid="uid://dyssn8sy4oyvj" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_34.png" id="28_lxmy8"]
+[ext_resource type="Texture2D" uid="uid://cedww0lt45n30" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_35.png" id="29_q02xt"]
+[ext_resource type="Texture2D" uid="uid://drgkuj8nwddna" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_36.png" id="30_q15cl"]
+[ext_resource type="Texture2D" uid="uid://bqsqhj6etew4c" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_37.png" id="31_3lbdu"]
+[ext_resource type="Texture2D" uid="uid://by82i1tgrwn2r" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_38.png" id="32_ox3an"]
+[ext_resource type="Texture2D" uid="uid://b4jrft2pluqog" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_39.png" id="33_ysa5d"]
+[ext_resource type="Texture2D" uid="uid://c0fxpd6x5oqr3" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_04.png" id="34_kpbra"]
+[ext_resource type="Texture2D" uid="uid://bpk01he3nufh" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_05.png" id="35_vuk2o"]
+[ext_resource type="Texture2D" uid="uid://be85quvmvdrtx" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_06.png" id="36_bm47d"]
+[ext_resource type="Texture2D" uid="uid://dyfl22pdte27g" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_07.png" id="37_ex4il"]
+[ext_resource type="Texture2D" uid="uid://wgqnv8o16sf7" path="res://Piskel/Gravity_HourGlass/GravityHourGlass_08.png" id="38_tf77o"]
+
+[resource]
+resource_name = "Gravity HourGlass"
+frames = 40
+speed_scale = 30.0
+frame_0/texture = ExtResource("1_xww7s")
+frame_1/texture = ExtResource("2_jc4w5")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_p6542")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("23_agcj5")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("34_kpbra")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("35_vuk2o")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("36_bm47d")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("37_ex4il")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("38_tf77o")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("3_qx6iq")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("3_qx6iq")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("4_hr2vr")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("5_k4d84")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("6_872d0")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("7_57gjo")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("8_vdo7u")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("9_j0jni")
+frame_16/duration = 1.0
+frame_17/texture = ExtResource("10_ag4e1")
+frame_17/duration = 1.0
+frame_18/texture = ExtResource("11_a5dgp")
+frame_18/duration = 1.0
+frame_19/texture = ExtResource("11_a5dgp")
+frame_19/duration = 1.0
+frame_20/texture = ExtResource("13_2gcuc")
+frame_20/duration = 1.0
+frame_21/texture = ExtResource("14_rn46u")
+frame_21/duration = 1.0
+frame_22/texture = ExtResource("15_hwy8r")
+frame_22/duration = 1.0
+frame_23/texture = ExtResource("16_xga0i")
+frame_23/duration = 1.0
+frame_24/texture = ExtResource("17_ubpdy")
+frame_24/duration = 1.0
+frame_25/texture = ExtResource("18_cehft")
+frame_25/duration = 1.0
+frame_26/texture = ExtResource("19_jvo4l")
+frame_26/duration = 1.0
+frame_27/texture = ExtResource("20_045c3")
+frame_27/duration = 1.0
+frame_28/texture = ExtResource("21_i0iq0")
+frame_28/duration = 1.0
+frame_29/texture = ExtResource("22_qak62")
+frame_29/duration = 1.0
+frame_30/texture = ExtResource("24_on8xk")
+frame_30/duration = 1.0
+frame_31/texture = ExtResource("25_811nj")
+frame_31/duration = 1.0
+frame_32/texture = ExtResource("26_85016")
+frame_32/duration = 1.0
+frame_33/texture = ExtResource("27_nhqyk")
+frame_33/duration = 1.0
+frame_34/texture = ExtResource("28_lxmy8")
+frame_34/duration = 1.0
+frame_35/texture = ExtResource("29_q02xt")
+frame_35/duration = 1.0
+frame_36/texture = ExtResource("30_q15cl")
+frame_36/duration = 1.0
+frame_37/texture = ExtResource("31_3lbdu")
+frame_37/duration = 1.0
+frame_38/texture = ExtResource("32_ox3an")
+frame_38/duration = 1.0
+frame_39/texture = ExtResource("33_ysa5d")
+frame_39/duration = 1.0

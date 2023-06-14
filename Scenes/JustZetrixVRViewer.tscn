@@ -1,45 +1,41 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://egem5djf3tnj"]
 
-[ext_resource path="res://Scenes/JustZetrixVRViewer.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Perkedel Short Typeborder.png" type="Texture2D" id=2]
-[ext_resource path="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav" type="AudioStream" id=3]
-[ext_resource path="res://fonts/Built/Ubuntu_R_18tred.tres" type="FontFile" id=4]
-[ext_resource path="res://Theme/Perkedel_Tema.tres" type="Theme" id=5]
+[ext_resource type="Script" path="res://Scenes/JustZetrixVRViewer.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cmibcwwbqywrr" path="res://Sprites/Perkedel Short Typeborder.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://8k32g26nve60" path="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav" id="3"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_R_18tred.tres" id="4"]
+[ext_resource type="Theme" uid="uid://4g7pi1nwsoji" path="res://Theme/Perkedel_Tema.tres" id="5"]
 
 [node name="JustZetrixVRViewer" type="Window"]
-visible = true
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -570.5
-offset_top = -316.5
-offset_right = 570.5
-offset_bottom = 316.5
-theme = ExtResource( 5 )
-window_title = "Zetrix View"
-resizable = true
-script = ExtResource( 1 )
+title = "Zetrix"
+position = Vector2i(100, 100)
+size = Vector2i(1280, 720)
+popup_window = true
+theme = ExtResource("5")
+script = ExtResource("1")
 
 [node name="ZetrixTextureResult" type="TextureRect" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
 flip_v = true
 
 [node name="ZetrixMonitorSpeaker" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 
 [node name="ZetrixCheatCode" type="LineEdit" parent="."]
 visible = false
+anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 29.0
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource( 4 )
+theme_override_fonts/font = ExtResource("4")
 text = "Type \"ri\" and press Enter to complete \"Tari\" as in Van Elektronische Tari (Meta Runner)."
 
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
 [connection signal="text_submitted" from="ZetrixCheatCode" to="." method="_on_ZetrixCheatCode_text_entered"]

@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/LoadingPopup.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://2inhr4yab0i7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GravityHourGlass.tscn" id="2"]
-[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_B_72.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://drpsbtsxbxayu" path="res://fonts/Built/Ubuntu_B_72.tres" id="3"]
 [ext_resource type="Theme" uid="uid://4g7pi1nwsoji" path="res://Theme/Perkedel_Tema.tres" id="4"]
 
 [node name="LoadingPopup" type="Popup"]
+title = "Loading..."
 size = Vector2i(1920, 200)
 visible = true
 exclusive = true
+always_on_top = true
+transparent = true
+mouse_passthrough = true
 theme = ExtResource("4")
 script = ExtResource("1")
 ProgressWording = "Loading Wordings"

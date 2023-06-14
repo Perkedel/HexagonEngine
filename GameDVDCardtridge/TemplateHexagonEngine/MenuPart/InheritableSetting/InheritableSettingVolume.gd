@@ -5,18 +5,18 @@ extends HBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-@export (float, -80, 24) var VolumeLevel = 0
-@export (String) var UnitName = "dB"
-@export (float) var VolumeMin = -80
-@export (float) var VolumeMax = 24
-@export (String) var VariableName = "Volume"
-@export (bool) var InitiativelyControlVolumeBus = false
-@export (bool) var EmitVolumeSignal = true
-@export (bool) var EmitSliderReleased = true
-@export (bool) var PlayTestoidFile = false
-@export (String) var VolumeBus = "Dummy"
-@export (AudioStream) var TestoidAudio
-@export (float, 0.01, 32) var TestoidPitch = 1
+@export var VolumeLevel:float = 0 # float, -80, 24
+@export var UnitName:String = "dB"
+@export var VolumeMin:float = -80
+@export var VolumeMax:float = 24
+@export var VariableName:String = "Volume"
+@export var InitiativelyControlVolumeBus:bool = false
+@export var EmitVolumeSignal:bool = true
+@export var EmitSliderReleased:bool = true
+@export var PlayTestoidFile:bool = false
+@export var VolumeBus:String = "Dummy"
+@export var TestoidAudio:AudioStream
+@export var TestoidPitch:float = 1 # float, 0.01, 32
 
 var VolumeHasLoaded = false
 
@@ -40,12 +40,12 @@ func _ready():
 func _process(delta):
 	
 	$LabelContainer/Label.text = VariableName
-	$LabelContainer/LabelValue.text = String($HBoxContainer/HSlider.value) + " " + String(UnitName)
+	$LabelContainer/LabelValue.text = String.num($HBoxContainer/HSlider.value) + " " + String(UnitName)
 	pass
 
 func SetVolume(value : float) -> void:
 	$HBoxContainer/HSlider.value = value
-	print("Slider: " + String(value))
+	print("Slider: " + String.num(value))
 	pass
 
 # https://godotengine.org/qa/60870/how-do-i-change-datatype-of-a-signal-using-gdscript
