@@ -35,7 +35,8 @@ var interaction_away = true
 signal on_interact_changed(newInteractable) 
 
 func _ready():
-	anim.get_animation("walk").set_loop(true)
+#	anim.get_animation("walk").set_loop(true)
+	anim.get_animation("walk").set_loop_mode(Animation.LOOP_LINEAR)
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):

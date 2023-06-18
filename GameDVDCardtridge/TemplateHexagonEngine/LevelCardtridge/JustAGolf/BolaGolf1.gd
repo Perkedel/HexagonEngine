@@ -1,27 +1,27 @@
 extends RigidBody3D
 
-@onready var puttPower = 0.0
-@onready var isPullingPutt = false
-@onready var pullRelativeScreenPos = Vector2.ZERO
-@onready var pushRotation = 0
-@onready var amIwalking = false
-@export (Material) var PowerMeterRelax = load("res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterRelax.tres")
-@export (Material) var PowerMeterStress = load("res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterStress.tres")
-@export (AudioStream) var PuttSound = load("res://Audio/EfekSuara/425728__moogy73__click01.wav")
-@onready var virtualCountdownCompensate = 1
+@onready var puttPower:float = 0.0
+@onready var isPullingPutt:bool = false
+@onready var pullRelativeScreenPos:Vector2 = Vector2.ZERO
+@onready var pushRotation:int = 0
+@onready var amIwalking:float = false
+@export var PowerMeterRelax:Material = load("res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterRelax.tres")
+@export var PowerMeterStress:Material = load("res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/PowerMeterStress.tres")
+@export var PuttSound:AudioStream = load("res://Audio/EfekSuara/425728__moogy73__click01.wav")
+@onready var virtualCountdownCompensate:float = 1
 var virtualTimer = 1
 
 # interactable
-@export var is_ride = false
-@export var being_rode = false
+@export var is_ride:bool = false
+@export var being_rode:bool = false
 var activated : bool = true
-@export var do_prerequisite = false
-var prerequisite_done = false
+@export var do_prerequisite:bool = false
+var prerequisite_done:bool = false
 @export var prerequisite_interact: NodePath
 var prereq_watch: Node
-@export var is_toggle = true
-@export var is_goal = false
-var has_Interacted = false
+@export var is_toggle:bool = true
+@export var is_goal:bool = false
+var has_Interacted:bool = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

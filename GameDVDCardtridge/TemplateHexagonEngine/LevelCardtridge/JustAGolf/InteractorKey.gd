@@ -2,16 +2,16 @@ extends Area3D
 
 @onready var ortu = get_parent()
 # interactable
-@export var is_ride = false
-@export var being_rode = false
+@export var is_ride:bool = false
+@export var being_rode:bool = false
 var activated : bool = true
-@export var do_prerequisite = false
-var prerequisite_done = false
+@export var do_prerequisite:bool = false
+var prerequisite_done:bool = false
 @export var prerequisite_interact: NodePath
 var prereq_watch: Node
-@export var is_toggle = true
-@export var is_goal = false
-var has_Interacted = false
+@export var is_toggle:bool = true
+@export var is_goal:bool = false
+var has_Interacted:bool = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

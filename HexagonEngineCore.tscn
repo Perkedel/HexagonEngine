@@ -57,7 +57,6 @@ stretch_mode = 6
 visible = false
 
 [node name="AreYouSureDialog" parent="MetaMenu" instance=ExtResource("5")]
-visible = false
 
 [node name="JustZetrixVRViewer" parent="MetaMenu" instance=ExtResource("7")]
 visible = false
