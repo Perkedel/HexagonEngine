@@ -1,26 +1,38 @@
 extends CharacterBody3D
 class_name HeroicPlayer
 
-var MOVE_SPEED = 12
-const JUMP_FORCE = 100
-const GRAVITY = 0.98
-const MAX_FALL_SPEED = 30
+var MOVE_SPEED:float = 12
+const JUMP_FORCE:float = 30
+const GRAVITY:float = 0.98
+const MAX_FALL_SPEED:float = 30
 
-const H_LOOK_SENS = 1.0
-const V_LOOK_SENS = 1.0
+const H_LOOK_SENS:float = 1.0
+const V_LOOK_SENS:float = 1.0
 
 @onready var cam = $HoldRigKamera
-@onready var anim = $Graphics/AnimationPlayer
+@onready var anim = $polycat/AnimationPlayer
+@onready var jumpBufferMaxTime = $JumpBufferMaxTime
 
-var y_velo = 0
+var y_velo:float = 0
 
 # Artindi's Special Coyote Time
-var shouldCoyoteJump = false
-var jumpJustPressed = false
-@export var howLongCoyoteTime = .5
-@export var howLongStickyLoncatButton = .1
+var shouldCoyoteJump:bool = false
+var jumpJustPressed:bool = false
+var haveToBufferWaitJump:bool = false
+@export var disableCoyoteTime:bool = false # for challenge mode
+@export var howLongCoyoteTime:float = .5
+@export var howLongStickyLoncatButton:float = .1
+
+# who was this guy's jump buffer?
+@export var disableJumpBuffer:bool = false # for challenge mode
+@export var howLongJumpBufferWaitGround:float = .5
+# Jump Buffer wait is when you press jump before grounding & out of token.
+# when that happen, event must wait for ground for certain time. if finally ground & token back
+# jump, otherwise drop all jump event.
+# pls sauce I forgot who was that Valet game!!!
 
 # JOELwindows7 Special Double Jump Signature
+@export var disableExtraJump:bool = false # for challenge mode
 var extraJumpTokenInit = 1
 var JumpTokenRightNow = 1
 var shouldUseExtraJumpToken = false
@@ -67,7 +79,7 @@ func _input(event):
 #				is_riding = !is_riding
 #				interaction_target.interaction_rideable(self,is_riding)
 		pass
-	if Input.is_key_pressed(KEY_E):
+	if Input.is_action_just_pressed("Valve_Interaksi"):
 		if interaction_target != null:
 			if (interaction_target.has_method("interaction_rideable")):
 				if is_riding: 
@@ -105,18 +117,24 @@ func _physics_process(delta):
 		
 		y_velo -= GRAVITY
 		
-		if Input.is_action_just_pressed("Loncat") or Input.is_action_just_pressed("Keyboard_Space"):
+		if Input.is_action_just_pressed("Melompat"):
 			jumpJustPressed = true
 			rememberJumpTime()
-			if shouldCoyoteJump:
+			if shouldCoyoteJump and not disableCoyoteTime:
 				just_jumped = true
 				y_velo = JUMP_FORCE
 				pass
-			if shouldUseExtraJumpToken and JumpTokenRightNow > 0:
-				just_jumped = true
-				y_velo = JUMP_FORCE
-				JumpTokenRightNow -= 1
-				pass
+			if shouldUseExtraJumpToken :
+				if JumpTokenRightNow > 0 and not disableExtraJump:
+					just_jumped = true
+					y_velo = JUMP_FORCE
+					JumpTokenRightNow -= 1
+					pass
+				else:
+					# jump token ran out, buffer wait!
+					haveToBufferWaitJump = true if not disableJumpBuffer else false
+					jumpBufferMaxTime.start(howLongJumpBufferWaitGround)
+					pass
 			pass
 	else:
 		if interaction_target:
@@ -131,7 +149,7 @@ func _physics_process(delta):
 	
 
 	
-	if Input.is_action_just_pressed("Pindai"):
+	if Input.is_action_just_pressed("interaksi_Kiri"):
 		if interaction_target != null:
 			if (interaction_target.has_method("interaction_interact")):
 				interaction_target.interaction_interact(self)
@@ -147,14 +165,19 @@ func _physics_process(delta):
 				
 	# edit grounde
 	if grounded:
-		shouldCoyoteJump = true
+		shouldCoyoteJump = true if not disableCoyoteTime else false
 		shouldUseExtraJumpToken = false
 		resetJumpToken()
-		if jumpJustPressed:
+		if jumpJustPressed or haveToBufferWaitJump:
+			# now either jump press or there is active out of token jump buffer
 			just_jumped = true
 			y_velo = JUMP_FORCE
 			# shouldUseExtraJumpToken = true
 			pass
+#		if haveToBufferWaitJump:
+#			play_anim("jump")
+		haveToBufferWaitJump = false
+		jumpBufferMaxTime.stop()
 		pass
 	if !grounded:
 		#shouldUseExtraJumpToken = true
@@ -187,6 +210,9 @@ func _physics_process(delta):
 			play_anim("idle")
 		else:
 			play_anim("walk")
+		
+		if haveToBufferWaitJump:
+			play_anim("jump")
 
 func play_anim(name):
 	if anim.current_animation == name:
@@ -202,7 +228,7 @@ func coyoteTime():
 
 func rememberJumpTime():
 	await get_tree().create_timer(howLongStickyLoncatButton).timeout
-	print('Remembered Jump Time')
+#	print('Remembered Jump Time')
 	jumpJustPressed = false
 	shouldUseExtraJumpToken = true
 	pass
@@ -264,4 +290,10 @@ func _on_Handteract_area_exited(area):
 	if (area == interaction_target) and not is_riding:
 		interaction_target = null
 		emit_signal("on_interactable_changed", null)
+	pass # Replace with function body.
+
+
+func _on_jump_buffer_max_time_timeout() -> void:
+	# when jump buffer times out, drop all jump
+	haveToBufferWaitJump = false
 	pass # Replace with function body.

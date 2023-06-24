@@ -3,9 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c0j4j81gv75fi" path="res://GameDVDCardtridge/ManOfCoyote/ProsotipePlatformerGuy.tscn" id="1"]
 [ext_resource type="Script" path="res://GameDVDCardtridge/ManOfCoyote/Mostifilend.gd" id="2"]
 [ext_resource type="PackedScene" path="res://GameDVDCardtridge/ManOfCoyote/JatuhAAA.tscn" id="3"]
+[ext_resource type="BoxMesh" uid="uid://dqi1o048823t4" path="res://GameDVDCardtridge/ManOfCoyote/Kubus_Mostifilend_Mesh.tres" id="3_k7rgj"]
 [ext_resource type="PackedScene" uid="uid://b3oi7fdrhr705" path="res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/JustAGolf/BolaGolf1.tscn" id="4"]
-
-[sub_resource type="BoxMesh" id="1"]
 
 [sub_resource type="ConcavePolygonShape3D" id="3"]
 data = PackedVector3Array(-1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1)
@@ -20,7 +19,7 @@ transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -
 
 [node name="Kubus" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 0, -2, 0)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus"]
 
@@ -29,7 +28,7 @@ shape = SubResource("3")
 
 [node name="Kubus2" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -14, -1.61288, -12)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus2"]
 
@@ -38,7 +37,7 @@ shape = SubResource("3")
 
 [node name="Kubus5" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -11.8649, -1.82445, -0.553902)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus5"]
 
@@ -47,7 +46,7 @@ shape = SubResource("3")
 
 [node name="Kubus11" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -2.82445, 6.93688)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus11"]
 
@@ -56,7 +55,7 @@ shape = SubResource("3")
 
 [node name="Kubus12" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -12.8649, -1.9088, 6.93688)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus12"]
 
@@ -65,7 +64,7 @@ shape = SubResource("3")
 
 [node name="Kubus13" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -1.9088, 24.9369)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus13"]
 
@@ -74,7 +73,7 @@ shape = SubResource("3")
 
 [node name="Kubus15" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -38.8649, -1.9088, 6.93688)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus15"]
 
@@ -83,7 +82,7 @@ shape = SubResource("3")
 
 [node name="Kubus14" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -25.8649, -1.9088, -11.0631)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus14"]
 
@@ -92,7 +91,7 @@ shape = SubResource("3")
 
 [node name="Kubus3" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 12.4385, -0.612878, -17.2805)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus3"]
 
@@ -101,7 +100,7 @@ shape = SubResource("3")
 
 [node name="Kubus6" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 12.4385, 1.6411, 0.700134)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus6"]
 
@@ -110,7 +109,7 @@ shape = SubResource("3")
 
 [node name="Kubus7" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 24.4101, 3.85118, 13.2719)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus7"]
 
@@ -119,7 +118,7 @@ shape = SubResource("3")
 
 [node name="Kubus8" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 27.1888, 6.03137, 25.2404)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus8"]
 
@@ -128,7 +127,7 @@ shape = SubResource("3")
 
 [node name="Kubus9" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 26.2461, 8.58829, 35.6401)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus9"]
 
@@ -137,7 +136,7 @@ shape = SubResource("3")
 
 [node name="Kubus10" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, 11.4733, 11.4579, 33.465)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus10"]
 
@@ -146,7 +145,7 @@ shape = SubResource("3")
 
 [node name="Kubus4" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.7, 0, 0, 0, 1, 0, 0, 0, 9.3, -1.04243, -1.33101, -17.3003)
-mesh = SubResource("1")
+mesh = ExtResource("3_k7rgj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kubus4"]
 

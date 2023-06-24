@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0j4j81gv75fi"]
 
-[ext_resource type="PackedScene" uid="uid://drtw2vgiec6l1" path="res://GameDVDCardtridge/ManOfCoyote/polycat.dae" id="1"]
 [ext_resource type="Script" path="res://GameDVDCardtridge/ManOfCoyote/ProsotipePlatformerGuy.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cg16yqx21y3qe" path="res://GameDVDCardtridge/ManOfCoyote/polycat_fixed_rig.tscn" id="2_7do6n"]
 [ext_resource type="Script" path="res://GameDVDCardtridge/ManOfCoyote/Handteract.gd" id="3"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.213028
-height = 0.426055
+height = 1.5
 
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(0.25, 0.25, 0.25)
@@ -16,11 +16,11 @@ script = ExtResource("2")
 interaction_parent = NodePath(".")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 shape = SubResource("1")
 
-[node name="Graphics" parent="." instance=ExtResource("1")]
-transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0)
+[node name="polycat" parent="." instance=ExtResource("2_7do6n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Handteract" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -1)
@@ -30,12 +30,18 @@ script = ExtResource("3")
 shape = SubResource("2")
 
 [node name="HoldRigKamera" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+spring_length = 3.0
 
 [node name="Kamera" type="Camera3D" parent="HoldRigKamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 current = true
 
+[node name="JumpBufferMaxTime" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="area_entered" from="Handteract" to="." method="_on_Handteract_area_entered"]
 [connection signal="area_exited" from="Handteract" to="." method="_on_Handteract_area_exited"]
 [connection signal="body_entered" from="Handteract" to="." method="_on_Handteract_body_entered"]
 [connection signal="body_exited" from="Handteract" to="." method="_on_Handteract_body_exited"]
+[connection signal="timeout" from="JumpBufferMaxTime" to="." method="_on_jump_buffer_max_time_timeout"]

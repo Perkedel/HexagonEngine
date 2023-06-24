@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg16yqx21y3qe"]
+
+[ext_resource type="PackedScene" uid="uid://drtw2vgiec6l1" path="res://GameDVDCardtridge/ManOfCoyote/polycat.dae" id="1_a4v8i"]
+
+[node name="polycat" instance=ExtResource("1_a4v8i")]
+
+[node name="Cone" parent="Armature/Skeleton3D" index="0"]
+skeleton = NodePath("..")
