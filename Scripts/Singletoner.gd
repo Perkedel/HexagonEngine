@@ -10,12 +10,30 @@ var andScronchMe
 # var b = "text"
 @export var daLoadedDVD:Node
 @export var mainNode:Node
+@export var dvdNode:Node
 
 # Singleton. Ahlinya Intinya inti, Core of the core. 
 
 # Set main Node. Therefore softwares can refer through this singletoner if they want to call Hexagon Engine Core stuffs
 func iAmTheMainNode(theThing:Node):
 	mainNode = theThing
+	pass
+
+func thisIsDvdNode(theThing:Node):
+	dvdNode =  theThing
+	pass
+
+func unloadDVDNode():
+	dvdNode = null
+	pass
+
+# Press a Menu on a DVD
+func pressAMenuButton(whichIs:String,Argument:String):
+	if dvdNode:
+		if dvdNode.has_method('pressAMenuButton'):
+			dvdNode.pressAMenuButton(whichIs,Argument)
+			pass
+		pass
 	pass
 
 # Called when the node enters the scene tree for the first time.
@@ -34,18 +52,26 @@ func assignLoadedDVD(thisThingRightHere:Node):
 	daLoadedDVD = thisThingRightHere
 
 func changeDVD():
-	if daLoadedDVD:
-		if daLoadedDVD.has_signal("ChangeDVD_Exec"):
-			daLoadedDVD.emit_signal("ChangeDVD_Exec")
-			pass
-		pass
+#	if daLoadedDVD:
+#		if daLoadedDVD.has_signal("ChangeDVD_Exec"):
+#			daLoadedDVD.emit_signal("ChangeDVD_Exec")
+#			pass
+#		pass
+	
+	pass
 
 func shutdownNowDVD():
-	if daLoadedDVD:
-		if daLoadedDVD.has_signal("Shutdown_Exec"):
-			daLoadedDVD.emit_signal("Shutdown_Exec")
-			pass
-		pass
+#	if daLoadedDVD:
+#		if daLoadedDVD.has_signal("Shutdown_Exec"):
+#			daLoadedDVD.emit_signal("Shutdown_Exec")
+#			pass
+#		pass
+	
+	Nonaktifkan_Sistem()
+	pass
+
+func shutdownNow():
+	shutdownNowDVD()
 
 func Nonaktifkan_Sistem():
 	#AutoSpeaker.stream = preload("res://GameDVDCardtridge/GeogonPolymetryHaventDoneYetSalvage/Audio/Explosion bin cropped.wav")
@@ -111,13 +137,19 @@ func _BiosLoaded(scene):
 	pass
 
 func _notification(what: int) -> void:
-	if NOTIFICATION_WM_GO_BACK_REQUEST:
-		# PECKING FINALLY BACK BUTTON!!!
-		if activateBackButton:
-#			var a = InputEventAction.new()
-#			a.action = "ui_cancel"
-#			a.button_pressed = true
-#			Input.parse_input_event(a)
+	match(what):
+		NOTIFICATION_WM_GO_BACK_REQUEST:
+			# PECKING FINALLY BACK BUTTON!!!
+			if activateBackButton:
+#				var a = InputEventAction.new()
+#				a.action = "ui_cancel"
+#				a.button_pressed = true
+#				Input.parse_input_event(a)
+				pass
 			pass
-		pass
+		NOTIFICATION_WM_CLOSE_REQUEST:
+			# Press Close
+			pass
+		_:
+			pass
 	pass

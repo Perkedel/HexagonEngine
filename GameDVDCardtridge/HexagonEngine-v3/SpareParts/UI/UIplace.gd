@@ -1,16 +1,21 @@
 extends Control
 
-@onready var PauseMainMenuNode = $PauseMainMenu
+@onready var PauseMainMenuNode = $PauseMainMenu # Main Menu Pause combo
 @onready var GameplayHUDMenuNode = $GameplayHUDMenu
-@onready var JustPauseMenuNode = $JustPauseMenu
+@onready var JustPauseMenuNode = $JustPauseMenu # Dedicated Pause menu (not used in most Perkedel apps)
 @onready var AreYouSureDialog = $SystemDialogues/AreYouSureDialog
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 signal doChangeDVD
 signal doShutdown
+signal doPressPlay
+signal doPressSetting
+signal doPressExtras
+signal doPressExit
 enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3}
 @export var DialogSelectAction: DialogConfirmsFor
+@export var StartFromWhere:String = 'MainMenu'
 
 func preloadPauseMainMenu(scened:PackedScene):
 	PauseMainMenuNode.add_child(scened.instantiate())
@@ -26,13 +31,25 @@ func preloadJustPauseMenu(scened:PackedScene):
 
 func backToMainMenu():
 	PauseMainMenuNode.show()
-	PauseMainMenuNode.get_child(0).preAnimate()
+#	PauseMainMenuNode.get_child(0).preAnimate()
 	GameplayHUDMenuNode.hide()
+	JustPauseMenuNode.hide()
+	pass
+
+func resumeTheGame():
+	PauseMainMenuNode.hide()
+	GameplayHUDMenuNode.show()
 	JustPauseMenuNode.hide()
 	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	match(StartFromWhere):
+		'MainMenu':
+			backToMainMenu()
+			pass
+		_:
+			pass
 	pass # Replace with function body.
 
 
@@ -45,3 +62,27 @@ func _on_ChangeDVD_do():
 
 func _on_Shutdown_do():
 	emit_signal("doShutdown")
+
+func changePauseMainMenuNavigator(to:int = 0):
+	#print('chagnene')
+	if PauseMainMenuNode.get_child(0):
+		#print('adsfreg#')
+		if PauseMainMenuNode.get_child(0).has_method("changeNavigator"):
+			print('afsderg')
+			#[as] pass
+			PauseMainMenuNode.get_child(0).changeNavigator(to)
+			pass
+		pass
+	pass
+
+func _notification(what: int) -> void:
+	if visible:
+		match(what):
+			NOTIFICATION_WM_CLOSE_REQUEST:
+				#pause game &
+				changePauseMainMenuNavigator(1)
+				pass
+			_:
+				pass
+		pass
+	pass

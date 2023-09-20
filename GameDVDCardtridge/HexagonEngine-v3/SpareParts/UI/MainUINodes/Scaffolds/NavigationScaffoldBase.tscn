@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://7hgp6bwk1jaa"]
+
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/NavigationScaffoldBase.gd" id="1_bvxsx"]
+
+[node name="NavigationScaffoldBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvxsx")
+
+[node name="ThisScaffold" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NextScaffold" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,7 +1,7 @@
 extends VBoxContainer
 
-@export (String) var EversionNumber = "v1.0 Prototype"
-@export (String) var IntroText = "AdMobber Testio v1.0\nPrototype For Business Demonstration: Advertisement that compensate you for being annoying!."
+@export var EversionNumber:String = "v1.0 Prototype"
+@export var IntroText:String = "AdMobber Testio v1.0\nPrototype For Business Demonstration: Advertisement that compensate you for being annoying!."
 enum StatusLED {LED_OFF, LED_OK, LED_FAILED}
 # Declare member variables here. Examples:
 # var a = 2

@@ -1,13 +1,13 @@
 extends HBoxContainer
 
-@export (String) var VariableName = "Test Music"
-@export (AudioStream) var SongFile
-@export (bool) var isItPlaying = false
-@export (String) var PressToPlayName = "Press to Play"
-@export (String) var PressToStopName = "Press to Stop"
-@export (String) var PlayButtonLabelRightNow
-@export (Texture2D) var PlayIcon
-@export (Texture2D) var StopIcon
+@export var VariableName:String = "Test Music"
+@export var SongFile:AudioStream
+@export var isItPlaying:bool = false
+@export var PressToPlayName:String = "Press to Play"
+@export var PressToStopName:String = "Press to Stop"
+@export var PlayButtonLabelRightNow:String
+@export var PlayIcon:Texture2D
+@export var StopIcon:Texture2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -39,7 +39,7 @@ func PauseSong():
 func _process(delta):
 	isItPlaying = $MusicPlayer.is_playing()
 	$Label.text = VariableName
-	$HBoxContainer/PlayButton.text = "SONG PLAY= " + String(isItPlaying) + ", " + PlayButtonLabelRightNow
+	$HBoxContainer/PlayButton.text = "SONG PLAY= " + 'true' if isItPlaying else 'false' + ", " + PlayButtonLabelRightNow
 	if isItPlaying:
 		$HBoxContainer/PlayIcon.texture = StopIcon
 		pass

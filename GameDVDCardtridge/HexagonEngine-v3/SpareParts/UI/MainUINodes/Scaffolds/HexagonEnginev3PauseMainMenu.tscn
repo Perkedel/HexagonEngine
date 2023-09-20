@@ -1,92 +1,223 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=17 format=3 uid="uid://bbwivv62qkoec"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_72tred.tres" type="FontFile" id=1]
-[ext_resource path="res://Sprites/HexagonEngineSymbolVeryLarge.png" type="Texture2D" id=2]
-[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd" type="Script" id=3]
-[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_72tred.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://bkp623xudvlls" path="res://Sprites/HexagonEngineSymbolVeryLarge.png" id="2"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://b7n2s0q7rd6ea" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://blrpuck0kn6re" path="res://Sprites/PlayIcon.png" id="5_bp5m0"]
+[ext_resource type="Texture2D" uid="uid://bsfd3aie5g54s" path="res://Sprites/SettingIcon.png" id="6_b4210"]
+[ext_resource type="Texture2D" uid="uid://dhkvnwcievi8g" path="res://Sprites/ExtrasIcon.png" id="7_yymqe"]
+[ext_resource type="Texture2D" uid="uid://bhkhnhps8035w" path="res://Sprites/QuitIcon.png" id="8_e4gv8"]
+[ext_resource type="PackedScene" uid="uid://c74bpef5bbhg8" path="res://modules/Reusables/SuperLabel.tscn" id="9_xklkq"]
+[ext_resource type="FontFile" uid="uid://c6jj1mnc7clxw" path="res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf" id="10_8hf13"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_3186i"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_3pbfh"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_3q1ek"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_yosh4"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vxgr6"]
+
+[sub_resource type="FontFile" id="FontFile_tkknp"]
+resource_local_to_scene = true
+resource_name = "SuperLabel"
+fallbacks = Array[Font]([ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13"), ExtResource("10_8hf13")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/72/0 = Vector2(0, 0)
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/72/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/72/0/kerning_overrides/72/0 = Vector2(0, 0)
 
 [node name="HexagonEnginev3PauseMainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
 
 [node name="KonMenu" type="VBoxContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TitleHeader" type="HBoxContainer" parent="KonMenu"]
-offset_right = 1920.0
-offset_bottom = 125.0
+layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="KonMenu/TitleHeader"]
-offset_right = 200.0
-offset_bottom = 125.0
-custom_minimum_size = Vector2( 200, 125 )
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+custom_minimum_size = Vector2(200, 125)
+layout_mode = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Title" type="Label" parent="KonMenu/TitleHeader"]
-offset_left = 204.0
-offset_right = 1920.0
-offset_bottom = 125.0
-custom_minimum_size = Vector2( 0, 125 )
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 78
 text = "Hexagon Engine"
-valign = 1
 
 [node name="Spacing" type="Control" parent="KonMenu"]
-offset_top = 129.0
-offset_right = 1920.0
-offset_bottom = 826.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MenuNavigation" type="Control" parent="KonMenu"]
-offset_top = 830.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-custom_minimum_size = Vector2( 0, 250 )
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="KonMenu/MenuNavigation"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 follow_focus = true
-scroll_vertical_enabled = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="GridContainer" type="GridContainer" parent="KonMenu/MenuNavigation/ScrollContainer"]
-offset_right = 1920.0
-offset_bottom = 250.0
+[node name="MenuContains" type="HBoxContainer" parent="KonMenu/MenuNavigation/ScrollContainer"]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/GridContainer" instance=ExtResource( 4 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 500.0
-offset_bottom = 250.0
-custom_minimum_size = Vector2( 500, 0 )
-MenuName = "MenuButton add"
+[node name="Play" parent="KonMenu/MenuNavigation/ScrollContainer/MenuContains" instance=ExtResource("4")]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_3186i")
+MenuIcons = ExtResource("5_bp5m0")
+MenuName = "Play"
+CommandName = "Play"
+ChooseOrientation = 2
+minHoriSize = 500.0
+fontSizer = 72
+
+[node name="Option" parent="KonMenu/MenuNavigation/ScrollContainer/MenuContains" instance=ExtResource("4")]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_3pbfh")
+MenuIcons = ExtResource("6_b4210")
+MenuName = "Option"
+CommandName = "Option"
 ChooseOrientation = 2
 minHoriSize = 500.0
 
+[node name="Extras" parent="KonMenu/MenuNavigation/ScrollContainer/MenuContains" instance=ExtResource("4")]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_3q1ek")
+MenuIcons = ExtResource("7_yymqe")
+MenuName = "Extras"
+CommandName = "Extras"
+ChooseOrientation = 2
+minHoriSize = 500.0
+
+[node name="Exit" parent="KonMenu/MenuNavigation/ScrollContainer/MenuContains" instance=ExtResource("4")]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_yosh4")
+MenuIcons = ExtResource("8_e4gv8")
+MenuName = "Exit"
+CommandName = "Exit"
+ChooseOrientation = 2
+minHoriSize = 500.0
+
+[node name="MenuButton" parent="KonMenu/MenuNavigation/ScrollContainer/MenuContains" instance=ExtResource("4")]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vxgr6")
+MenuName = "MenuButton add"
+CommandName = "menuButton"
+ChooseOrientation = 2
+minHoriSize = 500.0
+
+[node name="ConfirmationDialog" type="ScrollContainer" parent="KonMenu/MenuNavigation"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+
+[node name="ConfirmationContains" type="HBoxContainer" parent="KonMenu/MenuNavigation/ConfirmationDialog"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SuperLabel" parent="KonMenu/MenuNavigation/ConfirmationDialog/ConfirmationContains" instance=ExtResource("9_xklkq")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("FontFile_tkknp")
+theme_override_font_sizes/font_size = 72
+text = "Are you Sure to Quit?"
+sized = 72.0
+
+[node name="ChangeDVD" parent="KonMenu/MenuNavigation/ConfirmationDialog/ConfirmationContains" instance=ExtResource("4")]
+layout_mode = 2
+MenuName = "ChangeDVD"
+CommandName = "ChangeDVD"
+
+[node name="Shutdown" parent="KonMenu/MenuNavigation/ConfirmationDialog/ConfirmationContains" instance=ExtResource("4")]
+layout_mode = 2
+MenuName = "Shutdown"
+CommandName = "Shutdown"
+
+[node name="Cancel" parent="KonMenu/MenuNavigation/ConfirmationDialog/ConfirmationContains" instance=ExtResource("4")]
+layout_mode = 2
+MenuName = "Cancel"
+CommandName = "CancelQuit"
+
 [node name="aTween" type="Tween" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+script = null
 
 [node name="NextScaffold" type="Control" parent="."]
+visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,53 +1,54 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://djvolsvxm7mhu"]
 
-[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIplace.gd" type="Script" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIplace.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://yf6vc0jnw4l0" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.tscn" id="2"]
 
 [node name="UIplace" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")
 
 [node name="PauseMainMenu" type="Control" parent="."]
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GameplayHUDMenu" type="Control" parent="."]
 visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="JustPauseMenu" type="Control" parent="."]
 visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SettingMenu" type="Control" parent="."]
 visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="SystemDialogues" type="Control" parent="."]
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="AreYouSureDialog" parent="SystemDialogues" instance=ExtResource( 2 )]
+[node name="AreYouSureDialog" parent="SystemDialogues" instance=ExtResource("2")]
 
 [node name="NextScaffold" type="Control" parent="."]
 visible = false
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0

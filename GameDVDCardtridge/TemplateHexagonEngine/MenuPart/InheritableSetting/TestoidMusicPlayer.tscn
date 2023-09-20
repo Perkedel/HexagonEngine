@@ -1,61 +1,55 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dyloq24bxi0eo"]
 
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidMusicPlayer.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=2]
-[ext_resource path="res://Audio/Musik/Floaters.wav" type="AudioStream" id=3]
-[ext_resource path="res://Sprites/PlayIcon.png" type="Texture2D" id=4]
-[ext_resource path="res://Sprites/StopIcon.png" type="Texture2D" id=5]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/TestoidMusicPlayer.gd" id="1"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="2"]
+[ext_resource type="AudioStream" uid="uid://f50uj4vs4ksj" path="res://Audio/Musik/Floaters.wav" id="3"]
+[ext_resource type="Texture2D" uid="uid://blrpuck0kn6re" path="res://Sprites/PlayIcon.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c3oae0fh02trd" path="res://Sprites/StopIcon.png" id="5"]
 
 [node name="TestoidMusicPlayer" type="HBoxContainer"]
 offset_top = 844.0
 offset_right = 1920.0
 offset_bottom = 1067.0
 size_flags_horizontal = 3
-script = ExtResource( 1 )
+script = ExtResource("1")
 __meta__ = {
 "_edit_use_anchors_": false
 }
-SongFile = ExtResource( 3 )
-PlayIcon = ExtResource( 4 )
-StopIcon = ExtResource( 5 )
+SongFile = ExtResource("3")
+PlayIcon = ExtResource("4")
+StopIcon = ExtResource("5")
 
 [node name="Label" type="Label" parent="."]
-offset_top = 80.0
-offset_right = 958.0
-offset_bottom = 143.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource("2")
 text = "Music Test"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 mix_target = 1
-bus = "Music"
+bus = &"Music"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 962.0
-offset_right = 1920.0
-offset_bottom = 223.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="PlayIcon" type="TextureRect" parent="HBoxContainer"]
-offset_right = 100.0
-offset_bottom = 223.0
-custom_minimum_size = Vector2( 100, 0 )
-texture = ExtResource( 4 )
-expand = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("4")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="PlayButton" type="Button" parent="HBoxContainer"]
-offset_left = 104.0
-offset_right = 958.0
-offset_bottom = 223.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 2 )
+theme_override_fonts/font = ExtResource("2")
 toggle_mode = true
 text = "PRESS TO PLAY"
+
 [connection signal="finished" from="MusicPlayer" to="." method="_on_MusicPlayer_finished"]
 [connection signal="toggled" from="HBoxContainer/PlayButton" to="." method="_on_Button_toggled"]

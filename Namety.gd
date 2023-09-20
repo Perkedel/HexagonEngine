@@ -3,7 +3,7 @@ extends Node
 
 # JOELwindows7: this is empty node just to make sure everything loads first
 # then go to the main node.
-@export var LoadThis: PackedScene = load("res://HexagonEngineCore.tscn")
+@export var LoadThis: PackedScene = load("res://HexagonEngineJustCore.tscn")
 
 # Declare member variables here. Examples:
 # var a = 2

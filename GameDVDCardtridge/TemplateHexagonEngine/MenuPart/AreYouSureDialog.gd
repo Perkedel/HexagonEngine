@@ -4,7 +4,8 @@ extends Popup
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-@export var isSpawned: bool
+@export var isSpawned: bool = false
+@export var extraButton:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	isSpawned = visible
+	if extraButton:
+		$Panel/VBoxContainer/ButtonConfirmations/Yes2.show()
 	pass
 
 func SpawnDialog():
@@ -34,11 +37,11 @@ func SpawnDialogWithAppendSure(TextAppend):
 	SpawnDialog()
 	pass
 
-signal YesImSure
-func YesConfirm():
+signal YesImSure(mode:int)
+func YesConfirm(mode:int = 0):
 	print("Yes I'm sure!")
-	emit_signal("YesImSure")
-	YesOrNo(true)
+	emit_signal("YesImSure",mode)
+	YesOrNo(true,mode)
 	set_visible(false)
 	pass
 
@@ -50,17 +53,22 @@ func NoCancel():
 	set_visible(false)
 	pass
 
-signal YesOrNoo(which)
-func YesOrNo(which:bool):
-	emit_signal("YesOrNoo",which)
+signal YesOrNoo(which:bool,at:int)
+func YesOrNo(which:bool=false,at:int=0):
+	emit_signal("YesOrNoo",which,at)
 	pass
 
 
 func _on_Yes_pressed():
-	YesConfirm()
+	YesConfirm(0)
 	pass # Replace with function body.
 
 
 func _on_No_pressed():
 	NoCancel()
+	pass # Replace with function body.
+
+
+func _on_yes_2_pressed() -> void:
+	YesConfirm(2)
 	pass # Replace with function body.

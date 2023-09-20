@@ -7,9 +7,6 @@
 resource_local_to_scene = true
 resource_name = "kashikan-DSEG"
 fallbacks = Array[Font]([ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2"), ExtResource("2")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

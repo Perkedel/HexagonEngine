@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy0tn2gj8kmdj"]
+
+[ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_5orq1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3qyhp"]
+
+[node name="InitLevelBaseAdded" instance=ExtResource("1_5orq1")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("PlaneMesh_3qyhp")
+
+[node name="Camera3D" type="Camera3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1, 2)

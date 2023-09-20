@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://be5nqgpeustk1"]
+
+[ext_resource type="Script" path="res://Scripts/HexagonEngineJustCore.gd" id="1_r65uc"]
+
+[node name="JustCore" type="Node"]
+script = ExtResource("1_r65uc")
+
+[node name="DVDSlot" type="Node" parent="."]

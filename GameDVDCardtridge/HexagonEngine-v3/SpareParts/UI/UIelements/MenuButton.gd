@@ -4,12 +4,18 @@ extends Button
 
 var WhatOrientationIsNow
 enum Orientationer {Internal, Vertical, Horizontal}
+
+@export_subgroup('Specs')
 @export var MenuIcons: Texture2D
-@export var MenuName: String
+@export var MenuName: String = 'MenuButton'
+@export var CommandName:String = MenuName.to_pascal_case()
+@export_multiline var ArgumentSay:String = ''
+@export var IgnoreTheCommand:bool = false
 @export var ChooseOrientation: Orientationer = Orientationer.Vertical
 @export var minHoriSize: float = 400.0
+@export var fontSizer:int = 32
 
-
+#@export_subgroup('Nodes')
 @onready var Vert = $VertImaging
 @onready var VertIconer = $VertImaging/TextureRect
 @onready var VertNamer = $VertImaging/Label
@@ -18,6 +24,7 @@ enum Orientationer {Internal, Vertical, Horizontal}
 @onready var HoriIconer = $HoriImaging/TextureRect
 @onready var HoriNamer = $HoriImaging/Label
 
+@export_subgroup('Sounds')
 @export var SoundsSpatially: bool = true
 @export var buttonSounded: AudioStream = load("res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav")
 @export var buttonHovered: AudioStream = load("res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav")
@@ -38,6 +45,9 @@ func _refreshStatusoid():
 	custom_minimum_size.x = minHoriSize
 	
 	buttonSpk.stream = buttonSounded
+	
+	VertNamer.add_theme_font_size_override("font_size",fontSizer)
+	HoriNamer.add_theme_font_size_override("font_size",fontSizer)
 	
 	match ChooseOrientation:
 		Orientationer.Horizontal:
@@ -78,7 +88,7 @@ func _pressed():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	_refreshStatusoid()
+#	_refreshStatusoid()
 	pass
 
 
@@ -91,6 +101,8 @@ func _on_MenuButton_pressed():
 #		buttonSpk.play()
 		AutoSpeaker.playSFXNow(buttonSounded)
 		pass
+	
+	Singletoner.pressAMenuButton(CommandName,ArgumentSay)
 	pass # Replace with function body.
 
 
@@ -114,3 +126,13 @@ func _on_MenuButton_mouse_entered():
 		AutoSpeaker.playSFXNow(buttonHovered)
 		pass
 	pass # Replace with function body.
+
+func _notification(what: int) -> void:
+	match(what):
+		NOTIFICATION_DRAW:
+			_refreshStatusoid()
+		NOTIFICATION_EDITOR_PRE_SAVE:
+			_refreshStatusoid()
+		_:
+			pass
+	pass

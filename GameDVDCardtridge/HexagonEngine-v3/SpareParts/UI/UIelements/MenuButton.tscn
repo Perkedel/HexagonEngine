@@ -1,90 +1,76 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://b7n2s0q7rd6ea"]
 
-[ext_resource path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="FontFile" id=3]
-[ext_resource path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" type="AudioStream" id=4]
-[ext_resource path="res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav" type="AudioStream" id=5]
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b4sqfbtfve41n" path="res://Sprites/MavrickleIcon.png" id="2"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_R_24tred.tres" id="3"]
+[ext_resource type="AudioStream" uid="uid://cfuehh4mf4wni" path="res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://mlbpgeq8bv4a" path="res://Audio/EfekSuara/166186__drminky__menu-screen-mouse-over.wav" id="5"]
 
 [node name="MenuButton" type="Button"]
+custom_minimum_size = Vector2(400, 0)
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_minimum_size = Vector2( 400, 0 )
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource("3")
 expand_icon = true
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-MenuIcons = ExtResource( 2 )
-MenuName = "MenuButton"
-buttonSounded = ExtResource( 4 )
-buttonHovered = ExtResource( 5 )
+script = ExtResource("1")
+MenuIcons = ExtResource("2")
+buttonSounded = ExtResource("4")
+buttonHovered = ExtResource("5")
 
 [node name="VertImaging" type="VBoxContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="VertImaging"]
-offset_right = 1920.0
-offset_bottom = 1040.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="VertImaging"]
-offset_top = 1044.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_override_fonts/font = ExtResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 32
 text = "MenuButton"
-align = 1
 
 [node name="HoriImaging" type="HBoxContainer" parent="."]
 visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="HoriImaging"]
-offset_right = 198.0
-offset_bottom = 250.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HoriImaging"]
-offset_left = 202.0
-offset_top = 107.0
-offset_right = 400.0
-offset_bottom = 143.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 32
 text = "MenuButton"
-align = 1
 
 [node name="ButtonSpeaker" type="AudioStreamPlayer" parent="."]
 process_mode = 2
-stream = ExtResource( 4 )
-bus = "SoundEffect"
+stream = ExtResource("4")
+bus = &"SoundEffect"
 
 [node name="ButtonSpeaker2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 2
-position = Vector2( 960, 540 )
-stream = ExtResource( 4 )
-bus = "SoundEffect"
+position = Vector2(960, 540)
+stream = ExtResource("4")
+bus = &"SoundEffect"
 
 [connection signal="button_down" from="." to="." method="_on_MenuButton_button_down"]
 [connection signal="button_up" from="." to="." method="_on_MenuButton_button_up"]

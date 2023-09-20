@@ -1,3 +1,9 @@
+HBoxContainer
+ScrollContainer
+Control
+Camera3D
+MeshInstance3D
+Node
 Timer
 TextureRect
 Button

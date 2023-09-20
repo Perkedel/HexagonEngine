@@ -1,31 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bd10apo6wola6"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_R_24tred.tres" type="FontFile" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/SubInheritable/SpeakerTryButton.gd" type="Script" id=2]
-[ext_resource path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Center.ogg" type="AudioStream" id=3]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_R_24tred.tres" id="1"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/InheritableSetting/SubInheritable/SpeakerTryButton.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://bnohqn6wv6jh0" path="res://Audio/EfekSuara/Tes/Speaker/OpenAl/Front_Center.ogg" id="3"]
 
 [node name="SpeakerTryButton" type="Button"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
 offset_left = 268.5
 offset_right = 368.5
 offset_bottom = 100.0
-custom_minimum_size = Vector2( 100, 100 )
-clip_contents = true
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 toggle_mode = true
 text = "Speaker"
 clip_text = true
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-playThisPls = ExtResource( 3 )
+script = ExtResource("2")
+playThisPls = ExtResource("3")
 
 [node name="individualSpeaker" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource("3")
 mix_target = 1
-bus = "SoundEffect"
+bus = &"SoundEffect"
+
 [connection signal="pressed" from="." to="." method="_on_SpeakerTryButton_pressed"]
 [connection signal="toggled" from="." to="." method="_on_SpeakerTryButton_toggled"]
 [connection signal="finished" from="individualSpeaker" to="." method="_on_individualSpeaker_finished"]

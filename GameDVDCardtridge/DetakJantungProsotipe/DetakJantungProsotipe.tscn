@@ -16,13 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://bibajss18j76i" path="res://Inkscape/PostingImage/HeartIcon.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://cop4nd8sbj4mb" path="res://Sprites/AudioSetting.png" id="15"]
 
-[sub_resource type="FontFile" id="FontFile_kb5n2"]
+[sub_resource type="FontFile" id="FontFile_uouf6"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 fallbacks = Array[Font]([ExtResource("6")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -30,13 +27,10 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_xgg00"]
+[sub_resource type="FontFile" id="FontFile_mi77x"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Italic 48"
 fallbacks = Array[Font]([ExtResource("5")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -44,13 +38,10 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_qycre"]
+[sub_resource type="FontFile" id="FontFile_vahnr"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 fallbacks = Array[Font]([ExtResource("8")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -58,13 +49,10 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_aeixr"]
+[sub_resource type="FontFile" id="FontFile_vccrg"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Monospace 48"
 fallbacks = Array[Font]([ExtResource("7")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -159,10 +147,10 @@ expand_icon = true
 
 [node name="DescriptionTextLabel" parent="CanvasLayer/UIsoWe/Listoid" instance=ExtResource("9")]
 layout_mode = 2
-theme_override_fonts/bold_font = SubResource("FontFile_kb5n2")
-theme_override_fonts/italics_font = SubResource("FontFile_xgg00")
-theme_override_fonts/bold_italics_font = SubResource("FontFile_qycre")
-theme_override_fonts/mono_font = SubResource("FontFile_aeixr")
+theme_override_fonts/bold_font = SubResource("FontFile_uouf6")
+theme_override_fonts/italics_font = SubResource("FontFile_mi77x")
+theme_override_fonts/bold_italics_font = SubResource("FontFile_vahnr")
+theme_override_fonts/mono_font = SubResource("FontFile_vccrg")
 text = "Detak Jantung Prosotipe
 by JOELwindows7
 Perkedel Technologies

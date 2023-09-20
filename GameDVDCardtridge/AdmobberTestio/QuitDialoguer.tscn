@@ -1,141 +1,111 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://b0jkvpseenfg7"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_monospace_48tred.tres" type="FontFile" id=1]
-[ext_resource path="res://GameDVDCardtridge/AdmobberTestio/QuitDialoguer.gd" type="Script" id=2]
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=3]
-[ext_resource path="res://fonts/Built/Ubuntu_B_48tred.tres" type="FontFile" id=4]
-[ext_resource path="res://fonts/Built/Ubuntu_MI_28tred.tres" type="FontFile" id=5]
-[ext_resource path="res://fonts/Built/Ubuntu_BI_48tred.tres" type="FontFile" id=6]
-
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_monospace_48tred.tres" id="1"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/AdmobberTestio/QuitDialoguer.gd" id="2"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="3"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_B_48tred.tres" id="4"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_MI_28tred.tres" id="5"]
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_BI_48tred.tres" id="6"]
 
 [node name="QuitDialoguer" type="VBoxContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource("2")
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Stage1-BUttonQuit" type="PanelContainer" parent="."]
-self_modulate = Color( 1, 1, 1, 0.345098 )
-offset_right = 1920.0
-offset_bottom = 1080.0
+self_modulate = Color(1, 1, 1, 0.345098)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Stage1-BUttonQuit"]
-offset_left = 14.0
-offset_top = 14.0
-offset_right = 1906.0
-offset_bottom = 1066.0
+layout_mode = 2
 alignment = 1
 
 [node name="TextL" type="Label" parent="Stage1-BUttonQuit/VBoxContainer"]
 visible = false
-offset_right = 1892.0
-offset_bottom = 975.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Finish Experiment?
 - Change DVD?
 - Shutdown Hexagon Engine?"
-align = 1
-valign = 1
-autowrap = true
 
 [node name="DebugLabelText" type="RichTextLabel" parent="Stage1-BUttonQuit/VBoxContainer"]
-offset_right = 1892.0
-offset_bottom = 983.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_fonts/mono_font = ExtResource( 1 )
-theme_override_fonts/bold_italics_font = ExtResource( 6 )
-theme_override_fonts/italics_font = ExtResource( 5 )
-theme_override_fonts/bold_font = ExtResource( 4 )
-theme_override_fonts/normal_font = ExtResource( 3 )
+theme_override_fonts/normal_font = ExtResource("3")
+theme_override_fonts/bold_font = ExtResource("4")
+theme_override_fonts/italics_font = ExtResource("5")
+theme_override_fonts/bold_italics_font = ExtResource("6")
+theme_override_fonts/mono_font = ExtResource("1")
 bbcode_enabled = true
-text = "[code]Debug Message[/code]
-"
 text = "Debug Message
 "
 scroll_following = true
 
 [node name="ConfirmButton" type="HBoxContainer" parent="Stage1-BUttonQuit/VBoxContainer"]
-offset_top = 991.0
-offset_right = 1892.0
-offset_bottom = 1052.0
+layout_mode = 2
 alignment = 1
 
 [node name="Button" type="Button" parent="Stage1-BUttonQuit/VBoxContainer/ConfirmButton"]
-offset_left = 886.0
-offset_right = 1006.0
-offset_bottom = 61.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "Quit"
 
 [node name="Stage2-SelectQuit" type="PanelContainer" parent="."]
 visible = false
-self_modulate = Color( 1, 1, 1, 0.345098 )
-offset_right = 696.0
-offset_bottom = 453.0
+self_modulate = Color(1, 1, 1, 0.345098)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Stage2-SelectQuit"]
-offset_left = 14.0
-offset_top = 14.0
-offset_right = 682.0
-offset_bottom = 439.0
+layout_mode = 2
 alignment = 1
 
 [node name="TextL" type="Label" parent="Stage2-SelectQuit/VBoxContainer"]
-offset_right = 668.0
-offset_bottom = 356.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 7
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Select Your Quit options!
 - Change DVD = Back to Hub
 - Quit H = Shutdown Hexagon
 - Cancel = Cancel quit"
-align = 1
-valign = 1
-autowrap = true
 
 [node name="ConfirmButton" type="HBoxContainer" parent="Stage2-SelectQuit/VBoxContainer"]
-offset_top = 364.0
-offset_right = 668.0
-offset_bottom = 425.0
+layout_mode = 2
 alignment = 1
 
 [node name="ButtonCHange" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
-offset_left = 26.0
-offset_right = 290.0
-offset_bottom = 61.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "Change DVD"
 
 [node name="ButtonShutdown" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
-offset_left = 298.0
-offset_right = 466.0
-offset_bottom = 61.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "Quit H"
 
 [node name="ButtonNo" type="Button" parent="Stage2-SelectQuit/VBoxContainer/ConfirmButton"]
-offset_left = 474.0
-offset_right = 642.0
-offset_bottom = 61.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "Cancel"
 
 [node name="TimerOutNoQuit" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
 [connection signal="pressed" from="Stage1-BUttonQuit/VBoxContainer/ConfirmButton/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Stage2-SelectQuit/VBoxContainer/ConfirmButton/ButtonCHange" to="." method="_on_ButtonCHange_pressed"]
 [connection signal="pressed" from="Stage2-SelectQuit/VBoxContainer/ConfirmButton/ButtonShutdown" to="." method="_on_ButtonShutdown_pressed"]

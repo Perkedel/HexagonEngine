@@ -8,6 +8,7 @@
 bg_color = Color(0.6, 0, 0.294118, 0.662745)
 
 [node name="AreYouSureDialog" type="Popup"]
+title = "Are you sure?"
 initial_position = 2
 size = Vector2i(1000, 500)
 script = ExtResource("1")
@@ -46,6 +47,17 @@ theme_override_colors/font_hover_color = Color(0.494118, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 text = "YES"
 
+[node name="Yes2" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.0901961, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.494118, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+text = "YES"
+
 [node name="No" type="Button" parent="Panel/VBoxContainer/ButtonConfirmations"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -57,4 +69,5 @@ theme_override_fonts/font = ExtResource("3")
 text = "NO"
 
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/Yes" to="." method="_on_Yes_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/Yes2" to="." method="_on_yes_2_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonConfirmations/No" to="." method="_on_No_pressed"]
