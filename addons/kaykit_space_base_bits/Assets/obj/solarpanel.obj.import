@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2r64xld3kbwl"
+path="res://.godot/imported/solarpanel.obj-5586d1c0056f6611649a7203b47b6f9b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/solarpanel.obj-5586d1c0056f6611649a7203b47b6f9b.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/solarpanel.obj"
+dest_files=["res://.godot/imported/solarpanel.obj-5586d1c0056f6611649a7203b47b6f9b.mesh", "res://.godot/imported/solarpanel.obj-5586d1c0056f6611649a7203b47b6f9b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

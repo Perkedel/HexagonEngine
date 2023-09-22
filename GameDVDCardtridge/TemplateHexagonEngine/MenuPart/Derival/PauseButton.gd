@@ -1,9 +1,9 @@
 extends Button
 
-@export (Texture2D) var IconOfIt
-@export (String) var TextOfIt = "Pause"
-@export (bool) var UseTheme = false
-@export (Texture2D) var TextureImage
+@export var IconOfIt:Texture2D
+@export var TextOfIt:String = "Pause"
+@export var UseTheme:bool = false
+@export var TextureImage:Texture2D
 
 # Declare member variables here. Examples:
 # var a = 2

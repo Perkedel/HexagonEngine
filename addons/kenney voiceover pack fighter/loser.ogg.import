@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cn1aonkhmhdu1"
+path="res://.godot/imported/loser.ogg-9d32d4fb6db740329106e85ecc7ec935.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/loser.ogg"
+dest_files=["res://.godot/imported/loser.ogg-9d32d4fb6db740329106e85ecc7ec935.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

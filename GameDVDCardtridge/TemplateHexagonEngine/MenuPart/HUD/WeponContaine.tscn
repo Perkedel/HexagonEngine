@@ -1,8 +1,8 @@
-[gd_scene format=2]
+[gd_scene format=3 uid="uid://bvvme5uagols7"]
 
 [node name="WeponContaine" type="HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
 offset_left = 1520.0
 offset_right = 1920.0
 offset_bottom = 55.0
-custom_minimum_size = Vector2( 400, 0 )
 size_flags_vertical = 3

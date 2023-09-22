@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg8l8gg60jfaf"
+path="res://.godot/imported/Primitive_Slope_Half.obj-bc1f7deaebe953e032577864a59c0064.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Slope_Half.obj-bc1f7deaebe953e032577864a59c0064.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/Primitive_Slope_Half.obj"
+dest_files=["res://.godot/imported/Primitive_Slope_Half.obj-bc1f7deaebe953e032577864a59c0064.mesh", "res://.godot/imported/Primitive_Slope_Half.obj-bc1f7deaebe953e032577864a59c0064.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

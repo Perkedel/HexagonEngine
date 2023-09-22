@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5ov6cx4n8ksk"
+path="res://.godot/imported/cargo_B_stacked.obj-3236699e5fd44d91f3eb649e8a9c8a97.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cargo_B_stacked.obj-3236699e5fd44d91f3eb649e8a9c8a97.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/cargo_B_stacked.obj"
+dest_files=["res://.godot/imported/cargo_B_stacked.obj-3236699e5fd44d91f3eb649e8a9c8a97.mesh", "res://.godot/imported/cargo_B_stacked.obj-3236699e5fd44d91f3eb649e8a9c8a97.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

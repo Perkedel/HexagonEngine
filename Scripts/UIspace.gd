@@ -24,9 +24,9 @@ enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3
 @export var a2DSpaceReportScore: bool = false
 @export var a3DSpaceReportScore: bool = false
 
-@export (float, 0, 100) var HPlevel = 100
-@export (Texture2D) var ScoreIcon
-@export (float) var ScoreNumber = 2000
+@export_range(0,100) var HPlevel:float = 100
+@export var ScoreIcon:Texture2D
+@export var ScoreNumber:float = 2000
 
 @export var KeepPlayingEvenOutOfFocus: bool = false
 
@@ -202,23 +202,28 @@ func OpenTheDrawer():
 
 func _notification(what):
 	# https://godotengine.org/qa/4768/android-ios-application-lifecycle
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		# quitting app or back-button on Android
-		print("Quit Request")
-		AttempTheQuitGame()
-		pass
-	if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
-		if isPlayingGameNow and not KeepPlayingEvenOutOfFocus:
-			#  https://docs.godotengine.org/en/3.2/tutorials/inputs/inputevent.html
-			# https://docs.godotengine.org/en/3.2/classes/class_inputeventkey.html#class-inputeventkey
-			# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
-			# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
-			if not Input.is_key_pressed(KEY_PRINT) or not Input.is_key_pressed(KEY_SYSREQ):
-				emit_signal("PressPauseButton")
+	match(what):
+		NOTIFICATION_WM_CLOSE_REQUEST:
+			# quitting app or back-button on Android
+				print("Quit Request")
+				AttempTheQuitGame()
+				pass
+		NOTIFICATION_FOCUS_EXIT:
+			if OS.get_name().nocasecmp_to('windows') != 0:
+				if isPlayingGameNow and not KeepPlayingEvenOutOfFocus:
+					#  https://docs.godotengine.org/en/3.2/tutorials/inputs/inputevent.html
+					# https://docs.godotengine.org/en/3.2/classes/class_inputeventkey.html#class-inputeventkey
+					# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
+					# https://docs.godotengine.org/en/3.2/classes/class_@globalscope.html#enum-globalscope-keylist
+					if not Input.is_key_pressed(KEY_PRINT) or not Input.is_key_pressed(KEY_SYSREQ):
+						emit_signal("PressPauseButton")
+						pass
+					pass
+					print("Hexagon Engine Defocused!")
 				pass
 			pass
-		print("Hexagon Engine Defocused!")
-		pass
+		_:
+			pass
 	pass
 
 func _input(event):

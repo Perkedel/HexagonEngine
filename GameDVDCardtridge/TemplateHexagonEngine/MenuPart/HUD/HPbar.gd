@@ -3,19 +3,16 @@ extends HBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-@export var HPvalue = 100 # (float, 0,100)
-var HPformat
+@export_subgroup('Parameter')
+@export_range(0,100) var HPvalue:float = 100 # (float, 0,100)
 @export var HPcolor: Color = Color.BLUE
+var HPformat:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func _draw():
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _redrawHPBar():
 	$TextureProgressLeft.value = HPvalue
 	# https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html
 	HPformat = "%.0f" % round(HPvalue)
@@ -41,4 +38,12 @@ func _process(delta):
 	$TextureProgressLeft.tint_progress = HPcolor
 	$LabelPanel.self_modulate = HPcolor
 	$TextureProgressRight.tint_progress = HPcolor
+	pass
+
+func _draw():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	_redrawHPBar()
 	pass

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ci0av6h7qvri1"
+path="res://.godot/imported/card_slide_5.ogg-8172be67bc05c4a4d976f858f10edafe.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney casino audio/card_slide_5.ogg"
+dest_files=["res://.godot/imported/card_slide_5.ogg-8172be67bc05c4a4d976f858f10edafe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xbox_digital_analog_click_dark_1">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_digital_analog_click_dark_1" clip-path="url(#clip-button_xbox_digital_analog_click_dark_1)">
+    <g id="Border_white_-_outer" data-name="Border white - outer" transform="translate(10 10)">
+      <g id="Border_white_-_outer-2" data-name="Border white - outer" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="50" cy="50" r="50" stroke="none"/>
+        <circle cx="50" cy="50" r="48" fill="none"/>
+      </g>
+    </g>
+    <g id="Border_white_-_inner" data-name="Border white - inner" transform="translate(18 18)">
+      <g id="Border_white_-_inner-2" data-name="Border white - inner" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="42" cy="42" r="42" stroke="none"/>
+        <circle cx="42" cy="42" r="44" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Base" data-name="Button - Base" transform="translate(14 14)">
+      <g id="Button_-_Base-2" data-name="Button - Base" fill="#404040" stroke="#2a2a2a" stroke-width="8">
+        <circle cx="46" cy="46" r="46" stroke="none"/>
+        <circle cx="46" cy="46" r="42" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Top_Alt" data-name="Button - Top Alt" transform="translate(22 22)">
+      <g id="Button_-_Top" data-name="Button - Top" fill="#404040" stroke="#2a2a2a" stroke-width="8">
+        <circle cx="38" cy="38" r="38" stroke="none"/>
+        <circle cx="38" cy="38" r="34" fill="none"/>
+      </g>
+    </g>
+    <g id="Component_12_61" data-name="Component 12 – 61" transform="translate(24 24)">
+      <circle id="Ellipse_41" data-name="Ellipse 41" cx="6" cy="6" r="6" transform="translate(30)" fill="#2a2a2a"/>
+      <circle id="Ellipse_44" data-name="Ellipse 44" cx="6" cy="6" r="6" transform="translate(30 60)" fill="#2a2a2a"/>
+      <circle id="Ellipse_42" data-name="Ellipse 42" cx="6" cy="6" r="6" transform="translate(0 30)" fill="#2a2a2a"/>
+      <circle id="Ellipse_43" data-name="Ellipse 43" cx="6" cy="6" r="6" transform="translate(60 30)" fill="#2a2a2a"/>
+    </g>
+    <path id="Path_149" data-name="Path 149" d="M-10.867-4.585h7.98V0H-16.852V-24.745h5.985Zm28.525-2.38a6.822,6.822,0,0,1-1,3.605A7.035,7.035,0,0,1,13.72-.735a10.358,10.358,0,0,1-4.707.98,11.087,11.087,0,0,1-6.86-2.03,7.355,7.355,0,0,1-2.94-5.67h6.37a3.362,3.362,0,0,0,1,2.205,3.069,3.069,0,0,0,2.188.8,2.539,2.539,0,0,0,1.82-.63,2.205,2.205,0,0,0,.665-1.68A2.169,2.169,0,0,0,10.64-8.33,4.8,4.8,0,0,0,9.118-9.363q-.91-.4-2.52-.963a30.939,30.939,0,0,1-3.833-1.557A7.058,7.058,0,0,1,.21-14.123,6.482,6.482,0,0,1-.857-17.99a6.512,6.512,0,0,1,1.12-3.815,7.12,7.12,0,0,1,3.1-2.468,11.3,11.3,0,0,1,4.533-.858,10.161,10.161,0,0,1,6.562,1.96A7.479,7.479,0,0,1,17.2-17.78H10.728a3.321,3.321,0,0,0-.892-1.943,2.625,2.625,0,0,0-1.943-.718,2.5,2.5,0,0,0-1.7.56,2.056,2.056,0,0,0-.648,1.645,2.089,2.089,0,0,0,.577,1.488,4.4,4.4,0,0,0,1.453,1q.875.385,2.52.98a27.7,27.7,0,0,1,3.885,1.592,7.432,7.432,0,0,1,2.59,2.293A6.549,6.549,0,0,1,17.658-6.965Z" transform="translate(60 72)" fill="#fff" opacity="0.5"/>
+  </g>
+</svg>

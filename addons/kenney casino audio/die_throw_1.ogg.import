@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3pyxnl0048xo"
+path="res://.godot/imported/die_throw_1.ogg-11f86aa8af965692416d844ac1cbdb51.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney casino audio/die_throw_1.ogg"
+dest_files=["res://.godot/imported/die_throw_1.ogg-11f86aa8af965692416d844ac1cbdb51.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bspkiruru3ejn"
+path="res://.godot/imported/mission_failed.ogg-b13f4b97c40842b60aadbe4f340f9533.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/mission_failed.ogg"
+dest_files=["res://.godot/imported/mission_failed.ogg-b13f4b97c40842b60aadbe4f340f9533.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7aw4v5f1oo8a"]
+
+[ext_resource type="Texture2D" uid="uid://cxbolf4mxy2eo" path="res://Sprites/AnotherMetererBekgron_alt.png" id="1_dm7mf"]
+[ext_resource type="Texture2D" uid="uid://bhfcxc3rq07q4" path="res://Sprites/AnotherMetererOver_alt.png" id="2_fpgu5"]
+[ext_resource type="Texture2D" uid="uid://joe86g31g7wk" path="res://Sprites/AnotherMetererProgress_alt.png" id="3_csqqy"]
+
+[node name="SuperTextureProgress" type="TextureProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+nine_patch_stretch = true
+stretch_margin_left = 2
+stretch_margin_top = 5
+stretch_margin_right = 2
+stretch_margin_bottom = 5
+texture_under = ExtResource("1_dm7mf")
+texture_over = ExtResource("2_fpgu5")
+texture_progress = ExtResource("3_csqqy")

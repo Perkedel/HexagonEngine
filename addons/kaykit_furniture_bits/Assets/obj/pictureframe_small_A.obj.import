@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://brb78sjjfkxmn"
+path="res://.godot/imported/pictureframe_small_A.obj-9250212979dcf1a2c35687d112dea986.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pictureframe_small_A.obj-9250212979dcf1a2c35687d112dea986.mesh"]
+
+source_file="res://addons/kaykit_furniture_bits/Assets/obj/pictureframe_small_A.obj"
+dest_files=["res://.godot/imported/pictureframe_small_A.obj-9250212979dcf1a2c35687d112dea986.mesh", "res://.godot/imported/pictureframe_small_A.obj-9250212979dcf1a2c35687d112dea986.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

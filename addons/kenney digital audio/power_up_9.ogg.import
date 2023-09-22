@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://oe38mcrm613h"
+path="res://.godot/imported/power_up_9.ogg-46f7c6c07c73b616c3ed608a522c1ba0.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/power_up_9.ogg"
+dest_files=["res://.godot/imported/power_up_9.ogg-46f7c6c07c73b616c3ed608a522c1ba0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

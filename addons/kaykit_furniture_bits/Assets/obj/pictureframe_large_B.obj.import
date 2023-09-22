@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cg3i6utph6f2t"
+path="res://.godot/imported/pictureframe_large_B.obj-0c1558e8d55e45421538665bb07a7edc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pictureframe_large_B.obj-0c1558e8d55e45421538665bb07a7edc.mesh"]
+
+source_file="res://addons/kaykit_furniture_bits/Assets/obj/pictureframe_large_B.obj"
+dest_files=["res://.godot/imported/pictureframe_large_B.obj-0c1558e8d55e45421538665bb07a7edc.mesh", "res://.godot/imported/pictureframe_large_B.obj-0c1558e8d55e45421538665bb07a7edc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cas8cs4stg2wa"
+path="res://.godot/imported/target_stand_A.obj-606c90d8746a2c0cd8b793ab725d89b3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/target_stand_A.obj-606c90d8746a2c0cd8b793ab725d89b3.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/target_stand_A.obj"
+dest_files=["res://.godot/imported/target_stand_A.obj-606c90d8746a2c0cd8b793ab725d89b3.mesh", "res://.godot/imported/target_stand_A.obj-606c90d8746a2c0cd8b793ab725d89b3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

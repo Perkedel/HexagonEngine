@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ck06ijygm6ppa"
+path="res://.godot/imported/you_lose.ogg-076a61e5d3ea4feb0fade9d05f5fe275.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/you_lose.ogg"
+dest_files=["res://.godot/imported/you_lose.ogg-076a61e5d3ea4feb0fade9d05f5fe275.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

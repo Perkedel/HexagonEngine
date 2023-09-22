@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xbox_digital_view_1">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_digital_view_1" clip-path="url(#clip-button_xbox_digital_view_1)">
+    <g id="Rectangle_57" data-name="Rectangle 57" transform="translate(28 28)" fill="#2a2a2a" stroke="#fff" stroke-width="4">
+      <rect width="64" height="64" rx="32" stroke="none"/>
+      <rect x="-2" y="-2" width="68" height="68" rx="34" fill="none"/>
+    </g>
+    <g id="Rectangle_58" data-name="Rectangle 58" transform="translate(36 36)" fill="#404040" stroke="#5b5b5b" stroke-width="4">
+      <rect width="48" height="48" rx="24" stroke="none"/>
+      <rect x="-2" y="-2" width="52" height="52" rx="26" fill="none"/>
+    </g>
+    <rect id="Rectangle_59" data-name="Rectangle 59" width="48" height="52" rx="24" transform="translate(36 32)" fill="#404040"/>
+    <path id="Subtraction_55" data-name="Subtraction 55" d="M-3880-2089h-6v-20h24v7h-4.173v-2.79h-15.653v11.578H-3880v4.21Z" transform="translate(3929 2152)" fill="#fff"/>
+    <path id="Subtraction_53" data-name="Subtraction 53" d="M-3862-2089h-24v-20h24v20Zm-20-15.79v11.579h16v-11.579Z" transform="translate(3939 2163)" fill="#fff"/>
+  </g>
+</svg>

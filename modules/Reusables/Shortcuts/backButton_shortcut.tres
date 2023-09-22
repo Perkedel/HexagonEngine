@@ -1,0 +1,6 @@
+[gd_resource type="Shortcut" load_steps=2 format=3 uid="uid://dbrkw7aok5lb5"]
+
+[ext_resource type="InputEventAction" uid="uid://4ek5itqu7xpi" path="res://modules/Reusables/Shortcuts/backButton_eventAction.tres" id="1_4q8w0"]
+
+[resource]
+events = [ExtResource("1_4q8w0")]

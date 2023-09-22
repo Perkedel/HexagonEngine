@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhbw54rgb0j36"
+path="res://.godot/imported/pillow_B.obj-d1595cdb420b4a1adf9d679626b85c1b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillow_B.obj-d1595cdb420b4a1adf9d679626b85c1b.mesh"]
+
+source_file="res://addons/kaykit_furniture_bits/Assets/obj/pillow_B.obj"
+dest_files=["res://.godot/imported/pillow_B.obj-d1595cdb420b4a1adf9d679626b85c1b.mesh", "res://.godot/imported/pillow_B.obj-d1595cdb420b4a1adf9d679626b85c1b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

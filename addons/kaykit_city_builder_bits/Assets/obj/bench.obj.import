@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqk6gc8jm6uol"
+path="res://.godot/imported/bench.obj-4944b11366ad8b997c91dd103734458d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bench.obj-4944b11366ad8b997c91dd103734458d.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/bench.obj"
+dest_files=["res://.godot/imported/bench.obj-4944b11366ad8b997c91dd103734458d.mesh", "res://.godot/imported/bench.obj-4944b11366ad8b997c91dd103734458d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

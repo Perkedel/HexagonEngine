@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://oryn8vecuock"
+path="res://.godot/imported/roofmodule_cargo_B.obj-1a970f56dece4527ace249c3d9d67423.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roofmodule_cargo_B.obj-1a970f56dece4527ace249c3d9d67423.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/roofmodule_cargo_B.obj"
+dest_files=["res://.godot/imported/roofmodule_cargo_B.obj-1a970f56dece4527ace249c3d9d67423.mesh", "res://.godot/imported/roofmodule_cargo_B.obj-1a970f56dece4527ace249c3d9d67423.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

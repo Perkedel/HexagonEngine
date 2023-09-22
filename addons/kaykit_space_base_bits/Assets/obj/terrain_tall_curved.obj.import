@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d15fexvl6gehq"
+path="res://.godot/imported/terrain_tall_curved.obj-2200d7c82f06530721b615ce343f4754.mesh"
+
+[deps]
+
+files=["res://.godot/imported/terrain_tall_curved.obj-2200d7c82f06530721b615ce343f4754.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/terrain_tall_curved.obj"
+dest_files=["res://.godot/imported/terrain_tall_curved.obj-2200d7c82f06530721b615ce343f4754.mesh", "res://.godot/imported/terrain_tall_curved.obj-2200d7c82f06530721b615ce343f4754.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

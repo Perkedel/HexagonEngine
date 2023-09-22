@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://e40opdlc1kgj"
+path="res://.godot/imported/war_get_down.ogg-6f783895b665a9d267f5cf263751141b.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_get_down.ogg"
+dest_files=["res://.godot/imported/war_get_down.ogg-6f783895b665a9d267f5cf263751141b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

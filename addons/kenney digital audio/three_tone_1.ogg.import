@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckhf3m3fqdlx0"
+path="res://.godot/imported/three_tone_1.ogg-a3cd5bfa202f8f288ce324d4d8f997bb.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/three_tone_1.ogg"
+dest_files=["res://.godot/imported/three_tone_1.ogg-a3cd5bfa202f8f288ce324d4d8f997bb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6at2h1lxm5o4"
+path="res://.godot/imported/door_close_2.ogg-aa92c24cfb8df69a2d1ba7736aefa21d.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney rpg audio/door_close_2.ogg"
+dest_files=["res://.godot/imported/door_close_2.ogg-aa92c24cfb8df69a2d1ba7736aefa21d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

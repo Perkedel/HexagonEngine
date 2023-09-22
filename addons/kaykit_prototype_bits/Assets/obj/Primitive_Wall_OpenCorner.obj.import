@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7ax2bwdlp3xn"
+path="res://.godot/imported/Primitive_Wall_OpenCorner.obj-7dc8606af32e85b76a07a11aada4e12e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Wall_OpenCorner.obj-7dc8606af32e85b76a07a11aada4e12e.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/Primitive_Wall_OpenCorner.obj"
+dest_files=["res://.godot/imported/Primitive_Wall_OpenCorner.obj-7dc8606af32e85b76a07a11aada4e12e.mesh", "res://.godot/imported/Primitive_Wall_OpenCorner.obj-7dc8606af32e85b76a07a11aada4e12e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5du3qkmr6hfl"
+path="res://.godot/imported/power_up.ogg-444a4c80f9ed0df1b7cb5d57e187a179.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/power_up.ogg"
+dest_files=["res://.godot/imported/power_up.ogg-444a4c80f9ed0df1b7cb5d57e187a179.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 16 16" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M1 1L15 1L15 15L1 15L1 1Z" id="Fill"/>
+<path d="M1 5L15 5L15 11L1 11L1 5Z" id="Fill_2"/>
+</defs>
+<g id="レイヤー-1" vectornator:layerName="レイヤー 1">
+<g opacity="1" vectornator:layerName="長方形 1">
+<mask height="14" id="StrokeMask" maskUnits="userSpaceOnUse" width="14" x="1" y="1">
+<rect fill="#000000" height="14" stroke="none" width="14" x="1" y="1"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask)" stroke="#8eef97" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="4" xlink:href="#Fill"/>
+</g>
+<g opacity="1" vectornator:layerName="長方形 2">
+<use fill="#8eef97" fill-rule="nonzero" stroke="none" xlink:href="#Fill_2"/>
+<mask height="6" id="StrokeMask_2" maskUnits="userSpaceOnUse" width="14" x="1" y="5">
+<rect fill="#000000" height="6" stroke="none" width="14" x="1" y="5"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_2"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_2)" stroke="#8eef97" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="4" xlink:href="#Fill_2"/>
+</g>
+</g>
+</svg>

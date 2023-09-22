@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj2g5314fdyr0"]
+
+[ext_resource type="Script" path="res://addons/controller_icons/objects/Sprite3D.gd" id="1_mlhoh"]
+
+[node name="controller_icons_sprite3D" type="Sprite3D"]
+script = ExtResource("1_mlhoh")

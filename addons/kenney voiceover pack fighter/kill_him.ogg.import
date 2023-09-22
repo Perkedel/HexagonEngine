@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0nagbln1m8qc"
+path="res://.godot/imported/kill_him.ogg-f139d5f49f30dc6297a2bbeb338f6d74.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/kill_him.ogg"
+dest_files=["res://.godot/imported/kill_him.ogg-f139d5f49f30dc6297a2bbeb338f6d74.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

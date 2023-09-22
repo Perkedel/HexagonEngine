@@ -1,0 +1,4 @@
+[gd_resource type="InputEventAction" format=3 uid="uid://4ek5itqu7xpi"]
+
+[resource]
+action = &"ui_cancel"

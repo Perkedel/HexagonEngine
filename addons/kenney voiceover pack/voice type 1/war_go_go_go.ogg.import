@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfooqdj6uclby"
+path="res://.godot/imported/war_go_go_go.ogg-c71043191746e6faa8f4d00e37143f8d.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_go_go_go.ogg"
+dest_files=["res://.godot/imported/war_go_go_go.ogg-c71043191746e6faa8f4d00e37143f8d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

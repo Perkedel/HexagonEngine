@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1jmvslstwj1e"
+path="res://.godot/imported/zap_2.ogg-692879520cdf691935fb0c0cfae98f4d.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/zap_2.ogg"
+dest_files=["res://.godot/imported/zap_2.ogg-692879520cdf691935fb0c0cfae98f4d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

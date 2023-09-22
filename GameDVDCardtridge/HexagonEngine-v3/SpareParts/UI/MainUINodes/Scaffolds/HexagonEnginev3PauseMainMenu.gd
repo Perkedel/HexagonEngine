@@ -9,6 +9,7 @@ extends Control
 	$KonMenu/MenuNavigation/ScrollContainer,
 	$KonMenu/MenuNavigation/ConfirmationDialog,
 ]
+var MenuNavListActive:int = 0
 @onready var nextScaffold = $NextScaffold
 @export var howLong: float = .5
 @export_enum("Go to gameplay", 'Select Level', 'Select Save') var playButtonWillDo:String = 'Go to gameplay' # What will Main Menu Play button do?
@@ -67,6 +68,23 @@ func changeNavigator(to:int=0):
 	print('change nav to ' + String.num(to))
 	_hideAllNavigator()
 	MenuNavList[to].show()
+	MenuNavListActive = to
+	for isThisButton in MenuNavList[to].get_child(0).get_children():
+		if isThisButton is Button:
+			isThisButton.grab_focus()
+			break
+			pass
+		else:
+			pass
+		pass
+	pass
+
+func changeMenu(to:String):
+	match(to):
+		'MainMenu':
+			changeNavigator(0)
+		_:
+			pass
 	pass
 
 func killThatNav():
@@ -87,6 +105,11 @@ func _pressPlayButton():
 	
 	pass
 
+func closePauseMenu():
+	print('raye')
+	Singletoner.pressAMenuButton('Play')
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	preAnimate()
@@ -97,3 +120,52 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _input(event: InputEvent) -> void:
+	if visible:
+		#print('afafa')
+		if event is InputEvent:
+			if event.is_action_released('ui_cancel'):
+				#print('aafa')
+				match(MenuNavListActive):
+					0:
+						# on main menu
+						# check we are actually on main menu, or just pause game, and if game is always ON like Niko
+						# no no, uhh. if we're on main menu, get out to Press Start Button.
+						#closePauseMenu()
+						pass
+					1:
+						# on are you sure to quit
+						pass
+					_:
+						pass
+				pass
+			elif event.is_action_released('ui_pause'):
+				#print('rraa')
+				match(MenuNavListActive):
+					0:
+						# on main menu
+						#closePauseMenu()
+						pass
+					1:
+						# on are you sure to quit
+						pass
+					_:
+						pass
+				pass
+			else:
+				pass
+			pass
+		pass
+	pass
+
+func _notification(what: int) -> void:
+	match(what):
+		NOTIFICATION_VISIBILITY_CHANGED:
+			if visible:
+				
+				pass
+			pass
+		_:
+			pass
+	pass

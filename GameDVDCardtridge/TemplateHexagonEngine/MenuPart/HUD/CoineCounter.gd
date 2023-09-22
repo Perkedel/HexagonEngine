@@ -1,7 +1,7 @@
 extends HBoxContainer
 
-@export (float) var CoineCountNumber
-@export (Texture2D) var CoineIcon
+@export var CoineCountNumber:float
+@export var CoineIcon:Texture2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,6 +14,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CoineCountLabel.text = String(CoineCountNumber)
+	$CoineCountLabel.text = String.num(CoineCountNumber)
 	$CoineIcon.texture = CoineIcon
 	pass

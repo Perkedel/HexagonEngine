@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b66xcvknaicwv"
+path="res://.godot/imported/lights.obj-c56752ef2850f49bd1288cbed9f70b4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lights.obj-c56752ef2850f49bd1288cbed9f70b4b.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/lights.obj"
+dest_files=["res://.godot/imported/lights.obj-c56752ef2850f49bd1288cbed9f70b4b.mesh", "res://.godot/imported/lights.obj-c56752ef2850f49bd1288cbed9f70b4b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bu4uq2dk36out"
+path="res://.godot/imported/impact_punch_heavy_002.ogg-a789482358de918379ff2b7077830a66.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney impact sounds/impact_punch_heavy_002.ogg"
+dest_files=["res://.godot/imported/impact_punch_heavy_002.ogg-a789482358de918379ff2b7077830a66.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

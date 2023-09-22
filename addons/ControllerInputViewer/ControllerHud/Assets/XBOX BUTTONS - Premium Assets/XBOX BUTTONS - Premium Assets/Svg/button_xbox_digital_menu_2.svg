@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xbox_digital_menu_2">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_digital_menu_2" clip-path="url(#clip-button_xbox_digital_menu_2)">
+    <g id="Rectangle_57" data-name="Rectangle 57" transform="translate(28 28)" fill="#2a2a2a" stroke="#fff" stroke-width="4">
+      <rect width="64" height="64" rx="32" stroke="none"/>
+      <rect x="-2" y="-2" width="68" height="68" rx="34" fill="none"/>
+    </g>
+    <g id="Rectangle_58" data-name="Rectangle 58" transform="translate(84 80) rotate(180)" fill="none" stroke="#5b5b5b" stroke-width="4">
+      <rect width="48" height="48" rx="24" stroke="none"/>
+      <rect x="-2" y="-2" width="52" height="52" rx="26" fill="none"/>
+    </g>
+    <rect id="Rectangle_59" data-name="Rectangle 59" width="56" height="56" rx="28" transform="translate(88 88) rotate(180)" fill="#404040"/>
+    <rect id="Rectangle_206" data-name="Rectangle 206" width="32" height="4" transform="translate(44 46)" fill="#fff"/>
+    <rect id="Rectangle_207" data-name="Rectangle 207" width="32" height="4" transform="translate(44 56)" fill="#fff"/>
+    <rect id="Rectangle_208" data-name="Rectangle 208" width="32" height="4" transform="translate(44 66)" fill="#fff"/>
+  </g>
+</svg>

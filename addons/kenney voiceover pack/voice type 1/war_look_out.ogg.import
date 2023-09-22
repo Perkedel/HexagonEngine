@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bioqkt6karpe7"
+path="res://.godot/imported/war_look_out.ogg-b9c2ae3d98963e8c666604cd358fc258.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_look_out.ogg"
+dest_files=["res://.godot/imported/war_look_out.ogg-b9c2ae3d98963e8c666604cd358fc258.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

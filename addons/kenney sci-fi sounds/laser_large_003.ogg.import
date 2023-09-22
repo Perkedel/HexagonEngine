@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bo8b262wsu4y2"
+path="res://.godot/imported/laser_large_003.ogg-5984490d588b562dac7e9bb2a79675e5.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney sci-fi sounds/laser_large_003.ogg"
+dest_files=["res://.godot/imported/laser_large_003.ogg-5984490d588b562dac7e9bb2a79675e5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

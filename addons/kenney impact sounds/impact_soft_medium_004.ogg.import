@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccw3u83ryfijl"
+path="res://.godot/imported/impact_soft_medium_004.ogg-3d5cbce6585acdedc2fb7ebabb459e7b.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney impact sounds/impact_soft_medium_004.ogg"
+dest_files=["res://.godot/imported/impact_soft_medium_004.ogg-3d5cbce6585acdedc2fb7ebabb459e7b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

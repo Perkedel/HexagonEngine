@@ -28,7 +28,8 @@ func unloadDVDNode():
 	pass
 
 # Press a Menu on a DVD
-func pressAMenuButton(whichIs:String,Argument:String):
+func pressAMenuButton(whichIs:String='MainMenu',Argument:String=''):
+	#print("adguuuuuuuuuuuuuuuuuuuuu")
 	if dvdNode:
 		if dvdNode.has_method('pressAMenuButton'):
 			dvdNode.pressAMenuButton(whichIs,Argument)
@@ -47,6 +48,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func saveEverythingFirst():
+	if Engine.has_singleton("Settinger"):
+		Settingers.SettingSave()
+		pass
+	if Engine.has_singleton("Kixlonzing"):
+		Kixlonzing.SaveKixlonz()
+		pass
+	pass
 
 func assignLoadedDVD(thisThingRightHere:Node):
 	daLoadedDVD = thisThingRightHere
@@ -76,10 +86,7 @@ func shutdownNow():
 func Nonaktifkan_Sistem():
 	#AutoSpeaker.stream = preload("res://GameDVDCardtridge/GeogonPolymetryHaventDoneYetSalvage/Audio/Explosion bin cropped.wav")
 	#AutoSpeaker.play()
-	Kixlonzing.SaveKixlonz()
-	if Engine.has_singleton("Settinger"):
-#		Settingers.SettingSave()
-		pass
+	saveEverythingFirst()
 	print("Quit Game!")
 	#get_tree().queue_delete(get_tree())
 	#get_tree().queue_free()
@@ -90,14 +97,17 @@ func Nonaktifkan_Sistem():
 func _exit_tree():
 	pass
 
+func setGamePaused(to:bool):
+	get_tree().paused = to
+	isGamePaused = to
+	pass
+
 func PauseGameNow():
-	get_tree().paused = true
-	isGamePaused = true
+	setGamePaused(true)
 	pass
 
 func ResumeGameNow():
-	get_tree().paused = false
-	isGamePaused = false
+	setGamePaused(false)
 	pass
 
 func change_scene_with_resource(thisOne):
@@ -149,6 +159,9 @@ func _notification(what: int) -> void:
 			pass
 		NOTIFICATION_WM_CLOSE_REQUEST:
 			# Press Close
+			if dvdNode.has_method('closeRequest'):
+				dvdNode.closeRequest()
+				pass
 			pass
 		_:
 			pass

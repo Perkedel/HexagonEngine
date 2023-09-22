@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5uxr8h6riafr"
+path="res://.godot/imported/basemodule_garage_door.obj-44bcabcd4f63a366633d3b1db2e6945c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/basemodule_garage_door.obj-44bcabcd4f63a366633d3b1db2e6945c.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/basemodule_garage_door.obj"
+dest_files=["res://.godot/imported/basemodule_garage_door.obj-44bcabcd4f63a366633d3b1db2e6945c.mesh", "res://.godot/imported/basemodule_garage_door.obj-44bcabcd4f63a366633d3b1db2e6945c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

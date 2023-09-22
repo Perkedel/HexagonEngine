@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://boykd7uaj1s7i"
+path="res://.godot/imported/footstep_carpet_004.ogg-42d8e9f7f1c8262af826e60a97ca849a.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney impact sounds/footstep_carpet_004.ogg"
+dest_files=["res://.godot/imported/footstep_carpet_004.ogg-42d8e9f7f1c8262af826e60a97ca849a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1wnngopwpnsy"
+path="res://.godot/imported/flawless_victory.ogg-1a4507ff2710e05518945842d6342a87.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/flawless_victory.ogg"
+dest_files=["res://.godot/imported/flawless_victory.ogg-1a4507ff2710e05518945842d6342a87.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fk3nkfmxddea"
+path="res://.godot/imported/deathmatch.ogg-2b1c8ad0cc8a71f2535e05c40098a5d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/deathmatch.ogg"
+dest_files=["res://.godot/imported/deathmatch.ogg-2b1c8ad0cc8a71f2535e05c40098a5d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

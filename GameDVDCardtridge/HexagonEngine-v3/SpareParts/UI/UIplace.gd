@@ -29,7 +29,38 @@ func preloadGameplayHUDMenu(scened:PackedScene):
 func preloadJustPauseMenu(scened:PackedScene):
 	JustPauseMenuNode.add_child(scened.instantiate())
 
+func changeMenu(to:String):
+	for an in get_children():
+		an.hide()
+		pass
+	match(to):
+		'Gameplay':
+			changeGameplayHUDMenuNavigator(0)
+			pass
+		'MainMenu':
+			changePauseMainMenuNavigator(0)
+			pass
+		'Pause':
+			# TODO: for dedicated pause menu!
+			changePauseMainMenuNavigator(0)
+			pass
+		'CancelQuit':
+			changePauseMainMenuNavigator(0)
+			pass
+		'ChangeDVD':
+			pass
+		'Shutdown':
+			pass
+		'ConfirmQuit':
+			print('QUitio')
+			changePauseMainMenuNavigator(1)
+			pass
+		_:
+			pass
+	pass
+
 func backToMainMenu():
+	Singletoner.setGamePaused(false)
 	PauseMainMenuNode.show()
 #	PauseMainMenuNode.get_child(0).preAnimate()
 	GameplayHUDMenuNode.hide()
@@ -65,6 +96,7 @@ func _on_Shutdown_do():
 
 func changePauseMainMenuNavigator(to:int = 0):
 	#print('chagnene')
+	PauseMainMenuNode.show()
 	if PauseMainMenuNode.get_child(0):
 		#print('adsfreg#')
 		if PauseMainMenuNode.get_child(0).has_method("changeNavigator"):
@@ -75,12 +107,17 @@ func changePauseMainMenuNavigator(to:int = 0):
 		pass
 	pass
 
+func changeGameplayHUDMenuNavigator(to:int = 0):
+	GameplayHUDMenuNode.show()
+	pass
+
 func _notification(what: int) -> void:
 	if visible:
 		match(what):
 			NOTIFICATION_WM_CLOSE_REQUEST:
 				#pause game &
-				changePauseMainMenuNavigator(1)
+				#changePauseMainMenuNavigator(1)
+				#Singletoner.pressAMenuButton('Shutdown')
 				pass
 			_:
 				pass

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://v4h8jy3avyi7"]
+
+[ext_resource type="Script" path="res://addons/controller_icons/objects/TextureRect.gd" id="1_kdmch"]
+
+[node name="controller_icons_textureRect" type="TextureRect"]
+script = ExtResource("1_kdmch")

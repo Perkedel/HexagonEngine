@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6jwmk8fi2cf8"
+path="res://.godot/imported/low_frequency_explosion_001.ogg-8e5b972813c9462296b03837e2efe6b6.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney sci-fi sounds/low_frequency_explosion_001.ogg"
+dest_files=["res://.godot/imported/low_frequency_explosion_001.ogg-8e5b972813c9462296b03837e2efe6b6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

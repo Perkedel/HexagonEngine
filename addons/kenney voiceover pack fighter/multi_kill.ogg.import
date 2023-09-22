@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bn0y45hm0kjp4"
+path="res://.godot/imported/multi_kill.ogg-062772e25c2100111ec13c0164f0f743.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/multi_kill.ogg"
+dest_files=["res://.godot/imported/multi_kill.ogg-062772e25c2100111ec13c0164f0f743.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

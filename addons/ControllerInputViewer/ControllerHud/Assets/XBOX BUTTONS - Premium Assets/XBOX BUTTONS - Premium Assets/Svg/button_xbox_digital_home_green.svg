@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="36" cy="36" rx="36" ry="36" transform="translate(24 24)" fill="#2a2a2a"/>
+    </clipPath>
+    <clipPath id="clip-button_xbox_digital_home_green">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_digital_home_green" clip-path="url(#clip-button_xbox_digital_home_green)">
+    <g id="Border_white_-_outer" data-name="Border white - outer" transform="translate(10 10)">
+      <g id="Border_white_-_outer-2" data-name="Border white - outer" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="50" cy="50" r="50" stroke="none"/>
+        <circle cx="50" cy="50" r="48" fill="none"/>
+      </g>
+    </g>
+    <g id="Border_white_-_inner" data-name="Border white - inner" transform="translate(18 18)">
+      <g id="Border_white_-_inner-2" data-name="Border white - inner" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="42" cy="42" r="42" stroke="none"/>
+        <circle cx="42" cy="42" r="44" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Base" data-name="Button - Base" transform="translate(14 14)">
+      <g id="Button_-_Base-2" data-name="Button - Base" fill="#404040" stroke="#2a2a2a" stroke-width="8">
+        <circle cx="46" cy="46" r="46" stroke="none"/>
+        <circle cx="46" cy="46" r="42" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Top_Alt" data-name="Button - Top Alt" transform="translate(22 22)">
+      <g id="Button_-_Top" data-name="Button - Top" fill="#5b5b5b" stroke="#404040" stroke-width="8">
+        <circle cx="38" cy="38" r="38" stroke="none"/>
+        <circle cx="38" cy="38" r="34" fill="none"/>
+      </g>
+    </g>
+    <circle id="Ellipse_22" data-name="Ellipse 22" cx="38" cy="38" r="38" transform="translate(22 22)" fill="lime"/>
+    <g id="Mask_Group_4" data-name="Mask Group 4" clip-path="url(#clip-path)">
+      <g id="g4146" transform="translate(23.716 26.388)">
+        <path id="path4148" d="M32.7,69.464A35.907,35.907,0,0,1,16.72,63.8c-4.04-2.636-4.952-3.719-4.952-5.881,0-4.343,4.776-11.951,12.946-20.623,4.64-4.925,11.1-10.7,11.8-10.542,1.359.3,12.223,10.9,16.29,15.89,6.432,7.889,9.388,14.348,7.886,17.228-1.142,2.189-8.227,6.467-13.432,8.111A39.481,39.481,0,0,1,32.7,69.464ZM6.312,53.4C2.955,48.249,1.259,43.179.44,35.846c-.27-2.421-.173-3.806.614-8.776A35.94,35.94,0,0,1,9.8,9.3c1.805-1.878,1.967-1.924,4.167-1.183,2.672.9,5.526,2.871,9.952,6.873L26.5,17.324l-1.41,1.732C18.547,27.1,11.637,38.5,9.033,45.549c-1.416,3.834-1.987,7.682-1.378,9.284.411,1.082.034.678-1.344-1.434Zm58.925.876c.332-1.619-.088-4.592-1.071-7.591-2.129-6.494-9.245-18.576-15.779-26.79l-2.057-2.586,2.225-2.043a46.993,46.993,0,0,1,7.1-5.623,13.67,13.67,0,0,1,5.228-2.018c.651,0,2.941,2.377,4.79,4.971a37.683,37.683,0,0,1,6.037,13.956,46.457,46.457,0,0,1,.111,13.554,42.721,42.721,0,0,1-2.7,8.519,45.616,45.616,0,0,1-3.687,6.317c-.451.574-.452.573-.2-.666ZM33.289,6.4A44.764,44.764,0,0,0,23.054,2.781a18.748,18.748,0,0,0-3.415-.192c-2.12.107-2.025,0,1.376-1.61A34.97,34.97,0,0,1,29.4-1.815a43.225,43.225,0,0,1,13.915-.018A38.83,38.83,0,0,1,54.192,2.214l.755.465-1.732-.087c-3.442-.174-8.458,1.217-13.843,3.837a28.675,28.675,0,0,1-3.14,1.4c-.1-.019-1.427-.664-2.943-1.434Z" fill="#2a2a2a"/>
+      </g>
+    </g>
+  </g>
+</svg>

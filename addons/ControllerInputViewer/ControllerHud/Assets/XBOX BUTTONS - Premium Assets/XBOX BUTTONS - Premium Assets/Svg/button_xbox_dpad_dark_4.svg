@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xbox_dpad_dark_4">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_dpad_dark_4" clip-path="url(#clip-button_xbox_dpad_dark_4)">
+    <circle id="Ellipse_45" data-name="Ellipse 45" cx="42" cy="42" r="42" transform="translate(28 18)" fill="#2a2a2a" stroke="#fff" stroke-width="4"/>
+    <path id="Subtraction_45" data-name="Subtraction 45" d="M36,72a35.987,35.987,0,0,1-11-1.712V51a4,4,0,0,0-4-4H1.712a36.2,36.2,0,0,1,0-22H21a4,4,0,0,0,4-4V1.712a36.2,36.2,0,0,1,22,0V21a4.005,4.005,0,0,0,4,4H70.289a36.2,36.2,0,0,1,0,22H51a4,4,0,0,0-4,4V70.289A35.986,35.986,0,0,1,36,72Z" transform="translate(106 96) rotate(180)" fill="#2a2a2a"/>
+    <path id="Subtraction_46" data-name="Subtraction 46" d="M36,68a37.934,37.934,0,0,1-11-1.617V47a4,4,0,0,0-4-4H1.275a32.4,32.4,0,0,1,.308-19H21a4,4,0,0,0,4-4V1.616a38.235,38.235,0,0,1,22,0V20a4,4,0,0,0,4,4H70.418a32.4,32.4,0,0,1,.307,19H51a4.005,4.005,0,0,0-4,4V66.384A37.933,37.933,0,0,1,36,68Z" transform="translate(106 92) rotate(180)" fill="#404040"/>
+    <path id="Polygon_6" data-name="Polygon 6" d="M16,0,32,16H0Z" transform="translate(6 76) rotate(-90)" fill="#fff"/>
+    <path id="Subtraction_48" data-name="Subtraction 48" d="M23.726,25.873H4v-19H23.418a32.262,32.262,0,0,1,1.582,10,32.315,32.315,0,0,1-1.274,9Z" transform="translate(59 74.873) rotate(180)" fill="#5b5b5b"/>
+    <rect id="Rectangle_198" data-name="Rectangle 198" width="19" height="2" rx="1" transform="translate(56 49) rotate(90)" fill="#5b5b5b"/>
+  </g>
+</svg>

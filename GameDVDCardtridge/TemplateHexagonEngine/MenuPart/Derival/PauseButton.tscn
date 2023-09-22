@@ -1,43 +1,54 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://bsgde7qqbhmnp"]
 
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=2]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/PauseIcon.svg.png" type="Texture2D" id=4]
-[ext_resource path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" type="Texture2D" id=5]
+[ext_resource type="PackedScene" uid="uid://51sbr10oqbi7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" id="1"]
+[ext_resource type="FontFile" uid="uid://rok8q2shibm4" path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" id="2"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.gd" id="3"]
+[ext_resource type="Shortcut" uid="uid://byx0i46vx6bfx" path="res://modules/Reusables/Shortcuts/pauseButton_shortcut.tres" id="3_tegpe"]
+[ext_resource type="Texture2D" uid="uid://df5vgorit1p4v" path="res://Sprites/PauseIcon.svg.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cwjtcgtbai6vi" path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" id="5"]
 
-[sub_resource type="FontFile" id=1]
+[sub_resource type="FontFile" id="1"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
-size = 48
-outline_size = 1
-outline_color = Color( 0.129412, 0, 0.219608, 1 )
-font_data = ExtResource( 2 )
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[node name="PauseButton" instance=ExtResource( 1 )]
-custom_minimum_size = Vector2( 250, 50 )
+[node name="PauseButton" instance=ExtResource("1")]
+custom_minimum_size = Vector2(250, 50)
 focus_mode = 0
-theme_override_fonts/font = SubResource( 1 )
-script = ExtResource( 3 )
-IconOfIt = ExtResource( 4 )
-TextureImage = ExtResource( 5 )
+theme_override_fonts/font = SubResource("1")
+shortcut = ExtResource("3_tegpe")
+script = ExtResource("3")
+IconOfIt = ExtResource("4")
+TextureImage = ExtResource("5")
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
 visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 5 )
-expand = true
+texture = ExtResource("5")
+expand_mode = 1
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="HBoxContainer" parent="." index="1"]
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Icon" parent="HBoxContainer" index="0"]
-offset_right = 109.0
-texture = ExtResource( 4 )
+layout_mode = 2
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" parent="HBoxContainer" index="1"]
-offset_left = 117.0
-theme_override_fonts/font = SubResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("1")
 text = "Pause"

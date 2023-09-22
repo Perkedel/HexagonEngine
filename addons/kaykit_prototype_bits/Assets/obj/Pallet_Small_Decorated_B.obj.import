@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpn26bpn4ayxq"
+path="res://.godot/imported/Pallet_Small_Decorated_B.obj-676e65c34296c5db8f54b4c3f7817ea4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pallet_Small_Decorated_B.obj-676e65c34296c5db8f54b4c3f7817ea4.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/Pallet_Small_Decorated_B.obj"
+dest_files=["res://.godot/imported/Pallet_Small_Decorated_B.obj-676e65c34296c5db8f54b4c3f7817ea4.mesh", "res://.godot/imported/Pallet_Small_Decorated_B.obj-676e65c34296c5db8f54b4c3f7817ea4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

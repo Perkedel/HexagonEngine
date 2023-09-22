@@ -1,0 +1,4 @@
+[gd_resource type="InputEventAction" format=3 uid="uid://7jqtsaaqmm2q"]
+
+[resource]
+action = &"ui_pause"

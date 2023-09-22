@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duxs4olwg5rla"
+path="res://.godot/imported/Wall_Window_Closed.obj-1b0657b5ee84495d6d9e2655f0eb32a1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Window_Closed.obj-1b0657b5ee84495d6d9e2655f0eb32a1.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/Wall_Window_Closed.obj"
+dest_files=["res://.godot/imported/Wall_Window_Closed.obj-1b0657b5ee84495d6d9e2655f0eb32a1.mesh", "res://.godot/imported/Wall_Window_Closed.obj-1b0657b5ee84495d6d9e2655f0eb32a1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dqrb1557fqlbm"
+path="res://.godot/imported/book_place_2.ogg-47e4b83ab93d0e5f35574596fe7e8d02.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney rpg audio/book_place_2.ogg"
+dest_files=["res://.godot/imported/book_place_2.ogg-47e4b83ab93d0e5f35574596fe7e8d02.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

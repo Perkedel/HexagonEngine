@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0bciufv40wji"
+path="res://.godot/imported/kill_her.ogg-8598f21be24d45fc9570cc9f0730ea15.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/kill_her.ogg"
+dest_files=["res://.godot/imported/kill_her.ogg-8598f21be24d45fc9570cc9f0730ea15.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

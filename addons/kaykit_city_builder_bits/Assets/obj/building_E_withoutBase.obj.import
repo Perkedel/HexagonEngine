@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://boifltocgys6m"
+path="res://.godot/imported/building_E_withoutBase.obj-194fd79af11a3ece7c95ce5ad52cb535.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building_E_withoutBase.obj-194fd79af11a3ece7c95ce5ad52cb535.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/building_E_withoutBase.obj"
+dest_files=["res://.godot/imported/building_E_withoutBase.obj-194fd79af11a3ece7c95ce5ad52cb535.mesh", "res://.godot/imported/building_E_withoutBase.obj-194fd79af11a3ece7c95ce5ad52cb535.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

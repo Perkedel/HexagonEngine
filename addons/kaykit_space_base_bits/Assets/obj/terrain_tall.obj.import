@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcximxun4j6oy"
+path="res://.godot/imported/terrain_tall.obj-117338673b01c22af90d827fa1be41b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/terrain_tall.obj-117338673b01c22af90d827fa1be41b1.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/terrain_tall.obj"
+dest_files=["res://.godot/imported/terrain_tall.obj-117338673b01c22af90d827fa1be41b1.mesh", "res://.godot/imported/terrain_tall.obj-117338673b01c22af90d827fa1be41b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

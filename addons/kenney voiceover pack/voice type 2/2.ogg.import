@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://np2vihpw4q66"
+path="res://.godot/imported/2.ogg-7adc1910a21c1312e4f4e5ba9bb36137.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/2.ogg"
+dest_files=["res://.godot/imported/2.ogg-7adc1910a21c1312e4f4e5ba9bb36137.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcd3o4xy6v0uv"
+path="res://.godot/imported/fight.ogg-e8fab08ad37a7d2eccc09bd9fdd1ffe2.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/fight.ogg"
+dest_files=["res://.godot/imported/fight.ogg-e8fab08ad37a7d2eccc09bd9fdd1ffe2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

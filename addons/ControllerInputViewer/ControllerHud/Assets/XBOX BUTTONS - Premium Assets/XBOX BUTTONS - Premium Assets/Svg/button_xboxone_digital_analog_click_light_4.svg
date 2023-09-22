@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xboxone_digital_analog_click_light_4">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xboxone_digital_analog_click_light_4" clip-path="url(#clip-button_xboxone_digital_analog_click_light_4)">
+    <g id="Border_white_-_outer" data-name="Border white - outer" transform="translate(10 10)">
+      <g id="Border_white_-_outer-2" data-name="Border white - outer" fill="none" stroke="#fff" stroke-width="4">
+        <ellipse cx="50" cy="45" rx="50" ry="45" stroke="none"/>
+        <ellipse cx="50" cy="45" rx="48" ry="43" fill="none"/>
+      </g>
+    </g>
+    <g id="Border_white_-_inner" data-name="Border white - inner" transform="translate(18 17)">
+      <g id="Border_white_-_inner-2" data-name="Border white - inner" fill="none" stroke="#fff" stroke-width="4">
+        <circle cx="37.5" cy="37.5" r="37.5" stroke="none"/>
+        <circle cx="37.5" cy="37.5" r="39.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Base" data-name="Button - Base" transform="translate(40 77)">
+      <g id="Button_-_Base-2" data-name="Button - Base" fill="#2a2a2a" stroke="#fff" stroke-width="4">
+        <ellipse cx="20" cy="15.5" rx="20" ry="15.5" stroke="none"/>
+        <ellipse cx="20" cy="15.5" rx="22" ry="17.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Base-3" data-name="Button - Base" transform="translate(40 77)">
+      <ellipse id="Button_-_Base-4" data-name="Button - Base" cx="20" cy="15.5" rx="20" ry="15.5" fill="#2a2a2a"/>
+    </g>
+    <rect id="Rectangle_215" data-name="Rectangle 215" width="40" height="26" transform="translate(40 67)" fill="#2a2a2a"/>
+    <g id="Button_-_Base-5" data-name="Button - Base" transform="translate(14 14)">
+      <g id="Button_-_Base-6" data-name="Button - Base" fill="#404040" stroke="#2a2a2a" stroke-width="10">
+        <ellipse cx="46" cy="41" rx="46" ry="41" stroke="none"/>
+        <ellipse cx="46" cy="41" rx="41" ry="36" fill="none"/>
+      </g>
+    </g>
+    <g id="Button_-_Top" data-name="Button - Top" transform="translate(18 14)">
+      <path id="Button_-_Top-2" data-name="Button - Top" d="M42,0C65.2,0,84,16.156,84,36.086S65.2,72.173,42,72.173,0,56.016,0,36.086C0,26.2,4.626,17.244,12.3,10.569,19.734,4.1,30.309,0,42,0Z" fill="#404040"/>
+    </g>
+    <g id="Button_-_Top_Alt" data-name="Button - Top Alt" transform="translate(22 17)">
+      <g id="Button_-_Top-3" data-name="Button - Top" fill="#5b5b5b" stroke="#404040" stroke-width="8">
+        <ellipse cx="38" cy="34" rx="38" ry="34" stroke="none"/>
+        <ellipse cx="38" cy="34" rx="34" ry="30" fill="none"/>
+      </g>
+    </g>
+    <path id="Path_160" data-name="Path 160" d="M-10.867-4.585h7.98V0H-16.852V-24.745h5.985Zm28.525-2.38a6.822,6.822,0,0,1-1,3.605A7.035,7.035,0,0,1,13.72-.735a10.358,10.358,0,0,1-4.707.98,11.087,11.087,0,0,1-6.86-2.03,7.355,7.355,0,0,1-2.94-5.67h6.37a3.362,3.362,0,0,0,1,2.205,3.069,3.069,0,0,0,2.188.8,2.539,2.539,0,0,0,1.82-.63,2.205,2.205,0,0,0,.665-1.68A2.169,2.169,0,0,0,10.64-8.33,4.8,4.8,0,0,0,9.118-9.363q-.91-.4-2.52-.963a30.939,30.939,0,0,1-3.833-1.557A7.058,7.058,0,0,1,.21-14.123,6.482,6.482,0,0,1-.857-17.99a6.512,6.512,0,0,1,1.12-3.815,7.12,7.12,0,0,1,3.1-2.468,11.3,11.3,0,0,1,4.533-.858,10.161,10.161,0,0,1,6.562,1.96A7.479,7.479,0,0,1,17.2-17.78H10.728a3.321,3.321,0,0,0-.892-1.943,2.625,2.625,0,0,0-1.943-.718,2.5,2.5,0,0,0-1.7.56,2.056,2.056,0,0,0-.648,1.645,2.089,2.089,0,0,0,.577,1.488,4.4,4.4,0,0,0,1.453,1q.875.385,2.52.98a27.7,27.7,0,0,1,3.885,1.592,7.432,7.432,0,0,1,2.59,2.293A6.549,6.549,0,0,1,17.658-6.965Z" transform="translate(60 62)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://daa3mwiqe8s2j"
+path="res://.godot/imported/war_reloading.ogg-75313ab85ec6916804856291cbc6aa46.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_reloading.ogg"
+dest_files=["res://.godot/imported/war_reloading.ogg-75313ab85ec6916804856291cbc6aa46.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwh08afacntp2"
+path="res://.godot/imported/chips_collide_4.ogg-9907ac08442c60cc2595ed95028e3ecd.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney casino audio/chips_collide_4.ogg"
+dest_files=["res://.godot/imported/chips_collide_4.ogg-9907ac08442c60cc2595ed95028e3ecd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

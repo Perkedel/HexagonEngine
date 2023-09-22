@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqfhj1gs0pjyv"
+path="res://.godot/imported/low_random.ogg-d3e6929f93ebcf064d751836ddb9f545.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/low_random.ogg"
+dest_files=["res://.godot/imported/low_random.ogg-d3e6929f93ebcf064d751836ddb9f545.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

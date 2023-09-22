@@ -1,13 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy0tn2gj8kmdj"]
+[gd_scene load_steps=4 format=3 uid="uid://cy0tn2gj8kmdj"]
 
 [ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_5orq1"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_3qyhp"]
+[ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/yet_stupid.tscn" id="2_5uxn4"]
+[ext_resource type="PackedScene" uid="uid://dbxwcmi5bhtwr" path="res://DummyTest/yet_flour.tscn" id="3_y1hng"]
 
 [node name="InitLevelBaseAdded" instance=ExtResource("1_5orq1")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
-mesh = SubResource("PlaneMesh_3qyhp")
-
-[node name="Camera3D" type="Camera3D" parent="." index="1"]
+[node name="Camera3D" type="Camera3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1, 2)
+
+[node name="YetStupid" parent="." index="1" instance=ExtResource("2_5uxn4")]
+
+[node name="YetFlour" parent="." index="2" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="YetFlour3" parent="." index="3" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -4)
+
+[node name="YetFlour2" parent="." index="4" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 4)

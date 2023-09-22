@@ -14,7 +14,17 @@ extends Node
 
 @export_subgroup('Startup')
 @export var StartFromGameHUD: bool = true
-@export_enum('MainMenu','Gameplay') var StartFromWhere:String = 'MainMenu'
+@export_enum('MainMenu','Gameplay', 'Pause','Custom','CheckSaveMain', 'SaveMenu', 'LevelMenu', 'OOBE', 'Exit') var StartFromWhere:String = 'MainMenu'
+var currentWhere:String = 'MainMenu'
+var prevWhere:String = 'MainMenu'
+
+@export_subgroup('Commands')
+@export_enum("Go to gameplay", 'Select Level', 'Select Save') var PressPlayTo:String = 'Go to gameplay'
+
+@export_subgroup('Parameters')
+@export var useDedicatedPause:bool = false
+@export var PausingWillFreeze:bool = false
+@export var PausingWillLeadsTo:String = 'MainMenu' #or 'Pause' for dedicated
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -25,8 +35,11 @@ signal Shutdown_Exec()
 enum CanvasLayerMode {Usual = 1, Priority = 10}
 
 func SaveEverythingFirst():
-	Kixlonzing.SaveKixlonz()
-	Settingers.SettingSave()
+	# Save this DVD data
+	
+#	Kixlonzing.SaveKixlonz()
+#	Settingers.SettingSave()
+	pass
 
 func ChangeTheDVDnow():
 	print("Change Da DVD")
@@ -44,6 +57,19 @@ func loadLevel(ofThis:PackedScene)->Node:
 	levelInstance = ofThis.instantiate()
 	LevelSpacer.add_child(levelInstance)
 	return levelInstance
+	pass
+
+func changeMenu(to:String = 'MainMenu'):
+	prevWhere = currentWhere
+	UIplace.changeMenu(to)
+	match(to):
+		'MainMenu':
+			pass
+		'Gameplay':
+			pass
+		_:
+			pass
+	currentWhere = to
 	pass
 
 # Called when the node enters the scene tree for the first time.
@@ -64,11 +90,60 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func pressAMenuButton(whichIs:String,Argument:String):
+func _input(event: InputEvent) -> void:
+	if event is InputEvent:
+		if Input.is_action_just_pressed("ui_pause"):
+			
+			pass
+		
+		if event.is_action_pressed('ui_pause'):
+			match(currentWhere):
+				'MainMenu':
+					print('main Play')
+					Singletoner.pressAMenuButton('Play')
+				'Pause':
+					Singletoner.pressAMenuButton('Play')
+					pass
+				'Gameplay':
+					Singletoner.pressAMenuButton('Pause')
+					pass
+				_:
+					pass
+			pass
+		elif event.is_action_pressed('ui_cancel'):
+			match(currentWhere):
+				'MainMenu':
+					print('main Play')
+					Singletoner.pressAMenuButton('Play')
+				'Pause':
+					Singletoner.pressAMenuButton('Play')
+					pass
+				'Gameplay':
+					pass
+				'ConfirmQuit':
+					Singletoner.pressAMenuButton('CancelQuit')
+					pass
+				_:
+					pass
+			pass
+		pass
+	pass
+
+func pressAMenuButton(whichIs:String='MainMenu',Argument:String=''):
 	#print('Menu Press: ' + whichIs + ' ' + Argument)
 	match(whichIs):
 		'Play':
-			#print('Playe')
+			print('Playe')
+			match(PressPlayTo):
+				'Go to gameplay':
+					changeMenu('Gameplay')
+					pass
+				'Select level':
+					pass
+				'Select save':
+					pass
+				_:
+					pass
 			pass
 		'Options':
 			pass
@@ -76,7 +151,8 @@ func pressAMenuButton(whichIs:String,Argument:String):
 			pass
 		'Exit':
 			print('exit')
-			UIplace.changePauseMainMenuNavigator(1)
+			#UIplace.changePauseMainMenuNavigator(1)
+			changeMenu('ConfirmQuit')
 			pass
 		'Shutdown':
 			ShutdownHexagonEngineNow()
@@ -85,7 +161,22 @@ func pressAMenuButton(whichIs:String,Argument:String):
 			pass
 		'CancelQuit':
 			print('Cancel Quit')
-			UIplace.changePauseMainMenuNavigator(0)
+			#UIplace.changePauseMainMenuNavigator(0)
+			changeMenu('MainMenu')
+		'Pause':
+			print('poaus')
+			changeMenu(PausingWillLeadsTo)
+			pass
+		_:
+			pass
+	pass
+
+func closeRequest():
+	Singletoner.pressAMenuButton('Exit')
+	pass
+
+func _notification(what: int) -> void:
+	match(what):
 		_:
 			pass
 	pass

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://okdlmsp1rek4"
+path="res://.godot/imported/war_rpg.ogg-c4618c5d962e8c31c6557618faf2978a.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/war_rpg.ogg"
+dest_files=["res://.godot/imported/war_rpg.ogg-c4618c5d962e8c31c6557618faf2978a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bw5oucwchltd8"
+path="res://.godot/imported/car_sedan.obj-dcd1cc565b787464eeb2b4f8927abe3c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car_sedan.obj-dcd1cc565b787464eeb2b4f8927abe3c.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/car_sedan.obj"
+dest_files=["res://.godot/imported/car_sedan.obj-dcd1cc565b787464eeb2b4f8927abe3c.mesh", "res://.godot/imported/car_sedan.obj-dcd1cc565b787464eeb2b4f8927abe3c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

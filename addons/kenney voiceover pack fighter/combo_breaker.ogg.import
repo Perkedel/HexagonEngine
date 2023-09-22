@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8w4ruvxgraic"
+path="res://.godot/imported/combo_breaker.ogg-0a112d058e9ed08f941afaec757a2a8c.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/combo_breaker.ogg"
+dest_files=["res://.godot/imported/combo_breaker.ogg-0a112d058e9ed08f941afaec757a2a8c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

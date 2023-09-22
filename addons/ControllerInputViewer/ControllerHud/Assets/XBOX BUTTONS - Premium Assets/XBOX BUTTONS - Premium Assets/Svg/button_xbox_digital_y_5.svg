@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_75" data-name="Rectangle 75" width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_digital_y_5" clip-path="url(#clip-path)">
+    <g id="button_xbox_digital_y_5-2" data-name="button_xbox_digital_y_5">
+      <g id="Button_-_XBOX_Y" data-name="Button - XBOX Y" clip-path="url(#clip-path)">
+        <g id="Border_white_-_outer" data-name="Border white - outer" transform="translate(14 14)">
+          <g id="Border_white_-_outer-2" data-name="Border white - outer" fill="none" stroke="#fff" stroke-width="2">
+            <circle cx="46" cy="46" r="46" stroke="none"/>
+            <circle cx="46" cy="46" r="45" fill="none"/>
+          </g>
+        </g>
+        <g id="Border_white_-_inner" data-name="Border white - inner" transform="translate(14 14)">
+          <g id="Border_white_-_inner-2" data-name="Border white - inner" fill="none" stroke="#fff" stroke-width="4">
+            <circle cx="46" cy="46" r="46" stroke="none"/>
+            <circle cx="46" cy="46" r="48" fill="none"/>
+          </g>
+        </g>
+        <g id="Button_-_Base" data-name="Button - Base" transform="translate(14 14)">
+          <circle id="Button_-_Base-2" data-name="Button - Base" cx="46" cy="46" r="46" fill="#995700"/>
+        </g>
+        <g id="Button_-_Top" data-name="Button - Top" transform="translate(22.292 22.292)">
+          <circle id="Button_-_Top-2" data-name="Button - Top" cx="38" cy="38" r="38" transform="translate(-0.292 -0.292)" fill="#f9b003"/>
+        </g>
+        <path id="Path_138" data-name="Path 138" d="M0-22.676,8.042-38.549h8.807L4.061-15V0H-4.061V-14.739l-12.788-23.81h8.859Z" transform="translate(60 78)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

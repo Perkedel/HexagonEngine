@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2h6pus36ujsk"]
+
+[ext_resource type="Texture2D" uid="uid://bp58drjdgvxsi" path="res://addons/controller_icons/assets/key/enter_alt.png" id="1_0ws47"]
+[ext_resource type="Script" path="res://addons/controller_icons/objects/Button.gd" id="1_w56lv"]
+
+[node name="controller_icons_button" type="Button"]
+offset_right = 802.0
+offset_bottom = 222.0
+focus_mode = 1
+theme_override_font_sizes/font_size = 32
+text = "Action Here"
+icon = ExtResource("1_0ws47")
+script = ExtResource("1_w56lv")
+path = "ui_accept"

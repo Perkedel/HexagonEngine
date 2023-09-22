@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3wpvd7pywag2"
+path="res://.godot/imported/hold.ogg-940a49af7a73906e94829d7e3075800c.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/hold.ogg"
+dest_files=["res://.godot/imported/hold.ogg-940a49af7a73906e94829d7e3075800c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,41 +1,52 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://51sbr10oqbi7"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
-[ext_resource path="res://Sprites/KembaliButton.png" type="Texture2D" id=2]
-
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://dwrhftlu2sx4h" path="res://Sprites/KembaliButton.png" id="2"]
+[ext_resource type="Shortcut" uid="uid://dbrkw7aok5lb5" path="res://modules/Reusables/Shortcuts/backButton_shortcut.tres" id="2_co4vl"]
+[ext_resource type="PackedScene" uid="uid://v4h8jy3avyi7" path="res://addons/controller_icons/objects/controller_icons_textureRect.tscn" id="4_kjpkx"]
 
 [node name="BackButton" type="Button"]
+custom_minimum_size = Vector2(250, 0)
 offset_right = 250.0
 offset_bottom = 100.0
-custom_minimum_size = Vector2( 250, 0 )
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_fonts/font = ExtResource("1")
+shortcut = ExtResource("2_co4vl")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
 [node name="Icon" type="TextureRect" parent="HBoxContainer"]
-offset_right = 123.0
-offset_bottom = 100.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-offset_left = 127.0
-offset_top = 18.0
-offset_right = 250.0
-offset_bottom = 81.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 24
 text = "Back"
-align = 1
-valign = 1
+
+[node name="controller_icons_textureRect" parent="HBoxContainer" instance=ExtResource("4_kjpkx")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OverlayingGlyph" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true

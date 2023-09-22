@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gmh7yqbfs4k6"
+path="res://.godot/imported/bush.obj-1f49e5fd2df69f620add828376edd317.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bush.obj-1f49e5fd2df69f620add828376edd317.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/bush.obj"
+dest_files=["res://.godot/imported/bush.obj-1f49e5fd2df69f620add828376edd317.mesh", "res://.godot/imported/bush.obj-1f49e5fd2df69f620add828376edd317.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

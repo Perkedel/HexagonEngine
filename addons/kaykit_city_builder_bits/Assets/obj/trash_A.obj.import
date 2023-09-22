@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8urlaxbp12cr"
+path="res://.godot/imported/trash_A.obj-02efaca5ea7f755b8d17b23423eaacd6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trash_A.obj-02efaca5ea7f755b8d17b23423eaacd6.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/trash_A.obj"
+dest_files=["res://.godot/imported/trash_A.obj-02efaca5ea7f755b8d17b23423eaacd6.mesh", "res://.godot/imported/trash_A.obj-02efaca5ea7f755b8d17b23423eaacd6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

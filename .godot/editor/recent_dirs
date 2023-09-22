@@ -1,12 +1,14 @@
+res://DummyTest
+res://modules/Reusables
+res://Scripts
+res://modules/Reusables/Shortcuts
 res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/ButtonGroup
 res://Theme
 res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base
-res://Scripts
 res://
 res://GameDVDCardtridge/ManOfCoyote
 C:/Program Files/Blender Foundation/Blender 3.5
 C:/Users/Joel Robert Justiawa/Documents/Kolmorotzzet (kolmorotshitt)/Artistic Setups/electron
-res://DummyTest
 res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart
 res://font/ubuntu-font-family-0.83
 W:/starring codes/Godot Projects/HexagonEngine/font/ubuntu-font-family-0.83
@@ -18,5 +20,3 @@ res://font/fonts-DSEG/DSEG14-Classic
 res://font/fonts-DSEG/DSEG14-Classic-MINI
 res://font/fonts-DSEG/DSEG7-Modern
 res://font/fonts-DSEG/DSEG14-Modern
-res://font/fonts-DSEG/DSEG7-Classic
-res://font/fonts-DSEG/DSEG7-Classic-MINI

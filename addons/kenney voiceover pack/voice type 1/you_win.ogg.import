@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://co8m6g52x13eg"
+path="res://.godot/imported/you_win.ogg-c57fae055b1e98b979670992a54f5bbc.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/you_win.ogg"
+dest_files=["res://.godot/imported/you_win.ogg-c57fae055b1e98b979670992a54f5bbc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

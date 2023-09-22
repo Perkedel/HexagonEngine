@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmk6ligy24off"
+path="res://.godot/imported/cactus_small_B.obj-3361fe707253be1faa15e5dcea686c5d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cactus_small_B.obj-3361fe707253be1faa15e5dcea686c5d.mesh"]
+
+source_file="res://addons/kaykit_furniture_bits/Assets/obj/cactus_small_B.obj"
+dest_files=["res://.godot/imported/cactus_small_B.obj-3361fe707253be1faa15e5dcea686c5d.mesh", "res://.godot/imported/cactus_small_B.obj-3361fe707253be1faa15e5dcea686c5d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

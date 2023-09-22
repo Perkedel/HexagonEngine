@@ -1,104 +1,117 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://c0eoc7t42s2c1"]
 
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd" type="Script" id=1]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" type="FontFile" id=3]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn" type="PackedScene" id=6]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bsgde7qqbhmnp" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn" id="2"]
+[ext_resource type="FontFile" uid="uid://rok8q2shibm4" path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" id="3"]
+[ext_resource type="PackedScene" uid="uid://bj1u67tn3p2m2" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b13kt0res6iyf" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bvvme5uagols7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn" id="6"]
 
-[sub_resource type="FontFile" id=1]
+[sub_resource type="FontFile" id="FontFile_r348x"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
-size = 48
-outline_size = 1
-outline_color = Color( 0.129412, 0, 0.219608, 1 )
-font_data = ExtResource( 3 )
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
 
 [node name="GameplayUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")
+
+[node name="TotalCenterContains" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CrossHaire" type="TextureRect" parent="TotalCenterContains"]
+layout_mode = 2
+mouse_filter = 2
 
 [node name="TotalVBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 alignment = 1
 
 [node name="TopVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
-offset_right = 1920.0
-offset_bottom = 354.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="TopButtonings" type="HBoxContainer" parent="TotalVBoxContainer/TopVBoxContainer"]
-offset_right = 1920.0
-offset_bottom = 67.0
-custom_minimum_size = Vector2( 0, 50 )
-mouse_filter = 2
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 alignment = 1
 
-[node name="PauseButton" parent="TotalVBoxContainer/TopVBoxContainer/TopButtonings" instance=ExtResource( 2 )]
-offset_left = 835.0
-offset_right = 1085.0
-offset_bottom = 67.0
+[node name="PauseButton" parent="TotalVBoxContainer/TopVBoxContainer/TopButtonings" instance=ExtResource("2")]
+layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("FontFile_r348x")
+shortcut = null
 
 [node name="CenterContainer" type="CenterContainer" parent="TotalVBoxContainer"]
-offset_top = 362.0
-offset_right = 1920.0
-offset_bottom = 716.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="CrossHaire" type="TextureRect" parent="TotalVBoxContainer/CenterContainer"]
-offset_left = 960.0
-offset_top = 177.0
-offset_right = 960.0
-offset_bottom = 177.0
 mouse_filter = 2
 
 [node name="BottomVBoxContainer" type="VBoxContainer" parent="TotalVBoxContainer"]
-offset_top = 724.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+mouse_filter = 2
 alignment = 2
 
 [node name="MeserckanStatus" type="HBoxContainer" parent="TotalVBoxContainer/BottomVBoxContainer"]
-offset_top = 243.0
-offset_right = 1920.0
-offset_bottom = 298.0
-custom_minimum_size = Vector2( 0, 50 )
-mouse_filter = 2
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 alignment = 1
 
-[node name="CoineCounter" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 5 )]
+[node name="CoineCounter" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource("5")]
+layout_mode = 2
 mouse_filter = 2
 
 [node name="MeserckSpacer" type="Control" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus"]
-offset_left = 408.0
-offset_right = 1512.0
-offset_bottom = 55.0
-mouse_filter = 2
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="WeponContaine" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource( 6 )]
 mouse_filter = 2
 
-[node name="HPbar" parent="TotalVBoxContainer/BottomVBoxContainer" instance=ExtResource( 4 )]
+[node name="WeponContaine" parent="TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus" instance=ExtResource("6")]
+layout_mode = 2
 mouse_filter = 2
+
+[node name="HPbar" parent="TotalVBoxContainer/BottomVBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+mouse_filter = 2
+
+[connection signal="button_up" from="TotalVBoxContainer/TopVBoxContainer/TopButtonings/PauseButton" to="." method="_on_pause_button_button_up"]
 [connection signal="pressed" from="TotalVBoxContainer/TopVBoxContainer/TopButtonings/PauseButton" to="." method="_on_PauseButton_pressed"]

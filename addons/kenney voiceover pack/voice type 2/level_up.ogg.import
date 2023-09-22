@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byvrprqtne4xw"
+path="res://.godot/imported/level_up.ogg-4933bbc5bfafb8b67b3eccb3affe7eba.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 2/level_up.ogg"
+dest_files=["res://.godot/imported/level_up.ogg-4933bbc5bfafb8b67b3eccb3affe7eba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

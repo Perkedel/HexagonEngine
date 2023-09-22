@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqxh8tsjasyyq"
+path="res://.godot/imported/war_medic.ogg-0f82e448becc06f1fe0c4b410ee5d7d0.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_medic.ogg"
+dest_files=["res://.godot/imported/war_medic.ogg-0f82e448becc06f1fe0c4b410ee5d7d0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

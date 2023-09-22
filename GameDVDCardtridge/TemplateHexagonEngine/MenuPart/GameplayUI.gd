@@ -1,8 +1,8 @@
 extends Control
 
-@export (float, 0, 100) var HPlevel = 100
-@export (Texture2D) var ScoreIcon
-@export (float) var ScoreNumber = 2000
+@export_range(0,100) var HPlevel:float = 100
+@export var ScoreIcon:Texture2D
+@export var ScoreNumber:float = 2000
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -19,8 +19,20 @@ func _process(delta):
 	$TotalVBoxContainer/BottomVBoxContainer/HPbar.HPvalue = HPlevel
 	pass
 
-signal PressPauseButton()
-func _on_PauseButton_pressed():
+func pressThePause():
 	print("Press Pause Button")
 	emit_signal("PressPauseButton")
+	Singletoner.pressAMenuButton('Pause')
+	pass
+
+signal PressPauseButton()
+func _on_PauseButton_pressed():
+	if visible:
+		pressThePause()
+		pass
+	pass # Replace with function body.
+
+
+func _on_pause_button_button_up() -> void:
+	
 	pass # Replace with function body.

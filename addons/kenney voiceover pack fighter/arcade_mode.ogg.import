@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c21ugq8bj0fa4"
+path="res://.godot/imported/arcade_mode.ogg-749cdefa13746c35cebf811239e33681.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/arcade_mode.ogg"
+dest_files=["res://.godot/imported/arcade_mode.ogg-749cdefa13746c35cebf811239e33681.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

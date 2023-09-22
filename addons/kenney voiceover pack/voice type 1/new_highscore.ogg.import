@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dn01i8fe1b4ob"
+path="res://.godot/imported/new_highscore.ogg-8927da201b9f7d8c3d7004f779f9ea5a.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/new_highscore.ogg"
+dest_files=["res://.godot/imported/new_highscore.ogg-8927da201b9f7d8c3d7004f779f9ea5a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

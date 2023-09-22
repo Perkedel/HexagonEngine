@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://durcomx1xcql"
+path="res://.godot/imported/lamp_table.obj-c3af47f98401c19c1deec94872a85d6d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lamp_table.obj-c3af47f98401c19c1deec94872a85d6d.mesh"]
+
+source_file="res://addons/kaykit_furniture_bits/Assets/obj/lamp_table.obj"
+dest_files=["res://.godot/imported/lamp_table.obj-c3af47f98401c19c1deec94872a85d6d.mesh", "res://.godot/imported/lamp_table.obj-c3af47f98401c19c1deec94872a85d6d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

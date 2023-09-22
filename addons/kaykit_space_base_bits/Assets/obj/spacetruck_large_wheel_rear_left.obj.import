@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2q5blrtk6mt7"
+path="res://.godot/imported/spacetruck_large_wheel_rear_left.obj-cec3cefef3d85c8d49f67ebf7eeebe5e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spacetruck_large_wheel_rear_left.obj-cec3cefef3d85c8d49f67ebf7eeebe5e.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/spacetruck_large_wheel_rear_left.obj"
+dest_files=["res://.godot/imported/spacetruck_large_wheel_rear_left.obj-cec3cefef3d85c8d49f67ebf7eeebe5e.mesh", "res://.godot/imported/spacetruck_large_wheel_rear_left.obj-cec3cefef3d85c8d49f67ebf7eeebe5e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

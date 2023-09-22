@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5fjry5lsypus"
+path="res://.godot/imported/phaser_down_3.ogg-7cf90d23e724f10a961d2fd7aa60d781.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/phaser_down_3.ogg"
+dest_files=["res://.godot/imported/phaser_down_3.ogg-7cf90d23e724f10a961d2fd7aa60d781.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

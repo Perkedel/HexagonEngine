@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bd7eth8gwacrf"
+path="res://.godot/imported/battle_mode.ogg-cba3a71f01bd420743e2674edd0084d6.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/battle_mode.ogg"
+dest_files=["res://.godot/imported/battle_mode.ogg-cba3a71f01bd420743e2674edd0084d6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

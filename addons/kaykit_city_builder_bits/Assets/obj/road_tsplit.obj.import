@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://deuy8dv7f741g"
+path="res://.godot/imported/road_tsplit.obj-f9dd92881f88718619a4fa6459517210.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_tsplit.obj-f9dd92881f88718619a4fa6459517210.mesh"]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/obj/road_tsplit.obj"
+dest_files=["res://.godot/imported/road_tsplit.obj-f9dd92881f88718619a4fa6459517210.mesh", "res://.godot/imported/road_tsplit.obj-f9dd92881f88718619a4fa6459517210.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://nhb2athb0vwq"
+path="res://.godot/imported/sudden_death.ogg-05c7f91ff0e965e3f5f48e7eb4a97875.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/sudden_death.ogg"
+dest_files=["res://.godot/imported/sudden_death.ogg-05c7f91ff0e965e3f5f48e7eb4a97875.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -34,7 +34,7 @@ var Prev2DSpaceLevel
 @export var LevelBannerThumbnail: Texture2D
 @export var LevelTitleg: String
 # https://docs.godotengine.org/en/latest/getting_started/scripting/gdscript/gdscript_basics.html#exports
-@export var LevelDescription # (String, MULTILINE)
+@export_multiline var LevelDescription:String # (String, MULTILINE)
 
 #Stop here. Pls manage Status HUD Bar now!
 @export var a2DSpaceReportHP: bool = false
@@ -42,14 +42,14 @@ var Prev2DSpaceLevel
 @export var a2DSpaceReportScore: bool = false
 @export var a3DSpaceReportScore: bool = false
 
-@export (float) var See3DHP = 100
-@export (float) var See2DHP = 100
-@export (float) var See3DScore = 0
-@export (float) var See2DScore = 0
+@export var See3DHP:float = 100
+@export var See2DHP:float = 100
+@export var See3DScore:float = 0
+@export var See2DScore:float = 0
 
-@export (float) var emitHP = 100
-@export (float) var emitScore = 2000
-@export (Texture2D) var emitScoreIcon
+@export var emitHP:float = 100
+@export var emitScore:float = 2000
+@export var emitScoreIcon:Texture2D
 
 var Sub3DLoadValue
 var Sub3DLoadInclude = false

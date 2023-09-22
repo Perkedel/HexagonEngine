@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbxwcmi5bhtwr"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjljo7bqdob48" path="res://addons/kaykit_prototype_bits/Assets/obj/Floor_Prototype.obj" id="1_8m3pi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5ry4"]
+size = Vector3(4.03674, 1.00953, 3.95164)
+
+[node name="YetFlour" type="StaticBody3D"]
+
+[node name="Flour" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8m3pi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_v5ry4")

@@ -1,35 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://b13kt0res6iyf"]
 
-[ext_resource path="res://fonts/Built/Ubuntu_M_48tred.tres" type="FontFile" id=1]
-[ext_resource path="res://Sprites/MavrickleIcon.png" type="Texture2D" id=2]
-[ext_resource path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.gd" type="Script" id=3]
-
+[ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://b4sqfbtfve41n" path="res://Sprites/MavrickleIcon.png" id="2"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.gd" id="3"]
 
 [node name="CoineCounter" type="HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
 offset_right = 400.0
 offset_bottom = 55.0
-custom_minimum_size = Vector2( 400, 0 )
 size_flags_vertical = 3
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("3")
 
 [node name="CoineIcon" type="TextureRect" parent="."]
-offset_right = 50.0
-offset_bottom = 55.0
-custom_minimum_size = Vector2( 50, 50 )
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource( 2 )
-expand = true
+texture = ExtResource("2")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="CoineCountLabel" type="Label" parent="."]
-offset_left = 58.0
-offset_right = 400.0
-offset_bottom = 55.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "2000"
-valign = 1

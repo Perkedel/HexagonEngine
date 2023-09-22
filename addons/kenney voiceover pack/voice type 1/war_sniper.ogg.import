@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c68wi4xv3dbop"
+path="res://.godot/imported/war_sniper.ogg-3e1f6478c9c31c45f6fff5a50f06868f.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack/voice type 1/war_sniper.ogg"
+dest_files=["res://.godot/imported/war_sniper.ogg-3e1f6478c9c31c45f6fff5a50f06868f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

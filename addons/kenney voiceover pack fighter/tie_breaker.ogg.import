@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7xgmd8s6lb2f"
+path="res://.godot/imported/tie_breaker.ogg-cb6c391f4fcfb6b6f7ec2e45f7185e73.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney voiceover pack fighter/tie_breaker.ogg"
+dest_files=["res://.godot/imported/tie_breaker.ogg-cb6c391f4fcfb6b6f7ec2e45f7185e73.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

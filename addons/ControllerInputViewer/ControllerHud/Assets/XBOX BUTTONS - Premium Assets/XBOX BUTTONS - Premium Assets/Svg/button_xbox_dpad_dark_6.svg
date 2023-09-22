@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clip-button_xbox_dpad_dark_6">
+      <rect width="120" height="120"/>
+    </clipPath>
+  </defs>
+  <g id="button_xbox_dpad_dark_6" clip-path="url(#clip-button_xbox_dpad_dark_6)">
+    <circle id="Ellipse_45" data-name="Ellipse 45" cx="42" cy="42" r="42" transform="translate(18 18)" fill="#2a2a2a" stroke="#fff" stroke-width="4"/>
+    <path id="Subtraction_45" data-name="Subtraction 45" d="M36,72a35.987,35.987,0,0,1-11-1.712V51a4,4,0,0,0-4-4H1.712a36.2,36.2,0,0,1,0-22H21a4,4,0,0,0,4-4V1.712a36.2,36.2,0,0,1,22,0V21a4.005,4.005,0,0,0,4,4H70.289a36.2,36.2,0,0,1,0,22H51a4,4,0,0,0-4,4V70.289A35.986,35.986,0,0,1,36,72Z" transform="translate(96 96) rotate(180)" fill="#2a2a2a"/>
+    <path id="Subtraction_46" data-name="Subtraction 46" d="M36,68a37.934,37.934,0,0,1-11-1.617V47a4,4,0,0,0-4-4H1.275a32.4,32.4,0,0,1,.308-19H21a4,4,0,0,0,4-4V1.616a38.235,38.235,0,0,1,22,0V20a4,4,0,0,0,4,4H70.418a32.4,32.4,0,0,1,.307,19H51a4.005,4.005,0,0,0-4,4V66.384A37.933,37.933,0,0,1,36,68Z" transform="translate(96 92) rotate(180)" fill="#404040"/>
+    <path id="Polygon_8" data-name="Polygon 8" d="M12,0,24,12H0Z" transform="translate(72 120) rotate(180)" fill="#fff"/>
+    <path id="Polygon_9" data-name="Polygon 9" d="M12,0,24,12H0Z" transform="translate(48 0)" fill="#fff"/>
+    <path id="Subtraction_48" data-name="Subtraction 48" d="M-4955-1045h-22v-19.384a37.9,37.9,0,0,1,11-1.616,37.929,37.929,0,0,1,11,1.617V-1045Z" transform="translate(5026 1090)" fill="#5b5b5b"/>
+    <rect id="Rectangle_197" data-name="Rectangle 197" width="22" height="2" rx="1" transform="translate(71 46) rotate(-180)" fill="#5b5b5b"/>
+    <path id="Subtraction_48-2" data-name="Subtraction 48" d="M-4966-996a36.919,36.919,0,0,1-11-1.663V-1015h22v17.336A36.933,36.933,0,0,1-4966-996Z" transform="translate(5026 1090)" fill="#5b5b5b"/>
+    <rect id="Rectangle_200" data-name="Rectangle 200" width="22" height="5" rx="1" transform="translate(71 77) rotate(-180)" fill="#5b5b5b"/>
+  </g>
+</svg>

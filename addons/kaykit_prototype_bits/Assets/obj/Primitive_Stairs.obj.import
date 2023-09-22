@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b538m5axt6lxw"
+path="res://.godot/imported/Primitive_Stairs.obj-ec80596d719d32ed536f78c589ad5fbb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Stairs.obj-ec80596d719d32ed536f78c589ad5fbb.mesh"]
+
+source_file="res://addons/kaykit_prototype_bits/Assets/obj/Primitive_Stairs.obj"
+dest_files=["res://.godot/imported/Primitive_Stairs.obj-ec80596d719d32ed536f78c589ad5fbb.mesh", "res://.godot/imported/Primitive_Stairs.obj-ec80596d719d32ed536f78c589ad5fbb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

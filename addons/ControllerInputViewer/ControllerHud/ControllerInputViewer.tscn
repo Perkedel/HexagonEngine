@@ -1,0 +1,691 @@
+[gd_scene load_steps=111 format=3 uid="uid://cp86cgijep8rg"]
+
+[ext_resource type="Script" path="res://addons/ControllerInputViewer/ControllerHud/ControllerInputViewer.gd" id="1_3qlrj"]
+[ext_resource type="Texture2D" uid="uid://bvx1n86kv4772" path="res://ControllerHud/Assets/BoxMenu.svg" id="2_6urt5"]
+[ext_resource type="Texture2D" uid="uid://lk6hb6e1hxkf" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross 1.png" id="4_hs6k2"]
+[ext_resource type="Texture2D" uid="uid://bmxaphwi8ohut" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross White 2 Pressed.png" id="5_rcqno"]
+[ext_resource type="Texture2D" uid="uid://csy1nem3gy5cj" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_a_1.png" id="6_ky141"]
+[ext_resource type="Texture2D" uid="uid://b2jnsxtatxlrt" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_b.png" id="6_wdaot"]
+[ext_resource type="Texture2D" uid="uid://cjpurhy1asuvp" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_b_1.png" id="7_1v15d"]
+[ext_resource type="Texture2D" uid="uid://d0xjlmw5kdgkr" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_a_9.png" id="7_hweai"]
+[ext_resource type="Texture2D" uid="uid://j4dn1wq04esd" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle 1.png" id="10_mxykp"]
+[ext_resource type="Texture2D" uid="uid://64biubocsp05" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle White 2 Pressed.png" id="11_klrkx"]
+[ext_resource type="Texture2D" uid="uid://6bs160styp5" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_b_1.png" id="12_fx8gt"]
+[ext_resource type="Texture2D" uid="uid://b1s5yf1uapxhb" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_a.png" id="12_ja65i"]
+[ext_resource type="Texture2D" uid="uid://u0kc2xeshqx4" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_a_1.png" id="13_6yj1i"]
+[ext_resource type="Texture2D" uid="uid://jrb14hc4vyyp" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_b_9.png" id="13_rb4gd"]
+[ext_resource type="Texture2D" uid="uid://d06ynfarji6v6" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square 1.png" id="16_mrq6f"]
+[ext_resource type="Texture2D" uid="uid://3c3kyu4rw43e" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square White 2 Pressed.png" id="17_p1bcm"]
+[ext_resource type="Texture2D" uid="uid://6awh7b42ravh" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_x_1.png" id="18_qsi6y"]
+[ext_resource type="Texture2D" uid="uid://bee0r3t3l6dg3" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_y.png" id="18_tk3e6"]
+[ext_resource type="Texture2D" uid="uid://x8xmycm1uv88" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_x_9.png" id="19_d1xyu"]
+[ext_resource type="Texture2D" uid="uid://d2a17eabjh228" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_y_1.png" id="19_hklvq"]
+[ext_resource type="Texture2D" uid="uid://cyhptwkmi3eb4" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 1.png" id="22_vqhb7"]
+[ext_resource type="Texture2D" uid="uid://dgadnwgsqva3y" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle White 2 Pressed.png" id="23_er7s0"]
+[ext_resource type="Texture2D" uid="uid://cb6f3iqocd0am" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_x.png" id="24_qwkek"]
+[ext_resource type="Texture2D" uid="uid://cdpwupttuc476" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_y_1.png" id="24_qxies"]
+[ext_resource type="Texture2D" uid="uid://3n1kj3ir5eoc" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_y_9.png" id="25_05dei"]
+[ext_resource type="Texture2D" uid="uid://7lyafb81njf7" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_x_1.png" id="25_seqqu"]
+[ext_resource type="Texture2D" uid="uid://cebgbrr6pdemx" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1 – 2.svg" id="28_lagdv"]
+[ext_resource type="Texture2D" uid="uid://bxm7fegw6c028" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_sl.png" id="28_mm81i"]
+[ext_resource type="Texture2D" uid="uid://57girirnadoq" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_sl_alt.png" id="29_fccpa"]
+[ext_resource type="Texture2D" uid="uid://cnmobqbk5qg4w" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1.svg" id="29_rt4o2"]
+[ext_resource type="Texture2D" uid="uid://dcpqfcg7jplmc" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_dark_1.png" id="30_sw7wo"]
+[ext_resource type="Texture2D" uid="uid://blyc3beare68c" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_light_1.png" id="31_7an0o"]
+[ext_resource type="Texture2D" uid="uid://bevf8akay4lry" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1 – 2.png" id="34_qjx3h"]
+[ext_resource type="Texture2D" uid="uid://h5nn6tygx8bv" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1.png" id="35_ndet1"]
+[ext_resource type="Texture2D" uid="uid://bsa7tyihoevly" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_dark_2.png" id="36_n7gw5"]
+[ext_resource type="Texture2D" uid="uid://d1tq0551usbr1" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_sr.png" id="36_nvgou"]
+[ext_resource type="Texture2D" uid="uid://bwguo26cq0q7v" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_light_2.png" id="37_2o3nv"]
+[ext_resource type="Texture2D" uid="uid://esakd70e1i6c" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_sr_alt.png" id="37_toc8k"]
+[ext_resource type="Texture2D" uid="uid://b7clruiiwfg05" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_zl.png" id="40_fecxa"]
+[ext_resource type="Texture2D" uid="uid://bujy5dusx3wdp" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2 – 2.svg" id="40_k2r3s"]
+[ext_resource type="Texture2D" uid="uid://bcmsw20fpiny5" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_zl_alt.png" id="41_lyccd"]
+[ext_resource type="Texture2D" uid="uid://obw0pil5x6hp" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2.svg" id="41_yyfpf"]
+[ext_resource type="Texture2D" uid="uid://caxldlpawrvse" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_dark_1.png" id="42_xkv2u"]
+[ext_resource type="Texture2D" uid="uid://cl507rtp67s0r" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_zr.png" id="42_yusr5"]
+[ext_resource type="Texture2D" uid="uid://dp0pyuohkieba" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_light_1.png" id="43_fvnqx"]
+[ext_resource type="Texture2D" uid="uid://08ifpq0n31n5" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_zr_alt.png" id="43_kkufo"]
+[ext_resource type="Texture2D" uid="uid://d0a6olrbc36ec" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2 – 2.svg" id="46_2jh6f"]
+[ext_resource type="Texture2D" uid="uid://gieuj7o4hcwu" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_+.png" id="46_utqhu"]
+[ext_resource type="Texture2D" uid="uid://djcvb8fbm8ow7" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2.svg" id="47_fjkmd"]
+[ext_resource type="Texture2D" uid="uid://w3i72fegn1wt" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_+2.png" id="47_i5uix"]
+[ext_resource type="Texture2D" uid="uid://u12xxm2ewebp" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_dark_2.png" id="48_2rqps"]
+[ext_resource type="Texture2D" uid="uid://sjtiywnhtucr" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_light_2.png" id="49_jfej1"]
+[ext_resource type="Texture2D" uid="uid://djfgjiyaqc5sa" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_-.png" id="50_r5sji"]
+[ext_resource type="Texture2D" uid="uid://dx3jl7fr7bmqj" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_-2.png" id="51_qmwbq"]
+[ext_resource type="Texture2D" uid="uid://bwute7remlp8j" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_menu_2.png" id="52_p70hm"]
+[ext_resource type="Texture2D" uid="uid://bpbpbpe0rf5v" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Options.png" id="52_s6vwb"]
+[ext_resource type="Texture2D" uid="uid://cwxxnhh5mxit4" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Options - Pressed.png" id="53_c7wat"]
+[ext_resource type="Texture2D" uid="uid://cpyarrru7tvme" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_menu_2 - Not Pressed.png" id="54_yn7xs"]
+[ext_resource type="Texture2D" uid="uid://bs3pksa4svwmg" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Share.png" id="58_6kp46"]
+[ext_resource type="Texture2D" uid="uid://ci3aj7e2ee7ml" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Share - Pressed.png" id="59_yflje"]
+[ext_resource type="Texture2D" uid="uid://bmvnphjuf5ubn" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_view_2 - Not Pressed.png" id="60_br5qo"]
+[ext_resource type="Texture2D" uid="uid://b053eh6pml3w3" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_view_2.png" id="61_8x77d"]
+[ext_resource type="Texture2D" uid="uid://j8d77ugkxyu7" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_directional 1 – 1.png" id="64_eawyo"]
+[ext_resource type="Texture2D" uid="uid://cylpkwcstsom" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalBase.png" id="64_ejbho"]
+[ext_resource type="Texture2D" uid="uid://cnnojgi6ymi76" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadBase.png" id="65_8u0dw"]
+[ext_resource type="Texture2D" uid="uid://bf0rcf8dqsmos" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalUp.png" id="67_ejme0"]
+[ext_resource type="Texture2D" uid="uid://cm3p3jwtsxj3w" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_directional 1 – 2.png" id="67_tg2m4"]
+[ext_resource type="Texture2D" uid="uid://bhc7resdjhky" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadUp.png" id="68_mpgaa"]
+[ext_resource type="Texture2D" uid="uid://c8gyd6vsa2fss" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalDown.png" id="70_6rcqw"]
+[ext_resource type="Texture2D" uid="uid://djvnrmxll7dan" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_directional 1 – 4.png" id="70_tuis0"]
+[ext_resource type="Texture2D" uid="uid://b6rp46p5ntkxi" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadDown.png" id="71_y6n6v"]
+[ext_resource type="Texture2D" uid="uid://bspgpoxsbfy2n" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalLeft.png" id="73_g6ff3"]
+[ext_resource type="Texture2D" uid="uid://cfpxqi1g0pbfn" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_directional 1 – 5.png" id="73_o7exb"]
+[ext_resource type="Texture2D" uid="uid://bj7mudfljih72" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadLeft.png" id="74_23urw"]
+[ext_resource type="Texture2D" uid="uid://broviukdac5wi" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/button_switch_digital_directional 1 – 3.png" id="76_biwq7"]
+[ext_resource type="Texture2D" uid="uid://dlcnk4jey28h6" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalRight.png" id="76_pbrag"]
+[ext_resource type="Texture2D" uid="uid://xnp547ae157k" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadRight.png" id="77_21uhb"]
+[ext_resource type="Texture2D" uid="uid://dxhh5yoosxqft" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Blank/button_xboxone_analog_blank.png" id="79_21sb7"]
+[ext_resource type="Texture2D" uid="uid://jhht7yy87srj" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue L Inputs/Button - PS Analogue L Not Pressed.png" id="80_jewl6"]
+[ext_resource type="Texture2D" uid="uid://c7dhs4mkio0ch" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue L Inputs/Button - PS Analogue L.png" id="81_o1ami"]
+[ext_resource type="Texture2D" uid="uid://dig7e88wtc2b2" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Left/button_xbox_analog_l Not Pressed.png" id="82_7s4ss"]
+[ext_resource type="Texture2D" uid="uid://dxvluo4rcb881" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/Analogue L.png" id="83_4y2yf"]
+[ext_resource type="Texture2D" uid="uid://df3w4cbxnn4fl" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Left/button_xbox_analog_l.png" id="83_tmh0q"]
+[ext_resource type="Texture2D" uid="uid://cdrey7751qsyh" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/Analogue L unpressed.png" id="84_gtwsi"]
+[ext_resource type="Texture2D" uid="uid://d3ohc8jula0kp" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue R Inputs/Button - PS Analogue R Not pressed.png" id="86_j4ia0"]
+[ext_resource type="Texture2D" uid="uid://b8jjdv5rexs58" path="res://ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue R Inputs/Button - PS Analogue R.png" id="87_40tfn"]
+[ext_resource type="Texture2D" uid="uid://dri3ah44tcvm0" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Right/button_xbox_analog_r Not Pressed.png" id="88_q5qhx"]
+[ext_resource type="Texture2D" uid="uid://dbffu74rutufm" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/Analogue R.png" id="89_7up0b"]
+[ext_resource type="Texture2D" uid="uid://b2icw3mah5bc" path="res://ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Right/button_xbox_analog_r.png" id="89_sfjmy"]
+[ext_resource type="Texture2D" uid="uid://nnn11hi4wxb6" path="res://ControllerHud/Assets/Switch Buttons Package/PNG/Resize/iloveimg-resized (1)/Analogue R unpressed.png" id="90_a11lm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i8oa"]
+size = Vector2(128, 129)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkr38"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0r24"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3opj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhkbt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wj88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hs6k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rcqno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ky141")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hweai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wdaot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1v15d")
+}],
+"loop": true,
+"name": &"A",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_mxykp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_klrkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fx8gt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rb4gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ja65i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6yj1i")
+}],
+"loop": true,
+"name": &"B",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mrq6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p1bcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qsi6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d1xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tk3e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hklvq")
+}],
+"loop": true,
+"name": &"X",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_vqhb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_er7s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qxies")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_05dei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qwkek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_seqqu")
+}],
+"loop": true,
+"name": &"Y",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efyjc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_rt4o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lagdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7an0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sw7wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mm81i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fccpa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yhur1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_ndet1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qjx3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_2o3nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_n7gw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nvgou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_toc8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i06c1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_yyfpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_k2r3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_fvnqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xkv2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_fecxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lyccd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ds8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_fjkmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2jh6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jfej1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_2rqps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yusr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_kkufo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjseb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_s6vwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_c7wat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_p70hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_yn7xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_utqhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_i5uix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw5by"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_6kp46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_yflje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8x77d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_br5qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_r5sji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_qmwbq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84lkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("64_ejbho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_8u0dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eawyo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppis1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_ejme0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_mpgaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_tg2m4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnemr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_6rcqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_y6n6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_tuis0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j13la"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_g6ff3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_23urw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_o7exb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh1pd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("76_pbrag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_21uhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_biwq7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qcvuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("79_21sb7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwy0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_jewl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_o1ami")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_7s4ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_tmh0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_gtwsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_4y2yf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4myqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_j4ia0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_40tfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_q5qhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_sfjmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_a11lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_7up0b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ControllerHud" type="CharacterBody2D"]
+position = Vector2(140, 140)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_3qlrj")
+metadata/_edit_vertical_guides_ = [27.0]
+
+[node name="Box" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.545098)
+light_mask = 0
+scale = Vector2(1.69531, 1.69531)
+texture = ExtResource("2_6urt5")
+
+[node name="Area2d" type="Area2D" parent="Box"]
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Box/Area2d"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8i8oa")
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(-73.262, -37.463)
+scale = Vector2(0.3, 0.3)
+
+[node name="ConsoleButton" type="Button" parent="Buttons"]
+offset_left = -62.46
+offset_top = -191.79
+offset_right = 553.54
+offset_bottom = -99.79
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dkr38")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0r24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o3opj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhkbt")
+text = "Console Switcher"
+icon_alignment = 1
+
+[node name="Vibration" type="Button" parent="Buttons"]
+offset_left = -29.46
+offset_top = 368.21
+offset_right = 519.54
+offset_bottom = 460.21
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dkr38")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j0r24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o3opj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhkbt")
+text = "Vibration"
+icon_alignment = 1
+
+[node name="XAButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(-42, -42)
+scale = Vector2(0.233333, 0.233333)
+sprite_frames = SubResource("SpriteFrames_4wj88")
+animation = &"A"
+
+[node name="SquareXButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(54, -42)
+scale = Vector2(0.233333, 0.233333)
+sprite_frames = SubResource("SpriteFrames_4wj88")
+animation = &"X"
+
+[node name="CircleBButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(150, -42)
+scale = Vector2(0.233333, 0.233333)
+sprite_frames = SubResource("SpriteFrames_4wj88")
+animation = &"B"
+
+[node name="TriangleYButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(246, -42)
+scale = Vector2(0.233333, 0.233333)
+sprite_frames = SubResource("SpriteFrames_4wj88")
+animation = &"Y"
+
+[node name="L1LBButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(-42.46, 54.8766)
+sprite_frames = SubResource("SpriteFrames_efyjc")
+
+[node name="R1RBButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(246, 51.543)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_yhur1")
+
+[node name="L2LTButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(-42, 134.877)
+sprite_frames = SubResource("SpriteFrames_i06c1")
+
+[node name="R2RTButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(246, 134.877)
+sprite_frames = SubResource("SpriteFrames_3ds8w")
+
+[node name="StartButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(150, 60)
+scale = Vector2(0.244, 0.244)
+sprite_frames = SubResource("SpriteFrames_tjseb")
+
+[node name="SelectButton" type="AnimatedSprite2D" parent="Buttons"]
+position = Vector2(54, 60)
+scale = Vector2(0.244, 0.244)
+sprite_frames = SubResource("SpriteFrames_yw5by")
+
+[node name="Dpad" type="Node2D" parent="Buttons"]
+position = Vector2(103.862, 240.749)
+scale = Vector2(0.403, 0.403)
+
+[node name="Base" type="AnimatedSprite2D" parent="Buttons/Dpad"]
+sprite_frames = SubResource("SpriteFrames_84lkm")
+
+[node name="Up" type="AnimatedSprite2D" parent="Buttons/Dpad"]
+sprite_frames = SubResource("SpriteFrames_ppis1")
+
+[node name="Down" type="AnimatedSprite2D" parent="Buttons/Dpad"]
+sprite_frames = SubResource("SpriteFrames_bnemr")
+
+[node name="Left" type="AnimatedSprite2D" parent="Buttons/Dpad"]
+sprite_frames = SubResource("SpriteFrames_j13la")
+
+[node name="Right" type="AnimatedSprite2D" parent="Buttons/Dpad"]
+sprite_frames = SubResource("SpriteFrames_bh1pd")
+
+[node name="LeftTrigger" type="Label" parent="Buttons"]
+offset_left = -89.0
+offset_top = 185.0
+offset_right = 4.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 33
+text = "0,00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightTrigger" type="Label" parent="Buttons"]
+offset_left = 207.54
+offset_top = 184.877
+offset_right = 300.54
+offset_bottom = 237.877
+theme_override_font_sizes/font_size = 33
+text = "0,00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LAnalog" type="Node2D" parent="."]
+position = Vector2(58.5, -29.181)
+scale = Vector2(0.131, 0.131)
+
+[node name="Base" type="AnimatedSprite2D" parent="LAnalog"]
+sprite_frames = SubResource("SpriteFrames_qcvuo")
+
+[node name="Thumb" type="AnimatedSprite2D" parent="LAnalog"]
+sprite_frames = SubResource("SpriteFrames_jwy0x")
+
+[node name="RAnalog" type="Node2D" parent="."]
+position = Vector2(58.5, 38.79)
+scale = Vector2(0.131, 0.131)
+
+[node name="Base" type="AnimatedSprite2D" parent="RAnalog"]
+sprite_frames = SubResource("SpriteFrames_qcvuo")
+
+[node name="Thumb" type="AnimatedSprite2D" parent="RAnalog"]
+sprite_frames = SubResource("SpriteFrames_4myqm")
+
+[connection signal="input_event" from="Box/Area2d" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="Buttons/ConsoleButton" to="." method="_on_console_button_pressed"]
+[connection signal="pressed" from="Buttons/Vibration" to="." method="_on_vibration_pressed"]

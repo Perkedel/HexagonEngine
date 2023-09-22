@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wp66tu76nqka"
+path="res://.godot/imported/windturbine_low_fan.obj-0ef4c7b1e49fb7dfcf3b2d4d8787e7af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/windturbine_low_fan.obj-0ef4c7b1e49fb7dfcf3b2d4d8787e7af.mesh"]
+
+source_file="res://addons/kaykit_space_base_bits/Assets/obj/windturbine_low_fan.obj"
+dest_files=["res://.godot/imported/windturbine_low_fan.obj-0ef4c7b1e49fb7dfcf3b2d4d8787e7af.mesh", "res://.godot/imported/windturbine_low_fan.obj-0ef4c7b1e49fb7dfcf3b2d4d8787e7af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bolmcdt6otqsr"
+path="res://.godot/imported/two_tone_2.ogg-2b7c0efcb6df2ea63f92ecf1728a83c1.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/kenney digital audio/two_tone_2.ogg"
+dest_files=["res://.godot/imported/two_tone_2.ogg-2b7c0efcb6df2ea63f92ecf1728a83c1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
