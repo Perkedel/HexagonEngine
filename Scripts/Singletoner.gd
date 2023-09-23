@@ -12,6 +12,9 @@ var andScronchMe
 @export var mainNode:Node
 @export var dvdNode:Node
 
+var currentMenu:String = 'MainMenu'
+var prevMenu:String = 'MainMenu'
+
 # Singleton. Ahlinya Intinya inti, Core of the core. 
 
 # Set main Node. Therefore softwares can refer through this singletoner if they want to call Hexagon Engine Core stuffs
@@ -36,6 +39,17 @@ func pressAMenuButton(whichIs:String='MainMenu',Argument:String=''):
 			pass
 		pass
 	pass
+
+# Posess a character
+func addPosess(forThisNode:Node,toWhom:int=0):
+	return Posesser.addPosess(forThisNode,toWhom)
+	pass
+
+func replacePosess(withThisNode:Node,toWhom:int=0):
+		return Posesser.replacePosess(withThisNode,toWhom)
+
+func clearPosess(toWhom):
+	Posesser.clearPosess(toWhom)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

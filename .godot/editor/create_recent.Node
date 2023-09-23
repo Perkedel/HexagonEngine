@@ -1,8 +1,9 @@
+Node3D
+MeshInstance3D
 Button
 Camera3D
 CollisionShape3D
 StaticBody3D
-MeshInstance3D
 CharacterBody3D
 HBoxContainer
 ControllerTextureRect

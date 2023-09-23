@@ -70,6 +70,11 @@ func changeMenu(to:String = 'MainMenu'):
 		_:
 			pass
 	currentWhere = to
+	Singletoner.currentMenu = currentWhere
+	Singletoner.prevMenu = prevWhere
+	if levelInstance.has_method('recheckMenu'):
+		levelInstance.call('recheckMenu')
+		pass
 	pass
 
 # Called when the node enters the scene tree for the first time.

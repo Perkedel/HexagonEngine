@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dgtucdo3lt3s3"]
+[gd_scene load_steps=2 format=3 uid="uid://dgtucdo3lt3s3"]
 
-[node name="InitLevelBase" type="Node3D"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.gd" id="1_sma1r"]
+
+[node name="HexagonLevel" type="Node3D"]
+script = ExtResource("1_sma1r")

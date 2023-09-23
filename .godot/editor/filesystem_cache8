@@ -1,16 +1,16 @@
-de101585285322987959873e5426addd
-::res://::1695422268
+635a5ebb9de43a6d3e7781733c758da3
+::res://::1695497265
 ChangeDVDMenu.gd::GDScript::-1::1686667158::0::1::::<>Control<>::
 ChangeDVDMenu.tscn::PackedScene::7693107343307862914::1686727529::0::1::::<><>::res://ChangeDVDMenu.gd<>uid://cwncpq3i0a70l<>uid://4g7pi1nwsoji<>uid://ipw6bqe3n2in<>res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/MusicEnjoy/SelectFileLoadingMode.tscn<>uid://egem5djf3tnj<>res://Scenes/JustModListToLoad.tscn
 ChangeDVDv3.gd::GDScript::-1::1685182787::0::1::::<>Node<>::
 debug.log::TextFile::-1::1604999175::0::1::::<><>::
-default_bus_layout.tres::AudioBusLayout::4123663863150257744::1695383794::0::1::::<><>::
-default_env.tres::Environment::3200121395655692156::1695422268::0::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::4123663863150257744::1695427301::0::1::::<><>::
+default_env.tres::Environment::3200121395655692156::1695497265::0::1::::<><>::
 documentation.page.json::JSON::-1::1614353212::0::1::::<><>::
 DVDCartridgeSlot.gd::GDScript::-1::1685182788::0::1::::<>Node<>::
 export_presets.cfg::TextFile::-1::1695241605::0::1::::<><>::
 HexagonEngineCore.tscn::PackedScene::8708922175328222780::1687623433::0::1::::<><>::res://Scripts/HexagonEngineCore.gd<>res://GameDVDCardtridge/TemplateHexagonEngine/TemplateHexagonEngine.tscn<>res://DVDCartridgeSlot.gd<>uid://dhuumbglfhw3k
-HexagonEngineJustCore.tscn::PackedScene::2729925622996831562::1695422265::0::1::::<><>::res://Scripts/HexagonEngineJustCore.gd
+HexagonEngineJustCore.tscn::PackedScene::2729925622996831562::1695497262::0::1::::<><>::res://Scripts/HexagonEngineJustCore.gd
 icon.png::CompressedTexture2D::5028733013495190479::1563536067::1685198842::1::::<><>::
 Namety.gd::GDScript::-1::1695200431::0::1::::<>Node<>::
 Namety.tscn::PackedScene::4075176952346585413::1695200982::0::1::::<><>::res://Namety.gd<>uid://b0832dn73om8t
@@ -22,7 +22,7 @@ SUPPORTERS.md::TextFile::-1::1593858312::0::1::::<><>::
 TestoidDummy.txt::TextFile::-1::1581446681::0::1::::<><>::
 VERSION.md::TextFile::-1::1593858319::0::1::::<><>::
 ::res://addon/::1596033833
-::res://addons/::1695425490
+::res://addons/::1695427013
 ::res://addons/array_utils/::1695313960
 array_utils.gd::GDScript::-1::1695313959::0::1::::ArrayUtils<>Object<>::
 comparators.gd::GDScript::-1::1695313959::0::1::::Comparators<>RefCounted<>::
@@ -133,6 +133,797 @@ timed_bob_curve.gd::GDScript::-1::1695313728::0::1::::TimedBobCurve<>Resource<>:
 ControllerInputVIewerPlugin.gd::GDScript::-1::1695421234::0::1::::<>EditorPlugin<>::
 ControllerViewerCaller.gd::GDScript::-1::1695421234::0::1::::<>Node2D<>::
 plugin.cfg::TextFile::-1::1695421234::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/::1695435178
+ARIBL0.ttf::FontFile::9086519675803502774::1695421191::1695427072::1::::<><>::
+ControllerInputViewer.gd::GDScript::-1::1695421234::0::1::::<>Node2D<>::
+ControllerInputViewer.tscn::PackedScene::5895684614117659300::1695435178::0::1::::<><>::res://addons/ControllerInputViewer/ControllerHud/ControllerInputViewer.gd<>uid://bvx1n86kv4772::::res://addons/ControllerInputViewer/ControllerHud/Assets/BoxMenu.svg<>uid://lk6hb6e1hxkf::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross 1.png<>uid://bmxaphwi8ohut::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Cross White 2 Pressed.png<>uid://csy1nem3gy5cj::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_a_1.png<>uid://b2jnsxtatxlrt::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_b.png<>uid://cjpurhy1asuvp::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_b_1.png<>uid://d0xjlmw5kdgkr::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_a_9.png<>uid://j4dn1wq04esd::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle 1.png<>uid://64biubocsp05::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Circle White 2 Pressed.png<>uid://6bs160styp5::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_b_1.png<>uid://b1s5yf1uapxhb::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_a.png<>uid://u0kc2xeshqx4::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_a_1.png<>uid://jrb14hc4vyyp::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_b_9.png<>uid://d06ynfarji6v6::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square 1.png<>uid://3c3kyu4rw43e::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Square White 2 Pressed.png<>uid://6awh7b42ravh::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_x_1.png<>uid://bee0r3t3l6dg3::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_y.png<>uid://x8xmycm1uv88::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_x_9.png<>uid://d2a17eabjh228::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_y_1.png<>uid://cyhptwkmi3eb4::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 1.png<>uid://dgadnwgsqva3y::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle White 2 Pressed.png<>uid://cb6f3iqocd0am::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_x.png<>uid://cdpwupttuc476::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_y_1.png<>uid://3n1kj3ir5eoc::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/button_xbox_digital_y_9.png<>uid://7lyafb81njf7::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_x_1.png<>uid://cebgbrr6pdemx::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1 – 2.svg<>uid://bxm7fegw6c028::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_sl.png<>uid://57girirnadoq::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_sl_alt.png<>uid://cnmobqbk5qg4w::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L1.svg<>uid://dcpqfcg7jplmc::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_dark_1.png<>uid://blyc3beare68c::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_light_1.png<>uid://bevf8akay4lry::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1 – 2.png<>uid://h5nn6tygx8bv::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R1.png<>uid://bsa7tyihoevly::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_dark_2.png<>uid://d1tq0551usbr1::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_sr.png<>uid://bwguo26cq0q7v::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/button_xbox_digital_bumper_light_2.png<>uid://esakd70e1i6c::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_sr_alt.png<>uid://b7clruiiwfg05::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_zl.png<>uid://bujy5dusx3wdp::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2 – 2.svg<>uid://bcmsw20fpiny5::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_zl_alt.png<>uid://obw0pil5x6hp::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS L2.svg<>uid://caxldlpawrvse::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_dark_1.png<>uid://cl507rtp67s0r::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_zr.png<>uid://dp0pyuohkieba::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_light_1.png<>uid://08ifpq0n31n5::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_zr_alt.png<>uid://d0a6olrbc36ec::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2 – 2.svg<>uid://gieuj7o4hcwu::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_+.png<>uid://djcvb8fbm8ow7::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/Button - PS R2.svg<>uid://w3i72fegn1wt::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_+2.png<>uid://u12xxm2ewebp::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_dark_2.png<>uid://sjtiywnhtucr::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/button_xbox_analog_trigger_light_2.png<>uid://djfgjiyaqc5sa::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_-.png<>uid://dx3jl7fr7bmqj::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_-2.png<>uid://bwute7remlp8j::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_menu_2.png<>uid://bpbpbpe0rf5v::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Options.png<>uid://cwxxnhh5mxit4::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Options - Pressed.png<>uid://cpyarrru7tvme::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_menu_2 - Not Pressed.png<>uid://bs3pksa4svwmg::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Share.png<>uid://ci3aj7e2ee7ml::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/Button - PS Share - Pressed.png<>uid://bmvnphjuf5ubn::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_view_2 - Not Pressed.png<>uid://b053eh6pml3w3::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/button_xbox_digital_view_2.png<>uid://j8d77ugkxyu7::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_directional 1 – 1.png<>uid://cylpkwcstsom::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalBase.png<>uid://cnnojgi6ymi76::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadBase.png<>uid://bf0rcf8dqsmos::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalUp.png<>uid://cm3p3jwtsxj3w::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_directional 1 – 2.png<>uid://bhc7resdjhky::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadUp.png<>uid://c8gyd6vsa2fss::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalDown.png<>uid://djvnrmxll7dan::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_directional 1 – 4.png<>uid://b6rp46p5ntkxi::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadDown.png<>uid://bspgpoxsbfy2n::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalLeft.png<>uid://cfpxqi1g0pbfn::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_directional 1 – 5.png<>uid://bj7mudfljih72::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadLeft.png<>uid://broviukdac5wi::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/button_switch_digital_directional 1 – 3.png<>uid://dlcnk4jey28h6::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/PS DirectionalRight.png<>uid://xnp547ae157k::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/D-PadRight.png<>uid://dxhh5yoosxqft::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Blank/button_xboxone_analog_blank.png<>uid://jhht7yy87srj::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue L Inputs/Button - PS Analogue L Not Pressed.png<>uid://c7dhs4mkio0ch::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue L Inputs/Button - PS Analogue L.png<>uid://dig7e88wtc2b2::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Left/button_xbox_analog_l Not Pressed.png<>uid://dxvluo4rcb881::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/Analogue L.png<>uid://df3w4cbxnn4fl::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Left/button_xbox_analog_l.png<>uid://cdrey7751qsyh::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/Analogue L unpressed.png<>uid://d3ohc8jula0kp::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue R Inputs/Button - PS Analogue R Not pressed.png<>uid://b8jjdv5rexs58::::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue R Inputs/Button - PS Analogue R.png<>uid://dri3ah44tcvm0::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Right/button_xbox_analog_r Not Pressed.png<>uid://dbffu74rutufm::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/Analogue R.png<>uid://b2icw3mah5bc::::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Right/button_xbox_analog_r.png<>uid://nnn11hi4wxb6::::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/Analogue R unpressed.png
+::res://addons/ControllerInputViewer/ControllerHud/Assets/::1695427073
+BoxMenu.svg::CompressedTexture2D::3909470727210934547::1695421191::1695427073::1::::<><>::
+NodeIcon.svg::CompressedTexture2D::5232472703760556735::1695421191::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/::1695421191
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/::1695427075
+CHANGELOG.txt::TextFile::-1::1695421196::0::1::::<><>::
+Itch Cover - PS4 – 1.png::CompressedTexture2D::5336784059316877277::1695421199::1695427075::1::::<><>::
+Itch Media - PS4 – 2.png::CompressedTexture2D::6064214563861974595::1695421199::1695427075::1::::<><>::
+Itch Media - PS4 – 3.png::CompressedTexture2D::1736304142595797795::1695421199::1695427075::1::::<><>::
+Itch Media - PS4 – 4.png::CompressedTexture2D::656208369552115098::1695421199::1695427075::1::::<><>::
+README.txt::TextFile::-1::1695421205::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue Blank Inputs/::1695427074
+Button - PS Analogue Blank Clockwise-1.png::CompressedTexture2D::4924199191377756519::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Clockwise-1.svg::CompressedTexture2D::3754562184453947080::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Clockwise.png::CompressedTexture2D::7492937620875938238::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Clockwise.svg::CompressedTexture2D::3022212499916709370::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Counter-Clockwise 2.png::CompressedTexture2D::4607815612876255309::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Counter-Clockwise 2.svg::CompressedTexture2D::5801981816196919364::1695421191::1695427074::1::::<><>::
+Button - PS Analogue Blank Counter-Clockwise.png::CompressedTexture2D::4453117806552615342::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Counter-Clockwise.svg::CompressedTexture2D::2338127412723247569::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down Left.png::CompressedTexture2D::5113520688061277262::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down Left.svg::CompressedTexture2D::296655234722522250::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down Right.png::CompressedTexture2D::4962610178498234063::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down Right.svg::CompressedTexture2D::6944100276404788439::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down.png::CompressedTexture2D::1825800941386799518::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Down.svg::CompressedTexture2D::4965976812165372901::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Left Right.png::CompressedTexture2D::5115743396295215996::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Left Right.svg::CompressedTexture2D::8806592671021283777::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Left.png::CompressedTexture2D::68069391687940066::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Left.svg::CompressedTexture2D::4009537777106820375::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Right.png::CompressedTexture2D::3139307467411795471::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Right.svg::CompressedTexture2D::3185653208970611044::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Up Down Left Right.png::CompressedTexture2D::3735094239124562670::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Up Down Left Right.svg::CompressedTexture2D::335713716735924344::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Up Down.png::CompressedTexture2D::1319812924233995161::1695421192::1695427074::1::::<><>::
+Button - PS Analogue Blank Up Down.svg::CompressedTexture2D::6434801416045126968::1695421192::1695427073::1::::<><>::
+Button - PS Analogue Blank Up Left.png::CompressedTexture2D::6539505602370056926::1695421192::1695427073::1::::<><>::
+Button - PS Analogue Blank Up Left.svg::CompressedTexture2D::3024362702830940363::1695421192::1695427073::1::::<><>::
+Button - PS Analogue Blank Up Right.png::CompressedTexture2D::8027413908290157996::1695421192::1695427073::1::::<><>::
+Button - PS Analogue Blank Up Right.svg::CompressedTexture2D::3626106837264944011::1695421193::1695427073::1::::<><>::
+Button - PS Analogue Blank Up.png::CompressedTexture2D::2158970094359396134::1695421193::1695427074::1::::<><>::
+Button - PS Analogue Blank Up.svg::CompressedTexture2D::209867146735795960::1695421193::1695427073::1::::<><>::
+Button - PS Analogue Blank.png::CompressedTexture2D::2211302451894066345::1695421193::1695427074::1::::<><>::
+Button - PS Analogue Blank.svg::CompressedTexture2D::1746154591345306050::1695421193::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue L Inputs/::1695427074
+Button - PS Analogue L Clockwise-1.png::CompressedTexture2D::246788533190245863::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Clockwise-1.svg::CompressedTexture2D::8463708030522376961::1695421193::1695427073::1::::<><>::
+Button - PS Analogue L Clockwise.png::CompressedTexture2D::6418686956083285520::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Clockwise.svg::CompressedTexture2D::3663533621529524295::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Counter-Clockwise 2.png::CompressedTexture2D::5236160907857410930::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Counter-Clockwise 2.svg::CompressedTexture2D::2061480856809654847::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Counter-Clockwise.png::CompressedTexture2D::6504147951675020142::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Counter-Clockwise.svg::CompressedTexture2D::2903229277709626650::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Down Left.png::CompressedTexture2D::3013561746863556342::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Down Left.svg::CompressedTexture2D::5690694884441547387::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Down Right.png::CompressedTexture2D::4176833594165498328::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Down Right.svg::CompressedTexture2D::6196622809700406656::1695421193::1695427074::1::::<><>::
+Button - PS Analogue L Down.png::CompressedTexture2D::2289980708827697305::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Down.svg::CompressedTexture2D::1551545344090855253::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Left Right.png::CompressedTexture2D::4318394255281591800::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Left Right.svg::CompressedTexture2D::6707080485286792969::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Left.png::CompressedTexture2D::6184381515567010807::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Left.svg::CompressedTexture2D::2246856785104998320::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Not Pressed.png::CompressedTexture2D::646610905012607139::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Right.png::CompressedTexture2D::4574248074899290479::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Right.svg::CompressedTexture2D::3738044056603193789::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Down Left Right.png::CompressedTexture2D::3121441307871671503::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Down Left Right.svg::CompressedTexture2D::7736864081880422646::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Down.png::CompressedTexture2D::3525469318231600373::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Down.svg::CompressedTexture2D::3568013875086639707::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Left.png::CompressedTexture2D::5840557995893967055::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Left.svg::CompressedTexture2D::1124038831961864595::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Right.png::CompressedTexture2D::9069260720756328745::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up Right.svg::CompressedTexture2D::5791018928145329853::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up.png::CompressedTexture2D::6713936361071972046::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L Up.svg::CompressedTexture2D::8116949195863437428::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L.png::CompressedTexture2D::7025536202485502431::1695421194::1695427074::1::::<><>::
+Button - PS Analogue L.svg::CompressedTexture2D::7238916486480856750::1695421195::1695427074::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Analogue R Inputs/::1695427074
+Button - PS Analogue R Clockwise 2.png::CompressedTexture2D::5101378208539934769::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Clockwise 2.svg::CompressedTexture2D::6472391494397557426::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Clockwise.png::CompressedTexture2D::4788085914710888973::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Clockwise.svg::CompressedTexture2D::4819128229453395755::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Counter-Clockwise 2.png::CompressedTexture2D::4344912786790774178::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Counter-Clockwise 2.svg::CompressedTexture2D::5777266540364785936::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Counter-Clockwise.png::CompressedTexture2D::7243198064055798977::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Counter-Clockwise.svg::CompressedTexture2D::123512322423399606::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down Left.png::CompressedTexture2D::1103412630621384817::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down Left.svg::CompressedTexture2D::2101325474580560571::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down Right.png::CompressedTexture2D::1783600001176683737::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down Right.svg::CompressedTexture2D::6356344070694212241::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down.png::CompressedTexture2D::7614944742225351002::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Down.svg::CompressedTexture2D::7586197731128165705::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Left Right.png::CompressedTexture2D::8187614706810801621::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Left Right.svg::CompressedTexture2D::7232858738586305944::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Left.png::CompressedTexture2D::4774259123357011418::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Left.svg::CompressedTexture2D::7833742179195154689::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Not pressed.png::CompressedTexture2D::9153881300135453751::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Right.png::CompressedTexture2D::253427447533073302::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Right.svg::CompressedTexture2D::8630179630509292622::1695421195::1695427074::1::::<><>::
+Button - PS Analogue R Up Down Left Right.png::CompressedTexture2D::6841860060339405867::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Down Left Right.svg::CompressedTexture2D::3486810061019564310::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Down.png::CompressedTexture2D::5938086799798513644::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Down.svg::CompressedTexture2D::8916761260143862103::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Left.png::CompressedTexture2D::5896172615586674403::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Left.svg::CompressedTexture2D::7893154013989704108::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Right.png::CompressedTexture2D::2578827863131498856::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up Right.svg::CompressedTexture2D::3427220613217458747::1695421196::1695427074::1::::<><>::
+Button - PS Analogue R Up.png::CompressedTexture2D::3734405064922733241::1695421196::1695427073::1::::<><>::
+Button - PS Analogue R Up.svg::CompressedTexture2D::9058443765597661125::1695421196::1695427073::1::::<><>::
+Button - PS Analogue R.png::CompressedTexture2D::4721784883964479485::1695421196::1695427073::1::::<><>::
+Button - PS Analogue R.svg::CompressedTexture2D::3678455997596682645::1695421196::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/::1695427073
+Button - PS Directional Arrow Down 2.png::CompressedTexture2D::3907244191844459017::1695421196::1695427073::1::::<><>::
+Button - PS Directional Arrow Down 2.svg::CompressedTexture2D::2798160422651311090::1695421196::1695427073::1::::<><>::
+Button - PS Directional Arrow Down.png::CompressedTexture2D::7097116620661222504::1695421196::1695427073::1::::<><>::
+Button - PS Directional Arrow Down.svg::CompressedTexture2D::8564893668566722962::1695421196::1695427073::1::::<><>::
+Button - PS Directional Arrow Left 2.png::CompressedTexture2D::5846493802738726280::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Left 2.svg::CompressedTexture2D::2286382968595274031::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Left.png::CompressedTexture2D::8203021784078183388::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Left.svg::CompressedTexture2D::498018204776345432::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Right 2.png::CompressedTexture2D::7823799788439747255::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Right 2.svg::CompressedTexture2D::1478864168305292832::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Right.png::CompressedTexture2D::1806325451485644102::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Right.svg::CompressedTexture2D::7603975443484012256::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Up 2.png::CompressedTexture2D::8403322151596810613::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Up 2.svg::CompressedTexture2D::1490901784997547872::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Up.png::CompressedTexture2D::7351421668909143249::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrow Up.svg::CompressedTexture2D::8151984035980971314::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows 2.png::CompressedTexture2D::1489082484570206934::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows 2.svg::CompressedTexture2D::8235571587309816400::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows Down 2.png::CompressedTexture2D::4933827304240441324::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows Down 2.svg::CompressedTexture2D::4416833443612460138::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows Down.png::CompressedTexture2D::346333152071555569::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows Down.svg::CompressedTexture2D::2411703778087689066::1695421197::1695427073::1::::<><>::
+Button - PS Directional Arrows Left 2.png::CompressedTexture2D::8554761177355073063::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Left 2.svg::CompressedTexture2D::7539453371352105678::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Left.png::CompressedTexture2D::1986039371110715967::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Left.svg::CompressedTexture2D::6283462760727872160::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Right 2.png::CompressedTexture2D::9158336159156559963::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Right 2.svg::CompressedTexture2D::819716696992733850::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Right.png::CompressedTexture2D::5967896023780264049::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Right.svg::CompressedTexture2D::777365945080246448::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Up 2.png::CompressedTexture2D::1443582954453344370::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Up 2.svg::CompressedTexture2D::4843749578393470019::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Up.png::CompressedTexture2D::1930394032850243427::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows Up.svg::CompressedTexture2D::1621747942868090943::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows.png::CompressedTexture2D::3437744027189540975::1695421198::1695427073::1::::<><>::
+Button - PS Directional Arrows.svg::CompressedTexture2D::2927859996055261765::1695421198::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Directional Arrows/PS Directional/::1695427073
+PS DirectionalBase.png::CompressedTexture2D::190617986537395496::1695421198::1695427073::1::::<><>::
+PS DirectionalDown.png::CompressedTexture2D::7102923700657391714::1695421198::1695427073::1::::<><>::
+PS DirectionalLeft.png::CompressedTexture2D::3681177396030555579::1695421198::1695427073::1::::<><>::
+PS DirectionalRight.png::CompressedTexture2D::7936276802746099241::1695421198::1695427073::1::::<><>::
+PS DirectionalUp.png::CompressedTexture2D::2790010419953302990::1695421198::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/::1695427073
+Button - PS Blank 1.png::CompressedTexture2D::7709313764302326422::1695421199::1695427073::1::::<><>::
+Button - PS Blank 1.svg::CompressedTexture2D::8103136890972273802::1695421199::1695427073::1::::<><>::
+Button - PS Blank 2.png::CompressedTexture2D::6547685353487192082::1695421199::1695427073::1::::<><>::
+Button - PS Blank 2.svg::CompressedTexture2D::3853204278047213523::1695421199::1695427073::1::::<><>::
+Button - PS Circle 1.png::CompressedTexture2D::691773314263409135::1695421199::1695427073::1::::<><>::
+Button - PS Circle 1.svg::CompressedTexture2D::6132852979168721744::1695421199::1695427073::1::::<><>::
+Button - PS Circle 2.png::CompressedTexture2D::3210168509468160360::1695421199::1695427073::1::::<><>::
+Button - PS Circle 2.svg::CompressedTexture2D::7214028505576643296::1695421199::1695427073::1::::<><>::
+Button - PS Circle White 1.png::CompressedTexture2D::5655204676867846982::1695421199::1695427073::1::::<><>::
+Button - PS Circle White 1.svg::CompressedTexture2D::2556159698514657864::1695421199::1695427073::1::::<><>::
+Button - PS Circle White 2 Pressed.png::CompressedTexture2D::2235797163642044636::1695421200::1695427073::1::::<><>::
+Button - PS Circle White 2.png::CompressedTexture2D::8668584821509878269::1695421200::1695427073::1::::<><>::
+Button - PS Circle White 2.svg::CompressedTexture2D::7985913786788656631::1695421200::1695427073::1::::<><>::
+Button - PS Cross 1.png::CompressedTexture2D::794615885521124173::1695421200::1695427073::1::::<><>::
+Button - PS Cross 1.svg::CompressedTexture2D::536394204418076252::1695421200::1695427073::1::::<><>::
+Button - PS Cross 2.png::CompressedTexture2D::8313538807581198583::1695421200::1695427073::1::::<><>::
+Button - PS Cross 2.svg::CompressedTexture2D::3725918798245469903::1695421200::1695427073::1::::<><>::
+Button - PS Cross White 1.png::CompressedTexture2D::5163170963306625650::1695421200::1695427073::1::::<><>::
+Button - PS Cross White 1.svg::CompressedTexture2D::8592552632058774531::1695421200::1695427073::1::::<><>::
+Button - PS Cross White 2 Pressed.png::CompressedTexture2D::3276194684658727639::1695421200::1695427073::1::::<><>::
+Button - PS Cross White 2.png::CompressedTexture2D::7615673691660388252::1695421200::1695427073::1::::<><>::
+Button - PS Cross White 2.svg::CompressedTexture2D::1146126945426047705::1695421200::1695427073::1::::<><>::
+Button - PS Square 1.png::CompressedTexture2D::8979459538954655573::1695421200::1695427073::1::::<><>::
+Button - PS Square 1.svg::CompressedTexture2D::4343606943280193395::1695421200::1695427073::1::::<><>::
+Button - PS Square 2.png::CompressedTexture2D::6597367684127564080::1695421200::1695427073::1::::<><>::
+Button - PS Square 2.svg::CompressedTexture2D::2530013024442332081::1695421200::1695427073::1::::<><>::
+Button - PS Square White 1.png::CompressedTexture2D::4226529439484822482::1695421200::1695427073::1::::<><>::
+Button - PS Square White 1.svg::CompressedTexture2D::470763928898836668::1695421200::1695427073::1::::<><>::
+Button - PS Square White 2 Pressed.png::CompressedTexture2D::1971135603907272208::1695421201::1695427073::1::::<><>::
+Button - PS Square White 2.png::CompressedTexture2D::1558517646633886889::1695421201::1695427073::1::::<><>::
+Button - PS Square White 2.svg::CompressedTexture2D::7038372306346476302::1695421201::1695427073::1::::<><>::
+Button - PS Triangle 1.png::CompressedTexture2D::6472770115471856047::1695421201::1695427073::1::::<><>::
+Button - PS Triangle 1.svg::CompressedTexture2D::680080163680381582::1695421201::1695427073::1::::<><>::
+Button - PS Triangle 2.png::CompressedTexture2D::22570532335567058::1695421201::1695427073::1::::<><>::
+Button - PS Triangle 2.svg::CompressedTexture2D::8850806352698369040::1695421201::1695427073::1::::<><>::
+Button - PS Triangle White 1.png::CompressedTexture2D::8755981551517151451::1695421201::1695427073::1::::<><>::
+Button - PS Triangle White 1.svg::CompressedTexture2D::911662222448368400::1695421201::1695427073::1::::<><>::
+Button - PS Triangle White 2 Pressed.png::CompressedTexture2D::7580601644829135544::1695421201::1695427073::1::::<><>::
+Button - PS Triangle White 2.png::CompressedTexture2D::1337694283600336286::1695421201::1695427073::1::::<><>::
+Button - PS Triangle White 2.svg::CompressedTexture2D::638896227502391302::1695421201::1695427073::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Other Inputs/::1695427074
+Button - PS Home 2.png::CompressedTexture2D::6823473318744955218::1695421201::1695427073::1::::<><>::
+Button - PS Home 2.svg::CompressedTexture2D::4357528172799749222::1695421201::1695427073::1::::<><>::
+Button - PS Home.png::CompressedTexture2D::4975329103572939459::1695421201::1695427073::1::::<><>::
+Button - PS Home.svg::CompressedTexture2D::5686022681425791367::1695421201::1695427073::1::::<><>::
+Button - PS Options - Pressed.png::CompressedTexture2D::6365896701777776315::1695421201::1695427073::1::::<><>::
+Button - PS Options.png::CompressedTexture2D::101242089761510397::1695421201::1695427073::1::::<><>::
+Button - PS Options.svg::CompressedTexture2D::7925092159120530636::1695421201::1695427073::1::::<><>::
+Button - PS Share - Pressed.png::CompressedTexture2D::5392172453907997667::1695421203::1695427073::1::::<><>::
+Button - PS Share.png::CompressedTexture2D::3708552005884738782::1695421203::1695427073::1::::<><>::
+Button - PS Share.svg::CompressedTexture2D::1933530143695373385::1695421203::1695427073::1::::<><>::
+Button - PS Touchpad Left.png::CompressedTexture2D::1244981797367379893::1695421203::1695427074::1::::<><>::
+Button - PS Touchpad Left.svg::CompressedTexture2D::3303064646168111886::1695421203::1695427074::1::::<><>::
+Button - PS Touchpad Right.png::CompressedTexture2D::6895730484736951280::1695421203::1695427074::1::::<><>::
+Button - PS Touchpad Right.svg::CompressedTexture2D::2294609061042675173::1695421203::1695427074::1::::<><>::
+Button - PS Touchpad.png::CompressedTexture2D::2146053924360608468::1695421203::1695427074::1::::<><>::
+Button - PS Touchpad.svg::CompressedTexture2D::1084518422752995243::1695421203::1695427074::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/R and L Inputs/::1695427074
+Button - PS Analogue Blank – 1.png::CompressedTexture2D::1567751558526217623::1695421203::1695427074::1::::<><>::
+Button - PS Analogue Blank – 1.svg::CompressedTexture2D::3793944608078603879::1695421203::1695427074::1::::<><>::
+Button - PS Analogue Blank – 2.png::CompressedTexture2D::7522987682945565044::1695421203::1695427074::1::::<><>::
+Button - PS Analogue Blank – 2.svg::CompressedTexture2D::7878780775758908167::1695421203::1695427074::1::::<><>::
+Button - PS L1 Blank – 2.png::CompressedTexture2D::6692298929632833723::1695421203::1695427074::1::::<><>::
+Button - PS L1 Blank – 2.svg::CompressedTexture2D::9137325558449920953::1695421203::1695427074::1::::<><>::
+Button - PS L1 Blank.png::CompressedTexture2D::1387253906588846714::1695421203::1695427074::1::::<><>::
+Button - PS L1 Blank.svg::CompressedTexture2D::3384764666316659501::1695421204::1695427074::1::::<><>::
+Button - PS L1 – 2.png::CompressedTexture2D::1148501861453911483::1695421204::1695427074::1::::<><>::
+Button - PS L1 – 2.svg::CompressedTexture2D::5056028128030188775::1695421204::1695427074::1::::<><>::
+Button - PS L1.png::CompressedTexture2D::4186930661985548599::1695421204::1695427074::1::::<><>::
+Button - PS L1.svg::CompressedTexture2D::5710921533835463656::1695421204::1695427074::1::::<><>::
+Button - PS L2 Blank – 2.png::CompressedTexture2D::6159530481345606460::1695421204::1695427074::1::::<><>::
+Button - PS L2 Blank – 2.svg::CompressedTexture2D::6023981297936545067::1695421204::1695427074::1::::<><>::
+Button - PS L2 Blank.png::CompressedTexture2D::1947758395205611651::1695421204::1695427074::1::::<><>::
+Button - PS L2 Blank.svg::CompressedTexture2D::8398077723425679616::1695421204::1695427074::1::::<><>::
+Button - PS L2 – 2.png::CompressedTexture2D::2095337146198951659::1695421204::1695427074::1::::<><>::
+Button - PS L2 – 2.svg::CompressedTexture2D::3810287927199666909::1695421204::1695427074::1::::<><>::
+Button - PS L2.png::CompressedTexture2D::2210910290451731073::1695421204::1695427074::1::::<><>::
+Button - PS L2.svg::CompressedTexture2D::986089408124505073::1695421204::1695427074::1::::<><>::
+Button - PS L3 – 2.png::CompressedTexture2D::2789176970154167300::1695421204::1695427074::1::::<><>::
+Button - PS L3 – 2.svg::CompressedTexture2D::5229688030254837183::1695421204::1695427074::1::::<><>::
+Button - PS L3.png::CompressedTexture2D::7163710337011629006::1695421204::1695427074::1::::<><>::
+Button - PS L3.svg::CompressedTexture2D::3107061368705428795::1695421204::1695427074::1::::<><>::
+Button - PS R1 Blank – 2.png::CompressedTexture2D::8456206589221075194::1695421204::1695427074::1::::<><>::
+Button - PS R1 Blank – 2.svg::CompressedTexture2D::7118888325181698806::1695421204::1695427074::1::::<><>::
+Button - PS R1 Blank.png::CompressedTexture2D::1548070499853009642::1695421205::1695427074::1::::<><>::
+Button - PS R1 Blank.svg::CompressedTexture2D::7541333085078280684::1695421205::1695427074::1::::<><>::
+Button - PS R1 – 2.png::CompressedTexture2D::2710890522724449134::1695421205::1695427074::1::::<><>::
+Button - PS R1 – 2.svg::CompressedTexture2D::5510033732954784102::1695421205::1695427074::1::::<><>::
+Button - PS R1.png::CompressedTexture2D::554067432989296403::1695421205::1695427074::1::::<><>::
+Button - PS R1.svg::CompressedTexture2D::4272125472910019002::1695421205::1695427074::1::::<><>::
+Button - PS R2 Blank – 2.png::CompressedTexture2D::2830724935662069053::1695421205::1695427074::1::::<><>::
+Button - PS R2 Blank – 2.svg::CompressedTexture2D::8942765960002370911::1695421205::1695427074::1::::<><>::
+Button - PS R2 Blank.png::CompressedTexture2D::5889446115045524540::1695421205::1695427074::1::::<><>::
+Button - PS R2 Blank.svg::CompressedTexture2D::8630904885674774746::1695421205::1695427074::1::::<><>::
+Button - PS R2 – 2.png::CompressedTexture2D::778528342234811363::1695421205::1695427074::1::::<><>::
+Button - PS R2 – 2.svg::CompressedTexture2D::8915890973988312934::1695421205::1695427074::1::::<><>::
+Button - PS R2.png::CompressedTexture2D::640198880513361212::1695421205::1695427074::1::::<><>::
+Button - PS R2.svg::CompressedTexture2D::7796368983029077100::1695421205::1695427074::1::::<><>::
+Button - PS R3 – 2.png::CompressedTexture2D::1986892037500114580::1695421205::1695427074::1::::<><>::
+Button - PS R3 – 2.svg::CompressedTexture2D::1928848463074757437::1695421205::1695427074::1::::<><>::
+Button - PS R3.png::CompressedTexture2D::6738614904006985139::1695421205::1695427074::1::::<><>::
+Button - PS R3.svg::CompressedTexture2D::6509625186359771497::1695421205::1695427074::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/::1695421208
+::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/::1695421206
+::res://addons/ControllerInputViewer/ControllerHud/Assets/Switch Buttons Package/PNG/Resize/::1695427074
+Analogue L unpressed.png::CompressedTexture2D::5018789778723502687::1695421206::1695427074::1::::<><>::
+Analogue L.png::CompressedTexture2D::8817661771289215880::1695421206::1695427074::1::::<><>::
+Analogue R unpressed.png::CompressedTexture2D::940129006468552541::1695421206::1695427074::1::::<><>::
+Analogue R.png::CompressedTexture2D::7240113810675996350::1695421206::1695427074::1::::<><>::
+button_switch_digital_+2.png::CompressedTexture2D::1602501444542252015::1695421206::1695427074::1::::<><>::
+button_switch_digital_+.png::CompressedTexture2D::437927190528856784::1695421206::1695427074::1::::<><>::
+button_switch_digital_+_alt.png::CompressedTexture2D::8105044964836201390::1695421206::1695427074::1::::<><>::
+button_switch_digital_-2.png::CompressedTexture2D::8831975817822019137::1695421206::1695427074::1::::<><>::
+button_switch_digital_-.png::CompressedTexture2D::7801664363977238764::1695421206::1695427074::1::::<><>::
+button_switch_digital_-_alt.png::CompressedTexture2D::3599116203092990745::1695421206::1695427074::1::::<><>::
+button_switch_digital_.png::CompressedTexture2D::4248697438285600711::1695421206::1695427074::1::::<><>::
+button_switch_digital_a.png::CompressedTexture2D::4250354090382720835::1695421206::1695427074::1::::<><>::
+button_switch_digital_a_1.png::CompressedTexture2D::1455998511994662147::1695421206::1695427074::1::::<><>::
+button_switch_digital_b.png::CompressedTexture2D::4300921564317410473::1695421207::1695427074::1::::<><>::
+button_switch_digital_b_1.png::CompressedTexture2D::5436751730711912057::1695421207::1695427074::1::::<><>::
+button_switch_digital_directional 1 – 1.png::CompressedTexture2D::700065066939721408::1695421207::1695427074::1::::<><>::
+button_switch_digital_directional 1 – 2.png::CompressedTexture2D::5673871332861189418::1695421207::1695427074::1::::<><>::
+button_switch_digital_directional 1 – 3.png::CompressedTexture2D::3609822723347290716::1695421207::1695427074::1::::<><>::
+button_switch_digital_directional 1 – 4.png::CompressedTexture2D::7835133922385651049::1695421207::1695427074::1::::<><>::
+button_switch_digital_directional 1 – 5.png::CompressedTexture2D::5156176776081695491::1695421207::1695427074::1::::<><>::
+button_switch_digital_sl.png::CompressedTexture2D::4027488713557955803::1695421207::1695427074::1::::<><>::
+button_switch_digital_sl_alt.png::CompressedTexture2D::2172104891623888616::1695421207::1695427074::1::::<><>::
+button_switch_digital_sr.png::CompressedTexture2D::9024412902980560496::1695421207::1695427074::1::::<><>::
+button_switch_digital_sr_alt.png::CompressedTexture2D::317932240210309360::1695421207::1695427074::1::::<><>::
+button_switch_digital_x.png::CompressedTexture2D::4907379954135844200::1695421207::1695427074::1::::<><>::
+button_switch_digital_x_1.png::CompressedTexture2D::2270208625234279382::1695421207::1695427074::1::::<><>::
+button_switch_digital_y.png::CompressedTexture2D::2676983353870216156::1695421207::1695427074::1::::<><>::
+button_switch_digital_y_1.png::CompressedTexture2D::9055996826674232587::1695421207::1695427074::1::::<><>::
+button_switch_digital_zl.png::CompressedTexture2D::4637291744253596560::1695421207::1695427074::1::::<><>::
+button_switch_digital_zl_alt.png::CompressedTexture2D::2552704554351703954::1695421207::1695427074::1::::<><>::
+button_switch_digital_zr.png::CompressedTexture2D::5608425973222943419::1695421207::1695427074::1::::<><>::
+button_switch_digital_zr_alt.png::CompressedTexture2D::1823341035467950224::1695421207::1695427074::1::::<><>::
+button_switch_digital__alt.png::CompressedTexture2D::8772956820510381820::1695421206::1695427074::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/::1695421208
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/::1695427073
+Itch Cover - XBOX.png::CompressedTexture2D::8647010561267233019::1695421222::1695427073::1::::<><>::
+Itch Header - XBOX.png::CompressedTexture2D::7400713100811109599::1695421222::1695427073::1::::<><>::
+Itch Media - Xbox 1.png::CompressedTexture2D::662307280964664204::1695421222::1695427073::1::::<><>::
+Itch Media - Xbox 2.png::CompressedTexture2D::1461687801585604994::1695421222::1695427073::1::::<><>::
+Itch Media - Xbox 3.png::CompressedTexture2D::7651940989966453742::1695421222::1695427073::1::::<><>::
+README.txt::TextFile::-1::1695421222::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/::1695421211
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Blank/::1695427074
+button_xboxone_analog_blank.png::CompressedTexture2D::8788535974647716501::1695421208::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_1.png::CompressedTexture2D::4008142902891059864::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_2.png::CompressedTexture2D::7932189757351247556::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_3.png::CompressedTexture2D::3228646503255712031::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_4.png::CompressedTexture2D::1436242205305918081::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_5.png::CompressedTexture2D::6907528848435619620::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_6.png::CompressedTexture2D::43008337312084218::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_7.png::CompressedTexture2D::4905932083411431136::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_8.png::CompressedTexture2D::5692686284170598319::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_9.png::CompressedTexture2D::2429418974061741324::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_10.png::CompressedTexture2D::3585184616792902809::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_direction_11.png::CompressedTexture2D::1363575497397193041::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_rotate_1.png::CompressedTexture2D::469827574744268227::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_rotate_2.png::CompressedTexture2D::3747024043949577038::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_rotate_3.png::CompressedTexture2D::8180379366637635910::1695421209::1695427074::1::::<><>::
+button_xboxone_analog_blank_rotate_4.png::CompressedTexture2D::2203998901250002694::1695421209::1695427074::1::::<><>::
+button_xbox_analog_blank.png::CompressedTexture2D::4265701995168166848::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_1.png::CompressedTexture2D::5867217336911020923::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_2.png::CompressedTexture2D::2810988140752837485::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_3.png::CompressedTexture2D::265694719245156623::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_4.png::CompressedTexture2D::6198067974252021066::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_5.png::CompressedTexture2D::5858547265483323457::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_6.png::CompressedTexture2D::7035551911993719067::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_7.png::CompressedTexture2D::866265326967862140::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_8.png::CompressedTexture2D::3316402454984268629::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_9.png::CompressedTexture2D::1921787691692443685::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_10.png::CompressedTexture2D::1633414396217353204::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_direction_11.png::CompressedTexture2D::245938663734899694::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_rotate_1.png::CompressedTexture2D::8894404971387707660::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_rotate_2.png::CompressedTexture2D::1640348248560750171::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_rotate_3.png::CompressedTexture2D::5281471053239457121::1695421208::1695427074::1::::<><>::
+button_xbox_analog_blank_rotate_4.png::CompressedTexture2D::5595595871242784148::1695421208::1695427074::1::::<><>::
+desktop.ini::TextFile::-1::1695421210::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Left/::1695427074
+button_xboxone_analog_l.png::CompressedTexture2D::614531319311808935::1695421210::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_1.png::CompressedTexture2D::8218584478115315046::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_2.png::CompressedTexture2D::7253521717744710053::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_3.png::CompressedTexture2D::2346291172178413382::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_4.png::CompressedTexture2D::5036248458485555640::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_5.png::CompressedTexture2D::8653081001154230515::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_6.png::CompressedTexture2D::9099948216140445772::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_7.png::CompressedTexture2D::4096506198254185638::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_8.png::CompressedTexture2D::7878520346685285375::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_9.png::CompressedTexture2D::3879346509945309527::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_10.png::CompressedTexture2D::7568731684208704709::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_direction_11.png::CompressedTexture2D::3462255359198844368::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_rotate_1.png::CompressedTexture2D::4184542286620066007::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_rotate_2.png::CompressedTexture2D::5142337909895896187::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_rotate_3.png::CompressedTexture2D::3223122280622910558::1695421211::1695427074::1::::<><>::
+button_xboxone_analog_l_rotate_4.png::CompressedTexture2D::2353649731198113969::1695421211::1695427074::1::::<><>::
+button_xbox_analog_l Not Pressed.png::CompressedTexture2D::7735110938926247401::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l.png::CompressedTexture2D::7569396515901679489::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_1.png::CompressedTexture2D::2764845177912646439::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_2.png::CompressedTexture2D::2785011345993766194::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_3.png::CompressedTexture2D::6978948887645391590::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_4.png::CompressedTexture2D::139712372355491655::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_5.png::CompressedTexture2D::1177295283776697796::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_6.png::CompressedTexture2D::8731560713925241201::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_7.png::CompressedTexture2D::5250107638372354035::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_8.png::CompressedTexture2D::1419233100988110676::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_9.png::CompressedTexture2D::4308523389470055767::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_10.png::CompressedTexture2D::3636815490586223758::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_direction_11.png::CompressedTexture2D::4174443353561029212::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_rotate_1.png::CompressedTexture2D::5063069985277532776::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_rotate_2.png::CompressedTexture2D::7078002475592936986::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_rotate_3.png::CompressedTexture2D::2824596038848911634::1695421210::1695427074::1::::<><>::
+button_xbox_analog_l_rotate_4.png::CompressedTexture2D::53692305580538370::1695421210::1695427074::1::::<><>::
+desktop.ini::TextFile::-1::1695421211::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Sticks/Right/::1695427074
+button_xboxone_analog_r.png::CompressedTexture2D::1473815762561116614::1695421212::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_1.png::CompressedTexture2D::4363812528343001554::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_2.png::CompressedTexture2D::7470330469137406324::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_3.png::CompressedTexture2D::3492753968090529783::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_4.png::CompressedTexture2D::324706343108948431::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_5.png::CompressedTexture2D::6234117344935380570::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_6.png::CompressedTexture2D::4061348574346540250::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_7.png::CompressedTexture2D::5873822431675413254::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_8.png::CompressedTexture2D::3979089311265163294::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_9.png::CompressedTexture2D::7930330003957740170::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_10.png::CompressedTexture2D::8446592317807485482::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_direction_11.png::CompressedTexture2D::7002897132276388299::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_rotate_1.png::CompressedTexture2D::5117056848804733099::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_rotate_2.png::CompressedTexture2D::5318667082545700225::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_rotate_3.png::CompressedTexture2D::9055921004395792295::1695421213::1695427074::1::::<><>::
+button_xboxone_analog_r_rotate_4.png::CompressedTexture2D::5022706780327019053::1695421213::1695427074::1::::<><>::
+button_xbox_analog_r Not Pressed.png::CompressedTexture2D::8370687904561692965::1695421211::1695427074::1::::<><>::
+button_xbox_analog_r.png::CompressedTexture2D::126417549841349588::1695421211::1695427074::1::::<><>::
+button_xbox_analog_r_direction_1.png::CompressedTexture2D::5241740125995267948::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_2.png::CompressedTexture2D::1567179409226392239::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_3.png::CompressedTexture2D::7392058461031842910::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_4.png::CompressedTexture2D::7445663132089089402::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_5.png::CompressedTexture2D::3417700368821022907::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_6.png::CompressedTexture2D::3599328641350473823::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_7.png::CompressedTexture2D::9085595145139568677::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_8.png::CompressedTexture2D::7709072522505386268::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_9.png::CompressedTexture2D::4421748877991075841::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_10.png::CompressedTexture2D::3197928445006767664::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_direction_11.png::CompressedTexture2D::3393856804829945644::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_rotate_1.png::CompressedTexture2D::2118933495580535163::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_rotate_2.png::CompressedTexture2D::4598001914739880815::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_rotate_3.png::CompressedTexture2D::7279495891661148558::1695421212::1695427074::1::::<><>::
+button_xbox_analog_r_rotate_4.png::CompressedTexture2D::5074541994902768318::1695421212::1695427074::1::::<><>::
+desktop.ini::TextFile::-1::1695421213::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Analog Triggers/::1695427074
+button_xbox_analog_trigger_dark_1.png::CompressedTexture2D::4820995900990733028::1695421213::1695427074::1::::<><>::
+button_xbox_analog_trigger_dark_2.png::CompressedTexture2D::1459132354238386449::1695421213::1695427074::1::::<><>::
+button_xbox_analog_trigger_dark_3.png::CompressedTexture2D::3104082067120213224::1695421213::1695427074::1::::<><>::
+button_xbox_analog_trigger_dark_4.png::CompressedTexture2D::6881112804444283918::1695421214::1695427074::1::::<><>::
+button_xbox_analog_trigger_light_1.png::CompressedTexture2D::8264658835872492914::1695421214::1695427074::1::::<><>::
+button_xbox_analog_trigger_light_2.png::CompressedTexture2D::1283147789631808333::1695421214::1695427074::1::::<><>::
+button_xbox_analog_trigger_light_3.png::CompressedTexture2D::8208466174808057181::1695421214::1695427072::1::::<><>::
+button_xbox_analog_trigger_light_4.png::CompressedTexture2D::7263959164038603115::1695421214::1695427072::1::::<><>::
+desktop.ini::TextFile::-1::1695421214::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/::1695427072
+button_xboxone_dpad_dark_1.png::CompressedTexture2D::8215347455202417647::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_2.png::CompressedTexture2D::3133812369640503869::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_3.png::CompressedTexture2D::3545440076136228854::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_4.png::CompressedTexture2D::5865197566649230426::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_5.png::CompressedTexture2D::2501407778201659892::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_6.png::CompressedTexture2D::267432957698493926::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_dark_7.png::CompressedTexture2D::4958163022181671898::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_light_1.png::CompressedTexture2D::8287149685875739310::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_light_2.png::CompressedTexture2D::2252714898264534779::1695421215::1695427072::1::::<><>::
+button_xboxone_dpad_light_3.png::CompressedTexture2D::1291555925324824554::1695421216::1695427072::1::::<><>::
+button_xboxone_dpad_light_4.png::CompressedTexture2D::6788990467063966941::1695421216::1695427072::1::::<><>::
+button_xboxone_dpad_light_5.png::CompressedTexture2D::7934928191338530471::1695421216::1695427072::1::::<><>::
+button_xboxone_dpad_light_6.png::CompressedTexture2D::1858972458377700254::1695421216::1695427072::1::::<><>::
+button_xboxone_dpad_light_7.png::CompressedTexture2D::3965679176790457929::1695421216::1695427072::1::::<><>::
+button_xbox_dpad_dark_1.png::CompressedTexture2D::144278167730943621::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_2.png::CompressedTexture2D::927420710984618381::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_3.png::CompressedTexture2D::3624386261346830072::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_4.png::CompressedTexture2D::6413681349261288448::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_5.png::CompressedTexture2D::3891249641737676296::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_6.png::CompressedTexture2D::4090134570564712790::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_dark_7.png::CompressedTexture2D::366362357620605354::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_light_1.png::CompressedTexture2D::7542498743405761503::1695421214::1695427072::1::::<><>::
+button_xbox_dpad_light_2.png::CompressedTexture2D::8248400160462861121::1695421215::1695427072::1::::<><>::
+button_xbox_dpad_light_3.png::CompressedTexture2D::4545412370303124387::1695421215::1695427072::1::::<><>::
+button_xbox_dpad_light_4.png::CompressedTexture2D::5458043208842332733::1695421215::1695427072::1::::<><>::
+button_xbox_dpad_light_5.png::CompressedTexture2D::6499102775466284462::1695421215::1695427072::1::::<><>::
+button_xbox_dpad_light_6.png::CompressedTexture2D::6646373648804524444::1695421215::1695427072::1::::<><>::
+button_xbox_dpad_light_7.png::CompressedTexture2D::8761715997310661614::1695421215::1695427072::1::::<><>::
+desktop.ini::TextFile::-1::1695421216::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/D-Pad/D-Pad Interface/::1695427072
+D-PadBase.png::CompressedTexture2D::5712999684466863167::1695421214::1695427072::1::::<><>::
+D-PadDown.png::CompressedTexture2D::4598333453982975014::1695421214::1695427072::1::::<><>::
+D-PadLeft.png::CompressedTexture2D::3084944850162813671::1695421214::1695427072::1::::<><>::
+D-PadRight.png::CompressedTexture2D::1642146215803464274::1695421214::1695427072::1::::<><>::
+D-PadUp.png::CompressedTexture2D::84818967205319360::1695421214::1695427072::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/::1695421221
+desktop.ini::TextFile::-1::1695421221::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/ABXY/::1695427072
+button_xbox_digital_a_1.png::CompressedTexture2D::6087387706013152869::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_2.png::CompressedTexture2D::5246826277922812799::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_3.png::CompressedTexture2D::4280012757929561734::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_4.png::CompressedTexture2D::8719990378630997219::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_5.png::CompressedTexture2D::3731293020294008472::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_6.png::CompressedTexture2D::6026090167109709752::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_7.png::CompressedTexture2D::5308933748932829635::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_8.png::CompressedTexture2D::2555335680848259805::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_9.png::CompressedTexture2D::8962030592683789813::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_10.png::CompressedTexture2D::9135575448153622296::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_11.png::CompressedTexture2D::2818582387228227847::1695421216::1695427072::1::::<><>::
+button_xbox_digital_a_12.png::CompressedTexture2D::7346057996661301944::1695421216::1695427072::1::::<><>::
+button_xbox_digital_b_1.png::CompressedTexture2D::64089986315662996::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_2.png::CompressedTexture2D::5827706516349250833::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_3.png::CompressedTexture2D::2136780834374234855::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_4.png::CompressedTexture2D::73521350125806670::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_5.png::CompressedTexture2D::7691975965198151682::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_6.png::CompressedTexture2D::5969366982889102222::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_7.png::CompressedTexture2D::436406345656947662::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_8.png::CompressedTexture2D::4341937529680860734::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_9.png::CompressedTexture2D::666902696316865047::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_10.png::CompressedTexture2D::6921238451879150388::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_11.png::CompressedTexture2D::8133652298424858207::1695421217::1695427072::1::::<><>::
+button_xbox_digital_b_12.png::CompressedTexture2D::5166695171838021603::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_1.png::CompressedTexture2D::2177204110823586665::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_2.png::CompressedTexture2D::7121899195253091254::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_3.png::CompressedTexture2D::329194986643800319::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_4.png::CompressedTexture2D::8637994202677386917::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_5.png::CompressedTexture2D::3049928192886909101::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_6.png::CompressedTexture2D::1881026940546395101::1695421218::1695427072::1::::<><>::
+button_xbox_digital_x_7.png::CompressedTexture2D::1641372709832985134::1695421218::1695427072::1::::<><>::
+button_xbox_digital_x_8.png::CompressedTexture2D::1371006740180058526::1695421218::1695427072::1::::<><>::
+button_xbox_digital_x_9.png::CompressedTexture2D::1683887054149998487::1695421218::1695427072::1::::<><>::
+button_xbox_digital_x_10.png::CompressedTexture2D::4506100319857491950::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_11.png::CompressedTexture2D::451001978162073955::1695421217::1695427072::1::::<><>::
+button_xbox_digital_x_12.png::CompressedTexture2D::2092864196937529431::1695421217::1695427072::1::::<><>::
+button_xbox_digital_y_1.png::CompressedTexture2D::5015745872421805123::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_2.png::CompressedTexture2D::6815929951472243390::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_3.png::CompressedTexture2D::8752703272847489717::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_4.png::CompressedTexture2D::3418678695063654937::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_5.png::CompressedTexture2D::5561099401076356554::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_6.png::CompressedTexture2D::5689909257904995574::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_7.png::CompressedTexture2D::2087028425399326689::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_8.png::CompressedTexture2D::58047411384350164::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_9.png::CompressedTexture2D::1993721548770721134::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_10.png::CompressedTexture2D::2947306869332901989::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_11.png::CompressedTexture2D::8640044239130596823::1695421218::1695427072::1::::<><>::
+button_xbox_digital_y_12.png::CompressedTexture2D::2640660119005294349::1695421218::1695427072::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Analog/::1695427072
+button_xboxone_digital_analog_click_dark_1.png::CompressedTexture2D::4028371054305559461::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_2.png::CompressedTexture2D::4697547921649319205::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_3.png::CompressedTexture2D::972655213677933781::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_4.png::CompressedTexture2D::458375780283838497::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_5.png::CompressedTexture2D::6994051049527655633::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_6.png::CompressedTexture2D::4776227456532209163::1695421219::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_7.png::CompressedTexture2D::397517114707068484::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_8.png::CompressedTexture2D::4865328038371493454::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_9.png::CompressedTexture2D::3648177882266115765::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_1.png::CompressedTexture2D::452478464785217929::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_2.png::CompressedTexture2D::6525739101823671814::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_3.png::CompressedTexture2D::8599988560650274806::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_4.png::CompressedTexture2D::2758619705052336004::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_5.png::CompressedTexture2D::1212090987548166422::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_6.png::CompressedTexture2D::5863239477471152334::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_7.png::CompressedTexture2D::507759508750877754::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_8.png::CompressedTexture2D::3908665562728249946::1695421220::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_light_9.png::CompressedTexture2D::6568248425228298130::1695421220::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_1.png::CompressedTexture2D::2395400242439161896::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_2.png::CompressedTexture2D::3201836014719944478::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_3.png::CompressedTexture2D::747753721752550702::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_4.png::CompressedTexture2D::4585373839801762075::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_5.png::CompressedTexture2D::4141355016807309949::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_dark_6.png::CompressedTexture2D::7269806744025180815::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_1.png::CompressedTexture2D::6757200409023822997::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_2.png::CompressedTexture2D::6044206445028974576::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_3.png::CompressedTexture2D::4005165657185576190::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_4.png::CompressedTexture2D::481228984239611742::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_5.png::CompressedTexture2D::1019003940571625119::1695421219::1695427072::1::::<><>::
+button_xbox_digital_analog_click_light_6.png::CompressedTexture2D::847623028955270469::1695421219::1695427072::1::::<><>::
+desktop.ini::TextFile::-1::1695421220::0::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/Shoulder/::1695427072
+button_xbox_digital_bumper_dark_1.png::CompressedTexture2D::7331585921302142542::1695421220::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_2.png::CompressedTexture2D::3651798016286181186::1695421220::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_3.png::CompressedTexture2D::3266571312203954111::1695421220::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_4.png::CompressedTexture2D::2097378580648457145::1695421220::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_1.png::CompressedTexture2D::3208214524749241616::1695421221::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_2.png::CompressedTexture2D::3944202317356815197::1695421221::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_3.png::CompressedTexture2D::359617536698372000::1695421221::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_4.png::CompressedTexture2D::6127255498554619907::1695421221::1695427072::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Digital Buttons/System/::1695427072
+button_xbox_digital_back_1.png::CompressedTexture2D::1955776167363368688::1695421221::1695427072::1::::<><>::
+button_xbox_digital_back_2.png::CompressedTexture2D::5360655719666509845::1695421221::1695427072::1::::<><>::
+button_xbox_digital_home_green.png::CompressedTexture2D::4392997278277174711::1695421221::1695427072::1::::<><>::
+button_xbox_digital_home_white.png::CompressedTexture2D::3342406655475792350::1695421221::1695427072::1::::<><>::
+button_xbox_digital_menu_1.png::CompressedTexture2D::602934487587841906::1695421221::1695427072::1::::<><>::
+button_xbox_digital_menu_2 - Not Pressed.png::CompressedTexture2D::5875250366661375944::1695421221::1695427072::1::::<><>::
+button_xbox_digital_menu_2.png::CompressedTexture2D::3973025272056299647::1695421221::1695427072::1::::<><>::
+button_xbox_digital_start_1.png::CompressedTexture2D::1001519256053124158::1695421221::1695427072::1::::<><>::
+button_xbox_digital_start_2.png::CompressedTexture2D::9151309192733011168::1695421221::1695427072::1::::<><>::
+button_xbox_digital_view_1.png::CompressedTexture2D::9209729856093214547::1695421221::1695427072::1::::<><>::
+button_xbox_digital_view_2 - Not Pressed.png::CompressedTexture2D::3272855230482565631::1695421221::1695427072::1::::<><>::
+button_xbox_digital_view_2.png::CompressedTexture2D::4204780742489205296::1695421221::1695427072::1::::<><>::
+::res://addons/ControllerInputViewer/ControllerHud/Assets/XBOX BUTTONS - Premium Assets/XBOX BUTTONS - Premium Assets/Svg/::1695427073
+button_xboxone_analog_blank.svg::CompressedTexture2D::3318154255367455806::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_1.svg::CompressedTexture2D::1366644043010054267::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_2.svg::CompressedTexture2D::3917889180848585160::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_3.svg::CompressedTexture2D::1882522967143639948::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_4.svg::CompressedTexture2D::2653818046923104059::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_5.svg::CompressedTexture2D::3008104621426806254::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_6.svg::CompressedTexture2D::4155163236808985131::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_7.svg::CompressedTexture2D::6766289857427326282::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_8.svg::CompressedTexture2D::6579312288770938357::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_9.svg::CompressedTexture2D::5743629722650534893::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_10.svg::CompressedTexture2D::6150961110281258775::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_direction_11.svg::CompressedTexture2D::8265094418870738258::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_rotate_1.svg::CompressedTexture2D::5226693470079770392::1695421230::1695427072::1::::<><>::
+button_xboxone_analog_blank_rotate_2.svg::CompressedTexture2D::573996661992044865::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_blank_rotate_3.svg::CompressedTexture2D::7193881133278100424::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_blank_rotate_4.svg::CompressedTexture2D::6756424735391460952::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l.svg::CompressedTexture2D::1324473944391713726::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_1.svg::CompressedTexture2D::2221969604741301637::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_2.svg::CompressedTexture2D::452223707316399781::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_3.svg::CompressedTexture2D::1702123610755379138::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_4.svg::CompressedTexture2D::5656918498114229717::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_5.svg::CompressedTexture2D::6648985835337754887::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_6.svg::CompressedTexture2D::2379510151974639678::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_7.svg::CompressedTexture2D::5773939965906471509::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_8.svg::CompressedTexture2D::5072978089824002071::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_9.svg::CompressedTexture2D::1397307749755100955::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_10.svg::CompressedTexture2D::529269634205800800::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_direction_11.svg::CompressedTexture2D::1778661457021011135::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_rotate_1.svg::CompressedTexture2D::1037306931429567113::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_rotate_2.svg::CompressedTexture2D::5714789715023832129::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_rotate_3.svg::CompressedTexture2D::7381572646720233681::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_l_rotate_4.svg::CompressedTexture2D::4769467783672085532::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_r.svg::CompressedTexture2D::8143320905373254884::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_1.svg::CompressedTexture2D::6654698892494922685::1695421231::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_2.svg::CompressedTexture2D::6992270809929112386::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_3.svg::CompressedTexture2D::7189234800995046940::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_4.svg::CompressedTexture2D::8116935903140639953::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_5.svg::CompressedTexture2D::356620086504092718::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_6.svg::CompressedTexture2D::5465773242592280290::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_7.svg::CompressedTexture2D::6680128168181638131::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_8.svg::CompressedTexture2D::9200020368172695216::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_9.svg::CompressedTexture2D::327993273899727299::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_10.svg::CompressedTexture2D::8123997989754440702::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_direction_11.svg::CompressedTexture2D::2632984440156068548::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_rotate_1.svg::CompressedTexture2D::5156881834959855937::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_rotate_2.svg::CompressedTexture2D::3434255397136189083::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_rotate_3.svg::CompressedTexture2D::3561746433936147690::1695421232::1695427072::1::::<><>::
+button_xboxone_analog_r_rotate_4.svg::CompressedTexture2D::7566596410319712838::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_1.svg::CompressedTexture2D::6244867575906010307::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_2.svg::CompressedTexture2D::7706418643047160077::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_3.svg::CompressedTexture2D::2652377725160586857::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_4.svg::CompressedTexture2D::1374369363062456537::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_5.svg::CompressedTexture2D::2188438944458210346::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_6.svg::CompressedTexture2D::2543356116320147122::1695421232::1695427072::1::::<><>::
+button_xboxone_digital_analog_click_dark_7.svg::CompressedTexture2D::4056578736761292983::1695421232::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_dark_8.svg::CompressedTexture2D::1822535256082094190::1695421232::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_dark_9.svg::CompressedTexture2D::6477242429682732037::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_1.svg::CompressedTexture2D::8080305458250879590::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_2.svg::CompressedTexture2D::1922900986070205782::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_3.svg::CompressedTexture2D::3475704459409645744::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_4.svg::CompressedTexture2D::5130107029609654534::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_5.svg::CompressedTexture2D::907389910862136442::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_6.svg::CompressedTexture2D::6897896491056979851::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_7.svg::CompressedTexture2D::2480684310206312443::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_8.svg::CompressedTexture2D::8314728294597691632::1695421233::1695427073::1::::<><>::
+button_xboxone_digital_analog_click_light_9.svg::CompressedTexture2D::4272258054413113636::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_1.svg::CompressedTexture2D::6316799121898669475::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_2.svg::CompressedTexture2D::4764058194328992008::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_3.svg::CompressedTexture2D::7065564396851097665::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_4.svg::CompressedTexture2D::5934517237264172467::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_5.svg::CompressedTexture2D::6159442880725113438::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_6.svg::CompressedTexture2D::7280949292087326649::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_dark_7.svg::CompressedTexture2D::7388751589951797500::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_light_1.svg::CompressedTexture2D::2625337147950014493::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_light_2.svg::CompressedTexture2D::4048574943708841678::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_light_3.svg::CompressedTexture2D::4123300828590987411::1695421233::1695427073::1::::<><>::
+button_xboxone_dpad_light_4.svg::CompressedTexture2D::2883703260830118661::1695421234::1695427073::1::::<><>::
+button_xboxone_dpad_light_5.svg::CompressedTexture2D::8416015290353537219::1695421234::1695427073::1::::<><>::
+button_xboxone_dpad_light_6.svg::CompressedTexture2D::2994087276822446906::1695421234::1695427073::1::::<><>::
+button_xboxone_dpad_light_7.svg::CompressedTexture2D::1705575062653641201::1695421234::1695427073::1::::<><>::
+button_xbox_analog_blank.svg::CompressedTexture2D::7352352627806475158::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_1.svg::CompressedTexture2D::2577285014971705927::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_2.svg::CompressedTexture2D::1461761642495925448::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_3.svg::CompressedTexture2D::4777727551597916976::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_4.svg::CompressedTexture2D::4531931612494690977::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_5.svg::CompressedTexture2D::8702936118990541409::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_6.svg::CompressedTexture2D::2655898223940573841::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_7.svg::CompressedTexture2D::839524281910860597::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_8.svg::CompressedTexture2D::629621918735232168::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_9.svg::CompressedTexture2D::7425780539753521846::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_10.svg::CompressedTexture2D::4965205578899208603::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_direction_11.svg::CompressedTexture2D::8343745854181930394::1695421222::1695427073::1::::<><>::
+button_xbox_analog_blank_rotate_1.svg::CompressedTexture2D::8617035583530932110::1695421223::1695427073::1::::<><>::
+button_xbox_analog_blank_rotate_2.svg::CompressedTexture2D::8366756047032333519::1695421223::1695427073::1::::<><>::
+button_xbox_analog_blank_rotate_3.svg::CompressedTexture2D::2359873745568045519::1695421223::1695427073::1::::<><>::
+button_xbox_analog_blank_rotate_4.svg::CompressedTexture2D::7391642336053955675::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l.svg::CompressedTexture2D::3233304325914600283::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_1.svg::CompressedTexture2D::14552870143673205::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_2.svg::CompressedTexture2D::5555743160862746290::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_3.svg::CompressedTexture2D::7388131584781451299::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_4.svg::CompressedTexture2D::6926253538334855817::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_5.svg::CompressedTexture2D::759449959383875345::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_6.svg::CompressedTexture2D::453705066437416373::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_7.svg::CompressedTexture2D::3356917024989359460::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_direction_8.svg::CompressedTexture2D::6559691314467097937::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_direction_9.svg::CompressedTexture2D::1943782532453501174::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_direction_10.svg::CompressedTexture2D::5563215843408025561::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_direction_11.svg::CompressedTexture2D::7572828214927735610::1695421223::1695427073::1::::<><>::
+button_xbox_analog_l_rotate_1.svg::CompressedTexture2D::3962729273030480541::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_rotate_2.svg::CompressedTexture2D::6851007391182871222::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_rotate_3.svg::CompressedTexture2D::2126735859124131949::1695421224::1695427073::1::::<><>::
+button_xbox_analog_l_rotate_4.svg::CompressedTexture2D::8433358556034635242::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r.svg::CompressedTexture2D::1973243485575258940::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_1.svg::CompressedTexture2D::7808501344664080209::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_2.svg::CompressedTexture2D::6580126989796222689::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_3.svg::CompressedTexture2D::8342159116755101455::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_4.svg::CompressedTexture2D::7939167464667341265::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_5.svg::CompressedTexture2D::8981928132912441955::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_6.svg::CompressedTexture2D::6105218637617638046::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_7.svg::CompressedTexture2D::1156105869656234030::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_8.svg::CompressedTexture2D::2771859386651647870::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_9.svg::CompressedTexture2D::3071312283607332239::1695421225::1695427073::1::::<><>::
+button_xbox_analog_r_direction_10.svg::CompressedTexture2D::2218893360847981488::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_direction_11.svg::CompressedTexture2D::1510782155846044270::1695421224::1695427073::1::::<><>::
+button_xbox_analog_r_rotate_1.svg::CompressedTexture2D::6035094240594671186::1695421225::1695427073::1::::<><>::
+button_xbox_analog_r_rotate_2.svg::CompressedTexture2D::2650271549976090818::1695421225::1695427073::1::::<><>::
+button_xbox_analog_r_rotate_3.svg::CompressedTexture2D::2052579973791360598::1695421225::1695427073::1::::<><>::
+button_xbox_analog_r_rotate_4.svg::CompressedTexture2D::3195462153166813146::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_dark_1.svg::CompressedTexture2D::4400350686154621171::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_dark_2.svg::CompressedTexture2D::2435960742805792825::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_dark_3.svg::CompressedTexture2D::6116884687467373911::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_dark_4.svg::CompressedTexture2D::792153238443728579::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_light_1.svg::CompressedTexture2D::4076992626267078193::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_light_2.svg::CompressedTexture2D::1255533151384313401::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_light_3.svg::CompressedTexture2D::2732123485280300566::1695421225::1695427073::1::::<><>::
+button_xbox_analog_trigger_light_4.svg::CompressedTexture2D::3902815303438992920::1695421225::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_1.svg::CompressedTexture2D::7307689690174320843::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_2.svg::CompressedTexture2D::8015494374313759916::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_3.svg::CompressedTexture2D::4676330654344432229::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_4.svg::CompressedTexture2D::2684824437492140586::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_5.svg::CompressedTexture2D::261435011548515862::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_dark_6.svg::CompressedTexture2D::5429927831920979858::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_1.svg::CompressedTexture2D::636051969108648054::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_2.svg::CompressedTexture2D::1535613870591408914::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_3.svg::CompressedTexture2D::1014321745206514328::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_4.svg::CompressedTexture2D::1738808945997169739::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_5.svg::CompressedTexture2D::4042083112856098788::1695421226::1695427073::1::::<><>::
+button_xbox_digital_analog_click_light_6.svg::CompressedTexture2D::586928383142655449::1695421226::1695427073::1::::<><>::
+button_xbox_digital_a_1.svg::CompressedTexture2D::2938732381307705114::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_2.svg::CompressedTexture2D::1635167065161356018::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_3.svg::CompressedTexture2D::2956740607832178892::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_4.svg::CompressedTexture2D::1507386413927772755::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_5.svg::CompressedTexture2D::1385624740771149319::1695421226::1695427072::1::::<><>::
+button_xbox_digital_a_6.svg::CompressedTexture2D::3979306463635599869::1695421226::1695427072::1::::<><>::
+button_xbox_digital_a_7.svg::CompressedTexture2D::16880833115124814::1695421226::1695427072::1::::<><>::
+button_xbox_digital_a_8.svg::CompressedTexture2D::4213822613461269011::1695421226::1695427072::1::::<><>::
+button_xbox_digital_a_9.svg::CompressedTexture2D::3409340350258754809::1695421226::1695427072::1::::<><>::
+button_xbox_digital_a_10.svg::CompressedTexture2D::4561546283029591855::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_11.svg::CompressedTexture2D::1038189163690928682::1695421225::1695427072::1::::<><>::
+button_xbox_digital_a_12.svg::CompressedTexture2D::1656892380904638917::1695421225::1695427072::1::::<><>::
+button_xbox_digital_back_1.svg::CompressedTexture2D::1477811227666666064::1695421227::1695427072::1::::<><>::
+button_xbox_digital_back_2.svg::CompressedTexture2D::4216027433070992858::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_1.svg::CompressedTexture2D::5768738811432915501::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_2.svg::CompressedTexture2D::2576634062641528826::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_3.svg::CompressedTexture2D::2308313128609909097::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_dark_4.svg::CompressedTexture2D::493892182110089905::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_1.svg::CompressedTexture2D::4856315058580413581::1695421227::1695427072::1::::<><>::
+button_xbox_digital_bumper_light_2.svg::CompressedTexture2D::3637598168870415314::1695421227::1695427073::1::::<><>::
+button_xbox_digital_bumper_light_3.svg::CompressedTexture2D::2741357714362208565::1695421227::1695427073::1::::<><>::
+button_xbox_digital_bumper_light_4.svg::CompressedTexture2D::6806992717812288650::1695421227::1695427073::1::::<><>::
+button_xbox_digital_b_1.svg::CompressedTexture2D::6699041152573413730::1695421226::1695427073::1::::<><>::
+button_xbox_digital_b_2.svg::CompressedTexture2D::4319178830508750101::1695421227::1695427073::1::::<><>::
+button_xbox_digital_b_3.svg::CompressedTexture2D::5108027140719901401::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_4.svg::CompressedTexture2D::5547060503366398619::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_5.svg::CompressedTexture2D::5975105477265172948::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_6.svg::CompressedTexture2D::1281267759825620992::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_7.svg::CompressedTexture2D::4695292048565614869::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_8.svg::CompressedTexture2D::4820026439907418101::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_9.svg::CompressedTexture2D::2877194692206400966::1695421227::1695427072::1::::<><>::
+button_xbox_digital_b_10.svg::CompressedTexture2D::765885226586911604::1695421226::1695427072::1::::<><>::
+button_xbox_digital_b_11.svg::CompressedTexture2D::2639188372266365989::1695421226::1695427072::1::::<><>::
+button_xbox_digital_b_12.svg::CompressedTexture2D::7428484776673996643::1695421227::1695427072::1::::<><>::
+button_xbox_digital_home_green.svg::CompressedTexture2D::6138333024150088400::1695421228::1695427072::1::::<><>::
+button_xbox_digital_home_white.svg::CompressedTexture2D::8783567918555572365::1695421228::1695427072::1::::<><>::
+button_xbox_digital_menu_1.svg::CompressedTexture2D::6206869681752733461::1695421228::1695427072::1::::<><>::
+button_xbox_digital_menu_2.svg::CompressedTexture2D::5339509583510223019::1695421228::1695427072::1::::<><>::
+button_xbox_digital_start_1.svg::CompressedTexture2D::7779377185000629001::1695421228::1695427072::1::::<><>::
+button_xbox_digital_start_2.svg::CompressedTexture2D::480418626130778863::1695421228::1695427072::1::::<><>::
+button_xbox_digital_view_1.svg::CompressedTexture2D::142960976525137975::1695421228::1695427072::1::::<><>::
+button_xbox_digital_view_2.svg::CompressedTexture2D::6926536813602144511::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_1.svg::CompressedTexture2D::2441732344149911226::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_2.svg::CompressedTexture2D::7013635746815860794::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_3.svg::CompressedTexture2D::4029465085999165777::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_4.svg::CompressedTexture2D::1336383716152171742::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_5.svg::CompressedTexture2D::4899103030623110703::1695421228::1695427072::1::::<><>::
+button_xbox_digital_x_6.svg::CompressedTexture2D::2537041434661624381::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_7.svg::CompressedTexture2D::4654305360461053371::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_8.svg::CompressedTexture2D::7613047030137431495::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_9.svg::CompressedTexture2D::4406385316712156551::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_10.svg::CompressedTexture2D::2506634405794548356::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_11.svg::CompressedTexture2D::3265557541964032866::1695421228::1695427073::1::::<><>::
+button_xbox_digital_x_12.svg::CompressedTexture2D::5813901100215743816::1695421228::1695427073::1::::<><>::
+button_xbox_digital_y_1.svg::CompressedTexture2D::5449832335710653168::1695421228::1695427073::1::::<><>::
+button_xbox_digital_y_2.svg::CompressedTexture2D::850153707741510606::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_3.svg::CompressedTexture2D::4354085554590476982::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_4.svg::CompressedTexture2D::6402885674984914956::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_5.svg::CompressedTexture2D::5617572476340594538::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_6.svg::CompressedTexture2D::2012025899544821377::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_7.svg::CompressedTexture2D::3982621271926137481::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_8.svg::CompressedTexture2D::7160617553652402255::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_9.svg::CompressedTexture2D::6450276288834560886::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_10.svg::CompressedTexture2D::3199117118413639794::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_11.svg::CompressedTexture2D::8634399374428351619::1695421229::1695427073::1::::<><>::
+button_xbox_digital_y_12.svg::CompressedTexture2D::7106266675121300423::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_1.svg::CompressedTexture2D::7641216652088045410::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_2.svg::CompressedTexture2D::6261549795479950034::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_3.svg::CompressedTexture2D::1016127800615457067::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_4.svg::CompressedTexture2D::7278766207021481689::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_5.svg::CompressedTexture2D::4282369806734857387::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_6.svg::CompressedTexture2D::7311568223775072693::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_dark_7.svg::CompressedTexture2D::4906618196279830966::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_light_1.svg::CompressedTexture2D::8949324493518155467::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_light_2.svg::CompressedTexture2D::7728854919297532996::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_light_3.svg::CompressedTexture2D::6954227782846686699::1695421229::1695427073::1::::<><>::
+button_xbox_dpad_light_4.svg::CompressedTexture2D::336045345673586847::1695421230::1695427073::1::::<><>::
+button_xbox_dpad_light_5.svg::CompressedTexture2D::7744612836575275551::1695421230::1695427073::1::::<><>::
+button_xbox_dpad_light_6.svg::CompressedTexture2D::8342532210428741074::1695421230::1695427073::1::::<><>::
+button_xbox_dpad_light_7.svg::CompressedTexture2D::2692254965967855099::1695421230::1695427073::1::::<><>::
 ::res://addons/controller_icons/::1695301115
 ControllerIcons.gd::GDScript::-1::1695301091::0::1::::<>Node<>::
 Mapper.gd::GDScript::-1::1695301091::0::1::::ControllerMapper<>Node<>::
@@ -556,7 +1347,7 @@ plugin.cfg::TextFile::-1::1695425493::0::1::::<><>::
 plugin.gd::GDScript::-1::1695425493::0::1::::<>EditorPlugin<>::
 test_scene.gd::GDScript::-1::1695425493::0::1::::BaseDialogueTestScene<>Node2D<>::
 test_scene.tscn::PackedScene::-1::1695425493::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
-::res://addons/dialogue_manager/assets/::1695425491
+::res://addons/dialogue_manager/assets/::1695425501
 icon.svg::CompressedTexture2D::9148339284877624195::1695425491::1695425501::1::::<><>::
 update.svg::CompressedTexture2D::9126631778427806641::1695425491::1695425501::1::::<><>::
 ::res://addons/dialogue_manager/components/::1695425492
@@ -565,7 +1356,7 @@ code_edit.tscn::PackedScene::5379618807048408118::1695425491::0::1::::<><>::res:
 code_edit_syntax_highlighter.gd::GDScript::-1::1695425491::0::1::::<>SyntaxHighlighter<>::
 dialogue_cache.gd::GDScript::-1::1695425491::0::1::::<>Node<>::
 download_update_panel.gd::GDScript::-1::1695425491::0::1::::<>Control<>::
-download_update_panel.tscn::PackedScene::1130642722554629364::1695425491::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f::::res://addons/dialogue_manager/assets/update.svg
+download_update_panel.tscn::PackedScene::1130642722554629364::1695425491::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
 errors_panel.gd::GDScript::-1::1695425491::0::1::::<>HBoxContainer<>::
 errors_panel.tscn::PackedScene::6105315990352960875::1695425491::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
 files_list.gd::GDScript::-1::1695425491::0::1::::<>VBoxContainer<>::
@@ -579,11 +1370,11 @@ settings.gd::GDScript::-1::1695425492::0::1::::<>Node<>::
 title_list.gd::GDScript::-1::1695425492::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1695425492::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1695425492::0::1::::<>Button<>::
-update_button.tscn::PackedScene::5825087957514786930::1695425492::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk::::res://addons/dialogue_manager/components/download_update_panel.tscn
+update_button.tscn::PackedScene::5825087957514786930::1695425492::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
 ::res://addons/dialogue_manager/example_balloon/::1695425492
 example_balloon.gd::GDScript::-1::1695425492::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1695425492::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
-small_example_balloon.tscn::PackedScene::4417311113468315280::1695425492::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
+example_balloon.tscn::PackedScene::2304415056852043862::1695425492::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+small_example_balloon.tscn::PackedScene::4417311113468315280::1695425492::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
 ::res://addons/dialogue_manager/l10n/::1695425493
 en.mo::Translation::-1::1695425492::0::1::::<><>::
 en.po::Translation::-1::1695425492::0::1::::<><>::
@@ -591,15 +1382,15 @@ zh-cn.po::Translation::-1::1695425493::0::1::::<><>::
 zh-tw.po::Translation::-1::1695425493::0::1::::<><>::
 ::res://addons/dialogue_manager/views/::1695425493
 main_view.gd::GDScript::-1::1695425493::0::1::::<>Control<>::
-main_view.tscn::PackedScene::4884668666408697448::1695425493::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn
+main_view.tscn::PackedScene::4884668666408697448::1695425493::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
 settings_view.gd::GDScript::-1::1695425493::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1695425493::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://addons/g4climbnglide/::1695422266
+::res://addons/g4climbnglide/::1695429601
 CameraController.gd::GDScript::-1::1695307969::0::1::::<>Node3D<>::
 CharacterAnimationController.gd::GDScript::-1::1695307969::0::1::::<>AnimationTree<>::
 CharacterController.gd::GDScript::-1::1695307969::0::1::::CharacterController<>CharacterBody3D<>::
 icon.png::CompressedTexture2D::3683123044546581981::1695307970::1695307973::1::::<><>::
-PlayerContainer.tscn::PackedScene::5360568604216408111::1695422266::0::1::::<><>::res://addons/g4climbnglide/CharacterController.gd<>res://addons/g4climbnglide/CharacterAnimationController.gd<>uid://djdso12qau72i::::res://addons/g4climbnglide/vertbar.png<>res://addons/g4climbnglide/StaminaBar.gd<>res://addons/g4climbnglide/CameraController.gd
+PlayerContainer.tscn::PackedScene::5360568604216408111::1695429601::0::1::::<><>::res://addons/g4climbnglide/CharacterController.gd<>res://addons/g4climbnglide/CharacterAnimationController.gd<>uid://djdso12qau72i::::res://addons/g4climbnglide/vertbar.png<>res://addons/g4climbnglide/StaminaBar.gd<>res://addons/g4climbnglide/CameraController.gd
 StaminaBar.gd::GDScript::-1::1695307970::0::1::::<>TextureProgressBar<>::
 vertbar.png::CompressedTexture2D::7798274092112852606::1695307970::1695307973::1::::<><>::
 ::res://addons/godot-xr-tools/::1695231223
@@ -3306,21 +4097,27 @@ basic.tscn::PackedScene::-1::1582734390::0::1::::<><>::res://addons/KOBUGE-games
 preview_1.png::CompressedTexture2D::1272781605804612894::1582775789::1685198842::1::::<><>::
 preview_2.png::CompressedTexture2D::6685733737801796814::1582775789::1685198842::1::::<><>::
 preview_icon.png::CompressedTexture2D::1571048417471336730::1582775789::1685198842::1::::<><>::
-::res://addons/MarcoFazio-VirtualJoystick/Joystick/::1685198842
+::res://addons/MarcoFazio-VirtualJoystick/Joystick/::1695426558
 Joystick.gd::GDScript::-1::1685182859::0::1::::Joystick<>Control<>::
 Joystick.tscn::PackedScene::-1::1685182859::0::1::::<><>::res://addons/MarcoFazio-VirtualJoystick/Joystick/Joystick.gd<>res://addons/MarcoFazio-VirtualJoystick/Joystick/joystick_background_cross.png<>res://addons/MarcoFazio-VirtualJoystick/Joystick/joystick_circle.png
 joystick_background.png::CompressedTexture2D::7805795159667298984::1582775789::1685198842::1::::<><>::
 joystick_background_cross.png::CompressedTexture2D::4563884928964436507::1582775789::1685198842::1::::<><>::
 joystick_circle.png::CompressedTexture2D::8377446457459235016::1582775789::1685198842::1::::<><>::
-::res://addons/MarcoFazio-VirtualJoystick/previews/::1695232112
-gitpreview.png::CompressedTexture2D::5674657759728716045::1695231559::1695232112::1::::<><>::
-icon.png::CompressedTexture2D::989725230049290945::1695231559::1695232112::1::::<><>::
-preview1.png::CompressedTexture2D::7866156584629581824::1695231559::1695232112::1::::<><>::
-preview2.png::CompressedTexture2D::4454681205471790879::1695231559::1695232112::1::::<><>::
-preview3.png::CompressedTexture2D::2027328374409940188::1695231559::1695232112::1::::<><>::
-::res://addons/MarcoFazio-VirtualJoystick/test/::1695231559
-player.gd::GDScript::-1::1695231559::0::1::::<>Sprite2D<>::
-test.tscn::PackedScene::3566301953465693758::1695231559::0::1::::<><>::uid://dmr0fcamx7t56
+virtual_joystick.gd::GDScript::-1::1695426558::0::1::::VirtualJoystick<>Control<>::
+virtual_joystick.tscn::PackedScene::8038149555967335895::1695426558::0::1::::<><>::res://joystick/virtual_joystick.gd<>uid://bm30au8mjfc2f
+::res://addons/MarcoFazio-VirtualJoystick/Joystick/textures/::1695426764
+joystick_base_outline.png::CompressedTexture2D::3288008411285325467::1695426558::1695426764::1::::<><>::
+joystick_tip.png::CompressedTexture2D::3132432681801126628::1695426558::1695426764::1::::<><>::
+joystick_tip_arrows.png::CompressedTexture2D::8548255698028078709::1695426558::1695426764::1::::<><>::
+::res://addons/MarcoFazio-VirtualJoystick/previews/::1695426539
+gitpreview.png::CompressedTexture2D::5674657759728716045::1695426539::1695232112::1::::<><>::
+icon.png::CompressedTexture2D::989725230049290945::1695426539::1695232112::1::::<><>::
+preview1.png::CompressedTexture2D::7866156584629581824::1695426539::1695232112::1::::<><>::
+preview2.png::CompressedTexture2D::4454681205471790879::1695426539::1695232112::1::::<><>::
+preview3.png::CompressedTexture2D::2027328374409940188::1695426539::1695232112::1::::<><>::
+::res://addons/MarcoFazio-VirtualJoystick/test/::1695426551
+player.gd::GDScript::-1::1695426551::0::1::::<>Sprite2D<>::
+test.tscn::PackedScene::3566301953465693758::1695426551::0::1::::<><>::uid://dmr0fcamx7t56
 ::res://addons/midi/::1685199909
 ADSR.gd::GDScript::-1::1685199393::0::1::::AudioStreamPlayerADSR<>AudioStreamPlayer<>::
 ADSR.tscn::PackedScene::-1::1685199393::0::1::::<><>::res://addons/midi/ADSR.gd
@@ -3388,6 +4185,196 @@ _sprite_with_animation_player.gd::GDScript::-1::1695301045::0::1::::<><>::
 grid_based.gd::GDScript::-1::1695301046::0::1::::<><>::
 packed.gd::GDScript::-1::1695301046::0::1::::<><>::
 _.gd::GDScript::-1::1695301046::0::1::::<>RefCounted<>::
+::res://addons/panku_console/::1695426162
+console.gd::GDScript::-1::1695426142::0::1::::PankuConsole<>CanvasLayer<>::
+console.tscn::PackedScene::6468885623186101079::1695426142::0::1::::<><>::res://addons/panku_console/console.gd<>res://addons/panku_console/common/lynx_window2/lynx_windows_manager_2.gd
+logo.svg::CompressedTexture2D::1215273567287972993::1695426143::1695426162::1::::<><>::
+plugin.cfg::TextFile::-1::1695426151::0::1::::<><>::
+plugin.gd::GDScript::-1::1695426151::0::1::::<>EditorPlugin<>::
+README.md::TextFile::-1::1695426141::0::1::::<><>::
+::res://addons/panku_console/common/::1695426142
+config.gd::GDScript::-1::1695426141::0::1::::PankuConfig<>RefCounted<>::
+gdexprenv.gd::GDScript::-1::1695426141::0::1::::PankuGDExprEnv<>RefCounted<>::
+module_manager.gd::GDScript::-1::1695426141::0::1::::PankuModuleManager<>RefCounted<>::
+panku_module.gd::GDScript::-1::1695426141::0::1::::PankuModule<>RefCounted<>::
+repl_base_instance.gd::GDScript::-1::1695426141::0::1::::<>RefCounted<>::
+utils.gd::GDScript::-1::1695426142::0::1::::PankuUtils<>RefCounted<>::
+::res://addons/panku_console/common/lynx_window2/::1695426141
+border.gd::GDScript::-1::1695426141::0::1::::<>Panel<>::
+lynx_windows_manager_2.gd::GDScript::-1::1695426141::0::1::::PankuLynxWindowsManager<>Control<>::
+lynx_window_2.gd::GDScript::-1::1695426141::0::1::::PankuLynxWindow<>ColorRect<>::
+lynx_window_2.tscn::PackedScene::1333547715044527970::1695426141::0::1::::<><>::uid://dyipeqsa8lcpc
+lynx_window_shader_material.tres::ShaderMaterial::8861228086716291184::1695426141::0::1::::<><>::res://addons/panku_console/res/shader/simple_fast_blur.gdshader
+::res://addons/panku_console/common/smooth_scroll/::1695426142
+smooth_scroll.gd::GDScript::-1::1695426142::0::1::::<>PanelContainer<>::
+smooth_scroll.tscn::PackedScene::8878615982368967383::1695426142::0::1::::<><>::res://addons/panku_console/common/smooth_scroll/smooth_scroll.gd<>uid://bk18yfu0d77wk
+::res://addons/panku_console/modules/::1695426151
+::res://addons/panku_console/modules/check_latest_release/::1695426143
+env.gd::GDScript::-1::1695426143::0::1::::<>RefCounted<>::
+module.gd::GDScript::-1::1695426143::0::1::::PankuModuleCheckLatestRelease<>PankuModule<>::
+network.gd::GDScript::-1::1695426143::0::1::::<>HTTPRequest<>::
+opt.gd::GDScript::-1::1695426143::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/data_controller/::1695426145
+module.gd::GDScript::-1::1695426145::0::1::::PankuModuleDataController<>PankuModule<>::
+::res://addons/panku_console/modules/data_controller/exporter/::1695426145
+exporter_2.gd::GDScript::-1::1695426143::0::1::::<>Control<>::
+exporter_2.tscn::PackedScene::6578687412203006798::1695426143::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/exporter_2.gd<>uid://bk18yfu0d77wk
+joystick_button.gd::GDScript::-1::1695426143::0::1::::<>Button<>::
+row_bool.tscn::PackedScene::618163410101885300::1695426143::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_bool.gd<>uid://bk18yfu0d77wk
+row_button.tscn::PackedScene::8480891597251698570::1695426143::0::1::::<><>::
+row_color.tscn::PackedScene::4439657435581051069::1695426143::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_color.gd
+row_comment.tscn::PackedScene::6414972787971372688::1695426143::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_comment.gd<>uid://dxvodkcmn4pa8
+row_enum.tscn::PackedScene::7548849394549866827::1695426143::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_enum.gd
+row_float.tscn::PackedScene::3307549965570620657::1695426144::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_float.gd<>uid://bc2g8vv0x3d8y
+row_group_button.gd::GDScript::-1::1695426144::0::1::::<>Button<>::
+row_group_button.tscn::PackedScene::2314447907785789051::1695426144::0::1::::<><>::uid://ws58gucuygx1
+row_int.tscn::PackedScene::168331624845757112::1695426144::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_int.gd<>uid://dnexm7u6lq3km
+row_range_number.tscn::PackedScene::4609458875317541395::1695426144::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_range_number.gd
+row_read_only.tscn::PackedScene::7183605185235706189::1695426144::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_readonly.gd
+row_string.tscn::PackedScene::4441902026096928081::1695426144::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_string.gd
+row_ui.gd::GDScript::-1::1695426144::0::1::::<>HBoxContainer<>::
+row_ui_bool.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_color.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_comment.gd::GDScript::-1::1695426144::0::1::::<>HBoxContainer<>::
+row_ui_enum.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_float.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_int.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_range_number.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_readonly.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_string.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_ui_vec2.gd::GDScript::-1::1695426144::0::1::::<><>::
+row_vec_2.tscn::PackedScene::5457395765498484982::1695426145::0::1::::<><>::res://addons/panku_console/modules/data_controller/exporter/row_ui_vec2.gd<>uid://b22jdciwq07ic
+::res://addons/panku_console/modules/engine_tools/::1695426145
+env.gd::GDScript::-1::1695426145::0::1::::<>RefCounted<>::
+module.gd::GDScript::-1::1695426145::0::1::::PankuModuleEngineTools<>PankuModule<>::
+opt.gd::GDScript::-1::1695426145::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/expression_monitor/::1695426145
+env.gd::GDScript::-1::1695426145::0::1::::<>RefCounted<>::
+expression_item.gd::GDScript::-1::1695426145::0::1::::<>Control<>::
+expression_item.tscn::PackedScene::29688900715718888::1695426145::0::1::::<><>::res://addons/panku_console/modules/expression_monitor/expression_item.gd<>uid://ttbgv1vr1xsc
+expression_monitor2.gd::GDScript::-1::1695426145::0::1::::<>Control<>::
+expression_monitor2.tscn::PackedScene::2990678251737340826::1695426145::0::1::::<><>::res://addons/panku_console/modules/expression_monitor/expression_monitor2.gd<>uid://dyq4rjkkjs55d
+module.gd::GDScript::-1::1695426145::0::1::::PankuModuleExpressionMonitor<>PankuModule<>::
+monitor_groups_ui.gd::GDScript::-1::1695426145::0::1::::<>VBoxContainer<>::
+monitor_groups_ui.tscn::PackedScene::6119176925833002329::1695426145::0::1::::<><>::res://addons/panku_console/modules/expression_monitor/monitor_groups_ui.gd<>uid://bk18yfu0d77wk
+monitor_group_ui.gd::GDScript::-1::1695426145::0::1::::<>VBoxContainer<>::
+monitor_group_ui.tscn::PackedScene::7958796694781384788::1695426145::0::1::::<><>::uid://bk18yfu0d77wk
+::res://addons/panku_console/modules/general_settings/::1695426145
+env.gd::GDScript::-1::1695426145::0::1::::<>RefCounted<>::
+module.gd::GDScript::-1::1695426145::0::1::::PankuModuleGeneralSettings<>PankuModule<>::
+opt.gd::GDScript::-1::1695426145::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/history_manager/::1695426146
+env.gd::GDScript::-1::1695426145::0::1::::<>RefCounted<>::
+exp_history.gd::GDScript::-1::1695426145::0::1::::<>Control<>::
+exp_history.tscn::PackedScene::373657929734084349::1695426145::0::1::::<><>::uid://bk18yfu0d77wk
+exp_history_item.gd::GDScript::-1::1695426145::0::1::::<>HBoxContainer<>::
+exp_history_item.tscn::PackedScene::7689019687556194822::1695426145::0::1::::<><>::uid://bk18yfu0d77wk
+module.gd::GDScript::-1::1695426145::0::1::::PankuModuleHistoryManager<>PankuModule<>::
+opt.gd::GDScript::-1::1695426146::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/interactive_shell/::1695426149
+env.gd::GDScript::-1::1695426146::0::1::::<>RefCounted<>::
+mini_repl_2.gd::GDScript::-1::1695426148::0::1::::<>VBoxContainer<>::
+mini_repl_2.tscn::PackedScene::2314155975716386450::1695426148::0::1::::<><>::uid://bme8twac4ick5
+module.gd::GDScript::-1::1695426148::0::1::::PankuModuleInteractiveShell<>PankuModule<>::
+opt.gd::GDScript::-1::1695426149::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/interactive_shell/console_logs/::1695426146
+console_logs.gd::GDScript::-1::1695426146::0::1::::<>MarginContainer<>::
+console_logs.tscn::PackedScene::962807213383700640::1695426146::0::1::::<><>::res://addons/panku_console/modules/interactive_shell/console_logs/console_logs.gd<>res://addons/panku_console/common/smooth_scroll/smooth_scroll.gd
+::res://addons/panku_console/modules/interactive_shell/console_ui/::1695426146
+help_bar.tscn::PackedScene::4860104805071706547::1695426146::0::1::::<><>::
+panku_console_ui.gd::GDScript::-1::1695426146::0::1::::<>Control<>::
+panku_console_ui.tscn::PackedScene::3520540771917015114::1695426146::0::1::::<><>::uid://bk18yfu0d77wk
+repl.gd::GDScript::-1::1695426146::0::1::::<>Node<>::
+repl.tscn::PackedScene::4824529503025945795::1695426146::0::1::::<><>::res://addons/panku_console/modules/interactive_shell/console_ui/repl.gd
+::res://addons/panku_console/modules/interactive_shell/hints_list/::1695426147
+hint.gd::GDScript::-1::1695426147::0::1::::<>Button<>::
+hint.tscn::PackedScene::7269509294898911422::1695426147::0::1::::<><>::res://addons/panku_console/modules/interactive_shell/hints_list/hint.gd
+hints_list.gd::GDScript::-1::1695426147::0::1::::<>ScrollContainer<>::
+hints_list.tscn::PackedScene::4370639488860178647::1695426147::0::1::::<><>::res://addons/panku_console/modules/interactive_shell/hints_list/hints_list.gd
+::res://addons/panku_console/modules/interactive_shell/input_field/::1695426148
+input_area.gd::GDScript::-1::1695426147::0::1::::<>HBoxContainer<>::
+input_area.tscn::PackedScene::3238983064854859978::1695426148::0::1::::<><>::uid://bk18yfu0d77wk
+input_field.gd::GDScript::-1::1695426148::0::1::::<>LineEdit<>::
+::res://addons/panku_console/modules/keyboard_shortcuts/::1695426149
+env.gd::GDScript::-1::1695426149::0::1::::<>RefCounted<>::
+exp_key_item.gd::GDScript::-1::1695426149::0::1::::<>HBoxContainer<>::
+exp_key_item.tscn::PackedScene::7908554647270007486::1695426149::0::1::::<><>::uid://bk18yfu0d77wk
+exp_key_mapper_2.gd::GDScript::-1::1695426149::0::1::::<>Control<>::
+exp_key_mapper_2.tscn::PackedScene::6963934836735850827::1695426149::0::1::::<><>::uid://bk18yfu0d77wk
+module.gd::GDScript::-1::1695426149::0::1::::PankuModuleKeyboardShortcuts<>PankuModule<>::
+opt.gd::GDScript::-1::1695426149::0::1::::<>Resource<>::
+remap_button.gd::GDScript::-1::1695426149::0::1::::<>Button<>::
+::res://addons/panku_console/modules/native_logger/::1695426150
+env.gd::GDScript::-1::1695426149::0::1::::<>RefCounted<>::
+godot_log_monitor.gd::GDScript::-1::1695426149::0::1::::<>Node<>::
+logger_view.gd::GDScript::-1::1695426149::0::1::::<>Control<>::
+logger_view.tscn::PackedScene::4217036032205988396::1695426149::0::1::::<><>::uid://bk18yfu0d77wk
+log_overlay.gd::GDScript::-1::1695426149::0::1::::<>RichTextLabel<>::
+log_overlay.tscn::PackedScene::5590441662404827567::1695426149::0::1::::<><>::res://addons/panku_console/modules/native_logger/log_overlay.gd
+log_view_tag.gd::GDScript::-1::1695426149::0::1::::<>Control<>::
+log_view_tag.tscn::PackedScene::8254419958932460588::1695426149::0::1::::<><>::uid://bk18yfu0d77wk
+module.gd::GDScript::-1::1695426149::0::1::::PankuModuleNativeLogger<>PankuModule<>::
+opt.gd::GDScript::-1::1695426149::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/screen_crt_effect/::1695426150
+crt_effect_layer.tscn::PackedScene::6543347401682293693::1695426150::0::1::::<><>::res://addons/panku_console/res/shader/mattias_crt.gdshader
+env.gd::GDScript::-1::1695426150::0::1::::<>RefCounted<>::
+module.gd::GDScript::-1::1695426150::0::1::::PankuModuleScreenCrtEffect<>PankuModule<>::
+opt.gd::GDScript::-1::1695426150::0::1::::<>Resource<>::
+::res://addons/panku_console/modules/screen_notifier/::1695426151
+env.gd::GDScript::-1::1695426150::0::1::::<>RefCounted<>::
+log_item.gd::GDScript::-1::1695426150::0::1::::<>HBoxContainer<>::
+log_item.tscn::PackedScene::7124498270467695330::1695426150::0::1::::<><>::res://addons/panku_console/modules/screen_notifier/log_item.gd
+module.gd::GDScript::-1::1695426151::0::1::::PankuModuleScreenNotifier<>PankuModule<>::
+resident_logs.gd::GDScript::-1::1695426151::0::1::::<>CanvasLayer<>::
+resident_logs.tscn::PackedScene::4949886924116829620::1695426151::0::1::::<><>::res://addons/panku_console/modules/screen_notifier/resident_logs.gd
+::res://addons/panku_console/modules/system_report/::1695426151
+env.gd::GDScript::-1::1695426151::0::1::::<>RefCounted<>::
+module.gd::GDScript::-1::1695426151::0::1::::PankuModuleSystemReport<>PankuModule<>::
+os_report.gd::GDScript::-1::1695426151::0::1::::<>RefCounted<>::
+::res://addons/panku_console/modules/texture_viewer/::1695426151
+module.gd::GDScript::-1::1695426151::0::1::::PankuModuleTextureViewer<>PankuModule<>::
+texture_viewer.gd::GDScript::-1::1695426151::0::1::::<>Control<>::
+texture_viewer.tscn::PackedScene::7750132616475338843::1695426151::0::1::::<><>::res://addons/panku_console/modules/texture_viewer/texture_viewer.gd
+::res://addons/panku_console/modules/variable_tracker/::1695426151
+module.gd::GDScript::-1::1695426151::0::1::::PankuModuleVariableTracker<>PankuModule<>::
+::res://addons/panku_console/res/::1695427111
+green_gradient_1d.tres::Gradient::949485305027433995::1695426152::0::1::::<><>::
+panku_console_theme.tres::Theme::3144029756148019014::1695427111::0::1::::<><>::uid://bua84a0uv8ntw::::res://addons/panku_console/res/icons2/checkbox_checked.svg<>uid://dkiyle8rjahmw::::res://addons/panku_console/res/icons2/checkbox_unchecked.svg
+::res://addons/panku_console/res/effect/::1695426162
+square_shadow.png::CompressedTexture2D::8669949328537749897::1695426152::1695426162::1::::<><>::
+::res://addons/panku_console/res/font/::1695426152
+default_bold.tres::FontVariation::9058431437947727442::1695426152::0::1::::<><>::
+::res://addons/panku_console/res/icons2/::1695426162
+add.svg::CompressedTexture2D::8248109743387697848::1695426153::1695426162::1::::<><>::
+arrow-down-svgrepo-com.svg::CompressedTexture2D::5030973515888015403::1695426153::1695426162::1::::<><>::
+arrow-up-md-svgrepo-com.svg::CompressedTexture2D::8936678500751275656::1695426153::1695426162::1::::<><>::
+bin-cancel-delete-remove-trash-garbage-svgrepo-com.svg::CompressedTexture2D::5698829284189452847::1695426153::1695426162::1::::<><>::
+bookmark-filled-svgrepo-com.svg::CompressedTexture2D::1671439030748304991::1695426154::1695426162::1::::<><>::
+bookmark-svgrepo-com.svg::CompressedTexture2D::1954578364813987539::1695426154::1695426162::1::::<><>::
+check-svgrepo-com.svg::CompressedTexture2D::1899812314969910546::1695426154::1695426162::1::::<><>::
+checkbox_checked.svg::CompressedTexture2D::3792253044796478696::1695426155::1695426162::1::::<><>::
+checkbox_unchecked.svg::CompressedTexture2D::7879142622907838266::1695426155::1695426162::1::::<><>::
+chevron_right.svg::CompressedTexture2D::1583194146746381696::1695426155::1695426162::1::::<><>::
+close.svg::CompressedTexture2D::2330439882978001793::1695426156::1695426162::1::::<><>::
+close_20x.svg::CompressedTexture2D::1372883782339125442::1695426156::1695426162::1::::<><>::
+expand_more.svg::CompressedTexture2D::9017232263723169697::1695426156::1695426162::1::::<><>::
+favorite.svg::CompressedTexture2D::503540277333362081::1695426157::1695426162::1::::<><>::
+info.svg::CompressedTexture2D::8817813311756613397::1695426157::1695426162::1::::<><>::
+menu.svg::CompressedTexture2D::8179843136788233923::1695426158::1695426162::1::::<><>::
+more_horiz.svg::CompressedTexture2D::2462545555787975437::1695426158::1695426162::1::::<><>::
+open_with.svg::CompressedTexture2D::4337809590023318426::1695426158::1695426162::1::::<><>::
+pause-1010-svgrepo-com.svg::CompressedTexture2D::5836794515938135974::1695426158::1695426162::1::::<><>::
+play-1001-svgrepo-com.svg::CompressedTexture2D::285620991441582730::1695426158::1695426162::1::::<><>::
+pop-out-svgrepo-com.svg::CompressedTexture2D::422458796738346726::1695426158::1695426162::1::::<><>::
+remove.svg::CompressedTexture2D::8081394162817603040::1695426158::1695426162::1::::<><>::
+rename-svgrepo-com.svg::CompressedTexture2D::3591850619822719445::1695426158::1695426162::1::::<><>::
+reply.svg::CompressedTexture2D::4440715082743119975::1695426158::1695426162::1::::<><>::
+resize-svgrepo-com.svg::CompressedTexture2D::5377477709021139793::1695426158::1695426162::1::::<><>::
+search.svg::CompressedTexture2D::461470075230879948::1695426158::1695426162::1::::<><>::
+swap_horiz.svg::CompressedTexture2D::2582960940083212342::1695426159::1695426162::1::::<><>::
+::res://addons/panku_console/res/shader/::1695426159
+mattias_crt.gdshader::Shader::-1::1695426159::0::1::::<><>::
+simple_fast_blur.gdshader::Shader::-1::1695426159::0::1::::<><>::
 ::res://addons/perkedeltestmakeplugin/::1587142067
 plugin.cfg::TextFile::-1::1587142067::0::1::::<><>::
 plugin.gd::GDScript::-1::1685182859::0::1::::<>EditorPlugin<>::
@@ -3470,6 +4457,13 @@ shake.tscn::PackedScene::595905696769214750::1695307736::0::1::::<><>::res://add
 ::res://addons/segmented_bar/examples/shake/assets/::1695307739
 border.png::CompressedTexture2D::2075606541089681709::1695307736::1695307739::1::::<><>::
 segment.png::CompressedTexture2D::4806109825552274799::1695307736::1695307739::1::::<><>::
+::res://addons/third-person-camera/::1695427013
+plugin.cfg::TextFile::-1::1695427013::0::1::::<><>::
+tpc.gd::GDScript::-1::1695427013::0::1::::<>EditorPlugin<>::
+::res://addons/third-person-camera/third_person_camera/::1695427015
+ThirdPersonCamera.gd::GDScript::-1::1695427013::0::1::::ThirdPersonCamera<>Node3D<>res://addons/third-person-camera/third_person_camera/ThirdPersonCameraIcon.svg::
+ThirdPersonCamera.tscn::PackedScene::1569279136637590244::1695427013::0::1::::<><>::res://addons/third-person-camera/third_person_camera/ThirdPersonCamera.gd
+ThirdPersonCameraIcon.svg::CompressedTexture2D::7583439636594400096::1695427013::1695427015::1::::<><>::
 ::res://addons/tnowe_extra_controls/::1695307873
 LICENSE.md::TextFile::-1::1695307872::0::1::::<><>::
 plugin.cfg::TextFile::-1::1695307872::0::1::::<><>::
@@ -4741,7 +5735,7 @@ BuildGodot.yml::TextFile::-1::1587898481::0::1::::<><>::
 label.yml::TextFile::-1::1569159147::0::1::::<><>::
 ::res://Documents/scrap/pseudo-CI command/::1587553135
 ::res://Download/::1564061117
-::res://DummyTest/::1695422268
+::res://DummyTest/::1695497263
 Animasha.gd::GDScript::-1::1685182838::0::1::::<>ColorRect<>::
 Animasha.tscn::PackedScene::-1::1685182838::0::1::::<><>::res://Sprites/ConsoleHover.png<>res://Sprites/ConsoleHoverEmpty.png<>res://DummyTest/Animasha.gd<>res://DummyTest/AnimashaMaterial.tres
 AnimashaMaterial.tres::ShaderMaterial::7872417514021571903::1687610744::0::1::::<><>::uid://b2shwowyb2y1l
@@ -4813,8 +5807,6 @@ PlsTTS.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/PlsTTS.g
 PlsVRNow.tscn::PackedScene::-1::1685182840::0::1::::<><>::
 PopupTest.gd::GDScript::-1::1685182840::0::1::::<>Control<>::
 PopupTest.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/PopupTest.gd<>res://Sprites/MavrickleIcon.png
-vibratons.gd::GDScript::-1::1695422086::0::1::::<>Control<>::
-vibratons.tscn::PackedScene::9209359527149710113::1695422268::0::1::::<><>::res://DummyTest/vibratons.gd
 RhythmTestoid.gd::GDScript::-1::1685182840::0::1::::<>Control<>::
 RhythmTestoid.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/RhythmTestoid.gd<>res://Audio/EfekSuara/448081__breviceps__tic-toc-click.wav<>res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn<>res://modules/Reusables/SuperLabel.tscn<>res://modules/Component/MusicNamePop.tscn
 Ronaldhino MIDI of BaWaMi.gd::GDScript::-1::1685182840::0::1::::<>Node<>::
@@ -4843,6 +5835,8 @@ TouchScreeny.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/To
 TreeED.gd::GDScript::-1::1685182840::0::1::::<>Tree<>::
 TreeED.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/TreeED.gd<>res://fonts/Built/Ubuntu_R_48tred.tres<>res://fonts/Built/Ubuntu_M_48tred.tres
 TwaeEYETest.tscn::PackedScene::-1::1685182840::0::1::::<><>::
+vibratons.gd::GDScript::-1::1695425686::0::1::::<>Control<>::
+vibratons.tscn::PackedScene::9209359527149710113::1695429601::0::1::::<><>::res://DummyTest/vibratons.gd
 Viewportoroso.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://Scenes/Zetrix/ZetrixWorld.tres
 Waah.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://addons/water2d/icon.png<>res://addons/water2d/water2D_material.tres<>res://addons/water2d/Water2D.gd<>res://icon.png
 WaffTopi.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://addons/KOBUGE-games.CircularContainer/CircularContainer.gd<>res://fonts/Built/Ubuntu_B_72.tres
@@ -4851,8 +5845,8 @@ WhyntFirbaseWork.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://Scenes/M
 whythepeckdidnotwork.gd::GDScript::-1::1685182840::0::1::::<>Node<>::
 whythepeckdidnotwork.tscn::PackedScene::-1::1685182840::0::1::::<><>::res://DummyTest/whythepeckdidnotwork.gd<>res://DummyTest/ZoingLevel.tscn
 yet_flour.tscn::PackedScene::7278271572492716369::1695322318::0::1::::<><>::uid://cjljo7bqdob48
-yet_stupid.gd::GDScript::-1::1695415578::0::1::::<>CharacterBody3D<>::
-yet_stupid.tscn::PackedScene::8482263326479068583::1695422266::0::1::::<><>::res://DummyTest/yet_stupid.gd
+yet_stupid.gd::GDScript::-1::1695491380::0::1::::<>CharacterBody3D<>::
+yet_stupid.tscn::PackedScene::8482263326479068583::1695497263::0::1::::<><>::res://DummyTest/yet_stupid.gd<>uid://bfxk53bol7o4w::::res://modules/ShadeMaterials/Just_shiny_white.tres<>uid://bxtpu8enmesqc::::res://modules/ShadeMaterials/Just_shiny_cyan.tres
 YOTestJustChar.gd::GDScript::-1::1685182841::0::1::::<>Node3D<>::
 YOTestJustChar.tscn::PackedScene::-1::1685182841::0::1::::<><>::res://modules/Reusables/JustKinematic.tscn<>res://RigidBodi/Lantai.tscn<>res://modules/Reusables/TembokExample.tscn<>res://Mesh/Zoblatos.tscn<>res://DummyTest/YOTestJustChar.gd<>res://modules/Reusables/anSphere.tscn<>res://modules/Reusables/anBox.tscn<>res://modules/Reusables/anCapsol.tscn<>res://modules/Environmenting/anEnvironment.tres
 Zexxle.tscn::PackedScene::-1::1685182841::0::1::::<><>::res://DummyTest/Centering.tscn
@@ -5217,14 +6211,14 @@ impact.ttf::FontFile::8532314752041029745::1469050916::1685198719::1::::<><>::
 Impacted.ttf::FontFile::1641902936547056627::1469050916::1685198719::1::::<><>::
 sharefonts.net.txt::TextFile::-1::1468058562::0::1::::<><>::
 unicode.impact.ttf::FontFile::4539845800863743177::1469050916::1685198719::1::::<><>::
-::res://fonts/kashikan-DSEG/::1695384713
+::res://fonts/kashikan-DSEG/::1695427326
 DSEG-7_Classic_beeg_B-16.tres::FontFile::-1::1685182837::0::1::::<><>::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Bold.ttf
 DSEG-7_Classic_beeg_BI-16.tres::FontFile::-1::1685182837::0::1::::<><>::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-BoldItalic.ttf
 DSEG-7_Classic_beeg_I-16.tres::FontFile::-1::1685182837::0::1::::<><>::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Italic.ttf
 DSEG-7_Classic_beeg_R-16.tres::FontFile::-1::1685182837::0::1::::<><>::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf
 DSEG-7_Modern_beeg_R-16.tres::FontFile::-1::1685182837::0::1::::<><>::res://font/fonts-DSEG/DSEG7-Modern/DSEG7Modern-Regular.ttf
 kashikan-DSEG.gd::GDScript::-1::1685380077::0::1::::<>FontFile<>::
-kashikan-DSEG.tres::FontFile::284479762012972346::1695384713::0::1::::<><>::res://fonts/kashikan-DSEG/kashikan-DSEG.gd<>uid://dfrjenoisv30t::::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf
+kashikan-DSEG.tres::FontFile::284479762012972346::1695427326::0::1::::<><>::res://fonts/kashikan-DSEG/kashikan-DSEG.gd<>uid://dfrjenoisv30t::::res://font/fonts-DSEG/DSEG7-Classic/DSEG7Classic-Regular.ttf
 ::res://fonts/kirifont/::1685198719
 KiriFont.otf::FontFile::918822030275390093::1582784308::1685198719::1::::<><>::
 Kirifont.tres::FontFile::-1::1685182837::0::1::::<><>::res://fonts/kirifont/KiriFont.otf
@@ -5580,15 +6574,17 @@ HarshChapter.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://fonts/Built/
 ::res://GameDVDCardtridge/Great Marble Adventure - legacy/::1614407226
 boot.json::JSON::-1::1614407268::0::1::::<><>::
 GreatMarbleAdventureLegacy.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://GameDVDCardtridge/ExtAppOpenerInspector/ExtAppOpenerInspector.tscn
-::res://GameDVDCardtridge/HexagonEngine-v3/::1695422265
+::res://GameDVDCardtridge/HexagonEngine-v3/::1695497263
 boot.json::JSON::-1::1695207664::0::1::::<><>::
 bootThisHexagonEngine.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://GameDVDCardtridge/ChangeDVDv3/bootThis.tscn<>res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.tscn
-HexagonEngineV3.gd::GDScript::-1::1695321905::0::1::::<>Node<>::
-HexagonEngineV3.tscn::PackedScene::2134063544820209644::1695422265::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.gd<>uid://djvolsvxm7mhu::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIplace.tscn<>uid://bbwivv62qkoec::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.tscn<>uid://c0eoc7t42s2c1::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.tscn<>uid://cy0tn2gj8kmdj::::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBaseAdded.tscn
+HexagonEngineV3.gd::GDScript::-1::1695497076::0::1::::<>Node<>::
+HexagonEngineV3.tscn::PackedScene::2134063544820209644::1695497263::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.gd<>uid://djvolsvxm7mhu::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIplace.tscn<>uid://bbwivv62qkoec::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.tscn<>uid://c0eoc7t42s2c1::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.tscn<>uid://cy0tn2gj8kmdj::::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBaseAdded.tscn
 ::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/::1695209418
-::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/::1695422266
-InitLevelBase.tscn::PackedScene::7620836382162755896::1695222808::0::1::::<><>::
-InitLevelBaseAdded.tscn::PackedScene::6510161324586505503::1695422266::0::1::::<><>::uid://dgtucdo3lt3s3::::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn<>uid://ds34vxgw0kprj::::res://DummyTest/yet_stupid.tscn<>uid://dbxwcmi5bhtwr::::res://DummyTest/yet_flour.tscn
+::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/::1695497265
+InitLevelBase.tscn::PackedScene::7620836382162755896::1695497265::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.gd
+InitLevelBaseAdded.tscn::PackedScene::6510161324586505503::1695497264::0::1::::<><>::uid://dgtucdo3lt3s3::::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn<>uid://ds34vxgw0kprj::::res://DummyTest/yet_stupid.tscn<>res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBaseAdded.gd<>uid://dbxwcmi5bhtwr::::res://DummyTest/yet_flour.tscn<>uid://c0rdv6glchtge::::res://modules/Reusables/cam_rig.tscn
+InitLevelBaseAdded.gd::GDScript::-1::1695497263::0::1::::<>HexagonLevel<>::
+InitLevelBase.gd::GDScript::-1::1695497143::0::1::::HexagonLevel<>Node3D<>::
 ::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/CompatibilityAdapter/::1586113296
 LevelLoaderAdapterFromv2.gd::GDScript::-1::1685182833::0::1::::<>Node<>::
 LevelLoaderAdapterFromv2.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/CompatibilityAdapter/LevelLoaderAdapterFromv2.gd
@@ -5608,9 +6604,9 @@ InputEachAction.gd::GDScript::-1::1685182833::0::1::::<>PanelContainer<>::
 InputEachAction.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://fonts/Built/Ubuntu_M_48tred.tres<>res://fonts/Built/Ubuntu_M_72tred.tres<>res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Controller/InputEachAction.gd
 InputSettinger.gd::GDScript::-1::1685182833::0::1::::<>GridContainer<>::
 InputSettinger.tscn::PackedScene::-1::1685182833::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Controller/InputSettinger.gd
-::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/::1695422265
+::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/::1695497263
 HexagonEnginev3PauseMainMenu.gd::GDScript::-1::1695319681::0::1::::<>Control<>::
-HexagonEnginev3PauseMainMenu.tscn::PackedScene::2502550227662420146::1695422265::0::1::::<><>::res://fonts/Built/Ubuntu_M_72tred.tres<>uid://bkp623xudvlls::::res://Sprites/HexagonEngineSymbolVeryLarge.png<>res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd<>uid://b7n2s0q7rd6ea::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn<>uid://d2h6pus36ujsk::::res://addons/controller_icons/objects/controller_icons_button.tscn<>uid://blrpuck0kn6re::::res://Sprites/PlayIcon.png<>uid://cnghdqiitl0fu::::res://addons/controller_icons/assets/key/esc.png<>uid://bsfd3aie5g54s::::res://Sprites/SettingIcon.png<>uid://dhkvnwcievi8g::::res://Sprites/ExtrasIcon.png<>uid://bhkhnhps8035w::::res://Sprites/QuitIcon.png<>uid://c74bpef5bbhg8::::res://modules/Reusables/SuperLabel.tscn<>uid://c6jj1mnc7clxw::::res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf
+HexagonEnginev3PauseMainMenu.tscn::PackedScene::2502550227662420146::1695497263::0::1::::<><>::res://fonts/Built/Ubuntu_M_72tred.tres<>uid://bkp623xudvlls::::res://Sprites/HexagonEngineSymbolVeryLarge.png<>res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/HexagonEnginev3PauseMainMenu.gd<>uid://b7n2s0q7rd6ea::::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn<>uid://d2h6pus36ujsk::::res://addons/controller_icons/objects/controller_icons_button.tscn<>uid://blrpuck0kn6re::::res://Sprites/PlayIcon.png<>uid://cnghdqiitl0fu::::res://addons/controller_icons/assets/key/esc.png<>uid://bsfd3aie5g54s::::res://Sprites/SettingIcon.png<>uid://dhkvnwcievi8g::::res://Sprites/ExtrasIcon.png<>uid://bhkhnhps8035w::::res://Sprites/QuitIcon.png<>uid://c74bpef5bbhg8::::res://modules/Reusables/SuperLabel.tscn<>uid://c6jj1mnc7clxw::::res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf
 NavigationScaffoldBase.gd::GDScript::-1::1695230453::0::1::::NavigationScaffold<>Control<>::
 NavigationScaffoldBase.tscn::PackedScene::2260886360343260820::1695231297::0::1::::<><>::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds/NavigationScaffoldBase.gd
 ::res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/::1695241937
@@ -6081,12 +7077,12 @@ TemplateLevelCard.tscn::PackedScene::-1::1685182812::0::1::::<><>::res://GameDVD
 ::res://GameDVDCardtridge/TemplateHexagonEngine/LevelCardtridge/TemplateLevelCartridge/Things/::1586113297
 CapsuleZeno.tscn::PackedScene::-1::1685182812::0::1::::<><>::
 UnknownCapsuleZeno.tscn::PackedScene::-1::1685182812::0::1::::<><>::res://Sprites/UnkownIcon.png
-::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/::1695422266
+::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/::1695497263
 AreYouSureDialog.gd::GDScript::-1::1695238940::0::1::::<>Popup<>::
 AreYouSureDialog.tscn::PackedScene::1696774008624839779::1695240685::0::1::::<><>::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/AreYouSureDialog.gd<>uid://drpsbtsxbxayu
 DummySpacerFocusArea.tscn::PackedScene::-1::1685182809::0::1::::<><>::
 GameplayUI.gd::GDScript::-1::1695320871::0::1::::<>Control<>::
-GameplayUI.tscn::PackedScene::6536675290292726762::1695422266::0::1::::<><>::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd<>uid://bsgde7qqbhmnp::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn<>uid://rok8q2shibm4::::res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf<>uid://bj1u67tn3p2m2::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn<>uid://b13kt0res6iyf::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn<>uid://bvvme5uagols7::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn
+GameplayUI.tscn::PackedScene::6536675290292726762::1695497263::0::1::::<><>::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/GameplayUI.gd<>uid://bsgde7qqbhmnp::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/Derival/PauseButton.tscn<>uid://rok8q2shibm4::::res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf<>uid://bj1u67tn3p2m2::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/HPbar.tscn<>uid://b13kt0res6iyf::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn<>uid://bvvme5uagols7::::res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn
 GravityHourGlass.gd::GDScript::-1::1686697947::0::1::::<>TextureRect<>::
 GravityHourGlass.tscn::PackedScene::1912416560509450076::1695207402::0::1::::<><>::uid://cufgaoeigs7dw
 GravityHourGlass_shaderCode.tres::Shader::5493539519982096440::1686697500::0::1::::<><>::
@@ -6532,13 +7528,6 @@ Zetreng.svg::CompressedTexture2D::757904071437423212::1572668643::1685198804::1:
 Sakyodik.svg::CompressedTexture2D::7203148341676753795::1565460478::1685198808::1::::<><>::
 ::res://Inkscape/SNeker/::1685198806
 Sneker.svg::CompressedTexture2D::8415454439978601066::1586685237::1685198806::1::::<><>::
-::res://joystick/::1695231559
-virtual_joystick.gd::GDScript::-1::1695231559::0::1::::VirtualJoystick<>Control<>::
-virtual_joystick.tscn::PackedScene::8038149555967335895::1695231559::0::1::::<><>::res://joystick/virtual_joystick.gd<>uid://bm30au8mjfc2f
-::res://joystick/textures/::1695231561
-joystick_base_outline.png::CompressedTexture2D::3288008411285325467::1695231559::1695231561::1::::<><>::
-joystick_tip.png::CompressedTexture2D::3132432681801126628::1695231559::1695231561::1::::<><>::
-joystick_tip_arrows.png::CompressedTexture2D::8548255698028078709::1695231559::1695231561::1::::<><>::
 ::res://Kdenlive/::1586112734
 ::res://Kdenlive/Project/::1586112734
 ::res://Kdenlive/Titles/::1586112734
@@ -6635,12 +7624,12 @@ Healthbar3D.gd::GDScript::-1::1685182800::0::1::::healthbar3D<>Node3D<>::
 ::res://modules/Meshening/::1637254757
 anBox.tres::BoxMesh::-1::1685182800::0::1::::<><>::res://modules/ShadeMaterials/Energie.tres
 anSphere.tres::SphereMesh::-1::1685182800::0::1::::<><>::res://modules/ShadeMaterials/Energie.tres
-::res://modules/Reusables/::1695422267
+::res://modules/Reusables/::1695497265
 anBox.tscn::PackedScene::-1::1685182799::0::1::::<><>::res://modules/Reusables/anSphere.tscn<>res://modules/Meshening/anBox.tres
 anCapsol.tscn::PackedScene::-1::1685182799::0::1::::<><>::res://modules/ShadeMaterials/Energie.tres
 anSphere.tscn::PackedScene::-1::1685182799::0::1::::<><>::res://modules/Meshening/anSphere.tres
-cam_rig.gd::GDScript::-1::1695415232::0::1::::<>Node3D<>::
-cam_rig.tscn::PackedScene::6562878170801770708::1695422267::0::1::::<><>::res://modules/Reusables/cam_rig.gd
+cam_rig.gd::GDScript::-1::1695497262::0::1::::<>Node3D<>::
+cam_rig.tscn::PackedScene::6562878170801770708::1695497265::0::1::::<><>::res://modules/Reusables/cam_rig.gd
 DSEGLabel.gd::GDScript::-1::1685387765::0::1::::<>Label<>::
 DSEGLabel.tscn::PackedScene::7767681700404763873::1686661314::0::1::::<><>::uid://eb2ltf8btgxm<>res://modules/Reusables/DSEGLabel.gd<>uid://dyw5tb160b36i<>uid://1rag7bppnmjk<>uid://by0tbid1r1k1e<>uid://hpqlis2b5ixy<>uid://cesm3tyfnmg57<>uid://cqt77y1mig8nc<>uid://by5yc2yibtd75<>uid://c41h1i3dgrqiy<>uid://vutt1surn1al<>uid://cd7efa7l15a4q<>uid://c4c0lxtmpqqx<>uid://dfrjenoisv30t<>uid://cg22ub37i0dfh<>uid://jadq5vvq880w<>uid://ce1kfp0j42jrk<>uid://1sflew0q7iiu<>uid://ck3o0c4wommlw<>uid://cho2xd10t8n61<>uid://ctha1s2mabbky<>uid://b3d8ighuom8b6<>uid://bpbq5bvcjq1af<>uid://bkhs74ntxqvlw<>uid://c3irb83vmq3fs<>uid://ctn6hb0p2yhl0<>uid://dmwfkh3fg02cu<>uid://cc6hudtrsy6my<>uid://b7yuw24yq4fx7<>uid://dwkdpp3s5psrd<>uid://de5gg7atgbg2m<>uid://0tnj57sf3kcd<>uid://bxme7p86bkxej<>uid://c46n8hwhgkee3<>uid://5caadhmmuwes<>uid://8d8sq4eoh48t<>uid://cahf46prka4xj<>uid://bujn7awtgf3bo<>uid://ckjk2rljmpojr<>uid://3y7fqo0hyh68<>uid://df7usg8kr6fya<>uid://b2povnxllk8g4<>uid://d2h0a4prhmgfl<>uid://bde54mab883au<>uid://dmtkbkmrhgylj<>uid://csb1tm6x3tf63<>uid://bttc0h3vmbclo<>uid://caq1h2n4rd6pq<>uid://dwqc1rycerigx<>uid://utejw8mhqloi<>uid://bblfpwnioixai<>uid://dh7j5vpccv5bc<>uid://ciwah1s7i0ppt
 GDQTransitionColor.gd::GDScript::-1::1685182799::0::1::::GDQTransitionColor<>ColorRect<>::
@@ -6678,23 +7667,26 @@ SpringCamArm.tscn::PackedScene::-1::1685182800::0::1::::<><>::res://modules/Reus
 ThoughFields.tscn::PackedScene::5920389193397906312::1685383708::0::1::::<><>::uid://diwyt2v0kr48d<>res://fonts/kashikan-DSEG/kashikan-DSEG.gd<>uid://jadq5vvq880w<>uid://by5yc2yibtd75<>uid://bujn7awtgf3bo<>uid://5caadhmmuwes<>uid://bde54mab883au
 ::res://modules/Reusables/SFXRStreamPlayer/::1647254838
 Dedd ciaut.tscn::PackedScene::-1::1685182800::0::1::::<><>::res://addons/godot_sfxr/SfxrStreamPlayer.gd
-::res://modules/Reusables/Shortcuts/::1695384713
+::res://modules/Reusables/Shortcuts/::1695427326
 backButton_eventAction.tres::InputEventAction::2044395170557053154::1695300837::0::1::::<><>::
-backButton_shortcut.tres::Shortcut::7265193455327779900::1695384713::0::1::::<><>::uid://4ek5itqu7xpi::::res://modules/Reusables/Shortcuts/backButton_eventAction.tres
-pauseButton_eventAction.tres::InputEventAction::2265628743614201142::1695384713::0::1::::<><>::
-pauseButton_shortcut.tres::Shortcut::4119967402571844365::1695384713::0::1::::<><>::uid://7jqtsaaqmm2q::::res://modules/Reusables/Shortcuts/pauseButton_eventAction.tres
+backButton_shortcut.tres::Shortcut::7265193455327779900::1695427325::0::1::::<><>::uid://4ek5itqu7xpi::::res://modules/Reusables/Shortcuts/backButton_eventAction.tres
+pauseButton_eventAction.tres::InputEventAction::2265628743614201142::1695427325::0::1::::<><>::
+pauseButton_shortcut.tres::Shortcut::4119967402571844365::1695427326::0::1::::<><>::uid://7jqtsaaqmm2q::::res://modules/Reusables/Shortcuts/pauseButton_eventAction.tres
 ::res://modules/ShadeMask/::1605958102
 ::res://modules/ShadeMask/GDQuestShadeMask/::1685198809
 curtain.png::CompressedTexture2D::2024461996839362666::1605958310::1685198809::1::::<><>::
 from_center.png::CompressedTexture2D::2782622951835438041::1605958310::1685198809::1::::<><>::
 shards.png::CompressedTexture2D::4018758646807924907::1605958310::1685198809::1::::<><>::
-::res://modules/ShadeMaterials/::1685182799
+::res://modules/ShadeMaterials/::1695495537
 BanExampleWheel.tres::StandardMaterial3D::-1::1685182799::0::1::::<><>::res://Sprites/MavrickleIcon.png
 Energie.tres::StandardMaterial3D::-1::1685182799::0::1::::<><>::
 GDQTransitionColorMaterial.tres::ShaderMaterial::-1::1685182799::0::1::::<><>::res://modules/ShadeMaterials/GDQTransitionColorShaderScript.gdshader<>res://modules/ShadeMask/GDQuestShadeMask/shards.png
 GDQTransitionColorShaderScript.gdshader::Shader::-1::1685182799::0::1::::<><>::
 infiniBGScrollMaterial.tres::ShaderMaterial::-1::1685182799::0::1::::<><>::res://modules/ShadeMaterials/infiniScrollBGshader.gdshader
 infiniScrollBGshader.gdshader::Shader::-1::1685182799::0::1::::<><>::
+Just_shiny.tres::StandardMaterial3D::6278346524248471427::1695495537::0::1::::<><>::
+Just_shiny_white.tres::StandardMaterial3D::2785507806822128344::1695495537::0::1::::<><>::
+Just_shiny_cyan.tres::StandardMaterial3D::4040935475521224042::1695495537::0::1::::<><>::
 ::res://modules/SumberDaya/::1647254426
 default_button_context_theme.gd::GDScript::-1::1685182799::0::1::::ButtonContextTheme<>Resource<>::
 default_button_context_theme.json::JSON::-1::1638384358::0::1::::<><>::
@@ -6860,7 +7852,7 @@ ReplacementZetrixViewport.tscn::PackedScene::-1::1685182797::0::1::::<><>::res:/
 ZetrixViewport.gd::GDScript::-1::1685182797::0::1::::<>SubViewport<>::
 ZetrixViewport.tscn::PackedScene::-1::1685182797::0::1::::<><>::res://Scenes/Zetrix/ZetrixViewport.gd<>res://addons/godot-openxr/scenes/first_person_controller_vr.tscn<>res://Scenes/Zetrix/PortScreen.tscn<>res://Scenes/Zetrix/ZetrixWorld.tres<>res://Scenes/Zetrix/Copsolen2.tscn<>res://Scenes/Zetrix/Copsolen.tscn
 ZetrixWorld.tres::World3D::-1::1685182797::0::1::::<><>::res://default_env.tres
-::res://Scripts/::1695422265
+::res://Scripts/::1695496911
 AutoConductor.gd::GDScript::-1::1685182796::0::1::::<>Node<>::
 AutoKadeTimingStruct.gd::GDScript::-1::1685182796::0::1::::TimingStruct<>Node<>::
 AutoSpeaker.gd::GDScript::-1::1685215034::0::1::::<>AudioStreamPlayer<>::
@@ -6873,10 +7865,10 @@ Kixlonzing.gd::GDScript::-1::1685212342::0::1::::<>Node<>::
 MainMenu.gd::GDScript::-1::1685182796::0::1::::<>Control<>::
 ModPCKLoader.gd::GDScript::-1::1685388134::0::1::::<>Node<>::
 Network.gd::GDScript::-1::1685182796::0::1::::<>Node<>::
-Posesser.gd::GDScript::-1::1695422265::0::1::::<>Node<>::
+Posesser.gd::GDScript::-1::1695477928::0::1::::<>Node<>::
 ScrollContainer.gd::GDScript::-1::1685182796::0::1::::<>ScrollContainer<>::
 Settingers.gd::GDScript::-1::1685347364::0::1::::<>Node<>::
-Singletoner.gd::GDScript::-1::1695321597::0::1::::<>Node<>::
+Singletoner.gd::GDScript::-1::1695496911::0::1::::<>Node<>::
 TemplateHexagonEngine.gd::GDScript::-1::1695285734::0::1::::<>Node<>::
 UIspace.gd::GDScript::-1::1695285735::0::1::::<>Control<>::
 ::res://Scripts/ExtraImportAsset/::1685351018
@@ -7431,15 +8423,33 @@ JustWorkingMenu.gd::GDScript::-1::1686664983::0::1::::<>VBoxContainer<>::
 JustWorkingMenu.tscn::PackedScene::6343981943144853613::1686695724::0::1::::<><>::res://TemporarilyTest/JustWorkingMenu.gd<>uid://drpsbtsxbxayu<>res://fonts/Built/Ubuntu_B_48tred.tres<>uid://b4sqfbtfve41n<>uid://3gpci4cev0yl<>uid://bhkhnhps8035w<>res://fonts/Built/Ubuntu_M_48tred.tres<>uid://df2geh2j00e4u<>uid://cdv7q6ym8dynn<>uid://cnjpdh6esmk3<>uid://j8mgbe1cv3aj<>uid://df5vgorit1p4v<>uid://duipyj6h63cq2<>uid://ck8r72yjppa2u<>uid://di0w73s8x7dyt<>uid://bibajss18j76i<>uid://c6llg67p8qed4<>uid://c1r0yg24w1ks2<>uid://csnkbw2gsxr3x<>uid://dtiiw7mrjriey<>uid://dhkvnwcievi8g<>uid://chl5qqorfgfab<>uid://dvrffteoqv3h5
 ViewportTestoid.tscn::PackedScene::-1::1685182790::0::1::::<><>::
 ::res://TermTestoid/::1596045397
-::res://Theme/::1695384713
+::res://Theme/::1695427325
 EditorEmptyTheme.tres::Theme::-1::1685182788::0::1::::<><>::
 EditorTheme.tres::Theme::3718717892160379763::1695214848::0::1::::<><>::
 EmptyTheme.tres::Theme::-1::1685182789::0::1::::<><>::
-Perkedel_Tema.tres::Theme::2049832923676897922::1695384713::0::1::::<><>::res://fonts/Built/Ubuntu_R_16tred.tres<>res://fonts/Built/Ubuntu_B_16tred.tres<>uid://bmsas4i35f4x0::::res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf<>res://Theme/StyleBox/Behnihng_styleboxflat.tres<>res://fonts/Built/Ubuntu_R_24tred.tres<>res://fonts/Built/Ubuntu_RI_16tred.tres<>res://fonts/Built/Ubuntu_BI_16tred.tres<>res://fonts/Built/Ubuntu_monospace_16tred.tres<>uid://c6jj1mnc7clxw::::res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf
+Perkedel_Tema.tres::Theme::2049832923676897922::1695427325::0::1::::<><>::res://fonts/Built/Ubuntu_R_16tred.tres<>res://fonts/Built/Ubuntu_B_16tred.tres<>uid://bmsas4i35f4x0::::res://font/ubuntu-font-family-0.83/Ubuntu-B.ttf<>res://Theme/StyleBox/Behnihng_styleboxflat.tres<>res://fonts/Built/Ubuntu_R_24tred.tres<>res://fonts/Built/Ubuntu_RI_16tred.tres<>res://fonts/Built/Ubuntu_BI_16tred.tres<>res://fonts/Built/Ubuntu_monospace_16tred.tres<>uid://c6jj1mnc7clxw::::res://font/ubuntu-font-family-0.83/Ubuntu-R.ttf
 Perkedel_Tema_BigFon.tres::Theme::4454374554606225355::1695200923::0::1::::<><>::res://fonts/Built/Ubuntu_L_12_OutLineless.tres<>uid://x0txbxdkd8w1
 ScrollBarMissing.tres::Theme::9017426140948100989::1695214850::0::1::::<><>::
 ::res://Theme/StyleBox/::1596048680
 Behnihng_styleboxflat.tres::StyleBoxFlat::-1::1685182790::0::1::::<><>::
+::res://TPC-demo/::1695429603
+PlayerBall.gd::GDScript::-1::1695428167::0::1::::<>RigidBody3D<>::
+TestScene.gd::GDScript::-1::1695427010::0::1::::<>Node3D<>::
+TestScene.tscn::PackedScene::2329963070267133071::1695429603::0::1::::<><>::res://TPC-demo/PlayerBall.gd<>uid://c8vwnx65onnvv::::res://TPC-demo/kenney_prototype_textures/green/texture_09.png<>uid://wmf2eu0uuhrg::::res://addons/third-person-camera/third_person_camera/ThirdPersonCamera.tscn<>uid://byc1l3f88knyq::::res://TPC-demo/kenney_prototype_textures/dark/texture_12.png<>uid://3ut80mef1rtt::::res://TPC-demo/kenney_prototype_textures/orange/texture_05.png<>uid://b8dlw2gs1a6k::::res://TPC-demo/kenney_prototype_textures/red/texture_13.png
+::res://TPC-demo/kenney_prototype_textures/::1695427010
+::res://TPC-demo/kenney_prototype_textures/dark/::1695427015
+texture_12.png::CompressedTexture2D::4076681451980582836::1695427010::1695427015::1::::<><>::
+::res://TPC-demo/kenney_prototype_textures/green/::1695427015
+texture_09.png::CompressedTexture2D::7133785386746440283::1695427010::1695427015::1::::<><>::
+::res://TPC-demo/kenney_prototype_textures/orange/::1695427015
+texture_05.png::CompressedTexture2D::2007789062818398845::1695427010::1695427015::1::::<><>::
+::res://TPC-demo/kenney_prototype_textures/red/::1695427015
+texture_13.png::CompressedTexture2D::138516301754370200::1695427010::1695427015::1::::<><>::
+::res://TPC-readme-assets/::1695427015
+ThirdPersonCamera.png::CompressedTexture2D::2684118954323632118::1695427011::1695427015::1::::<><>::
+ThirdPersonCamera.svg::CompressedTexture2D::5925946505318834529::1695427011::1695427015::1::::<><>::
+::res://TPC-readme-assets/doc/::1695427015
+inspector.png::CompressedTexture2D::6980239914815136519::1695427012::1695427015::1::::<><>::
 ::res://Tulkit/::1637781819
 ::res://utils/::1604342542
 ::res://utils/brands.sprites/::1589043600

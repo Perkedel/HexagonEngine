@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds34vxgw0kprj"]
+[gd_scene load_steps=7 format=3 uid="uid://ds34vxgw0kprj"]
 
 [ext_resource type="Script" path="res://DummyTest/yet_stupid.gd" id="1_ns3nt"]
+[ext_resource type="Material" uid="uid://bfxk53bol7o4w" path="res://modules/ShadeMaterials/Just_shiny_white.tres" id="2_23jpc"]
+[ext_resource type="Material" uid="uid://bxtpu8enmesqc" path="res://modules/ShadeMaterials/Just_shiny_cyan.tres" id="3_b3omj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0t7kc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ex6hx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mae6d"]
+size = Vector3(0.5, 0.25, 0.5)
 
 [node name="YetStupid" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -13,5 +18,14 @@ script = ExtResource("1_ns3nt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_0t7kc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Forms" type="Node3D" parent="."]
+
+[node name="PlaceBean" type="MeshInstance3D" parent="Forms"]
+material_override = ExtResource("2_23jpc")
 mesh = SubResource("CapsuleMesh_ex6hx")
+skeleton = NodePath("../..")
+
+[node name="Visor" type="MeshInstance3D" parent="Forms/PlaceBean"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
+material_override = ExtResource("3_b3omj")
+mesh = SubResource("BoxMesh_mae6d")
