@@ -11,6 +11,16 @@ var currentHP:float = HP
 var currentSpeed:float = SPEED
 var currentJumpVelocity:float = 4.5
 
+# use Kenney's digital audios
+# & qubodup's wood collission
+# https://freesound.org/people/qubodup/sounds/54850/
+@export_group('Sounds')
+@export var jumpSound:AudioStream = preload("res://Audio/EfekSuara/344500__jeremysykes__jump05.wav")
+#@export var jumpSound:AudioStream = preload("res://addons/kenney digital audio/phase_jump_1.ogg")
+@export var landedSound:AudioStream = preload('res://Audio/EfekSuara/WoodCollision-01.wav')
+# https://freesound.org/people/jeremysykes/sounds/344500/ wait, this is my jump?! yeah guess..
+# yeah confirmed, that's my jump.
+
 @export_group('Camera')
 @export var currentCameraRig:Node
 
@@ -46,11 +56,13 @@ var coyoteTimer:float = .5
 @export var onePlayerOnly:bool = true
 @export var expectedPlayer:int = 0
 
+@onready var feetSpeaker = $FeetSpeaker
 var ownActive:bool = false
 var rotation_direction:float
 var direction:Vector3
 var moveAxes:Array[float]=[0,0,0,0]
 var inputer:Vector3
+var wasFloored:bool = true
 
 func teleportToInit():
 	position = init_pos
@@ -74,18 +86,26 @@ func heal(howMuch:float):
 
 func pushJump():
 	velocity.y = currentJumpVelocity
+	_feetSound(jumpSound)
 	jumpedAlready = true
+	coyoteTimer = 0
 	pass
 
 func manageJump():
-	if (is_on_floor() or coyoteTimer > 0 or not offFloorJumpPenalty) and not jumpedAlready:
-		pushJump()
-		pass
-	else:
-		if currentJumpTokens > 0:
+	if not disableJump:
+		if (is_on_floor() or coyoteTimer > 0 or not offFloorJumpPenalty) and not jumpedAlready:
+#			print('jump 1st ' + ('is Floor' if is_on_floor else 'is Aired') + ' Coyote ' + String.num(coyoteTimer) + ' & ' + ('already jumped' if jumpedAlready else 'not yet jumped'))
 			pushJump()
-			currentJumpTokens -= 1
 			pass
+		else:
+			if currentJumpTokens > 0:
+#				print('jump 2nd' + ('is Floor' if is_on_floor else 'is Aired') + ' Coyote ' + String.num(coyoteTimer) + ' & ' + ('already jumped' if jumpedAlready else 'not yet jumped'))
+				pushJump()
+				currentJumpTokens -= 1
+				pass
+#		jumpedAlready = true
+#		coyoteTimer = 0
+		move_and_slide()
 	pass
 
 func assignCamera(withMe:Node):
@@ -97,16 +117,49 @@ func meMove(axes:Vector2 = Vector2.ZERO):
 	direction = (transform.basis * Vector3(axes.x, 0, axes.y)).normalized()
 	pass
 
+func doWillFlooring():
+	if not wasFloored:
+		_feetSound(landedSound)
+		wasFloored = true
+	pass
+
+func interactNow(command:String = 'activate', argument:String = ''):
+	# send interact command to object. default command is activate
+	# there may also
+	# - special
+	# - pickup
+	# - destroy
+	# - throw
+	# - kick
+	# - etc.
+	# object will receive & repond to matching command.
+	pass
+
+func _feetSound(what:AudioStream):
+	feetSpeaker.stream = what
+	feetSpeaker.play()
+	pass
+
+func playSound(what:AudioStream,onWhat:String):
+	match onWhat:
+		_:
+			pass
+	pass
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		if coyoteTimer > 0:
 			coyoteTimer -= delta
+		if jumpedAlready:
+			coyoteTimer = 0
+		wasFloored = false
 	else:
 		currentJumpTokens = extraJumpTokens
 		jumpedAlready = false
 		coyoteTimer = coyoteTimeCompensateIn
+		doWillFlooring()
 	
 	# Rotation
 	if Vector2(velocity.z, velocity.x).length() > 0:

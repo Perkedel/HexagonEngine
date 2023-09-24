@@ -79,12 +79,12 @@ func _physics_process(delta: float) -> void:
 		# pls check if there is multithread. this best runs on other thread
 		#var moveX = Input.get_joy_axis(i,InputHelper.get_joypad_input_for_action('Jalan_Kanan'))
 #		MoveAxes[i] = Input.get_vector(moveLeftKey, moveRightKey, moveFrontKey, moveBackKey)
-		if Posessings[i]:
-			for j in range(Posessings[i].size()):
-				if Posessings[i][j].has_method('meMove'):
-#					Posessings[i][j].call('meMove',MoveAxes[i])
-					pass
-				pass
-			pass
+#		if Posessings[i]:
+#			for j in range(Posessings[i].size()):
+#				if Posessings[i][j].has_method('meMove'):
+##					Posessings[i][j].call('meMove',MoveAxes[i])
+#					pass
+#				pass
+#			pass
 		pass
 	pass

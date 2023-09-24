@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://do0xct21gy63v"]
+
+[ext_resource type="PackedScene" uid="uid://d2h6pus36ujsk" path="res://addons/controller_icons/objects/controller_icons_button.tscn" id="1_8srga"]
+[ext_resource type="Script" path="res://modules/Reusables/parts/controller_icons_button_SUPER.gd" id="2_khvgv"]
+
+[node name="SuperControllerIconsButton" instance=ExtResource("1_8srga")]
+script = ExtResource("2_khvgv")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

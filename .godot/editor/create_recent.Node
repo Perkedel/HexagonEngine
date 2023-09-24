@@ -1,5 +1,11 @@
-Node3D
+CPUParticles3D
 MeshInstance3D
+GPUParticles3D
+AudioStreamPlayer3D
+Control
+CanvasLayer
+Node2D
+Node3D
 Button
 Camera3D
 CollisionShape3D
@@ -13,7 +19,6 @@ Sprite3D
 CenterContainer
 ProgressBar
 ScrollContainer
-Control
 Node
 Timer
 VBoxContainer

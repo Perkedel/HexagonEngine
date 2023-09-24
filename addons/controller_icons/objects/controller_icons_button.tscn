@@ -6,7 +6,7 @@
 [node name="controller_icons_button" type="Button"]
 offset_right = 802.0
 offset_bottom = 222.0
-focus_mode = 1
+focus_mode = 0
 theme_override_font_sizes/font_size = 32
 text = "Action Here"
 icon = ExtResource("1_0ws47")

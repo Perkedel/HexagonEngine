@@ -29,3 +29,10 @@ func recheckMenu() -> String:
 			$CamRig.setOwnActivate(false)
 			pass
 	return super.recheckMenu()
+
+func _notification(what: int) -> void:
+	match(what):
+		_:
+			pass
+	super._notification(what)
+	pass

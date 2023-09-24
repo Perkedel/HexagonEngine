@@ -91,16 +91,37 @@ func _process(delta):
 #	_refreshStatusoid()
 	pass
 
-
-func _on_MenuButton_pressed():
+func soundTheButton(ofWhich:String = ''):
+	var toPlay:AudioStream
+	match(ofWhich):
+		'hover':
+			toPlay = buttonHovered
+			pass
+		'press':
+			toPlay = buttonSounded
+			pass
+		_:
+			toPlay = buttonHovered
+			pass
+	
 	if SoundsSpatially:
-#		buttonSpk2d.play()
-		AutoSpeaker.playSFXNow(buttonSounded)
+		AutoSpeaker.playSFXNow(toPlay)
 		pass
 	else:
-#		buttonSpk.play()
-		AutoSpeaker.playSFXNow(buttonSounded)
+		AutoSpeaker.playSFXNow(toPlay)
 		pass
+	pass
+
+func _on_MenuButton_pressed():
+#	if SoundsSpatially:
+##		buttonSpk2d.play()
+#		AutoSpeaker.playSFXNow(buttonSounded)
+#		pass
+#	else:
+##		buttonSpk.play()
+#		AutoSpeaker.playSFXNow(buttonSounded)
+#		pass
+	soundTheButton('press')
 	
 	Singletoner.pressAMenuButton(CommandName,ArgumentSay)
 	pass # Replace with function body.
@@ -119,12 +140,7 @@ func _on_MenuButton_toggled(button_pressed):
 
 
 func _on_MenuButton_mouse_entered():
-	if SoundsSpatially:
-		AutoSpeaker.playSFXNow(buttonHovered)
-		pass
-	else:
-		AutoSpeaker.playSFXNow(buttonHovered)
-		pass
+	soundTheButton('hovered')
 	pass # Replace with function body.
 
 func _notification(what: int) -> void:
@@ -136,3 +152,8 @@ func _notification(what: int) -> void:
 		_:
 			pass
 	pass
+
+
+func _on_focus_entered() -> void:
+	soundTheButton('hover')
+	pass # Replace with function body.

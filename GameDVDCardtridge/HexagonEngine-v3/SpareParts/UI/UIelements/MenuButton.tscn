@@ -16,6 +16,7 @@ theme_override_fonts/font = ExtResource("3")
 expand_icon = true
 script = ExtResource("1")
 MenuIcons = ExtResource("2")
+CommandName = "MenuButton"
 buttonSounded = ExtResource("4")
 buttonHovered = ExtResource("5")
 
@@ -74,6 +75,7 @@ bus = &"SoundEffect"
 
 [connection signal="button_down" from="." to="." method="_on_MenuButton_button_down"]
 [connection signal="button_up" from="." to="." method="_on_MenuButton_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_MenuButton_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_MenuButton_pressed"]
 [connection signal="toggled" from="." to="." method="_on_MenuButton_toggled"]

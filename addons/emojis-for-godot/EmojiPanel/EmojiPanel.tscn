@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://djrdftv81qxb2"]
+
+[ext_resource type="Script" path="res://addons/emojis-for-godot/EmojiPanel/EmojiPanel.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://cs4m4sbxbhv3v" path="res://addons/emojis-for-godot/EmojiPanel/EmojiGrid.tscn" id="3_xww1w"]
+
+[node name="Popup" type="Window" node_paths=PackedStringArray("grid", "notify_label", "search")]
+title = "Emoji Finder"
+position = Vector2i(0, 36)
+size = Vector2i(300, 300)
+script = ExtResource("3")
+grid = NodePath("Panel/Emoji/ScrollContainer/EmojisGrid")
+notify_label = NodePath("Panel/Emoji/NotificationLabel")
+search = NodePath("Panel/Emoji/Filter")
+grid_bound = 0.9
+button_x = 44
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Emoji" type="VBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Filter" type="LineEdit" parent="Panel/Emoji"]
+layout_mode = 2
+placeholder_text = "Search"
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/Emoji"]
+layout_mode = 2
+
+[node name="NotificationLabel" type="Label" parent="Panel/Emoji"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.768627, 0.196078, 1)
+text = "Copied Emoji message here"
+clip_text = true
+max_lines_visible = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Emoji"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EmojisGrid" parent="Panel/Emoji/ScrollContainer" instance=ExtResource("3_xww1w")]
+layout_mode = 2
+columns = 6

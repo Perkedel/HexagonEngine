@@ -20,3 +20,8 @@ func recheckMenu() -> String:
 	whereMenuAreWe = Singletoner.currentMenu
 	whereMenuAreWePrev = Singletoner.prevMenu
 	return Singletoner.currentMenu
+
+func _notification(what: int) -> void:
+	match(what):
+		_:
+			pass

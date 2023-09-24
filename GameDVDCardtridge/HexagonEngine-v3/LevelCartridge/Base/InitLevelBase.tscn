@@ -4,3 +4,14 @@
 
 [node name="HexagonLevel" type="Node3D"]
 script = ExtResource("1_sma1r")
+
+[node name="2DSpace" type="Node2D" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="UIArea" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

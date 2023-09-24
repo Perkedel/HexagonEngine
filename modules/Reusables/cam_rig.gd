@@ -18,11 +18,14 @@ extends Node3D
 @export var cameraRightKey:String = 'Kamera_Kanan'
 @export var cameraDownKey:String = 'Kamera_Bawah'
 @export var cameraUpKey:String = 'Kamera_Atas'
+@export var cameraZoomInKey:String = 'Kamera_Perbesar'
+@export var cameraZoomOutKey:String = 'Kamera_Perkecil'
 @export var jumpKey:String = 'Melompat'
 
 @export_group('Controller')
 @export var onePlayerOnly:bool = true
 @export var expectedPlayer:int = 0
+@export var controllerZoomings:bool = true
 
 var camera_rotation:Vector3
 var zoom = 10
@@ -78,7 +81,7 @@ func handle_input(delta):
 	
 	# Zooming
 	if ownActive:
-		zoom += Input.get_axis("zoom_in", "zoom_out") * zoom_speed * delta
+		zoom += Input.get_axis(cameraZoomInKey,cameraZoomOutKey) * zoom_speed * delta
 		zoom = clamp(zoom, zoom_maximum, zoom_minimum)
 		pass
 

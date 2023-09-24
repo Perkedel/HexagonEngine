@@ -1,3 +1,6 @@
+res://modules/Reusables/parts
+res://addons/controller_icons/objects
+res://Sprites
 res://modules/ShadeMaterials
 res://DummyTest
 res://modules/Reusables
@@ -17,6 +20,3 @@ res://materials/concrete_hd
 res://assets/chart-gd
 res://font/fonts-DSEG/DSEG14-Modern-MINI
 res://font/fonts-DSEG/DSEG7-Modern-MINI
-res://font/fonts-DSEG/DSEG14-Classic
-res://font/fonts-DSEG/DSEG14-Classic-MINI
-res://font/fonts-DSEG/DSEG7-Modern
