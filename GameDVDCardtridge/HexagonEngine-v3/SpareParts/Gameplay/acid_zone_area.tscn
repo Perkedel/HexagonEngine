@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ryk8rg8ny7j"]
+
+[ext_resource type="Material" uid="uid://c0v5speu6hy7p" path="res://modules/ShadeMaterials/AcidBall.tres" id="1_2y3lb"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/Gameplay/acid_zone_area.gd" id="1_6nvb6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vmoyi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_js7nj"]
+
+[node name="AcidZoneArea" type="Area3D"]
+script = ExtResource("1_6nvb6")
+
+[node name="BallAcid" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_2y3lb")
+mesh = SubResource("SphereMesh_vmoyi")
+
+[node name="BallAcidZone" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_js7nj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

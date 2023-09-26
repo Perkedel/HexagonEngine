@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qkn2dva6jv"
+uid="uid://bpcvr3c7jc8du"
 path.s3tc="res://.godot/imported/dpad_right.png-208422152fd0c75c3b1e040c016ba742.s3tc.ctex"
+path.etc2="res://.godot/imported/dpad_right.png-208422152fd0c75c3b1e040c016ba742.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/controller_icons/assets/xbox360/dpad_right.png"
-dest_files=["res://.godot/imported/dpad_right.png-208422152fd0c75c3b1e040c016ba742.s3tc.ctex"]
+dest_files=["res://.godot/imported/dpad_right.png-208422152fd0c75c3b1e040c016ba742.s3tc.ctex", "res://.godot/imported/dpad_right.png-208422152fd0c75c3b1e040c016ba742.etc2.ctex"]
 
 [params]
 

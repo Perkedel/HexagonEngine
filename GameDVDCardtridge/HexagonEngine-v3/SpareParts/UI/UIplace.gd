@@ -17,6 +17,10 @@ enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3
 @export var DialogSelectAction: DialogConfirmsFor
 @export var StartFromWhere:String = 'MainMenu'
 
+func setHP(value:float):
+	setHPmeter(value)
+	pass
+
 func preloadPauseMainMenu(scened:PackedScene):
 	PauseMainMenuNode.add_child(scened.instantiate())
 	for mes in PauseMainMenuNode.get_children():
@@ -93,6 +97,15 @@ func _on_ChangeDVD_do():
 
 func _on_Shutdown_do():
 	emit_signal("doShutdown")
+
+func setHPmeter(to:float):
+	# must be between 0 to 100. handle extra number calculation in the main DVD node!
+	if GameplayHUDMenuNode.get_child(0):
+		if GameplayHUDMenuNode.get_child(0).has_method('setHP'):
+			GameplayHUDMenuNode.get_child(0).call('setHP',to)
+			pass
+		pass
+	pass
 
 func changePauseMainMenuNavigator(to:int = 0):
 	#print('chagnene')

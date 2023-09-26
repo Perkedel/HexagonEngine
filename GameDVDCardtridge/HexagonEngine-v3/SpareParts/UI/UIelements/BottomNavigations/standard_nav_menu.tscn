@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://61djq6at25ri"]
+
+[ext_resource type="PackedScene" uid="uid://10gm72joibwe" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/BottomNavigationContains.tscn" id="1_xedc5"]
+[ext_resource type="PackedScene" uid="uid://b7n2s0q7rd6ea" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/MenuButton.tscn" id="2_kcqmt"]
+[ext_resource type="Texture2D" uid="uid://blrpuck0kn6re" path="res://Sprites/PlayIcon.png" id="3_v637i"]
+[ext_resource type="Texture2D" uid="uid://bsfd3aie5g54s" path="res://Sprites/SettingIcon.png" id="4_ei2iq"]
+[ext_resource type="Texture2D" uid="uid://dhkvnwcievi8g" path="res://Sprites/ExtrasIcon.png" id="5_jfxxj"]
+[ext_resource type="Texture2D" uid="uid://bhkhnhps8035w" path="res://Sprites/QuitIcon.png" id="6_ujy8n"]
+
+[node name="StandardNavMenu" instance=ExtResource("1_xedc5")]
+
+[node name="Play" parent="Sidren" index="0" instance=ExtResource("2_kcqmt")]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+MenuIcons = ExtResource("3_v637i")
+MenuName = "Play"
+CommandName = "Play"
+ChooseOrientation = 2
+minHoriSize = 500.0
+fontSizer = 72
+textHorizontalAlignment = 0
+textVerticalAlignment = 1
+
+[node name="Setting" parent="Sidren" index="1" instance=ExtResource("2_kcqmt")]
+layout_mode = 2
+MenuIcons = ExtResource("4_ei2iq")
+MenuName = "Setting"
+CommandName = "Setting"
+ChooseOrientation = 2
+textHorizontalAlignment = 0
+textVerticalAlignment = 1
+
+[node name="Extras" parent="Sidren" index="2" instance=ExtResource("2_kcqmt")]
+visible = false
+layout_mode = 2
+MenuIcons = ExtResource("5_jfxxj")
+MenuName = "Extras"
+CommandName = "Extras"
+ChooseOrientation = 2
+textHorizontalAlignment = 0
+textVerticalAlignment = 1
+
+[node name="Exit" parent="Sidren" index="3" instance=ExtResource("2_kcqmt")]
+layout_mode = 2
+MenuIcons = ExtResource("6_ujy8n")
+MenuName = "Exit"
+CommandName = "Exit"
+ChooseOrientation = 2
+textHorizontalAlignment = 0
+textVerticalAlignment = 1

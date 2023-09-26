@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cghur338dgx77"
 path.s3tc="res://.godot/imported/prototypebits_texture.png-404fa56003c32a8eedb49ae1052f250a.s3tc.ctex"
+path.etc2="res://.godot/imported/prototypebits_texture.png-404fa56003c32a8eedb49ae1052f250a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/kaykit_prototype_bits/Assets/gltf/prototypebits_texture.png"
-dest_files=["res://.godot/imported/prototypebits_texture.png-404fa56003c32a8eedb49ae1052f250a.s3tc.ctex"]
+dest_files=["res://.godot/imported/prototypebits_texture.png-404fa56003c32a8eedb49ae1052f250a.s3tc.ctex", "res://.godot/imported/prototypebits_texture.png-404fa56003c32a8eedb49ae1052f250a.etc2.ctex"]
 
 [params]
 

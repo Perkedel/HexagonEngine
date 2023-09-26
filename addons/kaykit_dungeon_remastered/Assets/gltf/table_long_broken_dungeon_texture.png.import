@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://gjsucayw4d7x"
 path.s3tc="res://.godot/imported/table_long_broken_dungeon_texture.png-8c0162e2967c55375dec0c79922dd0ce.s3tc.ctex"
+path.etc2="res://.godot/imported/table_long_broken_dungeon_texture.png-8c0162e2967c55375dec0c79922dd0ce.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/table_long_broken_dungeon_texture.png"
-dest_files=["res://.godot/imported/table_long_broken_dungeon_texture.png-8c0162e2967c55375dec0c79922dd0ce.s3tc.ctex"]
+dest_files=["res://.godot/imported/table_long_broken_dungeon_texture.png-8c0162e2967c55375dec0c79922dd0ce.s3tc.ctex", "res://.godot/imported/table_long_broken_dungeon_texture.png-8c0162e2967c55375dec0c79922dd0ce.etc2.ctex"]
 
 [params]
 

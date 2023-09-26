@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cusqjbo1p8ptl"
 path.s3tc="res://.godot/imported/scene_6.png-cf5d1ccab6ccf8e42eca262288305b5c.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_6.png-cf5d1ccab6ccf8e42eca262288305b5c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/scene_6.png"
-dest_files=["res://.godot/imported/scene_6.png-cf5d1ccab6ccf8e42eca262288305b5c.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_6.png-cf5d1ccab6ccf8e42eca262288305b5c.s3tc.ctex", "res://.godot/imported/scene_6.png-cf5d1ccab6ccf8e42eca262288305b5c.etc2.ctex"]
 
 [params]
 

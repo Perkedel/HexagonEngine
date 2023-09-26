@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbb3ht8xufn5l"
 path.s3tc="res://.godot/imported/banner_shield_brown_dungeon_texture.png-a11bc9ced79547e2335fd1c16a96d9d4.s3tc.ctex"
+path.etc2="res://.godot/imported/banner_shield_brown_dungeon_texture.png-a11bc9ced79547e2335fd1c16a96d9d4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_shield_brown_dungeon_texture.png"
-dest_files=["res://.godot/imported/banner_shield_brown_dungeon_texture.png-a11bc9ced79547e2335fd1c16a96d9d4.s3tc.ctex"]
+dest_files=["res://.godot/imported/banner_shield_brown_dungeon_texture.png-a11bc9ced79547e2335fd1c16a96d9d4.s3tc.ctex", "res://.godot/imported/banner_shield_brown_dungeon_texture.png-a11bc9ced79547e2335fd1c16a96d9d4.etc2.ctex"]
 
 [params]
 

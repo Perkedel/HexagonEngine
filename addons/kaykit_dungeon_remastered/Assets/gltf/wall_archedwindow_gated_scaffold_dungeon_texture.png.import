@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1pjfbwv3ml30"
 path.s3tc="res://.godot/imported/wall_archedwindow_gated_scaffold_dungeon_texture.png-798b3400b941cc8e4dd20df2b6363dea.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_archedwindow_gated_scaffold_dungeon_texture.png-798b3400b941cc8e4dd20df2b6363dea.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/wall_archedwindow_gated_scaffold_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_archedwindow_gated_scaffold_dungeon_texture.png-798b3400b941cc8e4dd20df2b6363dea.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_archedwindow_gated_scaffold_dungeon_texture.png-798b3400b941cc8e4dd20df2b6363dea.s3tc.ctex", "res://.godot/imported/wall_archedwindow_gated_scaffold_dungeon_texture.png-798b3400b941cc8e4dd20df2b6363dea.etc2.ctex"]
 
 [params]
 

@@ -6,6 +6,8 @@ extends HBoxContainer
 @export_subgroup('Parameter')
 @export_range(0,100) var HPvalue:float = 100 # (float, 0,100)
 @export var HPcolor: Color = Color.BLUE
+@export var useRawValue:bool = false
+@export var HPRawValue:float = 100
 var HPformat:String
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +17,7 @@ func _ready():
 func _redrawHPBar():
 	$TextureProgressLeft.value = HPvalue
 	# https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html
-	HPformat = "%.0f" % round(HPvalue)
+	HPformat = "%.0f" % round(HPvalue) if not useRawValue else String.num(round(HPRawValue))
 	$LabelPanel/HPLabel.text = HPformat
 	$TextureProgressRight.value = HPvalue
 	

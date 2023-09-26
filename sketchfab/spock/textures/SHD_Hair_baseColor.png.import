@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwm811o5qq2xj"
 path.s3tc="res://.godot/imported/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.ctex"
+path.etc2="res://.godot/imported/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/spock/textures/SHD_Hair_baseColor.png"
-dest_files=["res://.godot/imported/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.ctex"]
+dest_files=["res://.godot/imported/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.s3tc.ctex", "res://.godot/imported/SHD_Hair_baseColor.png-06b1caf5ad4e9a7f1cff29bb965197eb.etc2.ctex"]
 
 [params]
 

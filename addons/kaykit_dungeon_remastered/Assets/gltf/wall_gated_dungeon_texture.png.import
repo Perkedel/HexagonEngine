@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dalcvlu3virfd"
 path.s3tc="res://.godot/imported/wall_gated_dungeon_texture.png-657d3dfe115edaa14d3ea6695a00288a.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_gated_dungeon_texture.png-657d3dfe115edaa14d3ea6695a00288a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/wall_gated_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_gated_dungeon_texture.png-657d3dfe115edaa14d3ea6695a00288a.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_gated_dungeon_texture.png-657d3dfe115edaa14d3ea6695a00288a.s3tc.ctex", "res://.godot/imported/wall_gated_dungeon_texture.png-657d3dfe115edaa14d3ea6695a00288a.etc2.ctex"]
 
 [params]
 

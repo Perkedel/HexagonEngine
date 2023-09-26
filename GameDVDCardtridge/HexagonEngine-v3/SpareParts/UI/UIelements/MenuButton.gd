@@ -4,16 +4,22 @@ extends Button
 
 var WhatOrientationIsNow
 enum Orientationer {Internal, Vertical, Horizontal}
+enum TextHorizontalAlignMode {Left, Center, Right, Fill}
+enum TextVerticalAlignMode {Top, Center, Bottom, Fill}
 
-@export_subgroup('Specs')
+#@export_subgroup('Properties')
 @export var MenuIcons: Texture2D
 @export var MenuName: String = 'MenuButton'
 @export var CommandName:String = MenuName.to_pascal_case()
+
+@export_group('Properties')
 @export_multiline var ArgumentSay:String = ''
 @export var IgnoreTheCommand:bool = false
 @export var ChooseOrientation: Orientationer = Orientationer.Vertical
 @export var minHoriSize: float = 400.0
 @export var fontSizer:int = 32
+@export var textHorizontalAlignment:TextHorizontalAlignMode = TextHorizontalAlignMode.Left
+@export var textVerticalAlignment:TextVerticalAlignMode = TextVerticalAlignMode.Top
 
 #@export_subgroup('Nodes')
 @onready var Vert = $VertImaging
@@ -38,9 +44,13 @@ func _refreshStatusoid():
 	VertIconer.texture = MenuIcons
 	HoriIconer.texture = MenuIcons
 	
-	
 	VertNamer.text = MenuName
 	HoriNamer.text = MenuName
+	
+	VertNamer.horizontal_alignment = textHorizontalAlignment
+	VertNamer.vertical_alignment = textVerticalAlignment
+	HoriNamer.horizontal_alignment = textHorizontalAlignment
+	HoriNamer.vertical_alignment = textVerticalAlignment
 	
 	custom_minimum_size.x = minHoriSize
 	

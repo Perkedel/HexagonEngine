@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsgde7qqbhmnp"]
+[gd_scene load_steps=9 format=3 uid="uid://bsgde7qqbhmnp"]
 
 [ext_resource type="PackedScene" uid="uid://51sbr10oqbi7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.tscn" id="1"]
 [ext_resource type="FontFile" uid="uid://rok8q2shibm4" path="res://font/ubuntu-font-family-0.83/Ubuntu-M.ttf" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shortcut" uid="uid://byx0i46vx6bfx" path="res://modules/Reusables/Shortcuts/pauseButton_shortcut.tres" id="3_tegpe"]
 [ext_resource type="Texture2D" uid="uid://df5vgorit1p4v" path="res://Sprites/PauseIcon.svg.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cwjtcgtbai6vi" path="res://GameDVDCardtridge/ParlorClassic/Krita/JustSemutButtonBox.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cnghdqiitl0fu" path="res://addons/controller_icons/assets/key/esc.png" id="7_q27m1"]
 
 [sub_resource type="FontFile" id="1"]
 resource_local_to_scene = true
@@ -17,15 +18,25 @@ cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
 
 [node name="PauseButton" instance=ExtResource("1")]
 custom_minimum_size = Vector2(250, 50)
+offset_right = 584.0
 focus_mode = 0
 theme_override_fonts/font = SubResource("1")
 shortcut = ExtResource("3_tegpe")
 script = ExtResource("3")
-IconOfIt = ExtResource("4")
-TextureImage = ExtResource("5")
+textSay = "Pause"
+actionIcon = "ui_pause"
+iconImage = ExtResource("4")
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
 visible = false
@@ -36,19 +47,14 @@ texture = ExtResource("5")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="HBoxContainer" parent="." index="1"]
-layout_mode = 1
-anchors_preset = 15
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Icon" parent="HBoxContainer" index="0"]
-layout_mode = 2
 texture = ExtResource("4")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="Label" parent="HBoxContainer" index="1"]
-layout_mode = 2
 theme_override_fonts/font = SubResource("1")
 text = "Pause"
+
+[node name="controller_icons_textureRect" parent="HBoxContainer" index="2"]
+texture = ExtResource("7_q27m1")
+expand_mode = 1
+path = "ui_pause"

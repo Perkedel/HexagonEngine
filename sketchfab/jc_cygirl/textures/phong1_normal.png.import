@@ -2,25 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buwrb8u8xw3i6"
-path.s3tc="res://.godot/imported/phong1_normal.png-3c3ff77aecbc4cf49fdb7d6fd99e1db6.s3tc.ctex"
+uid="uid://bef56tc3jyjdo"
+path="res://.godot/imported/phong1_normal.png-3c3ff77aecbc4cf49fdb7d6fd99e1db6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://sketchfab/jc_cygirl/textures/phong1_normal.png"
-dest_files=["res://.godot/imported/phong1_normal.png-3c3ff77aecbc4cf49fdb7d6fd99e1db6.s3tc.ctex"]
+dest_files=["res://.godot/imported/phong1_normal.png-3c3ff77aecbc4cf49fdb7d6fd99e1db6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1

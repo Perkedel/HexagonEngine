@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1rfbfjrga6q3"
 path.s3tc="res://.godot/imported/furniturebits_texture.png-86a884afc74b2ea41643d960741e653e.s3tc.ctex"
+path.etc2="res://.godot/imported/furniturebits_texture.png-86a884afc74b2ea41643d960741e653e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/kaykit_furniture_bits/Assets/obj/furniturebits_texture.png"
-dest_files=["res://.godot/imported/furniturebits_texture.png-86a884afc74b2ea41643d960741e653e.s3tc.ctex"]
+dest_files=["res://.godot/imported/furniturebits_texture.png-86a884afc74b2ea41643d960741e653e.s3tc.ctex", "res://.godot/imported/furniturebits_texture.png-86a884afc74b2ea41643d960741e653e.etc2.ctex"]
 
 [params]
 

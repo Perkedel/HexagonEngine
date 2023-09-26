@@ -1,11 +1,28 @@
-[gd_resource type="VisualShader" load_steps=2 format=2]
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://bejt821xfqtvv"]
 
-[sub_resource type="VisualShaderNodeColorConstant" id=1]
-constant = Color( 0.514196, 1, 0, 1 )
+[sub_resource type="VisualShaderNodeColorConstant" id="1"]
+constant = Color(0.514196, 1, 0, 1)
 
 [resource]
-graph_offset = Vector2( -341, 98.75 )
-nodes/fragment/0/position = Vector2( 620, 120 )
-nodes/fragment/4/node = SubResource( 1 )
-nodes/fragment/4/position = Vector2( -20, 340 )
-nodes/fragment/connections = PackedInt32Array( 4, 1, 0, 1, 4, 0, 0, 0 )
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// ColorConstant:4
+	vec4 n_out4p0 = vec4(0.514196, 1.000000, 0.000000, 1.000000);
+
+
+// Output:0
+	ALBEDO = vec3(n_out4p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-341, 98.75)
+nodes/fragment/0/position = Vector2(620, 120)
+nodes/fragment/4/node = SubResource("1")
+nodes/fragment/4/position = Vector2(-20, 340)
+nodes/fragment/connections = PackedInt32Array(4, 0, 0, 0)

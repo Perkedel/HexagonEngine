@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bae43rn2hq3o4"
 path.s3tc="res://.godot/imported/banner_patternB_red_dungeon_texture.png-42fe4920a6b14803803c8397a9c4276b.s3tc.ctex"
+path.etc2="res://.godot/imported/banner_patternB_red_dungeon_texture.png-42fe4920a6b14803803c8397a9c4276b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/banner_patternB_red_dungeon_texture.png"
-dest_files=["res://.godot/imported/banner_patternB_red_dungeon_texture.png-42fe4920a6b14803803c8397a9c4276b.s3tc.ctex"]
+dest_files=["res://.godot/imported/banner_patternB_red_dungeon_texture.png-42fe4920a6b14803803c8397a9c4276b.s3tc.ctex", "res://.godot/imported/banner_patternB_red_dungeon_texture.png-42fe4920a6b14803803c8397a9c4276b.etc2.ctex"]
 
 [params]
 

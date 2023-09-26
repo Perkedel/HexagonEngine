@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpdw6y7rcq1y6"
 path.s3tc="res://.godot/imported/candle_triple_dungeon_texture.png-35aa0f903b5f6483ee6b60e35069e876.s3tc.ctex"
+path.etc2="res://.godot/imported/candle_triple_dungeon_texture.png-35aa0f903b5f6483ee6b60e35069e876.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/candle_triple_dungeon_texture.png"
-dest_files=["res://.godot/imported/candle_triple_dungeon_texture.png-35aa0f903b5f6483ee6b60e35069e876.s3tc.ctex"]
+dest_files=["res://.godot/imported/candle_triple_dungeon_texture.png-35aa0f903b5f6483ee6b60e35069e876.s3tc.ctex", "res://.godot/imported/candle_triple_dungeon_texture.png-35aa0f903b5f6483ee6b60e35069e876.etc2.ctex"]
 
 [params]
 

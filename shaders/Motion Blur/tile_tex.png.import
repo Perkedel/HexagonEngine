@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw7m4ubjgw2vl"
-path.s3tc="res://.godot/imported/tile_tex.png-abe1e4c9625f1f049e7c29fa0a39a721.s3tc.ctex"
+uid="uid://bgmn8jx0sdkvh"
+path="res://.godot/imported/tile_tex.png-abe1e4c9625f1f049e7c29fa0a39a721.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://shaders/Motion Blur/tile_tex.png"
-dest_files=["res://.godot/imported/tile_tex.png-abe1e4c9625f1f049e7c29fa0a39a721.s3tc.ctex"]
+dest_files=["res://.godot/imported/tile_tex.png-abe1e4c9625f1f049e7c29fa0a39a721.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

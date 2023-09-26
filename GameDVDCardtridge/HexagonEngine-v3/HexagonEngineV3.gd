@@ -29,10 +29,16 @@ var prevWhere:String = 'MainMenu'
 # var a = 2
 # var b = "text"
 var levelInstance:Node
+var monitoredCharacter:Node
 
 signal ChangeDVD_Exec()
 signal Shutdown_Exec()
 enum CanvasLayerMode {Usual = 1, Priority = 10}
+
+func monitorThisCharacter(person:Node) -> Node:
+	monitoredCharacter = person
+	return person
+	pass
 
 func SaveEverythingFirst():
 	# Save this DVD data
@@ -92,8 +98,24 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if monitoredCharacter:
+#		print('has monitor')
+		var maxHP:float = 100
+		if monitoredCharacter.has_method('getMaxHP'):
+			maxHP = monitoredCharacter.call('getMaxHP')
+			# damn, this could've been done with Interface. 
+			#Interface has variable, implement to everything so that a Node can ensure to 
+			#have those value defined on the interface. 
+			#now here treat as type, every different type of class will have this variable.
+			pass
+		if monitoredCharacter.has_method('getHP'):
+			# HP bar 0 to 100. Character can have more!
+			var rawHP:float = monitoredCharacter.call('getHP')
+			UIplace.setHP((rawHP/maxHP)*100)
+			pass
+		pass
+	pass
 
 func _input(event: InputEvent) -> void:
 	if event is InputEvent:

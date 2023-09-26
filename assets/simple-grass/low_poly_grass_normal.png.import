@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0v8mlq6c3d73"
 path.s3tc="res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.s3tc.ctex"
+path.etc2="res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/simple-grass/low_poly_grass_normal.png"
-dest_files=["res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.s3tc.ctex"]
+dest_files=["res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.s3tc.ctex", "res://.godot/imported/low_poly_grass_normal.png-cdec46bb10a2e0fc077eee41c4567a8b.etc2.ctex"]
 
 [params]
 

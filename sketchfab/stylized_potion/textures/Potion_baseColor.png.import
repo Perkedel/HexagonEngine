@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5uabsucqsexw"
-path.s3tc="res://.godot/imported/Potion_baseColor.png-15586e842f4c02e019abd5ff9a8dd104.s3tc.ctex"
+uid="uid://bx7yojw3qdvy6"
+path="res://.godot/imported/Potion_baseColor.png-15586e842f4c02e019abd5ff9a8dd104.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://sketchfab/stylized_potion/textures/Potion_baseColor.png"
-dest_files=["res://.godot/imported/Potion_baseColor.png-15586e842f4c02e019abd5ff9a8dd104.s3tc.ctex"]
+dest_files=["res://.godot/imported/Potion_baseColor.png-15586e842f4c02e019abd5ff9a8dd104.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

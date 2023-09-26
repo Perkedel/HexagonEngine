@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy0tn2gj8kmdj"]
+[gd_scene load_steps=8 format=3 uid="uid://cy0tn2gj8kmdj"]
 
 [ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_5orq1"]
 [ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/yet_stupid.tscn" id="2_5uxn4"]
 [ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBaseAdded.gd" id="2_64sxu"]
 [ext_resource type="PackedScene" uid="uid://dbxwcmi5bhtwr" path="res://DummyTest/yet_flour.tscn" id="3_y1hng"]
 [ext_resource type="PackedScene" uid="uid://c0rdv6glchtge" path="res://modules/Reusables/cam_rig.tscn" id="4_a1nfo"]
+[ext_resource type="PackedScene" uid="uid://b7ryk8rg8ny7j" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/Gameplay/acid_zone_area.tscn" id="6_n70ud"]
+[ext_resource type="PackedScene" uid="uid://dp6tiy4kpmu3y" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/Gameplay/cure_zone_area.tscn" id="7_l6v3y"]
 
 [node name="InitLevelBaseAdded" instance=ExtResource("1_5orq1")]
 script = ExtResource("2_64sxu")
@@ -258,3 +260,75 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, 16)
 transform = Transform3D(0.866025, 0.12941, -0.482963, 0, 0.965926, 0.258819, 0.5, -0.224144, 0.836516, 0, 0, 0)
 target = NodePath("../YetStupid")
 ownActive = true
+
+[node name="AcidZoneArea" parent="." index="85" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="AcidZoneArea2" parent="." index="86" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+
+[node name="AcidZoneArea3" parent="." index="87" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
+
+[node name="AcidZoneArea4" parent="." index="88" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -2)
+
+[node name="AcidZoneArea5" parent="." index="89" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 0)
+
+[node name="AcidZoneArea6" parent="." index="90" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 2)
+
+[node name="AcidZoneArea7" parent="." index="91" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
+
+[node name="AcidZoneArea8" parent="." index="92" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 2)
+
+[node name="AcidZoneArea9" parent="." index="93" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -2)
+
+[node name="AcidZoneArea10" parent="." index="94" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -2)
+
+[node name="AcidZoneArea11" parent="." index="95" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
+
+[node name="AcidZoneArea12" parent="." index="96" instance=ExtResource("6_n70ud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 2)
+
+[node name="CureZone" parent="." index="97" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="CureZone2" parent="." index="98" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 2)
+
+[node name="CureZone3" parent="." index="99" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -2)
+
+[node name="CureZone4" parent="." index="100" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 0)
+
+[node name="CureZone5" parent="." index="101" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 2)
+
+[node name="CureZone6" parent="." index="102" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -2)
+
+[node name="CureZone7" parent="." index="103" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 0)
+
+[node name="CureZone8" parent="." index="104" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 2)
+
+[node name="CureZone9" parent="." index="105" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -2)
+
+[node name="CureZone10" parent="." index="106" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="CureZone11" parent="." index="107" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 2)
+
+[node name="CureZone12" parent="." index="108" instance=ExtResource("7_l6v3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)

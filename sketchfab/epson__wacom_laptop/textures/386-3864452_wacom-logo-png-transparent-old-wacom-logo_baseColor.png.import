@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfiq0efwd5amy"
-path.s3tc="res://.godot/imported/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.s3tc.ctex"
+uid="uid://xgl338p3mobu"
+path="res://.godot/imported/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://sketchfab/epson__wacom_laptop/textures/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png"
-dest_files=["res://.godot/imported/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.s3tc.ctex"]
+dest_files=["res://.godot/imported/386-3864452_wacom-logo-png-transparent-old-wacom-logo_baseColor.png-cc1539e743ca2f2a7b28ce27db3e2326.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -4,9 +4,9 @@ extends Control
 @onready var thisScaffold = $KonMenu
 @onready var titler = $KonMenu/TitleHeader
 @onready var navigator = $KonMenu/MenuNavigation
-@onready var menuContaining = $KonMenu/MenuNavigation/ScrollContainer/MenuContains
+@onready var menuContaining = $KonMenu/MenuNavigation/MainMenu/Sidren
 @onready var MenuNavList = [
-	$KonMenu/MenuNavigation/ScrollContainer,
+	$KonMenu/MenuNavigation/MainMenu,
 	$KonMenu/MenuNavigation/ConfirmationDialog,
 ]
 var MenuNavListActive:int = 0
@@ -22,6 +22,8 @@ signal doShutdown
 var isPauseMenu:bool = false # for combo PauseMainMenu.
 @export var nextScaffoldScene:PackedScene
 var nextScaffoldInstance:Control
+
+#@export_group('Scenes')
 
 func preAnimate():
 	var NavpositionBefore:Vector2 = navigator.position
@@ -69,14 +71,14 @@ func changeNavigator(to:int=0):
 	_hideAllNavigator()
 	MenuNavList[to].show()
 	MenuNavListActive = to
-	for isThisButton in MenuNavList[to].get_child(0).get_children():
-		if isThisButton is Button:
-			isThisButton.grab_focus()
-			break
-			pass
-		else:
-			pass
-		pass
+#	for isThisButton in MenuNavList[to].get_child(0).get_children():
+#		if isThisButton is Button:
+#			isThisButton.grab_focus()
+#			break
+#			pass
+#		else:
+#			pass
+#		pass
 	pass
 
 func changeMenu(to:String):
@@ -98,7 +100,7 @@ func goBack():
 	pass
 
 func preFocus():
-	menuContaining.get_child(0).grab_focus()
+#	menuContaining.get_child(0).grab_focus()
 	pass
 
 func _pressPlayButton():

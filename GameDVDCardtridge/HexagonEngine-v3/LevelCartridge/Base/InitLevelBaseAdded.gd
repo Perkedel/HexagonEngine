@@ -3,6 +3,7 @@ extends HexagonLevel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Singletoner.monitorThisCharacter($YetStupid)
 #	Singletoner.replacePosess($YetStupid,0)
 #	$YetStupid.setOwnActivate(true)
 #	$CamRig.assignCamera($YetStupid)
@@ -23,6 +24,7 @@ func recheckMenu() -> String:
 #			print('PLAAAAAAAAAAAAAAAAAAAY')
 			$YetStupid.setOwnActivate(true)
 			$CamRig.setOwnActivate(true)
+			Singletoner.monitorThisCharacter($YetStupid)
 			pass
 		_:
 			$YetStupid.setOwnActivate(false)

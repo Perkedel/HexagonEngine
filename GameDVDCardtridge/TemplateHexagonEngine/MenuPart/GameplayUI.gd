@@ -8,6 +8,11 @@ extends Control
 # var b = "text"
 # Gameplay UI controls Character, HP, gameplay values
 
+func setHP(value:float):
+	# must be 0 to 100
+	HPlevel = value
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

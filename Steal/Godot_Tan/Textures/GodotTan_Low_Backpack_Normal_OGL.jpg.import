@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://itjolx2dcv32"
 path.s3tc="res://.godot/imported/GodotTan_Low_Backpack_Normal_OGL.jpg-c98ef67b1bea5e6571def09c0803e3b5.s3tc.ctex"
+path.etc2="res://.godot/imported/GodotTan_Low_Backpack_Normal_OGL.jpg-c98ef67b1bea5e6571def09c0803e3b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/GodotTan_Low_Backpack_Normal_OGL.jpg"
-dest_files=["res://.godot/imported/GodotTan_Low_Backpack_Normal_OGL.jpg-c98ef67b1bea5e6571def09c0803e3b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/GodotTan_Low_Backpack_Normal_OGL.jpg-c98ef67b1bea5e6571def09c0803e3b5.s3tc.ctex", "res://.godot/imported/GodotTan_Low_Backpack_Normal_OGL.jpg-c98ef67b1bea5e6571def09c0803e3b5.etc2.ctex"]
 
 [params]
 

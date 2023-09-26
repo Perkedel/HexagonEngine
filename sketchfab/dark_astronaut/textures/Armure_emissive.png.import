@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciqxlx14p6dme"
 path.s3tc="res://.godot/imported/Armure_emissive.png-350b43e3e20cf41a4c92eb765c567c71.s3tc.ctex"
+path.etc2="res://.godot/imported/Armure_emissive.png-350b43e3e20cf41a4c92eb765c567c71.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Armure_emissive.png"
-dest_files=["res://.godot/imported/Armure_emissive.png-350b43e3e20cf41a4c92eb765c567c71.s3tc.ctex"]
+dest_files=["res://.godot/imported/Armure_emissive.png-350b43e3e20cf41a4c92eb765c567c71.s3tc.ctex", "res://.godot/imported/Armure_emissive.png-350b43e3e20cf41a4c92eb765c567c71.etc2.ctex"]
 
 [params]
 

@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8cv0f4mmmfrk"
-path.s3tc="res://.godot/imported/PaletteTexture_baseColor.png-e01944c5828498c5ec648c8ee4e87309.s3tc.ctex"
+uid="uid://b7a0jft6wdp1y"
+path="res://.godot/imported/PaletteTexture_baseColor.png-e01944c5828498c5ec648c8ee4e87309.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://sketchfab/godette_chan/textures/PaletteTexture_baseColor.png"
-dest_files=["res://.godot/imported/PaletteTexture_baseColor.png-e01944c5828498c5ec648c8ee4e87309.s3tc.ctex"]
+dest_files=["res://.godot/imported/PaletteTexture_baseColor.png-e01944c5828498c5ec648c8ee4e87309.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

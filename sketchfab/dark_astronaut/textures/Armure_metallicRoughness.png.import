@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckfbmega3jg8n"
 path.s3tc="res://.godot/imported/Armure_metallicRoughness.png-7032f0c3c063be746b74f08d420a1f92.s3tc.ctex"
+path.etc2="res://.godot/imported/Armure_metallicRoughness.png-7032f0c3c063be746b74f08d420a1f92.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Armure_metallicRoughness.png"
-dest_files=["res://.godot/imported/Armure_metallicRoughness.png-7032f0c3c063be746b74f08d420a1f92.s3tc.ctex"]
+dest_files=["res://.godot/imported/Armure_metallicRoughness.png-7032f0c3c063be746b74f08d420a1f92.s3tc.ctex", "res://.godot/imported/Armure_metallicRoughness.png-7032f0c3c063be746b74f08d420a1f92.etc2.ctex"]
 
 [params]
 

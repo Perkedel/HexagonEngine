@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c82ynwg1tum8i"
 path.s3tc="res://.godot/imported/rifle_mat_baseColor.png-65e32c9e266a1010f53feaf47f5a26fe.s3tc.ctex"
+path.etc2="res://.godot/imported/rifle_mat_baseColor.png-65e32c9e266a1010f53feaf47f5a26fe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/malik_do_kyanon/textures/rifle_mat_baseColor.png"
-dest_files=["res://.godot/imported/rifle_mat_baseColor.png-65e32c9e266a1010f53feaf47f5a26fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/rifle_mat_baseColor.png-65e32c9e266a1010f53feaf47f5a26fe.s3tc.ctex", "res://.godot/imported/rifle_mat_baseColor.png-65e32c9e266a1010f53feaf47f5a26fe.etc2.ctex"]
 
 [params]
 

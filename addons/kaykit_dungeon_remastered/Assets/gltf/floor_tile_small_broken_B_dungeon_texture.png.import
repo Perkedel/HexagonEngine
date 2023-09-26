@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwrb04x6xjyia"
 path.s3tc="res://.godot/imported/floor_tile_small_broken_B_dungeon_texture.png-e50ca0fd2b2594300de01689946d8dd5.s3tc.ctex"
+path.etc2="res://.godot/imported/floor_tile_small_broken_B_dungeon_texture.png-e50ca0fd2b2594300de01689946d8dd5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_tile_small_broken_B_dungeon_texture.png"
-dest_files=["res://.godot/imported/floor_tile_small_broken_B_dungeon_texture.png-e50ca0fd2b2594300de01689946d8dd5.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor_tile_small_broken_B_dungeon_texture.png-e50ca0fd2b2594300de01689946d8dd5.s3tc.ctex", "res://.godot/imported/floor_tile_small_broken_B_dungeon_texture.png-e50ca0fd2b2594300de01689946d8dd5.etc2.ctex"]
 
 [params]
 

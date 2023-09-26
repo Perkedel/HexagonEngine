@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://esu0pbfpjrhj"
 path.s3tc="res://.godot/imported/spacebits_texture.png-7f833cd3f716d9cb4c39a15509958ffe.s3tc.ctex"
+path.etc2="res://.godot/imported/spacebits_texture.png-7f833cd3f716d9cb4c39a15509958ffe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/kaykit_space_base_bits/Assets/gltf/spacebits_texture.png"
-dest_files=["res://.godot/imported/spacebits_texture.png-7f833cd3f716d9cb4c39a15509958ffe.s3tc.ctex"]
+dest_files=["res://.godot/imported/spacebits_texture.png-7f833cd3f716d9cb4c39a15509958ffe.s3tc.ctex", "res://.godot/imported/spacebits_texture.png-7f833cd3f716d9cb4c39a15509958ffe.etc2.ctex"]
 
 [params]
 

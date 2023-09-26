@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxyfupato5xa"
-path.s3tc="res://.godot/imported/phong2_emissive.png-261ba0ec244876d484fddc95de7370b7.s3tc.ctex"
+uid="uid://dnjd4sd0mei5l"
+path="res://.godot/imported/phong2_emissive.png-261ba0ec244876d484fddc95de7370b7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://sketchfab/jc_cygirl/textures/phong2_emissive.png"
-dest_files=["res://.godot/imported/phong2_emissive.png-261ba0ec244876d484fddc95de7370b7.s3tc.ctex"]
+dest_files=["res://.godot/imported/phong2_emissive.png-261ba0ec244876d484fddc95de7370b7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

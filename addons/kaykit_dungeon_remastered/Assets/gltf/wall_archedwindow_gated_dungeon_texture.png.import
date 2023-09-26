@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://doao4gasq0ajt"
 path.s3tc="res://.godot/imported/wall_archedwindow_gated_dungeon_texture.png-483a945d215273a60050486416a92b78.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_archedwindow_gated_dungeon_texture.png-483a945d215273a60050486416a92b78.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/wall_archedwindow_gated_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_archedwindow_gated_dungeon_texture.png-483a945d215273a60050486416a92b78.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_archedwindow_gated_dungeon_texture.png-483a945d215273a60050486416a92b78.s3tc.ctex", "res://.godot/imported/wall_archedwindow_gated_dungeon_texture.png-483a945d215273a60050486416a92b78.etc2.ctex"]
 
 [params]
 

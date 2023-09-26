@@ -257,50 +257,50 @@ func _physics_process(delta):
 func _process(delta):
 	# Friday night Funkin thingifier
 	# from MusicBeatState.hx of that
-	if AutoConductor.songPosition < 0:
-		curDecimalBeat = 0
-	else:
-		if AutoKadeTimingStruct.allTimings.size() > 1:
-			var data = AutoKadeTimingStruct.getTimingAtTimestamp(AutoConductor.songPosition)
-			
-			# add Hexagon watch FlxG watch current conductor timing seg
-			# FlxG.watch.addQuick("Current Conductor Timing Seg", data.bpm);
-			
-			AutoConductor.crochet = ((60/ data.bpm) * 1000)
-			
-			var stepo = ((60/data.bpm) * 1000) /4
-			var startInMS = (data.startTime * 1000)
-			
-			curDecimalBeat = data.startBeat + (((AutoConductor.songPosition/1000) - data.startTime) * (data.bpm / 60))
-			var ste:int = floor(data.startStep +((AutoConductor.songPosition - startInMS) / stepo))
-			if ste >= 0:
-				if ste > curStep:
-					for i in range(curStep, ste):
-						curStep += 1
-						_updateBeat()
-						doStepHit()
-				elif ste < curStep:
-					print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
-					# song reset????
-					_updateBeat()
-					doStepHit()
-		else:
-			curDecimalBeat = (AutoConductor.songPosition / 1000) * (AutoConductor.bpm/60)
-			var nextStep:int = floor(AutoConductor.songPosition / AutoConductor.stepCrochet)
-			if nextStep >= 0:
-				for i in range(curStep,nextStep):
-					curStep += 1
-					_updateBeat()
-					doStepHit()
-			elif nextStep < curStep:
-				print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
-				# song reset ????
-				curStep = nextStep
-				_updateBeat()
-				doStepHit()
-			AutoConductor.crochet = ((60/ AutoConductor.bpm) * 1000)
-			pass
-		pass
+#	if AutoConductor.songPosition < 0:
+#		curDecimalBeat = 0
+#	else:
+#		if AutoKadeTimingStruct.allTimings.size() > 1:
+#			var data = AutoKadeTimingStruct.getTimingAtTimestamp(AutoConductor.songPosition)
+#
+#			# add Hexagon watch FlxG watch current conductor timing seg
+#			# FlxG.watch.addQuick("Current Conductor Timing Seg", data.bpm);
+#
+#			AutoConductor.crochet = ((60/ data.bpm) * 1000)
+#
+#			var stepo = ((60/data.bpm) * 1000) /4
+#			var startInMS = (data.startTime * 1000)
+#
+#			curDecimalBeat = data.startBeat + (((AutoConductor.songPosition/1000) - data.startTime) * (data.bpm / 60))
+#			var ste:int = floor(data.startStep +((AutoConductor.songPosition - startInMS) / stepo))
+#			if ste >= 0:
+#				if ste > curStep:
+#					for i in range(curStep, ste):
+#						curStep += 1
+#						_updateBeat()
+#						doStepHit()
+#				elif ste < curStep:
+#					print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
+#					# song reset????
+#					_updateBeat()
+#					doStepHit()
+#		else:
+#			curDecimalBeat = (AutoConductor.songPosition / 1000) * (AutoConductor.bpm/60)
+#			var nextStep:int = floor(AutoConductor.songPosition / AutoConductor.stepCrochet)
+#			if nextStep >= 0:
+#				for i in range(curStep,nextStep):
+#					curStep += 1
+#					_updateBeat()
+#					doStepHit()
+#			elif nextStep < curStep:
+#				print("Reset steps for some reason?? at " + String.num(AutoConductor.songPosition))
+#				# song reset ????
+#				curStep = nextStep
+#				_updateBeat()
+#				doStepHit()
+#			AutoConductor.crochet = ((60/ AutoConductor.bpm) * 1000)
+#			pass
+#		pass
 	#end of Funkin rhythmer
 	pass
 

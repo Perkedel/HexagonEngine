@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://51sbr10oqbi7"]
+[gd_scene load_steps=6 format=3 uid="uid://51sbr10oqbi7"]
 
 [ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
 [ext_resource type="Texture2D" uid="uid://dwrhftlu2sx4h" path="res://Sprites/KembaliButton.png" id="2"]
 [ext_resource type="Shortcut" uid="uid://dbrkw7aok5lb5" path="res://modules/Reusables/Shortcuts/backButton_shortcut.tres" id="2_co4vl"]
+[ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/NextMenuBackButton.gd" id="3_6qbxa"]
 [ext_resource type="PackedScene" uid="uid://v4h8jy3avyi7" path="res://addons/controller_icons/objects/controller_icons_textureRect.tscn" id="4_kjpkx"]
 
 [node name="BackButton" type="Button"]
@@ -12,6 +13,7 @@ offset_bottom = 100.0
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1")
 shortcut = ExtResource("2_co4vl")
+script = ExtResource("3_6qbxa")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -39,8 +41,10 @@ theme_override_font_sizes/font_size = 24
 text = "Back"
 
 [node name="controller_icons_textureRect" parent="HBoxContainer" instance=ExtResource("4_kjpkx")]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 3
+stretch_mode = 5
 
 [node name="OverlayingGlyph" type="CenterContainer" parent="."]
 layout_mode = 1

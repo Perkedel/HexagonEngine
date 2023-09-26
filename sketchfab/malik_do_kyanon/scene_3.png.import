@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4svjeew0ev3r"
 path.s3tc="res://.godot/imported/scene_3.png-ef102d6ed734e7d8aa8224f902155bb6.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_3.png-ef102d6ed734e7d8aa8224f902155bb6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://sketchfab/malik_do_kyanon/scene_3.png"
-dest_files=["res://.godot/imported/scene_3.png-ef102d6ed734e7d8aa8224f902155bb6.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_3.png-ef102d6ed734e7d8aa8224f902155bb6.s3tc.ctex", "res://.godot/imported/scene_3.png-ef102d6ed734e7d8aa8224f902155bb6.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhqky4y8aeydi"
 path.s3tc="res://.godot/imported/scene_5.png-05676d2214835ee3c4be341bc95ac3ba.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_5.png-05676d2214835ee3c4be341bc95ac3ba.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/spock/scene_5.png"
-dest_files=["res://.godot/imported/scene_5.png-05676d2214835ee3c4be341bc95ac3ba.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_5.png-05676d2214835ee3c4be341bc95ac3ba.s3tc.ctex", "res://.godot/imported/scene_5.png-05676d2214835ee3c4be341bc95ac3ba.etc2.ctex"]
 
 [params]
 

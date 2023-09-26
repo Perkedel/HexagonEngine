@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://by11y5vssskph"
 path.s3tc="res://.godot/imported/Corps_normal.png-a4af006804a9d7f170730c172c88ecca.s3tc.ctex"
+path.etc2="res://.godot/imported/Corps_normal.png-a4af006804a9d7f170730c172c88ecca.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Corps_normal.png"
-dest_files=["res://.godot/imported/Corps_normal.png-a4af006804a9d7f170730c172c88ecca.s3tc.ctex"]
+dest_files=["res://.godot/imported/Corps_normal.png-a4af006804a9d7f170730c172c88ecca.s3tc.ctex", "res://.godot/imported/Corps_normal.png-a4af006804a9d7f170730c172c88ecca.etc2.ctex"]
 
 [params]
 

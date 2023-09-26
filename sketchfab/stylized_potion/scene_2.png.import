@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cntf74p5w8535"
 path.s3tc="res://.godot/imported/scene_2.png-63d9602acce94e1b0a313f27ca4914ae.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_2.png-63d9602acce94e1b0a313f27ca4914ae.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://sketchfab/stylized_potion/scene_2.png"
-dest_files=["res://.godot/imported/scene_2.png-63d9602acce94e1b0a313f27ca4914ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_2.png-63d9602acce94e1b0a313f27ca4914ae.s3tc.ctex", "res://.godot/imported/scene_2.png-63d9602acce94e1b0a313f27ca4914ae.etc2.ctex"]
 
 [params]
 

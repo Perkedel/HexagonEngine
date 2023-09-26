@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg23yormeh76a"
 path.s3tc="res://.godot/imported/cuphead_baseColor.png-62ec310ca5a1217aedafb6c6726971e0.s3tc.ctex"
+path.etc2="res://.godot/imported/cuphead_baseColor.png-62ec310ca5a1217aedafb6c6726971e0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/cuphead/textures/cuphead_baseColor.png"
-dest_files=["res://.godot/imported/cuphead_baseColor.png-62ec310ca5a1217aedafb6c6726971e0.s3tc.ctex"]
+dest_files=["res://.godot/imported/cuphead_baseColor.png-62ec310ca5a1217aedafb6c6726971e0.s3tc.ctex", "res://.godot/imported/cuphead_baseColor.png-62ec310ca5a1217aedafb6c6726971e0.etc2.ctex"]
 
 [params]
 

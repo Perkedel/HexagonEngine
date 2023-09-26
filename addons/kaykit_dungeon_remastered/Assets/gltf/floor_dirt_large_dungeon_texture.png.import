@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3xd5bv8887i8"
 path.s3tc="res://.godot/imported/floor_dirt_large_dungeon_texture.png-789d775dc2d6effb89c868be6d195543.s3tc.ctex"
+path.etc2="res://.godot/imported/floor_dirt_large_dungeon_texture.png-789d775dc2d6effb89c868be6d195543.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_dirt_large_dungeon_texture.png"
-dest_files=["res://.godot/imported/floor_dirt_large_dungeon_texture.png-789d775dc2d6effb89c868be6d195543.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor_dirt_large_dungeon_texture.png-789d775dc2d6effb89c868be6d195543.s3tc.ctex", "res://.godot/imported/floor_dirt_large_dungeon_texture.png-789d775dc2d6effb89c868be6d195543.etc2.ctex"]
 
 [params]
 

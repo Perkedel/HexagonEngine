@@ -17,6 +17,8 @@ expand_icon = true
 script = ExtResource("1")
 MenuIcons = ExtResource("2")
 CommandName = "MenuButton"
+textHorizontalAlignment = null
+textVerticalAlignment = null
 buttonSounded = ExtResource("4")
 buttonHovered = ExtResource("5")
 

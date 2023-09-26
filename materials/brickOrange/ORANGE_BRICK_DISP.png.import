@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c57dfvtm405rf"
 path.s3tc="res://.godot/imported/ORANGE_BRICK_DISP.png-914f72dd8d32d8004e475d2c49f3b509.s3tc.ctex"
+path.etc2="res://.godot/imported/ORANGE_BRICK_DISP.png-914f72dd8d32d8004e475d2c49f3b509.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://materials/brickOrange/ORANGE_BRICK_DISP.png"
-dest_files=["res://.godot/imported/ORANGE_BRICK_DISP.png-914f72dd8d32d8004e475d2c49f3b509.s3tc.ctex"]
+dest_files=["res://.godot/imported/ORANGE_BRICK_DISP.png-914f72dd8d32d8004e475d2c49f3b509.s3tc.ctex", "res://.godot/imported/ORANGE_BRICK_DISP.png-914f72dd8d32d8004e475d2c49f3b509.etc2.ctex"]
 
 [params]
 

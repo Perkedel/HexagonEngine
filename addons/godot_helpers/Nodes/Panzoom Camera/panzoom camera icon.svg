@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 283.46 283.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9fafdb;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-3 {
+        fill: #899bcf;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        fill: #7888b8;
+      }
+
+      .cls-5 {
+        fill: #dce3f4;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="0" y="0" width="283.46" height="283.46"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="2.83" dy="2.83"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#1d1d1b" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-7">
+    <rect class="cls-3" x="22.37" y="90.13" width="182.48" height="170.96"/>
+    <polygon class="cls-4" points="261.1 193.33 204.85 261.1 204.85 90.13 261.1 22.37 261.1 193.33"/>
+    <polygon class="cls-1" points="261.1 22.37 78.62 22.37 22.37 90.13 204.85 90.13 261.1 22.37"/>
+  </g>
+  <g class="cls-6">
+    <path class="cls-5" d="m75.98,159.57v39.51h-25.84v-114.7h40.47c28.9,0,43.35,12.19,43.35,36.55,0,11.52-4.15,20.84-12.44,27.96-8.29,7.12-19.37,10.68-33.23,10.68h-12.32Zm0-55.35v35.75h10.16c13.76,0,20.64-6.02,20.64-18.08s-6.88-17.68-20.64-17.68h-10.16Z"/>
+    <path class="cls-5" d="m233.32,199.08h-92.38v-14.88l58.79-78.79h-54.55v-21.04h87.98v14.48l-57.51,79.27h57.67v20.96Z"/>
+  </g>
+</svg>

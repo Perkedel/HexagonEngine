@@ -1,9 +1,10 @@
-[gd_resource type="SphereMesh" load_steps=3 format=2]
+[gd_resource type="SphereMesh" load_steps=3 format=3 uid="uid://djrpu78osvp4v"]
 
-[ext_resource path="res://Shader/Brim.tres" type="Shader" id=1]
+[ext_resource type="Shader" uid="uid://bejt821xfqtvv" path="res://Shader/Brim.tres" id="1"]
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 1 )
+[sub_resource type="ShaderMaterial" id="2"]
+render_priority = 0
+shader = ExtResource("1")
 
 [resource]
-material = SubResource( 2 )
+material = SubResource("2")

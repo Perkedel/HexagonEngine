@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vh5th3y0i7o1"
 path.s3tc="res://.godot/imported/scene_0.png-f89d27dac099dfa7e16f7f82af8f2ce4.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_0.png-f89d27dac099dfa7e16f7f82af8f2ce4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://sketchfab/cuphead/scene_0.png"
-dest_files=["res://.godot/imported/scene_0.png-f89d27dac099dfa7e16f7f82af8f2ce4.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_0.png-f89d27dac099dfa7e16f7f82af8f2ce4.s3tc.ctex", "res://.godot/imported/scene_0.png-f89d27dac099dfa7e16f7f82af8f2ce4.etc2.ctex"]
 
 [params]
 

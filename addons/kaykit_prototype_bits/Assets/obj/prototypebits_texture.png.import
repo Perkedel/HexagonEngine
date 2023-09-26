@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfc044nvretxs"
+uid="uid://crxr7g0awdy6"
 path.s3tc="res://.godot/imported/prototypebits_texture.png-540462f9d08c157e0bd5e9099f809102.s3tc.ctex"
+path.etc2="res://.godot/imported/prototypebits_texture.png-540462f9d08c157e0bd5e9099f809102.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/kaykit_prototype_bits/Assets/obj/prototypebits_texture.png"
-dest_files=["res://.godot/imported/prototypebits_texture.png-540462f9d08c157e0bd5e9099f809102.s3tc.ctex"]
+dest_files=["res://.godot/imported/prototypebits_texture.png-540462f9d08c157e0bd5e9099f809102.s3tc.ctex", "res://.godot/imported/prototypebits_texture.png-540462f9d08c157e0bd5e9099f809102.etc2.ctex"]
 
 [params]
 

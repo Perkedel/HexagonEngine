@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbjc54bmpv3f8"
+uid="uid://b0futjlk1m58j"
 path.s3tc="res://.godot/imported/arrow_right.png-d9645066e53f8382133c3d6066489082.s3tc.ctex"
+path.etc2="res://.godot/imported/arrow_right.png-d9645066e53f8382133c3d6066489082.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/controller_icons/assets/key/arrow_right.png"
-dest_files=["res://.godot/imported/arrow_right.png-d9645066e53f8382133c3d6066489082.s3tc.ctex"]
+dest_files=["res://.godot/imported/arrow_right.png-d9645066e53f8382133c3d6066489082.s3tc.ctex", "res://.godot/imported/arrow_right.png-d9645066e53f8382133c3d6066489082.etc2.ctex"]
 
 [params]
 

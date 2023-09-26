@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmibcwwbqywrr"
-path.s3tc="res://.godot/imported/Perkedel Short Typeborder.png-9e8a0323542e70fe6793204e10fb580a.s3tc.ctex"
+uid="uid://dplve8b31mm8q"
+path="res://.godot/imported/Perkedel Short Typeborder.png-9e8a0323542e70fe6793204e10fb580a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Sprites/Perkedel Short Typeborder.png"
-dest_files=["res://.godot/imported/Perkedel Short Typeborder.png-9e8a0323542e70fe6793204e10fb580a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Perkedel Short Typeborder.png-9e8a0323542e70fe6793204e10fb580a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsykef4vok0sh"
 path.s3tc="res://.godot/imported/floor_tile_grate_dungeon_texture.png-d702a5cf5b0b4317987e6255f55aa408.s3tc.ctex"
+path.etc2="res://.godot/imported/floor_tile_grate_dungeon_texture.png-d702a5cf5b0b4317987e6255f55aa408.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_tile_grate_dungeon_texture.png"
-dest_files=["res://.godot/imported/floor_tile_grate_dungeon_texture.png-d702a5cf5b0b4317987e6255f55aa408.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor_tile_grate_dungeon_texture.png-d702a5cf5b0b4317987e6255f55aa408.s3tc.ctex", "res://.godot/imported/floor_tile_grate_dungeon_texture.png-d702a5cf5b0b4317987e6255f55aa408.etc2.ctex"]
 
 [params]
 

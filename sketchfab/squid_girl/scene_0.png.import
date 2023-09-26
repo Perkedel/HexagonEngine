@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds41rghdx5ep5"
 path.s3tc="res://.godot/imported/scene_0.png-8fb8bf89075660df09bda9eef14c7e9b.s3tc.ctex"
+path.etc2="res://.godot/imported/scene_0.png-8fb8bf89075660df09bda9eef14c7e9b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://sketchfab/squid_girl/scene_0.png"
-dest_files=["res://.godot/imported/scene_0.png-8fb8bf89075660df09bda9eef14c7e9b.s3tc.ctex"]
+dest_files=["res://.godot/imported/scene_0.png-8fb8bf89075660df09bda9eef14c7e9b.s3tc.ctex", "res://.godot/imported/scene_0.png-8fb8bf89075660df09bda9eef14c7e9b.etc2.ctex"]
 
 [params]
 

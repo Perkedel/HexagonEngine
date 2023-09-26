@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bupjmeapldt1d"
 path.s3tc="res://.godot/imported/stairs_narrow_dungeon_texture.png-ad27dd14c6f048e693995c365245c89a.s3tc.ctex"
+path.etc2="res://.godot/imported/stairs_narrow_dungeon_texture.png-ad27dd14c6f048e693995c365245c89a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/stairs_narrow_dungeon_texture.png"
-dest_files=["res://.godot/imported/stairs_narrow_dungeon_texture.png-ad27dd14c6f048e693995c365245c89a.s3tc.ctex"]
+dest_files=["res://.godot/imported/stairs_narrow_dungeon_texture.png-ad27dd14c6f048e693995c365245c89a.s3tc.ctex", "res://.godot/imported/stairs_narrow_dungeon_texture.png-ad27dd14c6f048e693995c365245c89a.etc2.ctex"]
 
 [params]
 

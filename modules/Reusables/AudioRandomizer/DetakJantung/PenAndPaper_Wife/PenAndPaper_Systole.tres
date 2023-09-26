@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://cjywp0xs4laue"]
+
+[ext_resource type="AudioStream" uid="uid://n73oxnuklgi4" path="res://GameDVDCardtridge/DetakJantungProsotipe/Audacitied/DetailedHeartRender/Systole1.ogg" id="1_ofc5g"]
+
+[resource]
+streams_count = 1
+stream_0/stream = ExtResource("1_ofc5g")
+stream_0/weight = 1.0

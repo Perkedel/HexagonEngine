@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://modules/Reusables/parts/controller_icons_button_SUPER.gd" id="2_khvgv"]
 
 [node name="SuperControllerIconsButton" instance=ExtResource("1_8srga")]
+flat = true
 script = ExtResource("2_khvgv")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

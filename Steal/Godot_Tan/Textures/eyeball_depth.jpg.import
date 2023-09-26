@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5wyhtupmjulk"
-path.s3tc="res://.godot/imported/eyeball_depth.jpg-d5d43fbfc3368a3b06554a70bba56d0d.s3tc.ctex"
+uid="uid://cgh5pksg757o2"
+path="res://.godot/imported/eyeball_depth.jpg-d5d43fbfc3368a3b06554a70bba56d0d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/eyeball_depth.jpg"
-dest_files=["res://.godot/imported/eyeball_depth.jpg-d5d43fbfc3368a3b06554a70bba56d0d.s3tc.ctex"]
+dest_files=["res://.godot/imported/eyeball_depth.jpg-d5d43fbfc3368a3b06554a70bba56d0d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

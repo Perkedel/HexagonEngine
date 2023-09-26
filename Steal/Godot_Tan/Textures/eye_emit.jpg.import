@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccg072cqjtreh"
-path.s3tc="res://.godot/imported/eye_emit.jpg-499ccf6ed61ff7521e67a03ddf98b104.s3tc.ctex"
+uid="uid://bebjpta7hix6e"
+path="res://.godot/imported/eye_emit.jpg-499ccf6ed61ff7521e67a03ddf98b104.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/eye_emit.jpg"
-dest_files=["res://.godot/imported/eye_emit.jpg-499ccf6ed61ff7521e67a03ddf98b104.s3tc.ctex"]
+dest_files=["res://.godot/imported/eye_emit.jpg-499ccf6ed61ff7521e67a03ddf98b104.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

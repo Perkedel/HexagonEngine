@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvhq3n1uakuel"
 path.s3tc="res://.godot/imported/Hair_TANGENT.jpg-632bbd2a09c7ed78202263d70ae3a682.s3tc.ctex"
+path.etc2="res://.godot/imported/Hair_TANGENT.jpg-632bbd2a09c7ed78202263d70ae3a682.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/Hair/Hair_TANGENT.jpg"
-dest_files=["res://.godot/imported/Hair_TANGENT.jpg-632bbd2a09c7ed78202263d70ae3a682.s3tc.ctex"]
+dest_files=["res://.godot/imported/Hair_TANGENT.jpg-632bbd2a09c7ed78202263d70ae3a682.s3tc.ctex", "res://.godot/imported/Hair_TANGENT.jpg-632bbd2a09c7ed78202263d70ae3a682.etc2.ctex"]
 
 [params]
 

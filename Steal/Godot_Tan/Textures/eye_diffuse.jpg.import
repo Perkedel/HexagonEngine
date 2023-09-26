@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://52ovc8gygrf5"
-path.s3tc="res://.godot/imported/eye_diffuse.jpg-0219567d0e44b6d49f8324a6e97036fc.s3tc.ctex"
+uid="uid://conh2o6i2gkl6"
+path="res://.godot/imported/eye_diffuse.jpg-0219567d0e44b6d49f8324a6e97036fc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Steal/Godot_Tan/Textures/eye_diffuse.jpg"
-dest_files=["res://.godot/imported/eye_diffuse.jpg-0219567d0e44b6d49f8324a6e97036fc.s3tc.ctex"]
+dest_files=["res://.godot/imported/eye_diffuse.jpg-0219567d0e44b6d49f8324a6e97036fc.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

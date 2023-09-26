@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://de0vnrnyl3cmt"
 path.s3tc="res://.godot/imported/Decal_Industrial_003_baseColor.png-ff8cf6fb596e2cb7d023a66ac72123ab.s3tc.ctex"
+path.etc2="res://.godot/imported/Decal_Industrial_003_baseColor.png-ff8cf6fb596e2cb7d023a66ac72123ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/epson__wacom_laptop/textures/Decal_Industrial_003_baseColor.png"
-dest_files=["res://.godot/imported/Decal_Industrial_003_baseColor.png-ff8cf6fb596e2cb7d023a66ac72123ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/Decal_Industrial_003_baseColor.png-ff8cf6fb596e2cb7d023a66ac72123ab.s3tc.ctex", "res://.godot/imported/Decal_Industrial_003_baseColor.png-ff8cf6fb596e2cb7d023a66ac72123ab.etc2.ctex"]
 
 [params]
 

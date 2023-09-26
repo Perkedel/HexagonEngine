@@ -51,9 +51,21 @@ func replacePosess(withThisNode:Node,toWhom:int=0):
 func clearPosess(toWhom):
 	Posesser.clearPosess(toWhom)
 
+# monitor a character node for HUD
+func monitorThisCharacter(person:Node) -> Node:
+#	print('pls yo monitor')
+	if dvdNode:
+		if dvdNode.has_method('monitorThisCharacter'):
+#			print('To monitor a character')
+			return dvdNode.call('monitorThisCharacter',person)
+			pass
+		pass
+	return person
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SceneLoader.connect("on_scene_loaded", Callable(self, "_BiosLoaded"))
+#	SceneLoader.connect("on_scene_loaded", Callable(self, "_BiosLoaded"))
 	#AutoSpeaker.stream = preload("res://Audio/EfekSuara/425728__moogy73__click01.wav")
 	#AutoSpeaker.play()
 	AutoSpeaker.playSFXNow(load("res://Audio/EfekSuara/425728__moogy73__click01.wav"))
@@ -148,7 +160,7 @@ func ExclusiveBoot(theResource):
 	
 
 func ReturnToBios():
-	SceneLoader.load_scene("res://HexagonEngineCore.tscn", {hii = "Cool and good"})
+#	SceneLoader.load_scene("res://HexagonEngineCore.tscn", {hii = "Cool and good"})
 	pass
 
 func _BiosLoaded(scene):

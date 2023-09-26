@@ -8,10 +8,15 @@ script = ExtResource("1_sma1r")
 [node name="2DSpace" type="Node2D" parent="."]
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-layer = 10
+layer = -1
 
 [node name="UIArea" type="Control" parent="UILayer"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2

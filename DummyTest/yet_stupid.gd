@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var HP:float = 100
 @export var SPEED:float = 250.0
 @export var JUMP_VELOCITY:float = 4.5
+@export var enforceMaxHP:bool = true
 var currentHP:float = HP
 var currentSpeed:float = SPEED
 var currentJumpVelocity:float = 4.5
@@ -18,6 +19,10 @@ var currentJumpVelocity:float = 4.5
 @export var jumpSound:AudioStream = preload("res://Audio/EfekSuara/344500__jeremysykes__jump05.wav")
 #@export var jumpSound:AudioStream = preload("res://addons/kenney digital audio/phase_jump_1.ogg")
 @export var landedSound:AudioStream = preload('res://Audio/EfekSuara/WoodCollision-01.wav')
+@export var hurtSound:AudioStream = preload("res://Audio/EfekSuara/341243__sharesynth__hurt02.wav")
+@export var jumpSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/jump_SoundRandom.tres")
+@export var landedSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/landed_SoundRandom.tres")
+@export var hurtSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/hurt_SoundRandom.tres")
 # https://freesound.org/people/jeremysykes/sounds/344500/ wait, this is my jump?! yeah guess..
 # yeah confirmed, that's my jump.
 
@@ -32,10 +37,11 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export var extraJumpTokens:int = 1
 @export var offFloorJumpPenalty:bool = true
 @export var disableJump:bool = false
-@export var jumpButtonBufferTime:float = .5
+@export var jumpButtonBufferTime:float = .1
 var currentJumpTokens:int = extraJumpTokens
 var jumpedAlready:bool = false
-var jumpBufferTimer:float = .5
+var jumpBufferTimer:float = .1
+var jumpBufferStarted:bool = false
 
 @export_group('Falling')
 @export var fallLimit:bool = true
@@ -57,6 +63,7 @@ var coyoteTimer:float = .5
 @export var expectedPlayer:int = 0
 
 @onready var feetSpeaker = $FeetSpeaker
+@onready var centerSpeaker = $CenterSpeaker
 var ownActive:bool = false
 var rotation_direction:float
 var direction:Vector3
@@ -76,19 +83,58 @@ func respawn():
 	teleportToInit()
 	pass
 
+func getHP() -> float:
+	return currentHP
+	pass
+
+func getMaxHP() -> float:
+	return HP
+	pass
+
+func _death():
+	pass
+
 func damage(howMuch:float):
-	HP -= howMuch
+	currentHP -= howMuch
+	if currentHP < 0:
+		currentHP = 0
+	if currentHP <= 0:
+		_death()
+	print('OUCH HP ' + String.num(currentHP))
+	_centerSound(hurtSoundRandom)
+	if onePlayerOnly:
+		Input.start_joy_vibration(expectedPlayer,1,1,.25)
+		
+		pass
+	else:
+		for i in Input.get_connected_joypads():
+			Input.start_joy_vibration(i,1,1,.25)
+			pass
+		pass
+	Input.vibrate_handheld(.25 * 1000)
 	pass
 
 func heal(howMuch:float):
-	HP += howMuch
+	currentHP += howMuch
+	if enforceMaxHP:
+		if currentHP > HP:
+			# max HP only
+			currentHP = HP
 	pass
 
 func pushJump():
 	velocity.y = currentJumpVelocity
-	_feetSound(jumpSound)
+	_feetSound(jumpSoundRandom)
 	jumpedAlready = true
 	coyoteTimer = 0
+	jumpBufferStarted = false
+	jumpBufferTimer = jumpButtonBufferTime
+	pass
+
+func resetJump():
+	currentJumpTokens = extraJumpTokens
+	jumpedAlready = false
+	coyoteTimer = coyoteTimeCompensateIn
 	pass
 
 func manageJump():
@@ -103,9 +149,13 @@ func manageJump():
 				pushJump()
 				currentJumpTokens -= 1
 				pass
+			else:
+				# out of everything. save to buffer
+				jumpBufferStarted = true
+				pass
 #		jumpedAlready = true
 #		coyoteTimer = 0
-		move_and_slide()
+	move_and_slide()
 	pass
 
 func assignCamera(withMe:Node):
@@ -115,11 +165,17 @@ func assignCamera(withMe:Node):
 func meMove(axes:Vector2 = Vector2.ZERO):
 #	print('moveing ')
 	direction = (transform.basis * Vector3(axes.x, 0, axes.y)).normalized()
+	move_and_slide()
 	pass
 
 func doWillFlooring():
 	if not wasFloored:
-		_feetSound(landedSound)
+		_feetSound(landedSoundRandom)
+		# if there is a jump buffer, jump!
+		if jumpBufferStarted:
+			resetJump()
+			manageJump()
+			pass
 		wasFloored = true
 	pass
 
@@ -133,6 +189,11 @@ func interactNow(command:String = 'activate', argument:String = ''):
 	# - kick
 	# - etc.
 	# object will receive & repond to matching command.
+	pass
+
+func _centerSound(what:AudioStream):
+	centerSpeaker.stream = what
+	centerSpeaker.play()
 	pass
 
 func _feetSound(what:AudioStream):
@@ -156,9 +217,7 @@ func _physics_process(delta: float) -> void:
 			coyoteTimer = 0
 		wasFloored = false
 	else:
-		currentJumpTokens = extraJumpTokens
-		jumpedAlready = false
-		coyoteTimer = coyoteTimeCompensateIn
+		resetJump()
 		doWillFlooring()
 	
 	# Rotation
@@ -193,6 +252,25 @@ func _physics_process(delta: float) -> void:
 #						pass
 				pass
 			pass
+	
+	# Jump Buffer
+	if jumpBufferStarted:
+		if jumpBufferTimer > 0:
+			# is buffer
+			jumpBufferTimer -= delta
+			
+			# if did landed on floor during jump buffer, then launch jump!
+			if is_on_floor():
+				pass
+			pass
+		else:
+			# out of time then cancel buffer
+			jumpBufferStarted = false
+			jumpBufferTimer = jumpButtonBufferTime
+			pass
+		pass
+	else:
+		pass
 	pass
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -224,7 +302,7 @@ func _unhandled_input(event: InputEvent) -> void:
 #	var input_dir :Vector2= Input.get_vector(moveLeftKey, moveRightKey, moveFrontKey, moveBackKey)
 #	print('eeeeeeeeeeeeeeee')
 #	direction = (transform.basis * Vector3(1, 0, 1)).normalized()
-	var ub:Array[float] = [0,0,0,0]
+#	var ub:Array[float] = [0,0,0,0]
 	if ownActive:
 		if event.is_action(moveFrontKey):
 			moveAxes[2] = event.get_action_strength(moveFrontKey)

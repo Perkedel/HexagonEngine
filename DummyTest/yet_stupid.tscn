@@ -30,5 +30,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
 material_override = ExtResource("3_b3omj")
 mesh = SubResource("BoxMesh_mae6d")
 
+[node name="CenterSpeaker" type="AudioStreamPlayer3D" parent="."]
+max_polyphony = 100
+bus = &"SoundEffect"
+attenuation_filter_cutoff_hz = 20500.0
+
 [node name="FeetSpeaker" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+max_polyphony = 5
+bus = &"SoundEffect"
+attenuation_filter_cutoff_hz = 20500.0
+
+[node name="YetHUD" type="CanvasLayer" parent="."]
+layer = 0

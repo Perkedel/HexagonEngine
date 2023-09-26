@@ -71,19 +71,21 @@ mix_rate=48000
 
 Singletoner="*res://Scripts/Singletoner.gd"
 Settingers="*res://Scripts/Settingers.gd"
-ModPckLoader="*res://Scripts/ModPCKLoader.gd"
+ModPckLoader="res://Scripts/ModPCKLoader.gd"
 Kixlonzing="*res://Scripts/Kixlonzing.gd"
 AutoSpeaker="*res://Scripts/AutoSpeaker.gd"
-AutoConductor="*res://Scripts/AutoConductor.gd"
-AutoKadeTimingStruct="*res://Scripts/AutoKadeTimingStruct.gd"
-SceneLoader="*res://Scripts/ExtraImportAsset/SceneLoader.gd"
-DauMainLooper="*res://Scripts/DauMainLooper.gd"
-PromptManager="*res://addons/input_prompts/input_prompt_manager.gd"
+AutoConductor="res://Scripts/AutoConductor.gd"
+AutoKadeTimingStruct="res://Scripts/AutoKadeTimingStruct.gd"
+SceneLoader="res://Scripts/ExtraImportAsset/SceneLoader.gd"
+DauMainLooper="res://Scripts/DauMainLooper.gd"
 ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 Posesser="*res://Scripts/Posesser.gd"
 InputHelper="*res://addons/input_helper/input_helper.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+PromptManager="*res://addons/input_prompts/input_prompt_manager.gd"
+MaterialIconsDB="*res://addons/material-design-icons/icons/icons.gd"
 EmojisDB="*res://addons/emojis-for-godot/emojis/emojis.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 
 [compression]
 
@@ -118,7 +120,7 @@ search_in_file_extensions=PackedStringArray("gd", "gdshader", "shader", "json")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ControllerInputViewer/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/native_dialogs/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/third-person-camera/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg", "res://addons/widgets/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+enabled=PackedStringArray("res://addons/ControllerInputViewer/plugin.cfg", "res://addons/GameGUI/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/inspector_extender/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/native_dialogs/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/third-person-camera/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg", "res://addons/widgets/plugin.cfg", "res://addons/xr-controller-midi-player/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
 [filesystem]
 

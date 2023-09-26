@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnee27oabcvy2"
 path.s3tc="res://.godot/imported/white.png-06b7d7f95e74cd7f8357ec25a73870fb.s3tc.ctex"
+path.etc2="res://.godot/imported/white.png-06b7d7f95e74cd7f8357ec25a73870fb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/zylann.hterrain/tools/icons/white.png"
-dest_files=["res://.godot/imported/white.png-06b7d7f95e74cd7f8357ec25a73870fb.s3tc.ctex"]
+dest_files=["res://.godot/imported/white.png-06b7d7f95e74cd7f8357ec25a73870fb.s3tc.ctex", "res://.godot/imported/white.png-06b7d7f95e74cd7f8357ec25a73870fb.etc2.ctex"]
 
 [params]
 

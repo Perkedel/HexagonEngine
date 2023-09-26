@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://8m1q4lkl3frn"]
+
+[ext_resource type="AudioStream" uid="uid://cuvevjsf6usc0" path="res://Audio/EfekSuara/WoodCollision-01.wav" id="1_utua0"]
+[ext_resource type="AudioStream" uid="uid://ca6iu4y04j2ol" path="res://Audio/EfekSuara/WoodCollision-02.wav" id="2_cq3v6"]
+[ext_resource type="AudioStream" uid="uid://dpjieql8ha8r2" path="res://Audio/EfekSuara/WoodCollision-03.wav" id="3_l0sbe"]
+[ext_resource type="AudioStream" uid="uid://bdut75dpa32rk" path="res://Audio/EfekSuara/WoodCollision-04.wav" id="4_2u5ao"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_utua0")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_cq3v6")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_l0sbe")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_2u5ao")
+stream_3/weight = 1.0
