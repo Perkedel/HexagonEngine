@@ -129,6 +129,15 @@ func pushJump():
 	coyoteTimer = 0
 	jumpBufferStarted = false
 	jumpBufferTimer = jumpButtonBufferTime
+	
+	if onePlayerOnly:
+		Input.start_joy_vibration(expectedPlayer,.25,0,.15)
+		pass
+	else:
+		for i in Input.get_connected_joypads():
+			Input.start_joy_vibration(i,.25,0,.15)
+			pass
+		pass
 	pass
 
 func resetJump():
@@ -175,6 +184,14 @@ func doWillFlooring():
 		if jumpBufferStarted:
 			resetJump()
 			manageJump()
+			pass
+		
+		if onePlayerOnly:
+			Input.start_joy_vibration(expectedPlayer,0,.15,.05)
+			pass
+		else:
+			for i in Input.get_connected_joypads():
+				Input.start_joy_vibration(i,0,.15,.05)
 			pass
 		wasFloored = true
 	pass
@@ -297,7 +314,7 @@ func _physics_process(delta: float) -> void:
 		pass
 
 func _unhandled_input(event: InputEvent) -> void:
-	if ((event.device != expectedPlayer) and onePlayerOnly) or event is InputEventKey:
+	if ((event.device != expectedPlayer) and onePlayerOnly):
 		return
 #	var input_dir :Vector2= Input.get_vector(moveLeftKey, moveRightKey, moveFrontKey, moveBackKey)
 #	print('eeeeeeeeeeeeeeee')

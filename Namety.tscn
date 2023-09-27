@@ -1,12 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bycbtl1sl8xwf"]
+[gd_scene load_steps=3 format=3 uid="uid://bycbtl1sl8xwf"]
 
 [ext_resource type="Script" path="res://Namety.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b0832dn73om8t" path="res://Sprites/HexagonEngineBootSplash-PoliticalManeuver.png" id="2"]
-[ext_resource type="PackedScene" uid="uid://dwcww8je6jbfw" path="res://HexagonEngineJustCore.tscn" id="2_k5h35"]
+[ext_resource type="Texture2D" uid="uid://xnut6ojm4k0f" path="res://Sprites/HexagonEngineBootSplash-Overseer.png" id="2_pig0m"]
 
 [node name="Namety" type="Node"]
 script = ExtResource("1")
-LoadThis = ExtResource("2_k5h35")
+LoadThis = null
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -17,4 +16,4 @@ anchor_bottom = 1.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("2")
+texture = ExtResource("2_pig0m")

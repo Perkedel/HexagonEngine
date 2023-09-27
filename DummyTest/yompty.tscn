@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://mac2koyhk5ox"]
+[gd_scene load_steps=6 format=3 uid="uid://mac2koyhk5ox"]
+
+[ext_resource type="Script" path="res://DummyTest/yompty.gd" id="1_v4v1b"]
 
 [sub_resource type="Animation" id="Animation_yq37k"]
 length = 0.001
@@ -83,6 +85,7 @@ _data = {
 [sub_resource type="SphereMesh" id="SphereMesh_fse8d"]
 
 [node name="Yompty" type="Node3D"]
+script = ExtResource("1_v4v1b")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 

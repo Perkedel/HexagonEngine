@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://btr6lldshvybq"
 path.s3tc="res://.godot/imported/ConsoleHoverEmpty.png-4402bae95d680c06699058ab50b7e789.s3tc.ctex"
-path.etc2="res://.godot/imported/ConsoleHoverEmpty.png-4402bae95d680c06699058ab50b7e789.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/ConsoleHoverEmpty.png"
-dest_files=["res://.godot/imported/ConsoleHoverEmpty.png-4402bae95d680c06699058ab50b7e789.s3tc.ctex", "res://.godot/imported/ConsoleHoverEmpty.png-4402bae95d680c06699058ab50b7e789.etc2.ctex"]
+dest_files=["res://.godot/imported/ConsoleHoverEmpty.png-4402bae95d680c06699058ab50b7e789.s3tc.ctex"]
 
 [params]
 

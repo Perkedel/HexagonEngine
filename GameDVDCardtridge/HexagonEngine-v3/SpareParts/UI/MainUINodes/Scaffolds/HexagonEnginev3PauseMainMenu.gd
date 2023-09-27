@@ -1,16 +1,18 @@
 extends Control
 
-@onready var tween = get_tree().create_tween()
-@onready var thisScaffold = $KonMenu
-@onready var titler = $KonMenu/TitleHeader
-@onready var navigator = $KonMenu/MenuNavigation
-@onready var menuContaining = $KonMenu/MenuNavigation/MainMenu/Sidren
-@onready var MenuNavList = [
+@onready var tween: = get_tree().create_tween()
+@onready var thisScaffold: = $KonMenu
+@onready var titler: = $KonMenu/TitleHeader
+@onready var titleIconer: = $KonMenu/TitleHeader/Icon
+@onready var titleTitler: = $KonMenu/TitleHeader/Title
+@onready var navigator: = $KonMenu/MenuNavigation
+@onready var menuContaining: = $KonMenu/MenuNavigation/MainMenu/Sidren
+@onready var MenuNavList: = [
 	$KonMenu/MenuNavigation/MainMenu,
 	$KonMenu/MenuNavigation/ConfirmationDialog,
 ]
 var MenuNavListActive:int = 0
-@onready var nextScaffold = $NextScaffold
+@onready var nextScaffold: = $NextScaffold
 @export var howLong: float = .5
 @export_enum("Go to gameplay", 'Select Level', 'Select Save') var playButtonWillDo:String = 'Go to gameplay' # What will Main Menu Play button do?
 # Declare member variables here. Examples:
@@ -18,10 +20,14 @@ var MenuNavListActive:int = 0
 # var b = "text"
 signal doChangeDVD
 signal doShutdown
-@onready var PortraitMode = false
+@onready var PortraitMode:bool = false
 var isPauseMenu:bool = false # for combo PauseMainMenu.
 @export var nextScaffoldScene:PackedScene
 var nextScaffoldInstance:Control
+
+@export_group('Titles')
+@export var titleName:String = 'Hexagon Engine'
+@export var titleIcon:Texture = preload("res://Sprites/HexagonEngineSymbolVeryLarge.png")
 
 #@export_group('Scenes')
 
@@ -39,6 +45,12 @@ func preAnimate():
 #	navigator.position = Vector2(0,navigator.position.y*2)
 	#tween.tween_property(titler,"position",Vector2.ZERO,howLong)
 	#tween.tween_property(navigator,"position",NavpositionBefore,howLong)
+	pass
+
+func _refreshLook():
+	if is_node_ready():
+		titleTitler.text = titleName
+		titleIconer.texture = titleIcon
 	pass
 
 func goToThisScaffold(here:PackedScene) -> Control:
@@ -116,6 +128,7 @@ func closePauseMenu():
 func _ready():
 	preAnimate()
 	preFocus()
+	_refreshLook()
 	pass # Replace with function body.
 
 
@@ -165,9 +178,12 @@ func _notification(what: int) -> void:
 	match(what):
 		NOTIFICATION_VISIBILITY_CHANGED:
 			if visible:
-				
+				_refreshLook()
 				pass
 			pass
 		_:
+			pass
+		NOTIFICATION_DRAW:
+			_refreshLook()
 			pass
 	pass

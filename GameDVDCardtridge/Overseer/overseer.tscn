@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wy0qdtswj7t7"]
+
+[ext_resource type="PackedScene" uid="uid://5n0ykkhc8qe3" path="res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.tscn" id="1_lrndi"]
+
+[node name="Overseer" instance=ExtResource("1_lrndi")]
+productTitleName = "Overseer"

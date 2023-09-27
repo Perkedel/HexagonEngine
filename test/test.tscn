@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq2sqb1u1l5ve"]
+[gd_scene load_steps=3 format=3 uid="uid://bq2sqb1u1l5ve"]
 
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://joystick/virtual_joystick.tscn" id="1_4k4lh"]
-[ext_resource type="Texture2D" uid="uid://b4jy3cynf4voa" path="res://icon.svg" id="2_44wa8"]
 [ext_resource type="Script" path="res://test/player.gd" id="3_dsmxw"]
 
 [node name="Test" type="Node2D"]
@@ -22,9 +21,10 @@ grow_horizontal = 0
 joystick_mode = 1
 use_input_actions = false
 
-[node name="Player" type="Sprite2D" parent="." node_paths=PackedStringArray("joystick_left", "joystick_right")]
+[node name="Player" type="Sprite2D" parent="."]
 position = Vector2(600, 300)
-texture = ExtResource("2_44wa8")
 script = ExtResource("3_dsmxw")
-joystick_left = NodePath("../UI/Virtual joystick left")
-joystick_right = NodePath("../UI/Virtual joystick right")
+joystick_left = Object(Control,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":3,"anchors_preset":2,"anchor_left":0.0,"anchor_top":1.0,"anchor_right":0.0,"anchor_bottom":1.0,"offset_left":0.0,"offset_top":-308.0,"offset_right":300.0,"offset_bottom":-8.0,"grow_horizontal":1,"grow_vertical":0,"rotation":0.0,"scale":Vector2(1, 1),"pivot_offset":Vector2(0, 0),"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","script":Resource("res://joystick/virtual_joystick.gd"))
+
+joystick_right = Object(Control,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":3,"anchors_preset":3,"anchor_left":1.0,"anchor_top":1.0,"anchor_right":1.0,"anchor_bottom":1.0,"offset_left":-300.0,"offset_top":-300.0,"offset_right":0.0,"offset_bottom":0.0,"grow_horizontal":0,"grow_vertical":0,"rotation":0.0,"scale":Vector2(1, 1),"pivot_offset":Vector2(0, 0),"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","script":Resource("res://joystick/virtual_joystick.gd"),"joystick_mode":1,"use_input_actions":false)
+

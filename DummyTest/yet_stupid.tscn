@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ds34vxgw0kprj"]
+[gd_scene load_steps=8 format=3 uid="uid://ds34vxgw0kprj"]
 
 [ext_resource type="Script" path="res://DummyTest/yet_stupid.gd" id="1_ns3nt"]
 [ext_resource type="Material" uid="uid://bfxk53bol7o4w" path="res://modules/ShadeMaterials/Just_shiny_white.tres" id="2_23jpc"]
@@ -10,6 +10,8 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_mae6d"]
 size = Vector3(0.5, 0.25, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmono"]
 
 [node name="YetStupid" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -43,3 +45,9 @@ attenuation_filter_cutoff_hz = 20500.0
 
 [node name="YetHUD" type="CanvasLayer" parent="."]
 layer = 0
+
+[node name="Interactor" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactor"]
+shape = SubResource("BoxShape3D_tmono")

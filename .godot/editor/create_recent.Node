@@ -1,9 +1,11 @@
+TextureRect
+Control
+CollisionShape3D
+Area3D
 MeshInstance3D
 AnimationPlayer
 Node3D
 Camera3D
-CollisionShape3D
-Area3D
 AudioStreamPlayer3D
 StaticBody3D
 CanvasLayer
@@ -11,12 +13,10 @@ HBoxContainer
 ScrollContainer
 CPUParticles3D
 GPUParticles3D
-Control
 Node2D
 Button
 CharacterBody3D
 ControllerTextureRect
-TextureRect
 Sprite2D
 Sprite3D
 CenterContainer

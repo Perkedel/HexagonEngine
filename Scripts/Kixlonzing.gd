@@ -39,7 +39,9 @@ func AdRewardUserNow(HowMuch:float):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print('load Kixlonz')
 	LoadKixlonz()
+	print('loaded Kixlonz')
 	pass # Replace with function body.
 
 

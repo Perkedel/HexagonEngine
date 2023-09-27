@@ -1,5 +1,8 @@
 extends Node
 
+@export var productTitleName:String = 'Hexagon Engine'
+@export var productTitleIcon:Texture = preload("res://Sprites/HexagonEngineSymbolVeryLarge.png")
+
 @export_subgroup('Main Navigation')
 @onready var LevelSpace = $LevelSpace
 @onready var UIplace = $UICanvas/UIplace

@@ -125,6 +125,7 @@ func _ready():
 	prepareDialog()
 	
 	SettingLoad()
+	print('Setting\'s Ready')
 	pass # Replace with function body.
 func get_settings () -> Dictionary:
 	return _SettingData
@@ -146,11 +147,15 @@ func ApplySetting():
 		pass
 	
 	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (_SettingData.DisplaySetting.FullScreen) else Window.MODE_WINDOWED
-	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if (_SettingData.DisplaySetting.Vsync) else DisplayServer.VSYNC_DISABLED)
+	
+	# vsync crashes 
+	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX if (_SettingData.DisplaySetting.Vsync) else DisplayServer.VSYNC_DISABLED)
+	# Change to Mailbox to fix it for now. Do not use ENABLED!!! NEVER!!!
 	pass
 
 func SettingLoad():
 #	SettingFile = FileAccess.new()
+	print('Let the setting be load')
 	if FileAccess.file_exists(SettingPath) && not useJSON:
 		SettingFile = FileAccess.open(SettingPath, FileAccess.READ)
 		var werror = FileAccess.get_open_error()

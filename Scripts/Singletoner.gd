@@ -1,5 +1,7 @@
 extends Node
 
+#class_name Singletoner
+
 @export var isPlayingGameNow:bool = false
 @export var isGamePaused:bool = false
 @export var activateBackButton:bool = true
@@ -42,14 +44,19 @@ func pressAMenuButton(whichIs:String='MainMenu',Argument:String=''):
 
 # Posess a character
 func addPosess(forThisNode:Node,toWhom:int=0):
-	return Posesser.addPosess(forThisNode,toWhom)
+#	if Posesser:
+#		return Posesser.addPosess(forThisNode,toWhom)
+#	else:
+#		return forThisNode
 	pass
 
 func replacePosess(withThisNode:Node,toWhom:int=0):
-		return Posesser.replacePosess(withThisNode,toWhom)
+#		return Posesser.replacePosess(withThisNode,toWhom)
+		pass
 
 func clearPosess(toWhom):
-	Posesser.clearPosess(toWhom)
+#	Posesser.clearPosess(toWhom)
+	pass
 
 # monitor a character node for HUD
 func monitorThisCharacter(person:Node) -> Node:
@@ -80,7 +87,7 @@ func saveEverythingFirst():
 		Settingers.SettingSave()
 		pass
 	if Engine.has_singleton("Kixlonzing"):
-		Kixlonzing.SaveKixlonz()
+#		Kixlonzing.SaveKixlonz()
 		pass
 	pass
 
@@ -136,7 +143,7 @@ func ResumeGameNow():
 	setGamePaused(false)
 	pass
 
-func change_scene_with_resource(thisOne):
+func change_scene_with_resource(thisOne:PackedScene):
 	var pleaseInstanceThis = thisOne.instantiate()
 	get_tree().current_scene.free()
 	get_tree().current_scene = null
@@ -150,7 +157,7 @@ func change_scene_with_instance(thisOne:Node):
 	get_tree().root.add_child(thisOne)
 	get_tree().current_scene = thisOne
 
-func ExclusiveBoot(theResource):
+func ExclusiveBoot(theResource:PackedScene):
 	if theResource != null:
 		hereTakeThisLoadedResource = theResource
 		#andScronchMe = hereTakeThisLoadedResource.instance()

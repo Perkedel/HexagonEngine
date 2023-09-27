@@ -1,16 +1,18 @@
-@tool
+#@tool
 extends Node
 
 # JOELwindows7: this is empty node just to make sure everything loads first
 # then go to the main node.
-@export var LoadThis: PackedScene = load("res://HexagonEngineJustCore.tscn")
+@export var LoadThis: PackedScene = preload("res://HexagonEngineJustCore.tscn")
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 func justStart():
+	print('aaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaa')
 	await get_tree().create_timer(5).timeout
+	print('LET LOAD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 	Singletoner.ExclusiveBoot(LoadThis)
 	pass
 

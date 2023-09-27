@@ -17,12 +17,20 @@ enum DialogConfirmsFor {Nothing = 0, ChangeDVD = 1, QuitGame = 2, LeaveLevel = 3
 @export var DialogSelectAction: DialogConfirmsFor
 @export var StartFromWhere:String = 'MainMenu'
 
+@export_group('Product Title')
+@export var titleName:String = 'Hexagon Engine'
+@export var titleIcon:Texture = preload("res://Sprites/HexagonEngineSymbolVeryLarge.png")
+
 func setHP(value:float):
 	setHPmeter(value)
 	pass
 
 func preloadPauseMainMenu(scened:PackedScene):
-	PauseMainMenuNode.add_child(scened.instantiate())
+	var thisOne:= scened.instantiate()
+	
+	thisOne.titleName = titleName
+	thisOne.titleIcon = titleIcon
+	PauseMainMenuNode.add_child(thisOne)
 	for mes in PauseMainMenuNode.get_children():
 		mes.connect("doChangeDVD", Callable(self, "_on_ChangeDVD_do"))
 		mes.connect("doShutdown", Callable(self, "_on_Shutdown_do"))

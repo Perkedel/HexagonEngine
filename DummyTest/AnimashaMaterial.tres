@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=16 format=3 uid="uid://dkfptivee45r4"]
 
-[ext_resource type="Texture2D" uid="uid://b2shwowyb2y1l" path="res://Sprites/ConsoleHover.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b5aqehi846rhf" path="res://Sprites/ConsoleHover.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://btr6lldshvybq" path="res://Sprites/ConsoleHoverEmpty.png" id="2"]
 
 [sub_resource type="VisualShaderNodeFloatOp" id="1"]
