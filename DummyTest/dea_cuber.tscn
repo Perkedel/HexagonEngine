@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://dop3jhglggo58"]
+
+[ext_resource type="Script" path="res://DummyTest/dea_cuber.gd" id="1_0tykb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3p64i"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uodbp"]
+
+[sub_resource type="Animation" id="Animation_jo5au"]
+resource_name = "spawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deaCube:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8xorl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deaCube:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qevg6"]
+resource_name = "activated"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("deaCube:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.28319, 6.28319, 6.28319)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ka0hi"]
+_data = {
+"RESET": SubResource("Animation_8xorl"),
+"activated": SubResource("Animation_qevg6"),
+"spawn": SubResource("Animation_jo5au")
+}
+
+[node name="DeaCuber" type="Node3D"]
+script = ExtResource("1_0tykb")
+
+[node name="deaCube" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_3p64i")
+mesh = SubResource("BoxMesh_uodbp")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ka0hi")
+}

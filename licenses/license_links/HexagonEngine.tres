@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LicenseLink" load_steps=2 format=3 uid="uid://c455bygvl7xqe"]
+
+[ext_resource type="Script" path="res://addons/simplelicense/api/LicenseLink.gd" id="2_gl8fo"]
+
+[resource]
+script = ExtResource("2_gl8fo")
+link_files = Array[Resource]([])
+link_dirs = Array[Resource]([])
+link_paths = []
+componet_name = "HexagonEngine"
+extra = ""
+license_identifier = "GNU GPL v3"
+copyright = Array[String](["Perkedel Technologies"])

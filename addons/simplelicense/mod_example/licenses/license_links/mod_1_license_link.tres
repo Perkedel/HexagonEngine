@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LicenseLink" load_steps=3 format=3 uid="uid://ch5muqo430mw"]
+
+[ext_resource type="Script" path="res://addons/simplelicense/mod_example/mod_1.gd" id="1_3n7mw"]
+[ext_resource type="Script" path="res://addons/simplelicense/api/LicenseLink.gd" id="1_gufc2"]
+
+[resource]
+script = ExtResource("1_gufc2")
+link_files = Array[Resource]([])
+link_dirs = Array[Resource]([ExtResource("1_3n7mw")])
+link_paths = []
+componet_name = "Mod 1"
+extra = "extra info shown in the comment section of the link text"
+license_identifier = "mod_1_license_identifier"
+copyright = Array[String](["copyright year, (comma) name, (comma) company name"])

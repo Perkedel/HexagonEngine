@@ -3,11 +3,11 @@ extends HexagonLevel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Singletoner.monitorThisCharacter($YetStupid)
+#	Singletoner.monitorThisCharacter($YetStupid)
 #	Singletoner.replacePosess($YetStupid,0)
 #	$YetStupid.setOwnActivate(true)
 #	$CamRig.assignCamera($YetStupid)
-	$YetStupid.assignCamera($CamRig)
+#	$YetStupid.assignCamera($CamRig)
 #	$CamRig.setOwnActivate(true)
 	super._ready()
 	pass # Replace with function body.
@@ -22,13 +22,13 @@ func recheckMenu() -> String:
 	match(Singletoner.currentMenu):
 		'Gameplay':
 #			print('PLAAAAAAAAAAAAAAAAAAAY')
-			$YetStupid.setOwnActivate(true)
-			$CamRig.setOwnActivate(true)
-			Singletoner.monitorThisCharacter($YetStupid)
+#			$YetStupid.setOwnActivate(true)
+#			$CamRig.setOwnActivate(true)
+#			Singletoner.monitorThisCharacter($YetStupid)
 			pass
 		_:
-			$YetStupid.setOwnActivate(false)
-			$CamRig.setOwnActivate(false)
+#			$YetStupid.setOwnActivate(false)
+#			$CamRig.setOwnActivate(false)
 			pass
 	return super.recheckMenu()
 

@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqqewp2yvvjvg"]
+
+[ext_resource type="PackedScene" uid="uid://bj2g5314fdyr0" path="res://addons/controller_icons/objects/controller_icons_sprite3D.tscn" id="1_n7aoj"]
+[ext_resource type="Texture2D" uid="uid://bp58drjdgvxsi" path="res://addons/controller_icons/assets/key/enter_alt.png" id="2_0jxg5"]
+[ext_resource type="Script" path="res://modules/Reusables/parts/controller_icons_sprite3D_SUPER.gd" id="2_8w66v"]
+
+[node name="SuperControllerIconsSprite3D" instance=ExtResource("1_n7aoj")]
+texture = ExtResource("2_0jxg5")
+script = ExtResource("2_8w66v")
+colorNormal = Color(1, 1, 1, 1)
+colorPressed = Color(0.454902, 0.454902, 0.454902, 1)
+path = "ui_accept"

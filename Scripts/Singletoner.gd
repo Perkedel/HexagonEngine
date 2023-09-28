@@ -193,7 +193,8 @@ func _notification(what: int) -> void:
 		NOTIFICATION_WM_CLOSE_REQUEST:
 			# Press Close
 			if dvdNode.has_method('closeRequest'):
-				dvdNode.closeRequest()
+#				dvdNode.closeRequest()
+				dvdNode.call('closeRequest')
 				pass
 			pass
 		_:

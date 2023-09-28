@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://by8n1k1d0pej1"]
+
+[ext_resource type="Script" path="res://modules/Reusables/parts/interaction_to_receive_3d.gd" id="1_jnbsx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d3iyk"]
+radius = 2.0
+
+[node name="InteractionToReceive3D" type="Area3D"]
+script = ExtResource("1_jnbsx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_d3iyk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

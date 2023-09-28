@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=3 uid="uid://bap5x6kis6j2a"]
+
+[ext_resource type="Script" path="res://addons/simplelicense/GUI/LicenseGUI.gd" id="1_ue7vy"]
+[ext_resource type="Script" path="res://addons/simplelicense/api/LicenseManager.gd" id="2_cpb2k"]
+
+[node name="LicenseGUI" type="Control"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ue7vy")
+load_locations = Array[String](["res://licenses", "res://addons/simplelicense/mod_example/licenses/"])
+export_locations = Array[String](["user://licenses/game/", "user://licenses/mods/mod_1/"])
+
+[node name="LicenseManager" type="Node" parent="."]
+script = ExtResource("2_cpb2k")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.381076
+anchor_right = 0.461806
+anchor_bottom = 0.0401235
+offset_left = 3.05176e-05
+grow_horizontal = 2
+text = "License Info"
+metadata/_edit_use_anchors_ = true
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00694444
+anchor_top = 0.0462963
+anchor_right = 0.404514
+anchor_bottom = 0.987654
+grow_vertical = 2
+size_flags_horizontal = 2
+hide_root = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.434028
+anchor_top = 0.0462963
+anchor_right = 0.993056
+anchor_bottom = 0.987654
+offset_left = -8.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+editable = false
+scroll_smooth = true
+minimap_draw = true
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_open_data_dir" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.585069
+anchor_top = 0.00308642
+anchor_right = 0.696181
+anchor_bottom = 0.0416667
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Open Data Directory"
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_save_licenses" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491319
+anchor_top = 0.00308642
+anchor_right = 0.56684
+anchor_bottom = 0.0416667
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Save Licenses"
+metadata/_edit_use_anchors_ = true
+
+[node name="op_locations" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00694444
+anchor_top = 0.00308642
+anchor_right = 0.172743
+anchor_bottom = 0.0416667
+theme_override_font_sizes/font_size = 12
+item_count = 2
+popup/item_0/text = "a"
+popup/item_0/id = 0
+popup/item_1/text = "b"
+popup/item_1/id = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="item_activated" from="Tree" to="." method="_on_tree_item_activated"]
+[connection signal="item_selected" from="Tree" to="." method="_on_tree_item_selected"]
+[connection signal="pressed" from="btn_open_data_dir" to="." method="_on_btn_open_data_dir_pressed"]
+[connection signal="pressed" from="btn_save_licenses" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="op_locations" to="." method="_on_op_locations_item_selected"]

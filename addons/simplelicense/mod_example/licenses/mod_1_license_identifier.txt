@@ -1,0 +1,15 @@
+This is an example of the custom license terms for Mod_1
+
+So like
+
+MIT LICENSE TERMS
+...
+..
+.
+
+or
+
+CC0 1.0 LICENSE TERMS
+...
+..
+.

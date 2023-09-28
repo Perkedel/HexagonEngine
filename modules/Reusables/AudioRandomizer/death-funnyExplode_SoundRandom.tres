@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://fytpel3vnikv"]
+
+[ext_resource type="AudioStream" uid="uid://dfjqcl73u4pnj" path="res://Audacity/PoopostExplosion/Very Loud Explosion-CutFade.wav" id="1_ritaa"]
+
+[resource]
+streams_count = 1
+random_pitch = 1.0
+random_volume_offset_db = 0.0
+stream_0/stream = ExtResource("1_ritaa")
+stream_0/weight = 1.0

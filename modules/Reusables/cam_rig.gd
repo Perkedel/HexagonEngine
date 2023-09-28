@@ -1,5 +1,5 @@
 extends Node3D
-# pls yoink View from https://github.com/KenneyNL/Starter-Kit-3D-Platformer
+# pls yoink View from https://github.com/KenneyNL/Starter-Kit-3D-Platformer (MIT License)
 
 @export_group("Properties")
 @export var target: Node
@@ -12,6 +12,7 @@ extends Node3D
 
 @export_group("Rotation")
 @export var rotation_speed = 120
+@export var mouse_sensitive:float = .25
 
 @export_group('Keymap')
 @export var cameraLeftKey:String = 'Kamera_Kiri'
@@ -20,6 +21,7 @@ extends Node3D
 @export var cameraUpKey:String = 'Kamera_Atas'
 @export var cameraZoomInKey:String = 'Kamera_Perbesar'
 @export var cameraZoomOutKey:String = 'Kamera_Perkecil'
+@export var cameraMouseCaptureKey:String = 'Kamera_Tangkap_Tetikus'
 @export var jumpKey:String = 'Melompat'
 
 @export_group('Controller')
@@ -30,7 +32,9 @@ extends Node3D
 var camera_rotation:Vector3
 var zoom = 10
 var moveAxes:Array[float]=[0,0,0,0]
+var zoomAxes:Array[float]=[0,0]
 var inputer:Vector3
+var zoomer:float = 0
 
 @onready var camera = $Camera3D
 
@@ -44,7 +48,8 @@ func setOwnActivate(to:bool = true):
 	ownActive = to
 	pass
 
-func assignCamera():
+func assignCamera(toPlayer:Node3D):
+	target = toPlayer
 	pass
 
 func assignTarget(with:Node):
@@ -61,6 +66,14 @@ func _physics_process(delta):
 	camera.position = camera.position.lerp(Vector3(0, 0, zoom), 8 * delta)
 	
 	handle_input(delta)
+	
+	# Mouse Capture
+	if ownActive:
+		pass
+	else:
+		if Input.mouse_mode != Input.MOUSE_MODE_VISIBLE:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			pass
 
 # Handle input
 
@@ -74,17 +87,83 @@ func handle_input(delta):
 		input.y = Input.get_axis(cameraLeftKey, cameraRightKey)
 		input.x = Input.get_axis(cameraUpKey, cameraDownKey)
 #		input.x += 1 * delta
+	#	camera_rotation += input.limit_length(1.0) * rotation_speed * delta
+		camera_rotation += inputer.limit_length(1.0) * rotation_speed * delta
 		pass
 	
-	camera_rotation += input.limit_length(1.0) * rotation_speed * delta
 	camera_rotation.x = clamp(camera_rotation.x, -80, -10)
 	
 	# Zooming
 	if ownActive:
-		zoom += Input.get_axis(cameraZoomInKey,cameraZoomOutKey) * zoom_speed * delta
+#		zoom += Input.get_axis(cameraZoomInKey,cameraZoomOutKey) * zoom_speed * delta
+		zoom += zoomer * zoom_speed * delta
 		zoom = clamp(zoom, zoom_maximum, zoom_minimum)
 		pass
 
+func _toggleMouseCapture():
+	if ownActive:
+		print('Mouse Capture attampt')
+		match(Input.mouse_mode):
+			Input.MOUSE_MODE_VISIBLE:
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+				pass
+			Input.MOUSE_MODE_CAPTURED:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+				pass
+			_:
+				pass
+		pass
+	else:
+		if Input.mouse_mode != Input.MOUSE_MODE_VISIBLE:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			pass
+	pass
+
 func _unhandled_input(event: InputEvent) -> void:
+	inputer = Vector3.ZERO
+	zoomer = 0
+	if ((event.device != expectedPlayer) and onePlayerOnly):
+		return
+		
+	if ownActive:
+		if event.is_action(cameraLeftKey):
+			moveAxes[0] = event.get_action_strength(cameraLeftKey)
+			pass
+		if event.is_action(cameraRightKey):
+			moveAxes[1] = event.get_action_strength(cameraRightKey)
+			pass
+		if event.is_action(cameraUpKey):
+			moveAxes[2] = event.get_action_strength(cameraUpKey)
+			pass
+		if event.is_action(cameraDownKey):
+			moveAxes[3] = event.get_action_strength(cameraDownKey)
+			pass
+		if event.is_action(cameraZoomInKey):
+			zoomAxes[0] = event.get_action_strength(cameraZoomInKey)
+			pass
+		if event.is_action(cameraZoomOutKey):
+			zoomAxes[1] = event.get_action_strength(cameraZoomOutKey)
+			pass
+		if event.is_action_pressed(cameraMouseCaptureKey):
+			_toggleMouseCapture()
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			if event is InputEventMouseMotion:
+				camera_rotation += Vector3(-event.relative.y*mouse_sensitive,-event.relative.x * mouse_sensitive,0).limit_length()
+				pass
+			if event.is_action(cameraZoomInKey+'.mouse'):
+				zoomAxes[0] = event.get_action_strength(cameraZoomInKey)
+				pass
+			if event.is_action(cameraZoomOutKey+'.mouse'):
+				zoomAxes[1] = event.get_action_strength(cameraZoomOutKey)
+				pass
+			pass
+		inputer.x = -moveAxes[2]+moveAxes[3]
+		inputer.y = moveAxes[0]-moveAxes[1]
+		zoomer = zoomAxes[1]-zoomAxes[0]
+		pass
+	else:
+		moveAxes = [0,0,0,0]
+		pass
 	
+#	camera_rotation += inputer.limit_length() * rotation_speed
 	pass

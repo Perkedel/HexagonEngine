@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy0tn2gj8kmdj"]
+[gd_scene load_steps=9 format=3 uid="uid://cy0tn2gj8kmdj"]
 
 [ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_5orq1"]
 [ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/yet_stupid.tscn" id="2_5uxn4"]
@@ -7,9 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://c0rdv6glchtge" path="res://modules/Reusables/cam_rig.tscn" id="4_a1nfo"]
 [ext_resource type="PackedScene" uid="uid://b7ryk8rg8ny7j" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/Gameplay/acid_zone_area.tscn" id="6_n70ud"]
 [ext_resource type="PackedScene" uid="uid://dp6tiy4kpmu3y" path="res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/Gameplay/cure_zone_area.tscn" id="7_l6v3y"]
+[ext_resource type="PackedScene" uid="uid://c0hpyjqr1kqfc" path="res://DummyTest/interactible_yet.tscn" id="8_fbke6"]
 
-[node name="InitLevelBaseAdded" instance=ExtResource("1_5orq1")]
+[node name="InitLevelBaseAdded" node_paths=PackedStringArray("mainPlayer", "mainCamera") instance=ExtResource("1_5orq1")]
 script = ExtResource("2_64sxu")
+mainPlayer = NodePath("YetStupid")
+mainCamera = NodePath("CamRig")
 
 [node name="YetStupid" parent="." index="0" instance=ExtResource("2_5uxn4")]
 
@@ -332,3 +335,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 2)
 
 [node name="CureZone12" parent="." index="108" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)
+
+[node name="Interactible_yet" parent="." index="109" instance=ExtResource("8_fbke6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)

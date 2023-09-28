@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0hpyjqr1kqfc"]
+
+[ext_resource type="Script" path="res://DummyTest/interactible_yet.gd" id="1_kqnvm"]
+[ext_resource type="PackedScene" uid="uid://by8n1k1d0pej1" path="res://modules/Reusables/parts/interaction_to_receive_3d.tscn" id="2_5vl8s"]
+[ext_resource type="PackedScene" uid="uid://dop3jhglggo58" path="res://DummyTest/dea_cuber.tscn" id="3_cdnqq"]
+[ext_resource type="AudioStream" uid="uid://8k32g26nve60" path="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav" id="4_6ewx7"]
+[ext_resource type="PackedScene" uid="uid://dqqewp2yvvjvg" path="res://modules/Reusables/parts/controller_icons_sprite3D_SUPER.tscn" id="5_0ylk7"]
+[ext_resource type="Texture2D" uid="uid://xe4n818le3p8" path="res://addons/controller_icons/assets/key/e.png" id="6_dkbso"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3yki"]
+
+[node name="Interactible_yet" type="StaticBody3D"]
+script = ExtResource("1_kqnvm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_r3yki")
+
+[node name="InteractionToReceive3D" parent="." instance=ExtResource("2_5vl8s")]
+
+[node name="Shapes" type="Node3D" parent="."]
+
+[node name="DeaCuber" parent="Shapes" instance=ExtResource("3_cdnqq")]
+
+[node name="CenterSpeaker" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_6ewx7")
+max_polyphony = 5
+attenuation_filter_cutoff_hz = 20500.0
+
+[node name="GlyphSign" parent="." instance=ExtResource("5_0ylk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+texture = ExtResource("6_dkbso")
+path = "Valve_Interaksi_alt"
+
+[connection signal="receivedHoverInteraction" from="InteractionToReceive3D" to="." method="_on_interaction_to_receive_3d_received_hover_interaction"]
+[connection signal="receivedInteraction" from="InteractionToReceive3D" to="." method="_on_interaction_to_receive_3d_received_interaction"]
+[connection signal="receivedUnhoverInteraction" from="InteractionToReceive3D" to="." method="_on_interaction_to_receive_3d_received_unhover_interaction"]

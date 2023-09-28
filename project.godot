@@ -115,7 +115,7 @@ search_in_file_extensions=PackedStringArray("gd", "gdshader", "shader", "json")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ControllerInputViewer/plugin.cfg", "res://addons/GameGUI/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/inspector_extender/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/ControllerInputViewer/plugin.cfg", "res://addons/GameGUI/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/inspector_extender/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/simplelicense/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
 
 [filesystem]
 
@@ -644,6 +644,33 @@ Kamera_Perkecil={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+Valve_Interaksi_alt={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":true,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
+]
+}
+Kamera_Tangkap_Tetikus={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+Sistem_Meta={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":5,"pressure":0.0,"pressed":true,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+Kamera_Perbesar.mouse={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":8,"position":Vector2(254, 16),"global_position":Vector2(258, 54),"factor":1.0,"button_index":4,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+Kamera_Perkecil.mouse={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(347, 10),"global_position":Vector2(351, 48),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [input_devices]
 
@@ -667,7 +694,9 @@ limits/message_queue/max_size_kb=8120
 
 [physics]
 
+3d/physics_engine="JoltPhysics3D"
 2d/run_on_thread=2
+jolt_3d/collisions/areas_detect_static_bodies=true
 
 [rendering]
 
