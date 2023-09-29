@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://vf0ieipk6xd8"]
+
+[ext_resource type="PackedScene" uid="uid://bgofjme0trxii" path="res://modules/Reusables/parts/KoBeWiActionIcon.tscn" id="1_e47ni"]
+[ext_resource type="Script" path="res://modules/Reusables/parts/KoBeWiActionIcon_Super.gd" id="2_dv75s"]
+
+[node name="ActionIconSuper" instance=ExtResource("1_e47ni")]
+script = ExtResource("2_dv75s")
+colorNormal = Color(1, 1, 1, 1)
+colorPressed = Color(0.745098, 0.745098, 0.745098, 1)

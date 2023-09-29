@@ -1,11 +1,13 @@
+GPUParticlesCollisionBox3D
+Node3D
+MeshInstance3D
+GPUParticles3D
 Window
 AudioStreamPlayer3D
 AnimationPlayer
-Node3D
 CollisionShape3D
 Area3D
 StaticBody3D
-MeshInstance3D
 Timer
 TextureRect
 Control
@@ -14,7 +16,6 @@ CanvasLayer
 HBoxContainer
 ScrollContainer
 CPUParticles3D
-GPUParticles3D
 Node2D
 Button
 CharacterBody3D

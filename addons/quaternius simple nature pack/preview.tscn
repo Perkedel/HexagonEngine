@@ -1,0 +1,56 @@
+[gd_scene load_steps=14 format=3 uid="uid://s0cemxp3inkl"]
+
+[ext_resource type="PackedScene" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/bush_1.tscn" id="1_uoycj"]
+[ext_resource type="PackedScene" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/bush_2.tscn" id="2_341k4"]
+[ext_resource type="PackedScene" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/bush_3.tscn" id="3_87ew1"]
+[ext_resource type="PackedScene" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/grass_1.tscn" id="4_71ohy"]
+[ext_resource type="PackedScene" uid="uid://butw4poodu5gg" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/grass_2.tscn" id="5_hml8v"]
+[ext_resource type="PackedScene" uid="uid://b6g8yc62f2j5s" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/grass_3.tscn" id="6_6pvrw"]
+[ext_resource type="PackedScene" uid="uid://cal6m7uf1k1n7" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/rock_1.tscn" id="7_jmoc1"]
+[ext_resource type="PackedScene" uid="uid://djb0yl6e0llhd" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/rock_2.tscn" id="8_qyk1n"]
+[ext_resource type="PackedScene" uid="uid://kopcbpjf5sbn" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/rock_3.tscn" id="9_cbk2f"]
+[ext_resource type="PackedScene" uid="uid://t54m5opl3nv2" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/tree_1.tscn" id="10_gqdn4"]
+[ext_resource type="PackedScene" uid="uid://ca026by8kvonb" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/tree_2.tscn" id="11_wsmue"]
+[ext_resource type="PackedScene" uid="uid://t7f7lc8h1od6" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/tree_3.tscn" id="12_58d3v"]
+[ext_resource type="PackedScene" uid="uid://2mqqu1vombe5" path="res://lopanaro/assets packs/quaternius simple nature pack/static bodies/tree_4.tscn" id="13_kupew"]
+
+[node name="Preview" type="Node3D"]
+
+[node name="Tree1" parent="." instance=ExtResource("10_gqdn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Tree2" parent="." instance=ExtResource("11_wsmue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
+
+[node name="Tree3" parent="." instance=ExtResource("12_58d3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0)
+
+[node name="Tree4" parent="." instance=ExtResource("13_kupew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="Bush1" parent="." instance=ExtResource("1_uoycj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Bush2" parent="." instance=ExtResource("2_341k4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Bush3" parent="." instance=ExtResource("3_87ew1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="Grass1" parent="." instance=ExtResource("4_71ohy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Grass2" parent="." instance=ExtResource("5_hml8v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Grass3" parent="." instance=ExtResource("6_6pvrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="Rock1" parent="." instance=ExtResource("7_jmoc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Rock2" parent="." instance=ExtResource("8_qyk1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="Rock3" parent="." instance=ExtResource("9_cbk2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)

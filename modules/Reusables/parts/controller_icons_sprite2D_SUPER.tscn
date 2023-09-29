@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbkxdgpvo62qv"]
+
+[ext_resource type="PackedScene" uid="uid://8sks3urc3fpc" path="res://addons/controller_icons/objects/controller_icons_sprite2D.tscn" id="1_5f1vb"]
+[ext_resource type="Script" path="res://modules/Reusables/parts/controller_icons_sprite2D_SUPER.gd" id="2_oycv0"]
+
+[node name="SuperControllerIconsSprite2D" instance=ExtResource("1_5f1vb")]
+script = ExtResource("2_oycv0")
+colorNormal = Color(1, 1, 1, 1)
+colorPressed = Color(0.745098, 0.745098, 0.745098, 1)
+path = "ui_accept"

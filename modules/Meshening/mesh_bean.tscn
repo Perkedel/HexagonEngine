@@ -1,8 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0mgw4ltl7wwb"]
+[gd_scene load_steps=17 format=3 uid="uid://b0mgw4ltl7wwb"]
 
 [ext_resource type="Material" uid="uid://bfxk53bol7o4w" path="res://modules/ShadeMaterials/Just_shiny_white.tres" id="1_2cfb6"]
 [ext_resource type="Script" path="res://modules/Meshening/mesh_bean.gd" id="1_y2nq3"]
 [ext_resource type="Material" uid="uid://bxtpu8enmesqc" path="res://modules/ShadeMaterials/Just_shiny_cyan.tres" id="2_ss0r4"]
+[ext_resource type="Material" uid="uid://bow5wm5wx8y18" path="res://modules/ShadeMaterials/mesh_bean_Explodos_ParticleProcessMaterial.tres" id="5_kxplt"]
+[ext_resource type="SphereMesh" uid="uid://b7e7yu46ja2py" path="res://modules/Meshening/mesh_bean_smallBall_particle.tres" id="6_mjq0o"]
+[ext_resource type="RibbonTrailMesh" uid="uid://b3mor7jdobxwr" path="res://modules/Meshening/mesh_bean_RibbonDuar_RibbonTrailParticle.tres" id="7_ikj6y"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ex6hx"]
 
@@ -211,5 +214,20 @@ mesh = SubResource("BoxMesh_mae6d")
 libraries = {
 "": SubResource("AnimationLibrary_7ayp3")
 }
+
+[node name="Explodos" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 250
+lifetime = 10.0
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+visibility_aabb = AABB(-1, -1, -1, 2, 2, 2)
+trail_enabled = true
+trail_lifetime = 1.0
+process_material = ExtResource("5_kxplt")
+draw_passes = 2
+draw_pass_1 = ExtResource("6_mjq0o")
+draw_pass_2 = ExtResource("7_ikj6y")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

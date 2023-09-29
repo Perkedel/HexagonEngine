@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4e0va124r06c"]
+
+[ext_resource type="ArrayMesh" uid="uid://bfwefvl2m43rv" path="res://addons/MetaMultimeshInstance3D/resources/suzanne.res" id="1_vm6l6"]
+[ext_resource type="Script" path="res://addons/MetaMultimeshInstance3D/src/MetaMultimeshInstance3D.gd" id="4_5sylg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_05e8y"]
+sky_horizon_color = Color(0.601152, 0.661539, 0.711029, 1)
+ground_bottom_color = Color(0.152941, 0.294118, 0.270588, 1)
+ground_horizon_color = Color(0.601152, 0.661539, 0.711029, 1)
+
+[sub_resource type="Sky" id="Sky_gw4io"]
+sky_material = SubResource("ProceduralSkyMaterial_05e8y")
+
+[sub_resource type="Environment" id="Environment_dsh6d"]
+background_mode = 2
+sky = SubResource("Sky_gw4io")
+tonemap_mode = 2
+
+[sub_resource type="MultiMesh" id="MultiMesh_pp3l5"]
+transform_format = 1
+instance_count = 7
+visible_instance_count = 7
+mesh = ExtResource("1_vm6l6")
+buffer = PackedFloat32Array(0.326116, 0.293503, -0.293503, 2.02544, 7.78669e-08, 0.373255, 0.373255, -0.292243, 0.415075, -0.230599, 0.230599, -1.14675, 0.527148, -0.0194109, 0.0194109, -0.0423452, 5.85235e-08, 0.373255, 0.373255, -0.292243, -0.0274513, -0.372751, 0.372751, -2.06126, 0.326963, -0.293031, 0.293031, -2.00184, 4.25897e-08, 0.373255, 0.373255, -0.292243, -0.414408, -0.231198, 0.231198, -0.799752, 0.747865, 0.282589, -0.282589, -1.21499, 5.61681e-08, 0.599588, 0.599588, -0.292243, 0.399641, -0.52882, 0.52882, 1.67046, -0.380276, 0.258872, -0.258872, 1.51199, 7.78669e-08, 0.373255, 0.373255, -0.292243, 0.366101, 0.268896, -0.268896, 1.46445, 0.237418, 0.127671, -0.0715461, -0.0353773, 6.39723e-09, 0.136345, 0.243302, -0.783223, 0.146352, -0.207113, 0.116065, 0.0253891, 0.504485, -0.0997336, 0.0997336, 0.156102, 7.72721e-08, 0.370404, 0.370404, -0.292243, -0.141045, -0.356725, 0.356725, 2.43711)
+
+[node name="devscene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dsh6d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.274026, 0.961722, 0, -0.961722, 0.274026, -1.82725, 3.37617, 7.62246)
+shadow_enabled = true
+
+[node name="MetaMultimeshInstance3D" type="MultiMeshInstance3D" parent="."]
+transform = Transform3D(1.00123, 0, 0, 0, 1.00123, 0, 0, 0, 1.00123, 0, 0, 0)
+multimesh = SubResource("MultiMesh_pp3l5")
+script = ExtResource("4_5sylg")
+go_explode = null
+shape_type = 0
+go_make_colliders = null
+
+[node name="suzys" type="Node3D" parent="."]
+transform = Transform3D(1.00123, 0, 0, 0, 1.00123, 0, 0, 0, 1.00123, 0, 0, -0.448201)
+visible = false
+
+[node name="suzy" type="MeshInstance3D" parent="suzys"]
+transform = Transform3D(0.326116, 0.293503, -0.293503, 7.78669e-08, 0.373255, 0.373255, 0.415075, -0.230599, 0.230599, 2.02544, -0.292243, -0.699095)
+mesh = ExtResource("1_vm6l6")
+skeleton = NodePath("../../MetaMultimeshInstance3D/instances")

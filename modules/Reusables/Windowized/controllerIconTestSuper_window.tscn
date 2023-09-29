@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfolgcpdgw5pv"]
+
+[ext_resource type="PackedScene" uid="uid://7b1wgxxvyt3h" path="res://modules/Reusables/Windowized/base_windowizer.tscn" id="1_hns1e"]
+[ext_resource type="Script" path="res://modules/Reusables/Windowized/controllerIconTestSuper_window.gd" id="2_bnvtl"]
+[ext_resource type="PackedScene" uid="uid://bje4pivnfhort" path="res://DummyTest/ControllerIconTestSuper.tscn" id="2_rc0v6"]
+
+[node name="ControllerIconsTestSuper_Window" instance=ExtResource("1_hns1e")]
+title = "ControllerIconTestSuper"
+script = ExtResource("2_bnvtl")
+
+[node name="TestSuper" parent="." index="0" instance=ExtResource("2_rc0v6")]

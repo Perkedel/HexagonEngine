@@ -20,6 +20,10 @@ func _manuallyHoldIt():
 	pass
 
 func _manuallyReleaseIt():
+	var toRelease = InputEventAction.new()
+	toRelease.action = path
+	toRelease.pressed = false
+	Input.parse_input_event(toRelease)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,4 +47,9 @@ func _input(event: InputEvent) -> void:
 
 func _on_pressed() -> void:
 	_manuallyPressit()
+	pass # Replace with function body.
+
+
+func _on_button_up() -> void:
+#	_manuallyReleaseIt()
 	pass # Replace with function body.

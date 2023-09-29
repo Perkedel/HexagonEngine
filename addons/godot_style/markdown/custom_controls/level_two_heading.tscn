@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://duelmncesj2vq"]
+
+[ext_resource type="PackedScene" uid="uid://v8x0xssikli0" path="res://addons/godot_style/markdown/custom_controls/heading_underline.tscn" id="1_bbvpm"]
+
+[node name="LevelTwoHeading" type="RichTextLabel"]
+offset_right = 352.0
+offset_bottom = 43.0
+size_flags_horizontal = 3
+focus_mode = 2
+theme_type_variation = &"RTLHeadingTwo"
+bbcode_enabled = true
+text = "testing"
+fit_content = true
+selection_enabled = true
+
+[node name="HeadingUnderline" parent="." instance=ExtResource("1_bbvpm")]
+layout_mode = 1

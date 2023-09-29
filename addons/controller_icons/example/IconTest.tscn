@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cyny8y6at7wro"]
 
 [ext_resource type="Script" path="res://addons/controller_icons/objects/TextureRect.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://puc614rf26im" path="res://addons/controller_icons/assets/key/arrow_left.png" id="1_e2idh"]
+[ext_resource type="Texture2D" uid="uid://7r70kxgen0mv" path="res://addons/controller_icons/assets/xbox360/dpad_left.png" id="1_pjxau"]
 [ext_resource type="Script" path="res://addons/controller_icons/objects/Button.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://d04bqc5v3befo" path="res://addons/controller_icons/assets/key/arrow_up.png" id="3_icam2"]
+[ext_resource type="Texture2D" uid="uid://bh66fibu352gl" path="res://addons/controller_icons/assets/xbox360/dpad_up.png" id="3_ckc1i"]
 [ext_resource type="Script" path="res://addons/controller_icons/objects/Sprite3D.gd" id="4"]
 [ext_resource type="Script" path="res://addons/controller_icons/objects/Sprite.gd" id="4_7uppx"]
-[ext_resource type="Texture2D" uid="uid://b0futjlk1m58j" path="res://addons/controller_icons/assets/key/arrow_right.png" id="5_v7fq7"]
-[ext_resource type="Texture2D" uid="uid://cge2w6yy0r2cx" path="res://addons/controller_icons/assets/key/arrow_down.png" id="7_dqnom"]
+[ext_resource type="Texture2D" uid="uid://bpcvr3c7jc8du" path="res://addons/controller_icons/assets/xbox360/dpad_right.png" id="5_tkbpu"]
+[ext_resource type="Texture2D" uid="uid://dt4m6u4nau82r" path="res://addons/controller_icons/assets/xbox360/dpad_down.png" id="7_sm0j0"]
 
 [node name="Test" type="Control"]
 layout_mode = 3
@@ -24,18 +24,18 @@ offset_top = 44.0
 offset_right = 469.0
 offset_bottom = 152.0
 text = "Move left"
-icon = ExtResource("1_e2idh")
+icon = ExtResource("1_pjxau")
 script = ExtResource("2")
 path = "ui_left"
 
 [node name="ControllerSprite" type="Sprite2D" parent="."]
 position = Vector2(359, 229)
-texture = ExtResource("3_icam2")
+texture = ExtResource("3_ckc1i")
 script = ExtResource("4_7uppx")
 path = "ui_up"
 
 [node name="ControllerSprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("5_v7fq7")
+texture = ExtResource("5_tkbpu")
 script = ExtResource("4")
 path = "ui_right"
 
@@ -46,7 +46,7 @@ offset_left = 675.0
 offset_top = 106.0
 offset_right = 775.0
 offset_bottom = 206.0
-texture = ExtResource("7_dqnom")
+texture = ExtResource("7_sm0j0")
 expand_mode = 1
 script = ExtResource("1")
 path = "ui_down"

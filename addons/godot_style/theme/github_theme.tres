@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MarkdownTheme" load_steps=3 format=3 uid="uid://doo1thg0lcsoy"]
+
+[ext_resource type="Theme" uid="uid://bnprm4dgmteqb" path="res://addons/godot_style/theme/github_controls_theme.tres" id="1_xehdf"]
+[ext_resource type="Script" path="res://addons/godot_style/theme/markdown_theme.gd" id="2_tyne8"]
+
+[resource]
+script = ExtResource("2_tyne8")
+name = "Github"
+color_inline_code = Color(1, 1, 1, 1)
+bgcolor_inline_code = Color(0.203922, 0.223529, 0.258824, 1)
+color_link = Color(0.172549, 0.466667, 0.890196, 1)
+controls_theme = ExtResource("1_xehdf")

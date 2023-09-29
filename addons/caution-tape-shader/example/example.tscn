@@ -1,0 +1,247 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdap650i2grmo"]
+
+[ext_resource type="Shader" uid="uid://c0on18f2mstre" path="res://addons/caution-tape-shader/WarningTapeShader.tres" id="1_1cjwg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jc8o4"]
+font_size = 30
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dekb0"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 0, 1)
+shader_parameter/LineAmount = 100
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(-0.01, 0)
+shader_parameter/Rotation = 45.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lcsf"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 0, 1)
+shader_parameter/LineAmount = 100
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(0.01, 0)
+shader_parameter/Rotation = 45.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d0g73"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 1, 1)
+shader_parameter/LineAmount = 100
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(0, 0)
+shader_parameter/Rotation = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3scyv"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 1, 1)
+shader_parameter/LineAmount = 100
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(0, 0)
+shader_parameter/Rotation = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d1apw"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 1, 1)
+shader_parameter/LineAmount = 100
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(0.01, 0)
+shader_parameter/Rotation = 45.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efipt"]
+shader = ExtResource("1_1cjwg")
+shader_parameter/Color = Color(1, 1, 1, 1)
+shader_parameter/LineAmount = 50
+shader_parameter/LineWidth = 1.0
+shader_parameter/UseScreenUV = true
+shader_parameter/AnimationDirection = Vector2(0, 0.01)
+shader_parameter/Rotation = 90.0
+
+[sub_resource type="Animation" id="Animation_p2lah"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationTape:material:shader_parameter/Rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GapWidthTape:material:shader_parameter/LineWidth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorTape:material:shader_parameter/Color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m0iuw"]
+resource_name = "example_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationTape:material:shader_parameter/Rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 360.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GapWidthTape:material:shader_parameter/LineWidth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [6.0, 0.2, 6.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorTape:material:shader_parameter/Color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 0.454902, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ld027"]
+_data = {
+"RESET": SubResource("Animation_p2lah"),
+"example_animation": SubResource("Animation_m0iuw")
+}
+
+[node name="example" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 75.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Caution Tape Example"
+label_settings = SubResource("LabelSettings_jc8o4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="LeftTape" type="ColorRect" parent="Header"]
+material = SubResource("ShaderMaterial_dekb0")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.3
+anchor_right = 0.325
+anchor_bottom = 0.7
+grow_vertical = 2
+
+[node name="RightTape" type="ColorRect" parent="Header"]
+material = SubResource("ShaderMaterial_2lcsf")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.675
+anchor_top = 0.3
+anchor_right = 0.99
+anchor_bottom = 0.7
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RotationTape" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_d0g73")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.0
+offset_top = -111.0
+offset_right = -401.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="GapWidthTape" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_3scyv")
+layout_mode = 0
+offset_left = 374.0
+offset_top = 213.0
+offset_right = 414.0
+offset_bottom = 253.0
+scale = Vector2(2, 2)
+
+[node name="ColorTape" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_d1apw")
+layout_mode = 0
+offset_left = 738.0
+offset_top = 213.0
+offset_right = 778.0
+offset_bottom = 253.0
+scale = Vector2(2, 2)
+
+[node name="SpeedDirectionTape" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_efipt")
+layout_mode = 0
+offset_left = 993.0
+offset_top = 213.0
+offset_right = 1033.0
+offset_bottom = 253.0
+scale = Vector2(2, 2)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ld027")
+}

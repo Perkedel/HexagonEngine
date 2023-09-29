@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://csk3t03olxaed"]
+
+[node name="PilisYet" type="Node3D"]
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
+size = Vector3(5, 5, 5)

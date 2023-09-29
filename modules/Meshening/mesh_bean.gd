@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var animP:=$AnimationPlayer
 @onready var mainMesh:=$PlaceBean
+@onready var explodos:=$Explodos
 @onready var tweene = get_tree().create_tween()
 var scaleWas = Vector3.ONE
 
@@ -27,8 +28,19 @@ func squish(byWha:Vector3,forHowLong:float=.25):
 	tweene = create_tween()
 #	var scaleWas:Vector3=mainMesh.scale
 #	mainMesh.scale_object_local(-byWha)
+	mainMesh.scale = scaleWas
 	mainMesh.scale -= byWha
 	tweene.tween_property(mainMesh,'scale',scaleWas,forHowLong)
+	pass
+
+func emitParticle(whichType:String='death'):
+	match(whichType):
+		'death':
+			explodos.restart()
+		'cure':
+			pass
+		_:
+			pass
 	pass
 
 signal animation_finished(anim_name:StringName)

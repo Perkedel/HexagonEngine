@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="SectionResource" load_steps=14 format=3 uid="uid://2hgekr2g82ej"]
+
+[ext_resource type="Script" path="res://addons/godot_style/item_resource.gd" id="1_nonqy"]
+[ext_resource type="Script" path="res://addons/godot_style/section_resource.gd" id="1_u4l1g"]
+
+[sub_resource type="Resource" id="Resource_ijsk4"]
+script = ExtResource("1_nonqy")
+name = "Naming conventions"
+content_title = "Common naming conventions"
+content_path = "res://addons/godot_style/items_md/style_guide/common_naming_conventions.md"
+
+[sub_resource type="Resource" id="Resource_p1dxv"]
+script = ExtResource("1_nonqy")
+name = "Code order"
+content_title = "Code order"
+content_path = "res://addons/godot_style/items_md/style_guide/code_order.md"
+
+[sub_resource type="Resource" id="Resource_fr6w7"]
+script = ExtResource("1_nonqy")
+name = "Class name"
+content_title = "Class name"
+content_path = "res://addons/godot_style/items_md/style_guide/class_name.md"
+
+[sub_resource type="Resource" id="Resource_mtn2w"]
+script = ExtResource("1_nonqy")
+name = "Signals"
+content_title = "Signals"
+content_path = "res://addons/godot_style/items_md/style_guide/signals.md"
+
+[sub_resource type="Resource" id="Resource_11c83"]
+script = ExtResource("1_nonqy")
+name = "Enums"
+content_title = "Enums"
+content_path = "res://addons/godot_style/items_md/style_guide/enums.md"
+
+[sub_resource type="Resource" id="Resource_xtfs7"]
+script = ExtResource("1_nonqy")
+name = "Constants"
+content_title = "Constants"
+content_path = "res://addons/godot_style/items_md/style_guide/constants.md"
+
+[sub_resource type="Resource" id="Resource_cpkmm"]
+script = ExtResource("1_nonqy")
+name = "Exported variables"
+content_title = "Exported variables"
+content_path = "res://addons/godot_style/items_md/style_guide/exported_variables.md"
+
+[sub_resource type="Resource" id="Resource_13cj8"]
+script = ExtResource("1_nonqy")
+name = "Public variables and functions"
+content_title = "Public variables and functions"
+content_path = "res://addons/godot_style/items_md/style_guide/public_variables_and_functions.md"
+
+[sub_resource type="Resource" id="Resource_2fukw"]
+script = ExtResource("1_nonqy")
+name = "Private variables and functions"
+content_title = "Private variables and functions"
+content_path = "res://addons/godot_style/items_md/style_guide/private_variables_and_functions.md"
+
+[sub_resource type="Resource" id="Resource_b3dxk"]
+script = ExtResource("1_nonqy")
+name = "Onready variables"
+content_title = "Onready variables"
+content_path = "res://addons/godot_style/items_md/style_guide/onready_variables.md"
+
+[sub_resource type="Resource" id="Resource_4vd6h"]
+script = ExtResource("1_nonqy")
+name = "All"
+content_title = "All"
+content_path = "res://addons/godot_style/items_md/style_guide/STYLE_GUIDE.md"
+
+[resource]
+script = ExtResource("1_u4l1g")
+name = "Style Guide"
+items = Array[ExtResource("1_nonqy")]([SubResource("Resource_ijsk4"), SubResource("Resource_p1dxv"), SubResource("Resource_fr6w7"), SubResource("Resource_mtn2w"), SubResource("Resource_11c83"), SubResource("Resource_xtfs7"), SubResource("Resource_cpkmm"), SubResource("Resource_13cj8"), SubResource("Resource_2fukw"), SubResource("Resource_b3dxk"), SubResource("Resource_4vd6h")])

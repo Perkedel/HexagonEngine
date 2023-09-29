@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://huvxbvna37m1"]
+
+[ext_resource type="Script" path="res://addons/godot_style/section_ui.gd" id="1_4qjh8"]
+
+[node name="SectionUI" type="VBoxContainer"]
+offset_right = 158.0
+offset_bottom = 271.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_4qjh8")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"LabelSectionName"
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+hide_root = true
+scroll_horizontal_enabled = false
+scroll_vertical_enabled = false

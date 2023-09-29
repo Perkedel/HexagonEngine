@@ -1,0 +1,205 @@
+[gd_scene load_steps=16 format=3 uid="uid://c55mpmb6gn0lj"]
+
+[ext_resource type="Script" path="res://addons/godot_style/main.gd" id="1_2nxv4"]
+[ext_resource type="Theme" uid="uid://bnprm4dgmteqb" path="res://addons/godot_style/theme/github_controls_theme.tres" id="1_f81d1"]
+[ext_resource type="Resource" uid="uid://2hgekr2g82ej" path="res://addons/godot_style/sections/style_guide.tres" id="3_7knle"]
+[ext_resource type="Resource" uid="uid://bh8yjhfgb8tpj" path="res://addons/godot_style/sections/good_practices.tres" id="4_po8yr"]
+[ext_resource type="Resource" uid="uid://c7b7qxel3x0ar" path="res://addons/godot_style/sections/others.tres" id="5_c0n0x"]
+[ext_resource type="Resource" uid="uid://doo1thg0lcsoy" path="res://addons/godot_style/theme/github_theme.tres" id="6_0isxh"]
+[ext_resource type="FontFile" uid="uid://bb1rygdt0mbne" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-Regular.ttf" id="7_edek1"]
+[ext_resource type="Resource" uid="uid://008bicq434au" path="res://addons/godot_style/theme/vscode_theme.tres" id="7_oq1og"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_baw0s"]
+font_size = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7bxw"]
+bg_color = Color(0.211765, 0.239216, 0.290196, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqrcm"]
+bg_color = Color(0.145098, 0.168627, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ux21y"]
+bg_color = Color(0.298039, 0.321569, 0.368627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ij2u"]
+bg_color = Color(0.145098, 0.168627, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kftjt"]
+bg_color = Color(0.298039, 0.321569, 0.368627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6ge7"]
+bg_color = Color(0.145098, 0.168627, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_f81d1")
+script = ExtResource("1_2nxv4")
+sections = Array[Resource("res://addons/godot_style/section_resource.gd")]([ExtResource("3_7knle"), ExtResource("4_po8yr"), ExtResource("5_c0n0x")])
+markdown_themes = Array[Resource("res://addons/godot_style/theme/markdown_theme.gd")]([ExtResource("6_0isxh"), ExtResource("7_oq1og")])
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="NavigationTrees" type="ScrollContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SectionsContainer" type="VBoxContainer" parent="HBoxContainer/NavigationTrees"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ItemContent" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="ItemName" type="Label" parent="HBoxContainer/ItemContent"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Common naming conventions"
+label_settings = SubResource("LabelSettings_baw0s")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+uppercase = true
+
+[node name="Underline" type="ColorRect" parent="HBoxContainer/ItemContent/ItemName"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Control" type="Control" parent="HBoxContainer/ItemContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/ItemContent/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contents" type="MarginContainer" parent="HBoxContainer/ItemContent/Control/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 1
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+
+[node name="ThemePopup" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ThemeButton" type="OptionButton" parent="ThemePopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.921569, 0.921569, 0.921569, 1)
+theme_override_colors/font_hover_color = Color(0.435294, 0.717647, 0.964706, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.921569, 0.921569, 0.921569, 1)
+theme_override_colors/font_focus_color = Color(0.435294, 0.717647, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(0.435294, 0.717647, 0.964706, 1)
+theme_override_fonts/font = ExtResource("7_edek1")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_h7bxw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqrcm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ux21y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1ij2u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wqrcm")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_kftjt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_i6ge7")
+item_count = 2
+selected = 0
+allow_reselect = true
+popup/item_0/text = "  Github  "
+popup/item_0/id = 0
+popup/item_1/text = "  VSCode  "
+popup/item_1/id = 1
+
+[connection signal="item_selected" from="ThemePopup/ThemeButton" to="." method="_on_ThemeButton_item_selected"]

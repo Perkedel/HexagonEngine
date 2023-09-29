@@ -1,0 +1,8 @@
+[gd_resource type="SphereMesh" load_steps=2 format=3 uid="uid://b7e7yu46ja2py"]
+
+[ext_resource type="Material" uid="uid://bkfi8lcfwhuig" path="res://modules/ShadeMaterials/mesh_bean_particle_material.tres" id="1_1obk5"]
+
+[resource]
+material = ExtResource("1_1obk5")
+radius = 0.1
+height = 0.2

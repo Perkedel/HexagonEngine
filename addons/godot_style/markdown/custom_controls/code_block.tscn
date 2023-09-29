@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ccymyrv65760h"]
+
+[node name="CodeBlock" type="TextEdit"]
+offset_right = 591.0
+offset_bottom = 133.0
+size_flags_horizontal = 3
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+scroll_v_scroll_speed = 1.0
+scroll_fit_content_height = true

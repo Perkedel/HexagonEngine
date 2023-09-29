@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi2ot2d644ixf"]
+
+[ext_resource type="PackedScene" uid="uid://bap5x6kis6j2a" path="res://addons/simplelicense/GUI/LicenseGUI.tscn" id="1_iadqj"]
+[ext_resource type="PackedScene" uid="uid://7b1wgxxvyt3h" path="res://modules/Reusables/Windowized/base_windowizer.tscn" id="1_mw1vi"]
+[ext_resource type="Script" path="res://modules/Reusables/Windowized/license_window.gd" id="2_bfbcf"]
+
+[node name="LicenseWindow" instance=ExtResource("1_mw1vi")]
+title = "Licenses"
+script = ExtResource("2_bfbcf")
+
+[node name="LicenseGUI" parent="." index="0" instance=ExtResource("1_iadqj")]

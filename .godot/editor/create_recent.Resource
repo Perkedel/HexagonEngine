@@ -1,2 +1,3 @@
+SfxrAudioStream
 AudioStreamRandomizer
 Theme

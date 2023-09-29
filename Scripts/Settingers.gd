@@ -149,7 +149,7 @@ func ApplySetting():
 	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (_SettingData.DisplaySetting.FullScreen) else Window.MODE_WINDOWED
 	
 	# vsync crashes 
-	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX if (_SettingData.DisplaySetting.Vsync) else DisplayServer.VSYNC_DISABLED)
+#	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX if (_SettingData.DisplaySetting.Vsync) else DisplayServer.VSYNC_DISABLED)
 	# Change to Mailbox to fix it for now. Do not use ENABLED!!! NEVER!!!
 	pass
 

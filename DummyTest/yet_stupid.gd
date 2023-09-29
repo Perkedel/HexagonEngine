@@ -8,6 +8,7 @@ enum InteractPerspectiveMode{Direct,Broad}
 @export_group('Properties')
 @export var HP:float = 100
 @export var SPEED:float = 250.0
+@export var SPEED_EXTRA:float = 250.0
 @export var JUMP_VELOCITY:float = 4.5
 @export var enforceMaxHP:bool = true
 @export var onDeath:OnDeathMode = OnDeathMode.RespawnNow
@@ -16,6 +17,7 @@ enum InteractPerspectiveMode{Direct,Broad}
 var currentHP:float = HP
 var currentSpeed:float = SPEED
 var currentJumpVelocity:float = 4.5
+var isSprinting:bool = false
 
 # use Kenney's digital audios
 # & qubodup's wood collission
@@ -25,6 +27,7 @@ var currentJumpVelocity:float = 4.5
 #@export var jumpSound:AudioStream = preload("res://addons/kenney digital audio/phase_jump_1.ogg")
 @export var landedSound:AudioStream = preload('res://Audio/EfekSuara/WoodCollision-01.wav')
 @export var hurtSound:AudioStream = preload("res://Audio/EfekSuara/341243__sharesynth__hurt02.wav")
+@export var cureSound:AudioStream = preload('res://modules/Reusables/AudioRandomizer/cure_SoundRandom.tres')
 @export var jumpSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/jump_SoundRandom.tres")
 @export var landedSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/landed_SoundRandom.tres")
 @export var hurtSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/hurt_SoundRandom.tres")
@@ -65,6 +68,7 @@ var coyoteTimer:float = .5
 @export var moveRightKey:String = 'Jalan_Kanan'
 @export var moveBackKey:String = 'Jalan_Belakang'
 @export var moveFrontKey:String = 'Jalan_Depan'
+@export var sprintHoldKey:String = 'Jalan_Tambah_Cepat'
 @export var jumpKey:String = 'Melompat'
 
 @export_group('Controller')
@@ -123,6 +127,7 @@ func _death():
 		playAnimation('death')
 		vibrateo(1,1,2)
 		_centerSound(deathSoundRandom)
+		emitParticleForm()
 		onDeathTimer.start(onDeathActsIn)
 		alive = false
 	pass
@@ -155,6 +160,7 @@ func damage(howMuch:float):
 		_centerSound(hurtSoundRandom)
 		vibrateo(1,1,.25)
 		squishForm(Vector3.RIGHT/2)
+		
 	pass
 
 func heal(howMuch:float):
@@ -163,6 +169,8 @@ func heal(howMuch:float):
 		if currentHP > HP:
 			# max HP only
 			currentHP = HP
+	squishForm(Vector3.DOWN/4)
+	_centerSound(cureSound)
 	pass
 
 func pushJump():
@@ -325,6 +333,13 @@ func squishForm(byWha:Vector3,forHowLong:float=.25):
 		pass
 	pass
 
+func emitParticleForm():
+	for i in formsList:
+		if i.visible:
+			if i.has_method('emitParticle'):
+				i.call('emitParticle')
+	pass
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -394,16 +409,18 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir :Vector2= Input.get_vector(moveLeftKey, moveRightKey, moveFrontKey, moveBackKey)
-	if ownActive:
+	if ownActive and alive:
+#		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).limit_length()
 #		direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 #		direction = (transform.basis * inputer).limit_length()
+#		direction = (transform.basis * inputer)
 		pass
 	else:
 		direction = Vector3.ZERO
 		pass
 	if direction:
-		velocity.x = direction.x * currentSpeed * delta
-		velocity.z = direction.z * currentSpeed * delta
+		velocity.x = direction.x * (currentSpeed + (SPEED_EXTRA if isSprinting else 0)) * delta
+		velocity.z = direction.z * (currentSpeed + (SPEED_EXTRA if isSprinting else 0)) * delta
 	else:
 		velocity.x = move_toward(velocity.x, 0, currentSpeed)
 		velocity.z = move_toward(velocity.z, 0, currentSpeed)
@@ -423,6 +440,7 @@ func _physics_process(delta: float) -> void:
 	if alive:
 		pass
 	else:
+		isSprinting = false
 		inputer = Vector3.ZERO
 		moveAxes = [0,0,0,0]
 #		direction = lerp(direction,Vector3.ZERO,1)
@@ -445,10 +463,13 @@ func _physics_process(delta: float) -> void:
 #			pass
 #	pass
 
-func _unhandled_input(event: InputEvent) -> void:
-	inputer = Vector3.ZERO 
+func _input(event: InputEvent) -> void:
+	
 	if ((event.device != expectedPlayer) and onePlayerOnly):
 		return
+	else:
+		inputer = Vector3.ZERO 
+		pass
 #	var input_dir :Vector2= Input.get_vector(moveLeftKey, moveRightKey, moveFrontKey, moveBackKey)
 #	print('eeeeeeeeeeeeeeee')
 #	direction = (transform.basis * Vector3(1, 0, 1)).normalized()
@@ -471,12 +492,20 @@ func _unhandled_input(event: InputEvent) -> void:
 			pass
 		if event.is_action_pressed('Valve_Interaksi_alt'):
 			interactNow()
+#		isSprinting = event.is_action(sprintHoldKey)
+		if event.is_action(sprintHoldKey):
+			isSprinting = true
+			pass
+		else:
+			isSprinting = false
 		inputer.x = -moveAxes[1]+moveAxes[0]
 		inputer.z = moveAxes[2]-moveAxes[3]
 #		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO)
 		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).limit_length()
 #		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).normalized()
 	else:
+		isSprinting = false
+		inputer = Vector3.ZERO 
 		moveAxes = [0,0,0,0]
 	
 #	direction = (transform.basis * Vector3(-moveAxes[0]+moveAxes[1], 0, -moveAxes[2]+moveAxes[3]))

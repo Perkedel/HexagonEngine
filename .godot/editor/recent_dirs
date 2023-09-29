@@ -1,10 +1,13 @@
-res://modules/Reusables/parts
-W:/starring codes/Godot Projects/HexagonEngine/licenses
-res://addons/controller_icons/objects
 res://DummyTest
-res://modules/ShadeMaterials
-res://modules/Reusables/AudioRandomizer
+res://modules/Reusables/GDSfxr
 res://modules/Meshening
+res://modules/ShadeMaterials
+res://modules/Reusables/parts
+res://modules/Reusables/Windowized
+res://addons/controller_icons/objects
+res://addons/controller_icons/example
+W:/starring codes/Godot Projects/HexagonEngine/licenses
+res://modules/Reusables/AudioRandomizer
 res://GameDVDCardtridge/Overseer
 res://GameDVDCardtridge/HexagonEngine-v3
 res://
@@ -17,6 +20,3 @@ res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements/BottomNavigati
 res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/UIelements
 res://GameDVDCardtridge/HexagonEngine-v3/SpareParts/UI/MainUINodes/Scaffolds
 res://Sprites
-res://modules/Reusables
-res://Scripts
-res://modules/Reusables/Shortcuts

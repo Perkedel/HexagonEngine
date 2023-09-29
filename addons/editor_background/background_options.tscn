@@ -1,0 +1,175 @@
+[gd_scene load_steps=2 format=3 uid="uid://qid6deviuiwp"]
+
+[ext_resource type="Script" path="res://addons/editor_background/background_options.gd" id="1_ydrol"]
+
+[node name="background_options" type="Window"]
+title = "Background Options"
+initial_position = 2
+size = Vector2i(560, 480)
+min_size = Vector2i(560, 480)
+script = ExtResource("1_ydrol")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background_path" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Background Path:"
+
+[node name="set_background" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Set Background"
+
+[node name="background_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Background Folder: "
+
+[node name="set_background_folder" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Set Background Folder"
+
+[node name="random_enabled" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Random backgrounds will be taken from the folder you set from Set Background Folder."
+text = "Random Enabled"
+
+[node name="randomize" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Randomize"
+
+[node name="random_time_change_enabled" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Random backgrounds will be taken from the folder you set from Set Background Folder."
+text = "Random Time Change Enabled"
+
+[node name="random_time_change_interval_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/random_time_change_interval_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Random Time Change Interval"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/random_time_change_interval_option"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+value = 0.5
+allow_greater = true
+allow_lesser = true
+suffix = "seconds"
+
+[node name="background_z_index_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/background_z_index_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Background Z Index"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/background_z_index_option"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+
+[node name="background_transparency_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/background_transparency_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Background Transparency"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/background_transparency_option"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="editor_transparency_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/editor_transparency_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Editor Transparency"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/editor_transparency_option"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="background_stretch_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/background_stretch_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Stretch"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/background_stretch_option"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 7
+selected = 0
+popup/item_0/text = "Scale"
+popup/item_0/id = 0
+popup/item_1/text = "Tile"
+popup/item_1/id = 1
+popup/item_2/text = "Keep"
+popup/item_2/id = 2
+popup/item_3/text = "Keep Centered"
+popup/item_3/id = 3
+popup/item_4/text = "Keep Aspect"
+popup/item_4/id = 4
+popup/item_5/text = "Keep Aspect Centered"
+popup/item_5/id = 5
+popup/item_6/text = "Keep Aspect Covered"
+popup/item_6/id = 6
+
+[node name="background_filter_option" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/background_filter_option"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Filter"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/background_filter_option"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 6
+selected = 0
+popup/item_0/text = "Nearest"
+popup/item_0/id = 0
+popup/item_1/text = "Linear"
+popup/item_1/id = 1
+popup/item_2/text = "Nearest Mipmap"
+popup/item_2/id = 2
+popup/item_3/text = "Linear Mipmap"
+popup/item_3/id = 3
+popup/item_4/text = "Nearest Mipmap Anisotropic"
+popup/item_4/id = 4
+popup/item_5/text = "Linear Mipmap Anisotropic"
+popup/item_5/id = 5
+
+[node name="about" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Editor background addon made by Nukiloco!"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="SectionResource" load_steps=7 format=3 uid="uid://bh8yjhfgb8tpj"]
+
+[ext_resource type="Script" path="res://addons/godot_style/section_resource.gd" id="1_lvt60"]
+[ext_resource type="Script" path="res://addons/godot_style/item_resource.gd" id="1_q32sb"]
+
+[sub_resource type="Resource" id="Resource_4jmvx"]
+script = ExtResource("1_q32sb")
+name = "Booleans"
+content_title = "Booleans"
+content_path = "res://addons/godot_style/items_md/good_practices/booleans.md"
+
+[sub_resource type="Resource" id="Resource_no7yp"]
+script = ExtResource("1_q32sb")
+name = "Signal callbacks"
+content_title = "Signal callbacks"
+content_path = "res://addons/godot_style/items_md/good_practices/signal_callbacks.md"
+
+[sub_resource type="Resource" id="Resource_36lrg"]
+script = ExtResource("1_q32sb")
+name = "Multiline statements"
+content_title = "Format multiline statements for readability"
+content_path = "res://addons/godot_style/items_md/good_practices/multiline_statements.md"
+
+[sub_resource type="Resource" id="Resource_0va8a"]
+script = ExtResource("1_q32sb")
+name = "File name"
+content_title = "File name"
+content_path = "res://addons/godot_style/items_md/good_practices/file_name.md"
+
+[resource]
+script = ExtResource("1_lvt60")
+name = "Good Practices"
+items = Array[ExtResource("1_q32sb")]([SubResource("Resource_4jmvx"), SubResource("Resource_no7yp"), SubResource("Resource_36lrg"), SubResource("Resource_0va8a")])

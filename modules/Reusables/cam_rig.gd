@@ -84,14 +84,16 @@ func handle_input(delta):
 	var input := Vector3.ZERO
 	
 	if ownActive:
-		input.y = Input.get_axis(cameraLeftKey, cameraRightKey)
-		input.x = Input.get_axis(cameraUpKey, cameraDownKey)
+#		input.y = Input.get_axis(cameraLeftKey, cameraRightKey)
+#		input.x = Input.get_axis(cameraUpKey, cameraDownKey)
 #		input.x += 1 * delta
 	#	camera_rotation += input.limit_length(1.0) * rotation_speed * delta
 		camera_rotation += inputer.limit_length(1.0) * rotation_speed * delta
+#		print('Inputer ' + String.num(inputer.x) + ' ' + String.num(inputer.y) + ' ' + String.num(inputer.z) + ' ')
 		pass
 	
 	camera_rotation.x = clamp(camera_rotation.x, -80, -10)
+	
 	
 	# Zooming
 	if ownActive:
@@ -119,11 +121,14 @@ func _toggleMouseCapture():
 			pass
 	pass
 
-func _unhandled_input(event: InputEvent) -> void:
-	inputer = Vector3.ZERO
-	zoomer = 0
+func _input(event: InputEvent) -> void:
+	
 	if ((event.device != expectedPlayer) and onePlayerOnly):
 		return
+	else:
+		inputer = Vector3.ZERO
+		zoomer = 0
+		pass
 		
 	if ownActive:
 		if event.is_action(cameraLeftKey):
@@ -148,7 +153,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			_toggleMouseCapture()
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			if event is InputEventMouseMotion:
-				camera_rotation += Vector3(-event.relative.y*mouse_sensitive,-event.relative.x * mouse_sensitive,0).limit_length()
+#				camera_rotation += Vector3(-event.relative.y*mouse_sensitive,-event.relative.x * mouse_sensitive,0).limit_length()
+				camera_rotation += Vector3(-event.relative.y*mouse_sensitive,-event.relative.x * mouse_sensitive,0)
+				
 				pass
 			if event.is_action(cameraZoomInKey+'.mouse'):
 				zoomAxes[0] = event.get_action_strength(cameraZoomInKey)
@@ -162,8 +169,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		zoomer = zoomAxes[1]-zoomAxes[0]
 		pass
 	else:
+		inputer = Vector3.ZERO
+		zoomer = 0
 		moveAxes = [0,0,0,0]
 		pass
 	
+#	print('Camera ' + String.num(inputer.x) + ' ' + String.num(inputer.y) + ' / Zoom ' + String.num(zoomer) + '')
 #	camera_rotation += inputer.limit_length() * rotation_speed
 	pass

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="SectionResource" load_steps=8 format=3 uid="uid://c7b7qxel3x0ar"]
+
+[ext_resource type="Script" path="res://addons/godot_style/section_resource.gd" id="1_44y3e"]
+[ext_resource type="Script" path="res://addons/godot_style/item_resource.gd" id="1_iw74d"]
+
+[sub_resource type="Resource" id="Resource_kdrw6"]
+script = ExtResource("1_iw74d")
+name = "Adding your own"
+content_title = "Adding your own"
+content_path = "res://addons/godot_style/items_md/others/ADDING_YOUR_OWN.md"
+
+[sub_resource type="Resource" id="Resource_dmm8f"]
+script = ExtResource("1_iw74d")
+name = "Addon's shortcuts"
+content_title = "Addon's shortcuts"
+content_path = "res://addons/godot_style/items_md/others/addon_shortcuts.md"
+
+[sub_resource type="Resource" id="Resource_jpflj"]
+script = ExtResource("1_iw74d")
+name = "Addon's theme"
+content_title = "Addon's theme"
+content_path = "res://addons/godot_style/items_md/others/addon_theme.md"
+
+[sub_resource type="Resource" id="Resource_hcsuu"]
+script = ExtResource("1_iw74d")
+name = "Markdown implementation"
+content_title = ""
+content_path = "res://addons/godot_style/items_md/others/markdown_implementation.md"
+
+[sub_resource type="Resource" id="Resource_cg2df"]
+script = ExtResource("1_iw74d")
+name = "Issues"
+content_title = "Issues"
+content_path = "res://addons/godot_style/items_md/others/issues.md"
+
+[resource]
+script = ExtResource("1_44y3e")
+name = "Others"
+items = Array[ExtResource("1_iw74d")]([SubResource("Resource_kdrw6"), SubResource("Resource_dmm8f"), SubResource("Resource_jpflj"), SubResource("Resource_hcsuu"), SubResource("Resource_cg2df")])

@@ -1,0 +1,8 @@
+[gd_resource type="RibbonTrailMesh" load_steps=2 format=3 uid="uid://b3mor7jdobxwr"]
+
+[ext_resource type="Material" uid="uid://dawue0h8udwrb" path="res://modules/ShadeMaterials/mesh_bean_Explodos_TrailMaterial.tres" id="1_nhlgi"]
+
+[resource]
+material = ExtResource("1_nhlgi")
+size = 0.2
+section_segments = 5

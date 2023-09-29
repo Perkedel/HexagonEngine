@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bh66fibu352gl" path="res://addons/controller_icons/assets/xbox360/dpad_up.png" id="16_8pfh4"]
 [ext_resource type="Texture2D" uid="uid://dt4m6u4nau82r" path="res://addons/controller_icons/assets/xbox360/dpad_down.png" id="17_2wsg3"]
 [ext_resource type="Texture2D" uid="uid://7r70kxgen0mv" path="res://addons/controller_icons/assets/xbox360/dpad_left.png" id="18_s5fk2"]
-[ext_resource type="Texture2D" uid="uid://7qkn2dva6jv" path="res://addons/controller_icons/assets/xbox360/dpad_right.png" id="19_3qb24"]
+[ext_resource type="Texture2D" uid="uid://bpcvr3c7jc8du" path="res://addons/controller_icons/assets/xbox360/dpad_right.png" id="19_3qb24"]
 [ext_resource type="Texture2D" uid="uid://fxgoiilpipsd" path="res://addons/controller_icons/assets/xbox360/l_stick.png" id="20_yio6b"]
 [ext_resource type="Texture2D" uid="uid://d6jwqg6mq8dk" path="res://addons/controller_icons/assets/xbox360/r_stick.png" id="21_wowfx"]
 

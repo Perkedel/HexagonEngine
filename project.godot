@@ -80,6 +80,23 @@ AutoKadeTimingStruct="res://Scripts/AutoKadeTimingStruct.gd"
 DauMainLooper="res://Scripts/DauMainLooper.gd"
 ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 PromptManager="*res://addons/input_prompts/input_prompt_manager.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+InputHelper="*res://addons/input_helper/input_helper.gd"
+MaterialIconsDB="*res://addons/material-design-icons/icons/icons.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
+EmojisDB="*res://addons/emojis-for-godot/emojis/emojis.gd"
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+SceneManager="*res://addons/jam_essentials/scenes/SceneManager.tscn"
+GlobalCamera="*res://addons/jam_essentials/scenes/GlobalCamera.tscn"
+SoundController="*res://addons/jam_essentials/scenes/SoundController.tscn"
+Globals="*res://addons/jam_essentials/scenes/Globals.tscn"
+TurnManager="*res://addons/godot_gameplay_systems/turn_based/autoloads/turn_manager.gd"
+GDShell="*res://addons/gdshell/scripts/gdshell_main.gd"
+DateChecker="*res://addons/date_checker/date_checker.gd"
+BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
+RigidBodyAutoScaler="*res://addons/rigidbody_auto_scaler/RigidBodyAutoScaler.gd"
+Validation="*res://addons/godot-form-validator/validation.gd"
+RuakeLayer="*res://addons/ruake/core/RuakeLayer.tscn"
 
 [compression]
 
@@ -115,7 +132,7 @@ search_in_file_extensions=PackedStringArray("gd", "gdshader", "shader", "json")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ControllerInputViewer/plugin.cfg", "res://addons/GameGUI/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/inspector_extender/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/simplelicense/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/ActionIcon/plugin.cfg", "res://addons/ColorPreview/plugin.cfg", "res://addons/ControllerInputViewer/plugin.cfg", "res://addons/CursorShapePreviewer/plugin.cfg", "res://addons/GDScriptMacros/plugin.cfg", "res://addons/GameGUI/plugin.cfg", "res://addons/Godot-MToon-Shader/plugin.cfg", "res://addons/HTTPManager/plugin.cfg", "res://addons/HexagonDisplay2D/plugin.cfg", "res://addons/MetaMultimeshInstance3D/plugin.cfg", "res://addons/Mirror/plugin.cfg", "res://addons/PerfBullets/plugin.cfg", "res://addons/QuickPluginManager/plugin.cfg", "res://addons/ReorderableContainer/plugin.cfg", "res://addons/SliderLabel/plugin.cfg", "res://addons/array_modifier/plugin.cfg", "res://addons/better-terrain/plugin.cfg", "res://addons/betterrandnumgen/plugin.cfg", "res://addons/caution-tape-shader/plugin.cfg", "res://addons/character-controller/plugin.cfg", "res://addons/coi_serviceworker/plugin.cfg", "res://addons/collapsible_container/plugin.cfg", "res://addons/complex/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/criss-cross/plugin.cfg", "res://addons/csg_mesher/plugin.cfg", "res://addons/date_checker/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/editor_background/plugin.cfg", "res://addons/editor_icon_previewer/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/extra_export_hints/plugin.cfg", "res://addons/filtered_edits/plugin.cfg", "res://addons/find-everywhere/plugin.cfg", "res://addons/fontawesome/plugin.cfg", "res://addons/gdDelaunay/plugin.cfg", "res://addons/gdsam/plugin.cfg", "res://addons/gdshell/plugin.cfg", "res://addons/godot-flexbox/plugin.cfg", "res://addons/godot-form-validator/plugin.cfg", "res://addons/godot-xr-tools/plugin.cfg", "res://addons/godot_gameplay_systems/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/godot_style/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/input_prompts/plugin.cfg", "res://addons/inspector_extender/plugin.cfg", "res://addons/interpolated_camera_3d/plugin.cfg", "res://addons/inventory-system/plugin.cfg", "res://addons/jam_essentials/plugin.cfg", "res://addons/joystick_control/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/math_extensions/plugin.cfg", "res://addons/midi/plugin.cfg", "res://addons/native_dialogs/plugin.cfg", "res://addons/nklbdev.importality/plugin.cfg", "res://addons/perkedeltestmakeplugin/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/qr_code/plugin.cfg", "res://addons/random_audio_player/plugin.cfg", "res://addons/random_timer/plugin.cfg", "res://addons/rigidbody_auto_scaler/plugin.cfg", "res://addons/ruake/plugin.cfg", "res://addons/safe_area_rect/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/segmented_bar/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/simple_resource_icons/plugin.cfg", "res://addons/simplelicense/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/third-person-camera/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg", "res://addons/ui_design_tool/plugin.cfg", "res://addons/undoredo/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg", "res://addons/vrm/plugin.cfg", "res://addons/widgets/plugin.cfg", "res://addons/xr-controller-midi-player/plugin.cfg", "res://addons/zylann.atmosphere/tools/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
 [filesystem]
 
@@ -671,6 +688,17 @@ Kamera_Perkecil.mouse={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(347, 10),"global_position":Vector2(351, 48),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+gdshell_toggle_ui={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":96,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+Jalan_Tambah_Cepat={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":10,"pressure":0.0,"pressed":false,"script":null)
+]
+}
 
 [input_devices]
 
@@ -694,6 +722,12 @@ limits/message_queue/max_size_kb=8120
 
 [physics]
 
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
+common/physics_ticks_per_second=90
+common/max_physics_steps_per_frame=16
+common/physics_jitter_fix=0.0
+2d/physics_engine="Box2D"
 3d/physics_engine="JoltPhysics3D"
 2d/run_on_thread=2
 jolt_3d/collisions/areas_detect_static_bodies=true
@@ -717,4 +751,6 @@ enable_json_format=true
 
 [xr]
 
+openxr/enabled=true
+openxr/startup_alert=false
 shaders/enabled=true

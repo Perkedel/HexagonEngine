@@ -1,0 +1,192 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwrcrubva0o6q"]
+
+[ext_resource type="Script" path="res://addons/betterrandnumgen/emitter_Button.gd" id="1_umi8b"]
+
+[sub_resource type="Theme" id="Theme_lptk6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47qi4"]
+
+[node name="Control" type="Control"]
+editor_description = "The Best Random Name Generator"
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "The Best Random Name Generator"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 35.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Button_Create" type="Button" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = SubResource("Theme_lptk6")
+theme_override_colors/font_color = Color(0.580392, 0.105882, 0.172549, 1)
+theme_override_colors/font_focus_color = Color(0.611765, 0.0117647, 0.203922, 1)
+theme_override_colors/icon_normal_color = Color(0.929412, 0.980392, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.658824, 0.858824, 0.886275, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_47qi4")
+text = "Use BetterRandNumGen to generate some numbers!"
+script = ExtResource("1_umi8b")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "randi ()"
+
+[node name="Button_cpy_1" type="Button" parent="GridContainer/VBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "random integer:"
+
+[node name="LineEdit_item_1" type="LineEdit" parent="GridContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GridContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer3/HBoxContainer3"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "randf ()"
+
+[node name="Button_cpy_2" type="Button" parent="GridContainer/VBoxContainer3/HBoxContainer3"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Random float:"
+
+[node name="LineEdit_item_2" type="LineEdit" parent="GridContainer/VBoxContainer3/HBoxContainer3"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="GridContainer/VBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer4/HBoxContainer4"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Button_cpy_3" type="Button" parent="GridContainer/VBoxContainer4/HBoxContainer4"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = " "
+
+[node name="LineEdit_item_3" type="LineEdit" parent="GridContainer/VBoxContainer4/HBoxContainer4"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="GridContainer/VBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer5/HBoxContainer5"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Button_cpy_4" type="Button" parent="GridContainer/VBoxContainer5/HBoxContainer5"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = " "
+
+[node name="LineEdit_item_4" type="LineEdit" parent="GridContainer/VBoxContainer5/HBoxContainer5"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="GridContainer/VBoxContainer6"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer6/HBoxContainer6"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Button_cpy_5" type="Button" parent="GridContainer/VBoxContainer6/HBoxContainer6"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = " "
+
+[node name="LineEdit_item_5" type="LineEdit" parent="GridContainer/VBoxContainer6/HBoxContainer6"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="GridContainer/VBoxContainer7"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer7/HBoxContainer7"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Button_cpy_6" type="Button" parent="GridContainer/VBoxContainer7/HBoxContainer7"]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = " "
+
+[node name="LineEdit_item_6" type="LineEdit" parent="GridContainer/VBoxContainer7/HBoxContainer7"]
+unique_name_in_owner = true
+editor_description = "settted this descrrrrr"
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_Create" to="GridContainer/VBoxContainer/Button_Create" method="_on_pressed_CreateNum"]

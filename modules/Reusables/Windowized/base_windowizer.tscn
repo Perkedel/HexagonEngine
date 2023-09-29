@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7b1wgxxvyt3h"]
+
+[ext_resource type="Script" path="res://modules/Reusables/Windowized/base_windowizer.gd" id="1_ct2bj"]
+
+[node name="BaseWindowizer" type="Window"]
+title = "Windowizer"
+initial_position = 1
+size = Vector2i(1280, 720)
+popup_window = true
+min_size = Vector2i(600, 400)
+script = ExtResource("1_ct2bj")

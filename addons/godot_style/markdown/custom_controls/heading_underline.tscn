@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://v8x0xssikli0"]
+
+[node name="HeadingUnderline" type="ColorRect"]
+custom_minimum_size = Vector2(0, 2)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.129412, 0.14902, 0.176471, 1)

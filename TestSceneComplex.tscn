@@ -1,0 +1,254 @@
+[gd_scene load_steps=4 format=3 uid="uid://vsg167j0557c"]
+
+[sub_resource type="GDScript" id="1"]
+script/source = "extends VSplitContainer
+
+func get_number():
+	var re = float($Number/RealPart.text)
+	var im = float($Number/ImagPart.text)
+	return Complex.new(re, im)
+"
+
+[sub_resource type="GDScript" id="2"]
+script/source = "extends VSplitContainer
+
+func get_number():
+	var re = float($Number/RealPart.text)
+	var im = float($Number/ImagPart.text)
+	return Complex.new(re, im)
+"
+
+[sub_resource type="GDScript" id="4"]
+script/source = "extends VBoxContainer
+
+func get_numbers():
+	var c1 = get_parent().get_node('FirstNumber').get_number()
+	var c2 = get_parent().get_node('SecondNumber').get_number()
+	
+	return [c1, c2]
+
+func write_result(v):
+	get_parent().get_node(\"Result/ResultValue\").text = v.repr()
+
+func _on_add():
+	var cs = get_numbers()
+	var ans = cs[0].sum(cs[1])
+	write_result(ans)
+
+func _on_sub():
+	var cs = get_numbers()
+	var ans = cs[0].sub(cs[1])
+	write_result(ans)
+
+func _on_mul():
+	var cs = get_numbers()
+	var ans = cs[0].mul(cs[1])
+	write_result(ans)
+	
+func _on_div():
+	var cs = get_numbers()
+	var ans = cs[0].div(cs[1])
+	write_result(ans)
+	
+func _on_pow():
+	var cs = get_numbers()
+	var ans = cs[0].pow(cs[1])
+	write_result(ans)
+
+func _on_exp():
+	var cs = get_numbers()
+	var ans = cs[0].exp()
+	write_result(ans)
+
+func _on_log():
+	var cs = get_numbers()
+	var ans = cs[0].log()
+	write_result(ans)
+
+func _on_sqrt():
+	var cs = get_numbers()
+	var ans = cs[0].sqrt()
+	write_result(ans)
+
+func _on_sin():
+	var cs = get_numbers()
+	var ans = cs[0].sin()
+	write_result(ans)
+
+func _on_cos():
+	var cs = get_numbers()
+	var ans = cs[0].cos()
+	write_result(ans)
+"
+
+[node name="TestScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FirstNumber" type="VSplitContainer" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 120.0
+script = SubResource("1")
+
+[node name="FirstNumber" type="Label" parent="FirstNumber"]
+layout_mode = 2
+text = "First Number:"
+
+[node name="Number" type="GridContainer" parent="FirstNumber"]
+layout_mode = 2
+columns = 2
+
+[node name="RealLabel" type="Label" parent="FirstNumber/Number"]
+layout_mode = 2
+text = "Real part:"
+
+[node name="RealPart" type="TextEdit" parent="FirstNumber/Number"]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+
+[node name="ImagLabel" type="Label" parent="FirstNumber/Number"]
+layout_mode = 2
+text = "Imaginary part:"
+
+[node name="ImagPart" type="TextEdit" parent="FirstNumber/Number"]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+
+[node name="SecondNumber" type="VSplitContainer" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 50.0
+offset_right = 613.0
+offset_bottom = 152.0
+script = SubResource("2")
+
+[node name="SecondNumber" type="Label" parent="SecondNumber"]
+layout_mode = 2
+text = "Second Number:"
+
+[node name="Number" type="GridContainer" parent="SecondNumber"]
+layout_mode = 2
+columns = 2
+
+[node name="RealLabel" type="Label" parent="SecondNumber/Number"]
+layout_mode = 2
+text = "Real part:"
+
+[node name="RealPart" type="TextEdit" parent="SecondNumber/Number"]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+
+[node name="ImagLabel" type="Label" parent="SecondNumber/Number"]
+layout_mode = 2
+text = "Imaginary part:"
+
+[node name="ImagPart" type="TextEdit" parent="SecondNumber/Number"]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+
+[node name="Operations" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 200.0
+offset_right = 125.0
+offset_bottom = 240.0
+theme_override_constants/separation = 30
+script = SubResource("4")
+
+[node name="Operations" type="Label" parent="Operations"]
+layout_mode = 2
+text = "Operations (unary operators only use the first number):"
+
+[node name="Op2Grid" type="GridContainer" parent="Operations"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 3
+
+[node name="Add" type="Button" parent="Operations/Op2Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "+"
+
+[node name="Sub" type="Button" parent="Operations/Op2Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "-"
+
+[node name="Mul" type="Button" parent="Operations/Op2Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "*"
+
+[node name="Div" type="Button" parent="Operations/Op2Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "/"
+
+[node name="Pow" type="Button" parent="Operations/Op2Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "^"
+
+[node name="Op1Grid" type="GridContainer" parent="Operations"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 3
+
+[node name="Exp" type="Button" parent="Operations/Op1Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "exp"
+
+[node name="Log" type="Button" parent="Operations/Op1Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "log"
+
+[node name="Sqrt" type="Button" parent="Operations/Op1Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "sqrt"
+
+[node name="Sin" type="Button" parent="Operations/Op1Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "sin"
+
+[node name="Cos" type="Button" parent="Operations/Op1Grid"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "cos"
+
+[node name="Result" type="VSplitContainer" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 450.0
+offset_right = 148.0
+offset_bottom = 514.0
+
+[node name="Result" type="Label" parent="Result"]
+layout_mode = 2
+text = "Result:"
+
+[node name="ResultValue" type="Label" parent="Result"]
+layout_mode = 2
+text = "N/A"
+
+[connection signal="button_down" from="Operations/Op2Grid/Add" to="Operations" method="_on_add"]
+[connection signal="button_down" from="Operations/Op2Grid/Sub" to="Operations" method="_on_sub"]
+[connection signal="button_down" from="Operations/Op2Grid/Mul" to="Operations" method="_on_mul"]
+[connection signal="button_down" from="Operations/Op2Grid/Div" to="Operations" method="_on_div"]
+[connection signal="button_down" from="Operations/Op2Grid/Pow" to="Operations" method="_on_pow"]
+[connection signal="button_down" from="Operations/Op1Grid/Exp" to="Operations" method="_on_exp"]
+[connection signal="button_down" from="Operations/Op1Grid/Log" to="Operations" method="_on_log"]
+[connection signal="button_down" from="Operations/Op1Grid/Sqrt" to="Operations" method="_on_sqrt"]
+[connection signal="button_down" from="Operations/Op1Grid/Sin" to="Operations" method="_on_sin"]
+[connection signal="button_down" from="Operations/Op1Grid/Cos" to="Operations" method="_on_cos"]

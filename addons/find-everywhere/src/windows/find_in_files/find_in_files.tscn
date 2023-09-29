@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://clsaybrogx71l"]
+
+[node name="FindInFiles" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LineEditOptions" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SearchHistoryButton" type="MenuButton" parent="VBoxContainer/LineEditOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/LineEditOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Folder:"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+text = "res://"
+
+[node name="FolderLineEdit" type="LineEdit" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FolderButton" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "..."
+
+[node name="CheckBoxes" type="HBoxContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 2
+
+[node name="MoreExtensionsMenuButton" type="MenuButton" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "more.."
+flat = false
+switch_on_hover = true
+
+[node name="TipContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TipContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TipLabel" type="Label" parent="TipContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Type search query to find in files"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="TipContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SearchResultsContainer" type="VSplitContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SearchOptions" type="Tree" parent="SearchResultsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/draw_guides = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SearchResultsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SearchResultsContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FileNameLabel" type="Label" parent="SearchResultsContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "bla bla bla"
+
+[node name="FilePathLabel" type="Label" parent="SearchResultsContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "bla bla bla bla bla bla bla bla bla bla bla bla"
+
+[node name="CodeEditEditableCheckBox" type="CheckBox" parent="SearchResultsContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Changes will automatically be saved on CodeEdit.focus_exited. In order to enable Godot to see changes, it should be re-focused."
+text = "editable"
+
+[node name="CodeEdit" type="CodeEdit" parent="SearchResultsContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "skjdsajdsakljdlaskjd"
+
+[node name="FileDialog" type="FileDialog" parent="."]

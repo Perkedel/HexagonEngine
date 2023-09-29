@@ -1,0 +1,225 @@
+[gd_resource type="Theme" load_steps=31 format=3 uid="uid://bnprm4dgmteqb"]
+
+[ext_resource type="FontFile" uid="uid://b7nq4h3s5efly" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-Bold.ttf" id="1_fk2bu"]
+[ext_resource type="FontFile" uid="uid://db2ad2pr5gp55" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-BoldItalic.ttf" id="2_8b1ym"]
+[ext_resource type="FontFile" uid="uid://cabwwvclnl84t" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-Italic.ttf" id="3_nrwp0"]
+[ext_resource type="FontFile" uid="uid://bd1lvgva85r7" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-Medium.ttf" id="4_jbtf8"]
+[ext_resource type="FontFile" uid="uid://bb1rygdt0mbne" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-Regular.ttf" id="5_r2rgh"]
+[ext_resource type="FontFile" uid="uid://dntpx8mf0p7sx" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-ExtraBold.ttf" id="6_uo7jp"]
+[ext_resource type="FontFile" uid="uid://klg4oh8bdbi" path="res://addons/godot_style/markdown/Noto_Sans/NotoSans-ExtraBoldItalic.ttf" id="7_x63x7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g05gw"]
+bg_color = Color(0.188235, 0.211765, 0.239216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5cul"]
+bg_color = Color(0.788235, 0.788235, 0.788235, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u83nk"]
+bg_color = Color(0.0509804, 0.0666667, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fj2i"]
+bg_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okyod"]
+bg_color = Color(0.211765, 0.239216, 0.290196, 1)
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.298039, 0.321569, 0.368627, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ae28k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y5e5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rli1g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0umc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kdgje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7io0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43jvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmmsk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jrfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl3da"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyf0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwq7s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2i2x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lspkw"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0862745, 0.105882, 0.133333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3lds"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0862745, 0.105882, 0.133333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4hqp"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0862745, 0.105882, 0.133333, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yy668"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aipcg"]
+bg_color = Color(0.0509804, 0.0666667, 0.0901961, 1)
+
+[resource]
+default_font = ExtResource("5_r2rgh")
+default_font_size = 16
+BeginBar/base_type = &"Panel"
+BeginBar/styles/panel = SubResource("StyleBoxFlat_g05gw")
+LabelSectionName/base_type = &"Label"
+LabelSectionName/colors/font_color = Color(1, 1, 1, 1)
+LabelSectionName/colors/font_outline_color = Color(1, 1, 1, 1)
+LabelSectionName/font_sizes/font_size = 18
+LabelSectionName/fonts/font = ExtResource("1_fk2bu")
+LabelSectionName/styles/normal = SubResource("StyleBoxFlat_e5cul")
+Panel/styles/panel = SubResource("StyleBoxFlat_u83nk")
+PopupMenu/constants/v_separation = 10
+PopupMenu/font_sizes/font_size = 18
+PopupMenu/fonts/font = ExtResource("5_r2rgh")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_2fj2i")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_okyod")
+QuoteBackground/base_type = &"PanelContainer"
+QuoteBackground/styles/panel = SubResource("StyleBoxEmpty_ae28k")
+RTL/base_type = &"RichTextLabel"
+RTL/colors/default_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTL/colors/font_outline_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTL/colors/font_selected_color = Color(0, 0, 0, 0)
+RTL/colors/font_shadow_color = Color(0, 0, 0, 0)
+RTL/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RTL/font_sizes/bold_font_size = 16
+RTL/font_sizes/bold_italics_font_size = 16
+RTL/font_sizes/italics_font_size = 16
+RTL/font_sizes/mono_font_size = 16
+RTL/font_sizes/normal_font_size = 16
+RTL/fonts/bold_font = ExtResource("1_fk2bu")
+RTL/fonts/bold_italics_font = ExtResource("2_8b1ym")
+RTL/fonts/italics_font = ExtResource("3_nrwp0")
+RTL/fonts/mono_font = ExtResource("4_jbtf8")
+RTL/fonts/normal_font = ExtResource("5_r2rgh")
+RTL/styles/focus = SubResource("StyleBoxEmpty_8y5e5")
+RTL/styles/normal = SubResource("StyleBoxEmpty_rli1g")
+RTLHeadingOne/base_type = &"RichTextLabel"
+RTLHeadingOne/colors/default_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingOne/colors/font_outline_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingOne/colors/font_selected_color = Color(0, 0, 0, 0)
+RTLHeadingOne/colors/font_shadow_color = Color(0, 0, 0, 0)
+RTLHeadingOne/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RTLHeadingOne/font_sizes/bold_font_size = 30
+RTLHeadingOne/font_sizes/bold_italics_font_size = 30
+RTLHeadingOne/font_sizes/italics_font_size = 30
+RTLHeadingOne/font_sizes/mono_font_size = 30
+RTLHeadingOne/font_sizes/normal_font_size = 30
+RTLHeadingOne/fonts/bold_font = ExtResource("6_uo7jp")
+RTLHeadingOne/fonts/bold_italics_font = ExtResource("7_x63x7")
+RTLHeadingOne/fonts/italics_font = ExtResource("2_8b1ym")
+RTLHeadingOne/fonts/mono_font = ExtResource("5_r2rgh")
+RTLHeadingOne/fonts/normal_font = ExtResource("1_fk2bu")
+RTLHeadingOne/styles/focus = SubResource("StyleBoxEmpty_q0umc")
+RTLHeadingOne/styles/normal = SubResource("StyleBoxEmpty_kdgje")
+RTLHeadingThree/base_type = &"RichTextLabel"
+RTLHeadingThree/colors/default_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingThree/colors/font_outline_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingThree/colors/font_selected_color = Color(0, 0, 0, 0)
+RTLHeadingThree/colors/font_shadow_color = Color(0, 0, 0, 0)
+RTLHeadingThree/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RTLHeadingThree/font_sizes/bold_font_size = 18
+RTLHeadingThree/font_sizes/bold_italics_font_size = 18
+RTLHeadingThree/font_sizes/italics_font_size = 18
+RTLHeadingThree/font_sizes/mono_font_size = 18
+RTLHeadingThree/font_sizes/normal_font_size = 18
+RTLHeadingThree/fonts/bold_font = ExtResource("6_uo7jp")
+RTLHeadingThree/fonts/bold_italics_font = ExtResource("7_x63x7")
+RTLHeadingThree/fonts/italics_font = ExtResource("2_8b1ym")
+RTLHeadingThree/fonts/mono_font = ExtResource("4_jbtf8")
+RTLHeadingThree/fonts/normal_font = ExtResource("1_fk2bu")
+RTLHeadingThree/styles/focus = SubResource("StyleBoxEmpty_s7io0")
+RTLHeadingThree/styles/normal = SubResource("StyleBoxEmpty_43jvn")
+RTLHeadingTwo/base_type = &"RichTextLabel"
+RTLHeadingTwo/colors/default_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingTwo/colors/font_outline_color = Color(0.901961, 0.929412, 0.952941, 1)
+RTLHeadingTwo/colors/font_selected_color = Color(0, 0, 0, 0)
+RTLHeadingTwo/colors/font_shadow_color = Color(0, 0, 0, 0)
+RTLHeadingTwo/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RTLHeadingTwo/font_sizes/bold_font_size = 22
+RTLHeadingTwo/font_sizes/bold_italics_font_size = 22
+RTLHeadingTwo/font_sizes/italics_font_size = 22
+RTLHeadingTwo/font_sizes/mono_font_size = 22
+RTLHeadingTwo/font_sizes/normal_font_size = 22
+RTLHeadingTwo/fonts/bold_font = ExtResource("6_uo7jp")
+RTLHeadingTwo/fonts/bold_italics_font = ExtResource("7_x63x7")
+RTLHeadingTwo/fonts/italics_font = ExtResource("2_8b1ym")
+RTLHeadingTwo/fonts/mono_font = ExtResource("4_jbtf8")
+RTLHeadingTwo/fonts/normal_font = ExtResource("1_fk2bu")
+RTLHeadingTwo/styles/focus = SubResource("StyleBoxEmpty_bmmsk")
+RTLHeadingTwo/styles/normal = SubResource("StyleBoxEmpty_2jrfi")
+RTLQuote/base_type = &"RichTextLabel"
+RTLQuote/colors/default_color = Color(0.470588, 0.501961, 0.545098, 1)
+RTLQuote/colors/font_outline_color = Color(0.470588, 0.501961, 0.545098, 1)
+RTLQuote/colors/font_selected_color = Color(0, 0, 0, 0)
+RTLQuote/colors/font_shadow_color = Color(0, 0, 0, 0)
+RTLQuote/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RTLQuote/font_sizes/bold_font_size = 16
+RTLQuote/font_sizes/bold_italics_font_size = 16
+RTLQuote/font_sizes/italics_font_size = 16
+RTLQuote/font_sizes/mono_font_size = 16
+RTLQuote/font_sizes/normal_font_size = 16
+RTLQuote/fonts/bold_font = ExtResource("1_fk2bu")
+RTLQuote/fonts/bold_italics_font = ExtResource("2_8b1ym")
+RTLQuote/fonts/italics_font = ExtResource("3_nrwp0")
+RTLQuote/fonts/mono_font = ExtResource("4_jbtf8")
+RTLQuote/fonts/normal_font = ExtResource("5_r2rgh")
+RTLQuote/styles/focus = SubResource("StyleBoxEmpty_sl3da")
+RTLQuote/styles/normal = SubResource("StyleBoxEmpty_kyf0u")
+RichTextLabel/colors/default_color = Color(0.901961, 0.929412, 0.952941, 1)
+RichTextLabel/colors/font_outline_color = Color(0.901961, 0.929412, 0.952941, 1)
+RichTextLabel/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+RichTextLabel/constants/line_separation = 4
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/bold_font = ExtResource("1_fk2bu")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_8b1ym")
+RichTextLabel/fonts/italics_font = ExtResource("3_nrwp0")
+RichTextLabel/fonts/mono_font = ExtResource("4_jbtf8")
+RichTextLabel/fonts/normal_font = ExtResource("5_r2rgh")
+RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_jwq7s")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_w2i2x")
+TextEdit/colors/font_color = Color(1, 1, 1, 1)
+TextEdit/colors/font_outline_color = Color(1, 1, 1, 1)
+TextEdit/colors/font_readonly_color = Color(1, 1, 1, 1)
+TextEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+TextEdit/colors/selection_color = Color(0.117647, 0.258824, 0.45098, 1)
+TextEdit/styles/focus = SubResource("StyleBoxFlat_lspkw")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_o3lds")
+TextEdit/styles/read_only = SubResource("StyleBoxFlat_y4hqp")
+Tree/colors/children_hl_line_color = Color(1, 1, 1, 1)
+Tree/styles/focus = SubResource("StyleBoxEmpty_yy668")
+Tree/styles/panel = SubResource("StyleBoxFlat_aipcg")

@@ -11,7 +11,8 @@ var instanceDVD:Node
 func _zetrixInit():
 	var theXR = XRServer.find_interface("OpenXR")
 	if theXR:
-		XRServer.add_interface(theXR)
+#		XRServer.add_interface(theXR)
+		pass
 	#zetrixViewport.hdr = false
 #	changeDVDMenu.ReceiveZetrixViewport(zetrixViewport)
 #	zetrixPreview.ReceiveZetrixViewport(zetrixViewport)

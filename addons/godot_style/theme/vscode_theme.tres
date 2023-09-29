@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MarkdownTheme" load_steps=3 format=3 uid="uid://008bicq434au"]
+
+[ext_resource type="Theme" uid="uid://bs1wbstxh2j0q" path="res://addons/godot_style/theme/vscode_controls_theme.tres" id="1_tnu24"]
+[ext_resource type="Script" path="res://addons/godot_style/theme/markdown_theme.gd" id="1_x1tgv"]
+
+[resource]
+script = ExtResource("1_x1tgv")
+name = "VSCode"
+color_inline_code = Color(0.843137, 0.729412, 0.490196, 1)
+bgcolor_inline_code = Color(0, 0, 0, 0)
+color_link = Color(0.203922, 0.52549, 0.882353, 1)
+controls_theme = ExtResource("1_tnu24")

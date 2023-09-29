@@ -1,0 +1,465 @@
+[gd_scene load_steps=60 format=3 uid="uid://bk2jfi6uk8mnu"]
+
+[ext_resource type="Script" path="res://addons/colorizer/ColorButton.cs" id="1_0bjly"]
+[ext_resource type="Script" path="res://addons/colorizer/ColorPickerButton.cs" id="1_nw8h7"]
+[ext_resource type="Script" path="res://addons/colorizer/ColorPaletteButton.cs" id="3_a0463"]
+
+[sub_resource type="Gradient" id="Gradient_l4uaw"]
+colors = PackedColorArray(0.316406, 0.277344, 0.253906, 1, 0.316406, 0.277344, 0.253906, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7ogxt"]
+gradient = SubResource("Gradient_l4uaw")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_r2cpb"]
+colors = PackedColorArray(0.15625, 0.128906, 0.113281, 1, 0.15625, 0.128906, 0.113281, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_muc7i"]
+gradient = SubResource("Gradient_r2cpb")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_lswwo"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_id3qr"]
+gradient = SubResource("Gradient_lswwo")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_4r84v"]
+offsets = PackedFloat32Array(0.021097, 1)
+colors = PackedColorArray(0.996094, 0.996094, 0.996094, 1, 0.996094, 0.996094, 0.996094, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4qdwk"]
+gradient = SubResource("Gradient_4r84v")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_lhoh1"]
+colors = PackedColorArray(0.910156, 0.910156, 0.910156, 1, 0.910156, 0.910156, 0.910156, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tkptp"]
+gradient = SubResource("Gradient_lhoh1")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_n7bfv"]
+colors = PackedColorArray(0.777344, 0.777344, 0.777344, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kxhhb"]
+gradient = SubResource("Gradient_n7bfv")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_ith0h"]
+offsets = PackedFloat32Array(0, 0.995781)
+colors = PackedColorArray(0.675781, 0.675781, 0.675781, 1, 0.675781, 0.675781, 0.675781, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_47shl"]
+gradient = SubResource("Gradient_ith0h")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_mhpjg"]
+colors = PackedColorArray(0.640625, 0.464844, 0.433594, 1, 0.640625, 0.464844, 0.433594, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4nhk0"]
+gradient = SubResource("Gradient_mhpjg")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_ymcvd"]
+colors = PackedColorArray(0.398438, 0.285156, 0.242188, 1, 0.398438, 0.285156, 0.242188, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s4f4m"]
+gradient = SubResource("Gradient_ymcvd")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_pyh5u"]
+colors = PackedColorArray(0.25, 0.183594, 0.160156, 1, 0.25, 0.183594, 0.160156, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0kqom"]
+gradient = SubResource("Gradient_pyh5u")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_q7ip1"]
+colors = PackedColorArray(0.984375, 0.929688, 0.578125, 1, 0.984375, 0.929688, 0.578125, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rquku"]
+gradient = SubResource("Gradient_q7ip1")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_6c4el"]
+colors = PackedColorArray(0.980469, 0.855469, 0.4375, 1, 0.980469, 0.855469, 0.4375, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qisjh"]
+gradient = SubResource("Gradient_6c4el")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_806ef"]
+colors = PackedColorArray(0.929688, 0.675781, 0.476563, 1, 0.929688, 0.675781, 0.476563, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wwhod"]
+gradient = SubResource("Gradient_806ef")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_8awjx"]
+colors = PackedColorArray(0.886719, 0.496094, 0.363281, 1, 0.886719, 0.496094, 0.363281, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v24fm"]
+gradient = SubResource("Gradient_8awjx")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_wmn3f"]
+colors = PackedColorArray(0.941406, 0.378906, 0.308594, 1, 0.941406, 0.378906, 0.308594, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3rl5o"]
+gradient = SubResource("Gradient_wmn3f")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_b4qj0"]
+colors = PackedColorArray(0.816406, 0.316406, 0.25, 1, 0.816406, 0.316406, 0.25, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v7xmg"]
+gradient = SubResource("Gradient_b4qj0")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_6o6ir"]
+colors = PackedColorArray(0.617188, 0.988281, 0.910156, 1, 0.617188, 0.988281, 0.910156, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_188tx"]
+gradient = SubResource("Gradient_6o6ir")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_sqgxo"]
+colors = PackedColorArray(0.292969, 0.945313, 0.976563, 1, 0.28125, 0.945313, 0.984375, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jnq8o"]
+gradient = SubResource("Gradient_sqgxo")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_synvl"]
+colors = PackedColorArray(0.246094, 0.691406, 0.980469, 1, 0.246094, 0.691406, 0.980469, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qh3mm"]
+gradient = SubResource("Gradient_synvl")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_wpmgb"]
+colors = PackedColorArray(0.789063, 0.988281, 0.597656, 1, 0.789063, 0.988281, 0.597656, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jd8qx"]
+gradient = SubResource("Gradient_wpmgb")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_fndna"]
+colors = PackedColorArray(0.214844, 0.777344, 0.335938, 1, 0.214844, 0.777344, 0.335938, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0nksf"]
+gradient = SubResource("Gradient_fndna")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_eb75g"]
+colors = PackedColorArray(0.167969, 0.613281, 0.332031, 1, 0.167969, 0.613281, 0.332031, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_go2a7"]
+gradient = SubResource("Gradient_eb75g")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_ahho6"]
+colors = PackedColorArray(0.91126, 0.799734, 0.890915, 1, 0.90625, 0.796875, 0.886719, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t1qon"]
+gradient = SubResource("Gradient_ahho6")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_adrqm"]
+colors = PackedColorArray(0.729446, 0.493219, 0.694877, 1, 0.726563, 0.492188, 0.691406, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rsofw"]
+gradient = SubResource("Gradient_adrqm")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_dtjfc"]
+colors = PackedColorArray(0.775276, 0.395479, 0.865645, 1, 0.773438, 0.394531, 0.863281, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yk78v"]
+gradient = SubResource("Gradient_dtjfc")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_wpwsc"]
+colors = PackedColorArray(0.675873, 0.6076, 0.98, 1, 0.671875, 0.605469, 0.976563, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7hwha"]
+gradient = SubResource("Gradient_wpwsc")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_yxecr"]
+colors = PackedColorArray(0.364706, 0.4, 0.972549, 1, 0.363281, 0.398438, 0.96875, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ghvop"]
+gradient = SubResource("Gradient_yxecr")
+width = 32
+
+[sub_resource type="Gradient" id="Gradient_fda66"]
+colors = PackedColorArray(0.098, 0.1316, 0.35, 1, 0.0976563, 0.132813, 0.347656, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dk1fm"]
+gradient = SubResource("Gradient_fda66")
+width = 32
+
+[node name="Colors" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Custom color:"
+
+[node name="HFlowContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HFlowContainer"]
+layout_mode = 2
+text = "Color"
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_nw8h7")
+
+[node name="Button" type="Button" parent="VBoxContainer/HFlowContainer"]
+layout_mode = 2
+text = "Colorize selection"
+script = ExtResource("1_0bjly")
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Color palette:"
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_7ogxt")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.3125, 0.273438, 0.25, 1)
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_muc7i")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.152344, 0.125, 0.109375, 1)
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_id3qr")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0, 0, 0, 1)
+
+[node name="TextureButton7" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_4qdwk")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.992188, 0.992188, 0.992188, 1)
+
+[node name="TextureButton4" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_tkptp")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.90625, 0.90625, 0.90625, 1)
+
+[node name="TextureButton5" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_kxhhb")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.910156, 0.910156, 0.910156, 1)
+
+[node name="TextureButton6" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_47shl")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.671875, 0.671875, 0.671875, 1)
+
+[node name="TextureButton8" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_4nhk0")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.636719, 0.460938, 0.429688, 1)
+
+[node name="TextureButton9" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_s4f4m")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.394531, 0.28125, 0.238281, 1)
+
+[node name="TextureButton10" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_0kqom")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.246094, 0.179688, 0.15625, 1)
+
+[node name="TextureButton11" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_rquku")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.980469, 0.925781, 0.574219, 1)
+
+[node name="TextureButton12" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_qisjh")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.976563, 0.851563, 0.433594, 1)
+
+[node name="TextureButton13" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_wwhod")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.925781, 0.671875, 0.472656, 1)
+
+[node name="TextureButton14" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_v24fm")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.882813, 0.492188, 0.359375, 1)
+
+[node name="TextureButton15" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_3rl5o")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.9375, 0.375, 0.304688, 1)
+
+[node name="TextureButton16" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_v7xmg")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.8125, 0.3125, 0.246094, 1)
+
+[node name="TextureButton17" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_188tx")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.613281, 0.984375, 0.90625, 1)
+
+[node name="TextureButton18" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_jnq8o")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.285156, 0.941406, 0.976563, 1)
+
+[node name="TextureButton19" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_qh3mm")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.242188, 0.6875, 0.976563, 1)
+
+[node name="TextureButton20" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_jd8qx")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.785156, 0.984375, 0.59375, 1)
+
+[node name="TextureButton21" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_0nksf")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.210938, 0.773438, 0.332031, 1)
+
+[node name="TextureButton22" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_go2a7")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.164063, 0.609375, 0.328125, 1)
+
+[node name="TextureButton23" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_t1qon")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.902344, 0.792969, 0.882813, 1)
+
+[node name="TextureButton24" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_rsofw")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.722656, 0.488281, 0.6875, 1)
+
+[node name="TextureButton25" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_yk78v")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.769531, 0.390625, 0.859375, 1)
+
+[node name="TextureButton26" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_7hwha")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.667969, 0.601563, 0.972656, 1)
+
+[node name="TextureButton27" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_ghvop")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.359375, 0.394531, 0.964844, 1)
+
+[node name="TextureButton28" type="TextureButton" parent="VBoxContainer/HFlowContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("GradientTexture1D_dk1fm")
+stretch_mode = 0
+script = ExtResource("3_a0463")
+color = Color(0.09375, 0.128906, 0.347656, 1)

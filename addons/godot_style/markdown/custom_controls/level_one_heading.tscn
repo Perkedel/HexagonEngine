@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d015l4iqyr3dk"]
+
+[ext_resource type="PackedScene" uid="uid://v8x0xssikli0" path="res://addons/godot_style/markdown/custom_controls/heading_underline.tscn" id="1_j28ro"]
+
+[node name="LevelOneHeading" type="RichTextLabel"]
+offset_right = 355.0
+offset_bottom = 47.0
+size_flags_horizontal = 3
+focus_mode = 2
+theme_type_variation = &"RTLHeadingOne"
+bbcode_enabled = true
+text = "testing [b]bold[/b]"
+fit_content = true
+selection_enabled = true
+
+[node name="HeadingUnderline" parent="." instance=ExtResource("1_j28ro")]
+layout_mode = 1
