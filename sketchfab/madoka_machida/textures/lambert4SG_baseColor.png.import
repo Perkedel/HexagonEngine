@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4oujabdfkvms"
 path.s3tc="res://.godot/imported/lambert4SG_baseColor.png-792368c7b5251a947f1d0ff7067b19c9.s3tc.ctex"
+path.etc2="res://.godot/imported/lambert4SG_baseColor.png-792368c7b5251a947f1d0ff7067b19c9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/madoka_machida/textures/lambert4SG_baseColor.png"
-dest_files=["res://.godot/imported/lambert4SG_baseColor.png-792368c7b5251a947f1d0ff7067b19c9.s3tc.ctex"]
+dest_files=["res://.godot/imported/lambert4SG_baseColor.png-792368c7b5251a947f1d0ff7067b19c9.s3tc.ctex", "res://.godot/imported/lambert4SG_baseColor.png-792368c7b5251a947f1d0ff7067b19c9.etc2.ctex"]
 
 [params]
 

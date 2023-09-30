@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bibajss18j76i" path="res://Inkscape/PostingImage/HeartIcon.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://cop4nd8sbj4mb" path="res://Sprites/AudioSetting.png" id="15"]
 
-[sub_resource type="FontFile" id="FontFile_uouf6"]
+[sub_resource type="FontFile" id="FontFile_8a8yw"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 fallbacks = Array[Font]([ExtResource("6")])
@@ -27,7 +27,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_mi77x"]
+[sub_resource type="FontFile" id="FontFile_3r176"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Italic 48"
 fallbacks = Array[Font]([ExtResource("5")])
@@ -38,7 +38,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_vahnr"]
+[sub_resource type="FontFile" id="FontFile_vt3ig"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Bold 48"
 fallbacks = Array[Font]([ExtResource("8")])
@@ -49,7 +49,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_vccrg"]
+[sub_resource type="FontFile" id="FontFile_d2njq"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Monospace 48"
 fallbacks = Array[Font]([ExtResource("7")])
@@ -58,6 +58,11 @@ cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/16/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/16/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/16/0/glyphs/0/size = Vector2(0, 0)
+cache/0/16/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/16/0/glyphs/0/texture_idx = -1
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="DetakJantungProsotipe" type="Node"]
@@ -147,11 +152,71 @@ expand_icon = true
 
 [node name="DescriptionTextLabel" parent="CanvasLayer/UIsoWe/Listoid" instance=ExtResource("9")]
 layout_mode = 2
-theme_override_fonts/bold_font = SubResource("FontFile_uouf6")
-theme_override_fonts/italics_font = SubResource("FontFile_mi77x")
-theme_override_fonts/bold_italics_font = SubResource("FontFile_vahnr")
-theme_override_fonts/mono_font = SubResource("FontFile_vccrg")
-text = "Detak Jantung Prosotipe
+theme_override_fonts/bold_font = SubResource("FontFile_8a8yw")
+theme_override_fonts/italics_font = SubResource("FontFile_3r176")
+theme_override_fonts/bold_italics_font = SubResource("FontFile_vt3ig")
+theme_override_fonts/mono_font = SubResource("FontFile_d2njq")
+text = "[b]Detak Jantung Prosotipe[/b]
+by [b][color=#00ffff]JOELwindows7[/color][/b]
+[color=#ff5500]Perkedel Technologies[/color]
+[b][color=green]GNU GPL v3[/color][/b]
+
+Heartbeat emulator. This DVD emulates human heartbeat for [b][i][rainbow freq=.1 sat=1 val=1]Cardiophillia[/rainbow][/i][/b] game
+
+Credit:
+- Pen and Paper from Discord,[url=https://www.furaffinity.net/user/pen-and-paper/ ] FurAffinity [/url]
+
+Refferences (useful):
+[url]https://www.quora.com/How-do-you-convert-Hertz-to-seconds [/url]
+Old Unity version [url]https://github.com/Perkedel/HeartbeatOpenScript-Unity [/url]
+Ogg always loop? Disable them during import! [url=https://github.com/godotengine/godot/issues/15895#issuecomment-359185065 ]here's how[/url]
+BBcode for Godot reference [url=https://docs.godotengine.org/en/stable/tutorials/gui/bbcode_in_richtextlabel.html ]here[/url]
+
+Samples (Great shoutout):
+Pen and Paper (Discord) [url=https://drive.google.com/file/d/1bUuP9Xj6VftLueQud3nyFf6pSNQHnUL5/view ] Google Drive [/url] . Heartbeat detailed.
+
+Want to Tell me the Hearbeat sfx to download? or want to share your hearbeat recording? Upload the sounds somewhere you'd like, or pick the link of those heartbeat sfx files in pack or one. Then, go to [url]www.discord.gg/62xXqEW [/url] and to channel [code]#suara-hati[/code] for [color=blue]SFW[/color], [b]OR[/b]..., [code]#suara-baboom[/code] for [shake rate=15 level=15][color=red]NSFW[/color][/shake].
+[b]IMPORTANT![/b]
+Format template is like
+[code]
+(Link)
+Name: 
+Being:
+Gender:
+Status:
+[/code]
+
+How to use:
+[code]
+[url]link[/url]
+Name: (string) up to 9999999999999 character long name
+Being: (enum) Human, Other Animal, Alien, etc.
+Gender: (enum) Female, Male
+Status: (multiple choice) Normal Resting, Fass, Very Fass, Fibrilation, Pounding, Visible, Directly with contact mic to organ, etc.
+[/code]
+
+Example:
+[code]
+[url]...[/url]
+Name: Krostenqeni
+Being: Snoworldean
+Gender: Female
+Status: Fass, Pounding, Visible
+[/code]
+
+Do make sure you license those shares / they are licensed under [color=green][b]Creative Commons[/b][/color] licenses,
+[color=red]Rejects[/color]:
+- ND (No Derivative)
+- NC (No Commercial)
+- ??? (No license put into it)
+- All rights Reserved (Proprietary)
+[color=green]Accepts[/color]
+- BY (Attribution) (Recommended)
+- SA (Share Alike) (Recommended)
+- 0 (Zero) (similar to Public Domain Dedication)
+
+\"
+text = \"Detak Jantung Prosotipe
 by JOELwindows7
 Perkedel Technologies
 GNU GPL v3
@@ -209,7 +274,6 @@ Accepts
 - BY (Attribution) (Recommended)
 - SA (Share Alike) (Recommended)
 - 0 (Zero) (similar to Public Domain Dedication)
-
 "
 
 [node name="QuitButtons" type="HBoxContainer" parent="CanvasLayer/UIsoWe/Listoid"]

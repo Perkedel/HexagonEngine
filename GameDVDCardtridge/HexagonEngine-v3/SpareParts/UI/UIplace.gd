@@ -25,6 +25,23 @@ func setHP(value:float):
 	setHPmeter(value)
 	pass
 
+func setHPRaw(value:float):
+	setHPmeterRaw(value)
+	pass
+
+func setPon(value:float):
+	setScoreCounter(value)
+	pass
+
+func setPonIcon(value:Texture):
+#	print_rich('[b]SET SCORE ICON[/b]')
+	setScoreCounterIcon(value)
+	pass
+
+func setScoreIcon(to:Texture):
+#	print_rich('[b]SET SCORE ICON[/b]')
+	setPonIcon(to)
+
 func preloadPauseMainMenu(scened:PackedScene):
 	var thisOne:= scened.instantiate()
 	
@@ -111,6 +128,32 @@ func setHPmeter(to:float):
 	if GameplayHUDMenuNode.get_child(0):
 		if GameplayHUDMenuNode.get_child(0).has_method('setHP'):
 			GameplayHUDMenuNode.get_child(0).call('setHP',to)
+			pass
+		pass
+	pass
+
+func setHPmeterRaw(to:float):
+	# must be between 0 to 100. handle extra number calculation in the main DVD node!
+	if GameplayHUDMenuNode.get_child(0):
+		if GameplayHUDMenuNode.get_child(0).has_method('setHPRaw'):
+			GameplayHUDMenuNode.get_child(0).call('setHPRaw',to)
+			pass
+		pass
+	pass
+
+func setScoreCounter(to:float):
+	if GameplayHUDMenuNode.get_child(0):
+		if GameplayHUDMenuNode.get_child(0).has_method('setPon'):
+			GameplayHUDMenuNode.get_child(0).call('setPon',to)
+			pass
+		pass
+	pass
+
+func setScoreCounterIcon(to:Texture):
+	if GameplayHUDMenuNode.get_child(0):
+		if GameplayHUDMenuNode.get_child(0).has_method('setPonIcon'):
+#			print_rich('[b]SET SCORE ICON[/b]')
+			GameplayHUDMenuNode.get_child(0).call('setPonIcon',to)
 			pass
 		pass
 	pass

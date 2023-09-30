@@ -70,6 +70,16 @@ func monitorThisCharacter(person:Node) -> Node:
 	return person
 	pass
 
+# set icon for score meter
+func setScoreIcon(into:Texture):
+#	print_rich('[b]SET SCORE ICON[/b]')
+	if dvdNode:
+#		print_rich('[b]SET SCORE ICON[/b]')
+		if dvdNode.has_method('setScoreIcon'):
+#			print_rich('[b]SET SCORE ICON[/b]')
+			dvdNode.call('setScoreIcon',into)
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	SceneLoader.connect("on_scene_loaded", Callable(self, "_BiosLoaded"))
@@ -95,11 +105,11 @@ func assignLoadedDVD(thisThingRightHere:Node):
 	daLoadedDVD = thisThingRightHere
 
 func changeDVD():
-#	if daLoadedDVD:
+	if daLoadedDVD:
 #		if daLoadedDVD.has_signal("ChangeDVD_Exec"):
 #			daLoadedDVD.emit_signal("ChangeDVD_Exec")
 #			pass
-#		pass
+		pass
 	
 	pass
 
@@ -143,26 +153,70 @@ func ResumeGameNow():
 	setGamePaused(false)
 	pass
 
-func change_scene_with_resource(thisOne:PackedScene):
-	var pleaseInstanceThis = thisOne.instantiate()
+func change_scene_with_path(thisOne:String):
+	# again, use Godot's way.
+	_change_scene_with_path_deferred.call_deferred(thisOne)
+	pass
+
+func _change_scene_with_path_deferred(thisOne:String):
 	get_tree().current_scene.free()
+	var pleaseLoadThis: = ResourceLoader.load(thisOne) as PackedScene
+	var pleaseInstanceThis: = pleaseLoadThis.instantiate()
+	get_tree().current_scene = null
+	get_tree().root.add_child(pleaseInstanceThis)
+	get_tree().current_scene = pleaseInstanceThis
+	pass
+
+func change_scene_with_resource(thisOne:PackedScene):
+#	var pleaseInstanceThis: = thisOne.instantiate()
+#	get_tree().current_scene.free()
+#	get_tree().current_scene = null
+#	get_tree().root.add_child(pleaseInstanceThis)
+#	get_tree().current_scene = pleaseInstanceThis
+	# Yes pls Godot's way.
+	_change_scene_with_resource_deferred.call_deferred(thisOne)
+	pass
+
+func _change_scene_with_resource_deferred(thisOne:PackedScene):
+	get_tree().current_scene.free()
+	var pleaseInstanceThis: = thisOne.instantiate()
 	get_tree().current_scene = null
 	get_tree().root.add_child(pleaseInstanceThis)
 	get_tree().current_scene = pleaseInstanceThis
 	pass
 
 func change_scene_with_instance(thisOne:Node):
+#	get_tree().current_scene.free()
+#	get_tree().current_scene = null
+#	get_tree().root.add_child(thisOne)
+#	get_tree().current_scene = thisOne
+	
+	# from now on use Godot's Demo way of changing scene exclusively!
+	_change_scene_with_instance_deferred.call_deferred(thisOne)
+	pass
+
+func _change_scene_with_instance_deferred(thisOne:Node):
 	get_tree().current_scene.free()
 	get_tree().current_scene = null
 	get_tree().root.add_child(thisOne)
 	get_tree().current_scene = thisOne
+	pass
 
-func ExclusiveBoot(theResource:PackedScene):
+func ExclusiveBoot(theResource):
 	if theResource != null:
 		hereTakeThisLoadedResource = theResource
 		#andScronchMe = hereTakeThisLoadedResource.instance()
 	if hereTakeThisLoadedResource:
-		change_scene_with_resource(theResource)
+		if hereTakeThisLoadedResource is PackedScene:
+			change_scene_with_resource(theResource)
+		elif hereTakeThisLoadedResource is Node:
+			change_scene_with_instance(theResource)
+		elif hereTakeThisLoadedResource is String:
+			change_scene_with_path(theResource)
+		else:
+			printerr('ExclusiveBoot: The resource type is invalid!!! Expected: PackedScene, Node / Instance, OR String / Path')
+	else:
+		printerr('ExclusiveBoot: Resource Fail to load / Invalid')
 	pass
 	
 

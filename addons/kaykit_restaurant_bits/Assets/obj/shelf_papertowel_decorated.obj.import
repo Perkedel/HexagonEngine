@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nqyb4j0krfo3"
+path="res://.godot/imported/shelf_papertowel_decorated.obj-e6b6d6d747e6827b9d7440d7ca11b356.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shelf_papertowel_decorated.obj-e6b6d6d747e6827b9d7440d7ca11b356.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/shelf_papertowel_decorated.obj"
+dest_files=["res://.godot/imported/shelf_papertowel_decorated.obj-e6b6d6d747e6827b9d7440d7ca11b356.mesh", "res://.godot/imported/shelf_papertowel_decorated.obj-e6b6d6d747e6827b9d7440d7ca11b356.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

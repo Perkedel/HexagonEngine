@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch67yc8aga4by"
 path.s3tc="res://.godot/imported/SHD_Clothes_metallicRoughness.png-0524ed0af2fbd719fbf437ea9d95291a.s3tc.ctex"
+path.etc2="res://.godot/imported/SHD_Clothes_metallicRoughness.png-0524ed0af2fbd719fbf437ea9d95291a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/spock/textures/SHD_Clothes_metallicRoughness.png"
-dest_files=["res://.godot/imported/SHD_Clothes_metallicRoughness.png-0524ed0af2fbd719fbf437ea9d95291a.s3tc.ctex"]
+dest_files=["res://.godot/imported/SHD_Clothes_metallicRoughness.png-0524ed0af2fbd719fbf437ea9d95291a.s3tc.ctex", "res://.godot/imported/SHD_Clothes_metallicRoughness.png-0524ed0af2fbd719fbf437ea9d95291a.etc2.ctex"]
 
 [params]
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://f4p6c70t7osa"]
+
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="1"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_project_board_hover.tres" id="2"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_project_board_normal.tres" id="3"]
+[ext_resource type="Script" path="res://addons/gkanban/components/ProjectBoardButton.gd" id="4"]
+
+[node name="ProjectBoardButton" type="Button"]
+custom_minimum_size = Vector2(300, 39)
+offset_right = 300.0
+offset_bottom = 39.0
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_colors/font_pressed_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_colors/font_hover_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = ExtResource("3")
+theme_override_styles/hover = ExtResource("2")
+theme_override_styles/pressed = ExtResource("2")
+text = "Project Board"
+alignment = 0
+script = ExtResource("4")
+
+[connection signal="pressed" from="." to="." method="_on_ProjectBoardButton_pressed"]

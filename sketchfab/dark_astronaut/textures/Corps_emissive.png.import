@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d07anfin045f4"
 path.s3tc="res://.godot/imported/Corps_emissive.png-7d7f1d1f3a275016e7c771fdac26c61e.s3tc.ctex"
+path.etc2="res://.godot/imported/Corps_emissive.png-7d7f1d1f3a275016e7c771fdac26c61e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Corps_emissive.png"
-dest_files=["res://.godot/imported/Corps_emissive.png-7d7f1d1f3a275016e7c771fdac26c61e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Corps_emissive.png-7d7f1d1f3a275016e7c771fdac26c61e.s3tc.ctex", "res://.godot/imported/Corps_emissive.png-7d7f1d1f3a275016e7c771fdac26c61e.etc2.ctex"]
 
 [params]
 

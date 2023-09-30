@@ -1,0 +1,141 @@
+[gd_scene load_steps=17 format=3 uid="uid://c31j6bl3tjdi6"]
+
+[ext_resource type="Script" path="res://addons/gkanban/components/List.gd" id="1"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_bold.tres" id="2_2sl51"]
+[ext_resource type="PackedScene" uid="uid://dkeao5wdedf2q" path="res://addons/gkanban/components/CardButton.tscn" id="3"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular_smaller_line_heigth.tres" id="3_xpjym"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/card_edit_button_normal.tres" id="4_l06mg"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/card_title_input_focus.tres" id="5_avxp6"]
+[ext_resource type="Texture2D" uid="uid://bkaxisgfec2q3" path="res://addons/gkanban/assets/icons/png/arrow-left-s-line-white.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://iyvm1v8r6gkx" path="res://addons/gkanban/assets/icons/png/menu-line-white.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ct4d2567vcf2d" path="res://addons/gkanban/assets/icons/png/menu-line.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://b8afcnyn5ymwp" path="res://addons/gkanban/assets/icons/png/arrow-right-s-line-white.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cj44vbc02t17x" path="res://addons/gkanban/assets/icons/png/arrow-right-s-line.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://da45i76i7p4ml" path="res://addons/gkanban/assets/icons/png/arrow-left-s-line.png" id="12"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="13_ddnve"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_outline_primary_light.tres" id="14_ll2xf"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_outline_primary_light_hover.tres" id="15_nabt5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88xgy"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="List" type="PanelContainer" groups=["lists"]]
+custom_minimum_size = Vector2(320, 0)
+offset_right = 270.0
+offset_bottom = 39.0
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_88xgy")
+script = ExtResource("1")
+cards_container_path = NodePath("VBoxContainer/MarginContainer/CardsContainer")
+list_name_label_path = NodePath("VBoxContainer/HBoxContainer/MarginContainer/ListName")
+list_name_edit_path = NodePath("VBoxContainer/HBoxContainer/MarginContainer/ListNameEdit")
+list_buttons_container_path = NodePath("VBoxContainer/HBoxContainer/ListButtonsContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ListName" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("2_2sl51")
+theme_override_font_sizes/font_size = 18
+text = "List Name"
+
+[node name="ListNameEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.313726, 0.388235, 0.580392, 1)
+theme_override_fonts/font = ExtResource("3_xpjym")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("4_l06mg")
+theme_override_styles/focus = ExtResource("5_avxp6")
+text = "asdfasdfasdf"
+caret_blink = true
+
+[node name="ListButtonsContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/HBoxContainer/ListButtonsContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MoveLeftButton" parent="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer3" instance=ExtResource("3")]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("12")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("7")
+
+[node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer/HBoxContainer/ListButtonsContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MoveRightButton" parent="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer4" instance=ExtResource("3")]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("11")
+texture_pressed = ExtResource("10")
+texture_hover = ExtResource("10")
+
+[node name="CenterContainer5" type="CenterContainer" parent="VBoxContainer/HBoxContainer/ListButtonsContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MenuButton" parent="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer5" instance=ExtResource("3")]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("9")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("8")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 12
+
+[node name="CardsContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="AddCardButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.419608, 0.521569, 0.580392, 1)
+theme_override_colors/font_hover_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("13_ddnve")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("14_ll2xf")
+theme_override_styles/hover = ExtResource("15_nabt5")
+theme_override_styles/pressed = ExtResource("15_nabt5")
+text = "ADD CARD"
+
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/MarginContainer/ListName" to="." method="_on_ListName_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/MarginContainer/ListName" to="." method="_on_ListName_mouse_exited"]
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/MarginContainer/ListNameEdit" to="." method="_on_ListNameEdit_text_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer3/MoveLeftButton" to="." method="_on_MoveLeftButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer4/MoveRightButton" to="." method="_on_MoveRightButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ListButtonsContainer/CenterContainer5/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddCardButton" to="." method="_on_AddCardButton_pressed"]

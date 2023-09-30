@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t8wbgq4iqbgd"
+path="res://.godot/imported/fridge_A_decorated_door_top.obj-2e96b3b211d7eed5be12c9de4f81e517.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fridge_A_decorated_door_top.obj-2e96b3b211d7eed5be12c9de4f81e517.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/fridge_A_decorated_door_top.obj"
+dest_files=["res://.godot/imported/fridge_A_decorated_door_top.obj-2e96b3b211d7eed5be12c9de4f81e517.mesh", "res://.godot/imported/fridge_A_decorated_door_top.obj-2e96b3b211d7eed5be12c9de4f81e517.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

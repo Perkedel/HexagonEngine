@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbb5jntmb187r"
+path="res://.godot/imported/kitchentable_A_large_decorated.obj-2555c1c4f55b03d8051d75a857b4f00b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchentable_A_large_decorated.obj-2555c1c4f55b03d8051d75a857b4f00b.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/kitchentable_A_large_decorated.obj"
+dest_files=["res://.godot/imported/kitchentable_A_large_decorated.obj-2555c1c4f55b03d8051d75a857b4f00b.mesh", "res://.godot/imported/kitchentable_A_large_decorated.obj-2555c1c4f55b03d8051d75a857b4f00b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpgvrl0xorffi"
+path="res://.godot/imported/food_ingredient_vegetableburger_uncooked.obj-232c3b410d134f3e534f1ed4f013743c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_vegetableburger_uncooked.obj-232c3b410d134f3e534f1ed4f013743c.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/food_ingredient_vegetableburger_uncooked.obj"
+dest_files=["res://.godot/imported/food_ingredient_vegetableburger_uncooked.obj-232c3b410d134f3e534f1ed4f013743c.mesh", "res://.godot/imported/food_ingredient_vegetableburger_uncooked.obj-232c3b410d134f3e534f1ed4f013743c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

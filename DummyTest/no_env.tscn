@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk3apc1qj6lep"]
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_b63q7"]
+auto_exposure_enabled = true
+
+[node name="noEnv" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+camera_attributes = SubResource("CameraAttributesPhysical_b63q7")
+
+[node name="Camera3D" type="Camera3D" parent="."]

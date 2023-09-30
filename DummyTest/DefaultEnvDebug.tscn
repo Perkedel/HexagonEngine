@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7yp4q5xpnxdp"]
+
+[ext_resource type="Environment" uid="uid://blufsc2s065ho" path="res://default_env.tres" id="1_gmf0y"]
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_uevkg"]
+
+[node name="DefaultEnvDebug" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_gmf0y")
+camera_attributes = SubResource("CameraAttributesPhysical_uevkg")

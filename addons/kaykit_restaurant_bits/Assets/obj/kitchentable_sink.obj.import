@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c100dcl7qge6x"
+path="res://.godot/imported/kitchentable_sink.obj-761f946f54d42e11ef09983924528164.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchentable_sink.obj-761f946f54d42e11ef09983924528164.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/kitchentable_sink.obj"
+dest_files=["res://.godot/imported/kitchentable_sink.obj-761f946f54d42e11ef09983924528164.mesh", "res://.godot/imported/kitchentable_sink.obj-761f946f54d42e11ef09983924528164.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

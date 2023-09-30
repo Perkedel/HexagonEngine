@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5qlc26rytusr"
+path="res://.godot/imported/food_ingredient_potato_chopped.obj-796d9469c650f17337e73124d362c04d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_potato_chopped.obj-796d9469c650f17337e73124d362c04d.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/food_ingredient_potato_chopped.obj"
+dest_files=["res://.godot/imported/food_ingredient_potato_chopped.obj-796d9469c650f17337e73124d362c04d.mesh", "res://.godot/imported/food_ingredient_potato_chopped.obj-796d9469c650f17337e73124d362c04d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

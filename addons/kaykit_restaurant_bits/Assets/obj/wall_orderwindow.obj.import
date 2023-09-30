@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bb15nyuwlehtm"
+path="res://.godot/imported/wall_orderwindow.obj-fd2bb95d9a093592e3113240e9d8e0b0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_orderwindow.obj-fd2bb95d9a093592e3113240e9d8e0b0.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/wall_orderwindow.obj"
+dest_files=["res://.godot/imported/wall_orderwindow.obj-fd2bb95d9a093592e3113240e9d8e0b0.mesh", "res://.godot/imported/wall_orderwindow.obj-fd2bb95d9a093592e3113240e9d8e0b0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

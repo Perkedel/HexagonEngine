@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgtucdo3lt3s3"]
+[gd_scene load_steps=4 format=3 uid="uid://dgtucdo3lt3s3"]
 
 [ext_resource type="Script" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.gd" id="1_sma1r"]
+[ext_resource type="Environment" uid="uid://r6bs00fjxcuc" path="res://modules/Environmenting/EnvironmentDefaultBase.tres" id="2_8jkpa"]
+[ext_resource type="CameraAttributesPractical" uid="uid://hkip5kwbiv6o" path="res://modules/Environmenting/CamAttributeDefaultPractical.tres" id="3_g0sxu"]
 
 [node name="HexagonLevel" type="Node3D"]
 script = ExtResource("1_sma1r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.200895, -0.652919, 0.7303, -0.833124, 0.506034, 0.223235, -0.515311, -0.563584, -0.645622, 0, 0, 0)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_8jkpa")
+camera_attributes = ExtResource("3_g0sxu")
 
 [node name="2DSpace" type="Node2D" parent="."]
 

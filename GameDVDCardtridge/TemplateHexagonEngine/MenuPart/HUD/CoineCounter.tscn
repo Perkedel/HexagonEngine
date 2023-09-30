@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b13kt0res6iyf"]
 
 [ext_resource type="FontFile" path="res://fonts/Built/Ubuntu_M_48tred.tres" id="1"]
-[ext_resource type="Texture2D" uid="uid://b4sqfbtfve41n" path="res://Sprites/MavrickleIcon.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bgerof7nuoq2b" path="res://Sprites/MavrickleIcon.png" id="2"]
 [ext_resource type="Script" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.gd" id="3"]
 
 [node name="CoineCounter" type="HBoxContainer"]

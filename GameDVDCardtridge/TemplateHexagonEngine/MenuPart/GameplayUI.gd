@@ -1,7 +1,8 @@
 extends Control
 
 @export_range(0,100) var HPlevel:float = 100
-@export var ScoreIcon:Texture2D
+@export var HPRaw:float = 100
+@export var ScoreIcon:Texture2D = preload("res://Sprites/MavrickleIcon.png")
 @export var ScoreNumber:float = 2000
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,6 +12,22 @@ extends Control
 func setHP(value:float):
 	# must be 0 to 100
 	HPlevel = value
+	pass
+
+func setHPRaw(value:float):
+	HPRaw = value
+#	$TotalVBoxContainer/BottomVBoxContainer/HPbar.setHPRaw(value)
+	pass
+
+func setPon(value:float):
+	ScoreNumber = value
+	$TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus/CoineCounter.setPon(value)
+	pass
+
+func setPonIcon(value:Texture):
+#	print_rich('[b]SET SCORE ICON[/b]')
+	ScoreIcon = value
+	$TotalVBoxContainer/BottomVBoxContainer/MeserckanStatus/CoineCounter.setPonIcon(value)
 	pass
 
 # Called when the node enters the scene tree for the first time.

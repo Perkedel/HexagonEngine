@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf800ldauxgug"]
+
+[ext_resource type="Script" path="res://addons/ezpz_inspector/example/IncrementValue.cs" id="1_sip2v"]
+
+[node name="IncrementValue" type="Node"]
+script = ExtResource("1_sip2v")

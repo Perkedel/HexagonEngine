@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvb536bx8nw4k"]
+
+[ext_resource type="Script" path="res://addons/gkanban/components/PrimaryButton.gd" id="1"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="2"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_primary_normal.tres" id="3"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_primary_hover.tres" id="4"]
+
+[node name="PrimaryButton" type="Button"]
+offset_right = 99.0
+offset_bottom = 31.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.737255, 0.792157, 0.823529, 1)
+theme_override_colors/font_pressed_color = Color(0.858824, 0.886275, 0.898039, 1)
+theme_override_colors/font_hover_color = Color(0.858824, 0.886275, 0.898039, 1)
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = ExtResource("3")
+theme_override_styles/hover = ExtResource("4")
+theme_override_styles/pressed = ExtResource("4")
+text = "BUTTON"
+script = ExtResource("1")

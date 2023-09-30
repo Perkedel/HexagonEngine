@@ -1,31 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://bje4pivnfhort"]
+[gd_scene load_steps=9 format=3 uid="uid://bje4pivnfhort"]
 
 [ext_resource type="PackedScene" uid="uid://cyny8y6at7wro" path="res://addons/controller_icons/example/IconTest.tscn" id="1_7cnmt"]
-[ext_resource type="Texture2D" uid="uid://puc614rf26im" path="res://addons/controller_icons/assets/key/arrow_left.png" id="2_njk2x"]
 [ext_resource type="PackedScene" uid="uid://do0xct21gy63v" path="res://modules/Reusables/parts/controller_icons_button_SUPER.tscn" id="2_yb2tn"]
-[ext_resource type="Texture2D" uid="uid://d04bqc5v3befo" path="res://addons/controller_icons/assets/key/arrow_up.png" id="3_h8x0a"]
 [ext_resource type="PackedScene" uid="uid://cbkxdgpvo62qv" path="res://modules/Reusables/parts/controller_icons_sprite2D_SUPER.tscn" id="3_k30xm"]
-[ext_resource type="Texture2D" uid="uid://b0futjlk1m58j" path="res://addons/controller_icons/assets/key/arrow_right.png" id="4_0c0kg"]
+[ext_resource type="Texture2D" uid="uid://d284wkmo0vqfk" path="res://addons/controller_icons/assets/xbox360/a.png" id="4_t7s3p"]
 [ext_resource type="PackedScene" uid="uid://dqqewp2yvvjvg" path="res://modules/Reusables/parts/controller_icons_sprite3D_SUPER.tscn" id="5_y2w0x"]
-[ext_resource type="Texture2D" uid="uid://cge2w6yy0r2cx" path="res://addons/controller_icons/assets/key/arrow_down.png" id="5_yxsv5"]
 [ext_resource type="PackedScene" uid="uid://d0lwmr464vugx" path="res://modules/Reusables/parts/controller_icons_textureRect_SUPER.tscn" id="6_o1y20"]
-[ext_resource type="Texture2D" uid="uid://bp58drjdgvxsi" path="res://addons/controller_icons/assets/key/enter_alt.png" id="7_6i5bx"]
 [ext_resource type="PackedScene" uid="uid://vf0ieipk6xd8" path="res://modules/Reusables/parts/KoBeWiActionIcon_Super.tscn" id="11_7tikj"]
 [ext_resource type="PackedScene" uid="uid://bgofjme0trxii" path="res://modules/Reusables/parts/KoBeWiActionIcon.tscn" id="12_8ycwp"]
 
 [node name="TestSuper" instance=ExtResource("1_7cnmt")]
-
-[node name="ControllerButton" parent="." index="0"]
-icon = ExtResource("2_njk2x")
-
-[node name="ControllerSprite" parent="." index="1"]
-texture = ExtResource("3_h8x0a")
-
-[node name="ControllerSprite3D" parent="." index="2"]
-texture = ExtResource("4_0c0kg")
-
-[node name="ControllerTextureRect" parent="." index="3"]
-texture = ExtResource("5_yxsv5")
 
 [node name="SuperControllerIconsButton" parent="." index="5" instance=ExtResource("2_yb2tn")]
 layout_mode = 0
@@ -34,14 +18,15 @@ offset_top = 290.0
 offset_right = 806.0
 offset_bottom = 512.0
 text = "Choose"
-icon = ExtResource("7_6i5bx")
 
 [node name="SuperControllerIconsSprite2D" parent="." index="6" instance=ExtResource("3_k30xm")]
 position = Vector2(61, 539)
-texture = ExtResource("7_6i5bx")
+texture = ExtResource("4_t7s3p")
 
 [node name="SuperControllerIconsSprite3D" parent="." index="7" instance=ExtResource("5_y2w0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+texture = ExtResource("4_t7s3p")
+faceToCamera = true
 
 [node name="SuperControllerIconsTextureRect" parent="." index="8" instance=ExtResource("6_o1y20")]
 layout_mode = 0
@@ -49,16 +34,52 @@ offset_left = 282.0
 offset_top = 512.0
 offset_right = 466.0
 offset_bottom = 696.0
-colorPressed = Color(0.745098, 0.745098, 0.745098, 1)
+texture = ExtResource("4_t7s3p")
 
-[node name="ActionIconSuper" parent="." index="9" instance=ExtResource("11_7tikj")]
+[node name="SuperControllerIconsTextureRect2" parent="." index="9" instance=ExtResource("6_o1y20")]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 512.0
+offset_right = 742.0
+offset_bottom = 696.0
+texture = null
+path = "ui_touchpad_click"
+
+[node name="SuperControllerIconsTextureRect3" parent="." index="10" instance=ExtResource("6_o1y20")]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 745.0
+offset_right = 847.0
+offset_bottom = 929.0
+texture = null
+path = "ui_misc"
+
+[node name="SuperControllerIconsTextureRect4" parent="." index="11" instance=ExtResource("6_o1y20")]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 820.0
+offset_right = 921.0
+offset_bottom = 1004.0
+texture = null
+path = "ui_meta"
+
+[node name="SuperControllerIconsTextureRect5" parent="." index="12" instance=ExtResource("6_o1y20")]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 820.0
+offset_right = 1105.0
+offset_bottom = 1004.0
+texture = null
+path = "ui_guide"
+
+[node name="ActionIconSuper" parent="." index="13" instance=ExtResource("11_7tikj")]
 layout_mode = 0
 offset_left = 111.0
 offset_top = 696.0
 offset_right = 387.0
 offset_bottom = 972.0
 
-[node name="ActionIcon" parent="." index="10" instance=ExtResource("12_8ycwp")]
+[node name="ActionIcon" parent="." index="14" instance=ExtResource("12_8ycwp")]
 layout_mode = 0
 offset_left = 466.0
 offset_top = 745.0

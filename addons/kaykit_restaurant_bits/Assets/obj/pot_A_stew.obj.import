@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkobpmc5bkiu6"
+path="res://.godot/imported/pot_A_stew.obj-15ff48c25c37b9b260e29cc0e583e315.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pot_A_stew.obj-15ff48c25c37b9b260e29cc0e583e315.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/pot_A_stew.obj"
+dest_files=["res://.godot/imported/pot_A_stew.obj-15ff48c25c37b9b260e29cc0e583e315.mesh", "res://.godot/imported/pot_A_stew.obj-15ff48c25c37b9b260e29cc0e583e315.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

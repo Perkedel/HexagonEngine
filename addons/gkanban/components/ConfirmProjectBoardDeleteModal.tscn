@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://3vve8qhigyes"]
+
+[ext_resource type="PackedScene" uid="uid://bndv8h03lotkr" path="res://addons/gkanban/components/ModalHeader.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cvb536bx8nw4k" path="res://addons/gkanban/components/PrimaryButton.tscn" id="2"]
+[ext_resource type="Script" path="res://addons/gkanban/components/ConfirmProjectBoardDeleteModal.gd" id="3"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7txgj"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 32.0
+bg_color = Color(0.811765, 0.854902, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnc1y"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="ConfirmProjectBoardDeleteModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.376471)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ModalHeader" parent="ColorRect/CenterContainer/VBoxContainer" instance=ExtResource("1")]
+layout_mode = 2
+text = "CONFIRM DELETE"
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7txgj")
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Are you sure you want to delete this project?"
+
+[node name="PanelContainer2" type="PanelContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cnc1y")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="CancelButton" parent="ColorRect/CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+text = "CANCEL"
+
+[node name="DeleteButton" parent="ColorRect/CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+text = "DELETE"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer/CancelButton" to="." method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]

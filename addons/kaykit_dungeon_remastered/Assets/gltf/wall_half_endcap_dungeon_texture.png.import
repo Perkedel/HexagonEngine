@@ -2,26 +2,29 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxt8hp5nma635"
-path="res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.ctex"
+uid="uid://h27m3jjyg0iv"
+path.s3tc="res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
 source_file="res://addons/kaykit_dungeon_remastered/Assets/gltf/wall_half_endcap_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.ctex"]
+dest_files=["res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.s3tc.ctex", "res://.godot/imported/wall_half_endcap_dungeon_texture.png-252d125464aa4ab07c5ec6cbee777c69.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +34,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

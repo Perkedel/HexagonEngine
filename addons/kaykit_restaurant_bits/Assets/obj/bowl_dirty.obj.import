@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djdjkg6uv3rn3"
+path="res://.godot/imported/bowl_dirty.obj-f7c2d6ee44e6bdf5681b1a4b73b44fa6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bowl_dirty.obj-f7c2d6ee44e6bdf5681b1a4b73b44fa6.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/bowl_dirty.obj"
+dest_files=["res://.godot/imported/bowl_dirty.obj-f7c2d6ee44e6bdf5681b1a4b73b44fa6.mesh", "res://.godot/imported/bowl_dirty.obj-f7c2d6ee44e6bdf5681b1a4b73b44fa6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

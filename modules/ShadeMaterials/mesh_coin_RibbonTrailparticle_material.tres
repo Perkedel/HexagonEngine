@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5nedj03noh2d"]
+
+[resource]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0.972549, 1, 0, 0.470588)
+metallic = 1.0
+roughness = 0.06
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 0.75
+clearcoat_enabled = true
+clearcoat_roughness = 0.14
+refraction_enabled = true
+refraction_scale = 0.59
+grow = true
+grow_amount = -1.0
+use_particle_trails = true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn7yneh77dpir"
+path="res://.godot/imported/dishrack_plates.obj-4cfe4d4fa0a9424851f45c9ac06c6437.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dishrack_plates.obj-4cfe4d4fa0a9424851f45c9ac06c6437.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/dishrack_plates.obj"
+dest_files=["res://.godot/imported/dishrack_plates.obj-4cfe4d4fa0a9424851f45c9ac06c6437.mesh", "res://.godot/imported/dishrack_plates.obj-4cfe4d4fa0a9424851f45c9ac06c6437.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

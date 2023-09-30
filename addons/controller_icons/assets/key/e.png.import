@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xe4n818le3p8"
 path.s3tc="res://.godot/imported/e.png-7ec0ba2ffb631b8cc6de42153f818779.s3tc.ctex"
+path.etc2="res://.godot/imported/e.png-7ec0ba2ffb631b8cc6de42153f818779.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/controller_icons/assets/key/e.png"
-dest_files=["res://.godot/imported/e.png-7ec0ba2ffb631b8cc6de42153f818779.s3tc.ctex"]
+dest_files=["res://.godot/imported/e.png-7ec0ba2ffb631b8cc6de42153f818779.s3tc.ctex", "res://.godot/imported/e.png-7ec0ba2ffb631b8cc6de42153f818779.etc2.ctex"]
 
 [params]
 

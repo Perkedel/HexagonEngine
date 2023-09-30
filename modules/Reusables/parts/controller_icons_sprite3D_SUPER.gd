@@ -1,6 +1,19 @@
 @tool
 extends ControllerSprite3D
 
+@export_group('Billboardings')
+@export var faceToCamera:bool = false:
+	set(_faceToCamera):
+		faceToCamera = _faceToCamera
+		if faceToCamera:
+#			material_override = billboarderMaterial
+			pass
+		else:
+#			material_override = null
+			pass
+		pass
+@onready var billboarderMaterial: = preload("res://modules/ShadeMaterials/billboarders.tres")
+
 @export_group('Feedback')
 @export var colorNormal:Color = Color.WHITE
 @export var colorPressed:Color = Color.GRAY

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmbp2hbt0dhx5"
+path="res://.godot/imported/crate.obj-84085d503d4e009cd522ffe929f0ee62.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crate.obj-84085d503d4e009cd522ffe929f0ee62.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/crate.obj"
+dest_files=["res://.godot/imported/crate.obj-84085d503d4e009cd522ffe929f0ee62.mesh", "res://.godot/imported/crate.obj-84085d503d4e009cd522ffe929f0ee62.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

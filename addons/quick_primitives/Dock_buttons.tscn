@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bm26axxce2wsj"]
+
+[ext_resource type="Texture2D" uid="uid://dd3j03ohh7hy4" path="res://addons/quick_primitives/textures/cube.png" id="1_2mbav"]
+[ext_resource type="Script" path="res://addons/quick_primitives/Button.cs" id="2_8yar4"]
+[ext_resource type="Texture2D" uid="uid://hyh370gwgt7b" path="res://addons/quick_primitives/textures/capsule.png" id="3_icn0w"]
+[ext_resource type="Texture2D" uid="uid://qm5l1i77mxwl" path="res://addons/quick_primitives/textures/cylindre.png" id="4_3211i"]
+[ext_resource type="Texture2D" uid="uid://bgy7wbg3xlcey" path="res://addons/quick_primitives/textures/plane.png" id="5_qavjd"]
+[ext_resource type="Texture2D" uid="uid://bw7av1tfk5aiv" path="res://addons/quick_primitives/textures/prism.png" id="6_1watp"]
+[ext_resource type="Texture2D" uid="uid://r8w5pqpc1kqi" path="res://addons/quick_primitives/textures/sphere.png" id="7_wirbx"]
+[ext_resource type="Texture2D" uid="uid://drcql3eahma7f" path="res://addons/quick_primitives/textures/torus.png" id="8_ovjqt"]
+[ext_resource type="Texture2D" uid="uid://bk7s10bs53vdr" path="res://addons/quick_primitives/textures/tube.png" id="9_og2xj"]
+[ext_resource type="Texture2D" uid="uid://darci8bkbhitm" path="res://addons/quick_primitives/textures/Cone.png" id="10_xpeb8"]
+[ext_resource type="Texture2D" uid="uid://bu2h4kqtwu0f7" path="res://addons/quick_primitives/textures/Icosphere.png" id="11_xflcp"]
+
+[node name="Shortcuts" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="HFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cube" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("1_2mbav")
+script = ExtResource("2_8yar4")
+
+[node name="Capsule" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("3_icn0w")
+script = ExtResource("2_8yar4")
+
+[node name="Cylinder" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("4_3211i")
+script = ExtResource("2_8yar4")
+
+[node name="Plane" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("5_qavjd")
+script = ExtResource("2_8yar4")
+
+[node name="Prism" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("6_1watp")
+script = ExtResource("2_8yar4")
+
+[node name="Sphere" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("7_wirbx")
+script = ExtResource("2_8yar4")
+
+[node name="Torus" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("8_ovjqt")
+script = ExtResource("2_8yar4")
+
+[node name="Tube" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("9_og2xj")
+script = ExtResource("2_8yar4")
+
+[node name="Cone" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("10_xpeb8")
+script = ExtResource("2_8yar4")
+
+[node name="Icosphere" type="TextureButton" parent="Control"]
+layout_mode = 2
+texture_normal = ExtResource("11_xflcp")
+script = ExtResource("2_8yar4")

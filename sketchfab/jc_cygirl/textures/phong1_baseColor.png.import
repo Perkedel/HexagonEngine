@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkuk32py26dfm"
 path.s3tc="res://.godot/imported/phong1_baseColor.png-1be7023f289b51217ca0a9729d97146c.s3tc.ctex"
+path.etc2="res://.godot/imported/phong1_baseColor.png-1be7023f289b51217ca0a9729d97146c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/jc_cygirl/textures/phong1_baseColor.png"
-dest_files=["res://.godot/imported/phong1_baseColor.png-1be7023f289b51217ca0a9729d97146c.s3tc.ctex"]
+dest_files=["res://.godot/imported/phong1_baseColor.png-1be7023f289b51217ca0a9729d97146c.s3tc.ctex", "res://.godot/imported/phong1_baseColor.png-1be7023f289b51217ca0a9729d97146c.etc2.ctex"]
 
 [params]
 

@@ -218,11 +218,10 @@ libraries = {
 [node name="Explodos" type="GPUParticles3D" parent="."]
 emitting = false
 amount = 250
-lifetime = 10.0
+lifetime = 60.0
 one_shot = true
 explosiveness = 1.0
 fixed_fps = 60
-visibility_aabb = AABB(-1, -1, -1, 2, 2, 2)
 trail_enabled = true
 trail_lifetime = 1.0
 process_material = ExtResource("5_kxplt")

@@ -1,0 +1,209 @@
+[gd_scene load_steps=20 format=3 uid="uid://db312x4fy3meb"]
+
+[ext_resource type="Script" path="res://addons/gkanban/components/ListMenu.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dkeao5wdedf2q" path="res://addons/gkanban/components/CardButton.tscn" id="2"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_bold.tres" id="2_oen8n"]
+[ext_resource type="Texture2D" uid="uid://bv1ixkoiig51m" path="res://addons/gkanban/assets/icons/png/close-line-white.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bmi4uig3jtnwq" path="res://addons/gkanban/assets/icons/png/close-line.png" id="4"]
+[ext_resource type="PackedScene" uid="uid://72yeam2dkgk3" path="res://addons/gkanban/components/MenuListButton.tscn" id="5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjp8h"]
+content_margin_left = 0.0
+content_margin_top = 16.0
+content_margin_right = 0.0
+content_margin_bottom = 24.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1hps"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gved5"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mhp1"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wni5a"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkjr3"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s2rk"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5smvk"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rr5ye"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5den"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txoo6"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwd8h"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.854902, 0.886275, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s06ec"]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.654902, 0.752941, 0.811765, 1)
+
+[node name="ListMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="BG" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_right = 14.0
+offset_bottom = 14.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjp8h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="Label" type="Label" parent="BG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("2_oen8n")
+text = "LIST OPTIONS"
+horizontal_alignment = 1
+
+[node name="CloseButton" parent="BG/VBoxContainer/HBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("3")
+
+[node name="MarginContainer2" type="MarginContainer" parent="BG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 8
+
+[node name="MoveToFirstButton" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c1hps")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gved5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gved5")
+text = "Move To First"
+
+[node name="MoveLeftButton" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_6mhp1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wni5a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wni5a")
+text = "Move Left"
+
+[node name="MoveRightButton" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkjr3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1s2rk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1s2rk")
+text = "Move Right"
+
+[node name="MoveToLast" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5smvk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rr5ye")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rr5ye")
+text = "Move To Last"
+
+[node name="Duplicate" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_q5den")
+theme_override_styles/hover = SubResource("StyleBoxFlat_txoo6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_txoo6")
+text = "Duplicate"
+
+[node name="Delete" parent="BG/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_fwd8h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s06ec")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s06ec")
+text = "Delete"
+
+[connection signal="pressed" from="BG/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/MoveToFirstButton" to="." method="_on_MoveToFirstButton_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/MoveLeftButton" to="." method="_on_MoveLeftButton_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/MoveRightButton" to="." method="_on_MoveRightButton_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/MoveToLast" to="." method="_on_MoveToLast_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/Duplicate" to="." method="_on_Duplicate_pressed"]
+[connection signal="pressed" from="BG/VBoxContainer/Delete" to="." method="_on_Delete_pressed"]

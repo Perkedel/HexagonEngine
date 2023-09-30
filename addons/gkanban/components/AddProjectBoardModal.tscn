@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddciw3fic3jj6"]
+
+[ext_resource type="Script" path="res://addons/gkanban/components/AddProjectBoardModal.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bndv8h03lotkr" path="res://addons/gkanban/components/ModalHeader.tscn" id="2"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_bold.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://cvb536bx8nw4k" path="res://addons/gkanban/components/PrimaryButton.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://davth41ug7aah" path="res://addons/gkanban/components/FormInput.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cg8ejb03o7ehi" path="res://addons/gkanban/components/FormTextarea.tscn" id="9"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6nvq"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 32.0
+bg_color = Color(0.811765, 0.854902, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msuxp"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="AddProjectBoardModal" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.376471)
+script = ExtResource("1")
+project_board_name_input_path = NodePath("CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer/FormInput")
+project_board_description_textarea_path = NodePath("CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer2/FormTextarea")
+alert_container_path = NodePath("CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/AlertContainer")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="ModalHeader" parent="CenterContainer/VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m6nvq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="AlertContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("3")
+text = "Name*"
+
+[node name="FormInput" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer" instance=ExtResource("5")]
+layout_mode = 2
+caret_blink = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("3")
+text = "Description"
+
+[node name="FormTextarea" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer/VBoxContainer2" instance=ExtResource("9")]
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_msuxp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="CancelButton" parent="CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+text = "CANCEL"
+
+[node name="AddButton" parent="CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+text = "ADD"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer/CancelButton" to="." method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer/AddButton" to="." method="_on_AddButton_pressed"]

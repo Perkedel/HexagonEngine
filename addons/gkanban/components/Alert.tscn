@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjtcxirt20aos"]
+
+[ext_resource type="Script" path="res://addons/gkanban/components/Alert.gd" id="1"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="2_i3jw0"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_danger_normal.tres" id="3_m3a55"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_danger_hover.tres" id="4_a3ydl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77r2n"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 0.733333, 0.752941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.901961, 0.223529, 0.27451, 1)
+
+[node name="Alert" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 14.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_77r2n")
+script = ExtResource("1")
+alert_label_path = NodePath("HBoxContainer/AlertText")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="AlertText" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.764706, 0.129412, 0.176471, 1)
+theme_override_fonts/font = ExtResource("2_i3jw0")
+text = "Alert Message"
+
+[node name="CloseButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i3jw0")
+theme_override_styles/normal = ExtResource("3_m3a55")
+theme_override_styles/hover = ExtResource("4_a3ydl")
+theme_override_styles/pressed = ExtResource("4_a3ydl")
+text = "X"
+
+[connection signal="pressed" from="HBoxContainer/CloseButton" to="." method="_on_CloseButton_pressed"]

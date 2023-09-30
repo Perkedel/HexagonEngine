@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cghv20qf40b20"
+path="res://.godot/imported/chair_A.obj-98d675f9eb41210a847173a0fb8b127e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chair_A.obj-98d675f9eb41210a847173a0fb8b127e.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/chair_A.obj"
+dest_files=["res://.godot/imported/chair_A.obj-98d675f9eb41210a847173a0fb8b127e.mesh", "res://.godot/imported/chair_A.obj-98d675f9eb41210a847173a0fb8b127e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

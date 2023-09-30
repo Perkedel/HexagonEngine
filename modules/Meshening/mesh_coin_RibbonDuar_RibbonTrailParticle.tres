@@ -1,0 +1,8 @@
+[gd_resource type="RibbonTrailMesh" load_steps=2 format=3 uid="uid://ccgoh5e0deoso"]
+
+[ext_resource type="Material" uid="uid://c5nedj03noh2d" path="res://modules/ShadeMaterials/mesh_coin_RibbonTrailparticle_material.tres" id="1_7hbkp"]
+
+[resource]
+material = ExtResource("1_7hbkp")
+size = 0.2
+section_segments = 5

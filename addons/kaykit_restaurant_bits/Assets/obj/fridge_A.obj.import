@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kbs8rncxnj3c"
+path="res://.godot/imported/fridge_A.obj-94a496a4d4a533d64cc01b4f056a454c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fridge_A.obj-94a496a4d4a533d64cc01b4f056a454c.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/fridge_A.obj"
+dest_files=["res://.godot/imported/fridge_A.obj-94a496a4d4a533d64cc01b4f056a454c.mesh", "res://.godot/imported/fridge_A.obj-94a496a4d4a533d64cc01b4f056a454c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

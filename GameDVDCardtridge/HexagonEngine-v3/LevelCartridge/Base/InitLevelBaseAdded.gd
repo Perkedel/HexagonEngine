@@ -1,5 +1,6 @@
 extends HexagonLevel
 
+@onready var hideableTester:Node3D = $Hideable_test
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,3 +39,8 @@ func _notification(what: int) -> void:
 			pass
 	super._notification(what)
 	pass
+
+
+func _on_interactible_yet_interacted(with):
+	hideableTester.toggleVisible()
+	pass # Replace with function body.

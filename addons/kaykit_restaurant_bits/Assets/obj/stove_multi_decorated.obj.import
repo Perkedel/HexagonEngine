@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mw23du7oflu2"
+path="res://.godot/imported/stove_multi_decorated.obj-0179d4b9ad784f190d6acfef04219329.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stove_multi_decorated.obj-0179d4b9ad784f190d6acfef04219329.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/stove_multi_decorated.obj"
+dest_files=["res://.godot/imported/stove_multi_decorated.obj-0179d4b9ad784f190d6acfef04219329.mesh", "res://.godot/imported/stove_multi_decorated.obj-0179d4b9ad784f190d6acfef04219329.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

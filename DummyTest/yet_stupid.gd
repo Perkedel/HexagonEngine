@@ -1,19 +1,22 @@
 extends CharacterBody3D
+class_name YetStupid
 
 # Godot provided the template!
 # pls yoink View from https://github.com/KenneyNL/Starter-Kit-3D-Platformer
-enum OnDeathMode{RespawnNow,HideThis,StayThere}
+enum OnDeathMode{RespawnNow,HideThis,StayThere,RestartLevel,GameOver}
 enum InteractPerspectiveMode{Direct,Broad}
 
 @export_group('Properties')
 @export var HP:float = 100
-@export var SPEED:float = 250.0
-@export var SPEED_EXTRA:float = 250.0
+@export var PON:float = 10
+@export var SPEED:float = 300.0
+@export var SPEED_EXTRA:float = 300.0
 @export var JUMP_VELOCITY:float = 4.5
 @export var enforceMaxHP:bool = true
 @export var onDeath:OnDeathMode = OnDeathMode.RespawnNow
 @export var onDeathActsIn:float = 5
 @export var onDeathDelayAwaitAnimation:bool = true
+var currentPon:float = PON
 var currentHP:float = HP
 var currentSpeed:float = SPEED
 var currentJumpVelocity:float = 4.5
@@ -23,15 +26,16 @@ var isSprinting:bool = false
 # & qubodup's wood collission
 # https://freesound.org/people/qubodup/sounds/54850/
 @export_group('Sounds')
-@export var jumpSound:AudioStream = preload("res://Audio/EfekSuara/344500__jeremysykes__jump05.wav")
+#@export var jumpSound:AudioStream = preload("res://Audio/EfekSuara/344500__jeremysykes__jump05.wav")
 #@export var jumpSound:AudioStream = preload("res://addons/kenney digital audio/phase_jump_1.ogg")
-@export var landedSound:AudioStream = preload('res://Audio/EfekSuara/WoodCollision-01.wav')
-@export var hurtSound:AudioStream = preload("res://Audio/EfekSuara/341243__sharesynth__hurt02.wav")
+#@export var landedSound:AudioStream = preload('res://Audio/EfekSuara/WoodCollision-01.wav')
+#@export var hurtSound:AudioStream = preload("res://Audio/EfekSuara/341243__sharesynth__hurt02.wav")
+#@export var cureSound:AudioStream = preload('res://modules/Reusables/AudioRandomizer/cure_SoundRandom.tres')
 @export var cureSound:AudioStream = preload('res://modules/Reusables/AudioRandomizer/cure_SoundRandom.tres')
-@export var jumpSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/jump_SoundRandom.tres")
-@export var landedSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/landed_SoundRandom.tres")
-@export var hurtSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/hurt_SoundRandom.tres")
-@export var deathSoundRandom:AudioStreamRandomizer = preload("res://modules/Reusables/AudioRandomizer/death-funnyExplode_SoundRandom.tres")
+@export var jumpSound:AudioStream = preload("res://modules/Reusables/AudioRandomizer/jump_SoundRandom.tres")
+@export var landedSound:AudioStream = preload("res://modules/Reusables/AudioRandomizer/landed_SoundRandom.tres")
+@export var hurtSound:AudioStream = preload("res://modules/Reusables/AudioRandomizer/hurt_SoundRandom.tres")
+@export var deathSound:AudioStream = preload("res://modules/Reusables/AudioRandomizer/death-funnyExplode_SoundRandom.tres")
 # https://freesound.org/people/jeremysykes/sounds/344500/ wait, this is my jump?! yeah guess..
 # yeah confirmed, that's my jump.
 
@@ -117,6 +121,9 @@ func getMaxHP() -> float:
 	return HP
 	pass
 
+func getPon() -> float:
+	return currentPon
+
 func getCamRig() -> Node3D:
 	return currentCameraRig
 	pass
@@ -126,7 +133,7 @@ func _death():
 		print('Eik Serkat: ' + self.name)
 		playAnimation('death')
 		vibrateo(1,1,2)
-		_centerSound(deathSoundRandom)
+		_centerSound(deathSound)
 		emitParticleForm()
 		onDeathTimer.start(onDeathActsIn)
 		alive = false
@@ -148,7 +155,9 @@ func _onDeathActs():
 	pass
 
 func damage(howMuch:float):
-	
+	if howMuch < 0:
+		printerr('Damage '+ self.name +' for '+ String.num(howMuch)+': howMuch cannot be less than 0.0!!')
+		return
 	currentHP -= howMuch
 	if currentHP < 0:
 		currentHP = 0
@@ -157,13 +166,16 @@ func damage(howMuch:float):
 	else:
 		playAnimation('hurt')
 		print('OUCH HP ' + String.num(currentHP))
-		_centerSound(hurtSoundRandom)
+		_centerSound(hurtSound)
 		vibrateo(1,1,.25)
 		squishForm(Vector3.RIGHT/2)
 		
 	pass
 
 func heal(howMuch:float):
+	if howMuch < 0:
+		printerr('Heal '+ self.name +' for '+ String.num(howMuch)+': howMuch cannot be less than 0.0!!')
+		return
 	currentHP += howMuch
 	if enforceMaxHP:
 		if currentHP > HP:
@@ -173,9 +185,34 @@ func heal(howMuch:float):
 	_centerSound(cureSound)
 	pass
 
+func collectItem(colliding:Node3D, what:String = 'Pon', amount:float = 1,argument:String=''):
+	match(what):
+		'Pon','Coin':
+			currentPon+=amount
+			pass
+		'Health':
+			heal(amount)
+			pass
+		'Poison':
+			damage(amount)
+			pass
+		_:
+			pass
+	if colliding.has_method('acknowledge'):
+		colliding.call('acknowledge',self)
+	pass
+
+func collectItemNode(colliding:Node3D):
+	if colliding:
+		match(colliding.collectType):
+			_:
+				pass
+		pass
+	pass
+
 func pushJump():
 	velocity.y = currentJumpVelocity
-	_feetSound(jumpSoundRandom)
+	_feetSound(jumpSound)
 	jumpedAlready = true
 	coyoteTimer = 0
 	jumpBufferStarted = false
@@ -225,7 +262,7 @@ func meMove(axes:Vector2 = Vector2.ZERO):
 
 func doWillFlooring():
 	if not wasFloored:
-		_feetSound(landedSoundRandom)
+		_feetSound(landedSound)
 		# if there is a jump buffer, jump!
 		if jumpBufferStarted:
 			resetJump()
@@ -333,11 +370,11 @@ func squishForm(byWha:Vector3,forHowLong:float=.25):
 		pass
 	pass
 
-func emitParticleForm():
+func emitParticleForm(whichIs:String='death'):
 	for i in formsList:
 		if i.visible:
 			if i.has_method('emitParticle'):
-				i.call('emitParticle')
+				i.call('emitParticle',whichIs)
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -494,10 +531,11 @@ func _input(event: InputEvent) -> void:
 			interactNow()
 #		isSprinting = event.is_action(sprintHoldKey)
 		if event.is_action(sprintHoldKey):
-			isSprinting = true
-			pass
-		else:
-			isSprinting = false
+			if event.is_action_pressed(sprintHoldKey):
+				isSprinting = true
+				pass
+			elif event.is_action_released(sprintHoldKey):
+				isSprinting = false
 		inputer.x = -moveAxes[1]+moveAxes[0]
 		inputer.z = moveAxes[2]-moveAxes[3]
 #		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO)

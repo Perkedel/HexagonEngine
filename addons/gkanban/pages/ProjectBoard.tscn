@@ -1,0 +1,193 @@
+[gd_scene load_steps=15 format=3 uid="uid://cjgr031mebh2f"]
+
+[ext_resource type="Script" path="res://addons/gkanban/pages/ProjectBoard.gd" id="1"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_header1.tres" id="2_en282"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_project_board_hover.tres" id="3_eeqk6"]
+[ext_resource type="Texture2D" uid="uid://bseukjkaq2utl" path="res://addons/gkanban/assets/icons/png/delete-bin-6-line-white.png" id="6"]
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_regular.tres" id="6_h4lmp"]
+[ext_resource type="Texture2D" uid="uid://bkaxisgfec2q3" path="res://addons/gkanban/assets/icons/png/arrow-left-s-line-white.png" id="7"]
+[ext_resource type="StyleBox" path="res://addons/gkanban/text_resources/btn_outline_primary_sm.tres" id="7_l8buf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ii81g"]
+bg_color = Color(0.219608, 0.247059, 0.317647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jk3c"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kkds2"]
+font = ExtResource("2_en282")
+font_size = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmw0o"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.156863, 0.192157, 0.278431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_raxwl"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.156863, 0.192157, 0.278431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fwd1"]
+content_margin_left = 8.0
+content_margin_top = 0.0
+content_margin_right = 8.0
+content_margin_bottom = 0.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxe6e"]
+border_width_bottom = 1
+border_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="ProjectBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+project_board_name_label_path = NodePath("BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer/ProjectBoardName")
+list_container_path = NodePath("BG/BGMarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/MarginContainer/ListContainer")
+menu_container_path = NodePath("MenusContainer")
+project_board_name_and_edit_container_path = NodePath("BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer")
+project_board_name_path = NodePath("BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer/ProjectBoardName")
+project_board_name_edit_path = NodePath("BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer/ProjectBoardNameEdit")
+
+[node name="BG" type="PanelContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ii81g")
+
+[node name="BGMarginContainer" type="MarginContainer" parent="BG"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/BGMarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/BGMarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="BackButton" type="Button" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.643137, 0.721569, 0.768627, 1)
+theme_override_fonts/font = ExtResource("2_en282")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6jk3c")
+theme_override_styles/hover = ExtResource("3_eeqk6")
+theme_override_styles/pressed = ExtResource("3_eeqk6")
+icon = ExtResource("7")
+
+[node name="ProjectBoardNameAndEditContainer" type="MarginContainer" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="ProjectBoardName" type="Label" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer"]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+text = "Project Board"
+label_settings = SubResource("LabelSettings_kkds2")
+
+[node name="ProjectBoardNameEdit" type="LineEdit" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.270588, 0.380392, 0.666667, 1)
+theme_override_fonts/font = ExtResource("2_en282")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_xmw0o")
+theme_override_styles/focus = SubResource("StyleBoxFlat_raxwl")
+text = "asdfasdfasdf"
+expand_to_text_length = true
+caret_blink = true
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeleteButton" type="Button" parent="BG/BGMarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.643137, 0.721569, 0.768627, 1)
+theme_override_fonts/font = ExtResource("2_en282")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fwd1")
+icon = ExtResource("6")
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/BGMarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HSeparator" type="HSeparator" parent="BG/BGMarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_fxe6e")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG/BGMarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/BGMarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/BGMarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 16
+
+[node name="ListContainer" type="HBoxContainer" parent="BG/BGMarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="AddListButton" type="Button" parent="BG/BGMarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.643137, 0.721569, 0.768627, 1)
+theme_override_fonts/font = ExtResource("6_h4lmp")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("7_l8buf")
+theme_override_styles/hover = ExtResource("3_eeqk6")
+theme_override_styles/pressed = ExtResource("3_eeqk6")
+text = "ADD LIST"
+
+[node name="MenusContainer" type="Control" parent="."]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[connection signal="pressed" from="BG/BGMarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="text_submitted" from="BG/BGMarginContainer/VBoxContainer/HBoxContainer/ProjectBoardNameAndEditContainer/ProjectBoardNameEdit" to="." method="_on_ProjectBoardNameEdit_text_entered"]
+[connection signal="pressed" from="BG/BGMarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]
+[connection signal="pressed" from="BG/BGMarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/AddListButton" to="." method="_on_AddListButton_pressed"]

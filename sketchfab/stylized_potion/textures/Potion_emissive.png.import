@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://svx8aykf4eiy"
 path.s3tc="res://.godot/imported/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.ctex"
+path.etc2="res://.godot/imported/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/stylized_potion/textures/Potion_emissive.png"
-dest_files=["res://.godot/imported/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.ctex"]
+dest_files=["res://.godot/imported/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.s3tc.ctex", "res://.godot/imported/Potion_emissive.png-5f3200f337f21d5cfae2cec996964dd7.etc2.ctex"]
 
 [params]
 

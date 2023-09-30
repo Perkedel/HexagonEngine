@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3iyvfrl7ep53"]
+
+[ext_resource type="Script" path="res://modules/Meshening/kay_kit_coin.gd" id="1_56crh"]
+[ext_resource type="ArrayMesh" uid="uid://dlv1gdmc1clhp" path="res://addons/kaykit_prototype_bits/Assets/obj/Coin_A.obj" id="1_udoli"]
+[ext_resource type="Material" uid="uid://ch5fjctwu8rsp" path="res://modules/ShadeMaterials/mesh_coin_sparkle_ParticleProcessMaterial.tres" id="3_new7o"]
+[ext_resource type="BoxMesh" uid="uid://mrypt7co55vv" path="res://modules/Meshening/mesh_bean_smallCube_particle.tres" id="4_wyx3p"]
+
+[sub_resource type="Animation" id="Animation_0fvtc"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KayKitCoinMesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bvsse"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KayKitCoinMesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nmin"]
+_data = {
+"RESET": SubResource("Animation_0fvtc"),
+"idle": SubResource("Animation_bvsse")
+}
+
+[node name="KayKitCoin" type="Node3D"]
+script = ExtResource("1_56crh")
+
+[node name="KayKitCoinMesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_udoli")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_6nmin")
+}
+
+[node name="Explodos" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 5
+lifetime = 10.0
+one_shot = true
+explosiveness = 1.0
+trail_lifetime = 1.0
+process_material = ExtResource("3_new7o")
+draw_pass_1 = ExtResource("4_wyx3p")

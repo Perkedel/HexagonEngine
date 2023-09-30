@@ -1,3 +1,4 @@
-SfxrAudioStream
 AudioStreamRandomizer
+SfxrAudioStream
+StandardMaterial3D
 Theme

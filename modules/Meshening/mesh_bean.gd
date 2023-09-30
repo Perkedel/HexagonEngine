@@ -36,7 +36,9 @@ func squish(byWha:Vector3,forHowLong:float=.25):
 func emitParticle(whichType:String='death'):
 	match(whichType):
 		'death':
+#			print('explodesz')
 			explodos.restart()
+			pass
 		'cure':
 			pass
 		_:

@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://dknb3m4vwt5dw"]
+
+[ext_resource type="PackedScene" uid="uid://bndv8h03lotkr" path="res://addons/gkanban/components/ModalHeader.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cvb536bx8nw4k" path="res://addons/gkanban/components/PrimaryButton.tscn" id="3"]
+[ext_resource type="Script" path="res://addons/gkanban/components/MoveToListModal.gd" id="4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cu4u"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 32.0
+bg_color = Color(0.811765, 0.854902, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6j28n"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="MoveToListModal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4")
+list_menu_container_path = NodePath("BG/CenterContainer/ListDialog/PanelContainer/ListMenuContainer")
+list_dialog_path = NodePath("BG/CenterContainer/ListDialog")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.376471)
+
+[node name="CenterContainer" type="CenterContainer" parent="BG"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="ListDialog" type="VBoxContainer" parent="BG/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ModalHeader" parent="BG/CenterContainer/ListDialog" instance=ExtResource("1")]
+layout_mode = 2
+text = "MOVE TO LIST"
+
+[node name="PanelContainer" type="PanelContainer" parent="BG/CenterContainer/ListDialog"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4cu4u")
+
+[node name="ListMenuContainer" type="VBoxContainer" parent="BG/CenterContainer/ListDialog/PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="BG/CenterContainer/ListDialog"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6j28n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/CenterContainer/ListDialog/PanelContainer2"]
+layout_mode = 2
+alignment = 2
+
+[node name="CancelMove" parent="BG/CenterContainer/ListDialog/PanelContainer2/HBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+text = "CANCEL"
+
+[connection signal="pressed" from="BG/CenterContainer/ListDialog/PanelContainer2/HBoxContainer/CancelMove" to="." method="_on_PrimaryButton_pressed"]

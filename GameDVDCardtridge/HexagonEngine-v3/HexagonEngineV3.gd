@@ -2,6 +2,7 @@ extends Node
 
 @export var productTitleName:String = 'Hexagon Engine'
 @export var productTitleIcon:Texture = preload("res://Sprites/HexagonEngineSymbolVeryLarge.png")
+@export var productScoreIcon:Texture = preload('res://Sprites/MavrickleIcon.png')
 
 @export_subgroup('Main Navigation')
 @onready var LevelSpace = $LevelSpace
@@ -41,6 +42,15 @@ enum CanvasLayerMode {Usual = 1, Priority = 10}
 func monitorThisCharacter(person:Node) -> Node:
 	monitoredCharacter = person
 	return person
+	pass
+
+func setScoreIcon(to:Texture):
+#	print_rich('[b]SET SCORE ICON[/b]')
+	if UIplace:
+		if UIplace.has_method('setScoreIcon'):
+			
+#			print_rich('[b]SET SCORE ICON[/b]')
+			UIplace.call('setScoreIcon',to)
 	pass
 
 func SaveEverythingFirst():
@@ -116,6 +126,11 @@ func _process(delta):
 			# HP bar 0 to 100. Character can have more!
 			var rawHP:float = monitoredCharacter.call('getHP')
 			UIplace.setHP((rawHP/maxHP)*100)
+			UIplace.setHPRaw(rawHP)
+			pass
+		if monitoredCharacter.has_method('getPon'):
+			var rawPon:float = monitoredCharacter.call('getPon')
+			UIplace.setPon(rawPon)
 			pass
 		pass
 	pass

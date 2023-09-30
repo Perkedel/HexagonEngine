@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxak12nsqp47x"]
+
+[ext_resource type="Script" path="res://DummyTest/hideable_test.gd" id="1_ij5ai"]
+[ext_resource type="ArrayMesh" uid="uid://cl24ik58tmxux" path="res://addons/kaykit_prototype_bits/Assets/obj/Cube_Prototype_Small.obj" id="1_msp4h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rs1lt"]
+size = Vector3(2, 2, 2)
+
+[node name="Hideable_test" type="Node3D"]
+script = ExtResource("1_ij5ai")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = ExtResource("1_msp4h")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_rs1lt")

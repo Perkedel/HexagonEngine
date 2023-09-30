@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d284wkmo0vqfk"
 path.s3tc="res://.godot/imported/a.png-35cb6a74789d7796b5f5833c3c67ffde.s3tc.ctex"
+path.etc2="res://.godot/imported/a.png-35cb6a74789d7796b5f5833c3c67ffde.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/controller_icons/assets/xbox360/a.png"
-dest_files=["res://.godot/imported/a.png-35cb6a74789d7796b5f5833c3c67ffde.s3tc.ctex"]
+dest_files=["res://.godot/imported/a.png-35cb6a74789d7796b5f5833c3c67ffde.s3tc.ctex", "res://.godot/imported/a.png-35cb6a74789d7796b5f5833c3c67ffde.etc2.ctex"]
 
 [params]
 

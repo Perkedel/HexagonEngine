@@ -17,7 +17,8 @@ func _ready():
 func _redrawHPBar():
 	$TextureProgressLeft.value = HPvalue
 	# https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_format_string.html
-	HPformat = "%.0f" % round(HPvalue) if not useRawValue else String.num(round(HPRawValue))
+#	HPformat = "%.0f%%" % round(HPvalue) if not useRawValue else String.num(round(HPRawValue))
+	HPformat = (String.num(HPvalue,0)+'%') if not useRawValue else String.num(round(HPRawValue))
 	$LabelPanel/HPLabel.text = HPformat
 	$TextureProgressRight.value = HPvalue
 	

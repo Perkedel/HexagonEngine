@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chhfi2xj6wkuh"
+path="res://.godot/imported/kitchencounter_outercorner.obj-a446e0e775886b0f339ede8c18e63652.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchencounter_outercorner.obj-a446e0e775886b0f339ede8c18e63652.mesh"]
+
+source_file="res://addons/kaykit_restaurant_bits/Assets/obj/kitchencounter_outercorner.obj"
+dest_files=["res://.godot/imported/kitchencounter_outercorner.obj-a446e0e775886b0f339ede8c18e63652.mesh", "res://.godot/imported/kitchencounter_outercorner.obj-a446e0e775886b0f339ede8c18e63652.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

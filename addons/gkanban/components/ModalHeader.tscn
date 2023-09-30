@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bndv8h03lotkr"]
+
+[ext_resource type="FontFile" path="res://addons/gkanban/text_resources/font_header2.tres" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hbug"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.643137, 0.721569, 0.768627, 1)
+
+[node name="ModalHeader" type="Label"]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 400.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.219608, 0.247059, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_1hbug")
+text = "ADD A PROJECT BOARD"

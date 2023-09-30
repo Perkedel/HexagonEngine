@@ -1,0 +1,14 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://ch5fjctwu8rsp"]
+
+[resource]
+emission_shape = 1
+emission_sphere_radius = 0.25
+particle_flag_align_y = true
+particle_flag_rotate_y = true
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 2.5
+initial_velocity_max = 7.5
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+collision_use_scale = true

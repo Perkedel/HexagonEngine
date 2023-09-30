@@ -10,8 +10,24 @@ var whereMenuAreWePrev:String
 @export_group('Features')
 @export var excerciseActivateDeactivateMainNodes:bool = true
 
+@export_group('Collecting')
+@export var collectCoinGroup:String = 'coin'
+@export var collectCoinIcon:Texture = preload("res://Sprites/MavrickleIcon.png")
+
+var ponsInThisLevel:Array[Node3D]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#set score Icon
+#	print_rich('[b]SET SCORE ICON[/b]')
+	Singletoner.setScoreIcon.call_deferred(collectCoinIcon)
+	
+	# list all coins present in the level
+	for i in get_children():
+		if i.is_in_group(collectCoinGroup):
+			ponsInThisLevel.append(i)
+		pass
+	
 	if mainPlayer and mainCamera:
 		if mainCamera.has_method('assignCamera'):
 			mainCamera.call('assignCamera',mainPlayer)

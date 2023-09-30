@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://k4h2hvo701nd"
 path.s3tc="res://.godot/imported/Armure_baseColor.png-cb5863e2d191484579cdda736830e117.s3tc.ctex"
+path.etc2="res://.godot/imported/Armure_baseColor.png-cb5863e2d191484579cdda736830e117.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sketchfab/dark_astronaut/textures/Armure_baseColor.png"
-dest_files=["res://.godot/imported/Armure_baseColor.png-cb5863e2d191484579cdda736830e117.s3tc.ctex"]
+dest_files=["res://.godot/imported/Armure_baseColor.png-cb5863e2d191484579cdda736830e117.s3tc.ctex", "res://.godot/imported/Armure_baseColor.png-cb5863e2d191484579cdda736830e117.etc2.ctex"]
 
 [params]
 

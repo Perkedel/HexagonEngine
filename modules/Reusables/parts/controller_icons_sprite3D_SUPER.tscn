@@ -7,6 +7,7 @@
 [node name="SuperControllerIconsSprite3D" instance=ExtResource("1_n7aoj")]
 texture = ExtResource("2_0jxg5")
 script = ExtResource("2_8w66v")
+faceToCamera = false
 colorNormal = Color(1, 1, 1, 1)
 colorPressed = Color(0.454902, 0.454902, 0.454902, 1)
 path = "ui_accept"
