@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b13kt0res6iyf" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/CoineCounter.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bvvme5uagols7" path="res://GameDVDCardtridge/TemplateHexagonEngine/MenuPart/HUD/WeponContaine.tscn" id="6"]
 
-[sub_resource type="FontFile" id="FontFile_uwxyx"]
+[sub_resource type="FontFile" id="FontFile_5y0lb"]
 resource_local_to_scene = true
 resource_name = "Ubuntu Medium 48"
 subpixel_positioning = 0
@@ -73,7 +73,7 @@ alignment = 1
 [node name="PauseButton" parent="TotalVBoxContainer/TopVBoxContainer/TopButtonings" instance=ExtResource("2")]
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = SubResource("FontFile_uwxyx")
+theme_override_fonts/font = SubResource("FontFile_5y0lb")
 shortcut = null
 
 [node name="CenterContainer" type="CenterContainer" parent="TotalVBoxContainer"]

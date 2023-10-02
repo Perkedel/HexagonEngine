@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvl5ahjmlldu2"]
+
+[ext_resource type="Script" path="res://modules/Meshening/form_contains.gd" id="1_41ild"]
+[ext_resource type="Material" uid="uid://bow5wm5wx8y18" path="res://modules/ShadeMaterials/mesh_bean_Explodos_ParticleProcessMaterial.tres" id="2_2cjmv"]
+[ext_resource type="SphereMesh" uid="uid://b7e7yu46ja2py" path="res://modules/Meshening/mesh_bean_smallBall_particle.tres" id="3_0pfac"]
+[ext_resource type="RibbonTrailMesh" uid="uid://b3mor7jdobxwr" path="res://modules/Meshening/mesh_bean_RibbonDuar_RibbonTrailParticle.tres" id="4_bd436"]
+[ext_resource type="Material" uid="uid://ch5fjctwu8rsp" path="res://modules/ShadeMaterials/mesh_coin_sparkle_ParticleProcessMaterial.tres" id="5_jgujg"]
+
+[sub_resource type="AnimationRootNode" id="AnimationRootNode_fynek"]
+
+[node name="FormContains" type="Node3D" node_paths=PackedStringArray("explodos", "sparkle", "shine")]
+script = ExtResource("1_41ild")
+explodos = NodePath("explodos")
+sparkle = NodePath("sparkle")
+shine = NodePath("shine")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationRootNode_fynek")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="explodos" type="GPUParticles3D" parent="."]
+lifetime = 60.0
+one_shot = true
+trail_enabled = true
+process_material = ExtResource("2_2cjmv")
+draw_passes = 2
+draw_pass_1 = ExtResource("3_0pfac")
+draw_pass_2 = ExtResource("4_bd436")
+
+[node name="sparkle" type="GPUParticles3D" parent="."]
+lifetime = 10.0
+one_shot = true
+process_material = ExtResource("5_jgujg")
+
+[node name="shine" type="GPUParticles3D" parent="."]

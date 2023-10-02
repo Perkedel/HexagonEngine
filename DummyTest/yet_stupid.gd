@@ -74,6 +74,7 @@ var coyoteTimer:float = .5
 @export var moveFrontKey:String = 'Jalan_Depan'
 @export var sprintHoldKey:String = 'Jalan_Tambah_Cepat'
 @export var jumpKey:String = 'Melompat'
+@export var interactKey:String = 'Valve_Interaksi_alt'
 
 @export_group('Controller')
 @export var onePlayerOnly:bool = true
@@ -185,6 +186,9 @@ func heal(howMuch:float):
 	_centerSound(cureSound)
 	pass
 
+func checkpoint(newPos:Vector3):
+	init_pos = newPos
+
 func collectItem(colliding:Node3D, what:String = 'Pon', amount:float = 1,argument:String=''):
 	match(what):
 		'Pon','Coin':
@@ -195,6 +199,9 @@ func collectItem(colliding:Node3D, what:String = 'Pon', amount:float = 1,argumen
 			pass
 		'Poison':
 			damage(amount)
+			pass
+		'Checkpoint':
+			checkpoint(colliding.position)
 			pass
 		_:
 			pass
@@ -304,7 +311,7 @@ func hoverInteract(me:CharacterBody3D):
 func unhoverInteract():
 	if interactionPerspectiveMode == InteractPerspectiveMode.Direct:
 		if interactibleBody:
-			print('RECMOOOOOOOOOOOOOOOOOVE')
+#			print('RECMOOOOOOOOOOOOOOOOOVE')
 			if interactibleBody.has_method('unhoverInteract'):
 				interactibleBody.call('unhoverInteract')
 			interactibleBody = null
@@ -524,10 +531,10 @@ func _input(event: InputEvent) -> void:
 		if event.is_action(moveBackKey):
 			moveAxes[3] = event.get_action_strength(moveBackKey)
 			pass
-		if event.is_action_pressed('Melompat'):
+		if event.is_action_pressed(jumpKey):
 			manageJump()
 			pass
-		if event.is_action_pressed('Valve_Interaksi_alt'):
+		if event.is_action_pressed(interactKey):
 			interactNow()
 #		isSprinting = event.is_action(sprintHoldKey)
 		if event.is_action(sprintHoldKey):

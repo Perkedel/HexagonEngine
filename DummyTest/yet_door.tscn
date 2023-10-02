@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj7ihaja265gh"]
+
+[ext_resource type="Script" path="res://DummyTest/yet_door.gd" id="1_1dvh3"]
+[ext_resource type="PackedScene" uid="uid://d1vvve4o0jglu" path="res://modules/Meshening/kay_kit_doorCube.tscn" id="2_rb0da"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eq5br"]
+size = Vector3(2, 2, 2)
+
+[node name="YetDoor" type="AnimatableBody3D"]
+script = ExtResource("1_1dvh3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_eq5br")
+
+[node name="Shapes" type="Node3D" parent="."]
+
+[node name="anDoor" parent="Shapes" instance=ExtResource("2_rb0da")]

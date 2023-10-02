@@ -1,20 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbxwcmi5bhtwr"]
+[gd_scene load_steps=5 format=3 uid="uid://dbxwcmi5bhtwr"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjljo7bqdob48" path="res://addons/kaykit_prototype_bits/Assets/obj/Floor_Prototype.obj" id="1_8m3pi"]
 [ext_resource type="Script" path="res://DummyTest/yet_flour.gd" id="1_n8h0k"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_v5ry4"]
-size = Vector3(4.03674, 1.00953, 3.95164)
+[ext_resource type="Shape3D" uid="uid://cfemcf10olgou" path="res://DummyTest/yet_flour_CollisionShape.tres" id="2_o5t0p"]
+[ext_resource type="ArrayMesh" uid="uid://7h5j5o0q52t5" path="res://addons/kaykit_prototype_bits/Assets/obj/Wall.obj" id="4_52tb5"]
 
 [node name="YetFlour" type="StaticBody3D"]
 script = ExtResource("1_n8h0k")
 
-[node name="Flour" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_8m3pi")
-skeleton = NodePath("../..")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_v5ry4")
+shape = ExtResource("2_o5t0p")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
 size = Vector3(4, 1, 4)
+
+[node name="Shapes" type="Node3D" parent="."]
+
+[node name="Floor" type="Node3D" parent="Shapes"]
+
+[node name="Flour" type="MeshInstance3D" parent="Shapes/Floor"]
+mesh = ExtResource("1_8m3pi")
+skeleton = NodePath("../../../..")
+
+[node name="Wall" type="Node3D" parent="Shapes"]
+visible = false
+
+[node name="Wall" type="MeshInstance3D" parent="Shapes/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = ExtResource("4_52tb5")
+skeleton = NodePath("../..")

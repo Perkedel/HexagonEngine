@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3jnp6pmv5s6"]
+
+[ext_resource type="PackedScene" uid="uid://dbxwcmi5bhtwr" path="res://DummyTest/yet_flour.tscn" id="1_qxfbc"]
+[ext_resource type="Script" path="res://DummyTest/yet_wall.gd" id="2_hyv2s"]
+[ext_resource type="Shape3D" uid="uid://blcajw148ljcu" path="res://DummyTest/yet_wall_CollisionShape.tres" id="2_pguwe"]
+
+[node name="YetWall" instance=ExtResource("1_qxfbc")]
+script = ExtResource("2_hyv2s")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = ExtResource("2_pguwe")
+
+[node name="GPUParticlesCollisionBox3D" parent="." index="1"]
+size = Vector3(4, 4, 1)
+
+[node name="Floor" parent="Shapes" index="0"]
+visible = false
+
+[node name="Wall" parent="Shapes" index="1"]
+visible = true

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbdlyfbmu4re7"]
+
+[ext_resource type="PackedScene" uid="uid://bvl5ahjmlldu2" path="res://modules/Meshening/form_contains.tscn" id="1_cd8lj"]
+[ext_resource type="Material" uid="uid://ch5fjctwu8rsp" path="res://modules/ShadeMaterials/mesh_coin_sparkle_ParticleProcessMaterial.tres" id="2_hhxhn"]
+[ext_resource type="BoxMesh" uid="uid://mrypt7co55vv" path="res://modules/Meshening/mesh_bean_smallCube_particle.tres" id="3_wchri"]
+[ext_resource type="CylinderMesh" uid="uid://yc05y0v67a2d" path="res://modules/Meshening/checkpointer_mesh.tres" id="4_d2k6x"]
+
+[node name="Checkpointer" node_paths=PackedStringArray("mesh") instance=ExtResource("1_cd8lj")]
+mesh = NodePath("MeshInstance3D")
+
+[node name="explodos" parent="." index="2"]
+emitting = false
+amount = 1000
+explosiveness = 1.0
+trail_lifetime = 12.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+mesh = ExtResource("4_d2k6x")
+
+[node name="sparkle" parent="." index="4"]
+emitting = false
+explosiveness = 1.0
+process_material = ExtResource("2_hhxhn")
+draw_pass_1 = ExtResource("3_wchri")
+
+[node name="shine" parent="." index="5"]
+emitting = false
+one_shot = true

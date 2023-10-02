@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dajwq6c2m7t8w"]
+
+[ext_resource type="Script" path="res://modules/Reusables/parts/Cutscenings/cinematic_cutscening_base.gd" id="1_muutm"]
+
+[node name="CinematicCutscening" type="Node3D"]
+script = ExtResource("1_muutm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

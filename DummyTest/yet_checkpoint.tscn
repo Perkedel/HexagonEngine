@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1aswgaarhkro"]
+
+[ext_resource type="PackedScene" uid="uid://byfysvjav4s0b" path="res://DummyTest/yet_coin.tscn" id="1_864k4"]
+[ext_resource type="PackedScene" uid="uid://bbdlyfbmu4re7" path="res://modules/Meshening/checkpointer.tscn" id="2_g7r3c"]
+
+[node name="YetCheckpoint" instance=ExtResource("1_864k4")]
+collectType = "Checkpoint"
+repeatable = true
+whatToDoAfter = "Stay"
+
+[node name="KayKitCoin" parent="Shapes" index="0"]
+visible = false
+
+[node name="Checkpointer" parent="Shapes" index="1" instance=ExtResource("2_g7r3c")]

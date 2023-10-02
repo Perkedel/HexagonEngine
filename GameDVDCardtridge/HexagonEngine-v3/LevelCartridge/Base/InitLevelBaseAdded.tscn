@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cy0tn2gj8kmdj"]
+[gd_scene load_steps=16 format=3 uid="uid://cy0tn2gj8kmdj"]
 
 [ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_5orq1"]
 [ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/yet_stupid.tscn" id="2_5uxn4"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://csk3t03olxaed" path="res://DummyTest/pilis_yet.tscn" id="9_jokx1"]
 [ext_resource type="PackedScene" uid="uid://byfysvjav4s0b" path="res://DummyTest/yet_coin.tscn" id="10_hybwj"]
 [ext_resource type="PackedScene" uid="uid://dxak12nsqp47x" path="res://DummyTest/hideable_test.tscn" id="11_8shok"]
+[ext_resource type="PackedScene" uid="uid://dj7ihaja265gh" path="res://DummyTest/yet_door.tscn" id="13_w8kh1"]
+[ext_resource type="PackedScene" uid="uid://b3jnp6pmv5s6" path="res://DummyTest/yet_wall.tscn" id="14_ki2pu"]
+[ext_resource type="PackedScene" uid="uid://d1aswgaarhkro" path="res://DummyTest/yet_checkpoint.tscn" id="15_dcoc3"]
 
 [node name="InitLevelBaseAdded" node_paths=PackedStringArray("mainPlayer", "mainCamera") instance=ExtResource("1_5orq1")]
 script = ExtResource("2_64sxu")
@@ -171,378 +174,575 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -12)
 [node name="YetFlour50" parent="." index="50" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -16)
 
-[node name="YetFlour51" parent="." index="51" instance=ExtResource("3_y1hng")]
+[node name="YetFlour123" parent="." index="51" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -20)
+
+[node name="YetFlour124" parent="." index="52" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -20)
+
+[node name="YetFlour125" parent="." index="53" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -24)
+
+[node name="YetFlour126" parent="." index="54" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -24)
+
+[node name="YetFlour127" parent="." index="55" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -28)
+
+[node name="YetFlour128" parent="." index="56" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -28)
+
+[node name="YetFlour129" parent="." index="57" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -32)
+
+[node name="YetFlour130" parent="." index="58" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -32)
+
+[node name="YetFlour131" parent="." index="59" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -36)
+
+[node name="YetFlour132" parent="." index="60" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -36)
+
+[node name="YetFlour133" parent="." index="61" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -40)
+
+[node name="YetFlour134" parent="." index="62" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -40)
+
+[node name="YetFlour135" parent="." index="63" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -44)
+
+[node name="YetFlour136" parent="." index="64" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -44)
+
+[node name="YetFlour137" parent="." index="65" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -48)
+
+[node name="YetFlour138" parent="." index="66" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -48)
+
+[node name="YetFlour139" parent="." index="67" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -52)
+
+[node name="YetFlour140" parent="." index="68" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -52)
+
+[node name="YetFlour141" parent="." index="69" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -56)
+
+[node name="YetFlour142" parent="." index="70" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -56)
+
+[node name="YetFlour143" parent="." index="71" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -60)
+
+[node name="YetFlour144" parent="." index="72" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -60)
+
+[node name="YetFlour145" parent="." index="73" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -64)
+
+[node name="YetFlour146" parent="." index="74" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -64)
+
+[node name="YetFlour147" parent="." index="75" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -68)
+
+[node name="YetFlour148" parent="." index="76" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -68)
+
+[node name="YetFlour149" parent="." index="77" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -72)
+
+[node name="YetFlour150" parent="." index="78" instance=ExtResource("3_y1hng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -72)
+
+[node name="YetFlour51" parent="." index="79" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, -8)
 
-[node name="YetFlour52" parent="." index="52" instance=ExtResource("3_y1hng")]
+[node name="YetFlour52" parent="." index="80" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, -12)
 
-[node name="YetFlour53" parent="." index="53" instance=ExtResource("3_y1hng")]
+[node name="YetFlour53" parent="." index="81" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, -16)
 
-[node name="YetFlour54" parent="." index="54" instance=ExtResource("3_y1hng")]
+[node name="YetFlour54" parent="." index="82" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, -8)
 
-[node name="YetFlour55" parent="." index="55" instance=ExtResource("3_y1hng")]
+[node name="YetFlour55" parent="." index="83" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 12)
 
-[node name="YetFlour56" parent="." index="56" instance=ExtResource("3_y1hng")]
+[node name="YetFlour56" parent="." index="84" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 8)
 
-[node name="YetFlour57" parent="." index="57" instance=ExtResource("3_y1hng")]
+[node name="YetFlour57" parent="." index="85" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 16)
 
-[node name="YetFlour106" parent="." index="58" instance=ExtResource("3_y1hng")]
+[node name="YetFlour106" parent="." index="86" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
 
-[node name="YetFlour82" parent="." index="59" instance=ExtResource("3_y1hng")]
+[node name="YetFlour82" parent="." index="87" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 20)
 
-[node name="YetFlour103" parent="." index="60" instance=ExtResource("3_y1hng")]
+[node name="YetFlour103" parent="." index="88" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 22)
 
-[node name="YetFlour83" parent="." index="61" instance=ExtResource("3_y1hng")]
+[node name="YetFlour83" parent="." index="89" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 24)
 
-[node name="YetFlour104" parent="." index="62" instance=ExtResource("3_y1hng")]
+[node name="YetFlour104" parent="." index="90" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 26)
 
-[node name="YetFlour84" parent="." index="63" instance=ExtResource("3_y1hng")]
+[node name="YetFlour84" parent="." index="91" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 28)
 
-[node name="YetFlour105" parent="." index="64" instance=ExtResource("3_y1hng")]
+[node name="YetFlour105" parent="." index="92" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 30)
 
-[node name="YetFlour85" parent="." index="65" instance=ExtResource("3_y1hng")]
+[node name="YetFlour85" parent="." index="93" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 32)
 
-[node name="YetFlour86" parent="." index="66" instance=ExtResource("3_y1hng")]
+[node name="YetFlour86" parent="." index="94" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 7, 32)
 
-[node name="YetFlour121" parent="." index="67" instance=ExtResource("3_y1hng")]
+[node name="YetFlour121" parent="." index="95" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 6.5, 32)
 
-[node name="YetFlour119" parent="." index="68" instance=ExtResource("3_y1hng")]
+[node name="YetFlour119" parent="." index="96" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 6, 32)
 
-[node name="YetFlour120" parent="." index="69" instance=ExtResource("3_y1hng")]
+[node name="YetFlour120" parent="." index="97" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 5.5, 32)
 
-[node name="YetFlour87" parent="." index="70" instance=ExtResource("3_y1hng")]
+[node name="YetFlour87" parent="." index="98" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 7, 32)
 
-[node name="YetFlour88" parent="." index="71" instance=ExtResource("3_y1hng")]
+[node name="YetFlour88" parent="." index="99" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 36)
 
-[node name="YetFlour89" parent="." index="72" instance=ExtResource("3_y1hng")]
+[node name="YetFlour89" parent="." index="100" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 7, 36)
 
-[node name="YetFlour90" parent="." index="73" instance=ExtResource("3_y1hng")]
+[node name="YetFlour90" parent="." index="101" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 7, 36)
 
-[node name="YetFlour91" parent="." index="74" instance=ExtResource("3_y1hng")]
+[node name="YetFlour91" parent="." index="102" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 40)
 
-[node name="YetFlour92" parent="." index="75" instance=ExtResource("3_y1hng")]
+[node name="YetFlour92" parent="." index="103" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 7, 40)
 
-[node name="YetFlour93" parent="." index="76" instance=ExtResource("3_y1hng")]
+[node name="YetFlour93" parent="." index="104" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 7, 40)
 
-[node name="YetFlour94" parent="." index="77" instance=ExtResource("3_y1hng")]
+[node name="YetFlour94" parent="." index="105" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 44)
 
-[node name="YetFlour95" parent="." index="78" instance=ExtResource("3_y1hng")]
+[node name="YetFlour95" parent="." index="106" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 9, 44)
 
-[node name="YetFlour96" parent="." index="79" instance=ExtResource("3_y1hng")]
+[node name="YetFlour96" parent="." index="107" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 9, 44)
 
-[node name="YetFlour97" parent="." index="80" instance=ExtResource("3_y1hng")]
+[node name="YetFlour97" parent="." index="108" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 48)
 
-[node name="YetFlour98" parent="." index="81" instance=ExtResource("3_y1hng")]
+[node name="YetFlour98" parent="." index="109" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 9, 48)
 
-[node name="YetFlour99" parent="." index="82" instance=ExtResource("3_y1hng")]
+[node name="YetFlour99" parent="." index="110" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 9, 48)
 
-[node name="YetFlour100" parent="." index="83" instance=ExtResource("3_y1hng")]
+[node name="YetFlour100" parent="." index="111" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 52)
 
-[node name="YetFlour101" parent="." index="84" instance=ExtResource("3_y1hng")]
+[node name="YetFlour101" parent="." index="112" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 9, 52)
 
-[node name="YetFlour102" parent="." index="85" instance=ExtResource("3_y1hng")]
+[node name="YetFlour102" parent="." index="113" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 9, 52)
 
-[node name="YetFlour58" parent="." index="86" instance=ExtResource("3_y1hng")]
+[node name="YetFlour58" parent="." index="114" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 12)
 
-[node name="YetFlour59" parent="." index="87" instance=ExtResource("3_y1hng")]
+[node name="YetFlour59" parent="." index="115" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 8)
 
-[node name="YetFlour60" parent="." index="88" instance=ExtResource("3_y1hng")]
+[node name="YetFlour60" parent="." index="116" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 16)
 
-[node name="YetFlour61" parent="." index="89" instance=ExtResource("3_y1hng")]
+[node name="YetFlour61" parent="." index="117" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 12)
 
-[node name="YetFlour62" parent="." index="90" instance=ExtResource("3_y1hng")]
+[node name="YetFlour62" parent="." index="118" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 8)
 
-[node name="YetFlour63" parent="." index="91" instance=ExtResource("3_y1hng")]
+[node name="YetFlour63" parent="." index="119" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 16)
 
-[node name="YetFlour107" parent="." index="92" instance=ExtResource("3_y1hng")]
+[node name="YetFlour107" parent="." index="120" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.5, 18)
 
-[node name="YetFlour108" parent="." index="93" instance=ExtResource("3_y1hng")]
+[node name="YetFlour108" parent="." index="121" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 20)
 
-[node name="YetFlour109" parent="." index="94" instance=ExtResource("3_y1hng")]
+[node name="YetFlour109" parent="." index="122" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, 22)
 
-[node name="YetFlour110" parent="." index="95" instance=ExtResource("3_y1hng")]
+[node name="YetFlour110" parent="." index="123" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 24)
 
-[node name="YetFlour111" parent="." index="96" instance=ExtResource("3_y1hng")]
+[node name="YetFlour111" parent="." index="124" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, 26)
 
-[node name="YetFlour112" parent="." index="97" instance=ExtResource("3_y1hng")]
+[node name="YetFlour112" parent="." index="125" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 28)
 
-[node name="YetFlour113" parent="." index="98" instance=ExtResource("3_y1hng")]
+[node name="YetFlour113" parent="." index="126" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2.5, 28)
 
-[node name="YetFlour114" parent="." index="99" instance=ExtResource("3_y1hng")]
+[node name="YetFlour114" parent="." index="127" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, 28)
 
-[node name="YetFlour115" parent="." index="100" instance=ExtResource("3_y1hng")]
+[node name="YetFlour115" parent="." index="128" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 3.5, 28)
 
-[node name="YetFlour116" parent="." index="101" instance=ExtResource("3_y1hng")]
+[node name="YetFlour116" parent="." index="129" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, 28)
 
-[node name="YetFlour117" parent="." index="102" instance=ExtResource("3_y1hng")]
+[node name="YetFlour117" parent="." index="130" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4.5, 28)
 
-[node name="YetFlour118" parent="." index="103" instance=ExtResource("3_y1hng")]
+[node name="YetFlour118" parent="." index="131" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 5, 32)
 
-[node name="YetFlour122" parent="." index="104" instance=ExtResource("3_y1hng")]
+[node name="YetFlour122" parent="." index="132" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 5, 28)
 
-[node name="YetFlour64" parent="." index="105" instance=ExtResource("3_y1hng")]
+[node name="YetFlour64" parent="." index="133" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -1, 12)
 
-[node name="YetFlour65" parent="." index="106" instance=ExtResource("3_y1hng")]
+[node name="YetFlour65" parent="." index="134" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -1, 8)
 
-[node name="YetFlour66" parent="." index="107" instance=ExtResource("3_y1hng")]
+[node name="YetFlour66" parent="." index="135" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -1, 16)
 
-[node name="YetFlour67" parent="." index="108" instance=ExtResource("3_y1hng")]
+[node name="YetFlour67" parent="." index="136" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, 12)
 
-[node name="YetFlour68" parent="." index="109" instance=ExtResource("3_y1hng")]
+[node name="YetFlour68" parent="." index="137" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, 8)
 
-[node name="YetFlour69" parent="." index="110" instance=ExtResource("3_y1hng")]
+[node name="YetFlour69" parent="." index="138" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, 16)
 
-[node name="YetFlour70" parent="." index="111" instance=ExtResource("3_y1hng")]
+[node name="YetFlour70" parent="." index="139" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 12)
 
-[node name="YetFlour71" parent="." index="112" instance=ExtResource("3_y1hng")]
+[node name="YetFlour71" parent="." index="140" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 8)
 
-[node name="YetFlour72" parent="." index="113" instance=ExtResource("3_y1hng")]
+[node name="YetFlour72" parent="." index="141" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 16)
 
-[node name="YetFlour73" parent="." index="114" instance=ExtResource("3_y1hng")]
+[node name="YetFlour73" parent="." index="142" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, 12)
 
-[node name="YetFlour74" parent="." index="115" instance=ExtResource("3_y1hng")]
+[node name="YetFlour74" parent="." index="143" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, 8)
 
-[node name="YetFlour75" parent="." index="116" instance=ExtResource("3_y1hng")]
+[node name="YetFlour75" parent="." index="144" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, 16)
 
-[node name="YetFlour76" parent="." index="117" instance=ExtResource("3_y1hng")]
+[node name="YetFlour76" parent="." index="145" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, 12)
 
-[node name="YetFlour77" parent="." index="118" instance=ExtResource("3_y1hng")]
+[node name="YetFlour77" parent="." index="146" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, 8)
 
-[node name="YetFlour78" parent="." index="119" instance=ExtResource("3_y1hng")]
+[node name="YetFlour78" parent="." index="147" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1, 16)
 
-[node name="YetFlour79" parent="." index="120" instance=ExtResource("3_y1hng")]
+[node name="YetFlour79" parent="." index="148" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, 12)
 
-[node name="YetFlour80" parent="." index="121" instance=ExtResource("3_y1hng")]
+[node name="YetFlour80" parent="." index="149" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, 8)
 
-[node name="YetFlour81" parent="." index="122" instance=ExtResource("3_y1hng")]
+[node name="YetFlour81" parent="." index="150" instance=ExtResource("3_y1hng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1, 16)
 
-[node name="CamRig" parent="." index="123" node_paths=PackedStringArray("target") instance=ExtResource("4_a1nfo")]
+[node name="CamRig" parent="." index="151" node_paths=PackedStringArray("target") instance=ExtResource("4_a1nfo")]
 transform = Transform3D(0.866025, 0.12941, -0.482963, 0, 0.965926, 0.258819, 0.5, -0.224144, 0.836516, 0, 0, 0)
 target = NodePath("../YetStupid")
 ownActive = true
 
-[node name="AcidZoneArea" parent="." index="126" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea" parent="." index="154" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
 
-[node name="AcidZoneArea2" parent="." index="127" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea2" parent="." index="155" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
 
-[node name="AcidZoneArea3" parent="." index="128" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea3" parent="." index="156" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
 
-[node name="AcidZoneArea4" parent="." index="129" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea4" parent="." index="157" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -2)
 
-[node name="AcidZoneArea5" parent="." index="130" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea5" parent="." index="158" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 0)
 
-[node name="AcidZoneArea6" parent="." index="131" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea6" parent="." index="159" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 2)
 
-[node name="AcidZoneArea7" parent="." index="132" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea7" parent="." index="160" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
 
-[node name="AcidZoneArea8" parent="." index="133" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea8" parent="." index="161" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 2)
 
-[node name="AcidZoneArea9" parent="." index="134" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea9" parent="." index="162" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -2)
 
-[node name="AcidZoneArea10" parent="." index="135" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea10" parent="." index="163" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -2)
 
-[node name="AcidZoneArea11" parent="." index="136" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea11" parent="." index="164" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
 
-[node name="AcidZoneArea12" parent="." index="137" instance=ExtResource("6_n70ud")]
+[node name="AcidZoneArea12" parent="." index="165" instance=ExtResource("6_n70ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 2)
 
-[node name="CureZone" parent="." index="138" instance=ExtResource("7_l6v3y")]
+[node name="CureZone" parent="." index="166" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
 
-[node name="CureZone2" parent="." index="139" instance=ExtResource("7_l6v3y")]
+[node name="CureZone2" parent="." index="167" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 2)
 
-[node name="CureZone3" parent="." index="140" instance=ExtResource("7_l6v3y")]
+[node name="CureZone3" parent="." index="168" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -2)
 
-[node name="CureZone4" parent="." index="141" instance=ExtResource("7_l6v3y")]
+[node name="CureZone4" parent="." index="169" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 0)
 
-[node name="CureZone5" parent="." index="142" instance=ExtResource("7_l6v3y")]
+[node name="CureZone5" parent="." index="170" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, 2)
 
-[node name="CureZone6" parent="." index="143" instance=ExtResource("7_l6v3y")]
+[node name="CureZone6" parent="." index="171" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -2)
 
-[node name="CureZone7" parent="." index="144" instance=ExtResource("7_l6v3y")]
+[node name="CureZone7" parent="." index="172" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 0)
 
-[node name="CureZone8" parent="." index="145" instance=ExtResource("7_l6v3y")]
+[node name="CureZone8" parent="." index="173" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 2)
 
-[node name="CureZone9" parent="." index="146" instance=ExtResource("7_l6v3y")]
+[node name="CureZone9" parent="." index="174" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -2)
 
-[node name="CureZone10" parent="." index="147" instance=ExtResource("7_l6v3y")]
+[node name="CureZone10" parent="." index="175" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
 
-[node name="CureZone11" parent="." index="148" instance=ExtResource("7_l6v3y")]
+[node name="CureZone11" parent="." index="176" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 2)
 
-[node name="CureZone12" parent="." index="149" instance=ExtResource("7_l6v3y")]
+[node name="CureZone12" parent="." index="177" instance=ExtResource("7_l6v3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)
 
-[node name="Interactible_yet" parent="." index="150" instance=ExtResource("8_fbke6")]
+[node name="Interactible_yet" parent="." index="178" instance=ExtResource("8_fbke6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
 
-[node name="PilisYet" parent="." index="151" instance=ExtResource("9_jokx1")]
+[node name="Seflie_button" parent="." index="179" instance=ExtResource("8_fbke6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -16)
+
+[node name="door_button" parent="." index="180" instance=ExtResource("8_fbke6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -16)
+
+[node name="PilisYet" parent="." index="181" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, 0)
 
-[node name="PilisYet2" parent="." index="152" instance=ExtResource("9_jokx1")]
+[node name="PilisYet2" parent="." index="182" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, 5)
 
-[node name="PilisYet3" parent="." index="153" instance=ExtResource("9_jokx1")]
+[node name="PilisYet3" parent="." index="183" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, -5)
 
-[node name="PilisYet4" parent="." index="154" instance=ExtResource("9_jokx1")]
+[node name="PilisYet4" parent="." index="184" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, 10)
 
-[node name="PilisYet5" parent="." index="155" instance=ExtResource("9_jokx1")]
+[node name="PilisYet5" parent="." index="185" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, -10)
 
-[node name="PilisYet6" parent="." index="156" instance=ExtResource("9_jokx1")]
+[node name="PilisYet6" parent="." index="186" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, 0)
 
-[node name="PilisYet7" parent="." index="157" instance=ExtResource("9_jokx1")]
+[node name="PilisYet7" parent="." index="187" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, 5)
 
-[node name="PilisYet8" parent="." index="158" instance=ExtResource("9_jokx1")]
+[node name="PilisYet8" parent="." index="188" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, -5)
 
-[node name="PilisYet9" parent="." index="159" instance=ExtResource("9_jokx1")]
+[node name="PilisYet9" parent="." index="189" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, 10)
 
-[node name="PilisYet10" parent="." index="160" instance=ExtResource("9_jokx1")]
+[node name="PilisYet10" parent="." index="190" instance=ExtResource("9_jokx1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 7, -10)
 
-[node name="YetCoin" parent="." index="163" instance=ExtResource("10_hybwj")]
+[node name="YetCoin" parent="." index="193" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 14)
 
-[node name="YetCoin5" parent="." index="164" instance=ExtResource("10_hybwj")]
+[node name="YetCoin5" parent="." index="194" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.25, 15)
 
-[node name="YetCoin6" parent="." index="165" instance=ExtResource("10_hybwj")]
+[node name="YetCoin6" parent="." index="195" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.25, 19)
 
-[node name="YetCoin7" parent="." index="166" instance=ExtResource("10_hybwj")]
+[node name="YetCoin7" parent="." index="196" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.25, 23)
 
-[node name="YetCoin8" parent="." index="167" instance=ExtResource("10_hybwj")]
+[node name="YetCoin8" parent="." index="197" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3.25, 27)
 
-[node name="YetCoin9" parent="." index="168" instance=ExtResource("10_hybwj")]
+[node name="YetCoin9" parent="." index="198" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5.25, 27)
 
-[node name="YetCoin10" parent="." index="169" instance=ExtResource("10_hybwj")]
+[node name="YetCoin10" parent="." index="199" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 6.25, 27)
 
-[node name="YetCoin11" parent="." index="170" instance=ExtResource("10_hybwj")]
+[node name="YetCoin11" parent="." index="200" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 6.25, 27)
 
-[node name="YetCoin12" parent="." index="171" instance=ExtResource("10_hybwj")]
+[node name="YetCoin12" parent="." index="201" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 7.25, 31)
 
-[node name="YetCoin13" parent="." index="172" instance=ExtResource("10_hybwj")]
+[node name="YetCoin13" parent="." index="202" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 7.25, 31)
 
-[node name="YetCoin14" parent="." index="173" instance=ExtResource("10_hybwj")]
+[node name="YetCoin14" parent="." index="203" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 8.25, 31)
 
-[node name="YetCoin15" parent="." index="174" instance=ExtResource("10_hybwj")]
+[node name="YetCoin15" parent="." index="204" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.25, 44)
 
-[node name="YetCoin2" parent="." index="175" instance=ExtResource("10_hybwj")]
+[node name="YetCoin2" parent="." index="205" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 16)
 
-[node name="YetCoin3" parent="." index="176" instance=ExtResource("10_hybwj")]
+[node name="YetCoin3" parent="." index="206" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 19)
 
-[node name="YetCoin4" parent="." index="177" instance=ExtResource("10_hybwj")]
+[node name="YetCoin4" parent="." index="207" instance=ExtResource("10_hybwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 23)
 
-[node name="Hideable_test" parent="." index="178" instance=ExtResource("11_8shok")]
+[node name="Hideable_test" parent="." index="208" instance=ExtResource("11_8shok")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -13)
 
+[node name="selfie_camera" type="Camera3D" parent="." index="209"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 1, -18)
+
+[node name="YetDoor" parent="." index="210" instance=ExtResource("13_w8kh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -19)
+
+[node name="YetDoor2" parent="." index="211" instance=ExtResource("13_w8kh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -19)
+doorOpensTo = 3
+
+[node name="YetDoor3" parent="." index="212" instance=ExtResource("13_w8kh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -19)
+doorOpensTo = 3
+
+[node name="YetDoor4" parent="." index="213" instance=ExtResource("13_w8kh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -19)
+doorOpensTo = 1
+
+[node name="YetWall" parent="." index="214" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -20)
+
+[node name="YetWall3" parent="." index="215" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -20)
+
+[node name="YetWall4" parent="." index="216" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -24)
+
+[node name="YetWall2" parent="." index="217" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -24)
+
+[node name="YetWall5" parent="." index="218" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -28)
+
+[node name="YetWall6" parent="." index="219" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -28)
+
+[node name="YetWall7" parent="." index="220" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -32)
+
+[node name="YetWall8" parent="." index="221" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -32)
+
+[node name="YetWall9" parent="." index="222" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -36)
+
+[node name="YetWall10" parent="." index="223" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -36)
+
+[node name="YetWall11" parent="." index="224" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -40)
+
+[node name="YetWall12" parent="." index="225" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -40)
+
+[node name="YetWall13" parent="." index="226" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -44)
+
+[node name="YetWall14" parent="." index="227" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -44)
+
+[node name="YetWall15" parent="." index="228" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -48)
+
+[node name="YetWall16" parent="." index="229" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -48)
+
+[node name="YetWall17" parent="." index="230" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -52)
+
+[node name="YetWall18" parent="." index="231" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -52)
+
+[node name="YetWall19" parent="." index="232" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -56)
+
+[node name="YetWall20" parent="." index="233" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -56)
+
+[node name="YetWall21" parent="." index="234" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -60)
+
+[node name="YetWall22" parent="." index="235" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -60)
+
+[node name="YetWall23" parent="." index="236" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -64)
+
+[node name="YetWall24" parent="." index="237" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -64)
+
+[node name="YetWall25" parent="." index="238" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -68)
+
+[node name="YetWall26" parent="." index="239" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -68)
+
+[node name="YetWall27" parent="." index="240" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6, 1, -72)
+
+[node name="YetWall28" parent="." index="241" instance=ExtResource("14_ki2pu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 1, -72)
+
+[node name="YetCheckpoint" parent="." index="242" instance=ExtResource("15_dcoc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 37)
+
 [connection signal="interacted" from="Interactible_yet" to="." method="_on_interactible_yet_interacted"]
+[connection signal="interacted" from="Seflie_button" to="." method="_on_seflie_button_interacted"]
+[connection signal="interacted" from="door_button" to="." method="_on_door_button_interacted"]

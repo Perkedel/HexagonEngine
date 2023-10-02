@@ -2,8 +2,13 @@ extends Node3D
 # pls yoink View from https://github.com/KenneyNL/Starter-Kit-3D-Platformer (MIT License)
 
 @export_group("Properties")
+## Main Target where this camera follows to
 @export var target: Node
+## for cutscene to temporarily switch to other object position
+@export var alt_target: Node # for cutscene to temporarily switch to other object position
 @export var ownActive:bool = false
+@export var followAltTarget:bool = false
+@export var followAltTargetSmoothly:bool = false
 
 @export_group("Zoom")
 @export var zoom_minimum = 16
@@ -50,6 +55,7 @@ func setOwnActivate(to:bool = true):
 
 func assignCamera(toPlayer:Node3D):
 	target = toPlayer
+	followAltTarget = false
 	pass
 
 func assignTarget(with:Node):
@@ -59,8 +65,13 @@ func assignTarget(with:Node):
 func _physics_process(delta):
 	
 	# Set position and rotation to targets
-	if target:
-		self.position = self.position.lerp(target.position, delta * 4)
+	if followAltTarget:
+		if alt_target:
+			self.position = self.position.lerp(alt_target.position, delta * 4) if followAltTargetSmoothly else alt_target.position
+			pass
+	else:
+		if target:
+			self.position = self.position.lerp(target.position, delta * 4)
 	rotation_degrees = rotation_degrees.lerp(camera_rotation, delta * 6)
 	
 	camera.position = camera.position.lerp(Vector3(0, 0, zoom), 8 * delta)
@@ -157,12 +168,19 @@ func _input(event: InputEvent) -> void:
 				camera_rotation += Vector3(-event.relative.y*mouse_sensitive,-event.relative.x * mouse_sensitive,0)
 				
 				pass
-			if event.is_action(cameraZoomInKey+'.mouse'):
-				zoomAxes[0] = event.get_action_strength(cameraZoomInKey)
-				pass
-			if event.is_action(cameraZoomOutKey+'.mouse'):
-				zoomAxes[1] = event.get_action_strength(cameraZoomOutKey)
-				pass
+			if event is InputEventMouseButton:
+				if event.is_action(cameraZoomInKey+'.mouse'):
+					print('soom in')
+	#				zoomAxes[0] = event.get_action_strength(cameraZoomInKey) 
+					zoom -= 1
+					zoom = clamp(zoom, zoom_maximum, zoom_minimum)
+					pass
+				if event.is_action(cameraZoomOutKey+'.mouse'):
+					print('soom out')
+					zoomAxes[1] = event.get_action_strength(cameraZoomOutKey)
+					zoom += 1
+					zoom = clamp(zoom, zoom_maximum, zoom_minimum)
+					pass
 			pass
 		inputer.x = -moveAxes[2]+moveAxes[3]
 		inputer.y = moveAxes[0]-moveAxes[1]

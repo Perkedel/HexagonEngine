@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dop3jhglggo58" path="res://DummyTest/dea_cuber.tscn" id="3_cdnqq"]
 [ext_resource type="AudioStream" uid="uid://8k32g26nve60" path="res://Audio/EfekSuara/CopyrightInfringement/Microsoft/tada.wav" id="4_6ewx7"]
 [ext_resource type="PackedScene" uid="uid://dqqewp2yvvjvg" path="res://modules/Reusables/parts/controller_icons_sprite3D_SUPER.tscn" id="5_0ylk7"]
-[ext_resource type="Texture2D" uid="uid://xe4n818le3p8" path="res://addons/controller_icons/assets/key/e.png" id="6_3ln2f"]
+[ext_resource type="Texture2D" uid="uid://bva4iswwvta5d" path="res://addons/controller_icons/assets/xbox360/y.png" id="6_7xogp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r3yki"]
 
@@ -28,7 +28,7 @@ attenuation_filter_cutoff_hz = 20500.0
 
 [node name="GlyphSign" parent="." instance=ExtResource("5_0ylk7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-texture = ExtResource("6_3ln2f")
+texture = ExtResource("6_7xogp")
 path = "Valve_Interaksi_alt"
 
 [connection signal="receivedHoverInteraction" from="InteractionToReceive3D" to="." method="_on_interaction_to_receive_3d_received_hover_interaction"]

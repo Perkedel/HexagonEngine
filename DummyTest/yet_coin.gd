@@ -1,9 +1,10 @@
 extends Area3D
 class_name YetCoin
 
-@export_enum('Pon','Health','PowerUp') var collectType:String = 'Pon'
+@export_enum('Pon','Health','PowerUp','Checkpoint') var collectType:String = 'Pon'
 @export var amountF:float = 1
 @export var argument:String = ''
+@export var repeatable:bool = false
 
 @export_group('Sound')
 @export var collectSound = preload("res://modules/Reusables/AudioRandomizer/collect_SoundRandom.tres")
@@ -14,6 +15,10 @@ class_name YetCoin
 @export_group('Specifity')
 @export var allowAllTypes:bool = false
 @export var expectedGroup:String = 'player'
+
+@export_group('Checkpoint')
+@export var setPositionAutomatically:bool = true
+@export var setPosition:Vector3
 
 @onready var forms:=$Shapes
 @onready var formsList:=forms.get_children()
@@ -61,7 +66,8 @@ func showMeshForms(whichIs:int = 0):
 	pass
 
 func afterCollision(doThe:String):
-	isCollected = true
+	if not repeatable:
+		isCollected = true
 	emitParticleForm()
 	_centerSound(collectSound)
 	match(doThe):

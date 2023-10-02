@@ -15,6 +15,8 @@ var whereMenuAreWePrev:String
 @export var collectCoinIcon:Texture = preload("res://Sprites/MavrickleIcon.png")
 
 var ponsInThisLevel:Array[Node3D]
+var onCutscene:bool = false
+var playerDeservesActive:bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,19 +45,21 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func setActivateMainPlayerCam(to:bool=false,alsoMonitor:bool=true):
-	if mainPlayer:
-		if mainPlayer.has_method('setOwnActivate'):
-			mainPlayer.call('setOwnActivate',to)
+	if playerDeservesActive:
+		if mainPlayer:
+			if mainPlayer.has_method('setOwnActivate'):
+				mainPlayer.call('setOwnActivate',to)
+				pass
+			if alsoMonitor:
+				Singletoner.monitorThisCharacter(mainPlayer)
+				pass
 			pass
-		if alsoMonitor:
-			Singletoner.monitorThisCharacter(mainPlayer)
+		if mainCamera:
+			if mainCamera.has_method('setOwnActivate'):
+				mainCamera.call('setOwnActivate',to)
+				pass
 			pass
-		pass
-	if mainCamera:
-		if mainCamera.has_method('setOwnActivate'):
-			mainCamera.call('setOwnActivate',to)
-			pass
-		pass
+	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
