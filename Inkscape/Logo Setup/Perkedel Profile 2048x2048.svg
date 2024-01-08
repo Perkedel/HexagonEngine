@@ -5,7 +5,7 @@
    viewBox="0 0 2048 2048"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="Perkedel Profile 2048x2048.svg"
    inkscape:export-filename="Perkedel Profile No Circle fade 2048x2048.png"
    inkscape:export-xdpi="96"
@@ -30,7 +30,7 @@
      inkscape:cx="1185.7143"
      inkscape:cy="1138.5714"
      inkscape:document-units="px"
-     inkscape:current-layer="g1058"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="true"
@@ -38,10 +38,10 @@
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-bbox-midpoints="true"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:pagecheckerboard="false"
      inkscape:document-rotation="0"
@@ -50,7 +50,13 @@
     <inkscape:grid
        type="xygrid"
        id="grid4747"
-       empspacing="4" />
+       empspacing="4"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
     <inkscape:grid
        type="xygrid"
        id="grid4749"
@@ -58,7 +64,13 @@
        opacity="0.1254902"
        empcolor="#ff3fff"
        empopacity="0.25098039"
-       empspacing="64" />
+       empspacing="64"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -93,7 +105,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-3941.4729)"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <g
        transform="matrix(7.9688716,0,0,7.9688716,-251.01946,5519.3095)"
@@ -153,7 +165,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-3941.4729)"
      id="g1058"
      inkscape:groupmode="layer"
@@ -654,7 +666,8 @@
      inkscape:label="Just Logo Minused"
      id="layer9"
      inkscape:groupmode="layer"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <g
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -815,7 +828,8 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Cutout"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <g
        id="g99646">
       <path
