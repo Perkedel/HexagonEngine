@@ -51,10 +51,10 @@ mesh = ExtResource("1_udoli")
 skeleton = NodePath("../../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_6nmin")
 }
+autoplay = "idle"
 
 [node name="Explodos" type="GPUParticles3D" parent="."]
 emitting = false

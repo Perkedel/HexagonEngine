@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlut7om1jgey3"]
+
+[ext_resource type="PackedScene" uid="uid://b37fywx0o5kjh" path="res://modules/Adapters/PhysicalLightCompatAdapter.tscn" id="1_s4rep"]
+[ext_resource type="PackedScene" uid="uid://c4llb3gsbfv1a" path="res://addons/phantom_camera/examples/example_scenes/3D/3d_follow_framed_example_scene.tscn" id="2_b1lfm"]
+
+[node name="3DFollowFramedExampleScene" instance=ExtResource("1_s4rep")]
+
+[node name="Root" parent="." index="1" instance=ExtResource("2_b1lfm")]

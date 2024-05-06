@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://craf01sdsnhsf"]
+
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_lcnpn"]
+
+[node name="MainCamera3DPhantomed" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.841966, 0.53953, 0, -0.53953, 0.841966, 0, 3.98453, 3.09697)
+current = true
+
+[node name="PhantomCameraHost" type="Node" parent="."]
+script = ExtResource("1_lcnpn")

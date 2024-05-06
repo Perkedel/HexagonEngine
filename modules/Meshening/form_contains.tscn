@@ -21,6 +21,7 @@ tree_root = SubResource("AnimationRootNode_fynek")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="explodos" type="GPUParticles3D" parent="."]
+emitting = false
 lifetime = 60.0
 one_shot = true
 trail_enabled = true
@@ -30,6 +31,7 @@ draw_pass_1 = ExtResource("3_0pfac")
 draw_pass_2 = ExtResource("4_bd436")
 
 [node name="sparkle" type="GPUParticles3D" parent="."]
+emitting = false
 lifetime = 10.0
 one_shot = true
 process_material = ExtResource("5_jgujg")

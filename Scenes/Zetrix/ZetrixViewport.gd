@@ -16,13 +16,13 @@ func ReceiveRootViewport(getIt:SubViewport):
 	$PortScreen.ReceiveRootViewport(rootViewport)
 
 func UninstallOwnWorld():
-	own_world = false
-	world = null
+	#own_world = false
+	#world = null
 	$PortScreen.hide()
 
 func ReinstallOwnWorld():
-	world = ownWorldItself
-	own_world = true
+	#world = ownWorldItself
+	#own_world = true
 	$PortScreen.show()
 
 # Called when the node enters the scene tree for the first time.

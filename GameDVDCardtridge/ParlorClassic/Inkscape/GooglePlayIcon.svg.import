@@ -1,8 +1,9 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/GooglePlayIcon.svg-ebfcbdcc09337566bd6fe2c749d8af29.stex"
+type="CompressedTexture2D"
+uid="uid://bgbng58whalyw"
+path="res://.godot/imported/GooglePlayIcon.svg-ebfcbdcc09337566bd6fe2c749d8af29.ctex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://GameDVDCardtridge/ParlorClassic/Inkscape/GooglePlayIcon.svg"
-dest_files=["res://.import/GooglePlayIcon.svg-ebfcbdcc09337566bd6fe2c749d8af29.stex"]
+dest_files=["res://.godot/imported/GooglePlayIcon.svg-ebfcbdcc09337566bd6fe2c749d8af29.ctex"]
 
 [params]
 

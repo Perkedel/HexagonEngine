@@ -9,6 +9,7 @@
 
 [node name="YetStupid" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
 script = ExtResource("1_ns3nt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

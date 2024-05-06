@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://wy0qdtswj7t7"]
+[gd_scene load_steps=3 format=3 uid="uid://wy0qdtswj7t7"]
 
 [ext_resource type="PackedScene" uid="uid://5n0ykkhc8qe3" path="res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.tscn" id="1_lrndi"]
+[ext_resource type="PackedScene" uid="uid://172jlvb2vjw6" path="res://GameDVDCardtridge/Overseer/LevelCartridge/Init/welcome_level.tscn" id="2_pi8ao"]
 
 [node name="Overseer" instance=ExtResource("1_lrndi")]
 productTitleName = "Overseer"
+InitLevelFile = ExtResource("2_pi8ao")

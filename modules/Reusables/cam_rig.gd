@@ -35,6 +35,7 @@ extends Node3D
 @export var controllerZoomings:bool = true
 
 var camera_rotation:Vector3
+
 var zoom = 10
 var moveAxes:Array[float]=[0,0,0,0]
 var zoomAxes:Array[float]=[0,0]

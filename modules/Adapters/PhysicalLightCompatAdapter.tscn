@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b37fywx0o5kjh"]
+
+[ext_resource type="Environment" uid="uid://r6bs00fjxcuc" path="res://modules/Environmenting/EnvironmentDefaultBase.tres" id="1_2emkg"]
+[ext_resource type="CameraAttributesPractical" uid="uid://hkip5kwbiv6o" path="res://modules/Environmenting/CamAttributeDefaultPractical.tres" id="2_1ypxi"]
+
+[node name="PhysicalLightCompatAdapter" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_2emkg")
+camera_attributes = ExtResource("2_1ypxi")

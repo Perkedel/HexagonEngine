@@ -40,7 +40,19 @@ var isSprinting:bool = false
 # yeah confirmed, that's my jump.
 
 @export_group('Camera')
-@export var currentCameraRig:Node
+@export var currentCameraRig:Node3D
+@export var usePhantomCamera:bool = true
+@export var currentPhantomCameraLogic:PhantomCamera3D
+@export var currentPhantomCamera:Camera3D 
+@export var minCamPitch: float = -89.9
+@export var maxCamPitch: float = 50
+@export var minCamYaw: float = 0
+@export var maxCamYaw: float = 360
+
+@export_group("Zoom")
+@export var zoom_minimum = 16
+@export var zoom_maximum = 4
+@export var zoom_speed = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -75,10 +87,14 @@ var coyoteTimer:float = .5
 @export var sprintHoldKey:String = 'Jalan_Tambah_Cepat'
 @export var jumpKey:String = 'Melompat'
 @export var interactKey:String = 'Valve_Interaksi_alt'
+@export var cameraZoomInKey:String = 'Kamera_Perbesar'
+@export var cameraZoomOutKey:String = 'Kamera_Perkecil'
+@export var cameraMouseCaptureKey:String = 'Kamera_Tangkap_Tetikus'
 
 @export_group('Controller')
 @export var onePlayerOnly:bool = true
 @export var expectedPlayer:int = 0
+@export var mouseSensitivity:float = 0.05
 
 @onready var feetSpeaker = $FeetSpeaker
 @onready var centerSpeaker = $CenterSpeaker
@@ -86,15 +102,22 @@ var coyoteTimer:float = .5
 @onready var formsList:=forms.get_children()
 @onready var onDeathTimer:=$OnDeathTimer
 var ownActive:bool = false
+var captureMouse:bool = false
 var alive:bool = true
 var rotation_direction:float
 var direction:Vector3
 var moveAxes:Array[float]=[0,0,0,0]
+var zoomAxes:Array[float]=[0,0]
 var inputer:Vector3
 var wasFloored:bool = true
 var interactibleBody:Node3D
 
 # TODO: form installer & uninstaller with signal management
+
+func _ready() -> void:
+	currentPhantomCamera = owner.get_node("%MainCamera3DPhantomed")
+	currentPhantomCameraLogic = owner.get_node("%PhantomCamera3D")
+	pass
 
 func teleportToInit():
 	position = init_pos
@@ -259,6 +282,10 @@ func manageJump():
 
 func assignCamera(withMe:Node):
 	currentCameraRig = withMe
+	pass
+
+func assignPhantomCamera(withMe:Camera3D):
+	currentPhantomCamera = withMe
 	pass
 
 func meMove(axes:Vector2 = Vector2.ZERO):
@@ -491,24 +518,46 @@ func _physics_process(delta: float) -> void:
 		pass
 	pass
 
-#func _toggleMouseCapture():
-#	if ownActive:
-#		match(Input.mouse_mode):
-#			Input.MOUSE_MODE_VISIBLE:
-#				pass
-#			Input.MOUSE_MODE_CAPTURED:
-#				pass
-#			_:
-#				pass
-#		pass
-#	else:
-#		if Input.mouse_mode != Input.MOUSE_MODE_VISIBLE:
-#			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-#			pass
-#	pass
+func _toggleMouseCapture():
+	if usePhantomCamera:
+		if ownActive:
+			print('mouseCaptur')
+			match(Input.mouse_mode):
+				Input.MOUSE_MODE_VISIBLE:
+					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+					pass
+				Input.MOUSE_MODE_CAPTURED:
+					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+					pass
+				_:
+					pass
+			pass
+		else:
+			if Input.mouse_mode != Input.MOUSE_MODE_VISIBLE:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+				pass
+	else:
+		if Input.mouse_mode != Input.MOUSE_MODE_VISIBLE:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			pass
+	pass
+
+func recheckMenu() -> void:
+	if usePhantomCamera:
+		match(Singletoner.currentMenu):
+			'Gameplay':
+				
+				pass
+			'MainMenu':
+				_toggleMouseCapture()
+				pass
+			_:
+				pass
+	pass
 
 func _input(event: InputEvent) -> void:
-	
+	var camRotate:Vector3 = Vector3.ZERO
+	var camValid:bool = false
 	if ((event.device != expectedPlayer) and onePlayerOnly):
 		return
 	else:
@@ -518,6 +567,59 @@ func _input(event: InputEvent) -> void:
 #	print('eeeeeeeeeeeeeeee')
 #	direction = (transform.basis * Vector3(1, 0, 1)).normalized()
 #	var ub:Array[float] = [0,0,0,0]
+	
+	# Phantom Camera
+	if usePhantomCamera:
+		if currentPhantomCamera:
+			camValid = true
+			camRotate = currentPhantomCamera.rotation
+			
+			#_set_pcam_rotation(currentPhantomCamera,event)
+			if event is InputEventAction:
+				# Mouse capture
+				pass
+		else:
+			camRotate = Vector3.ZERO
+		pass
+		
+		if event.is_action_pressed(cameraMouseCaptureKey):
+			#print('MouseCapturea')
+			_toggleMouseCapture()
+			pass
+		
+		if event.is_action(cameraZoomInKey):
+			zoomAxes[0] = event.get_action_strength(cameraZoomInKey)
+			pass
+		if event.is_action(cameraZoomOutKey):
+			zoomAxes[1] = event.get_action_strength(cameraZoomOutKey)
+			pass
+		
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			if currentPhantomCameraLogic:
+				_set_pcam_rotation(currentPhantomCameraLogic, event)
+			pass
+		
+		if event is InputEventMouseButton:
+			if ownActive:
+				if currentPhantomCameraLogic:
+					if event.is_action(cameraZoomOutKey+'.mouse'):
+						currentPhantomCameraLogic.set_spring_length(currentPhantomCameraLogic.get_spring_length() + 1)
+						#currentPhantomCameraLogic.set_spring_length(clampf(currentPhantomCameraLogic.get_spring_length(),zoom_minimum,zoom_maximum))
+					if event.is_action(cameraZoomInKey+'.mouse'):
+						currentPhantomCameraLogic.set_spring_length(currentPhantomCameraLogic.get_spring_length() - 1)
+						#currentPhantomCameraLogic.set_spring_length(clampf(currentPhantomCameraLogic.get_spring_length(),zoom_minimum,zoom_maximum))
+				pass
+			pass
+	else:
+		
+		if currentCameraRig:
+			camValid = true
+			camRotate = currentCameraRig.rotation
+			captureMouse
+		else:
+			camRotate = Vector3.ZERO
+		pass
+	
 	if ownActive and alive:
 		if event.is_action(moveFrontKey):
 			moveAxes[2] = event.get_action_strength(moveFrontKey)
@@ -545,9 +647,11 @@ func _input(event: InputEvent) -> void:
 				isSprinting = false
 		inputer.x = -moveAxes[1]+moveAxes[0]
 		inputer.z = moveAxes[2]-moveAxes[3]
-#		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO)
-		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).limit_length()
-#		inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).normalized()
+#		inputer = inputer.rotated(Vector3.UP,camRotate.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO)
+		#inputer = inputer.rotated(Vector3.UP,currentCameraRig.rotation.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).limit_length()
+#		inputer = inputer.rotated(Vector3.UP,camRotate.y-rotation.y+deg_to_rad(180) if currentCameraRig else Vector3.ZERO).normalized()
+		#inputer = inputer.rotated(Vector3.UP,camRotate.y-rotation.y+deg_to_rad(180 if not usePhantomCamera else 0) if camValid else 0).limit_length()
+		inputer = inputer.rotated(Vector3.UP,camRotate.y-rotation.y+deg_to_rad(180) if camValid else 0).limit_length()
 	else:
 		isSprinting = false
 		inputer = Vector3.ZERO 
@@ -556,6 +660,30 @@ func _input(event: InputEvent) -> void:
 #	direction = (transform.basis * Vector3(-moveAxes[0]+moveAxes[1], 0, -moveAxes[2]+moveAxes[3]))
 	direction = (transform.basis * inputer)
 	pass
+
+func _set_pcam_rotation(pcam: PhantomCamera3D, event: InputEvent) -> void:
+	# yoink from PhantomCamera https://phantom-camera.dev/
+	# 3rd person demo
+	if event is InputEventMouseMotion:
+		var pcam_rotation_degrees: Vector3
+
+		# Assigns the current 3D rotation of the SpringArm3D node - so it starts off where it is in the editor
+		pcam_rotation_degrees = pcam.get_third_person_rotation_degrees()
+
+		# Change the X rotation
+		pcam_rotation_degrees.x -= event.relative.y * mouseSensitivity
+
+		# Clamp the rotation in the X axis so it go over or under the target
+		pcam_rotation_degrees.x = clampf(pcam_rotation_degrees.x, minCamPitch, maxCamPitch)
+
+		# Change the Y rotation value
+		pcam_rotation_degrees.y -= event.relative.x * mouseSensitivity
+
+		# Sets the rotation to fully loop around its target, but witout going below or exceeding 0 and 360 degrees respectively
+		pcam_rotation_degrees.y = wrapf(pcam_rotation_degrees.y, minCamYaw, maxCamYaw)
+
+		# Change the SpringArm3D node's rotation and rotate around its target
+		pcam.set_third_person_rotation_degrees(pcam_rotation_degrees)
 
 func vibrateo(weak:float=.5,strong:float=.5,duration:float=1):
 	if onePlayerOnly:

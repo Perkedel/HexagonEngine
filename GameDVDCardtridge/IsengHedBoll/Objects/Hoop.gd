@@ -1,7 +1,7 @@
 extends Node3D
 
-@export (bool) var inBasket1 = false
-@export (bool) var anBasket2 = false
+@export var inBasket1:bool = false
+@export var anBasket2:bool = false
 # https://godotengine.org/article/importing-3d-assets-blender-gamedevtv
 # Declare member variables here. Examples:
 # var a = 2

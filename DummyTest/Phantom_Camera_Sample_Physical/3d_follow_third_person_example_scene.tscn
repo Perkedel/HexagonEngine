@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0elcnr3wbxfr"]
+
+[ext_resource type="PackedScene" uid="uid://b37fywx0o5kjh" path="res://modules/Adapters/PhysicalLightCompatAdapter.tscn" id="1_pacns"]
+[ext_resource type="PackedScene" uid="uid://4i5csj0s34nb" path="res://addons/phantom_camera/examples/example_scenes/3D/3d_follow_third_person_example_scene.tscn" id="2_cb2lp"]
+
+[node name="3DFollowThirdPersonExampleScene" instance=ExtResource("1_pacns")]
+
+[node name="Root" parent="." index="1" instance=ExtResource("2_cb2lp")]
