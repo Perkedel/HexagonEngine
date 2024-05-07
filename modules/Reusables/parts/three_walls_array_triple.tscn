@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnqqcmg51gfum"]
+
+[ext_resource type="PackedScene" uid="uid://b62878ecdserc" path="res://modules/Reusables/parts/three_walls.tscn" id="1_2tm57"]
+
+[node name="ThreeWallsArrayTriple" type="Node3D"]
+
+[node name="ThreeWalls" parent="." instance=ExtResource("1_2tm57")]
+
+[node name="ThreeWalls2" parent="." instance=ExtResource("1_2tm57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="ThreeWalls3" parent="." instance=ExtResource("1_2tm57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7ahegcveqqag"]
+
+[ext_resource type="PackedScene" uid="uid://ds80f0vmyw3ts" path="res://modules/Reusables/parts/Lamps/spot_light_3d_hyper.tscn" id="1_ouy0o"]
+
+[node name="ArrayLamps" type="Node3D"]
+
+[node name="SpotLight3DHyper" parent="." instance=ExtResource("1_ouy0o")]
+
+[node name="SpotLight3DHyper2" parent="." instance=ExtResource("1_ouy0o")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15, 0, 0)
+
+[node name="SpotLight3DHyper3" parent="." instance=ExtResource("1_ouy0o")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -17, 0, 0)

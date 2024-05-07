@@ -1,3 +1,6 @@
+res://modules/Reusables/parts/Lamps
+res://modules/Reusables/parts
+res://GameDVDCardtridge/Overseer/LevelCartridge/Init/Parts
 res://modules/Reusables/parts/Camera
 res://DummyTest/Phantom_Camera_Sample_Physical
 res://modules/Adapters
@@ -12,14 +15,11 @@ res://modules/Reusables/AudioRandomizer
 res://modules/Reusables/GDSfxr
 res://modules/Environmenting
 C:/temp/Importality
-res://modules/Reusables/parts
 res://modules/Reusables/Windowized
 res://addons/controller_icons/objects
 res://addons/controller_icons/example
 W:/starring codes/Godot Projects/HexagonEngine/licenses
 res://GameDVDCardtridge/Overseer
-res://GameDVDCardtridge/HexagonEngine-v3
-res://
 W:/starring codes/Godot Projects/Just Renders/HexagonEngine/Windows
 C:/Program Files (x86)/Windows Kits/10/bin/10.0.22000.0/x64
 W:/starring codes/Godot Projects/Just Renders/HexagonEngine/HMTL5

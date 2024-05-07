@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b62878ecdserc"]
+
+[ext_resource type="PackedScene" uid="uid://b3jnp6pmv5s6" path="res://DummyTest/YetBuilding/yet_wall.tscn" id="1_vlc34"]
+
+[node name="ThreeWalls" type="Node3D"]
+
+[node name="YetWall7" parent="." instance=ExtResource("1_vlc34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="YetWall8" parent="." instance=ExtResource("1_vlc34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
+
+[node name="YetWall9" parent="." instance=ExtResource("1_vlc34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 0)

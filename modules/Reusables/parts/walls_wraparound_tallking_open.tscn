@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1tlw6ia575ci"]
+
+[ext_resource type="PackedScene" uid="uid://d2laao3j02xix" path="res://modules/Reusables/parts/walls_wraparound_open.tscn" id="1_htp8e"]
+
+[node name="WallsWraparoundTallingOpen" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="WallsWraparoundOpen" parent="." instance=ExtResource("1_htp8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="WallsWraparoundOpen2" parent="." instance=ExtResource("1_htp8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="WallsWraparoundOpen3" parent="." instance=ExtResource("1_htp8e")]

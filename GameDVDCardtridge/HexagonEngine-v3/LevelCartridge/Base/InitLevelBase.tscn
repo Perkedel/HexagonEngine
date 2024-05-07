@@ -27,6 +27,7 @@ script = ExtResource("1_sma1r")
 transform = Transform3D(-0.200895, -0.652919, 0.7303, -0.833124, 0.506034, 0.223235, -0.515311, -0.563584, -0.645622, 0, 0, 0)
 light_energy = 0.75
 shadow_enabled = true
+directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_8jkpa")
@@ -62,7 +63,6 @@ follow_target = NodePath("../Dummy")
 tween_resource = SubResource("Resource_mef0s")
 camera_3d_resource = SubResource("Resource_mbp1n")
 follow_damping = true
-follow_damping_value = Vector3(0.5, 0.5, 0.5)
 follow_distance = 3.5
 spring_length = 3.5
 

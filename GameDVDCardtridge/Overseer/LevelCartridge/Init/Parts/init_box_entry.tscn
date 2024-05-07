@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4x4iv1ruiiqo"]
+
+[ext_resource type="PackedScene" uid="uid://bqstqy0q5370l" path="res://modules/Reusables/parts/floors_embiggen_three_grid.tscn" id="1_ebsqm"]
+[ext_resource type="PackedScene" uid="uid://b1tlw6ia575ci" path="res://modules/Reusables/parts/walls_wraparound_tallking_open.tscn" id="2_05b6a"]
+[ext_resource type="PackedScene" uid="uid://c0cwqsyevbdm6" path="res://modules/Reusables/parts/walls_wraparound_talling_close.tscn" id="3_v81ot"]
+[ext_resource type="PackedScene" uid="uid://b7ahegcveqqag" path="res://modules/Reusables/parts/Lamps/array_lamps.tscn" id="4_4h35x"]
+
+[node name="InitBoxEntry" type="Node3D"]
+
+[node name="Floors" type="Node3D" parent="."]
+
+[node name="FloorsEmbiggenThreeGrid" parent="Floors" instance=ExtResource("1_ebsqm")]
+
+[node name="FloorsEmbiggenThreeGrid2" parent="Floors" instance=ExtResource("1_ebsqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 0)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="WallsWraparoundTallingOpen" parent="Walls" instance=ExtResource("2_05b6a")]
+
+[node name="WallsWraparoundTallingClose" parent="Walls" instance=ExtResource("3_v81ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="Lightings" type="Node3D" parent="."]
+
+[node name="ArrayLamps" parent="Lightings" instance=ExtResource("4_4h35x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+
+[node name="ArrayLamps3" parent="Lightings" instance=ExtResource("4_4h35x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 12)
+
+[node name="ArrayLamps2" parent="Lightings" instance=ExtResource("4_4h35x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, -12)

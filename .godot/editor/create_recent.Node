@@ -1,4 +1,7 @@
+Node
+SpotLight3D
 Node3D
+Label3D
 Node2D
 PhantomCameraHost
 Camera3D
@@ -10,5 +13,3 @@ GPUParticles3D
 AnimationTree
 AnimationPlayer
 CollisionShape3D
-AnimatableBody3D
-StaticBody3D

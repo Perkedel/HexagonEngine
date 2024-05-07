@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://byiiontjcgbk3"]
+
+[ext_resource type="PackedScene" uid="uid://d3kvoaffp4uxd" path="res://modules/Reusables/parts/floor_row.tscn" id="1_f8cvf"]
+
+[node name="Floors3x3" type="Node3D"]
+
+[node name="FloorRow" parent="." instance=ExtResource("1_f8cvf")]
+
+[node name="FloorRow2" parent="." instance=ExtResource("1_f8cvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="FloorRow3" parent="." instance=ExtResource("1_f8cvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)

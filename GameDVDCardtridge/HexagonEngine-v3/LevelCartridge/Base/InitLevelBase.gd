@@ -99,6 +99,10 @@ func _process(delta: float) -> void:
 	
 	pass
 
+func loadLevel(thisThing:PackedScene):
+	
+	pass
+
 func recheckMenu() -> String:
 	
 	whereMenuAreWe = Singletoner.currentMenu

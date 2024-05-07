@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://172jlvb2vjw6"]
 
 [ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_rvab0"]
-[ext_resource type="PackedScene" uid="uid://dbxwcmi5bhtwr" path="res://DummyTest/yet_flour.tscn" id="2_rfw5x"]
-[ext_resource type="PackedScene" uid="uid://b3jnp6pmv5s6" path="res://DummyTest/yet_wall.tscn" id="3_5eva5"]
-[ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/yet_stupid.tscn" id="3_ngrvs"]
+[ext_resource type="PackedScene" uid="uid://ds34vxgw0kprj" path="res://DummyTest/YetBuilding/yet_stupid.tscn" id="3_ngrvs"]
 [ext_resource type="PackedScene" uid="uid://craf01sdsnhsf" path="res://modules/Reusables/parts/Camera/main_camera_3d_phantomed.tscn" id="3_rxvrw"]
+[ext_resource type="PackedScene" uid="uid://b4x4iv1ruiiqo" path="res://GameDVDCardtridge/Overseer/LevelCartridge/Init/Parts/init_box_entry.tscn" id="4_m4cfj"]
+[ext_resource type="PackedScene" uid="uid://c2j8bhbucudnl" path="res://GameDVDCardtridge/Overseer/LevelCartridge/Init/Parts/enter_bridge.tscn" id="5_ioyh0"]
 
 [node name="WelcomeLevel" node_paths=PackedStringArray("mainPlayer") instance=ExtResource("1_rvab0")]
 mainPlayer = NodePath("YetStupid")
@@ -13,73 +13,20 @@ mainPlayer = NodePath("YetStupid")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="PhantomCamera3D" parent="." index="6" node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(1, 0, 0, 0, 0.841966, 0.53953, 0, -0.53953, 0.841966, 0, 3.88836, 2.94688)
+transform = Transform3D(1, 0, 0, 0, 0.841966, 0.53953, 0, -0.53953, 0.841966, 0, 3.88835, 2.94688)
 follow_target = NodePath("../YetStupid")
 look_at_target = NodePath("../YetStupid")
 
 [node name="MainCamera3DPhantomed" parent="." index="7" instance=ExtResource("3_rxvrw")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.841966, 0.53953, 0, -0.53953, 0.841966, 0, 3.88836, 2.94688)
+transform = Transform3D(1, 0, 0, 0, 0.841966, 0.53953, 0, -0.53953, 0.841966, 0, 3.88835, 2.94688)
 
-[node name="Floors" type="Node3D" parent="Environment" index="0"]
+[node name="InitBoxEntry" parent="Environment" index="0" instance=ExtResource("4_m4cfj")]
 
-[node name="YetFlour" parent="Environment/Floors" index="0" instance=ExtResource("2_rfw5x")]
+[node name="EnterBridge" parent="Environment" index="1" instance=ExtResource("5_ioyh0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
 
-[node name="YetFlour2" parent="Environment/Floors" index="1" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
-
-[node name="YetFlour3" parent="Environment/Floors" index="2" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="YetFlour4" parent="Environment/Floors" index="3" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-
-[node name="YetFlour5" parent="Environment/Floors" index="4" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
-
-[node name="YetFlour6" parent="Environment/Floors" index="5" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-
-[node name="YetFlour7" parent="Environment/Floors" index="6" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
-
-[node name="YetFlour8" parent="Environment/Floors" index="7" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
-
-[node name="YetFlour9" parent="Environment/Floors" index="8" instance=ExtResource("2_rfw5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-
-[node name="Walls" type="Node3D" parent="Environment" index="1"]
-
-[node name="YetWall" parent="Environment/Walls" index="0" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 2, 0)
-
-[node name="YetWall2" parent="Environment/Walls" index="1" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 2, 4)
-
-[node name="YetWall3" parent="Environment/Walls" index="2" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 2, -4)
-
-[node name="YetWall4" parent="Environment/Walls" index="3" instance=ExtResource("3_5eva5")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6, 2, 0)
-
-[node name="YetWall5" parent="Environment/Walls" index="4" instance=ExtResource("3_5eva5")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6, 2, -4)
-
-[node name="YetWall6" parent="Environment/Walls" index="5" instance=ExtResource("3_5eva5")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6, 2, 4)
-
-[node name="YetWall7" parent="Environment/Walls" index="6" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 6)
-
-[node name="YetWall8" parent="Environment/Walls" index="7" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 2, 6)
-
-[node name="YetWall9" parent="Environment/Walls" index="8" instance=ExtResource("3_5eva5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, 6)
-
-[node name="YetWall10" parent="Environment/Walls" index="9" instance=ExtResource("3_5eva5")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -4, 2, -6)
-
-[node name="YetWall11" parent="Environment/Walls" index="10" instance=ExtResource("3_5eva5")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 4, 2, -6)
+[node name="Label3D" type="Label3D" parent="Environment" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -16)
+text = "[h1]Welcome![/h1]"
+font_size = 124

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bscde4h3i87fx"]
+
+[ext_resource type="PackedScene" uid="uid://byiiontjcgbk3" path="res://modules/Reusables/parts/floors_3x_3.tscn" id="1_ln82p"]
+
+[node name="FloorsEmbiggenRow" type="Node3D"]
+
+[node name="Floors3x3" parent="." instance=ExtResource("1_ln82p")]
+
+[node name="Floors3x4" parent="." instance=ExtResource("1_ln82p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="Floors3x5" parent="." instance=ExtResource("1_ln82p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)

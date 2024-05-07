@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2j8bhbucudnl"]
+
+[ext_resource type="PackedScene" uid="uid://nkykakfsuw8d" path="res://modules/Reusables/parts/tunnel_bit.tscn" id="1_ih4bn"]
+
+[node name="EnterBridge" type="Node3D"]
+
+[node name="TunnelBit" parent="." instance=ExtResource("1_ih4bn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="TunnelBit2" parent="." instance=ExtResource("1_ih4bn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+
+[node name="TunnelBit3" parent="." instance=ExtResource("1_ih4bn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+
+[node name="TunnelBit4" parent="." instance=ExtResource("1_ih4bn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42)

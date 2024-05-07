@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://nkykakfsuw8d"]
+
+[ext_resource type="PackedScene" uid="uid://byiiontjcgbk3" path="res://modules/Reusables/parts/floors_3x_3.tscn" id="1_judsp"]
+[ext_resource type="PackedScene" uid="uid://dq56v08st4248" path="res://modules/Reusables/parts/wall_heighting.tscn" id="2_m7wgl"]
+[ext_resource type="PackedScene" uid="uid://bqsqffj25cywh" path="res://modules/Reusables/parts/Lamps/spot_light_3d_usual.tscn" id="3_8ynel"]
+
+[node name="TunnelBit" type="Node3D"]
+
+[node name="Floors3x3" parent="." instance=ExtResource("1_judsp")]
+
+[node name="Floors3x4" parent="." instance=ExtResource("1_judsp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="WallHeighting" parent="." instance=ExtResource("2_m7wgl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, 0)
+
+[node name="WallHeighting2" parent="." instance=ExtResource("2_m7wgl")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -6, 0, 0)
+
+[node name="Lightings" type="Node3D" parent="."]
+
+[node name="SpotLight3DUsual" parent="Lightings" instance=ExtResource("3_8ynel")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11, 0)

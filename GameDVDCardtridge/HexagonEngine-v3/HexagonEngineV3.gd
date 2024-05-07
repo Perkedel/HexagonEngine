@@ -6,6 +6,7 @@ extends Node
 
 @export_subgroup('Main Navigation')
 @onready var LevelSpace = $LevelSpace
+@onready var PlayerSpace = $PlayerSpace
 @onready var UIplace = $UICanvas/UIplace
 @onready var LevelSpacer = $LevelSpace
 @export var PauseMainMenuFile: PackedScene
@@ -74,7 +75,7 @@ func ShutdownHexagonEngineNow():
 
 func loadLevel(ofThis:PackedScene)->Node:
 	levelInstance = ofThis.instantiate()
-	LevelSpacer.add_child(levelInstance)
+	LevelSpace.add_child(levelInstance)
 	return levelInstance
 	pass
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu0d4e4syp3ji"]
+
+[ext_resource type="PackedScene" uid="uid://dnqqcmg51gfum" path="res://modules/Reusables/parts/three_walls_array_triple.tscn" id="1_f03qt"]
+
+[node name="WallsWraparoundClose" type="Node3D"]
+
+[node name="ThreeWallsArrayTriple" parent="." instance=ExtResource("1_f03qt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 18)
+
+[node name="ThreeWallsArrayTriple4" parent="." instance=ExtResource("1_f03qt")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, -18)
+
+[node name="ThreeWallsArrayTriple2" parent="." instance=ExtResource("1_f03qt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 0, 0)
+
+[node name="ThreeWallsArrayTriple3" parent="." instance=ExtResource("1_f03qt")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18, 0, 0)

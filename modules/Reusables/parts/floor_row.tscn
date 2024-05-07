@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3kvoaffp4uxd"]
+
+[ext_resource type="PackedScene" uid="uid://dbxwcmi5bhtwr" path="res://DummyTest/YetBuilding/yet_flour.tscn" id="1_fhds7"]
+
+[node name="FloorRow" type="Node3D"]
+
+[node name="YetFlour" parent="." instance=ExtResource("1_fhds7")]
+
+[node name="YetFlour2" parent="." instance=ExtResource("1_fhds7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="YetFlour3" parent="." instance=ExtResource("1_fhds7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)

@@ -19,6 +19,8 @@ metadata/Console_Hover_Image = ExtResource("5_xuah5")
 metadata/Console_Launch_Image = ExtResource("6_g8hh2")
 metadata/Console_Icon_Image = ExtResource("7_cwvru")
 
+[node name="PlayerSpace" type="Node" parent="."]
+
 [node name="LevelSpace" type="Node" parent="."]
 
 [node name="UICanvas" type="CanvasLayer" parent="."]
