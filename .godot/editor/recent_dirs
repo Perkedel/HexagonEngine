@@ -1,3 +1,5 @@
+res://GameDVDCardtridge/Overseer/LevelCartridge/Init
+res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base
 res://modules/Reusables/parts/Lamps
 res://modules/Reusables/parts
 res://GameDVDCardtridge/Overseer/LevelCartridge/Init/Parts
@@ -5,8 +7,6 @@ res://modules/Reusables/parts/Camera
 res://DummyTest/Phantom_Camera_Sample_Physical
 res://modules/Adapters
 res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/CompatibilityAdapter
-res://GameDVDCardtridge/Overseer/LevelCartridge/Init
-res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base
 res://modules/Meshening
 res://DummyTest
 res://modules/Reusables/parts/Cutscenings

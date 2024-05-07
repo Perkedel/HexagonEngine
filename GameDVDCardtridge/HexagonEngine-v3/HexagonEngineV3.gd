@@ -30,6 +30,16 @@ var prevWhere:String = 'MainMenu'
 @export var useDedicatedPause:bool = false
 @export var PausingWillFreeze:bool = false
 @export var PausingWillLeadsTo:String = 'MainMenu' #or 'Pause' for dedicated
+
+@export_subgroup('Main Player')
+@onready var playerSpace:Node = $PlayerSpace
+@export var mainPlayer:Node3D
+@export var mainCamera:Node3D
+@export var mainPlayer2D:Node2D
+@export var mainCamera2D:Node2D
+@export var mainPhantomCamera:Camera3D
+@export var usualPhantomCameraName:String = 'MainCamera3DPhantomed'
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -73,7 +83,12 @@ func ShutdownHexagonEngineNow():
 	Singletoner.shutdownNow()
 	#emit_signal("Shutdown_Exec")
 
+# replace level
 func loadLevel(ofThis:PackedScene)->Node:
+	var prevLevel:Node
+	if levelInstance:
+		prevLevel = levelInstance
+		prevLevel.queue_free()
 	levelInstance = ofThis.instantiate()
 	LevelSpace.add_child(levelInstance)
 	return levelInstance

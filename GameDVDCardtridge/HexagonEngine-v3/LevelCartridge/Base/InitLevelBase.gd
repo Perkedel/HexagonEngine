@@ -4,6 +4,7 @@ class_name HexagonLevel
 var whereMenuAreWe:String
 var whereMenuAreWePrev:String
 
+# TODO: remove player, put player in DVD itself instead, like VR social
 @export var mainPlayer:Node3D
 @export var mainCamera:Node3D
 @export var mainPlayer2D:Node2D

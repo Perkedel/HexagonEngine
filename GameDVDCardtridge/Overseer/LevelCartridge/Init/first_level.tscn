@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://mdtrld40yxj4"]
+
+[ext_resource type="PackedScene" uid="uid://dgtucdo3lt3s3" path="res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.tscn" id="1_b4r5s"]
+
+[node name="FirstLevel" instance=ExtResource("1_b4r5s")]

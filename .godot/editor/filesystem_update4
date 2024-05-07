@@ -60,3 +60,5 @@ res://modules/Reusables/parts/Lamps/spot_light_3d_usual.tscn
 res://DummyTest/YetBuilding/yet_stupid.gd
 res://GameDVDCardtridge/HexagonEngine-v3/LevelCartridge/Base/InitLevelBase.gd
 res://GameDVDCardtridge/HexagonEngine-v3/HexagonEngineV3.gd
+res://GameDVDCardtridge/Overseer/LevelCartridge/Init/first_level.tscn
+res://Scripts/Singletoner.gd

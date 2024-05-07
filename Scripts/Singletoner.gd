@@ -80,6 +80,14 @@ func setScoreIcon(into:Texture):
 			dvdNode.call('setScoreIcon',into)
 	pass
 
+# load a level, replace level with a new one
+func loadLevel(withThis:PackedScene)->Node:
+	if dvdNode:
+		if dvdNode.has_method('loadLevel'):
+			return dvdNode.call('loadLevel',withThis)
+	return null
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	SceneLoader.connect("on_scene_loaded", Callable(self, "_BiosLoaded"))
